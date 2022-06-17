@@ -62,11 +62,23 @@ const entryTypes = new Map(
 /**
  * maps alias shorthand "b" to full tag "bold"
  */
-const tagAlias = new Map([["b", "bold"]]);
+const tagAlias = new Map([
+  ["b", "bold"],
+  ["i", "italic"],
+  ["u", "underline"],
+  ["s", "strike"],
+]);
+
+// const tag = (Element) => (props) => <Element>{props.children}</Element>;
 
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
     bold: (props) => <b>{props.children}</b>,
+    italic: (props) => <i>{props.children}</i>,
+    underline: (props) => (
+      <span class={styles.underline}>{props.children}</span>
+    ),
+    strike: (props) => <s>{props.children}</s>,
   })
 );
 
