@@ -64,8 +64,14 @@ const tagAlias = new Map([
   ["s", "strike"],
 ]);
 
-const pipe = (data: JSX.Element, index = 0, alt = ""): string =>
-  typeof data === "string" ? data.split("|")[index] ?? alt : alt;
+const pipe = (
+  props: Readonly<{ children: JSX.Element }>,
+  index = 0,
+  alt = ""
+): string =>
+  typeof props.children === "string"
+    ? props.children.split("|")[index] ?? alt
+    : alt;
 
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
@@ -76,9 +82,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     ),
     strike: (props) => <s>{props.children}</s>,
     color: (props) => (
-      <span style={`color: #${pipe(props.children, 1)}`}>
-        {pipe(props.children)}
-      </span>
+      <span style={`color: #${pipe(props, 1)}`}>{pipe(props)}</span>
     ),
     code: (props) => <code>{props.children}</code>,
     note: (props) => <i class={styles.note}>{props.children}</i>,
