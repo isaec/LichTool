@@ -70,7 +70,7 @@ const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
     );
   }
 
-  return <Entry data={props.data} />;
+  return <Entry data={props.data as keyof typeof Entry} />;
 };
 
 const DataRenderer: Component<{ data: Data }> = (props) => {
