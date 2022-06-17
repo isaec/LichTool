@@ -86,6 +86,15 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     ),
     code: (props) => <code>{props.children}</code>,
     note: (props) => <i class={styles.note}>{props.children}</i>,
+    link: (props) => (
+      <a
+        href={pipe(props, 1, pipe(props))}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {pipe(props)}
+      </a>
+    ),
   })
 );
 
