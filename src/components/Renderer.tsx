@@ -1,4 +1,4 @@
-import { Component, For, JSX, JSXElement } from "solid-js";
+import { children, Component, For, JSX, JSXElement } from "solid-js";
 
 import styles from "./Renderer.module.scss";
 
@@ -7,6 +7,9 @@ type ListData = { type: "list"; items: Data[] };
 type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
+function isDataNode(data: Data): data is DataNode {
+  return (data as DataNode).type !== undefined;
+}
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
 
@@ -15,6 +18,13 @@ const RenderError: Component<{ error: string; details?: string }> = (props) => (
     props.details ?? "no details provided"
   }`}</span>
 );
+
+const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
+  props
+) => {
+  console.log(props.condition);
+  return props.condition ? props.children : <li>{props.children}</li>;
+};
 
 const entryTypes = new Map(
   Object.entries({
@@ -29,7 +39,14 @@ const entryTypes = new Map(
     list: (props: { data: ListData }) => (
       <ul>
         <For each={props.data.items}>
-          {(item) => <li>{<DataRenderer data={item} />}</li>}
+          {(item) => {
+            console.log(item);
+            return (
+              <ListItem condition={isDataNode(item) && item.type === "list"}>
+                <DataRenderer data={item} />
+              </ListItem>
+            );
+          }}
         </For>
       </ul>
     ),
@@ -51,7 +68,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
-  console.log("string renderer >>", props.string);
+  // console.log("string renderer >>", props.string);
   const parseIterator = props.string.matchAll(tagMatcher) as IterableIterator<
     [string, string?, string?, string?]
   >;
@@ -76,13 +93,13 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
 
     match = parseIterator.next();
   }
-  console.log("parse >>>", components);
+  // console.log("parse >>>", components);
 
   return <p class={styles.string}>{components}</p>;
 };
 
 const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
-  console.log("group renderer >>", props.group);
+  // console.log("group renderer >>", props.group);
   return (
     <p>
       {"group: "}
@@ -92,7 +109,7 @@ const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
 };
 
 const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
-  console.log("node renderer >>", props.data);
+  // console.log("node renderer >>", props.data);
 
   const Entry = entryTypes.get(props.data.type);
 
