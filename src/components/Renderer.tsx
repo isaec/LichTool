@@ -1,4 +1,4 @@
-import type { Component } from "solid-js"
+import { Component, For } from "solid-js"
 
 import styles from "./Renderer.module.scss"
 
@@ -6,28 +6,49 @@ type DataNode = { [key: string]: Data }
 type DataGroup = DataNode[]
 type Data = string | DataNode | DataGroup
 
-const StringRenderer: Component<{string: string}> = props => {
+const DataStringRenderer: Component<{string: string}> = props => {
+  console.log("string renderer")
   return <p>{"string: "}{props.string}</p>
 }
 
-const GroupRenderer: Component<{group: DataGroup}> = props => {
-  return <p>{"group: "}{props.group.toString()}</p>
+const DataGroupRenderer: Component<{group: DataGroup}> = props => {
+  console.log("group renderer")
+  return <p>{"group: "}<For each={props.group}>{(data) => <DataNodeRenderer data={data}/>}</For></p>
+}
+
+const DataNodeRenderer: Component<{data: DataNode}> = props => {
+  console.log("node renderer")
+
+
+  Object.entries(props.data).forEach(([key, data]) => {
+    console.log(key, "::", data)
+  })
+
+  if(props.data.entries !== undefined) {
+    const {entries, ...dispData} = props.data
+    return <p>{"data: "}{JSON.stringify(dispData)}<DataGroupRenderer group={entries as DataGroup}/></p>
+  }
+
+  return <p>{"data: "}{JSON.stringify(props.data)}</p>
+}
+
+const DataRenderer: Component<{data: Data}> = props => {
+
+  if(typeof props.data === "string") {
+    return <DataStringRenderer string={props.data} />
+  }
+
+  if(Array.isArray(props.data)) {
+    return <DataGroupRenderer group={props.data} />
+  }
+  
+  return <DataNodeRenderer data={props.data} />
 }
 
 const Renderer: Component<{data: string}> = (props) => {
 
   const dataObj: Data = JSON.parse(props.data)
 
-  if(typeof dataObj === "string") {
-    return <StringRenderer string={dataObj} />
-  }
-
-  console.log(dataObj)
-
-  Object.entries(dataObj).forEach(([key, data]) => {
-    console.log(key, "::", data)
-  })
-  
-  return <p class={styles.Renderer}>{props.data}</p>
+  return <DataRenderer data={dataObj} />
 }
 export default Renderer
