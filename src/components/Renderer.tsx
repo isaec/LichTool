@@ -35,14 +35,12 @@ const entryTypes = new Map(
     ),
   })
 );
-type Tags = "bold";
-const Tag: {
-  [K in Tags]: Component<{}>;
-} = {
-  bold: (props) => <b>{"bold"}</b>,
-};
 
-const TagMap = new Map(Object.entries(Tag) as Array<[Tags, Component<{}>]>);
+const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
+  Object.entries({
+    bold: (props) => <b>{props.children}</b>,
+  })
+);
 
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 // readonly to make sure string is not mutated
@@ -55,16 +53,16 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   let match = parseIterator.next();
   while (!match.done) {
     const [, rawPrefix, tag, contents] = match.value;
-    console.log("match >>", `"${rawPrefix}"`, tag, contents);
     if (rawPrefix !== undefined) components.push(rawPrefix);
     if (tag !== undefined && contents !== undefined) {
-      const TagComponent = Tag[tag];
-      components.push(<TagComponent></TagComponent>);
+      const TagComponent = tagMap.get(tag);
+      if (TagComponent !== undefined)
+        components.push(<TagComponent>{contents}</TagComponent>);
     }
 
     match = parseIterator.next();
   }
-  // console.log("parse >>>", [...parseIterator]);
+  console.log("parse >>>", components);
 
   return (
     <p class={styles.string}>
