@@ -95,6 +95,12 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
         {pipe(props)}
       </a>
     ),
+    filter: (props) => (
+      <a title={props.children?.toString()} href="#">
+        {"UNSUPPORTED "}
+        {pipe(props)}
+      </a>
+    ),
   })
 );
 
