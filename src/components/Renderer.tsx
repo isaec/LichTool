@@ -6,11 +6,13 @@ type DataNode = { [key: string]: Data }
 type DataGroup = DataNode[]
 type Data = string | DataNode | DataGroup
 
-const SectionType: Component<{name: string, entries: DataGroup}> = props => {
-  return <><h1>{props.name}</h1><DataGroupRenderer group={props.entries}/></>
+type DataNodeType = Component<{data: DataNode}>
+
+const SectionType: DataNodeType = props => {
+  return <><h1>{props.data.name as string}</h1><DataGroupRenderer group={props.data.entries as DataGroup}/></>
 }
 
-const entryTypes = new Map<string, typeof SectionType>(Object.entries({
+const entryTypes = new Map<string, DataNodeType>(Object.entries({
   "section": SectionType
 }))
 
@@ -30,7 +32,7 @@ const DataNodeRenderer: Component<{data: DataNode}> = props => {
 
   if(props.data.type && entryTypes.has(props.data.type as string)) {
     const Entry = entryTypes.get(props.data.type as string)
-    return <SectionType {...props.data as { name: string, entries: DataGroup}}/>
+    return <SectionType data={props.data}/>
   }
 
   return <p>{"data: "}{JSON.stringify(props.data)}</p>
