@@ -59,6 +59,11 @@ const entryTypes = new Map(
   })
 );
 
+/**
+ * maps alias shorthand "b" to full tag "bold"
+ */
+const tagAlias = new Map([["b", "bold"]]);
+
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
     bold: (props) => <b>{props.children}</b>,
@@ -78,7 +83,8 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
     const [, rawPrefix, tag, contents] = match.value;
     if (rawPrefix !== undefined) components.push(rawPrefix);
     if (tag !== undefined && contents !== undefined) {
-      const TagComponent = tagMap.get(tag);
+      const aliasTag = tagAlias.get(tag);
+      const TagComponent = tagMap.get(aliasTag !== undefined ? aliasTag : tag);
       if (TagComponent !== undefined) {
         components.push(<TagComponent>{contents}</TagComponent>);
       } else {
