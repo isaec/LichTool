@@ -88,6 +88,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
       </span>
     ),
     code: (props) => <code>{props.children}</code>,
+    note: (props) => <i class={styles.note}>{props.children}</i>,
   })
 );
 
