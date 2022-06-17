@@ -7,26 +7,26 @@ type DataGroup = DataNode[]
 type Data = string | DataNode | DataGroup
 
 const DataStringRenderer: Component<{string: string}> = props => {
-  console.log("string renderer")
-  return <p>{"string: "}{props.string}</p>
+  console.log("string renderer >>", props.string)
+  return <p class={styles.string} >{"string: "}{props.string}</p>
 }
 
 const DataGroupRenderer: Component<{group: DataGroup}> = props => {
-  console.log("group renderer")
-  return <p>{"group: "}<For each={props.group}>{(data) => <DataNodeRenderer data={data}/>}</For></p>
+  console.log("group renderer >>", props.group)
+  return <p>{"group: "}<For each={props.group}>{(data) => <DataRenderer data={data}/>}</For></p>
 }
 
 const DataNodeRenderer: Component<{data: DataNode}> = props => {
-  console.log("node renderer")
+  console.log("node renderer >>", props.data)
 
 
-  Object.entries(props.data).forEach(([key, data]) => {
-    console.log(key, "::", data)
-  })
+  // Object.entries(props.data).forEach(([key, data]) => {
+  //   console.log(key, "::", data)
+  // })
 
   if(props.data.entries !== undefined) {
     const {entries, ...dispData} = props.data
-    return <p>{"data: "}{JSON.stringify(dispData)}<DataGroupRenderer group={entries as DataGroup}/></p>
+    return <p>{"data: "}{JSON.stringify(dispData)}{" :: group:"}<DataGroupRenderer group={entries as DataGroup}/></p>
   }
 
   return <p>{"data: "}{JSON.stringify(props.data)}</p>

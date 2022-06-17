@@ -1,2 +1,8 @@
+@use "../config" as *;
+
 .Renderer {
+}
+
+.string {
+  background-color: $color-blue-700;
 }
