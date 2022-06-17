@@ -120,7 +120,6 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
 const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
   return (
     <p>
-      {"group: "}
       <For each={props.group}>{(data) => <DataRenderer data={data} />}</For>
     </p>
   );
