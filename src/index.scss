@@ -13,7 +13,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: $color-grey-900;
+}
+
+p {
   color: dim($color-grey-200);
+}
+
+h1 {
+  font-size: $scale-4;
+}
+
+h2 {
+  font-size: $scale-3;
+}
+
+h3 {
+  font-size: $scale-2;
+}
+
+h4 {
+  font-size: $scale-1;
+}
+
+h5 {
+  font-size: $scale-0;
+}
+
+h6,
+p {
   font-size: $scale-00;
 }
 

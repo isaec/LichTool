@@ -45,7 +45,7 @@ const entryTypes = new Map(
     ),
     inset: (props: { data: InsetData }) => (
       <div class={styles.inset}>
-        <h1>{props.data.name}</h1>
+        <h4>{props.data.name}</h4>
         {<DataRenderer data={props.data.entries} />}
       </div>
     ),
