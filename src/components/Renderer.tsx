@@ -29,6 +29,11 @@ const DataNodeRenderer: Component<{data: DataNode}> = props => {
     return <p>{"data: "}{JSON.stringify(dispData)}{" :: group:"}<DataGroupRenderer group={entries as DataGroup}/></p>
   }
 
+  if(props.data.items !== undefined) {
+    const {items, ...dispData} = props.data
+    return <p>{"data: "}{JSON.stringify(dispData)}{" :: group:"}<DataGroupRenderer group={items as DataGroup}/></p>
+  }
+
   return <p>{"data: "}{JSON.stringify(props.data)}</p>
 }
 
