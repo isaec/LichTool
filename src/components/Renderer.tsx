@@ -10,6 +10,12 @@ type DataNode = SectionData | ListData | InsetData;
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
 
+const RenderError: Component<{ error: string; details?: string }> = (props) => (
+  <span class={styles.error}>{`${props.error} ERROR: ${
+    props.details ?? "no details provided"
+  }`}</span>
+);
+
 const entryTypes = new Map(
   Object.entries({
     // each key corresponds to a "type": "xxx"
@@ -56,20 +62,23 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
     if (rawPrefix !== undefined) components.push(rawPrefix);
     if (tag !== undefined && contents !== undefined) {
       const TagComponent = tagMap.get(tag);
-      if (TagComponent !== undefined)
+      if (TagComponent !== undefined) {
         components.push(<TagComponent>{contents}</TagComponent>);
+      } else {
+        components.push(
+          <RenderError
+            error={`UNKNOWN tag="${tag}"`}
+            details={`{@${tag} ${contents}}`}
+          />
+        );
+      }
     }
 
     match = parseIterator.next();
   }
   console.log("parse >>>", components);
 
-  return (
-    <p class={styles.string}>
-      {"string: "}
-      {components}
-    </p>
-  );
+  return <p class={styles.string}>{components}</p>;
 };
 
 const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
@@ -89,10 +98,10 @@ const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
 
   if (Entry === undefined) {
     return (
-      <p class={styles.error}>
-        {`"${props.data.type}" data (UNKNOWN TYPE FAILURE): `}
-        {JSON.stringify(props.data)}
-      </p>
+      <RenderError
+        error={`UNKNOWN type=${props.data.type}`}
+        details={JSON.stringify(props.data)}
+      />
     );
   }
 
