@@ -1,4 +1,4 @@
-import { Component, For } from "solid-js";
+import { Component, For, JSX, JSXElement } from "solid-js";
 
 import styles from "./Renderer.module.scss";
 
@@ -35,25 +35,33 @@ const entryTypes = new Map(
     ),
   })
 );
-interface TagMatcher extends Array<string | null | undefined> {
-  0: string;
-  1: string;
-  2: string | null;
-  3: string | null;
-}
-const tagMatcher = /(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
+type Tags = "bold";
+const Tag: {
+  [K in Tags]: Component<{}>;
+} = {
+  bold: (props) => <b>{"bold"}</b>,
+};
+
+const TagMap = new Map(Object.entries(Tag) as Array<[Tags, Component<{}>]>);
+
+const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   console.log("string renderer >>", props.string);
-  const parseIterator = props.string.matchAll(
-    tagMatcher
-  ) as IterableIterator<TagMatcher>;
-  const components = [];
+  const parseIterator = props.string.matchAll(tagMatcher) as IterableIterator<
+    [string, string?, string?, string?]
+  >;
+  const components: Array<JSXElement> = [];
   let match = parseIterator.next();
   while (!match.done) {
-    const val: TagMatcher = match.value;
-    const [, raw, tag, contents] = val;
-    console.log(raw, contents);
+    const [, rawPrefix, tag, contents] = match.value;
+    console.log("match >>", `"${rawPrefix}"`, tag, contents);
+    if (rawPrefix !== undefined) components.push(rawPrefix);
+    if (tag !== undefined && contents !== undefined) {
+      const TagComponent = Tag[tag];
+      components.push(<TagComponent></TagComponent>);
+    }
+
     match = parseIterator.next();
   }
   // console.log("parse >>>", [...parseIterator]);
@@ -61,7 +69,7 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   return (
     <p class={styles.string}>
       {"string: "}
-      {props.string}
+      {components}
     </p>
   );
 };
