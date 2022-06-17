@@ -25,6 +25,12 @@ const entryTypes = new Map<string, DataNodeType>(
         </For>
       </ul>
     ),
+    inset: (props) => (
+      <div class={styles.inset}>
+        <h1>{props.data.name as string}</h1>
+        {<DataRenderer data={props.data.entries} />}
+      </div>
+    ),
   })
 );
 
