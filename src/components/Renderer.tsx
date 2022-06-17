@@ -100,8 +100,12 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 );
 
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
+const isNestedTag = /{[^}]*?{.*?}.*?}/gm;
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
+  if (isNestedTag.test(props.string)) {
+    console.log("nesting!", props.string);
+  }
   const parseIterator = props.string.matchAll(tagMatcher) as IterableIterator<
     [string, string?, string?, string?]
   >;
