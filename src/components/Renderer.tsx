@@ -64,14 +64,14 @@ const tagAlias = new Map([
   ["s", "strike"],
 ]);
 
-const pipe = (
-  props: Readonly<{ children: JSX.Element }>,
-  index = 0,
-  alt = ""
-): string =>
-  typeof props.children === "string"
-    ? props.children.split("|")[index] ?? alt
-    : alt;
+const pipe =
+  (Element: Component<{ p: string[] }>) =>
+  (props: { children: JSX.Element }): JSX.Element =>
+    (
+      <Element
+        p={typeof props.children === "string" ? props.children.split("|") : []}
+      />
+    );
 
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
@@ -81,26 +81,26 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
       <span class={styles.underline}>{props.children}</span>
     ),
     strike: (props) => <s>{props.children}</s>,
-    color: (props) => (
-      <span style={`color: #${pipe(props, 1)}`}>{pipe(props)}</span>
-    ),
+    color: pipe((props) => (
+      <span style={`color: #${props.p[1]}`}>{props.p[0]}</span>
+    )),
     code: (props) => <code>{props.children}</code>,
     note: (props) => <i class={styles.note}>{props.children}</i>,
-    link: (props) => (
+    link: pipe((props) => (
       <a
-        href={pipe(props, 1, pipe(props))}
+        href={props.p[1] ?? props.p[0]}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {pipe(props)}
+        {props.p[0]}
       </a>
-    ),
-    filter: (props) => (
-      <a title={props.children?.toString()} href="#">
+    )),
+    filter: pipe((props) => (
+      <a title={props.p?.slice(1).join("|")} href="#">
         {"UNSUPPORTED "}
-        {pipe(props)}
+        {props.p[0]}
       </a>
-    ),
+    )),
   })
 );
 
