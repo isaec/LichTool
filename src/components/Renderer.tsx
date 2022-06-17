@@ -62,7 +62,7 @@ const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
   if (Entry === undefined) {
     return (
       <p class={styles.error}>
-        {"data (UNKNOWN TYPE FAILURE): "}
+        {`"${props.data.type}" data (UNKNOWN TYPE FAILURE): `}
         {JSON.stringify(props.data)}
       </p>
     );
