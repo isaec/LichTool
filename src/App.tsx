@@ -5,11 +5,9 @@ import renderdemo from "./data/renderdemo.json"
 import styles from './App.module.scss';
 import Renderer from './components/Renderer';
 
-console.log(renderdemo)
-
 const App: Component = () => {
 
-  const [data, setData] = createSignal("{}")
+  const [data, setData] = createSignal(JSON.stringify(renderdemo.data[0]))
 
   return (
     <div class={styles.App}>
