@@ -2,37 +2,39 @@ import { Component, For } from "solid-js";
 
 import styles from "./Renderer.module.scss";
 
-type DataNode = { [key: string]: Data };
+type SectionData = { type: "section"; name: string; entries: DataGroup };
+type ListData = { type: "list"; items: Data[] };
+type InsetData = { type: "inset"; name: string; entries: Data };
+
+type DataTypes = SectionData | ListData | InsetData;
+
+type DataNode = DataTypes;
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
 
-type DataNodeType = Component<{ data: DataNode }>;
-
-const entryTypes = new Map<string, DataNodeType>(
-  Object.entries({
-    // each key corresponds to a "type": "xxx"
-    // each value is jsx to render that type
-    section: (props) => (
-      <>
-        <h1>{props.data.name as string}</h1>
-        <DataGroupRenderer group={props.data.entries as DataGroup} />
-      </>
-    ),
-    list: (props) => (
-      <ul>
-        <For each={props.data.items as Data[]}>
-          {(item) => <li>{<DataRenderer data={item} />}</li>}
-        </For>
-      </ul>
-    ),
-    inset: (props) => (
-      <div class={styles.inset}>
-        <h1>{props.data.name as string}</h1>
-        {<DataRenderer data={props.data.entries} />}
-      </div>
-    ),
-  })
-);
+const entryTypes = {
+  // each key corresponds to a "type": "xxx"
+  // each value is jsx to render that type
+  section: (props: { data: SectionData }) => (
+    <>
+      <h1>{props.data.name}</h1>
+      <DataGroupRenderer group={props.data.entries} />
+    </>
+  ),
+  list: (props: { data: ListData }) => (
+    <ul>
+      <For each={props.data.items as Data[]}>
+        {(item) => <li>{<DataRenderer data={item} />}</li>}
+      </For>
+    </ul>
+  ),
+  inset: (props: { data: InsetData }) => (
+    <div class={styles.inset}>
+      <h1>{props.data.name as string}</h1>
+      {<DataRenderer data={props.data.entries} />}
+    </div>
+  ),
+};
 
 const DataStringRenderer: Component<{ string: string }> = (props) => {
   console.log("string renderer >>", props.string);
@@ -57,7 +59,7 @@ const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
 const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
   console.log("node renderer >>", props.data);
 
-  const Entry = entryTypes.get(props.data.type as string);
+  const Entry = entryTypes[props.data.type];
 
   if (Entry === undefined) {
     return (
