@@ -35,9 +35,29 @@ const entryTypes = new Map(
     ),
   })
 );
-
-const DataStringRenderer: Component<{ string: string }> = (props) => {
+interface TagMatcher extends Array<string | null | undefined> {
+  0: string;
+  1: string;
+  2: string | null;
+  3: string | null;
+}
+const tagMatcher = /(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
+// readonly to make sure string is not mutated
+const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   console.log("string renderer >>", props.string);
+  const parseIterator = props.string.matchAll(
+    tagMatcher
+  ) as IterableIterator<TagMatcher>;
+  const components = [];
+  let match = parseIterator.next();
+  while (!match.done) {
+    const val: TagMatcher = match.value;
+    const [, raw, tag, contents] = val;
+    console.log(raw, contents);
+    match = parseIterator.next();
+  }
+  // console.log("parse >>>", [...parseIterator]);
+
   return (
     <p class={styles.string}>
       {"string: "}
