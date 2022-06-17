@@ -1,4 +1,5 @@
 @use "config" as *;
+@use "sass:color";
 
 :root {
   color-scheme: dark;
@@ -11,8 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: $color-grey-1000;
-  color: $color-grey-300;
+  background-color: $color-grey-900;
+  color: dim($color-grey-200);
+  font-size: $scale-00;
 }
 
 code {

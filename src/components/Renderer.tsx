@@ -123,7 +123,7 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   }
   // console.log("parse >>>", components);
 
-  return <p class={styles.string}>{components}</p>;
+  return <p>{components}</p>;
 };
 
 const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
@@ -174,6 +174,10 @@ const DataRenderer: Component<{ data: Data }> = (props) => {
 const Renderer: Component<{ data: string }> = (props) => {
   const dataObj: Data = JSON.parse(props.data);
 
-  return <DataRenderer data={dataObj} />;
+  return (
+    <p class={styles.Renderer}>
+      <DataRenderer data={dataObj} />
+    </p>
+  );
 };
 export default Renderer;

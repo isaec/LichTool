@@ -1,5 +1,6 @@
-// ripped from pollen, turned into scss
+@use "sass:color";
 
+// ripped from pollen, turned into scss
 // font-size
 $scale-0: 1rem;
 $scale-1: 1.125rem;
@@ -136,6 +137,10 @@ $elevation-7: 0 32px 64px -12px rgba(0, 0, 0, 0.2);
 $easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
 $easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
 $easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+
+@function dim($color) {
+  @return color.adjust($color, $lightness: -20%, $saturation: 10%);
+}
 
 // color and background-color
 $color-grey-50: #f9fafb;
