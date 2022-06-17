@@ -59,6 +59,8 @@ const entryTypes = new Map(
   })
 );
 
+const cleanText = (text: string) => text.replaceAll("&quot;", '"');
+
 /**
  * maps alias shorthand "b" to full tag "bold"
  */
@@ -69,7 +71,8 @@ const tagAlias = new Map([
   ["s", "strike"],
 ]);
 
-// const tag = (Element) => (props) => <Element>{props.children}</Element>;
+const pipe = (data: JSX.Element, index = 0, alt = ""): string =>
+  typeof data === "string" ? data.split("|")[index] ?? alt : alt;
 
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
@@ -79,6 +82,12 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
       <span class={styles.underline}>{props.children}</span>
     ),
     strike: (props) => <s>{props.children}</s>,
+    color: (props) => (
+      <span style={`color: #${pipe(props.children, 1)}`}>
+        {pipe(props.children)}
+      </span>
+    ),
+    code: (props) => <code>{props.children}</code>,
   })
 );
 
@@ -93,12 +102,12 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   let match = parseIterator.next();
   while (!match.done) {
     const [, rawPrefix, tag, contents] = match.value;
-    if (rawPrefix !== undefined) components.push(rawPrefix);
+    if (rawPrefix !== undefined) components.push(cleanText(rawPrefix));
     if (tag !== undefined && contents !== undefined) {
       const aliasTag = tagAlias.get(tag);
       const TagComponent = tagMap.get(aliasTag !== undefined ? aliasTag : tag);
       if (TagComponent !== undefined) {
-        components.push(<TagComponent>{contents}</TagComponent>);
+        components.push(<TagComponent>{cleanText(contents)}</TagComponent>);
       } else {
         components.push(
           <RenderError
