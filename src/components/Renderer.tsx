@@ -12,8 +12,13 @@ const SectionType: DataNodeType = props => {
   return <><h1>{props.data.name as string}</h1><DataGroupRenderer group={props.data.entries as DataGroup}/></>
 }
 
+const ListType: DataNodeType = props => {
+  return <ul><For each={props.data.items as Data[]}>{(item) => <li>{<DataRenderer data={item} />}</li>}</For></ul>
+}
+
 const entryTypes = new Map<string, DataNodeType>(Object.entries({
-  "section": SectionType
+  "section": SectionType,
+  "list": ListType
 }))
 
 const DataStringRenderer: Component<{string: string}> = props => {
@@ -29,13 +34,13 @@ const DataGroupRenderer: Component<{group: DataGroup}> = props => {
 const DataNodeRenderer: Component<{data: DataNode}> = props => {
   console.log("node renderer >>", props.data)
 
+  const Entry = entryTypes.get(props.data.type as string)
 
-  if(props.data.type && entryTypes.has(props.data.type as string)) {
-    const Entry = entryTypes.get(props.data.type as string)
-    return <SectionType data={props.data}/>
+  if(Entry === undefined) {
+    return <p class={styles.error} >{"data (UNKNOWN TYPE FAILURE): "}{JSON.stringify(props.data)}</p>
   }
 
-  return <p>{"data: "}{JSON.stringify(props.data)}</p>
+  return <Entry data={props.data}/>
 }
 
 const DataRenderer: Component<{data: Data}> = props => {
