@@ -7,9 +7,8 @@ type ListData = { type: "list"; items: Data[] };
 type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
-function isDataNode(data: Data): data is DataNode {
-  return (data as DataNode).type !== undefined;
-}
+const isDataNode = (data: Data): data is DataNode =>
+  (data as DataNode).type !== undefined;
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
 
@@ -21,10 +20,7 @@ const RenderError: Component<{ error: string; details?: string }> = (props) => (
 
 const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
   props
-) => {
-  console.log(props.condition);
-  return props.condition ? props.children : <li>{props.children}</li>;
-};
+) => (props.condition ? props.children : <li>{props.children}</li>);
 
 const entryTypes = new Map(
   Object.entries({
@@ -39,14 +35,11 @@ const entryTypes = new Map(
     list: (props: { data: ListData }) => (
       <ul>
         <For each={props.data.items}>
-          {(item) => {
-            console.log(item);
-            return (
-              <ListItem condition={isDataNode(item) && item.type === "list"}>
-                <DataRenderer data={item} />
-              </ListItem>
-            );
-          }}
+          {(item) => (
+            <ListItem condition={isDataNode(item) && item.type === "list"}>
+              <DataRenderer data={item} />
+            </ListItem>
+          )}
         </For>
       </ul>
     ),
@@ -95,7 +88,6 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
-  // console.log("string renderer >>", props.string);
   const parseIterator = props.string.matchAll(tagMatcher) as IterableIterator<
     [string, string?, string?, string?]
   >;
@@ -121,13 +113,11 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
 
     match = parseIterator.next();
   }
-  // console.log("parse >>>", components);
 
   return <p>{components}</p>;
 };
 
 const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
-  // console.log("group renderer >>", props.group);
   return (
     <p>
       {"group: "}
@@ -137,8 +127,6 @@ const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
 };
 
 const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
-  // console.log("node renderer >>", props.data);
-
   const Entry = entryTypes.get(props.data.type);
 
   if (Entry === undefined) {
