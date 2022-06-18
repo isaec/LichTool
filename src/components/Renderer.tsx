@@ -101,7 +101,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 
 /** cannot match nested tags */
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
-type matchedTag = [string, string?, string?, string?];
+type matchedTag = [string, string?, string?, (string | JSXElement)?];
 const isNestedTag = /{[^}]*?{.*?}.*?}/gm;
 const firstWord = /\w+/;
 
@@ -112,7 +112,11 @@ const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
     const aliasTag = tagAlias.get(tag);
     const TagComponent = tagMap.get(aliasTag !== undefined ? aliasTag : tag);
     if (TagComponent !== undefined) {
-      elementStack.push(<TagComponent>{cleanText(contents)}</TagComponent>);
+      elementStack.push(
+        <TagComponent>
+          {typeof contents === "string" ? cleanText(contents) : contents}
+        </TagComponent>
+      );
     } else {
       elementStack.push(
         <RenderError
@@ -136,36 +140,41 @@ const recursiveTagMatcher = (
   const rawSuffix = string.slice(rawSuffixIndex + 1);
   const braceFullContents = string.slice(rawPrefixIndex + 2, rawSuffixIndex);
   const tag = braceFullContents.match(firstWord)![0];
-  const contents = braceFullContents.slice(tag.length);
-  components.push(rawPrefix);
-  console.log({ rawPrefix });
+  const contents = braceFullContents.slice(tag.length + 1);
+  // components.push(rawPrefix);
 
-  // console.log({
-  //   string,
-  //   rawPrefixIndex,
-  //   rawPrefix,
-  //   tag,
-  //   contents,
-  //   rawSuffixIndex,
-  //   rawSuffix,
-  // });
+  if (contents.includes("{@")) {
+    recursiveTagMatcher(components, contents);
 
-  if (!contents.includes("{@")) {
-    console.log({ tag, contents });
+    console.log(`tag="${tag}" "${contents}"`);
     processTag(components, [
+      string,
+      undefined /* we already pushed this */,
+      tag,
+      components,
+    ]);
+    console.log(components);
+  } else {
+    console.log(`tag="${tag}" "${contents}"`);
+    const elementStack: any = [];
+    processTag(elementStack, [
       string,
       undefined /* we already pushed this */,
       tag,
       contents,
     ]);
-  } else {
-    recursiveTagMatcher(components, contents);
-    console.log(components);
+    components.push(elementStack[0]);
+    console.log(elementStack);
   }
 
-  // components.push(tagContents);
-  console.log({ rawSuffix });
-  components.push(rawSuffix);
+  // // console.log({ tag, contents });
+
+  // console.log({ elementStack });
+  // components.push(elementStack);
+
+  // // components.push(tagContents);
+  // console.log({ rawSuffix });
+  // components.push(rawSuffix);
 };
 
 // readonly to make sure string is not mutated
