@@ -1,4 +1,17 @@
+@use "config" as *;
+
 .App {
   display: grid;
-  grid-template-columns: 50% 50%;
+  // this is all for renderer demo
+  gap: $size-4;
+  margin: $size-4;
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - $size-8);
+
+  & > textarea {
+    height: max-content;
+    min-height: 100%;
+    max-height: 100%;
+  }
 }

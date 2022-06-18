@@ -1,6 +1,7 @@
 @use "../config" as *;
 
 .Renderer {
+  overflow-y: scroll;
   & * {
     margin: 0px;
   }
