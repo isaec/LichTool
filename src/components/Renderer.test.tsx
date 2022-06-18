@@ -39,9 +39,9 @@ describe("Renderer", () => {
     );
     unmount();
   });
-  it("renders italic, strikes", () => {
+  it("renders italic, strikes, underline", () => {
     const { unmount, container } = render(() => (
-      <Renderer data="this is some text, {@strike and now its struck} {@b with shorthand, too!}" />
+      <Renderer data="this is some text, {@strike and now its struck} {@u underline} {@i with italic shorthand, too!}" />
     ));
     expect(
       container.querySelectorAll(`.${styles.Renderer} > *`)
@@ -54,9 +54,40 @@ describe("Renderer", () => {
             and now its struck
           </s>
            
+          <span
+            class="_underline_10aw3_16"
+          >
+            underline
+          </span>
+           
+          <i>
+            with italic shorthand, too!
+          </i>
+        </p>,
+      ]
+    `
+    );
+    unmount();
+  });
+  it("renders nested tags", () => {
+    const { unmount, container } = render(() => (
+      <Renderer data="some text: {@b bolded {@i and italic} and now just bold}" />
+    ));
+    expect(
+      container.querySelectorAll(`.${styles.Renderer} > *`)
+    ).toMatchInlineSnapshot(
+      `
+      NodeList [
+        <p>
+          some text: 
           <b>
-            with shorthand, too!
+            bolded 
+            <i>
+              and italic
+            </i>
+             and now just bold
           </b>
+          
         </p>,
       ]
     `
