@@ -132,18 +132,36 @@ const recursiveTagMatcher = (
   components: JSXElement[],
   string: Readonly<string>
 ) => {
-  // const tagContents: JSXElement[] = [];
+  // this is a safe assumption because this function is only called if there are nested tags
+  let braces = 1;
+  let index = string.indexOf("{@");
+  const rawPrefixIndex = index;
+  while (braces !== 0) {
+    let nextOpeningIndex = string.indexOf("{@", index);
+    let nextClosingIndex = string.indexOf("}", index);
+    if (nextOpeningIndex < nextClosingIndex) {
+      // if a new brace is opened before our group closes
+      braces++; // we are going a brace deeper
+      index = nextOpeningIndex;
+    } else {
+      // if brace is closed before another is opened
+      braces--;
+      index = nextClosingIndex;
+    }
+  }
+  const rawSuffixIndex = index;
 
-  const rawPrefixIndex = string.indexOf("{@");
   const rawPrefix = string.slice(0, rawPrefixIndex);
-  const rawSuffixIndex = string.lastIndexOf("}");
   const rawSuffix = string.slice(rawSuffixIndex + 1);
+
   const braceFullContents = string.slice(rawPrefixIndex + 2, rawSuffixIndex);
+
+  // this might crash
   const tag = braceFullContents.match(firstWord)![0];
   const contents = braceFullContents.slice(tag.length + 1);
   components.push(rawPrefix);
 
-  const elementStack: any = [];
+  const elementStack: JSXElement[] = [];
 
   if (contents.includes("{@")) {
     recursiveTagMatcher(elementStack, contents);
