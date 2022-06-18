@@ -141,7 +141,7 @@ const recursiveTagMatcher = (
   const braceFullContents = string.slice(rawPrefixIndex + 2, rawSuffixIndex);
   const tag = braceFullContents.match(firstWord)![0];
   const contents = braceFullContents.slice(tag.length + 1);
-  // components.push(rawPrefix);
+  components.push(rawPrefix);
 
   const elementStack: any = [];
 
@@ -175,7 +175,7 @@ const recursiveTagMatcher = (
 
   // // components.push(tagContents);
   // console.log({ rawSuffix });
-  // components.push(rawSuffix);
+  components.push(rawSuffix);
 };
 
 // readonly to make sure string is not mutated
