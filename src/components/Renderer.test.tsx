@@ -94,4 +94,14 @@ describe("Renderer", () => {
     );
     unmount();
   });
+  it("renders complex nesting of tags", () => {
+    const { unmount, container, getByText } = render(() => (
+      <Renderer data="some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold!}}" />
+    ));
+    // @ts-ignore
+    expect(getByText(/some text:/)).toBeInTheDocument();
+    expect((getByText(/some text:/) as HTMLElement).tagName).toBe("P");
+    expect((getByText(/struck bold!/) as HTMLElement).tagName).toBe("S");
+    unmount();
+  });
 });
