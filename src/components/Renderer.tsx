@@ -7,7 +7,7 @@ type ListData = { type: "list"; items: Data[] };
 type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
-const isDataNode = (data: Data): data is DataNode =>
+const isDataNode = (data: Data | object): data is DataNode =>
   (data as DataNode).type !== undefined;
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
@@ -272,23 +272,25 @@ const DataRenderer: Component<{ data: Data }> = (props) => {
   return <DataNodeRenderer data={props.data} />;
 };
 
-const parseData = (data: {} | string) => {
-  if (typeof data === "object") return data;
-  if (typeof data === "string")
+const parseData = (data: object | string): Data => {
+  if (typeof data === "string") {
     try {
       return JSON.parse(data);
     } catch (_e) {
       return data;
     }
+  }
+  if (isDataNode(data)) {
+    return data;
+  }
+
+  throw new Error("incomprehensible data");
 };
 
-const Renderer: Component<{ data: string | {} }> = (props) => {
-  const dataObj: Data = parseData(props.data);
+const Renderer: Component<{ data: string | object }> = (props) => (
+  <p class={styles.Renderer}>
+    <DataRenderer data={parseData(props.data)} />
+  </p>
+);
 
-  return (
-    <p class={styles.Renderer}>
-      <DataRenderer data={dataObj} />
-    </p>
-  );
-};
 export default Renderer;
