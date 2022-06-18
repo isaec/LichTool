@@ -5,6 +5,8 @@ import {
   For,
   JSX,
   JSXElement,
+  Match,
+  Switch,
 } from "solid-js";
 
 import styles from "./Renderer.module.scss";
@@ -290,17 +292,20 @@ const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
   );
 };
 
-const DataRenderer: Component<{ data: Data }> = (props) => {
-  if (typeof props.data === "string") {
-    return <DataStringRenderer string={props.data} />;
-  }
-
-  if (Array.isArray(props.data)) {
-    return <DataGroupRenderer group={props.data} />;
-  }
-
-  return <DataNodeRenderer data={props.data} />;
-};
+const DataRenderer: Component<{ data: Data }> = (props) => (
+  <Switch fallback={<DataNodeRenderer data={props.data as DataNode} />}>
+    <Match when={typeof props.data === "string"}>
+      <DataStringRenderer
+        string={
+          props.data as string /* ts cant understand switch is a type guard */
+        }
+      />
+    </Match>
+    <Match when={Array.isArray(props.data)}>
+      <DataGroupRenderer group={props.data as DataGroup} />
+    </Match>
+  </Switch>
+);
 
 /** internal data parser, handling data in many format types */
 export const _parseData = (data: object | string): Data => {
