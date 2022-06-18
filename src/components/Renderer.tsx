@@ -81,7 +81,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     ),
     strike: (props) => <s>{props.children}</s>,
     color: pipe((props) => (
-      <span style={`color: #${props.p0}`}>{props.p1}</span>
+      <span style={`color: #${props.p1}`}>{props.p0}</span>
     )),
     code: (props) => <code>{props.children}</code>,
     note: (props) => <i class={styles.note}>{props.children}</i>,
@@ -103,6 +103,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, string?];
 const isNestedTag = /{[^}]*?{.*?}.*?}/gm;
+const firstWord = /\w+/;
 
 const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
   const [, rawPrefix, tag, contents] = matchValue;
@@ -125,17 +126,42 @@ const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
 
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
+  const components: Array<JSXElement> = [];
+
   if (isNestedTag.test(props.string)) {
     console.log("nesting!", props.string);
-  }
-  const parseIterator = props.string.matchAll(
-    tagMatcher
-  ) as IterableIterator<matchedTag>;
-  const components: Array<JSXElement> = [];
-  let match = parseIterator.next();
-  while (!match.done) {
-    processTag(components, match.value);
-    match = parseIterator.next();
+
+    const rawPrefixIndex = props.string.indexOf("{@");
+    const rawPrefix = props.string.slice(0, rawPrefixIndex);
+    const rawSuffixIndex = props.string.lastIndexOf("}");
+    const rawSuffix = props.string.slice(rawSuffixIndex + 1);
+    const braceContents = props.string.slice(
+      rawPrefixIndex + 2,
+      rawSuffixIndex - 1
+    );
+    const tag = braceContents.match(firstWord)![0];
+    components.push(rawPrefix);
+    components.push("EEEE");
+
+    console.log({
+      rawPrefixIndex,
+      rawPrefix,
+      tag,
+      braceContents,
+      rawSuffixIndex,
+      rawSuffix,
+    });
+  } else {
+    // non nested regex based parsing
+    const parseIterator = props.string.matchAll(
+      tagMatcher
+    ) as IterableIterator<matchedTag>;
+
+    let match = parseIterator.next();
+    while (!match.done) {
+      processTag(components, match.value);
+      match = parseIterator.next();
+    }
   }
 
   return <p>{components}</p>;
