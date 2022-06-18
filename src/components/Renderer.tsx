@@ -15,7 +15,7 @@ type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
 const isDataNode = (data: Data | object): data is DataNode =>
-  (data as DataNode).type !== undefined;
+  typeof (data as DataNode).type === "string";
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
 

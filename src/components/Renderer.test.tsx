@@ -8,9 +8,47 @@ import styles from "./Renderer.module.scss";
 import Renderer, { _parseData } from "./Renderer";
 
 describe("_parseData", () => {
-  it("parses json", () => {
-    const obj = { key: 10, woot: "yaaa" };
+  it.each([
+    { key: 10, anotherKey: "string" },
+    { nest: { very: { deeply: { bool: true } } } },
+  ])("parses string json into object json", (obj) => {
     expect(_parseData(JSON.stringify(obj))).toStrictEqual(obj);
+  });
+
+  it.each(["this is a string!"])("parses naked strings into strings", (str) => {
+    expect(_parseData(str)).toStrictEqual(str);
+  });
+
+  it.each(["this is a string!"])(
+    "parses quoted strings into strings",
+    (str) => {
+      expect(_parseData(`"${str}"`)).toBe(str);
+    }
+  );
+
+  it.each([
+    {
+      type: "~",
+    },
+    {
+      type: "some other type",
+    },
+  ])("returns safe objects", (obj) => {
+    expect(_parseData(obj)).toStrictEqual(obj);
+  });
+
+  it.each([
+    {
+      type: null,
+    },
+    {
+      type: 10,
+    },
+    {
+      notTyped: "lol",
+    },
+  ])("throws error on a clearly unsafe object", (obj) => {
+    expect(() => _parseData(obj)).toThrow();
   });
 });
 
