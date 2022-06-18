@@ -137,7 +137,7 @@ const recursiveTagMatcher = (
   let braces = 1;
   let index = string.indexOf("{@");
   const rawPrefixIndex = index;
-  while (true) {
+  while (braces !== 0) {
     console.log({ braces, index, slice: string.slice(index) });
     let nextOpeningIndex = string.indexOf("{@", index + 1);
     let nextClosingIndex = string.indexOf("}", index) + 1;
@@ -151,7 +151,6 @@ const recursiveTagMatcher = (
       braces--;
       index = nextClosingIndex;
     }
-    if (braces == 0) break;
   }
   console.log("walked!", { braces, index, slice: string.slice(index) });
   const rawSuffixIndex = index;
@@ -190,7 +189,11 @@ const recursiveTagMatcher = (
     ]);
     components.push(elementStack[0]);
   }
-  components.push(rawSuffix);
+  if (rawSuffix.includes("{@")) {
+    recursiveTagMatcher(elementStack, rawSuffix);
+  } else {
+    components.push(rawSuffix);
+  }
 };
 
 // readonly to make sure string is not mutated
