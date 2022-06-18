@@ -23,7 +23,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=quote ERROR: {"type":"quote","entries":["Look, don't quote me on this, but"],"by":"Anon","from":"Archive of Lost Chats"}
+        UNKNOWN type=quote ERROR: 
+        <code>
+          {"type":"quote","entries":["Look, don't quote me on this, but"],"by":"Anon","from":"Archive of Lost Chats"}
+        </code>
+        
       </span>
       <p>
         This is a demo of the JSON format, and how it (usually) gets rendered. You can edit this text, and it will reset on refresh.
@@ -112,73 +116,121 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="dice" ERROR: {@dice 1d2-2+2d3+5}
+              UNKNOWN tag="dice" ERROR: 
+              <code>
+                {@dice 1d2-2+2d3+5}
+              </code>
+              
             </span>
              for regular dice rolls (
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="dice" ERROR: {@dice 1d6;2d6}
+              UNKNOWN tag="dice" ERROR: 
+              <code>
+                {@dice 1d6;2d6}
+              </code>
+              
             </span>
              for multiple options; 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="dice" ERROR: {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#}
+              UNKNOWN tag="dice" ERROR: 
+              <code>
+                {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#}
+              </code>
+              
             </span>
              for input prompts), with extended 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="dice" ERROR: {@dice 1d20+2|display text}
+              UNKNOWN tag="dice" ERROR: 
+              <code>
+                {@dice 1d20+2|display text}
+              </code>
+              
             </span>
              and 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="dice" ERROR: {@dice 1d20+2|display text|rolled by name}
+              UNKNOWN tag="dice" ERROR: 
+              <code>
+                {@dice 1d20+2|display text|rolled by name}
+              </code>
+              
             </span>
             , and a special 'hit' version which assumes a d20 is to be rolled 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="hit" ERROR: {@hit +7}
+              UNKNOWN tag="hit" ERROR: 
+              <code>
+                {@hit +7}
+              </code>
+              
             </span>
              (and rolls advantage on shift-click, disadvantage on alt-click). There's also 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="damage" ERROR: {@damage 1d12+3}
+              UNKNOWN tag="damage" ERROR: 
+              <code>
+                {@damage 1d12+3}
+              </code>
+              
             </span>
              which will roll critical hits on shift-click and half damage (rounding down) on alt-click, and 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="d20" ERROR: {@d20 -4}
+              UNKNOWN tag="d20" ERROR: 
+              <code>
+                {@d20 -4}
+              </code>
+              
             </span>
              which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="scaledice" ERROR: {@scaledice 2d6;3d6|2-9|1d6}
+              UNKNOWN tag="scaledice" ERROR: 
+              <code>
+                {@scaledice 2d6;3d6|2-9|1d6}
+              </code>
+              
             </span>
              for each level beyond 2nd), for when a spell effect scales at higher levels. 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="ability" ERROR: {@ability str 20}
+              UNKNOWN tag="ability" ERROR: 
+              <code>
+                {@ability str 20}
+              </code>
+              
             </span>
             , 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="savingThrow" ERROR: {@savingThrow str 5}
+              UNKNOWN tag="savingThrow" ERROR: 
+              <code>
+                {@savingThrow str 5}
+              </code>
+              
             </span>
             , and 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="skillCheck" ERROR: {@skillCheck animal_handling 5}
+              UNKNOWN tag="skillCheck" ERROR: 
+              <code>
+                {@skillCheck animal_handling 5}
+              </code>
+              
             </span>
              are used as internal shorthand, but may be useful elsewhere.
           </p>
@@ -189,19 +241,31 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="chance" ERROR: {@chance 50}
+              UNKNOWN tag="chance" ERROR: 
+              <code>
+                {@chance 50}
+              </code>
+              
             </span>
             , 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="chance" ERROR: {@chance 50|display text}
+              UNKNOWN tag="chance" ERROR: 
+              <code>
+                {@chance 50|display text}
+              </code>
+              
             </span>
             , and 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="chance" ERROR: {@chance 50|display text|rolled by name}
+              UNKNOWN tag="chance" ERROR: 
+              <code>
+                {@chance 50|display text|rolled by name}
+              </code>
+              
             </span>
             .
           </p>
@@ -212,7 +276,11 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="recharge" ERROR: {@recharge 4}
+              UNKNOWN tag="recharge" ERROR: 
+              <code>
+                {@recharge 4}
+              </code>
+              
             </span>
              for '(Recharge 4-6)'.
           </p>
@@ -223,25 +291,41 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="skill" ERROR: {@skill Athletics}
+              UNKNOWN tag="skill" ERROR: 
+              <code>
+                {@skill Athletics}
+              </code>
+              
             </span>
             /
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="skill" ERROR: {@skill Perception}
+              UNKNOWN tag="skill" ERROR: 
+              <code>
+                {@skill Perception}
+              </code>
+              
             </span>
              (case sensitive) and 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="sense" ERROR: {@sense Truesight}
+              UNKNOWN tag="sense" ERROR: 
+              <code>
+                {@sense Truesight}
+              </code>
+              
             </span>
             /
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="sense" ERROR: {@sense darkvision}
+              UNKNOWN tag="sense" ERROR: 
+              <code>
+                {@sense darkvision}
+              </code>
+              
             </span>
              (case insensitive) which provide tooltips on hover.
           </p>
@@ -252,13 +336,21 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="footnote" ERROR: {@footnote directly in text|This is primarily for homebrew purposes, as the official texts (so far) avoid using footnotes}
+              UNKNOWN tag="footnote" ERROR: 
+              <code>
+                {@footnote directly in text|This is primarily for homebrew purposes, as the official texts (so far) avoid using footnotes}
+              </code>
+              
             </span>
             , with 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="footnote" ERROR: {@footnote optional reference information|This is the footnote. References are free text.|Footnote 1, page 20}
+              UNKNOWN tag="footnote" ERROR: 
+              <code>
+                {@footnote optional reference information|This is the footnote. References are free text.|Footnote 1, page 20}
+              </code>
+              
             </span>
             .
           </p>
@@ -269,19 +361,31 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="homebrew" ERROR: {@homebrew changes|modifications}
+              UNKNOWN tag="homebrew" ERROR: 
+              <code>
+                {@homebrew changes|modifications}
+              </code>
+              
             </span>
             , 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="homebrew" ERROR: {@homebrew additions}
+              UNKNOWN tag="homebrew" ERROR: 
+              <code>
+                {@homebrew additions}
+              </code>
+              
             </span>
              or 
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="homebrew" ERROR: {@homebrew |removals}
+              UNKNOWN tag="homebrew" ERROR: 
+              <code>
+                {@homebrew |removals}
+              </code>
+              
             </span>
             .
           </p>
@@ -298,19 +402,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="spell" ERROR: {@spell acid splash}
+                UNKNOWN tag="spell" ERROR: 
+                <code>
+                  {@spell acid splash}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="spell" ERROR: {@spell tiny servant|xge}
+                UNKNOWN tag="spell" ERROR: 
+                <code>
+                  {@spell tiny servant|xge}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="spell" ERROR: {@spell tiny servant|xge|and optional link text added with another pipe}
+                UNKNOWN tag="spell" ERROR: 
+                <code>
+                  {@spell tiny servant|xge|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -321,19 +437,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="item" ERROR: {@item alchemy jug}
+                UNKNOWN tag="item" ERROR: 
+                <code>
+                  {@item alchemy jug}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="item" ERROR: {@item longsword|phb}
+                UNKNOWN tag="item" ERROR: 
+                <code>
+                  {@item longsword|phb}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="item" ERROR: {@item longsword|phb|and optional link text added with another pipe}
+                UNKNOWN tag="item" ERROR: 
+                <code>
+                  {@item longsword|phb|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -344,19 +472,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="creature" ERROR: {@creature goblin}
+                UNKNOWN tag="creature" ERROR: 
+                <code>
+                  {@creature goblin}
+                </code>
+                
               </span>
                assumes MM by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="creature" ERROR: {@creature cow|vgm}
+                UNKNOWN tag="creature" ERROR: 
+                <code>
+                  {@creature cow|vgm}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="creature" ERROR: {@creature cow|vgm|and optional link text added with another pipe}
+                UNKNOWN tag="creature" ERROR: 
+                <code>
+                  {@creature cow|vgm|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -367,19 +507,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="background" ERROR: {@background Charlatan}
+                UNKNOWN tag="background" ERROR: 
+                <code>
+                  {@background Charlatan}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="background" ERROR: {@background Anthropologist|toa}
+                UNKNOWN tag="background" ERROR: 
+                <code>
+                  {@background Anthropologist|toa}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="background" ERROR: {@background Anthropologist|ToA|and optional link text added with another pipe}
+                UNKNOWN tag="background" ERROR: 
+                <code>
+                  {@background Anthropologist|ToA|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -390,19 +542,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="race" ERROR: {@race Human}
+                UNKNOWN tag="race" ERROR: 
+                <code>
+                  {@race Human}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="race" ERROR: {@race Aarakocra|eepc}
+                UNKNOWN tag="race" ERROR: 
+                <code>
+                  {@race Aarakocra|eepc}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="race" ERROR: {@race Aarakocra|eepc|and optional link text added with another pipe}
+                UNKNOWN tag="race" ERROR: 
+                <code>
+                  {@race Aarakocra|eepc|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -413,19 +577,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="optfeature" ERROR: {@optfeature Agonizing Blast}
+                UNKNOWN tag="optfeature" ERROR: 
+                <code>
+                  {@optfeature Agonizing Blast}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="optfeature" ERROR: {@optfeature Aspect of the Moon|xge}
+                UNKNOWN tag="optfeature" ERROR: 
+                <code>
+                  {@optfeature Aspect of the Moon|xge}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="optfeature" ERROR: {@optfeature Aspect of the Moon|xge|and optional link text added with another pipe}
+                UNKNOWN tag="optfeature" ERROR: 
+                <code>
+                  {@optfeature Aspect of the Moon|xge|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -436,31 +612,51 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="class" ERROR: {@class fighter}
+                UNKNOWN tag="class" ERROR: 
+                <code>
+                  {@class fighter}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="class" ERROR: {@class artificer|uaartificer}
+                UNKNOWN tag="class" ERROR: 
+                <code>
+                  {@class artificer|uaartificer}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="class" ERROR: {@class fighter|phb|optional link text added with another pipe}
+                UNKNOWN tag="class" ERROR: 
+                <code>
+                  {@class fighter|phb|optional link text added with another pipe}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="class" ERROR: {@class fighter|phb|subclasses added|Eldritch Knight}
+                UNKNOWN tag="class" ERROR: 
+                <code>
+                  {@class fighter|phb|subclasses added|Eldritch Knight}
+                </code>
+                
               </span>
                with another pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="class" ERROR: {@class fighter|phb|and class feature added|Eldritch Knight|phb|2-0}
+                UNKNOWN tag="class" ERROR: 
+                <code>
+                  {@class fighter|phb|and class feature added|Eldritch Knight|phb|2-0}
+                </code>
+                
               </span>
                with another pipe (first number is level index (0-19), second number is feature index (0-n)).
             </p>
@@ -471,25 +667,41 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="classFeature" ERROR: {@classFeature Rage|Barbarian||1}
+                UNKNOWN tag="classFeature" ERROR: 
+                <code>
+                  {@classFeature Rage|Barbarian||1}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="classFeature" ERROR: {@classFeature Infuse Item|Artificer|TCE|2}
+                UNKNOWN tag="classFeature" ERROR: 
+                <code>
+                  {@classFeature Infuse Item|Artificer|TCE|2}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="classFeature" ERROR: {@classFeature Survival Instincts|Barbarian||2|UAClassFeatureVariants}
+                UNKNOWN tag="classFeature" ERROR: 
+                <code>
+                  {@classFeature Survival Instincts|Barbarian||2|UAClassFeatureVariants}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="classFeature" ERROR: {@classFeature Rage|Barbarian||1||optional display text}
+                UNKNOWN tag="classFeature" ERROR: 
+                <code>
+                  {@classFeature Rage|Barbarian||1||optional display text}
+                </code>
+                
               </span>
               . Class source is assumed to be PHB. Class feature source is assumed to be the same as class source.
             </p>
@@ -500,31 +712,51 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Path of the Berserker|Barbarian||Berserker||3}
+                UNKNOWN tag="subclassFeature" ERROR: 
+                <code>
+                  {@subclassFeature Path of the Berserker|Barbarian||Berserker||3}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Alchemist|Artificer|TCE|Alchemist|TCE|3}
+                UNKNOWN tag="subclassFeature" ERROR: 
+                <code>
+                  {@subclassFeature Alchemist|Artificer|TCE|Alchemist|TCE|3}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Path of the Battlerager|Barbarian||Battlerager|SCAG|3}
+                UNKNOWN tag="subclassFeature" ERROR: 
+                <code>
+                  {@subclassFeature Path of the Battlerager|Barbarian||Battlerager|SCAG|3}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Blessed Strikes|Cleric||Life||8|UAClassFeatureVariants}
+                UNKNOWN tag="subclassFeature" ERROR: 
+                <code>
+                  {@subclassFeature Blessed Strikes|Cleric||Life||8|UAClassFeatureVariants}
+                </code>
+                
               </span>
               , 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Path of the Berserker|Barbarian||Berserker||3||optional display text}
+                UNKNOWN tag="subclassFeature" ERROR: 
+                <code>
+                  {@subclassFeature Path of the Berserker|Barbarian||Berserker||3||optional display text}
+                </code>
+                
               </span>
               . Class source is assumed to be PHB. Subclass source is assumed to be PHB. Subclass feature source is assumed to be the same as subclass source.
             </p>
@@ -535,19 +767,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="condition" ERROR: {@condition stunned}
+                UNKNOWN tag="condition" ERROR: 
+                <code>
+                  {@condition stunned}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="condition" ERROR: {@condition stunned|PHB}
+                UNKNOWN tag="condition" ERROR: 
+                <code>
+                  {@condition stunned|PHB}
+                </code>
+                
               </span>
                can have sources added with a pipe (not that it's ever useful), 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="condition" ERROR: {@condition stunned|PHB|and optional link text added with another pipe}
+                UNKNOWN tag="condition" ERROR: 
+                <code>
+                  {@condition stunned|PHB|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -558,19 +802,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="disease" ERROR: {@disease cackle fever}
+                UNKNOWN tag="disease" ERROR: 
+                <code>
+                  {@disease cackle fever}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="disease" ERROR: {@disease cackle fever}
+                UNKNOWN tag="disease" ERROR: 
+                <code>
+                  {@disease cackle fever}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="disease" ERROR: {@disease cackle fever|DMG|and optional link text added with another pipe}
+                UNKNOWN tag="disease" ERROR: 
+                <code>
+                  {@disease cackle fever|DMG|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -581,19 +837,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="reward" ERROR: {@reward Blessing of Health}
+                UNKNOWN tag="reward" ERROR: 
+                <code>
+                  {@reward Blessing of Health}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="reward" ERROR: {@reward Blessing of Health}
+                UNKNOWN tag="reward" ERROR: 
+                <code>
+                  {@reward Blessing of Health}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="reward" ERROR: {@reward Blessing of Health|DMG|and optional link text added with another pipe}
+                UNKNOWN tag="reward" ERROR: 
+                <code>
+                  {@reward Blessing of Health|DMG|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -604,19 +872,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="feat" ERROR: {@feat Alert}
+                UNKNOWN tag="feat" ERROR: 
+                <code>
+                  {@feat Alert}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="feat" ERROR: {@feat Elven Accuracy|xge}
+                UNKNOWN tag="feat" ERROR: 
+                <code>
+                  {@feat Elven Accuracy|xge}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="feat" ERROR: {@feat Elven Accuracy|xge|and optional link text added with another pipe}
+                UNKNOWN tag="feat" ERROR: 
+                <code>
+                  {@feat Elven Accuracy|xge|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -627,19 +907,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="psionic" ERROR: {@psionic Mastery of Force}
+                UNKNOWN tag="psionic" ERROR: 
+                <code>
+                  {@psionic Mastery of Force}
+                </code>
+                
               </span>
                assumes UATheMysticClass by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="psionic" ERROR: {@psionic Mastery of Force|UATheMysticClass}
+                UNKNOWN tag="psionic" ERROR: 
+                <code>
+                  {@psionic Mastery of Force|UATheMysticClass}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="psionic" ERROR: {@psionic Mastery of Force|UATheMysticClass|and optional link text added with another pipe}
+                UNKNOWN tag="psionic" ERROR: 
+                <code>
+                  {@psionic Mastery of Force|UATheMysticClass|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -650,19 +942,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="object" ERROR: {@object Ballista}
+                UNKNOWN tag="object" ERROR: 
+                <code>
+                  {@object Ballista}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="object" ERROR: {@object Ballista}
+                UNKNOWN tag="object" ERROR: 
+                <code>
+                  {@object Ballista}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="object" ERROR: {@object Ballista|DMG|and optional link text added with another pipe}
+                UNKNOWN tag="object" ERROR: 
+                <code>
+                  {@object Ballista|DMG|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -673,19 +977,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="boon" ERROR: {@boon Demonic Boon of Demogorgon}
+                UNKNOWN tag="boon" ERROR: 
+                <code>
+                  {@boon Demonic Boon of Demogorgon}
+                </code>
+                
               </span>
                assumes MTF by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="boon" ERROR: {@boon Demonic Boon of Demogorgon}
+                UNKNOWN tag="boon" ERROR: 
+                <code>
+                  {@boon Demonic Boon of Demogorgon}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="boon" ERROR: {@boon Demonic Boon of Demogorgon|MTF|and optional link text added with another pipe}
+                UNKNOWN tag="boon" ERROR: 
+                <code>
+                  {@boon Demonic Boon of Demogorgon|MTF|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -696,19 +1012,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="cult" ERROR: {@cult Cult of Asmodeus}
+                UNKNOWN tag="cult" ERROR: 
+                <code>
+                  {@cult Cult of Asmodeus}
+                </code>
+                
               </span>
                assumes MTF by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="cult" ERROR: {@cult Cult of Asmodeus}
+                UNKNOWN tag="cult" ERROR: 
+                <code>
+                  {@cult Cult of Asmodeus}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="cult" ERROR: {@cult Cult of Asmodeus|MTF|and optional link text added with another pipe}
+                UNKNOWN tag="cult" ERROR: 
+                <code>
+                  {@cult Cult of Asmodeus|MTF|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -719,19 +1047,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="trap" ERROR: {@trap falling net}
+                UNKNOWN tag="trap" ERROR: 
+                <code>
+                  {@trap falling net}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="trap" ERROR: {@trap falling portcullis|xge}
+                UNKNOWN tag="trap" ERROR: 
+                <code>
+                  {@trap falling portcullis|xge}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="trap" ERROR: {@trap falling portcullis|xge|and optional link text added with another pipe}
+                UNKNOWN tag="trap" ERROR: 
+                <code>
+                  {@trap falling portcullis|xge|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -742,19 +1082,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="hazard" ERROR: {@hazard brown mold}
+                UNKNOWN tag="hazard" ERROR: 
+                <code>
+                  {@hazard brown mold}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="hazard" ERROR: {@hazard russet mold|vgm}
+                UNKNOWN tag="hazard" ERROR: 
+                <code>
+                  {@hazard russet mold|vgm}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="hazard" ERROR: {@hazard russet mold|vgm|and optional link text added with another pipe}
+                UNKNOWN tag="hazard" ERROR: 
+                <code>
+                  {@hazard russet mold|vgm|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -765,25 +1117,41 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="deity" ERROR: {@deity Gond}
+                UNKNOWN tag="deity" ERROR: 
+                <code>
+                  {@deity Gond}
+                </code>
+                
               </span>
                assumes PHB Forgotten Realms pantheon by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="deity" ERROR: {@deity Gruumsh|nonhuman}
+                UNKNOWN tag="deity" ERROR: 
+                <code>
+                  {@deity Gruumsh|nonhuman}
+                </code>
+                
               </span>
                can have pantheons added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="deity" ERROR: {@deity Ioun|dawn war|dmg}
+                UNKNOWN tag="deity" ERROR: 
+                <code>
+                  {@deity Ioun|dawn war|dmg}
+                </code>
+                
               </span>
                can have sources added with another pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="deity" ERROR: {@deity Ioun|dawn war|dmg|and optional link text added with another pipe}
+                UNKNOWN tag="deity" ERROR: 
+                <code>
+                  {@deity Ioun|dawn war|dmg|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -794,19 +1162,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="variantrule" ERROR: {@variantrule Diagonals}
+                UNKNOWN tag="variantrule" ERROR: 
+                <code>
+                  {@variantrule Diagonals}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="variantrule" ERROR: {@variantrule Multiclassing|phb}
+                UNKNOWN tag="variantrule" ERROR: 
+                <code>
+                  {@variantrule Multiclassing|phb}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="variantrule" ERROR: {@variantrule Multiclassing|phb|and optional link text added with another pipe}
+                UNKNOWN tag="variantrule" ERROR: 
+                <code>
+                  {@variantrule Multiclassing|phb|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -817,19 +1197,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="vehicle" ERROR: {@vehicle Galley}
+                UNKNOWN tag="vehicle" ERROR: 
+                <code>
+                  {@vehicle Galley}
+                </code>
+                
               </span>
                assumes GoS by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="vehicle" ERROR: {@vehicle Galley|UAOfShipsAndSea}
+                UNKNOWN tag="vehicle" ERROR: 
+                <code>
+                  {@vehicle Galley|UAOfShipsAndSea}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="vehicle" ERROR: {@vehicle Galley|GoS|and optional link text added with another pipe}
+                UNKNOWN tag="vehicle" ERROR: 
+                <code>
+                  {@vehicle Galley|GoS|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -840,19 +1232,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="vehupgrade" ERROR: {@vehupgrade Guardian Figurehead}
+                UNKNOWN tag="vehupgrade" ERROR: 
+                <code>
+                  {@vehupgrade Guardian Figurehead}
+                </code>
+                
               </span>
                assumes GoS by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="vehicle" ERROR: {@vehicle Gilded Death Armor|BGDIA}
+                UNKNOWN tag="vehicle" ERROR: 
+                <code>
+                  {@vehicle Gilded Death Armor|BGDIA}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="vehicle" ERROR: {@vehicle Guardian Figurehead|GoS|and optional link text added with another pipe}
+                UNKNOWN tag="vehicle" ERROR: 
+                <code>
+                  {@vehicle Guardian Figurehead|GoS|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -863,19 +1267,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="table" ERROR: {@table 25 gp Art Objects}
+                UNKNOWN tag="table" ERROR: 
+                <code>
+                  {@table 25 gp Art Objects}
+                </code>
+                
               </span>
                assumes DMG by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="table" ERROR: {@table Adventuring Gear|phb}
+                UNKNOWN tag="table" ERROR: 
+                <code>
+                  {@table Adventuring Gear|phb}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="table" ERROR: {@table Adventuring Gear|phb|and optional link text added with another pipe}
+                UNKNOWN tag="table" ERROR: 
+                <code>
+                  {@table Adventuring Gear|phb|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -886,19 +1302,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="action" ERROR: {@action Attack}
+                UNKNOWN tag="action" ERROR: 
+                <code>
+                  {@action Attack}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="action" ERROR: {@action Tumble|DMG}
+                UNKNOWN tag="action" ERROR: 
+                <code>
+                  {@action Tumble|DMG}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="action" ERROR: {@action Tumble|DMG|and optional link text added with another pipe}
+                UNKNOWN tag="action" ERROR: 
+                <code>
+                  {@action Tumble|DMG|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -909,19 +1337,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="language" ERROR: {@language common}
+                UNKNOWN tag="language" ERROR: 
+                <code>
+                  {@language common}
+                </code>
+                
               </span>
                assumes PHB by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="language" ERROR: {@language Dambrathan|SCAG}
+                UNKNOWN tag="language" ERROR: 
+                <code>
+                  {@language Dambrathan|SCAG}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="language" ERROR: {@language Dambrathan|SCAG|and optional link text added with another pipe}
+                UNKNOWN tag="language" ERROR: 
+                <code>
+                  {@language Dambrathan|SCAG|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -932,19 +1372,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="charoption" ERROR: {@charoption Anvilwrought}
+                UNKNOWN tag="charoption" ERROR: 
+                <code>
+                  {@charoption Anvilwrought}
+                </code>
+                
               </span>
                assumes MOT by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="charoption" ERROR: {@charoption Hollow One|EGW}
+                UNKNOWN tag="charoption" ERROR: 
+                <code>
+                  {@charoption Hollow One|EGW}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="charoption" ERROR: {@charoption Hollow One|EGW|and optional link text added with another pipe}
+                UNKNOWN tag="charoption" ERROR: 
+                <code>
+                  {@charoption Hollow One|EGW|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -955,19 +1407,31 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="recipe" ERROR: {@recipe Elven Bread}
+                UNKNOWN tag="recipe" ERROR: 
+                <code>
+                  {@recipe Elven Bread}
+                </code>
+                
               </span>
                assumes Heroes' Feast by default, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="recipe" ERROR: {@recipe Elven Bread|HF}
+                UNKNOWN tag="recipe" ERROR: 
+                <code>
+                  {@recipe Elven Bread|HF}
+                </code>
+                
               </span>
                can have sources added with a pipe, 
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN tag="recipe" ERROR: {@recipe Elven Bread|HF|and optional link text added with another pipe}
+                UNKNOWN tag="recipe" ERROR: 
+                <code>
+                  {@recipe Elven Bread|HF|and optional link text added with another pipe}
+                </code>
+                
               </span>
               .
             </p>
@@ -1115,7 +1579,11 @@ exports[`Renderer > matches snapshot 1`] = `
               <span
                 class="_error_10aw3_20"
               >
-                UNKNOWN type=entries ERROR: {"type":"entries","name":"Note","entries":["Setting a filter to \\"no value\\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.","The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."]}
+                UNKNOWN type=entries ERROR: 
+                <code>
+                  {"type":"entries","name":"Note","entries":["Setting a filter to \\"no value\\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.","The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."]}
+                </code>
+                
               </span>
             </p>
           </div>
@@ -1155,25 +1623,41 @@ exports[`Renderer > matches snapshot 1`] = `
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS}
+                      UNKNOWN tag="adventure" ERROR: 
+                      <code>
+                        {@adventure display text|CoS}
+                      </code>
+                      
                     </span>
                     ; a chapter in an adventure 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS|2}
+                      UNKNOWN tag="adventure" ERROR: 
+                      <code>
+                        {@adventure display text|CoS|2}
+                      </code>
+                      
                     </span>
                     ; a heading in a chapter in an adventure 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS|2|Treasure}
+                      UNKNOWN tag="adventure" ERROR: 
+                      <code>
+                        {@adventure display text|CoS|2|Treasure}
+                      </code>
+                      
                     </span>
                     ; or the Nth heading of a given name in a chapter in an adventure 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS|2|Treasure|1}
+                      UNKNOWN tag="adventure" ERROR: 
+                      <code>
+                        {@adventure display text|CoS|2|Treasure|1}
+                      </code>
+                      
                     </span>
                   </p>
                 </li>
@@ -1183,25 +1667,41 @@ exports[`Renderer > matches snapshot 1`] = `
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="book" ERROR: {@book display text|PHB}
+                      UNKNOWN tag="book" ERROR: 
+                      <code>
+                        {@book display text|PHB}
+                      </code>
+                      
                     </span>
                     ; a chapter in a book 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="book" ERROR: {@book display text|PHB|2}
+                      UNKNOWN tag="book" ERROR: 
+                      <code>
+                        {@book display text|PHB|2}
+                      </code>
+                      
                     </span>
                     ; a heading in a chapter in a book 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="book" ERROR: {@book display text|PHB|2|Age}
+                      UNKNOWN tag="book" ERROR: 
+                      <code>
+                        {@book display text|PHB|2|Age}
+                      </code>
+                      
                     </span>
                     ; or the Nth heading of a given name in a chapter in a book 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="book" ERROR: {@book display text|PHB|2|Age|0}
+                      UNKNOWN tag="book" ERROR: 
+                      <code>
+                        {@book display text|PHB|2|Age|0}
+                      </code>
+                      
                     </span>
                      (although this is generally unnecessary as, unlike adventures, books don't repeat their headings very often.
                   </p>
@@ -1216,31 +1716,51 @@ exports[`Renderer > matches snapshot 1`] = `
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="quickref" ERROR: {@quickref Multiclassing}
+                      UNKNOWN tag="quickref" ERROR: 
+                      <code>
+                        {@quickref Multiclassing}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="quickref" ERROR: {@quickref Multiclassing|PHB}
+                      UNKNOWN tag="quickref" ERROR: 
+                      <code>
+                        {@quickref Multiclassing|PHB}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="quickref" ERROR: {@quickref Adventuring Gear|PHB|1}
+                      UNKNOWN tag="quickref" ERROR: 
+                      <code>
+                        {@quickref Adventuring Gear|PHB|1}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="quickref" ERROR: {@quickref Adventuring Gear|PHB|1|0}
+                      UNKNOWN tag="quickref" ERROR: 
+                      <code>
+                        {@quickref Adventuring Gear|PHB|1|0}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="quickref" ERROR: {@quickref Adventuring Gear|PHB|1|0|Display Text}
+                      UNKNOWN tag="quickref" ERROR: 
+                      <code>
+                        {@quickref Adventuring Gear|PHB|1|0|Display Text}
+                      </code>
+                      
                     </span>
                     .
                   </p>
@@ -1267,7 +1787,11 @@ exports[`Renderer > matches snapshot 1`] = `
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="5etools" ERROR: {@5etools This Is Your Life|lifegen.html}
+                      UNKNOWN tag="5etools" ERROR: 
+                      <code>
+                        {@5etools This Is Your Life|lifegen.html}
+                      </code>
+                      
                     </span>
                   </p>
                 </li>
@@ -1302,55 +1826,91 @@ exports[`Renderer > matches snapshot 1`] = `
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk m}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk m}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk r}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk r}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk m,r}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk m,r}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk mw}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk mw}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk rw}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk rw}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk ms}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk ms}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk rs}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk rs}
+                      </code>
+                      
                     </span>
                     ; (homebrew only) 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk a}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk a}
+                      </code>
+                      
                     </span>
                     , 
                     <span
                       class="_error_10aw3_20"
                     >
-                      UNKNOWN tag="atk" ERROR: {@atk aw}
+                      UNKNOWN tag="atk" ERROR: 
+                      <code>
+                        {@atk aw}
+                      </code>
+                      
                     </span>
                     . Commas separate or'd attack types; the general form is: '@atk &lt;m|r|a&gt;[&lt;w|s&gt;][,&lt;m|r|a&gt;[&lt;w|s&gt;][,...]]'
                   </p>
@@ -1361,7 +1921,11 @@ exports[`Renderer > matches snapshot 1`] = `
                 <span
                   class="_error_10aw3_20"
                 >
-                  UNKNOWN tag="loader" ERROR: {@loader Tome of Beasts|creature/Kobold Press; Tome of Beasts.json}
+                  UNKNOWN tag="loader" ERROR: 
+                  <code>
+                    {@loader Tome of Beasts|creature/Kobold Press; Tome of Beasts.json}
+                  </code>
+                  
                 </span>
                 . The URL after the pipe is assumed to be from the root of the homebrew repository, unless it starts with a "...://" prefix (i.e., any link should work, but there's a shorthand for homebrew repository links).
               </p>
@@ -1378,7 +1942,11 @@ exports[`Renderer > matches snapshot 1`] = `
             <span
               class="_error_10aw3_20"
             >
-              UNKNOWN tag="spell" ERROR: {@spell fireball|phb|nested}
+              UNKNOWN tag="spell" ERROR: 
+              <code>
+                {@spell fireball|phb|nested}
+              </code>
+              
             </span>
             
           </i>
@@ -1389,32 +1957,56 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=entries ERROR: {"type":"entries","name":"A Subclass Name, For Example","entries":["The above is a 'level 0' header.","The 'name' property is optional",{"type":"entries","name":"A Subclass Feature Name","entries":["The above is a 'level 1' header.",{"type":"entries","name":"A Subclass Feature Inline Header","entries":["This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.","Note that the period in the inline name is added automagically."]}]}]}
+        UNKNOWN type=entries ERROR: 
+        <code>
+          {"type":"entries","name":"A Subclass Name, For Example","entries":["The above is a 'level 0' header.","The 'name' property is optional",{"type":"entries","name":"A Subclass Feature Name","entries":["The above is a 'level 1' header.",{"type":"entries","name":"A Subclass Feature Inline Header","entries":["This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.","Note that the period in the inline name is added automagically."]}]}]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=entries ERROR: {"type":"entries","entries":[{"type":"entries","entries":[{"type":"entries","name":"This is an example of a level 2 header with no real parents","entries":["This technique can be useful, sometimes."]}]}]}
+        UNKNOWN type=entries ERROR: 
+        <code>
+          {"type":"entries","entries":[{"type":"entries","entries":[{"type":"entries","name":"This is an example of a level 2 header with no real parents","entries":["This technique can be useful, sometimes."]}]}]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=inline ERROR: {"type":"inline","entries":["Entries can be inlined, useful for e.g. links beyond the tags listed above, ",{"type":"link","href":{"type":"internal","path":"index.html"},"text":"such as a link to the homepage"}," but you can see why the tags are preferable."]}
+        UNKNOWN type=inline ERROR: 
+        <code>
+          {"type":"inline","entries":["Entries can be inlined, useful for e.g. links beyond the tags listed above, ",{"type":"link","href":{"type":"internal","path":"index.html"},"text":"such as a link to the homepage"}," but you can see why the tags are preferable."]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=inlineBlock ERROR: {"type":"inlineBlock","entries":["Similar to the above, but keeps the paragraph/etc tags around the inlined children, ",{"type":"link","href":{"type":"internal","path":"index.html"},"text":"such as a link to the homepage"}," so can easily be mixed with lines of text."]}
+        UNKNOWN type=inlineBlock ERROR: 
+        <code>
+          {"type":"inlineBlock","entries":["Similar to the above, but keeps the paragraph/etc tags around the inlined children, ",{"type":"link","href":{"type":"internal","path":"index.html"},"text":"such as a link to the homepage"}," so can easily be mixed with lines of text."]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=options ERROR: {"type":"options","entries":[{"type":"entries","name":"Option B","entries":["Sometimes useful, e.g. for Fighting Styles on a class. (Note that this option is rendered second, when it's listed first in the data.)"]},{"type":"entries","name":"Option A","entries":["The 'options' type is very similar to a list of entries, but it alphabetically sorts the list of options by name, before displaying them."]}]}
+        UNKNOWN type=options ERROR: 
+        <code>
+          {"type":"options","entries":[{"type":"entries","name":"Option B","entries":["Sometimes useful, e.g. for Fighting Styles on a class. (Note that this option is rendered second, when it's listed first in the data.)"]},{"type":"entries","name":"Option A","entries":["The 'options' type is very similar to a list of entries, but it alphabetically sorts the list of options by name, before displaying them."]}]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=table ERROR: {"type":"table","caption":"Optional Caption","colLabels":["Col 1","Column the Second","Third Col"],"colStyles":["col-6 text-center","col-4-5 text-right ","col-1-5"],"rows":[["This is a table row","The number of entries should match the number of columns, naturally*",""],["The 'colStyles' list is literally used as CSS classes","Column widths can be specified in 12ths, as \`col-[1 to 12]\` (e.g. col-12 is 100% width, and col-6 is 50% width)","**"],[{"type":"list","items":["Nested entries (generally) work, too.","Although why you would put a list in a table is beyond me."]},"{@spell bless||Spells, on the other hand, make sense.}",""],{"type":"row","style":"row-indent-first","row":["Rows may also be defined","As objects with additional properties",""]}],"footnotes":["* Optional footer entries","** As an extension to Bootstrap's 1-to-12 system, 1/10th subdivisions can be used, e.g. col-1-5 for 1.5/12. The total column widths should still sum to exactly 12; enjoy doing the math."]}
+        UNKNOWN type=table ERROR: 
+        <code>
+          {"type":"table","caption":"Optional Caption","colLabels":["Col 1","Column the Second","Third Col"],"colStyles":["col-6 text-center","col-4-5 text-right ","col-1-5"],"rows":[["This is a table row","The number of entries should match the number of columns, naturally*",""],["The 'colStyles' list is literally used as CSS classes","Column widths can be specified in 12ths, as \`col-[1 to 12]\` (e.g. col-12 is 100% width, and col-6 is 50% width)","**"],[{"type":"list","items":["Nested entries (generally) work, too.","Although why you would put a list in a table is beyond me."]},"{@spell bless||Spells, on the other hand, make sense.}",""],{"type":"row","style":"row-indent-first","row":["Rows may also be defined","As objects with additional properties",""]}],"footnotes":["* Optional footer entries","** As an extension to Bootstrap's 1-to-12 system, 1/10th subdivisions can be used, e.g. col-1-5 for 1.5/12. The total column widths should still sum to exactly 12; enjoy doing the math."]}
+        </code>
+        
       </span>
       <p>
         Rollable tables can be made like so (note the 'pad' to format single digit numbers e.g. '01' for tables with &gt;10 rows):
@@ -1422,7 +2014,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=table ERROR: {"type":"table","caption":"Rollable Table Caption","colLabels":["{@dice d6}","Item"],"colStyles":["col-1 text-center","col-11"],"rows":[[{"type":"cell","roll":{"exact":1,"pad":true}},"First Item"],[{"type":"cell","roll":{"exact":2}},"Item the Second"],[{"type":"cell","roll":{"min":3,"max":4}},"Three of Four Items"],[{"type":"cell","roll":{"exact":5}},"Item V: The Item Items Back"],[{"type":"cell","roll":{"exact":6}},"Item for Lucky Winners"]]}
+        UNKNOWN type=table ERROR: 
+        <code>
+          {"type":"table","caption":"Rollable Table Caption","colLabels":["{@dice d6}","Item"],"colStyles":["col-1 text-center","col-11"],"rows":[[{"type":"cell","roll":{"exact":1,"pad":true}},"First Item"],[{"type":"cell","roll":{"exact":2}},"Item the Second"],[{"type":"cell","roll":{"min":3,"max":4}},"Three of Four Items"],[{"type":"cell","roll":{"exact":5}},"Item V: The Item Items Back"],[{"type":"cell","roll":{"exact":6}},"Item for Lucky Winners"]]}
+        </code>
+        
       </span>
       <ul>
         <li>
@@ -1497,7 +2093,11 @@ exports[`Renderer > matches snapshot 1`] = `
           <span
             class="_error_10aw3_20"
           >
-            UNKNOWN type=item ERROR: {"type":"item","name":"An extension of the hanging list","entry":"Which has bold inline titles -- note that this only allows {@i one} entry per item (it's 'entry' and not 'entries')"}
+            UNKNOWN type=item ERROR: 
+            <code>
+              {"type":"item","name":"An extension of the hanging list","entry":"Which has bold inline titles -- note that this only allows {@i one} entry per item (it's 'entry' and not 'entries')"}
+            </code>
+            
           </span>
         </li>
         <li>
@@ -1511,21 +2111,33 @@ exports[`Renderer > matches snapshot 1`] = `
           <span
             class="_error_10aw3_20"
           >
-            UNKNOWN type=item ERROR: {"type":"item","name":"A similar story here","entry":"The 'item' is an entry as above, but there's no 'name' for the entire list, so this has no left inset. Some long text to show what happens when the lines wrap around, it should continue but be indented after the first line. Some example of this in the source books can be found in Metalic Dragon breath weapons in the Monster Manual."}
+            UNKNOWN type=item ERROR: 
+            <code>
+              {"type":"item","name":"A similar story here","entry":"The 'item' is an entry as above, but there's no 'name' for the entire list, so this has no left inset. Some long text to show what happens when the lines wrap around, it should continue but be indented after the first line. Some example of this in the source books can be found in Metalic Dragon breath weapons in the Monster Manual."}
+            </code>
+            
           </span>
         </li>
         <li>
           <span
             class="_error_10aw3_20"
           >
-            UNKNOWN type=itemSub ERROR: {"type":"itemSub","name":"A sub-item used in some places","entry":"For example, XGE's complex traps"}
+            UNKNOWN type=itemSub ERROR: 
+            <code>
+              {"type":"itemSub","name":"A sub-item used in some places","entry":"For example, XGE's complex traps"}
+            </code>
+            
           </span>
         </li>
         <li>
           <span
             class="_error_10aw3_20"
           >
-            UNKNOWN type=item ERROR: {"type":"item","name":"Multiple entry version","entries":["This was, again, required specifically for XGE's complex traps, which can have multiple lines of text; due to their large and complex nature, one would have to presume.","Speaking of lines, this one is very long (much like the one above, which was specifically packed with superfluous information to pad it out to a decent word count) to hopefully demonstrate the effects of having to wrap a paragraph into the column, which should indent the first line of the paragraph only. Of course, if you're viewing this on an obscenely wide monitor, this will have little or no effect, so if you're in the future where 10k monitors are standard, then congratulations. Otherwise, like the rest of us plebs, you should see the desired layout.","For most uses, the single-entry version is preferred.","And here's another really long run-on sentence, just to really hammer home the effects of {@s drugs} excessive text, something I'm sure my English teacher would have a few comments about; thankfully, they're not much of a fan of Dungeons & Dragons, or even fantasy in general (needless to say, they were at best ambivalent towards the vast majority of my literary interests as a teenager; at least, as much as an English teacher can be towards a student who enjoys reading and who would choose to do it of their own volition).","What on earth did I just write"]}
+            UNKNOWN type=item ERROR: 
+            <code>
+              {"type":"item","name":"Multiple entry version","entries":["This was, again, required specifically for XGE's complex traps, which can have multiple lines of text; due to their large and complex nature, one would have to presume.","Speaking of lines, this one is very long (much like the one above, which was specifically packed with superfluous information to pad it out to a decent word count) to hopefully demonstrate the effects of having to wrap a paragraph into the column, which should indent the first line of the paragraph only. Of course, if you're viewing this on an obscenely wide monitor, this will have little or no effect, so if you're in the future where 10k monitors are standard, then congratulations. Otherwise, like the rest of us plebs, you should see the desired layout.","For most uses, the single-entry version is preferred.","And here's another really long run-on sentence, just to really hammer home the effects of {@s drugs} excessive text, something I'm sure my English teacher would have a few comments about; thankfully, they're not much of a fan of Dungeons & Dragons, or even fantasy in general (needless to say, they were at best ambivalent towards the vast majority of my literary interests as a teenager; at least, as much as an English teacher can be towards a student who enjoys reading and who would choose to do it of their own volition).","What on earth did I just write"]}
+            </code>
+            
           </span>
         </li>
       </ul>
@@ -1547,7 +2159,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=bonus ERROR: {"type":"bonus","value":3}
+        UNKNOWN type=bonus ERROR: 
+        <code>
+          {"type":"bonus","value":3}
+        </code>
+        
       </span>
       <p>
         We don't use that one much. It's useful because it allows us to store the data as a number, and render it with a plus sign as required, but it's mostly just forgotten about.
@@ -1558,7 +2174,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=bonusSpeed ERROR: {"type":"bonusSpeed","value":100}
+        UNKNOWN type=bonusSpeed ERROR: 
+        <code>
+          {"type":"bonusSpeed","value":100}
+        </code>
+        
       </span>
       <p>
         The 'dice' type is rarely used, since the shorthand tag exists, but it looks like this:
@@ -1566,7 +2186,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=dice ERROR: {"type":"dice","toRoll":[{"number":1,"faces":4},{"number":2,"faces":7,"modifier":0},{"number":3,"faces":10,"modifier":0,"hideModifier":true}],"rollable":true}
+        UNKNOWN type=dice ERROR: 
+        <code>
+          {"type":"dice","toRoll":[{"number":1,"faces":4},{"number":2,"faces":7,"modifier":0},{"number":3,"faces":10,"modifier":0,"hideModifier":true}],"rollable":true}
+        </code>
+        
       </span>
       <p>
         The 'abilityDc' type is more helpful:
@@ -1574,7 +2198,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=abilityDc ERROR: {"type":"abilityDc","name":"Buggy Code","attributes":["wis","int"]}
+        UNKNOWN type=abilityDc ERROR: 
+        <code>
+          {"type":"abilityDc","name":"Buggy Code","attributes":["wis","int"]}
+        </code>
+        
       </span>
       <p>
         As is the 'abilityAttackMod' type:
@@ -1582,7 +2210,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=abilityAttackMod ERROR: {"type":"abilityAttackMod","name":"Killing Things","attributes":["str"]}
+        UNKNOWN type=abilityAttackMod ERROR: 
+        <code>
+          {"type":"abilityAttackMod","name":"Killing Things","attributes":["str"]}
+        </code>
+        
       </span>
       <p>
         There's also a generic version that allows more text customisation; 'abilityGeneric':
@@ -1590,12 +2222,20 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=abilityGeneric ERROR: {"type":"abilityGeneric","name":"Initiative","text":"10 - your power level + somebody else's","attributes":["dex","str"]}
+        UNKNOWN type=abilityGeneric ERROR: 
+        <code>
+          {"type":"abilityGeneric","name":"Initiative","text":"10 - your power level + somebody else's","attributes":["dex","str"]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=abilityGeneric ERROR: {"type":"abilityGeneric","text":"leave out the 'name' and 'attributes' properties as required"}
+        UNKNOWN type=abilityGeneric ERROR: 
+        <code>
+          {"type":"abilityGeneric","text":"leave out the 'name' and 'attributes' properties as required"}
+        </code>
+        
       </span>
       <p>
         External links using 'link':
@@ -1603,7 +2243,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=link ERROR: {"type":"link","href":{"type":"external","url":"https://raw.githubusercontent.com/5etools-mirror-1/5etools-mirror-1/master/test/schema/entry.json"},"text":"The full 'entry' schema."}
+        UNKNOWN type=link ERROR: 
+        <code>
+          {"type":"link","href":{"type":"external","url":"https://raw.githubusercontent.com/5etools-mirror-1/5etools-mirror-1/master/test/schema/entry.json"},"text":"The full 'entry' schema."}
+        </code>
+        
       </span>
       <p>
         Internal links are also possible, but generally covered by @tags. Check out the schema linked above for the full usage; it's massive and horrible so I'm not going to go into detail here.
@@ -1614,7 +2258,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=optfeature ERROR: {"type":"optfeature","name":"Optional Feature Name","prerequisite":"Optional prerequisite, which can include tags {@spell eldritch blast}","entries":["Optional feature text."]}
+        UNKNOWN type=optfeature ERROR: 
+        <code>
+          {"type":"optfeature","name":"Optional Feature Name","prerequisite":"Optional prerequisite, which can include tags {@spell eldritch blast}","entries":["Optional feature text."]}
+        </code>
+        
       </span>
       <p>
         Patrons:
@@ -1634,12 +2282,20 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=insetReadaloud ERROR: {"type":"insetReadaloud","name":"Same As Above","entries":["But a different color."]}
+        UNKNOWN type=insetReadaloud ERROR: 
+        <code>
+          {"type":"insetReadaloud","name":"Same As Above","entries":["But a different color."]}
+        </code>
+        
       </span>
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=variant ERROR: {"type":"variant","name":"Better Monster","entries":["Some variant monster text",{"type":"entries","name":"Inline Header","entries":["Text text text",{"type":"variantSub","name":"These can have child items","entries":["And the header style for them is unique, so this exists to cope with that."]}]}]}
+        UNKNOWN type=variant ERROR: 
+        <code>
+          {"type":"variant","name":"Better Monster","entries":["Some variant monster text",{"type":"entries","name":"Inline Header","entries":["Text text text",{"type":"variantSub","name":"These can have child items","entries":["And the header style for them is unique, so this exists to cope with that."]}]}]}
+        </code>
+        
       </span>
       <p>
         Images (similar to the structure of the 'link' type):
@@ -1647,7 +2303,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=image ERROR: {"type":"image","href":{"type":"internal","path":"blank.png"},"title":"Optional Title"}
+        UNKNOWN type=image ERROR: 
+        <code>
+          {"type":"image","href":{"type":"internal","path":"blank.png"},"title":"Optional Title"}
+        </code>
+        
       </span>
       <p>
         Creatures; format based on Bestiary data, with added type (note that a proper Bestiary entry and a link to the entry is the preferred method of adding creatures, this functionality exists primarily for homebrew data):
@@ -1655,7 +2315,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=dataCreature ERROR: {"type":"dataCreature","dataCreature":{"name":"Unicorn","size":["L"],"type":"celestial","source":"MM","alignment":["L","G"],"ac":[12],"hp":{"average":67,"formula":"9d10 + 18"},"speed":{"walk":50},"str":18,"dex":14,"con":15,"int":11,"wis":17,"cha":16,"immune":["poison"],"conditionImmune":["charmed","paralyzed","poisoned"],"senses":["darkvision 60 ft."],"passive":13,"languages":["Celestial","Elvish","Sylvan","telepathy 60 ft."],"cr":"5","trait":[{"name":"Charge","entries":["If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 ({@dice 2d8}) piercing damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked prone."]},{"name":"Magic Resistance","entries":["The unicorn has advantage on saving throws against spells and other magical effects."]},{"name":"Magic Weapons","entries":["The unicorn's weapon attacks are magical."]}],"action":[{"name":"Multiattack","entries":["The unicorn makes two attacks: one with its hooves and one with its horn."]},{"name":"Hooves","entries":["{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 11 ({@damage 2d6 + 4}) bludgeoning damage."]},{"name":"Horn","entries":["{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 8 ({@damage 1d8 + 4}) piercing damage."]},{"name":"Healing Touch (3/Day)","entries":["The unicorn touches another creature with its horn. The target magically regains 11 ({@dice 2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."]},{"name":"Teleport (1/Day)","entries":["The unicorn magically teleports itself and up to three willing creatures it can see within 5 feet of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away."]}],"legendaryGroup":{"name":"Unicorn","source":"MM"},"legendary":[{"name":"Hooves","entries":["The unicorn makes one attack with its hooves."]},{"name":"Shimmering Shield (Costs 2 Actions)","entries":["The unicorn creates a shimmering, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the unicorn's next turn."]},{"name":"Heal Self (Costs 3 Actions)","entries":["The unicorn magically regains 11 ({@dice 2d8 + 2}) hit points."]}],"page":294,"spellcasting":[{"name":"Innate Spellcasting","headerEntries":["The unicorn's innate spellcasting ability is Charisma (spell save {@dc 14}). The unicorn can innately cast the following spells, requiring no components:"],"will":["{@spell detect evil and good}","{@spell druidcraft}","{@spell pass without trace}"],"daily":{"1e":["{@spell calm emotions}","{@spell dispel evil and good}","{@spell entangle}"]},"ability":"cha"}],"environment":["forest"],"soundClip":{"type":"internal","path":"bestiary/unicorn.mp3"},"traitTags":["Charge","Magic Resistance","Magic Weapons"],"actionTags":["Multiattack"]}}
+        UNKNOWN type=dataCreature ERROR: 
+        <code>
+          {"type":"dataCreature","dataCreature":{"name":"Unicorn","size":["L"],"type":"celestial","source":"MM","alignment":["L","G"],"ac":[12],"hp":{"average":67,"formula":"9d10 + 18"},"speed":{"walk":50},"str":18,"dex":14,"con":15,"int":11,"wis":17,"cha":16,"immune":["poison"],"conditionImmune":["charmed","paralyzed","poisoned"],"senses":["darkvision 60 ft."],"passive":13,"languages":["Celestial","Elvish","Sylvan","telepathy 60 ft."],"cr":"5","trait":[{"name":"Charge","entries":["If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 ({@dice 2d8}) piercing damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked prone."]},{"name":"Magic Resistance","entries":["The unicorn has advantage on saving throws against spells and other magical effects."]},{"name":"Magic Weapons","entries":["The unicorn's weapon attacks are magical."]}],"action":[{"name":"Multiattack","entries":["The unicorn makes two attacks: one with its hooves and one with its horn."]},{"name":"Hooves","entries":["{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 11 ({@damage 2d6 + 4}) bludgeoning damage."]},{"name":"Horn","entries":["{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 8 ({@damage 1d8 + 4}) piercing damage."]},{"name":"Healing Touch (3/Day)","entries":["The unicorn touches another creature with its horn. The target magically regains 11 ({@dice 2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."]},{"name":"Teleport (1/Day)","entries":["The unicorn magically teleports itself and up to three willing creatures it can see within 5 feet of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away."]}],"legendaryGroup":{"name":"Unicorn","source":"MM"},"legendary":[{"name":"Hooves","entries":["The unicorn makes one attack with its hooves."]},{"name":"Shimmering Shield (Costs 2 Actions)","entries":["The unicorn creates a shimmering, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the unicorn's next turn."]},{"name":"Heal Self (Costs 3 Actions)","entries":["The unicorn magically regains 11 ({@dice 2d8 + 2}) hit points."]}],"page":294,"spellcasting":[{"name":"Innate Spellcasting","headerEntries":["The unicorn's innate spellcasting ability is Charisma (spell save {@dc 14}). The unicorn can innately cast the following spells, requiring no components:"],"will":["{@spell detect evil and good}","{@spell druidcraft}","{@spell pass without trace}"],"daily":{"1e":["{@spell calm emotions}","{@spell dispel evil and good}","{@spell entangle}"]},"ability":"cha"}],"environment":["forest"],"soundClip":{"type":"internal","path":"bestiary/unicorn.mp3"},"traitTags":["Charge","Magic Resistance","Magic Weapons"],"actionTags":["Multiattack"]}}
+        </code>
+        
       </span>
       <p>
         Spells; as above:
@@ -1663,7 +2327,11 @@ exports[`Renderer > matches snapshot 1`] = `
       <span
         class="_error_10aw3_20"
       >
-        UNKNOWN type=dataSpell ERROR: {"type":"dataSpell","dataSpell":{"name":"Fireball","level":3,"school":"V","time":[{"number":1,"unit":"action"}],"range":{"type":"point","distance":{"type":"feet","amount":150}},"components":{"v":true,"s":true,"m":"a tiny ball of bat guano and sulfur"},"duration":[{"type":"instant"}],"classes":{"fromClassList":[{"name":"Sorcerer","source":"PHB"},{"name":"Wizard","source":"PHB"}],"fromSubclass":[{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Light","source":"PHB"}},{"class":{"name":"Warlock","source":"PHB"},"subclass":{"name":"Fiend","source":"PHB"}},{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Zeal (PSA)","source":"PSA"}}]},"source":"PHB","entries":["A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.","The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried."],"entriesHigherLevel":[{"type":"entries","name":"At Higher Levels","entries":["When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."]}],"page":241}}
+        UNKNOWN type=dataSpell ERROR: 
+        <code>
+          {"type":"dataSpell","dataSpell":{"name":"Fireball","level":3,"school":"V","time":[{"number":1,"unit":"action"}],"range":{"type":"point","distance":{"type":"feet","amount":150}},"components":{"v":true,"s":true,"m":"a tiny ball of bat guano and sulfur"},"duration":[{"type":"instant"}],"classes":{"fromClassList":[{"name":"Sorcerer","source":"PHB"},{"name":"Wizard","source":"PHB"}],"fromSubclass":[{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Light","source":"PHB"}},{"class":{"name":"Warlock","source":"PHB"},"subclass":{"name":"Fiend","source":"PHB"}},{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Zeal (PSA)","source":"PSA"}}]},"source":"PHB","entries":["A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.","The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried."],"entriesHigherLevel":[{"type":"entries","name":"At Higher Levels","entries":["When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."]}],"page":241}}
+        </code>
+        
       </span>
     </p>
   </p>

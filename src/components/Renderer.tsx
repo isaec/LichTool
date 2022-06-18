@@ -23,10 +23,29 @@ const RenderError: Component<{
   error: string;
   details?: string;
   noErrorLabel?: boolean;
+  clickable?: {
+    label: string;
+    onClick: () => unknown;
+  };
 }> = (props) => (
-  <span class={styles.error}>{`${props.error}${
-    !props.noErrorLabel ? " ERROR" : ""
-  }: ${props.details ?? "no details provided"}`}</span>
+  <span class={styles.error}>
+    {`${props.error}${!props.noErrorLabel ? " ERROR" : ""}: `}
+    <code>{props.details ?? "no details provided"}</code>
+    {props.clickable === undefined ? undefined : (
+      <>
+        {". "}
+        <a
+          onClick={(e) => {
+            e.preventDefault();
+            props.clickable?.onClick();
+          }}
+          href="#"
+        >
+          {props.clickable.label}
+        </a>
+      </>
+    )}
+  </span>
 );
 
 const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
@@ -306,6 +325,10 @@ const Renderer: Component<{ data: string | object }> = (props) => (
         <RenderError
           error={`renderer caught an uncaught Data ${err.name}`}
           details={err.message}
+          clickable={{
+            label: "rebuild Data tree",
+            onClick: reset,
+          }}
           noErrorLabel
         />
       )}
