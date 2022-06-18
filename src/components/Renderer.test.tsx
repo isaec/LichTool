@@ -3,6 +3,8 @@ import { render, fireEvent } from "solid-testing-library";
 // @ts-ignore
 import renderdemo from "../data/renderdemo.json";
 
+import styles from "./Renderer.module.scss";
+
 import Renderer from "./Renderer";
 
 describe("Renderer", () => {
@@ -17,24 +19,22 @@ describe("Renderer", () => {
     const { unmount, container } = render(() => (
       <Renderer data="this is some text, {@bold and now its bold} {@b with shorthand, too!}" />
     ));
-    expect(container).toMatchInlineSnapshot(
+    expect(
+      container.querySelectorAll(`.${styles.Renderer} > *`)
+    ).toMatchInlineSnapshot(
       `
-      <div>
-        <p
-          class="_Renderer_10aw3_1"
-        >
-          <p>
-            this is some text, 
-            <b>
-              and now its bold
-            </b>
-             
-            <b>
-              with shorthand, too!
-            </b>
-          </p>
-        </p>
-      </div>
+      NodeList [
+        <p>
+          this is some text, 
+          <b>
+            and now its bold
+          </b>
+           
+          <b>
+            with shorthand, too!
+          </b>
+        </p>,
+      ]
     `
     );
     unmount();
@@ -43,24 +43,22 @@ describe("Renderer", () => {
     const { unmount, container } = render(() => (
       <Renderer data="this is some text, {@strike and now its struck} {@b with shorthand, too!}" />
     ));
-    expect(container).toMatchInlineSnapshot(
+    expect(
+      container.querySelectorAll(`.${styles.Renderer} > *`)
+    ).toMatchInlineSnapshot(
       `
-      <div>
-        <p
-          class="_Renderer_10aw3_1"
-        >
-          <p>
-            this is some text, 
-            <s>
-              and now its struck
-            </s>
-             
-            <b>
-              with shorthand, too!
-            </b>
-          </p>
-        </p>
-      </div>
+      NodeList [
+        <p>
+          this is some text, 
+          <s>
+            and now its struck
+          </s>
+           
+          <b>
+            with shorthand, too!
+          </b>
+        </p>,
+      ]
     `
     );
     unmount();
