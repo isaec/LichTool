@@ -14,5 +14,6 @@ fs.readFile(typesPath, "utf8", (err, data) => {
 
   fs.writeFile(typesPath, data.replace(refMatcher, ""), "utf8", function (err) {
     if (err) throw err;
+    console.log("patched @testing-library/jest-dom 🎉");
   });
 });
