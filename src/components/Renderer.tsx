@@ -276,15 +276,16 @@ const parseData = (data: object | string): Data => {
   if (typeof data === "string") {
     try {
       return JSON.parse(data);
-    } catch (_e) {
-      return data;
+    } catch (e) {
+      // this will test if its a string unquoted, or actually failing validation
+      return JSON.parse(`"${data}"`);
     }
   }
   if (isDataNode(data)) {
     return data;
   }
 
-  throw new Error("incomprehensible data");
+  throw new Error("incomprehensible data - not a string or legal object");
 };
 
 const Renderer: Component<{ data: string | object }> = (props) => (

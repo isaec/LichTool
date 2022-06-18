@@ -6,7 +6,9 @@ import styles from "./App.module.scss";
 import Renderer from "./components/Renderer";
 
 const App: Component = () => {
-  const [data, setData] = createSignal(JSON.stringify(renderdemo.data[0]));
+  const [data, setData] = createSignal(
+    JSON.stringify(renderdemo.data[0], undefined, 2)
+  );
 
   return (
     <div class={styles.App}>
