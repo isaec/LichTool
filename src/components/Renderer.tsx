@@ -1,4 +1,11 @@
-import { children, Component, For, JSX, JSXElement } from "solid-js";
+import {
+  children,
+  Component,
+  ErrorBoundary,
+  For,
+  JSX,
+  JSXElement,
+} from "solid-js";
 
 import styles from "./Renderer.module.scss";
 
@@ -12,10 +19,14 @@ const isDataNode = (data: Data | object): data is DataNode =>
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
 
-const RenderError: Component<{ error: string; details?: string }> = (props) => (
-  <span class={styles.error}>{`${props.error} ERROR: ${
-    props.details ?? "no details provided"
-  }`}</span>
+const RenderError: Component<{
+  error: string;
+  details?: string;
+  noErrorLabel?: boolean;
+}> = (props) => (
+  <span class={styles.error}>{`${props.error}${
+    !props.noErrorLabel ? " ERROR" : ""
+  }: ${props.details ?? "no details provided"}`}</span>
 );
 
 const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
@@ -290,7 +301,17 @@ const parseData = (data: object | string): Data => {
 
 const Renderer: Component<{ data: string | object }> = (props) => (
   <p class={styles.Renderer}>
-    <DataRenderer data={parseData(props.data)} />
+    <ErrorBoundary
+      fallback={(err, reset) => (
+        <RenderError
+          error={`renderer caught an uncaught Data ${err.name}`}
+          details={err.message}
+          noErrorLabel
+        />
+      )}
+    >
+      <DataRenderer data={parseData(props.data)} />
+    </ErrorBoundary>
   </p>
 );
 
