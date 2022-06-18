@@ -1,6 +1,7 @@
 import {
   children,
   Component,
+  createMemo,
   ErrorBoundary,
   For,
   JSX,
@@ -324,24 +325,27 @@ export const _parseData = (data: object | string): Data => {
   throw new Error("incomprehensible data - not a string or legal object");
 };
 
-const Renderer: Component<{ data: string | object }> = (props) => (
-  <p class={styles.Renderer}>
-    <ErrorBoundary
-      fallback={(err, reset) => (
-        <RenderError
-          error={`renderer caught an uncaught Data ${err.name}`}
-          details={err.message}
-          clickable={{
-            label: "rebuild Data tree",
-            onClick: reset,
-          }}
-          noErrorLabel
-        />
-      )}
-    >
-      <DataRenderer data={_parseData(props.data)} />
-    </ErrorBoundary>
-  </p>
-);
+const Renderer: Component<{ data: string | object }> = (props) => {
+  const data = createMemo(() => _parseData(props.data));
+  return (
+    <p class={styles.Renderer}>
+      <ErrorBoundary
+        fallback={(err, reset) => (
+          <RenderError
+            error={`renderer caught an uncaught Data ${err.name}`}
+            details={err.message}
+            clickable={{
+              label: "rebuild Data tree",
+              onClick: reset,
+            }}
+            noErrorLabel
+          />
+        )}
+      >
+        <DataRenderer data={data()} />
+      </ErrorBoundary>
+    </p>
+  );
+};
 
 export default Renderer;
