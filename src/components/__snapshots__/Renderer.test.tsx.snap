@@ -1,0 +1,1671 @@
+// Vitest Snapshot v1
+
+exports[`Renderer > matches snapshot 1`] = `
+<div>
+  <p
+    class="_Renderer_10aw3_1"
+  >
+    <h1>
+      Renderer Demo
+    </h1>
+    <p>
+      <p>
+        (This is a section heading. This is mainly used in Adventures, for the header of entire chapters. The root entry does 
+        <b>
+          not
+        </b>
+         need have the 'section' type, 'entries' is generally used instead. The 'section' produces a 
+        <b>
+          level -1
+        </b>
+         header; the 'basement' level, if you will.)
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=quote ERROR: {"type":"quote","entries":["Look, don't quote me on this, but"],"by":"Anon","from":"Archive of Lost Chats"}
+      </span>
+      <p>
+        This is a demo of the JSON format, and how it (usually) gets rendered. You can edit this text, and it will reset on refresh.
+      </p>
+      <p>
+        
+        <b>
+          If a JSON property is described as 'optional,' the property may be excluded, unless otherwise noted.
+        </b>
+      </p>
+      <p>
+        The goal of this system is to emulate the look and feel of the books, while maintaining a convenient and consistent data structure that can be re-used.
+      </p>
+      <p>
+        The general format is to nest multiple levels of 'entries'-typed objects, with other specific types (described in detail below) used as needed.
+      </p>
+      <p>
+        String entries can contain tags, and these work when nested in most other structures. These will eventually all work with the hover-to-view feature. They are case-insensitive, unless otherwise noted. These are:
+      </p>
+      <ul>
+        <li>
+          <p>
+            Style tags; 
+            <b>
+              some text to be bolded
+            </b>
+             (alternative 
+            <b>
+              shorthand
+            </b>
+            ), 
+            <i>
+              some text to be italicised
+            </i>
+             (alternative 
+            <i>
+              shorthand
+            </i>
+            ), 
+            <span
+              class="_underline_10aw3_16"
+            >
+              some text to be underlined
+            </span>
+             (alternative 
+            <span
+              class="_underline_10aw3_16"
+            >
+              shorthand
+            </span>
+            ), 
+            <s>
+              some text to strike-through
+            </s>
+            , (alternative 
+            <s>
+              shorthand
+            </s>
+            ), 
+            <span
+              style="color: rgb(228, 7, 7);"
+            >
+              color
+            </span>
+             tags, 
+            <code>
+              print("hello world")
+            </code>
+             tags
+          </p>
+        </li>
+        <li>
+          <p>
+            Additionally, 
+            <i
+              class="_note_10aw3_25"
+            >
+              note tags
+            </i>
+            , used for adding errata or Twitter "designer footnotes."
+          </p>
+        </li>
+        <li>
+          <p>
+            Dice roller tags; 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="dice" ERROR: {@dice 1d2-2+2d3+5}
+            </span>
+             for regular dice rolls (
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="dice" ERROR: {@dice 1d6;2d6}
+            </span>
+             for multiple options; 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="dice" ERROR: {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#}
+            </span>
+             for input prompts), with extended 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="dice" ERROR: {@dice 1d20+2|display text}
+            </span>
+             and 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="dice" ERROR: {@dice 1d20+2|display text|rolled by name}
+            </span>
+            , and a special 'hit' version which assumes a d20 is to be rolled 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="hit" ERROR: {@hit +7}
+            </span>
+             (and rolls advantage on shift-click, disadvantage on alt-click). There's also 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="damage" ERROR: {@damage 1d12+3}
+            </span>
+             which will roll critical hits on shift-click and half damage (rounding down) on alt-click, and 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="d20" ERROR: {@d20 -4}
+            </span>
+             which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="scaledice" ERROR: {@scaledice 2d6;3d6|2-9|1d6}
+            </span>
+             for each level beyond 2nd), for when a spell effect scales at higher levels. 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="ability" ERROR: {@ability str 20}
+            </span>
+            , 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="savingThrow" ERROR: {@savingThrow str 5}
+            </span>
+            , and 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="skillCheck" ERROR: {@skillCheck animal_handling 5}
+            </span>
+             are used as internal shorthand, but may be useful elsewhere.
+          </p>
+        </li>
+        <li>
+          <p>
+            Chance tags; similar to dice roller tags, but output success/failure. Similar syntax as dice tags: 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="chance" ERROR: {@chance 50}
+            </span>
+            , 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="chance" ERROR: {@chance 50|display text}
+            </span>
+            , and 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="chance" ERROR: {@chance 50|display text|rolled by name}
+            </span>
+            .
+          </p>
+        </li>
+        <li>
+          <p>
+            Recharge tags; output success/failure for ability recharge. {@recharge} in an ability title for '(Recharge 6)', 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="recharge" ERROR: {@recharge 4}
+            </span>
+             for '(Recharge 4-6)'.
+          </p>
+        </li>
+        <li>
+          <p>
+            Skill and sense tags; 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="skill" ERROR: {@skill Athletics}
+            </span>
+            /
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="skill" ERROR: {@skill Perception}
+            </span>
+             (case sensitive) and 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="sense" ERROR: {@sense Truesight}
+            </span>
+            /
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="sense" ERROR: {@sense darkvision}
+            </span>
+             (case insensitive) which provide tooltips on hover.
+          </p>
+        </li>
+        <li>
+          <p>
+            Footnote tags; allows a footnote to be embedded 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="footnote" ERROR: {@footnote directly in text|This is primarily for homebrew purposes, as the official texts (so far) avoid using footnotes}
+            </span>
+            , with 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="footnote" ERROR: {@footnote optional reference information|This is the footnote. References are free text.|Footnote 1, page 20}
+            </span>
+            .
+          </p>
+        </li>
+        <li>
+          <p>
+            The homebrew tag; can show 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="homebrew" ERROR: {@homebrew changes|modifications}
+            </span>
+            , 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="homebrew" ERROR: {@homebrew additions}
+            </span>
+             or 
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="homebrew" ERROR: {@homebrew |removals}
+            </span>
+            .
+          </p>
+        </li>
+        <li>
+          <p>
+            Content tags:
+          </p>
+        </li>
+        <ul>
+          <li>
+            <p>
+              Spells: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="spell" ERROR: {@spell acid splash}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="spell" ERROR: {@spell tiny servant|xge}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="spell" ERROR: {@spell tiny servant|xge|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Items: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="item" ERROR: {@item alchemy jug}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="item" ERROR: {@item longsword|phb}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="item" ERROR: {@item longsword|phb|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Creatures: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="creature" ERROR: {@creature goblin}
+              </span>
+               assumes MM by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="creature" ERROR: {@creature cow|vgm}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="creature" ERROR: {@creature cow|vgm|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Backgrounds: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="background" ERROR: {@background Charlatan}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="background" ERROR: {@background Anthropologist|toa}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="background" ERROR: {@background Anthropologist|ToA|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Races: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="race" ERROR: {@race Human}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="race" ERROR: {@race Aarakocra|eepc}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="race" ERROR: {@race Aarakocra|eepc|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Invocations and Other Optional Features: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="optfeature" ERROR: {@optfeature Agonizing Blast}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="optfeature" ERROR: {@optfeature Aspect of the Moon|xge}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="optfeature" ERROR: {@optfeature Aspect of the Moon|xge|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Classes: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="class" ERROR: {@class fighter}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="class" ERROR: {@class artificer|uaartificer}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="class" ERROR: {@class fighter|phb|optional link text added with another pipe}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="class" ERROR: {@class fighter|phb|subclasses added|Eldritch Knight}
+              </span>
+               with another pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="class" ERROR: {@class fighter|phb|and class feature added|Eldritch Knight|phb|2-0}
+              </span>
+               with another pipe (first number is level index (0-19), second number is feature index (0-n)).
+            </p>
+          </li>
+          <li>
+            <p>
+              Class Features: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="classFeature" ERROR: {@classFeature Rage|Barbarian||1}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="classFeature" ERROR: {@classFeature Infuse Item|Artificer|TCE|2}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="classFeature" ERROR: {@classFeature Survival Instincts|Barbarian||2|UAClassFeatureVariants}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="classFeature" ERROR: {@classFeature Rage|Barbarian||1||optional display text}
+              </span>
+              . Class source is assumed to be PHB. Class feature source is assumed to be the same as class source.
+            </p>
+          </li>
+          <li>
+            <p>
+              Subclass Features: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Path of the Berserker|Barbarian||Berserker||3}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Alchemist|Artificer|TCE|Alchemist|TCE|3}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Path of the Battlerager|Barbarian||Battlerager|SCAG|3}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Blessed Strikes|Cleric||Life||8|UAClassFeatureVariants}
+              </span>
+              , 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="subclassFeature" ERROR: {@subclassFeature Path of the Berserker|Barbarian||Berserker||3||optional display text}
+              </span>
+              . Class source is assumed to be PHB. Subclass source is assumed to be PHB. Subclass feature source is assumed to be the same as subclass source.
+            </p>
+          </li>
+          <li>
+            <p>
+              Conditions: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="condition" ERROR: {@condition stunned}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="condition" ERROR: {@condition stunned|PHB}
+              </span>
+               can have sources added with a pipe (not that it's ever useful), 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="condition" ERROR: {@condition stunned|PHB|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Diseases: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="disease" ERROR: {@disease cackle fever}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="disease" ERROR: {@disease cackle fever}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="disease" ERROR: {@disease cackle fever|DMG|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Other Rewards: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="reward" ERROR: {@reward Blessing of Health}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="reward" ERROR: {@reward Blessing of Health}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="reward" ERROR: {@reward Blessing of Health|DMG|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Feats: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="feat" ERROR: {@feat Alert}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="feat" ERROR: {@feat Elven Accuracy|xge}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="feat" ERROR: {@feat Elven Accuracy|xge|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Psionics: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="psionic" ERROR: {@psionic Mastery of Force}
+              </span>
+               assumes UATheMysticClass by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="psionic" ERROR: {@psionic Mastery of Force|UATheMysticClass}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="psionic" ERROR: {@psionic Mastery of Force|UATheMysticClass|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Objects: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="object" ERROR: {@object Ballista}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="object" ERROR: {@object Ballista}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="object" ERROR: {@object Ballista|DMG|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Boons: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="boon" ERROR: {@boon Demonic Boon of Demogorgon}
+              </span>
+               assumes MTF by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="boon" ERROR: {@boon Demonic Boon of Demogorgon}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="boon" ERROR: {@boon Demonic Boon of Demogorgon|MTF|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Cults: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="cult" ERROR: {@cult Cult of Asmodeus}
+              </span>
+               assumes MTF by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="cult" ERROR: {@cult Cult of Asmodeus}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="cult" ERROR: {@cult Cult of Asmodeus|MTF|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Traps: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="trap" ERROR: {@trap falling net}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="trap" ERROR: {@trap falling portcullis|xge}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="trap" ERROR: {@trap falling portcullis|xge|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Hazards: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="hazard" ERROR: {@hazard brown mold}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="hazard" ERROR: {@hazard russet mold|vgm}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="hazard" ERROR: {@hazard russet mold|vgm|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Deities: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="deity" ERROR: {@deity Gond}
+              </span>
+               assumes PHB Forgotten Realms pantheon by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="deity" ERROR: {@deity Gruumsh|nonhuman}
+              </span>
+               can have pantheons added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="deity" ERROR: {@deity Ioun|dawn war|dmg}
+              </span>
+               can have sources added with another pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="deity" ERROR: {@deity Ioun|dawn war|dmg|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Variant rules: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="variantrule" ERROR: {@variantrule Diagonals}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="variantrule" ERROR: {@variantrule Multiclassing|phb}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="variantrule" ERROR: {@variantrule Multiclassing|phb|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Vehicles: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="vehicle" ERROR: {@vehicle Galley}
+              </span>
+               assumes GoS by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="vehicle" ERROR: {@vehicle Galley|UAOfShipsAndSea}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="vehicle" ERROR: {@vehicle Galley|GoS|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Vehicle upgrades: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="vehupgrade" ERROR: {@vehupgrade Guardian Figurehead}
+              </span>
+               assumes GoS by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="vehicle" ERROR: {@vehicle Gilded Death Armor|BGDIA}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="vehicle" ERROR: {@vehicle Guardian Figurehead|GoS|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Tables: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="table" ERROR: {@table 25 gp Art Objects}
+              </span>
+               assumes DMG by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="table" ERROR: {@table Adventuring Gear|phb}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="table" ERROR: {@table Adventuring Gear|phb|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Actions: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="action" ERROR: {@action Attack}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="action" ERROR: {@action Tumble|DMG}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="action" ERROR: {@action Tumble|DMG|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Languages: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="language" ERROR: {@language common}
+              </span>
+               assumes PHB by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="language" ERROR: {@language Dambrathan|SCAG}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="language" ERROR: {@language Dambrathan|SCAG|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Other Character Creation Options: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="charoption" ERROR: {@charoption Anvilwrought}
+              </span>
+               assumes MOT by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="charoption" ERROR: {@charoption Hollow One|EGW}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="charoption" ERROR: {@charoption Hollow One|EGW|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+          <li>
+            <p>
+              Recipes: 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="recipe" ERROR: {@recipe Elven Bread}
+              </span>
+               assumes Heroes' Feast by default, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="recipe" ERROR: {@recipe Elven Bread|HF}
+              </span>
+               can have sources added with a pipe, 
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN tag="recipe" ERROR: {@recipe Elven Bread|HF|and optional link text added with another pipe}
+              </span>
+              .
+            </p>
+          </li>
+        </ul>
+        <li>
+          <div
+            class="_inset_10aw3_12"
+          >
+            <h4>
+              Filter Tag
+            </h4>
+            <p>
+              <p>
+                Another tag that appears occasionally in the data is the @filter tag. This tag can be tricky to use, and generally relies on knowledge of the internals of each page. As such, use with caution, and if you're not sure about something, don't be afraid to drop by our 
+                <a
+                  href="https://discord.gg/5etools"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Discord
+                </a>
+                 and ask questions.
+              </p>
+              <p>
+                The syntax for the @filter tag is as follows:
+              </p>
+              <p>
+                (open curly brace)@filter display text|page_without_file_extension|filter_name_1=filter_1_value_1;filter_1_value_2;...filter_1_value_n|...|filter_name_m=filter_m_value_1;filter_m_value_2;...(close curly brace)
+              </p>
+              <p>
+                The purpose of this tag is to open the given page, pre-filtered with the specified filtering options. There's one major caveat that makes this tricky to use for aspiring JSONtranauts—the filter values use the 
+                <i>
+                  internal
+                </i>
+                 version, as you'd find in the data. So, for example, ..|school=D|.. would filter spells to Divination school spells, as 'D' is the Divination identifier in the data. Trying to do e.g. ..|school=Divination|.. will not work.
+              </p>
+              <p>
+                The 'filter_name_X' here matches the literal text name of the filter, as displayed in the dropdown.
+              </p>
+              <p>
+                Some examples of the tag in action:
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="races|Ability Bonus (Including Subrace)=Intelligence +any"
+                >
+                  UNSUPPORTED 
+                  Races that have a bonus to Intelligence
+                </a>
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="spells|level=0;1|class=bard"
+                >
+                  UNSUPPORTED 
+                  Bard cantrips and first-level spells
+                </a>
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="bestiary|challenge rating=[&0;&1]|type=beast"
+                >
+                  UNSUPPORTED 
+                  Beast with challenge rating 1 or lower
+                </a>
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="bestiary|strength=[18;]"
+                >
+                  UNSUPPORTED 
+                  Creatures with a Strength score of 18 or more
+                </a>
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="spells|school=D;V"
+                >
+                  UNSUPPORTED 
+                  Divination and Evocation spells
+                </a>
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="items|source=|type=|rarity=uncommon|miscellaneous=Magic"
+                >
+                  UNSUPPORTED 
+                  All uncommon magic items
+                </a>
+              </p>
+              <p>
+                
+                <a
+                  href="#"
+                  title="items|source=phb|category=basic|type=simple weapon;melee weapon=sand"
+                >
+                  UNSUPPORTED 
+                  Simple melee weapons
+                </a>
+              </p>
+              <p>
+                Meta-options can be set; inline for individual filters, and using 'fbmt' for filtering meta-options 
+                <a
+                  href="#"
+                  title="spells|level=1;2=sor~sand~b1|fbmt=sor|fbmh=source"
+                >
+                  UNSUPPORTED 
+                  filter meta example
+                </a>
+              </p>
+              <p>
+                Search can be set; 
+                <a
+                  href="#"
+                  title="bestiary|search=dinosaur"
+                >
+                  UNSUPPORTED 
+                  view dinosaurs
+                </a>
+              </p>
+              <p>
+                An exact starting entity; 
+                <a
+                  href="#"
+                  title="bestiary|type=beast|hash=cat_mm"
+                >
+                  UNSUPPORTED 
+                  filter for beasts and show cat
+                </a>
+                 where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.
+              </p>
+              <span
+                class="_error_10aw3_20"
+              >
+                UNKNOWN type=entries ERROR: {"type":"entries","name":"Note","entries":["Setting a filter to \\"no value\\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.","The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."]}
+              </span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div
+            class="_inset_10aw3_12"
+          >
+            <h4>
+              Area Tags and IDs
+            </h4>
+            <p>
+              <p>
+                Adventure and book content supports "area" tags, which have the form \`@area [area name]|[entry id]\` or \`@area [area name]|[entry id]|[modifiers]\` where [modifiers] is a combination of "x" for e[x]act text, and "u" for [u]ppercase. The "exact" modifier removes the leading "area " which is prepended to the area name, and the "uppercase" modifier causes the prepended text to "Area ".
+              </p>
+              <p>
+                A variety of entries blocks can have "id" fields (and may therefore be linked to with "area" tags), notable "entries"-type, "section"-type, and "inset"-type. These IDs are conventionally 3-digit hexadecimal numbers (allowing for a total of 4096 IDs per adventure/book), but any string which is unique within the document will suffice.
+              </p>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div
+            class="_inset_10aw3_12"
+          >
+            <h4>
+              Book/Reference Tags
+            </h4>
+            <p>
+              <p>
+                The following tags can be used to link specific sections of adventures/books. Note that chapters and headers are indexed from zero.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Adventure tags: link to an adventure 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS}
+                    </span>
+                    ; a chapter in an adventure 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS|2}
+                    </span>
+                    ; a heading in a chapter in an adventure 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS|2|Treasure}
+                    </span>
+                    ; or the Nth heading of a given name in a chapter in an adventure 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="adventure" ERROR: {@adventure display text|CoS|2|Treasure|1}
+                    </span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Book tags: link to a book 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="book" ERROR: {@book display text|PHB}
+                    </span>
+                    ; a chapter in a book 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="book" ERROR: {@book display text|PHB|2}
+                    </span>
+                    ; a heading in a chapter in a book 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="book" ERROR: {@book display text|PHB|2|Age}
+                    </span>
+                    ; or the Nth heading of a given name in a chapter in a book 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="book" ERROR: {@book display text|PHB|2|Age|0}
+                    </span>
+                     (although this is generally unnecessary as, unlike adventures, books don't repeat their headings very often.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Quick Reference tags; 
+                    <code>
+                      &lt;name&gt;|&lt;source&gt;|&lt;chapterIndex&gt;|&lt;headerIndex&gt;|&lt;displayText&gt;
+                    </code>
+                    : 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="quickref" ERROR: {@quickref Multiclassing}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="quickref" ERROR: {@quickref Multiclassing|PHB}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="quickref" ERROR: {@quickref Adventuring Gear|PHB|1}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="quickref" ERROR: {@quickref Adventuring Gear|PHB|1|0}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="quickref" ERROR: {@quickref Adventuring Gear|PHB|1|0|Display Text}
+                    </span>
+                    .
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div
+            class="_inset_10aw3_12"
+          >
+            <h4>
+              Other Tags
+            </h4>
+            <p>
+              <p>
+                Links:
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Internal links: 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="5etools" ERROR: {@5etools This Is Your Life|lifegen.html}
+                    </span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    External links: 
+                    <a
+                      href="https://discord.gg/5etools"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      https://discord.gg/5etools
+                    </a>
+                     or 
+                    <a
+                      href="https://discord.gg/5etools"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Discord
+                    </a>
+                  </p>
+                </li>
+              </ul>
+              <p>
+                Page specific/other tags:
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Bestiary 'attack' tags: 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk m}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk r}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk m,r}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk mw}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk rw}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk ms}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk rs}
+                    </span>
+                    ; (homebrew only) 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk a}
+                    </span>
+                    , 
+                    <span
+                      class="_error_10aw3_20"
+                    >
+                      UNKNOWN tag="atk" ERROR: {@atk aw}
+                    </span>
+                    . Commas separate or'd attack types; the general form is: '@atk &lt;m|r|a&gt;[&lt;w|s&gt;][,&lt;m|r|a&gt;[&lt;w|s&gt;][,...]]'
+                  </p>
+                </li>
+              </ul>
+              <p>
+                Homebrew loading tags: 
+                <span
+                  class="_error_10aw3_20"
+                >
+                  UNKNOWN tag="loader" ERROR: {@loader Tome of Beasts|creature/Kobold Press; Tome of Beasts.json}
+                </span>
+                . The URL after the pipe is assumed to be from the root of the homebrew repository, unless it starts with a "...://" prefix (i.e., any link should work, but there's a shorthand for homebrew repository links).
+              </p>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <p>
+        These tags may be 
+        <b>
+          
+          <i>
+            
+            <span
+              class="_error_10aw3_20"
+            >
+              UNKNOWN tag="spell" ERROR: {@spell fireball|phb|nested}
+            </span>
+            
+          </i>
+          
+        </b>
+        , although there are often better ways to get the combination of bold and italic that you're probably going to use this for; consider using one of the properly typed objects below (such as level 2 headers).
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=entries ERROR: {"type":"entries","name":"A Subclass Name, For Example","entries":["The above is a 'level 0' header.","The 'name' property is optional",{"type":"entries","name":"A Subclass Feature Name","entries":["The above is a 'level 1' header.",{"type":"entries","name":"A Subclass Feature Inline Header","entries":["This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.","Note that the period in the inline name is added automagically."]}]}]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=entries ERROR: {"type":"entries","entries":[{"type":"entries","entries":[{"type":"entries","name":"This is an example of a level 2 header with no real parents","entries":["This technique can be useful, sometimes."]}]}]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=inline ERROR: {"type":"inline","entries":["Entries can be inlined, useful for e.g. links beyond the tags listed above, ",{"type":"link","href":{"type":"internal","path":"index.html"},"text":"such as a link to the homepage"}," but you can see why the tags are preferable."]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=inlineBlock ERROR: {"type":"inlineBlock","entries":["Similar to the above, but keeps the paragraph/etc tags around the inlined children, ",{"type":"link","href":{"type":"internal","path":"index.html"},"text":"such as a link to the homepage"}," so can easily be mixed with lines of text."]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=options ERROR: {"type":"options","entries":[{"type":"entries","name":"Option B","entries":["Sometimes useful, e.g. for Fighting Styles on a class. (Note that this option is rendered second, when it's listed first in the data.)"]},{"type":"entries","name":"Option A","entries":["The 'options' type is very similar to a list of entries, but it alphabetically sorts the list of options by name, before displaying them."]}]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=table ERROR: {"type":"table","caption":"Optional Caption","colLabels":["Col 1","Column the Second","Third Col"],"colStyles":["col-6 text-center","col-4-5 text-right ","col-1-5"],"rows":[["This is a table row","The number of entries should match the number of columns, naturally*",""],["The 'colStyles' list is literally used as CSS classes","Column widths can be specified in 12ths, as \`col-[1 to 12]\` (e.g. col-12 is 100% width, and col-6 is 50% width)","**"],[{"type":"list","items":["Nested entries (generally) work, too.","Although why you would put a list in a table is beyond me."]},"{@spell bless||Spells, on the other hand, make sense.}",""],{"type":"row","style":"row-indent-first","row":["Rows may also be defined","As objects with additional properties",""]}],"footnotes":["* Optional footer entries","** As an extension to Bootstrap's 1-to-12 system, 1/10th subdivisions can be used, e.g. col-1-5 for 1.5/12. The total column widths should still sum to exactly 12; enjoy doing the math."]}
+      </span>
+      <p>
+        Rollable tables can be made like so (note the 'pad' to format single digit numbers e.g. '01' for tables with &gt;10 rows):
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=table ERROR: {"type":"table","caption":"Rollable Table Caption","colLabels":["{@dice d6}","Item"],"colStyles":["col-1 text-center","col-11"],"rows":[[{"type":"cell","roll":{"exact":1,"pad":true}},"First Item"],[{"type":"cell","roll":{"exact":2}},"Item the Second"],[{"type":"cell","roll":{"min":3,"max":4}},"Three of Four Items"],[{"type":"cell","roll":{"exact":5}},"Item V: The Item Items Back"],[{"type":"cell","roll":{"exact":6}},"Item for Lucky Winners"]]}
+      </span>
+      <ul>
+        <li>
+          <p>
+            A basic list of items
+          </p>
+        </li>
+        <li>
+          <p>
+            As usual, nested entries work
+          </p>
+        </li>
+        <ul>
+          <li>
+            <p>
+              Such as a nested list
+            </p>
+          </li>
+        </ul>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            A list of items with wrapping columns
+          </p>
+        </li>
+        <li>
+          <p>
+            Which will wrap
+          </p>
+        </li>
+        <li>
+          <p>
+            Up to a maximum number of times as specified by the 'columns' field
+          </p>
+        </li>
+        <li>
+          <p>
+            And will attempt to balance content between each column
+          </p>
+        </li>
+      </ul>
+      <p>
+        There's also:
+      </p>
+      <ul>
+        <li>
+          <p>
+            A list of items without bullets
+          </p>
+        </li>
+        <li>
+          <p>
+            Used very rarely
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            A hanging items list
+          </p>
+        </li>
+        <li>
+          <p>
+            Which has a 'name'/title, and will hang below that title
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <span
+            class="_error_10aw3_20"
+          >
+            UNKNOWN type=item ERROR: {"type":"item","name":"An extension of the hanging list","entry":"Which has bold inline titles -- note that this only allows {@i one} entry per item (it's 'entry' and not 'entries')"}
+          </span>
+        </li>
+        <li>
+          <p>
+            Can be mixed with regular strings
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <span
+            class="_error_10aw3_20"
+          >
+            UNKNOWN type=item ERROR: {"type":"item","name":"A similar story here","entry":"The 'item' is an entry as above, but there's no 'name' for the entire list, so this has no left inset. Some long text to show what happens when the lines wrap around, it should continue but be indented after the first line. Some example of this in the source books can be found in Metalic Dragon breath weapons in the Monster Manual."}
+          </span>
+        </li>
+        <li>
+          <span
+            class="_error_10aw3_20"
+          >
+            UNKNOWN type=itemSub ERROR: {"type":"itemSub","name":"A sub-item used in some places","entry":"For example, XGE's complex traps"}
+          </span>
+        </li>
+        <li>
+          <span
+            class="_error_10aw3_20"
+          >
+            UNKNOWN type=item ERROR: {"type":"item","name":"Multiple entry version","entries":["This was, again, required specifically for XGE's complex traps, which can have multiple lines of text; due to their large and complex nature, one would have to presume.","Speaking of lines, this one is very long (much like the one above, which was specifically packed with superfluous information to pad it out to a decent word count) to hopefully demonstrate the effects of having to wrap a paragraph into the column, which should indent the first line of the paragraph only. Of course, if you're viewing this on an obscenely wide monitor, this will have little or no effect, so if you're in the future where 10k monitors are standard, then congratulations. Otherwise, like the rest of us plebs, you should see the desired layout.","For most uses, the single-entry version is preferred.","And here's another really long run-on sentence, just to really hammer home the effects of {@s drugs} excessive text, something I'm sure my English teacher would have a few comments about; thankfully, they're not much of a fan of Dungeons & Dragons, or even fantasy in general (needless to say, they were at best ambivalent towards the vast majority of my literary interests as a teenager; at least, as much as an English teacher can be towards a student who enjoys reading and who would choose to do it of their own volition).","What on earth did I just write"]}
+          </span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            A decimal-numbered list. Alternatively, 'list-lower-roman' can be used for lowercase Roman numerals.
+          </p>
+        </li>
+        <li>
+          <p>
+            So far only seen in homebrew.
+          </p>
+        </li>
+      </ul>
+      <p>
+        The 'bonus' type just sticks a + in front of things
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=bonus ERROR: {"type":"bonus","value":3}
+      </span>
+      <p>
+        We don't use that one much. It's useful because it allows us to store the data as a number, and render it with a plus sign as required, but it's mostly just forgotten about.
+      </p>
+      <p>
+        Similar story with 'bonusSpeed' type (these 'bonus' flavors are mainly used in the class tables)
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=bonusSpeed ERROR: {"type":"bonusSpeed","value":100}
+      </span>
+      <p>
+        The 'dice' type is rarely used, since the shorthand tag exists, but it looks like this:
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=dice ERROR: {"type":"dice","toRoll":[{"number":1,"faces":4},{"number":2,"faces":7,"modifier":0},{"number":3,"faces":10,"modifier":0,"hideModifier":true}],"rollable":true}
+      </span>
+      <p>
+        The 'abilityDc' type is more helpful:
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=abilityDc ERROR: {"type":"abilityDc","name":"Buggy Code","attributes":["wis","int"]}
+      </span>
+      <p>
+        As is the 'abilityAttackMod' type:
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=abilityAttackMod ERROR: {"type":"abilityAttackMod","name":"Killing Things","attributes":["str"]}
+      </span>
+      <p>
+        There's also a generic version that allows more text customisation; 'abilityGeneric':
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=abilityGeneric ERROR: {"type":"abilityGeneric","name":"Initiative","text":"10 - your power level + somebody else's","attributes":["dex","str"]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=abilityGeneric ERROR: {"type":"abilityGeneric","text":"leave out the 'name' and 'attributes' properties as required"}
+      </span>
+      <p>
+        External links using 'link':
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=link ERROR: {"type":"link","href":{"type":"external","url":"https://raw.githubusercontent.com/5etools-mirror-1/5etools-mirror-1/master/test/schema/entry.json"},"text":"The full 'entry' schema."}
+      </span>
+      <p>
+        Internal links are also possible, but generally covered by @tags. Check out the schema linked above for the full usage; it's massive and horrible so I'm not going to go into detail here.
+      </p>
+      <p>
+        Invocations/Other Optional Features:
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=optfeature ERROR: {"type":"optfeature","name":"Optional Feature Name","prerequisite":"Optional prerequisite, which can include tags {@spell eldritch blast}","entries":["Optional feature text."]}
+      </span>
+      <p>
+        Patrons:
+      </p>
+      <div
+        class="_inset_10aw3_12"
+      >
+        <h4>
+          Inset Title (Optional)
+        </h4>
+        <p>
+          <p>
+            This is a text inset/insert/sidebar/etc.
+          </p>
+        </p>
+      </div>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=insetReadaloud ERROR: {"type":"insetReadaloud","name":"Same As Above","entries":["But a different color."]}
+      </span>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=variant ERROR: {"type":"variant","name":"Better Monster","entries":["Some variant monster text",{"type":"entries","name":"Inline Header","entries":["Text text text",{"type":"variantSub","name":"These can have child items","entries":["And the header style for them is unique, so this exists to cope with that."]}]}]}
+      </span>
+      <p>
+        Images (similar to the structure of the 'link' type):
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=image ERROR: {"type":"image","href":{"type":"internal","path":"blank.png"},"title":"Optional Title"}
+      </span>
+      <p>
+        Creatures; format based on Bestiary data, with added type (note that a proper Bestiary entry and a link to the entry is the preferred method of adding creatures, this functionality exists primarily for homebrew data):
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=dataCreature ERROR: {"type":"dataCreature","dataCreature":{"name":"Unicorn","size":["L"],"type":"celestial","source":"MM","alignment":["L","G"],"ac":[12],"hp":{"average":67,"formula":"9d10 + 18"},"speed":{"walk":50},"str":18,"dex":14,"con":15,"int":11,"wis":17,"cha":16,"immune":["poison"],"conditionImmune":["charmed","paralyzed","poisoned"],"senses":["darkvision 60 ft."],"passive":13,"languages":["Celestial","Elvish","Sylvan","telepathy 60 ft."],"cr":"5","trait":[{"name":"Charge","entries":["If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 ({@dice 2d8}) piercing damage. If the target is a creature, it must succeed on a {@dc 15} Strength saving throw or be knocked prone."]},{"name":"Magic Resistance","entries":["The unicorn has advantage on saving throws against spells and other magical effects."]},{"name":"Magic Weapons","entries":["The unicorn's weapon attacks are magical."]}],"action":[{"name":"Multiattack","entries":["The unicorn makes two attacks: one with its hooves and one with its horn."]},{"name":"Hooves","entries":["{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 11 ({@damage 2d6 + 4}) bludgeoning damage."]},{"name":"Horn","entries":["{@atk mw} {@hit 7} to hit, reach 5 ft., one target. Hit: 8 ({@damage 1d8 + 4}) piercing damage."]},{"name":"Healing Touch (3/Day)","entries":["The unicorn touches another creature with its horn. The target magically regains 11 ({@dice 2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target."]},{"name":"Teleport (1/Day)","entries":["The unicorn magically teleports itself and up to three willing creatures it can see within 5 feet of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away."]}],"legendaryGroup":{"name":"Unicorn","source":"MM"},"legendary":[{"name":"Hooves","entries":["The unicorn makes one attack with its hooves."]},{"name":"Shimmering Shield (Costs 2 Actions)","entries":["The unicorn creates a shimmering, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the unicorn's next turn."]},{"name":"Heal Self (Costs 3 Actions)","entries":["The unicorn magically regains 11 ({@dice 2d8 + 2}) hit points."]}],"page":294,"spellcasting":[{"name":"Innate Spellcasting","headerEntries":["The unicorn's innate spellcasting ability is Charisma (spell save {@dc 14}). The unicorn can innately cast the following spells, requiring no components:"],"will":["{@spell detect evil and good}","{@spell druidcraft}","{@spell pass without trace}"],"daily":{"1e":["{@spell calm emotions}","{@spell dispel evil and good}","{@spell entangle}"]},"ability":"cha"}],"environment":["forest"],"soundClip":{"type":"internal","path":"bestiary/unicorn.mp3"},"traitTags":["Charge","Magic Resistance","Magic Weapons"],"actionTags":["Multiattack"]}}
+      </span>
+      <p>
+        Spells; as above:
+      </p>
+      <span
+        class="_error_10aw3_20"
+      >
+        UNKNOWN type=dataSpell ERROR: {"type":"dataSpell","dataSpell":{"name":"Fireball","level":3,"school":"V","time":[{"number":1,"unit":"action"}],"range":{"type":"point","distance":{"type":"feet","amount":150}},"components":{"v":true,"s":true,"m":"a tiny ball of bat guano and sulfur"},"duration":[{"type":"instant"}],"classes":{"fromClassList":[{"name":"Sorcerer","source":"PHB"},{"name":"Wizard","source":"PHB"}],"fromSubclass":[{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Light","source":"PHB"}},{"class":{"name":"Warlock","source":"PHB"},"subclass":{"name":"Fiend","source":"PHB"}},{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Zeal (PSA)","source":"PSA"}}]},"source":"PHB","entries":["A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.","The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried."],"entriesHigherLevel":[{"type":"entries","name":"At Higher Levels","entries":["When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."]}],"page":241}}
+      </span>
+    </p>
+  </p>
+</div>
+`;

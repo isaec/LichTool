@@ -7,7 +7,7 @@ type ListData = { type: "list"; items: Data[] };
 type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
-const isDataNode = (data: Data): data is DataNode =>
+const isDataNode = (data: Data | object): data is DataNode =>
   (data as DataNode).type !== undefined;
 type DataGroup = DataNode[];
 type Data = string | DataNode | DataGroup;
@@ -132,50 +132,79 @@ const recursiveTagMatcher = (
   components: JSXElement[],
   string: Readonly<string>
 ) => {
-  // const tagContents: JSXElement[] = [];
+  // console.log("tag matcher:\n", string);
+  // this is a safe assumption because this function is only called if there are nested tags
+  let braces = 1;
+  let index = string.indexOf("{@");
+  const rawPrefixIndex = index;
+  while (braces !== 0) {
+    // console.log({ braces, index, slice: string.slice(index) });
+    let nextOpeningIndex = string.indexOf("{@", index + 1);
+    let nextClosingIndex = string.indexOf("}", index) + 1;
+    if (nextOpeningIndex !== -1 && nextOpeningIndex < nextClosingIndex) {
+      // if a new brace is opened before our group closes
+      braces++; // we are going a brace deeper
+      // console.log("shift right:", nextOpeningIndex - index);
+      index = nextOpeningIndex;
+    } else {
+      // if brace is closed before another is opened
+      // console.log("shift right:", nextClosingIndex - index);
+      braces--;
+      index = nextClosingIndex;
+    }
+  }
+  // console.log("walked!", { braces, index, slice: string.slice(index) });
+  const rawSuffixIndex = index;
 
-  const rawPrefixIndex = string.indexOf("{@");
   const rawPrefix = string.slice(0, rawPrefixIndex);
-  const rawSuffixIndex = string.lastIndexOf("}");
-  const rawSuffix = string.slice(rawSuffixIndex + 1);
-  const braceFullContents = string.slice(rawPrefixIndex + 2, rawSuffixIndex);
+  const rawSuffix = string.slice(rawSuffixIndex);
+
+  const braceFullContents = string.slice(
+    rawPrefixIndex + 2,
+    rawSuffixIndex - 1
+  );
+
+  // this might crash
   const tag = braceFullContents.match(firstWord)![0];
   const contents = braceFullContents.slice(tag.length + 1);
+  // console.log({ rawPrefix, tag, contents, rawSuffix });
   components.push(rawPrefix);
 
-  const elementStack: any = [];
-
   if (contents.includes("{@")) {
+    // console.log(
+    //   "%cbranch on contents",
+    //   "color: limegreen; font-weight: bold; font-size: 1.5rem;"
+    // );
+
+    // process the tags deeper then this brace
+    const elementStack: JSXElement[] = [];
     recursiveTagMatcher(elementStack, contents);
 
-    console.log(`tag="${tag}" "${contents}"`);
+    // put the content of those nested tags inside the tag for our brace
     processTag(components, [
       string,
       undefined /* we already pushed this */,
       tag,
       elementStack,
     ]);
-    console.log(components);
   } else {
-    console.log(`tag="${tag}" "${contents}"`);
-    processTag(elementStack, [
+    processTag(components, [
       string,
       undefined /* we already pushed this */,
       tag,
       contents,
     ]);
-    components.push(elementStack[0]);
-    console.log(elementStack);
+    // components.push(elementStack[0]);
   }
-
-  // // console.log({ tag, contents });
-
-  // console.log({ elementStack });
-  // components.push(elementStack);
-
-  // // components.push(tagContents);
-  // console.log({ rawSuffix });
-  components.push(rawSuffix);
+  if (rawSuffix.includes("{@")) {
+    // console.log(
+    //   "%cbranch on suffix",
+    //   "color: rebeccapurple; font-weight: bold; font-size: 1.5rem;"
+    // );
+    recursiveTagMatcher(components, rawSuffix);
+  } else {
+    components.push(rawSuffix);
+  }
 };
 
 // readonly to make sure string is not mutated
@@ -183,10 +212,9 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   const components: JSXElement[] = [];
 
   if (isNestedTag.test(props.string)) {
-    console.log("nesting!", props.string);
-
     recursiveTagMatcher(components, props.string);
-    console.log({ components });
+    // console.log("%cdone", "color: red; font-weight: bold; font-size: 1.5rem;");
+    // components.forEach((e) => console.log(e));
   } else {
     // non nested regex based parsing
     const parseIterator = props.string.matchAll(
@@ -244,13 +272,26 @@ const DataRenderer: Component<{ data: Data }> = (props) => {
   return <DataNodeRenderer data={props.data} />;
 };
 
-const Renderer: Component<{ data: string }> = (props) => {
-  const dataObj: Data = JSON.parse(props.data);
+const parseData = (data: object | string): Data => {
+  if (typeof data === "string") {
+    try {
+      return JSON.parse(data);
+    } catch (e) {
+      // this will test if its a string unquoted, or actually failing validation
+      return JSON.parse(`"${data}"`);
+    }
+  }
+  if (isDataNode(data)) {
+    return data;
+  }
 
-  return (
-    <p class={styles.Renderer}>
-      <DataRenderer data={dataObj} />
-    </p>
-  );
+  throw new Error("incomprehensible data - not a string or legal object");
 };
+
+const Renderer: Component<{ data: string | object }> = (props) => (
+  <p class={styles.Renderer}>
+    <DataRenderer data={parseData(props.data)} />
+  </p>
+);
+
 export default Renderer;
