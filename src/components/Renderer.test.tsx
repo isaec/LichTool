@@ -99,11 +99,18 @@ describe("Renderer", () => {
       <Renderer data="some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold! {@underline underline {@italic italic}}}, bold}, more text ({@i italic})" />
     ));
     // @ts-ignore
-    // expect(getByText(/some text:/)).toBeInTheDocument();
-    // expect((getByText(/some text:/) as HTMLElement).tagName).toBe("P");
-    // expect((getByText(/bolded/) as HTMLElement).tagName).toBe("B");
-    // expect((getByText(/and italic/) as HTMLElement).tagName).toBe("I");
-    // expect((getByText(/struck bold!/) as HTMLElement).tagName).toBe("S");
+    expect(getByText(/some text:/)).toBeInTheDocument();
+    expect((getByText(/some text:/) as HTMLElement).tagName).toBe("P");
+    expect((getByText(/bolded/) as HTMLElement).tagName).toBe("B");
+    expect((getByText(/and italic/) as HTMLElement).tagName).toBe("I");
+    expect((getByText(/struck bold!/) as HTMLElement).tagName).toBe("S");
+    // fragile test...
+    expect(
+      (getByText(/underline/) as HTMLElement).classList.contains(
+        styles.underline
+      )
+    ).toBe(true);
+
     const braces = queryAllByText(container, /[{}]/);
     expect(braces.length).toBe(0);
 
