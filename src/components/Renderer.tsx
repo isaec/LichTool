@@ -170,15 +170,17 @@ const recursiveTagMatcher = (
   console.log({ rawPrefix, tag, contents, rawSuffix });
   components.push(rawPrefix);
 
-  const elementStack: JSXElement[] = [];
-
   if (contents.includes("{@")) {
     console.log(
       "%cbranch on contents",
       "color: limegreen; font-weight: bold; font-size: 1.5rem;"
     );
+
+    // process the tags deeper then this brace
+    const elementStack: JSXElement[] = [];
     recursiveTagMatcher(elementStack, contents);
 
+    // put the content of those nested tags inside the tag for our brace
     processTag(components, [
       string,
       undefined /* we already pushed this */,
