@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { render, fireEvent } from "solid-testing-library";
+import { render, fireEvent, queryAllByText } from "solid-testing-library";
 // @ts-ignore
 import renderdemo from "../data/renderdemo.json";
 
@@ -101,7 +101,30 @@ describe("Renderer", () => {
     // @ts-ignore
     expect(getByText(/some text:/)).toBeInTheDocument();
     expect((getByText(/some text:/) as HTMLElement).tagName).toBe("P");
+    expect((getByText(/bolded/) as HTMLElement).tagName).toBe("B");
+    expect((getByText(/and italic/) as HTMLElement).tagName).toBe("I");
     expect((getByText(/struck bold!/) as HTMLElement).tagName).toBe("S");
+    const braces = queryAllByText(container, /[{}]/);
+    expect(braces).toBeNull();
+
+    expect(container.querySelectorAll(`.${styles.Renderer} > *`)).toBe(`
+      NodeList [
+        <p>
+          some text: 
+          <b>
+            bolded
+              <i>
+                and italic
+              </i>
+            and now just bold - now 
+            <s>
+              struck bold!
+            </s>
+          </b>
+        </p>,
+      ]
+    `);
+
     unmount();
   });
 });
