@@ -302,7 +302,8 @@ const DataRenderer: Component<{ data: Data }> = (props) => {
   return <DataNodeRenderer data={props.data} />;
 };
 
-const parseData = (data: object | string): Data => {
+/** internal data parser, handling data in many format types */
+export const _parseData = (data: object | string): Data => {
   if (typeof data === "string") {
     try {
       return JSON.parse(data);
@@ -333,7 +334,7 @@ const Renderer: Component<{ data: string | object }> = (props) => (
         />
       )}
     >
-      <DataRenderer data={parseData(props.data)} />
+      <DataRenderer data={_parseData(props.data)} />
     </ErrorBoundary>
   </p>
 );

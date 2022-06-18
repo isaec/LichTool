@@ -5,7 +5,14 @@ import renderdemo from "../data/renderdemo.json";
 
 import styles from "./Renderer.module.scss";
 
-import Renderer from "./Renderer";
+import Renderer, { _parseData } from "./Renderer";
+
+describe("_parseData", () => {
+  it("parses json", () => {
+    const obj = { key: 10, woot: "yaaa" };
+    expect(_parseData(JSON.stringify(obj))).toStrictEqual(obj);
+  });
+});
 
 describe("Renderer", () => {
   it("matches snapshot", () => {
