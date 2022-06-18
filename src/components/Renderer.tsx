@@ -148,16 +148,13 @@ const recursiveTagMatcher = (
   if (contents.includes("{@")) {
     recursiveTagMatcher(elementStack, contents);
 
-    // console.log(`tag="${tag}" "${contents}"`);
     processTag(components, [
       string,
       undefined /* we already pushed this */,
       tag,
       elementStack,
     ]);
-    // console.log(components);
   } else {
-    // console.log(`tag="${tag}" "${contents}"`);
     processTag(elementStack, [
       string,
       undefined /* we already pushed this */,
@@ -165,16 +162,7 @@ const recursiveTagMatcher = (
       contents,
     ]);
     components.push(elementStack[0]);
-    // console.log(elementStack);
   }
-
-  // // console.log({ tag, contents });
-
-  // console.log({ elementStack });
-  // components.push(elementStack);
-
-  // // components.push(tagContents);
-  // console.log({ rawSuffix });
   components.push(rawSuffix);
 };
 
@@ -184,7 +172,6 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
 
   if (isNestedTag.test(props.string)) {
     recursiveTagMatcher(components, props.string);
-    // console.log({ components });
   } else {
     // non nested regex based parsing
     const parseIterator = props.string.matchAll(

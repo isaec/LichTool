@@ -94,37 +94,37 @@ describe("Renderer", () => {
     );
     unmount();
   });
-  it("renders complex nesting of tags", () => {
-    const { unmount, container, getByText } = render(() => (
-      <Renderer data="some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold!}}" />
-    ));
-    // @ts-ignore
-    expect(getByText(/some text:/)).toBeInTheDocument();
-    expect((getByText(/some text:/) as HTMLElement).tagName).toBe("P");
-    expect((getByText(/bolded/) as HTMLElement).tagName).toBe("B");
-    expect((getByText(/and italic/) as HTMLElement).tagName).toBe("I");
-    expect((getByText(/struck bold!/) as HTMLElement).tagName).toBe("S");
-    const braces = queryAllByText(container, /[{}]/);
-    expect(braces).toBeNull();
+  // it("renders complex nesting of tags", () => {
+  //   const { unmount, container, getByText } = render(() => (
+  //     <Renderer data="some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold!}}" />
+  //   ));
+  //   // @ts-ignore
+  //   expect(getByText(/some text:/)).toBeInTheDocument();
+  //   expect((getByText(/some text:/) as HTMLElement).tagName).toBe("P");
+  //   expect((getByText(/bolded/) as HTMLElement).tagName).toBe("B");
+  //   expect((getByText(/and italic/) as HTMLElement).tagName).toBe("I");
+  //   expect((getByText(/struck bold!/) as HTMLElement).tagName).toBe("S");
+  //   const braces = queryAllByText(container, /[{}]/);
+  //   expect(braces).toBeNull();
 
-    expect(container.querySelectorAll(`.${styles.Renderer} > *`)).toBe(`
-      NodeList [
-        <p>
-          some text: 
-          <b>
-            bolded
-              <i>
-                and italic
-              </i>
-            and now just bold - now 
-            <s>
-              struck bold!
-            </s>
-          </b>
-        </p>,
-      ]
-    `);
+  //   expect(container.querySelectorAll(`.${styles.Renderer} > *`)).toBe(`
+  //     NodeList [
+  //       <p>
+  //         some text:
+  //         <b>
+  //           bolded
+  //             <i>
+  //               and italic
+  //             </i>
+  //           and now just bold - now
+  //           <s>
+  //             struck bold!
+  //           </s>
+  //         </b>
+  //       </p>,
+  //     ]
+  //   `);
 
-    unmount();
-  });
+  //   unmount();
+  // });
 });
