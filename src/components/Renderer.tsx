@@ -99,36 +99,42 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   })
 );
 
+/** cannot match nested tags */
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
+type matchedTag = [string, string?, string?, string?];
 const isNestedTag = /{[^}]*?{.*?}.*?}/gm;
+
+const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
+  const [, rawPrefix, tag, contents] = matchValue;
+  if (rawPrefix !== undefined) elementStack.push(cleanText(rawPrefix));
+  if (tag !== undefined && contents !== undefined) {
+    const aliasTag = tagAlias.get(tag);
+    const TagComponent = tagMap.get(aliasTag !== undefined ? aliasTag : tag);
+    if (TagComponent !== undefined) {
+      elementStack.push(<TagComponent>{cleanText(contents)}</TagComponent>);
+    } else {
+      elementStack.push(
+        <RenderError
+          error={`UNKNOWN tag="${tag}"`}
+          details={`{@${tag} ${contents}}`}
+        />
+      );
+    }
+  }
+};
+
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   if (isNestedTag.test(props.string)) {
     console.log("nesting!", props.string);
   }
-  const parseIterator = props.string.matchAll(tagMatcher) as IterableIterator<
-    [string, string?, string?, string?]
-  >;
+  const parseIterator = props.string.matchAll(
+    tagMatcher
+  ) as IterableIterator<matchedTag>;
   const components: Array<JSXElement> = [];
   let match = parseIterator.next();
   while (!match.done) {
-    const [, rawPrefix, tag, contents] = match.value;
-    if (rawPrefix !== undefined) components.push(cleanText(rawPrefix));
-    if (tag !== undefined && contents !== undefined) {
-      const aliasTag = tagAlias.get(tag);
-      const TagComponent = tagMap.get(aliasTag !== undefined ? aliasTag : tag);
-      if (TagComponent !== undefined) {
-        components.push(<TagComponent>{cleanText(contents)}</TagComponent>);
-      } else {
-        components.push(
-          <RenderError
-            error={`UNKNOWN tag="${tag}"`}
-            details={`{@${tag} ${contents}}`}
-          />
-        );
-      }
-    }
-
+    processTag(components, match.value);
     match = parseIterator.next();
   }
 
