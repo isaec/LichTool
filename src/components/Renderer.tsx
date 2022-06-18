@@ -124,33 +124,59 @@ const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
   }
 };
 
+const recursiveTagMatcher = (
+  components: JSXElement[],
+  string: Readonly<string>
+) => {
+  // const tagContents: JSXElement[] = [];
+
+  const rawPrefixIndex = string.indexOf("{@");
+  const rawPrefix = string.slice(0, rawPrefixIndex);
+  const rawSuffixIndex = string.lastIndexOf("}");
+  const rawSuffix = string.slice(rawSuffixIndex + 1);
+  const braceFullContents = string.slice(rawPrefixIndex + 2, rawSuffixIndex);
+  const tag = braceFullContents.match(firstWord)![0];
+  const contents = braceFullContents.slice(tag.length);
+  components.push(rawPrefix);
+  console.log({ rawPrefix });
+
+  // console.log({
+  //   string,
+  //   rawPrefixIndex,
+  //   rawPrefix,
+  //   tag,
+  //   contents,
+  //   rawSuffixIndex,
+  //   rawSuffix,
+  // });
+
+  if (!contents.includes("{@")) {
+    console.log({ tag, contents });
+    processTag(components, [
+      string,
+      undefined /* we already pushed this */,
+      tag,
+      contents,
+    ]);
+  } else {
+    recursiveTagMatcher(components, contents);
+    console.log(components);
+  }
+
+  // components.push(tagContents);
+  console.log({ rawSuffix });
+  components.push(rawSuffix);
+};
+
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
-  const components: Array<JSXElement> = [];
+  const components: JSXElement[] = [];
 
   if (isNestedTag.test(props.string)) {
     console.log("nesting!", props.string);
 
-    const rawPrefixIndex = props.string.indexOf("{@");
-    const rawPrefix = props.string.slice(0, rawPrefixIndex);
-    const rawSuffixIndex = props.string.lastIndexOf("}");
-    const rawSuffix = props.string.slice(rawSuffixIndex + 1);
-    const braceContents = props.string.slice(
-      rawPrefixIndex + 2,
-      rawSuffixIndex - 1
-    );
-    const tag = braceContents.match(firstWord)![0];
-    components.push(rawPrefix);
-    components.push("EEEE");
-
-    console.log({
-      rawPrefixIndex,
-      rawPrefix,
-      tag,
-      braceContents,
-      rawSuffixIndex,
-      rawSuffix,
-    });
+    recursiveTagMatcher(components, props.string);
+    console.log({ components });
   } else {
     // non nested regex based parsing
     const parseIterator = props.string.matchAll(
