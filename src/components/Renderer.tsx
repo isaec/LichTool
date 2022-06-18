@@ -143,20 +143,21 @@ const recursiveTagMatcher = (
   const contents = braceFullContents.slice(tag.length + 1);
   // components.push(rawPrefix);
 
+  const elementStack: any = [];
+
   if (contents.includes("{@")) {
-    recursiveTagMatcher(components, contents);
+    recursiveTagMatcher(elementStack, contents);
 
     console.log(`tag="${tag}" "${contents}"`);
     processTag(components, [
       string,
       undefined /* we already pushed this */,
       tag,
-      components,
+      elementStack,
     ]);
     console.log(components);
   } else {
     console.log(`tag="${tag}" "${contents}"`);
-    const elementStack: any = [];
     processTag(elementStack, [
       string,
       undefined /* we already pushed this */,
