@@ -6,9 +6,7 @@ import styles from "./App.module.scss";
 import Renderer from "./components/Renderer";
 
 const App: Component = () => {
-  const [data, setData] = createSignal(
-    "some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold! {@underline underline {@italic italic}}}, bold}, more text ({@i italic})"
-  );
+  const [data, setData] = createSignal(renderdemo.data[0]);
 
   return (
     <div class={styles.App}>
