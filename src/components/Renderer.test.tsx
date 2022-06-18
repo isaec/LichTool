@@ -17,7 +17,8 @@ describe("Renderer", () => {
     const { unmount, container } = render(() => (
       <Renderer data="this is some text, {@bold and now its bold} {@b with shorthand, too!}" />
     ));
-    expect(container).toMatchInlineSnapshot(`
+    expect(container).toMatchInlineSnapshot(
+      `
       <div>
         <p
           class="_Renderer_10aw3_1"
@@ -34,7 +35,34 @@ describe("Renderer", () => {
           </p>
         </p>
       </div>
-    `);
+    `
+    );
+    unmount();
+  });
+  it("renders italic, strikes", () => {
+    const { unmount, container } = render(() => (
+      <Renderer data="this is some text, {@strike and now its struck} {@b with shorthand, too!}" />
+    ));
+    expect(container).toMatchInlineSnapshot(
+      `
+      <div>
+        <p
+          class="_Renderer_10aw3_1"
+        >
+          <p>
+            this is some text, 
+            <s>
+              and now its struck
+            </s>
+             
+            <b>
+              with shorthand, too!
+            </b>
+          </p>
+        </p>
+      </div>
+    `
+    );
     unmount();
   });
 });
