@@ -1,17 +1,16 @@
-import { Component, createSignal } from 'solid-js';
+import { Component, createSignal } from "solid-js";
 // @ts-ignore
-import renderdemo from "./data/renderdemo.json"
+import renderdemo from "./data/renderdemo.json";
 
-import styles from './App.module.scss';
-import Renderer from './components/Renderer';
+import styles from "./App.module.scss";
+import Renderer from "./components/Renderer";
 
 const App: Component = () => {
-
-  const [data, setData] = createSignal(JSON.stringify(renderdemo.data[0]))
+  const [data, setData] = createSignal(renderdemo.data[0]);
 
   return (
     <div class={styles.App}>
-      <Renderer data={data()}/>
+      <Renderer data={data()} />
     </div>
   );
 };

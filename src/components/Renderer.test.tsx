@@ -17,7 +17,24 @@ describe("Renderer", () => {
     const { unmount, container } = render(() => (
       <Renderer data="this is some text, {@bold and now its bold} {@b with shorthand, too!}" />
     ));
-    expect(container).toMatchInlineSnapshot();
+    expect(container).toMatchInlineSnapshot(`
+      <div>
+        <p
+          class="_Renderer_10aw3_1"
+        >
+          <p>
+            this is some text, 
+            <b>
+              and now its bold
+            </b>
+             
+            <b>
+              with shorthand, too!
+            </b>
+          </p>
+        </p>
+      </div>
+    `);
     unmount();
   });
 });

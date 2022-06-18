@@ -244,8 +244,18 @@ const DataRenderer: Component<{ data: Data }> = (props) => {
   return <DataNodeRenderer data={props.data} />;
 };
 
-const Renderer: Component<{ data: string }> = (props) => {
-  const dataObj: Data = JSON.parse(props.data);
+const parseData = (data: {} | string) => {
+  if (typeof data === "object") return data;
+  if (typeof data === "string")
+    try {
+      return JSON.parse(data);
+    } catch (_e) {
+      return data;
+    }
+};
+
+const Renderer: Component<{ data: string | {} }> = (props) => {
+  const dataObj: Data = parseData(props.data);
 
   return (
     <p class={styles.Renderer}>
