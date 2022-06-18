@@ -153,14 +153,16 @@ const recursiveTagMatcher = (
     }
     if (braces == 0) break;
   }
-
   console.log("walked!", { braces, index, slice: string.slice(index) });
   const rawSuffixIndex = index;
 
   const rawPrefix = string.slice(0, rawPrefixIndex);
   const rawSuffix = string.slice(rawSuffixIndex);
 
-  const braceFullContents = string.slice(rawPrefixIndex + 2, rawSuffixIndex);
+  const braceFullContents = string.slice(
+    rawPrefixIndex + 2,
+    rawSuffixIndex - 1
+  );
 
   // this might crash
   const tag = braceFullContents.match(firstWord)![0];
