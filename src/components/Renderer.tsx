@@ -107,18 +107,25 @@ const pipe =
     return <Element p={pipeSplit} p0={pipeSplit[0]} p1={pipeSplit[1]} />;
   };
 
+const tag =
+  (
+    tagString: keyof JSX.IntrinsicElements
+  ): Component<{ children: JSX.Element }> =>
+  (props) =>
+    <Dynamic component={tagString} children={props.children} />;
+
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
-    bold: (props) => <b>{props.children}</b>,
-    italic: (props) => <i>{props.children}</i>,
+    bold: tag("b"),
+    italic: tag("i"),
     underline: (props) => (
       <span class={styles.underline}>{props.children}</span>
     ),
-    strike: (props) => <s>{props.children}</s>,
+    strike: tag("s"),
     color: pipe((props) => (
       <span style={`color: #${props.p1}`}>{props.p0}</span>
     )),
-    code: (props) => <code>{props.children}</code>,
+    code: tag("code"),
     note: (props) => <i class={styles.note}>{props.children}</i>,
     link: pipe((props) => (
       <a href={props.p1 ?? props.p0} target="_blank" rel="noopener noreferrer">
