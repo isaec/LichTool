@@ -21,7 +21,7 @@ type InsetData = { type: "inset"; name: string; entries: Data };
 type DataNode = SectionData | ListData | InsetData;
 const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
-type DataGroup = DataNode[];
+type DataGroup = (DataNode | string)[];
 type Data = string | DataNode | DataGroup;
 
 const RenderError: Component<{
@@ -305,7 +305,19 @@ export const _parseData = (data: object | string): Data => {
 };
 
 const Renderer: Component<{ data: string | object }> = (props) => {
-  const data = createMemo(() => _parseData(props.data));
+  const data = createMemo((): Data => {
+    try {
+      return _parseData(props.data);
+    } catch (e) {
+      return {
+        type: "section",
+        name: "Error!",
+        entries: [
+          "The json that Renderer was passed cannot be rendered, because it is not valid json.",
+        ],
+      };
+    }
+  });
   return (
     <p class={styles.Renderer}>
       <ErrorBoundary
