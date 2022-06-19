@@ -109,24 +109,36 @@ const pipe =
 
 const tag =
   (
-    tagString: keyof JSX.IntrinsicElements
+    tagString: keyof JSX.IntrinsicElements,
+    obj?: {
+      class?: string;
+      style?: string;
+    }
   ): Component<{ children: JSX.Element }> =>
   (props) =>
-    <Dynamic component={tagString} children={props.children} />;
+    (
+      <Dynamic
+        component={tagString}
+        children={props.children}
+        class={obj?.class}
+        style={obj?.style}
+      />
+    );
 
 const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
+    // intrinsic tags
     bold: tag("b"),
     italic: tag("i"),
-    underline: (props) => (
-      <span class={styles.underline}>{props.children}</span>
-    ),
     strike: tag("s"),
+    code: tag("code"),
+    // styled intrinsic tags
+    underline: tag("span", { class: styles.underline }),
+    note: tag("i", { class: styles.note }),
+    // complex tags
     color: pipe((props) => (
       <span style={`color: #${props.p1}`}>{props.p0}</span>
     )),
-    code: tag("code"),
-    note: (props) => <i class={styles.note}>{props.children}</i>,
     link: pipe((props) => (
       <a href={props.p1 ?? props.p0} target="_blank" rel="noopener noreferrer">
         {props.p0}
