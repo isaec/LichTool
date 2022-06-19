@@ -228,24 +228,28 @@ const recursiveTagMatcher = (
 
 // readonly to make sure string is not mutated
 const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
-  const components: JSXElement[] = [];
+  const memoizedComponents = createMemo(() => {
+    const components: JSXElement[] = [];
 
-  if (isNestedTag.test(props.string)) {
-    recursiveTagMatcher(components, props.string);
-  } else {
-    // non nested regex based parsing
-    const parseIterator = props.string.matchAll(
-      tagMatcher
-    ) as IterableIterator<matchedTag>;
+    if (isNestedTag.test(props.string)) {
+      recursiveTagMatcher(components, props.string);
+    } else {
+      // non nested regex based parsing
+      const parseIterator = props.string.matchAll(
+        tagMatcher
+      ) as IterableIterator<matchedTag>;
 
-    let match = parseIterator.next();
-    while (!match.done) {
-      processTag(components, match.value);
-      match = parseIterator.next();
+      let match = parseIterator.next();
+      while (!match.done) {
+        processTag(components, match.value);
+        match = parseIterator.next();
+      }
     }
-  }
 
-  return <p>{components}</p>;
+    return components;
+  });
+
+  return <p>{memoizedComponents()}</p>;
 };
 
 const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => (
