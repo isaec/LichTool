@@ -7,8 +7,10 @@ import {
   JSX,
   JSXElement,
   Match,
+  Show,
   Switch,
 } from "solid-js";
+import { Dynamic } from "solid-js/web";
 
 import styles from "./Renderer.module.scss";
 
@@ -273,23 +275,20 @@ const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
 };
 
 const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
-  const Entry = entryTypes.get(props.data.type);
-
-  if (Entry === undefined) {
-    return (
-      <RenderError
-        error={`UNKNOWN type=${props.data.type}`}
-        details={JSON.stringify(props.data)}
-      />
-    );
-  }
+  const Entry = createMemo(() => entryTypes.get(props.data.type));
 
   return (
-    <Entry
-      data={
-        props.data as keyof typeof Entry /* this is safe because we checked the json type - ts just cant tell */
+    <Show
+      when={Entry() !== undefined}
+      fallback={
+        <RenderError
+          error={`UNKNOWN type=${props.data.type}`}
+          details={JSON.stringify(props.data)}
+        />
       }
-    />
+    >
+      <Dynamic component={Entry() as any} data={props.data} />
+    </Show>
   );
 };
 
