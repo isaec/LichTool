@@ -167,28 +167,23 @@ const recursiveTagMatcher = (
   components: JSXElement[],
   string: Readonly<string>
 ) => {
-  // console.log("tag matcher:\n", string);
   // this is a safe assumption because this function is only called if there are nested tags
   let braces = 1;
   let index = string.indexOf("{@");
   const rawPrefixIndex = index;
   while (braces !== 0) {
-    // console.log({ braces, index, slice: string.slice(index) });
     let nextOpeningIndex = string.indexOf("{@", index + 1);
     let nextClosingIndex = string.indexOf("}", index) + 1;
     if (nextOpeningIndex !== -1 && nextOpeningIndex < nextClosingIndex) {
       // if a new brace is opened before our group closes
       braces++; // we are going a brace deeper
-      // console.log("shift right:", nextOpeningIndex - index);
       index = nextOpeningIndex;
     } else {
       // if brace is closed before another is opened
-      // console.log("shift right:", nextClosingIndex - index);
       braces--;
       index = nextClosingIndex;
     }
   }
-  // console.log("walked!", { braces, index, slice: string.slice(index) });
   const rawSuffixIndex = index;
 
   const rawPrefix = string.slice(0, rawPrefixIndex);
@@ -202,15 +197,9 @@ const recursiveTagMatcher = (
   // this might crash
   const tag = braceFullContents.match(firstWord)![0];
   const contents = braceFullContents.slice(tag.length + 1);
-  // console.log({ rawPrefix, tag, contents, rawSuffix });
   components.push(rawPrefix);
 
   if (contents.includes("{@")) {
-    // console.log(
-    //   "%cbranch on contents",
-    //   "color: limegreen; font-weight: bold; font-size: 1.5rem;"
-    // );
-
     // process the tags deeper then this brace
     const elementStack: JSXElement[] = [];
     recursiveTagMatcher(elementStack, contents);
@@ -229,13 +218,8 @@ const recursiveTagMatcher = (
       tag,
       contents,
     ]);
-    // components.push(elementStack[0]);
   }
   if (rawSuffix.includes("{@")) {
-    // console.log(
-    //   "%cbranch on suffix",
-    //   "color: rebeccapurple; font-weight: bold; font-size: 1.5rem;"
-    // );
     recursiveTagMatcher(components, rawSuffix);
   } else {
     components.push(rawSuffix);
@@ -248,8 +232,6 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
 
   if (isNestedTag.test(props.string)) {
     recursiveTagMatcher(components, props.string);
-    // console.log("%cdone", "color: red; font-weight: bold; font-size: 1.5rem;");
-    // components.forEach((e) => console.log(e));
   } else {
     // non nested regex based parsing
     const parseIterator = props.string.matchAll(
@@ -266,13 +248,11 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   return <p>{components}</p>;
 };
 
-const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => {
-  return (
-    <p>
-      <For each={props.group}>{(data) => <DataRenderer data={data} />}</For>
-    </p>
-  );
-};
+const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => (
+  <p>
+    <For each={props.group}>{(data) => <DataRenderer data={data} />}</For>
+  </p>
+);
 
 const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
   const Entry = createMemo(() => entryTypes.get(props.data.type));
