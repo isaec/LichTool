@@ -314,6 +314,8 @@ const Renderer: Component<{ data: string | object }> = (props) => {
         name: "Error!",
         entries: [
           "The json that Renderer was passed cannot be rendered, because it is not valid json.",
+          "The full error has been serialized below for your convenience.",
+          (e as Error).toString(),
         ],
       };
     }
