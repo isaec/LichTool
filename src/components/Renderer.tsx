@@ -196,7 +196,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 /** cannot match nested tags */
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, (string | JSXElement)?];
-const isNestedTag = /{[^}]*?{.*?}.*?}/gm;
+const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/gm;
 const firstWord = /\w+/;
 
 const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
