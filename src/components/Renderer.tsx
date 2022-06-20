@@ -21,6 +21,7 @@ type ListData = {
   items: Data[];
   columns?: number;
   style?: string;
+  name?: string;
 };
 type InsetData = { type: "inset"; name: string; entries: Data };
 
@@ -88,28 +89,33 @@ const entryTypes = new Map(
         return classStack.join(" ");
       });
       return (
-        <ul
-          classList={{
-            [styles.list]: true,
-            [styles.column]: typeof props.data.columns === "number",
-            [classes()]: true,
-          }}
-          style={
-            typeof props.data.columns === "number"
-              ? {
-                  "column-count": props.data.columns,
-                }
-              : undefined
-          }
-        >
-          <For each={props.data.items}>
-            {(item) => (
-              <ListItem condition={isDataNode(item) && item.type === "list"}>
-                <DataRenderer data={item} />
-              </ListItem>
-            )}
-          </For>
-        </ul>
+        <>
+          <Show when={props.data.name !== undefined}>
+            <b>{props.data.name}</b>
+          </Show>
+          <ul
+            classList={{
+              [styles.list]: true,
+              [styles.column]: typeof props.data.columns === "number",
+              [classes()]: true,
+            }}
+            style={
+              typeof props.data.columns === "number"
+                ? {
+                    "column-count": props.data.columns,
+                  }
+                : undefined
+            }
+          >
+            <For each={props.data.items}>
+              {(item) => (
+                <ListItem condition={isDataNode(item) && item.type === "list"}>
+                  <DataRenderer data={item} />
+                </ListItem>
+              )}
+            </For>
+          </ul>
+        </>
       );
     },
     inset: (props: { data: InsetData }) => (

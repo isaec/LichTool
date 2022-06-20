@@ -34,9 +34,9 @@
         margin-left: $list-pad-left;
       }
     }
-    &.list-hang {
-    }
+    &.list-hang,
     &.list-no-bullets {
+      list-style-type: none;
     }
   }
 
