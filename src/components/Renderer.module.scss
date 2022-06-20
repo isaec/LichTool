@@ -2,7 +2,7 @@
 
 .Renderer {
   $list-pad-left: $size-10;
-  $li-flex-min-width: $size-20;
+  $li-flex-min-width: $size-40;
 
   overflow-y: scroll;
   & * {
@@ -21,11 +21,14 @@
 
   // element styles
   & ul.list {
-    @for $i from 1 through 10 {
-      &[columns="#{$i}"] {
-        display: grid;
-        padding-left: 0px;
-        grid-template-columns: repeat($i, minmax($li-flex-min-width, 1fr));
+    &.column {
+      // column-count: xxx; is defined in js, safe default of 1
+      column-count: 1;
+      column-width: $li-flex-min-width;
+      padding-left: 0px;
+      & > li {
+        break-inside: avoid-column;
+        margin-left: $list-pad-left;
       }
     }
   }

@@ -4,16 +4,6 @@
       "type": "section",
       "name": "Renderer Demo",
       "entries": [
-        {
-          "type": "list",
-          "columns": 3,
-          "items": [
-            "A list of items with wrapping columns",
-            "Which will wrap",
-            "Up to a maximum number of times as specified by the 'columns' field",
-            "And will attempt to balance content between each column"
-          ]
-        },
         "(This is a section heading. This is mainly used in Adventures, for the header of entire chapters. The root entry does {@b not} need have the 'section' type, 'entries' is generally used instead. The 'section' produces a {@bold level -1} header; the 'basement' level, if you will.)",
         {
           "type": "quote",

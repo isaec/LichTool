@@ -18,6 +18,10 @@ type SectionData = { type: "section"; name: string; entries: DataGroup };
 
 type GenericListData = { type: "list"; items: Data[] };
 type WrappingListData = GenericListData & { columns: number };
+const isWrappingListData = (
+  listData: GenericListData
+): listData is WrappingListData =>
+  typeof (listData as WrappingListData).columns === "number";
 type ListData = GenericListData | WrappingListData;
 
 type InsetData = { type: "inset"; name: string; entries: Data };
@@ -73,7 +77,19 @@ const entryTypes = new Map(
     ),
     list: (props: { data: ListData }) => (
       // @ts-ignore no other good way to apply columns attribute
-      <ul class={styles.list} columns={props.data.columns}>
+      <ul
+        classList={{
+          [styles.list]: true,
+          [styles.column]: isWrappingListData(props.data),
+        }}
+        style={
+          isWrappingListData(props.data)
+            ? {
+                "column-count": props.data.columns,
+              }
+            : undefined
+        }
+      >
         <For each={props.data.items}>
           {(item) => (
             <ListItem condition={isDataNode(item) && item.type === "list"}>

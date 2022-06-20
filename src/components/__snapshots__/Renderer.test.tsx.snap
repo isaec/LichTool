@@ -3,7 +3,7 @@
 exports[`Renderer > matches snapshot 1`] = `
 <div>
   <p
-    class="_Renderer_59yon_1"
+    class="_Renderer_1tl18_1"
   >
     <h1>
       Renderer Demo
@@ -21,7 +21,7 @@ exports[`Renderer > matches snapshot 1`] = `
          header; the 'basement' level, if you will.)
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=quote ERROR: 
         <code>
@@ -47,7 +47,9 @@ exports[`Renderer > matches snapshot 1`] = `
       <p>
         String entries can contain tags, and these work when nested in most other structures. These will eventually all work with the hover-to-view feature. They are case-insensitive, unless otherwise noted. These are:
       </p>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <p>
             Style tags; 
@@ -68,13 +70,13 @@ exports[`Renderer > matches snapshot 1`] = `
             </i>
             ), 
             <span
-              class="_underline_59yon_17"
+              class="_underline_1tl18_27"
             >
               some text to be underlined
             </span>
              (alternative 
             <span
-              class="_underline_59yon_17"
+              class="_underline_1tl18_27"
             >
               shorthand
             </span>
@@ -103,7 +105,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             Additionally, 
             <i
-              class="_note_59yon_24"
+              class="_note_1tl18_34"
             >
               note tags
             </i>
@@ -114,7 +116,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             Dice roller tags; 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="dice" ERROR: 
               <code>
@@ -124,7 +126,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              for regular dice rolls (
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="dice" ERROR: 
               <code>
@@ -134,7 +136,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              for multiple options; 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="dice" ERROR: 
               <code>
@@ -144,7 +146,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              for input prompts), with extended 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="dice" ERROR: 
               <code>
@@ -154,7 +156,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              and 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="dice" ERROR: 
               <code>
@@ -164,7 +166,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , and a special 'hit' version which assumes a d20 is to be rolled 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="hit" ERROR: 
               <code>
@@ -174,7 +176,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              (and rolls advantage on shift-click, disadvantage on alt-click). There's also 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="damage" ERROR: 
               <code>
@@ -184,7 +186,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              which will roll critical hits on shift-click and half damage (rounding down) on alt-click, and 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="d20" ERROR: 
               <code>
@@ -194,7 +196,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="scaledice" ERROR: 
               <code>
@@ -204,7 +206,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              for each level beyond 2nd), for when a spell effect scales at higher levels. 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="ability" ERROR: 
               <code>
@@ -214,7 +216,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="savingThrow" ERROR: 
               <code>
@@ -224,7 +226,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , and 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="skillCheck" ERROR: 
               <code>
@@ -239,7 +241,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             Chance tags; similar to dice roller tags, but output success/failure. Similar syntax as dice tags: 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="chance" ERROR: 
               <code>
@@ -249,7 +251,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="chance" ERROR: 
               <code>
@@ -259,7 +261,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , and 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="chance" ERROR: 
               <code>
@@ -274,7 +276,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             Recharge tags; output success/failure for ability recharge. {@recharge} in an ability title for '(Recharge 6)', 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="recharge" ERROR: 
               <code>
@@ -289,7 +291,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             Skill and sense tags; 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="skill" ERROR: 
               <code>
@@ -299,7 +301,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             /
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="skill" ERROR: 
               <code>
@@ -309,7 +311,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              (case sensitive) and 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="sense" ERROR: 
               <code>
@@ -319,7 +321,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             /
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="sense" ERROR: 
               <code>
@@ -334,7 +336,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             Footnote tags; allows a footnote to be embedded 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="footnote" ERROR: 
               <code>
@@ -344,7 +346,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , with 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="footnote" ERROR: 
               <code>
@@ -359,7 +361,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <p>
             The homebrew tag; can show 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="homebrew" ERROR: 
               <code>
@@ -369,7 +371,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
             , 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="homebrew" ERROR: 
               <code>
@@ -379,7 +381,7 @@ exports[`Renderer > matches snapshot 1`] = `
             </span>
              or 
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="homebrew" ERROR: 
               <code>
@@ -395,12 +397,14 @@ exports[`Renderer > matches snapshot 1`] = `
             Content tags:
           </p>
         </li>
-        <ul>
+        <ul
+          class="_list_1tl18_15"
+        >
           <li>
             <p>
               Spells: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="spell" ERROR: 
                 <code>
@@ -410,7 +414,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="spell" ERROR: 
                 <code>
@@ -420,7 +424,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="spell" ERROR: 
                 <code>
@@ -435,7 +439,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Items: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="item" ERROR: 
                 <code>
@@ -445,7 +449,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="item" ERROR: 
                 <code>
@@ -455,7 +459,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="item" ERROR: 
                 <code>
@@ -470,7 +474,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Creatures: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="creature" ERROR: 
                 <code>
@@ -480,7 +484,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes MM by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="creature" ERROR: 
                 <code>
@@ -490,7 +494,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="creature" ERROR: 
                 <code>
@@ -505,7 +509,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Backgrounds: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="background" ERROR: 
                 <code>
@@ -515,7 +519,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="background" ERROR: 
                 <code>
@@ -525,7 +529,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="background" ERROR: 
                 <code>
@@ -540,7 +544,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Races: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="race" ERROR: 
                 <code>
@@ -550,7 +554,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="race" ERROR: 
                 <code>
@@ -560,7 +564,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="race" ERROR: 
                 <code>
@@ -575,7 +579,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Invocations and Other Optional Features: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="optfeature" ERROR: 
                 <code>
@@ -585,7 +589,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="optfeature" ERROR: 
                 <code>
@@ -595,7 +599,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="optfeature" ERROR: 
                 <code>
@@ -610,7 +614,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Classes: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="class" ERROR: 
                 <code>
@@ -620,7 +624,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="class" ERROR: 
                 <code>
@@ -630,7 +634,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="class" ERROR: 
                 <code>
@@ -640,7 +644,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="class" ERROR: 
                 <code>
@@ -650,7 +654,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                with another pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="class" ERROR: 
                 <code>
@@ -665,7 +669,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Class Features: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="classFeature" ERROR: 
                 <code>
@@ -675,7 +679,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="classFeature" ERROR: 
                 <code>
@@ -685,7 +689,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="classFeature" ERROR: 
                 <code>
@@ -695,7 +699,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="classFeature" ERROR: 
                 <code>
@@ -710,7 +714,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Subclass Features: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="subclassFeature" ERROR: 
                 <code>
@@ -720,7 +724,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="subclassFeature" ERROR: 
                 <code>
@@ -730,7 +734,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="subclassFeature" ERROR: 
                 <code>
@@ -740,7 +744,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="subclassFeature" ERROR: 
                 <code>
@@ -750,7 +754,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
               , 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="subclassFeature" ERROR: 
                 <code>
@@ -765,7 +769,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Conditions: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="condition" ERROR: 
                 <code>
@@ -775,7 +779,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="condition" ERROR: 
                 <code>
@@ -785,7 +789,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe (not that it's ever useful), 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="condition" ERROR: 
                 <code>
@@ -800,7 +804,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Diseases: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="disease" ERROR: 
                 <code>
@@ -810,7 +814,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="disease" ERROR: 
                 <code>
@@ -820,7 +824,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="disease" ERROR: 
                 <code>
@@ -835,7 +839,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Other Rewards: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="reward" ERROR: 
                 <code>
@@ -845,7 +849,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="reward" ERROR: 
                 <code>
@@ -855,7 +859,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="reward" ERROR: 
                 <code>
@@ -870,7 +874,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Feats: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="feat" ERROR: 
                 <code>
@@ -880,7 +884,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="feat" ERROR: 
                 <code>
@@ -890,7 +894,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="feat" ERROR: 
                 <code>
@@ -905,7 +909,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Psionics: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="psionic" ERROR: 
                 <code>
@@ -915,7 +919,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes UATheMysticClass by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="psionic" ERROR: 
                 <code>
@@ -925,7 +929,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="psionic" ERROR: 
                 <code>
@@ -940,7 +944,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Objects: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="object" ERROR: 
                 <code>
@@ -950,7 +954,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="object" ERROR: 
                 <code>
@@ -960,7 +964,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="object" ERROR: 
                 <code>
@@ -975,7 +979,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Boons: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="boon" ERROR: 
                 <code>
@@ -985,7 +989,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes MTF by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="boon" ERROR: 
                 <code>
@@ -995,7 +999,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="boon" ERROR: 
                 <code>
@@ -1010,7 +1014,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Cults: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="cult" ERROR: 
                 <code>
@@ -1020,7 +1024,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes MTF by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="cult" ERROR: 
                 <code>
@@ -1030,7 +1034,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="cult" ERROR: 
                 <code>
@@ -1045,7 +1049,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Traps: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="trap" ERROR: 
                 <code>
@@ -1055,7 +1059,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="trap" ERROR: 
                 <code>
@@ -1065,7 +1069,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="trap" ERROR: 
                 <code>
@@ -1080,7 +1084,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Hazards: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="hazard" ERROR: 
                 <code>
@@ -1090,7 +1094,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="hazard" ERROR: 
                 <code>
@@ -1100,7 +1104,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="hazard" ERROR: 
                 <code>
@@ -1115,7 +1119,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Deities: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="deity" ERROR: 
                 <code>
@@ -1125,7 +1129,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB Forgotten Realms pantheon by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="deity" ERROR: 
                 <code>
@@ -1135,7 +1139,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have pantheons added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="deity" ERROR: 
                 <code>
@@ -1145,7 +1149,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with another pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="deity" ERROR: 
                 <code>
@@ -1160,7 +1164,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Variant rules: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="variantrule" ERROR: 
                 <code>
@@ -1170,7 +1174,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="variantrule" ERROR: 
                 <code>
@@ -1180,7 +1184,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="variantrule" ERROR: 
                 <code>
@@ -1195,7 +1199,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Vehicles: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="vehicle" ERROR: 
                 <code>
@@ -1205,7 +1209,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes GoS by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="vehicle" ERROR: 
                 <code>
@@ -1215,7 +1219,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="vehicle" ERROR: 
                 <code>
@@ -1230,7 +1234,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Vehicle upgrades: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="vehupgrade" ERROR: 
                 <code>
@@ -1240,7 +1244,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes GoS by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="vehicle" ERROR: 
                 <code>
@@ -1250,7 +1254,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="vehicle" ERROR: 
                 <code>
@@ -1265,7 +1269,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Tables: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="table" ERROR: 
                 <code>
@@ -1275,7 +1279,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes DMG by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="table" ERROR: 
                 <code>
@@ -1285,7 +1289,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="table" ERROR: 
                 <code>
@@ -1300,7 +1304,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Actions: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="action" ERROR: 
                 <code>
@@ -1310,7 +1314,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="action" ERROR: 
                 <code>
@@ -1320,7 +1324,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="action" ERROR: 
                 <code>
@@ -1335,7 +1339,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Languages: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="language" ERROR: 
                 <code>
@@ -1345,7 +1349,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes PHB by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="language" ERROR: 
                 <code>
@@ -1355,7 +1359,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="language" ERROR: 
                 <code>
@@ -1370,7 +1374,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Other Character Creation Options: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="charoption" ERROR: 
                 <code>
@@ -1380,7 +1384,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes MOT by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="charoption" ERROR: 
                 <code>
@@ -1390,7 +1394,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="charoption" ERROR: 
                 <code>
@@ -1405,7 +1409,7 @@ exports[`Renderer > matches snapshot 1`] = `
             <p>
               Recipes: 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="recipe" ERROR: 
                 <code>
@@ -1415,7 +1419,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                assumes Heroes' Feast by default, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="recipe" ERROR: 
                 <code>
@@ -1425,7 +1429,7 @@ exports[`Renderer > matches snapshot 1`] = `
               </span>
                can have sources added with a pipe, 
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN tag="recipe" ERROR: 
                 <code>
@@ -1439,7 +1443,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </ul>
         <li>
           <div
-            class="_inset_59yon_14"
+            class="_inset_1tl18_24"
           >
             <h4>
               Filter Tag
@@ -1577,7 +1581,7 @@ exports[`Renderer > matches snapshot 1`] = `
                  where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.
               </p>
               <span
-                class="_error_59yon_20"
+                class="_error_1tl18_30"
               >
                 UNKNOWN type=entries ERROR: 
                 <code>
@@ -1590,7 +1594,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </li>
         <li>
           <div
-            class="_inset_59yon_14"
+            class="_inset_1tl18_24"
           >
             <h4>
               Area Tags and IDs
@@ -1607,7 +1611,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </li>
         <li>
           <div
-            class="_inset_59yon_14"
+            class="_inset_1tl18_24"
           >
             <h4>
               Book/Reference Tags
@@ -1616,12 +1620,14 @@ exports[`Renderer > matches snapshot 1`] = `
               <p>
                 The following tags can be used to link specific sections of adventures/books. Note that chapters and headers are indexed from zero.
               </p>
-              <ul>
+              <ul
+                class="_list_1tl18_15"
+              >
                 <li>
                   <p>
                     Adventure tags: link to an adventure 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="adventure" ERROR: 
                       <code>
@@ -1631,7 +1637,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; a chapter in an adventure 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="adventure" ERROR: 
                       <code>
@@ -1641,7 +1647,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; a heading in a chapter in an adventure 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="adventure" ERROR: 
                       <code>
@@ -1651,7 +1657,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; or the Nth heading of a given name in a chapter in an adventure 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="adventure" ERROR: 
                       <code>
@@ -1665,7 +1671,7 @@ exports[`Renderer > matches snapshot 1`] = `
                   <p>
                     Book tags: link to a book 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="book" ERROR: 
                       <code>
@@ -1675,7 +1681,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; a chapter in a book 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="book" ERROR: 
                       <code>
@@ -1685,7 +1691,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; a heading in a chapter in a book 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="book" ERROR: 
                       <code>
@@ -1695,7 +1701,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; or the Nth heading of a given name in a chapter in a book 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="book" ERROR: 
                       <code>
@@ -1714,7 +1720,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </code>
                     : 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="quickref" ERROR: 
                       <code>
@@ -1724,7 +1730,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="quickref" ERROR: 
                       <code>
@@ -1734,7 +1740,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="quickref" ERROR: 
                       <code>
@@ -1744,7 +1750,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="quickref" ERROR: 
                       <code>
@@ -1754,7 +1760,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="quickref" ERROR: 
                       <code>
@@ -1771,7 +1777,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </li>
         <li>
           <div
-            class="_inset_59yon_14"
+            class="_inset_1tl18_24"
           >
             <h4>
               Other Tags
@@ -1780,12 +1786,14 @@ exports[`Renderer > matches snapshot 1`] = `
               <p>
                 Links:
               </p>
-              <ul>
+              <ul
+                class="_list_1tl18_15"
+              >
                 <li>
                   <p>
                     Internal links: 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="5etools" ERROR: 
                       <code>
@@ -1819,12 +1827,14 @@ exports[`Renderer > matches snapshot 1`] = `
               <p>
                 Page specific/other tags:
               </p>
-              <ul>
+              <ul
+                class="_list_1tl18_15"
+              >
                 <li>
                   <p>
                     Bestiary 'attack' tags: 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1834,7 +1844,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1844,7 +1854,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1854,7 +1864,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1864,7 +1874,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1874,7 +1884,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1884,7 +1894,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1894,7 +1904,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     ; (homebrew only) 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1904,7 +1914,7 @@ exports[`Renderer > matches snapshot 1`] = `
                     </span>
                     , 
                     <span
-                      class="_error_59yon_20"
+                      class="_error_1tl18_30"
                     >
                       UNKNOWN tag="atk" ERROR: 
                       <code>
@@ -1919,7 +1929,7 @@ exports[`Renderer > matches snapshot 1`] = `
               <p>
                 Homebrew loading tags: 
                 <span
-                  class="_error_59yon_20"
+                  class="_error_1tl18_30"
                 >
                   UNKNOWN tag="loader" ERROR: 
                   <code>
@@ -1940,7 +1950,7 @@ exports[`Renderer > matches snapshot 1`] = `
           <i>
             
             <span
-              class="_error_59yon_20"
+              class="_error_1tl18_30"
             >
               UNKNOWN tag="spell" ERROR: 
               <code>
@@ -1955,7 +1965,7 @@ exports[`Renderer > matches snapshot 1`] = `
         , although there are often better ways to get the combination of bold and italic that you're probably going to use this for; consider using one of the properly typed objects below (such as level 2 headers).
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=entries ERROR: 
         <code>
@@ -1964,7 +1974,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=entries ERROR: 
         <code>
@@ -1973,7 +1983,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=inline ERROR: 
         <code>
@@ -1982,7 +1992,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=inlineBlock ERROR: 
         <code>
@@ -1991,7 +2001,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=options ERROR: 
         <code>
@@ -2000,7 +2010,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=table ERROR: 
         <code>
@@ -2012,7 +2022,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Rollable tables can be made like so (note the 'pad' to format single digit numbers e.g. '01' for tables with &gt;10 rows):
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=table ERROR: 
         <code>
@@ -2020,7 +2030,9 @@ exports[`Renderer > matches snapshot 1`] = `
         </code>
         
       </span>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <p>
             A basic list of items
@@ -2031,7 +2043,9 @@ exports[`Renderer > matches snapshot 1`] = `
             As usual, nested entries work
           </p>
         </li>
-        <ul>
+        <ul
+          class="_list_1tl18_15"
+        >
           <li>
             <p>
               Such as a nested list
@@ -2040,7 +2054,8 @@ exports[`Renderer > matches snapshot 1`] = `
         </ul>
       </ul>
       <ul
-        columns="3"
+        class="_list_1tl18_15 _column_1tl18_15"
+        style="column-count: 3;"
       >
         <li>
           <p>
@@ -2066,7 +2081,9 @@ exports[`Renderer > matches snapshot 1`] = `
       <p>
         There's also:
       </p>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <p>
             A list of items without bullets
@@ -2078,7 +2095,9 @@ exports[`Renderer > matches snapshot 1`] = `
           </p>
         </li>
       </ul>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <p>
             A hanging items list
@@ -2090,10 +2109,12 @@ exports[`Renderer > matches snapshot 1`] = `
           </p>
         </li>
       </ul>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <span
-            class="_error_59yon_20"
+            class="_error_1tl18_30"
           >
             UNKNOWN type=item ERROR: 
             <code>
@@ -2108,10 +2129,12 @@ exports[`Renderer > matches snapshot 1`] = `
           </p>
         </li>
       </ul>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <span
-            class="_error_59yon_20"
+            class="_error_1tl18_30"
           >
             UNKNOWN type=item ERROR: 
             <code>
@@ -2122,7 +2145,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </li>
         <li>
           <span
-            class="_error_59yon_20"
+            class="_error_1tl18_30"
           >
             UNKNOWN type=itemSub ERROR: 
             <code>
@@ -2133,7 +2156,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </li>
         <li>
           <span
-            class="_error_59yon_20"
+            class="_error_1tl18_30"
           >
             UNKNOWN type=item ERROR: 
             <code>
@@ -2143,7 +2166,9 @@ exports[`Renderer > matches snapshot 1`] = `
           </span>
         </li>
       </ul>
-      <ul>
+      <ul
+        class="_list_1tl18_15"
+      >
         <li>
           <p>
             A decimal-numbered list. Alternatively, 'list-lower-roman' can be used for lowercase Roman numerals.
@@ -2159,7 +2184,7 @@ exports[`Renderer > matches snapshot 1`] = `
         The 'bonus' type just sticks a + in front of things
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=bonus ERROR: 
         <code>
@@ -2174,7 +2199,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Similar story with 'bonusSpeed' type (these 'bonus' flavors are mainly used in the class tables)
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=bonusSpeed ERROR: 
         <code>
@@ -2186,7 +2211,7 @@ exports[`Renderer > matches snapshot 1`] = `
         The 'dice' type is rarely used, since the shorthand tag exists, but it looks like this:
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=dice ERROR: 
         <code>
@@ -2198,7 +2223,7 @@ exports[`Renderer > matches snapshot 1`] = `
         The 'abilityDc' type is more helpful:
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=abilityDc ERROR: 
         <code>
@@ -2210,7 +2235,7 @@ exports[`Renderer > matches snapshot 1`] = `
         As is the 'abilityAttackMod' type:
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=abilityAttackMod ERROR: 
         <code>
@@ -2222,7 +2247,7 @@ exports[`Renderer > matches snapshot 1`] = `
         There's also a generic version that allows more text customisation; 'abilityGeneric':
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=abilityGeneric ERROR: 
         <code>
@@ -2231,7 +2256,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=abilityGeneric ERROR: 
         <code>
@@ -2243,7 +2268,7 @@ exports[`Renderer > matches snapshot 1`] = `
         External links using 'link':
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=link ERROR: 
         <code>
@@ -2258,7 +2283,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Invocations/Other Optional Features:
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=optfeature ERROR: 
         <code>
@@ -2270,7 +2295,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Patrons:
       </p>
       <div
-        class="_inset_59yon_14"
+        class="_inset_1tl18_24"
       >
         <h4>
           Inset Title (Optional)
@@ -2282,7 +2307,7 @@ exports[`Renderer > matches snapshot 1`] = `
         </p>
       </div>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=insetReadaloud ERROR: 
         <code>
@@ -2291,7 +2316,7 @@ exports[`Renderer > matches snapshot 1`] = `
         
       </span>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=variant ERROR: 
         <code>
@@ -2303,7 +2328,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Images (similar to the structure of the 'link' type):
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=image ERROR: 
         <code>
@@ -2315,7 +2340,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Creatures; format based on Bestiary data, with added type (note that a proper Bestiary entry and a link to the entry is the preferred method of adding creatures, this functionality exists primarily for homebrew data):
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=dataCreature ERROR: 
         <code>
@@ -2327,7 +2352,7 @@ exports[`Renderer > matches snapshot 1`] = `
         Spells; as above:
       </p>
       <span
-        class="_error_59yon_20"
+        class="_error_1tl18_30"
       >
         UNKNOWN type=dataSpell ERROR: 
         <code>
