@@ -197,6 +197,7 @@ const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
 const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, (string | JSXElement)?];
 const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/;
+const unclosedTag = /{@[^}]*$/m;
 const firstWord = /\w+/;
 
 const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
@@ -292,6 +293,17 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
 
     if (isNestedTag.test(props.string)) {
       try {
+        if (unclosedTag.test(props.string)) {
+          return (
+            <p>
+              {props.string}{" "}
+              <RenderError
+                error={"unclosed tag"}
+                details={`this string contains nested tags, with an unclosed brace. It cannot safely be parsed. Try adding a "}" to the end?`}
+              />
+            </p>
+          );
+        }
         recursiveTagMatcher(components, props.string);
       } catch (e) {
         return (
