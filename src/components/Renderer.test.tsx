@@ -127,7 +127,7 @@ describe("Renderer", () => {
       `${"e".repeat(50)}{@underline ${`${"e i o u ".repeat(
         10
       )}{@b bold} `.repeat(5)}`,
-    ])("doesn't error when rendering unclosed tags", (str) => {
+    ])(`doesn't error when rendering unclosed tags "%s"`, (str) => {
       const { unmount, container } = render(() => <Renderer data={str} />);
       expect(container.querySelectorAll(`.${styles.error}`).length).toBe(0);
       unmount();
@@ -162,7 +162,7 @@ describe("Renderer", () => {
       "{@b bold {@i italic{ lol}} {@", // Cannot read properties of null (reading '0')
       "{@b bold {@i italic{lol}}{@", // Cannot read properties of null (reading '0')
       "{@b not} {@i lol {@b lmao}} {@ more text", // Maximum call stack size exceeded
-    ])("catches errors when parsing illegal strings", (str) => {
+    ])(`catches errors when parsing illegal string "%s"`, (str) => {
       const { unmount, queryByText } = render(() => <Renderer data={str} />);
       // there should be no error that reaches the error boundary
       expect(queryByText(/renderer caught an uncaught/)).toBeNull();
@@ -174,7 +174,7 @@ describe("Renderer", () => {
       nestedTags.push(`{@b bold {@i italic}${" ".repeat(i)}}`);
     }
     it.each(nestedTags)(
-      "renders nested tags correctly with arbitrary spaces",
+      `renders nested tags correctly with arbitrary spaces "%s"`,
       (str) => {
         const { unmount, getByText } = render(() => <Renderer data={str} />);
         expect((getByText(/bold/) as HTMLElement).tagName).toBe("B");
