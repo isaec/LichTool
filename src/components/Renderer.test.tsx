@@ -116,23 +116,17 @@ describe("Renderer", () => {
       `);
     unmount();
   });
-  it(`doesn't "crash" when rendering unclosed tags`, () => {
-    const { unmount, container } = render(() => (
-      <Renderer data="weee {@b bold} {@b never ever closing!" />
-    ));
-    expect(
-      container.querySelectorAll(`.${styles.Renderer} > *`)
-    ).toMatchInlineSnapshot(`
-      NodeList [
-        <p>
-          weee 
-          <b>
-            bold
-          </b>
-           {@b never ever closing!
-        </p>,
-      ]
-    `);
+  it.each([
+    "waa {@b bold} {@b never ever closing!",
+    "waa {@b never ever closing! {@b bold}",
+    `${"e".repeat(50)}{@Open ${"e".repeat(50)}`,
+    `${"e".repeat(50)}{@Open ${`${"e i o u ".repeat(10)}{@b bold} `.repeat(5)}`,
+
+    // "(This is a section heading. {@This is mainly used in Adventures, for the header of entire chapters. The root entry does {@b not} need have the 'section' type, 'entries' is generally used instead. The 'section' produces a {@bold level -1} header; the 'basement' level, if you will.)",
+  ])("doesn't error when rendering unclosed tags", (str) => {
+    const { unmount, container } = render(() => <Renderer data={str} />);
+    expect(container.querySelectorAll(`.${styles.error}`).length).toBe(0);
+    unmount();
   });
   it("renders nested tags", () => {
     const { unmount, container } = render(() => (
