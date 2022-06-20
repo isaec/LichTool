@@ -25,3 +25,67 @@ exports[`entryTypes > rendering {
   </figure>
 </div>
 `;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "e"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      Anon
+      
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place' } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "e"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite>
+        place
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place' } matches snapshot 2`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "e
+      </p>
+      <p>
+        i
+      </p>
+      <p>
+        o"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite>
+        place
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;

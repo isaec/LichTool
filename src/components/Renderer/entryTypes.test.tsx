@@ -22,6 +22,21 @@ describe("entryTypes", () => {
       by: "Anon",
       from: "Archive of Lost Chats",
     },
+    {
+      type: "quote",
+      entries: ["e"],
+      by: "Anon",
+    },
+    {
+      type: "quote",
+      entries: ["e"],
+      from: "place",
+    },
+    {
+      type: "quote",
+      entries: ["e", "i", "o"],
+      from: "place",
+    },
   ];
   it.each(tests)(`rendering %s matches snapshot`, (data) => {
     const { unmount, container } = render(() => (
