@@ -158,15 +158,16 @@ describe("Renderer", () => {
       unmount();
     });
 
-    it.each(["{@b bold {@i italic{ lol}} {@", "{@b bold {@i italic{lol}}{@"])(
-      "catches errors when parsing illegal strings",
-      (str) => {
-        const { unmount, queryByText } = render(() => <Renderer data={str} />);
-        // there should be no error that reaches the error boundary
-        expect(queryByText(/renderer caught an uncaught/)).toBeNull();
-        unmount();
-      }
-    );
+    it.each([
+      "{@b bold {@i italic{ lol}} {@", // Cannot read properties of null (reading '0')
+      "{@b bold {@i italic{lol}}{@", // Cannot read properties of null (reading '0')
+      "{@b not} {@i lol {@b lmao}} {@ more text", // Maximum call stack size exceeded
+    ])("catches errors when parsing illegal strings", (str) => {
+      const { unmount, queryByText } = render(() => <Renderer data={str} />);
+      // there should be no error that reaches the error boundary
+      expect(queryByText(/renderer caught an uncaught/)).toBeNull();
+      unmount();
+    });
 
     const nestedTags = [];
     for (let i = 0; i <= 4; i++) {
