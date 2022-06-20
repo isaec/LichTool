@@ -1,0 +1,63 @@
+// Vitest Snapshot v1
+
+exports[`tags > {@bold bold string!} matches snapshot 1`] = `
+<div>
+  <b>
+    bold string!
+  </b>
+</div>
+`;
+
+exports[`tags > {@code code string!} matches snapshot 1`] = `
+<div>
+  <code>
+    code string!
+  </code>
+</div>
+`;
+
+exports[`tags > {@color test|ffffff} matches snapshot 1`] = `
+<div>
+  <span
+    style="color: rgb(255, 255, 255);"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`tags > {@italic italic string!} matches snapshot 1`] = `
+<div>
+  <i>
+    italic string!
+  </i>
+</div>
+`;
+
+exports[`tags > {@note note string!} matches snapshot 1`] = `
+<div>
+  <i
+    class="note"
+  >
+    note string!
+  </i>
+</div>
+`;
+
+exports[`tags > {@strike strike string!} matches snapshot 1`] = `
+<div>
+  <s>
+    strike string!
+  </s>
+</div>
+`;
+
+exports[`tags > {@underline underline string!} matches snapshot 1`] = `
+<div>
+  <span
+    class="underline"
+  >
+    underline string!
+  </span>
+</div>
+`;
