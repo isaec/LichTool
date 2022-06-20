@@ -1,6 +1,9 @@
 @use "../config" as *;
 
 .Renderer {
+  $list-pad-left: $size-10;
+  $li-flex-min-width: $size-20;
+
   overflow-y: scroll;
   & * {
     margin: 0px;
@@ -13,10 +16,18 @@
   & ul {
     margin-top: $size-2;
     margin-bottom: $size-2;
+    padding-left: $list-pad-left;
   }
 
   // element styles
-  & .list {
+  & ul.list {
+    @for $i from 1 through 10 {
+      &[columns="#{$i}"] {
+        display: grid;
+        padding-left: 0px;
+        grid-template-columns: repeat($i, minmax($li-flex-min-width, 1fr));
+      }
+    }
   }
 
   & .inset {
