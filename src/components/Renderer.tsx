@@ -3,10 +3,12 @@ import {
   Component,
   createMemo,
   ErrorBoundary,
+  FlowComponent,
   For,
   JSX,
   JSXElement,
   Match,
+  mergeProps,
   Show,
   Switch,
 } from "solid-js";
@@ -24,8 +26,14 @@ type ListData = {
   name?: string;
 };
 type InsetData = { type: "inset"; name: string; entries: Data };
+type QuoteData = {
+  type: "quote";
+  entries: DataGroup;
+  by?: string;
+  from?: string;
+};
 
-type DataNode = SectionData | ListData | InsetData;
+type DataNode = SectionData | ListData | InsetData | QuoteData;
 const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
 type DataGroup = Array<DataNode | string>;
@@ -127,6 +135,57 @@ const entryTypes = new Map(
         {<DataRenderer data={props.data.entries} />}
       </div>
     ),
+    quote: (props: { data: QuoteData }) => {
+      const entries = createMemo(() => {
+        // if we only have one string, quote it
+        if (
+          props.data.entries.length === 1 &&
+          typeof props.data.entries[0] === "string"
+        ) {
+          return [`"${props.data.entries}"`];
+        }
+
+        // we have many things, but some elements may be strings
+        const arr = props.data.entries.slice(1, -1);
+
+        if (typeof props.data.entries[0] === "string") {
+          arr.unshift(`"${props.data.entries[0]}`);
+        } else {
+          arr.unshift(`"`);
+          arr.unshift(props.data.entries[0]); // also add the missing non string element
+        }
+
+        if (
+          typeof props.data.entries[props.data.entries.length - 1] === "string"
+        ) {
+          arr.push(`${props.data.entries[props.data.entries.length - 1]}"`);
+        } else {
+          arr.push(props.data.entries[props.data.entries.length - 1]); // add the missing non string element
+          arr.push(`"`);
+        }
+
+        return arr;
+      });
+      return (
+        <figure>
+          <DataGroupRenderer group={entries()} wrapper={"blockquote"} />
+          <Show when={typeof (props.data.by ?? props.data.from) !== undefined}>
+            <figcaption>
+              — {props.data.by}
+              <Show
+                when={
+                  typeof props.data.by === "string" &&
+                  typeof props.data.from === "string"
+                }
+              >
+                ,{" "}
+              </Show>
+              <cite>{props.data.from}</cite>
+            </figcaption>
+          </Show>
+        </figure>
+      );
+    },
   })
 );
 
@@ -348,11 +407,21 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
   return <p>{memoizedComponents()}</p>;
 };
 
-const DataGroupRenderer: Component<{ group: DataGroup }> = (props) => (
-  <p>
-    <For each={props.group}>{(data) => <DataRenderer data={data} />}</For>
-  </p>
-);
+const DataGroupRenderer: Component<{
+  group: DataGroup;
+  wrapper?: keyof JSX.IntrinsicElements | FlowComponent;
+}> = (props) => {
+  const merged = mergeProps({ wrapper: "p" }, props);
+
+  return (
+    <Dynamic
+      component={merged.wrapper}
+      children={
+        <For each={props.group}>{(data) => <DataRenderer data={data} />}</For>
+      }
+    />
+  );
+};
 
 const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
   const Entry = createMemo(() => entryTypes.get(props.data.type));

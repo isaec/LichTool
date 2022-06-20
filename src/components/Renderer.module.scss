@@ -39,6 +39,15 @@
       list-style-type: none;
     }
   }
+  & figure {
+    & > blockquote {
+      font-style: italic;
+    }
+    & > figcaption {
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
 
   & .inset {
     background-color: $color-grey-800;

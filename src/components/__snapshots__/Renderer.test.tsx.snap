@@ -20,15 +20,22 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         </b>
          header; the 'basement' level, if you will.)
       </p>
-      <span
-        class="error"
-      >
-        UNKNOWN type=quote ERROR: 
-        <code>
-          {"type":"quote","entries":["Look, don't quote me on this, but"],"by":"Anon","from":"Archive of Lost Chats"}
-        </code>
-        
-      </span>
+      <figure>
+        <blockquote>
+          <p>
+            "Look, don't quote me on this, but"
+          </p>
+        </blockquote>
+        <figcaption>
+          — 
+          Anon
+          ,
+           
+          <cite>
+            Archive of Lost Chats
+          </cite>
+        </figcaption>
+      </figure>
       <p>
         This is a demo of the JSON format, and how it (usually) gets rendered. You can edit this text, and it will reset on refresh.
       </p>
