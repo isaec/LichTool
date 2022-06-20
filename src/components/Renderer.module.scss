@@ -5,6 +5,8 @@
   & * {
     margin: 0px;
   }
+
+  // element spacing
   & p {
     margin-bottom: $size-1;
   }
@@ -12,21 +14,25 @@
     margin-top: $size-2;
     margin-bottom: $size-2;
   }
-}
 
-.inset {
-  background-color: $color-grey-800;
-}
+  // element styles
+  & .list {
+  }
 
-.underline {
-  text-decoration: underline;
-}
+  & .inset {
+    background-color: $color-grey-800;
+  }
 
-.error {
-  background-color: dim($color-red-700);
-  color: $color-red-300;
-}
+  & .underline {
+    text-decoration: underline;
+  }
 
-i.note {
-  color: $color-grey-400;
+  & .error {
+    background-color: dim($color-red-700);
+    color: $color-red-300;
+  }
+
+  & i.note {
+    color: $color-grey-400;
+  }
 }

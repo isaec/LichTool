@@ -15,7 +15,11 @@ import { Dynamic } from "solid-js/web";
 import styles from "./Renderer.module.scss";
 
 type SectionData = { type: "section"; name: string; entries: DataGroup };
-type ListData = { type: "list"; items: Data[] };
+
+type GenericListData = { type: "list"; items: Data[] };
+type WrappingListData = GenericListData & { columns: number };
+type ListData = GenericListData | WrappingListData;
+
 type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
@@ -68,7 +72,8 @@ const entryTypes = new Map(
       </>
     ),
     list: (props: { data: ListData }) => (
-      <ul>
+      // @ts-ignore no other good way to apply columns attribute
+      <ul class={styles.list} columns={props.data.columns}>
         <For each={props.data.items}>
           {(item) => (
             <ListItem condition={isDataNode(item) && item.type === "list"}>
