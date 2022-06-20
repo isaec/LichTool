@@ -26,8 +26,11 @@
       column-count: 1;
       column-width: $li-flex-min-width;
       padding-left: 0px;
-      & > li {
+      &,
+      & * {
         break-inside: avoid-column;
+      }
+      & > li {
         margin-left: $list-pad-left;
       }
     }
