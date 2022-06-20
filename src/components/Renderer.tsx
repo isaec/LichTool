@@ -15,11 +15,12 @@ import { Dynamic } from "solid-js/web";
 import styles from "./Renderer.module.scss";
 
 type SectionData = { type: "section"; name: string; entries: DataGroup };
+const listStyles = new Set(["list-hang", "list-no-bullets"]);
 type ListData = {
   type: "list";
   items: Data[];
   columns?: number;
-  style?: "list-no-bullets" | "list-hang";
+  style?: string;
 };
 type InsetData = { type: "inset"; name: string; entries: Data };
 
@@ -72,30 +73,45 @@ const entryTypes = new Map(
         <DataGroupRenderer group={props.data.entries} />
       </>
     ),
-    list: (props: { data: ListData }) => (
-      // @ts-ignore no other good way to apply columns attribute
-      <ul
-        classList={{
-          [styles.list]: true,
-          [styles.column]: typeof props.data.columns === "number",
-        }}
-        style={
-          typeof props.data.columns === "number"
-            ? {
-                "column-count": props.data.columns,
-              }
-            : undefined
-        }
-      >
-        <For each={props.data.items}>
-          {(item) => (
-            <ListItem condition={isDataNode(item) && item.type === "list"}>
-              <DataRenderer data={item} />
-            </ListItem>
-          )}
-        </For>
-      </ul>
-    ),
+    list: (props: { data: ListData }) => {
+      const classes = createMemo(() => {
+        // if there is no style, we don't need to give it a class
+        if (props.data.style === undefined) return "";
+        // if there is only one style, give it the appropriate class
+        if (listStyles.has(props.data.style)) return styles[props.data.style];
+
+        // otherwise, build up a string of each converted style
+        const classStack: Array<string> = [];
+        listStyles.forEach((style) => {
+          if (props.data.style!.includes(style)) classStack.push(styles[style]);
+        });
+        return classStack.join(" ");
+      });
+      return (
+        <ul
+          classList={{
+            [styles.list]: true,
+            [styles.column]: typeof props.data.columns === "number",
+            [classes()]: true,
+          }}
+          style={
+            typeof props.data.columns === "number"
+              ? {
+                  "column-count": props.data.columns,
+                }
+              : undefined
+          }
+        >
+          <For each={props.data.items}>
+            {(item) => (
+              <ListItem condition={isDataNode(item) && item.type === "list"}>
+                <DataRenderer data={item} />
+              </ListItem>
+            )}
+          </For>
+        </ul>
+      );
+    },
     inset: (props: { data: InsetData }) => (
       <div class={styles.inset}>
         <h4>{props.data.name}</h4>
