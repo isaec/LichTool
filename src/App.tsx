@@ -3,7 +3,7 @@ import { Component, createSignal } from "solid-js";
 import renderdemo from "./data/renderdemo.json";
 
 import styles from "./App.module.scss";
-import Renderer from "./components/Renderer";
+import Renderer from "./components/Renderer/Renderer";
 
 const App: Component = () => {
   const [data, setData] = createSignal(

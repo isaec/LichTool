@@ -26,5 +26,9 @@ export default defineConfig({
   },
   resolve: {
     conditions: ['development', 'browser'],
+    alias: [
+      {find: '@src', replacement: `${process.cwd()}/src`},
+      {find: '@components', replacement: `${process.cwd()}/src/components`}
+    ],
   }
 });
