@@ -150,6 +150,16 @@ describe("Renderer", () => {
     `);
     unmount();
   });
+  const nestedTags = [];
+  for (let i = 0; i <= 4; i++) {
+    nestedTags.push(`{@b bold {@i italic}${" ".repeat(i)}}`);
+  }
+  it.each(nestedTags)("renders nested tags correctly with spaces", (str) => {
+    const { unmount, getByText } = render(() => <Renderer data={str} />);
+    expect((getByText(/bold/) as HTMLElement).tagName).toBe("B");
+    expect((getByText(/italic/) as HTMLElement).tagName).toBe("I");
+    unmount();
+  });
   it("renders complex nesting of tags", () => {
     const { unmount, container, getByText } = render(() => (
       <Renderer data="some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold! {@underline underline {@italic italic}}}, bold}, more text ({@i italic})" />
