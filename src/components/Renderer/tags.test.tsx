@@ -14,11 +14,15 @@ vi.mock("./Renderer.module.scss", () => ({
 
 describe("tags", () => {
   const needPipe = new Set(["color", "link", "filter"]);
-  it.each(
-    [...tagMap.keys()]
+  it.each([
+    ["color", "test|ffffff"],
+    ["color", "test|f00"],
+    ["color", "test|illegal-color"],
+    ["color", "test|fff|bonus-pipe"],
+    ...[...tagMap.keys()]
       .filter((tag) => !needPipe.has(tag))
-      .map((key) => [key, `${key} string!`])
-  )(`{@%s %s} matches snapshot`, (tag, children) => {
+      .map((key) => [key, `${key} string!`]),
+  ])(`{@%s %s} matches snapshot`, (tag, children) => {
     const { unmount, container } = render(() => (
       <Dynamic component={tagMap.get(tag)} children={children} />
     ));
@@ -26,16 +30,4 @@ describe("tags", () => {
     expect(container).toMatchSnapshot();
     unmount();
   });
-
-  it.each([["color", "test|ffffff"]])(
-    `{@%s %s} matches snapshot`,
-    (tag, children) => {
-      const { unmount, container } = render(() => (
-        <Dynamic component={tagMap.get(tag)} children={children} />
-      ));
-
-      expect(container).toMatchSnapshot();
-      unmount();
-    }
-  );
 });

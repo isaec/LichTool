@@ -16,10 +16,40 @@ exports[`tags > {@code code string!} matches snapshot 1`] = `
 </div>
 `;
 
+exports[`tags > {@color test|f00} matches snapshot 1`] = `
+<div>
+  <span
+    style="color: rgb(255, 0, 0);"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`tags > {@color test|fff|bonus-pipe} matches snapshot 1`] = `
+<div>
+  <span
+    style="color: rgb(255, 255, 255);"
+  >
+    test
+  </span>
+</div>
+`;
+
 exports[`tags > {@color test|ffffff} matches snapshot 1`] = `
 <div>
   <span
     style="color: rgb(255, 255, 255);"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`tags > {@color test|illegal-color} matches snapshot 1`] = `
+<div>
+  <span
+    style=""
   >
     test
   </span>
