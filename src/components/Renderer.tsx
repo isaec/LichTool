@@ -291,7 +291,18 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
     const components: JSXElement[] = [];
 
     if (isNestedTag.test(props.string)) {
-      recursiveTagMatcher(components, props.string);
+      try {
+        recursiveTagMatcher(components, props.string);
+      } catch (e) {
+        return (
+          <RenderError
+            error={(e as Error).name}
+            details={`${(e as Error).message} was thrown on "${
+              props.string
+            }" by recursiveTagMatcher`}
+          />
+        );
+      }
     } else {
       // non nested regex based parsing
       const parseIterator = props.string.matchAll(

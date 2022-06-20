@@ -158,7 +158,7 @@ describe("Renderer", () => {
       unmount();
     });
 
-    it.each(["{@b bold {@i italic{ lol}} {@"])(
+    it.each(["{@b bold {@i italic{ lol}} {@", "{@b bold {@i italic{lol}}{@"])(
       "catches errors when parsing illegal strings",
       (str) => {
         const { unmount, queryByText } = render(() => <Renderer data={str} />);
