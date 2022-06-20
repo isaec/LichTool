@@ -56,11 +56,71 @@ exports[`tags > {@color test|illegal-color} matches snapshot 1`] = `
 </div>
 `;
 
+exports[`tags > {@filter Bard cantrips and first-level spells|spells|level=0;1|class=bard} matches snapshot 1`] = `
+<div>
+  <a
+    href="#"
+    title="spells|level=0;1|class=bard"
+  >
+    UNSUPPORTED 
+    Bard cantrips and first-level spells
+  </a>
+</div>
+`;
+
+exports[`tags > {@filter Races that have a bonus to Intelligence|races|Ability Bonus (Including Subrace)=Intelligence +any} matches snapshot 1`] = `
+<div>
+  <a
+    href="#"
+    title="races|Ability Bonus (Including Subrace)=Intelligence +any"
+  >
+    UNSUPPORTED 
+    Races that have a bonus to Intelligence
+  </a>
+</div>
+`;
+
 exports[`tags > {@italic italic string!} matches snapshot 1`] = `
 <div>
   <i>
     italic string!
   </i>
+</div>
+`;
+
+exports[`tags > {@link example|https://example.com} matches snapshot 1`] = `
+<div>
+  <a
+    href="https://example.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    example
+  </a>
+</div>
+`;
+
+exports[`tags > {@link example} matches snapshot 1`] = `
+<div>
+  <a
+    href="example"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    example
+  </a>
+</div>
+`;
+
+exports[`tags > {@link https://example.com} matches snapshot 1`] = `
+<div>
+  <a
+    href="https://example.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    https://example.com
+  </a>
 </div>
 `;
 

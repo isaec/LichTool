@@ -19,6 +19,17 @@ describe("tags", () => {
     ["color", "test|f00"],
     ["color", "test|illegal-color"],
     ["color", "test|fff|bonus-pipe"],
+    ["link", "example"],
+    ["link", "https://example.com"],
+    ["link", "example|https://example.com"],
+    [
+      "filter",
+      "Races that have a bonus to Intelligence|races|Ability Bonus (Including Subrace)=Intelligence +any",
+    ],
+    [
+      "filter",
+      "Bard cantrips and first-level spells|spells|level=0;1|class=bard",
+    ],
     ...[...tagMap.keys()]
       .filter((tag) => !needPipe.has(tag))
       .map((key) => [key, `${key} string!`]),
