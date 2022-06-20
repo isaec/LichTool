@@ -15,21 +15,18 @@ import { Dynamic } from "solid-js/web";
 import styles from "./Renderer.module.scss";
 
 type SectionData = { type: "section"; name: string; entries: DataGroup };
-
-type GenericListData = { type: "list"; items: Data[] };
-type WrappingListData = GenericListData & { columns: number };
-const isWrappingListData = (
-  listData: GenericListData
-): listData is WrappingListData =>
-  typeof (listData as WrappingListData).columns === "number";
-type ListData = GenericListData | WrappingListData;
-
+type ListData = {
+  type: "list";
+  items: Data[];
+  columns?: number;
+  style?: "list-no-bullets" | "list-hang";
+};
 type InsetData = { type: "inset"; name: string; entries: Data };
 
 type DataNode = SectionData | ListData | InsetData;
 const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
-type DataGroup = (DataNode | string)[];
+type DataGroup = Array<DataNode | string>;
 type Data = string | DataNode | DataGroup;
 
 const RenderError: Component<{
@@ -80,10 +77,10 @@ const entryTypes = new Map(
       <ul
         classList={{
           [styles.list]: true,
-          [styles.column]: isWrappingListData(props.data),
+          [styles.column]: typeof props.data.columns === "number",
         }}
         style={
-          isWrappingListData(props.data)
+          typeof props.data.columns === "number"
             ? {
                 "column-count": props.data.columns,
               }
