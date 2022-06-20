@@ -35,13 +35,16 @@ const RenderError: Component<{
   error: string;
   details?: string;
   noErrorLabel?: boolean;
+  noColon?: boolean;
   clickable?: {
     label: string;
     onClick: () => unknown;
   };
 }> = (props) => (
   <span class={styles.error}>
-    {`${props.error}${!props.noErrorLabel ? " ERROR" : ""}: `}
+    {`${props.error}${!props.noErrorLabel ? " ERROR" : ""}${
+      props.noColon === true ? "" : ": "
+    }`}
     <code>{props.details ?? "no details provided"}</code>
     {props.clickable === undefined ? undefined : (
       <>
@@ -198,6 +201,7 @@ const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, (string | JSXElement)?];
 const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/;
 const unclosedTag = /{@[^}]*$/m;
+const unclosedTagGroup = /(.*?)({@\w*)([^}]*)$/m;
 const firstWord = /\w+/;
 
 const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {
@@ -294,9 +298,19 @@ const DataStringRenderer: Component<Readonly<{ string: string }>> = (props) => {
     if (isNestedTag.test(props.string)) {
       try {
         if (unclosedTag.test(props.string)) {
+          const [, prefix, unclosed, suffix] =
+            props.string.match(unclosedTagGroup)!;
           return (
             <p>
-              {props.string}{" "}
+              {prefix}
+              <RenderError
+                noErrorLabel
+                noColon
+                error={unclosed}
+                details={" <= unclosed tag"}
+              />
+              {suffix}
+              <br />
               <RenderError
                 error={"unclosed tag"}
                 details={`this string contains nested tags, with an unclosed brace. It cannot safely be parsed. Try adding a "}" to the end?`}
