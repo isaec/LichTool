@@ -100,7 +100,7 @@ describe("Renderer", () => {
           </s>
            
           <span
-            class="_underline_1tl18_27"
+            class="_underline_gweob_27"
           >
             underline
           </span>
@@ -173,7 +173,7 @@ describe("Renderer", () => {
               <s>
                 struck bold! 
                 <span
-                  class="_underline_1tl18_27"
+                  class="_underline_gweob_27"
                 >
                   underline 
                   <i>

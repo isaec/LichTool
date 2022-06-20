@@ -1,7 +1,7 @@
 @use "../config" as *;
 
 .Renderer {
-  $list-pad-left: $size-10;
+  $list-pad-left: $size-6;
   $li-flex-min-width: $size-40;
 
   overflow-y: scroll;
