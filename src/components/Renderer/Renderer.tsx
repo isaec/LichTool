@@ -13,31 +13,20 @@ import {
   Switch,
 } from "solid-js";
 import { Dynamic } from "solid-js/web";
+import parseData from "./parseData";
 
 import styles from "./Renderer.module.scss";
-
-type SectionData = { type: "section"; name: string; entries: DataGroup };
-const listStyles = new Set(["list-hang", "list-no-bullets"]);
-type ListData = {
-  type: "list";
-  items: Data[];
-  columns?: number;
-  style?: string;
-  name?: string;
-};
-type InsetData = { type: "inset"; name: string; entries: Data };
-type QuoteData = {
-  type: "quote";
-  entries: DataGroup;
-  by?: string;
-  from?: string;
-};
-
-type DataNode = SectionData | ListData | InsetData | QuoteData;
-const isDataNode = (data: Data | object): data is DataNode =>
-  typeof (data as DataNode).type === "string";
-type DataGroup = Array<DataNode | string>;
-type Data = string | DataNode | DataGroup;
+import {
+  Data,
+  DataGroup,
+  DataNode,
+  InsetData,
+  isDataNode,
+  ListData,
+  listStyles,
+  QuoteData,
+  SectionData,
+} from "./types";
 
 const RenderError: Component<{
   error: string;
@@ -456,27 +445,10 @@ const DataRenderer: Component<{ data: Data }> = (props) => (
   </Switch>
 );
 
-/** internal data parser, handling data in many format types */
-export const _parseData = (data: object | string): Data => {
-  if (typeof data === "string") {
-    try {
-      return JSON.parse(data);
-    } catch (e) {
-      // this will test if its a string unquoted, or actually failing validation
-      return JSON.parse(`"${data}"`);
-    }
-  }
-  if (isDataNode(data)) {
-    return data;
-  }
-
-  throw new Error("incomprehensible data - not a string or legal object");
-};
-
 const Renderer: Component<{ data: string | object }> = (props) => {
   const data = createMemo((): Data => {
     try {
-      return _parseData(props.data);
+      return parseData(props.data);
     } catch (e) {
       return {
         type: "section",
