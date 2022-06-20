@@ -1,0 +1,27 @@
+// Vitest Snapshot v1
+
+exports[`entryTypes > rendering {
+  type: 'quote',
+  entries: [Array],
+  by: 'Anon',
+  from: 'Archive of Lost Chats'
+} matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "Look, don't quote me on this, but"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      Anon
+      ,
+       
+      <cite>
+        Archive of Lost Chats
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;

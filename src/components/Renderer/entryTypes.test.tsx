@@ -4,6 +4,7 @@ import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
 import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
+import { DataNode } from "./types";
 
 vi.mock("./Renderer.module.scss", () => ({
   default: new Proxy(new Object(), {
@@ -14,9 +15,17 @@ vi.mock("./Renderer.module.scss", () => ({
 }));
 
 describe("entryTypes", () => {
-  it.each([["section", {}]])(`{@%s %s} matches snapshot`, (type, data) => {
+  const tests: Array<DataNode> = [
+    {
+      type: "quote",
+      entries: ["Look, don't quote me on this, but"],
+      by: "Anon",
+      from: "Archive of Lost Chats",
+    },
+  ];
+  it.each(tests)(`rendering %s matches snapshot`, (data) => {
     const { unmount, container } = render(() => (
-      <Dynamic component={entryTypes.get(type) as Component} children={data} />
+      <Dynamic component={entryTypes.get(data.type) as any} data={data} />
     ));
 
     expect(container).toMatchSnapshot();
