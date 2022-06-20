@@ -26,6 +26,60 @@ exports[`entryTypes > rendering {
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] } matches snapshot 1`] = `
+<div>
+  <div
+    class="inset"
+  >
+    <h4>
+      name
+    </h4>
+    <p>
+      <p>
+        a
+      </p>
+      <p>
+        b
+      </p>
+      <p>
+        c
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] } matches snapshot 2`] = `
+<div>
+  <div
+    class="inset"
+  >
+    <h4>
+      name
+    </h4>
+    <p>
+      <p>
+        woo
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'list', items: [Array] } matches snapshot 1`] = `
+<div>
+  <ul
+    class="list"
+  >
+    <li>
+      <p>
+        stuff
+      </p>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } matches snapshot 1`] = `
 <div>
   <figure>
@@ -87,5 +141,18 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place'
       </cite>
     </figcaption>
   </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'section', name: 'name', entries: [Array] } matches snapshot 1`] = `
+<div>
+  <h1>
+    name
+  </h1>
+  <p>
+    <p>
+      entry
+    </p>
+  </p>
 </div>
 `;

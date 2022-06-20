@@ -4,7 +4,7 @@ import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
 import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
-import { DataNode } from "./types";
+import { DataNode, InsetData, ListData, QuoteData, SectionData } from "./types";
 
 vi.mock("./Renderer.module.scss", () => ({
   default: new Proxy(new Object(), {
@@ -15,7 +15,32 @@ vi.mock("./Renderer.module.scss", () => ({
 }));
 
 describe("entryTypes", () => {
-  const tests: Array<DataNode> = [
+  const sectionData: SectionData[] = [
+    {
+      type: "section",
+      name: "name",
+      entries: ["entry"],
+    },
+  ];
+  const listData: ListData[] = [
+    {
+      type: "list",
+      items: ["stuff"],
+    },
+  ];
+  const insetData: Array<InsetData> = [
+    {
+      type: "inset",
+      name: "name",
+      entries: ["a", "b", "c"],
+    },
+    {
+      type: "inset",
+      name: "name",
+      entries: ["woo"],
+    },
+  ];
+  const quoteData: Array<QuoteData> = [
     {
       type: "quote",
       entries: ["Look, don't quote me on this, but"],
@@ -37,6 +62,12 @@ describe("entryTypes", () => {
       entries: ["e", "i", "o"],
       from: "place",
     },
+  ];
+  const tests: Array<DataNode> = [
+    ...sectionData,
+    ...listData,
+    ...insetData,
+    ...quoteData,
   ];
   it.each(tests)(`rendering %s matches snapshot`, (data) => {
     const { unmount, container } = render(() => (
