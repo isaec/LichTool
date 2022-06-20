@@ -20,6 +20,9 @@ export const arrayCombinate = <T extends string | number>(array: T[]): Array<Arr
   return resultStack;
 }
 
-export const combinate = <T extends object>(keys: Array<keyof T>, object: T): T => {
+export const combinate = <T extends object>(keys: Array<keyof T & string>, object: T): T => {
+  const keyCombinations = arrayCombinate(keys)
   return object
 }
+
+combinate(["a", "b"], {a: 2})
