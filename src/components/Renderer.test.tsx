@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { render, fireEvent, queryAllByText } from "solid-testing-library";
 // @ts-ignore
 import renderdemo from "../data/renderdemo.json";
@@ -6,6 +6,14 @@ import renderdemo from "../data/renderdemo.json";
 import styles from "./Renderer.module.scss";
 
 import Renderer, { _parseData } from "./Renderer";
+
+vi.mock("./Renderer.module.scss", () => ({
+  default: new Proxy(new Object(), {
+    get(_, style) {
+      return style;
+    },
+  }),
+}));
 
 describe("_parseData", () => {
   it.each([
@@ -64,10 +72,8 @@ describe("Renderer", () => {
     const { unmount, container } = render(() => (
       <Renderer data="this is some text, {@bold and now its bold} {@b with shorthand, too!}" />
     ));
-    expect(
-      container.querySelectorAll(`.${styles.Renderer} > *`)
-    ).toMatchInlineSnapshot(
-      `
+    expect(container.querySelectorAll(`.${styles.Renderer} > *`))
+      .toMatchInlineSnapshot(`
       NodeList [
         <p>
           this is some text, 
@@ -80,48 +86,42 @@ describe("Renderer", () => {
           </b>
         </p>,
       ]
-    `
-    );
+    `);
     unmount();
   });
   it("renders italic, strikes, underline", () => {
     const { unmount, container } = render(() => (
       <Renderer data="this is some text, {@strike and now its struck} {@u underline} {@i with italic shorthand, too!}" />
     ));
-    expect(
-      container.querySelectorAll(`.${styles.Renderer} > *`)
-    ).toMatchInlineSnapshot(
-      `
-      NodeList [
-        <p>
-          this is some text, 
-          <s>
-            and now its struck
-          </s>
-           
-          <span
-            class="_underline_i69w2_32"
-          >
-            underline
-          </span>
-           
-          <i>
-            with italic shorthand, too!
-          </i>
-        </p>,
-      ]
-    `
-    );
+    expect(container.querySelectorAll(`.${styles.Renderer} > *`))
+      .toMatchInlineSnapshot(`
+        NodeList [
+          <p>
+            this is some text, 
+            <s>
+              and now its struck
+            </s>
+             
+            <span
+              class="underline"
+            >
+              underline
+            </span>
+             
+            <i>
+              with italic shorthand, too!
+            </i>
+          </p>,
+        ]
+      `);
     unmount();
   });
   it("renders nested tags", () => {
     const { unmount, container } = render(() => (
       <Renderer data="some text: {@b bolded {@i and italic} and now just bold}" />
     ));
-    expect(
-      container.querySelectorAll(`.${styles.Renderer} > *`)
-    ).toMatchInlineSnapshot(
-      `
+    expect(container.querySelectorAll(`.${styles.Renderer} > *`))
+      .toMatchInlineSnapshot(`
       NodeList [
         <p>
           some text: 
@@ -135,8 +135,7 @@ describe("Renderer", () => {
           
         </p>,
       ]
-    `
-    );
+    `);
     unmount();
   });
   it("renders complex nesting of tags", () => {
@@ -173,7 +172,7 @@ describe("Renderer", () => {
               <s>
                 struck bold! 
                 <span
-                  class="_underline_i69w2_32"
+                  class="underline"
                 >
                   underline 
                   <i>
