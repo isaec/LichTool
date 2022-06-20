@@ -116,6 +116,24 @@ describe("Renderer", () => {
       `);
     unmount();
   });
+  it(`doesn't "crash" when rendering unclosed tags`, () => {
+    const { unmount, container } = render(() => (
+      <Renderer data="weee {@b bold} {@b never ever closing!" />
+    ));
+    expect(
+      container.querySelectorAll(`.${styles.Renderer} > *`)
+    ).toMatchInlineSnapshot(`
+      NodeList [
+        <p>
+          weee 
+          <b>
+            bold
+          </b>
+           {@b never ever closing!
+        </p>,
+      ]
+    `);
+  });
   it("renders nested tags", () => {
     const { unmount, container } = render(() => (
       <Renderer data="some text: {@b bolded {@i and italic} and now just bold}" />
