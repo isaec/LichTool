@@ -86,11 +86,13 @@ describe("combinate", () => {
 
 describe("generate", () => {
   it("does the thing", () => {
-    generate({
-      a: some([1, 2, 3]),
-      l: optional(5),
-      b: 10,
-      c: 6,
-    });
+    console.log(
+      generate({
+        a: some([1, 2, 3]),
+        l: optional(5),
+        b: 10,
+        c: 6,
+      })
+    );
   });
 });

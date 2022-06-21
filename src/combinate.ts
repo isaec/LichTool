@@ -72,7 +72,7 @@ export const combinate = <T extends Record<string, value>>(
 };
 
 export const some = (array: Array<value>): Combination => {
-  return () => arrayCombinate(array);
+  return () => array;
 };
 
 export const optional =
@@ -90,18 +90,23 @@ export const generate = <T extends Record<string, value | Combination>>(
     object
   ) as Partial<Record<keyof T, value>>;
 
-  const combinationArray = Object.entries(
-    Object.entries(object).reduce((obj, [key, value]) => {
-      if (typeof value === "function") {
-        obj[key] = value();
+  const combinationArray = arrayCombinate(
+    Object.entries(object).reduce((arr, [key, valueFn]) => {
+      if (typeof valueFn === "function") {
+        const values = valueFn();
+
+        const objValues = values.reduce((valueObjArray, value) => {
+          valueObjArray.push({ [key]: value });
+          return valueObjArray;
+        }, [] as Array<Record<string, any>>);
+
+        return [...arr, ...objValues];
       }
-      return obj;
-    }, {} as Record<string, ReturnType<Combination>>)
+      return arr;
+    }, [] as Record<string, value>[])
   );
 
   console.log(combinationArray);
-
-  return resultStack;
 };
 
 // goal api
