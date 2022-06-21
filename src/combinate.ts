@@ -83,14 +83,12 @@ export const optional =
 export const generate = <T extends Record<string, Value | Combination>>(
   object: T
 ) => {
-  const resultStack: Partial<T>[] = [];
-
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
     object
   ) as Partial<Record<keyof T, Value>>;
 
-  const combinationArray = arrayCombinate(
+  return arrayCombinate(
     Object.entries(object).reduce((arr, [key, valueFn]) => {
       if (typeof valueFn === "function") {
         const values = valueFn();
@@ -120,8 +118,6 @@ export const generate = <T extends Record<string, Value | Combination>>(
     arr.push(newObject);
     return arr;
   }, [] as Array<Partial<Record<keyof T, Value>>>);
-
-  console.log(combinationArray);
 };
 
 // goal api

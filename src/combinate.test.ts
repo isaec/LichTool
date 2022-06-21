@@ -85,14 +85,22 @@ describe("combinate", () => {
 });
 
 describe("generate", () => {
-  it("does the thing", () => {
-    console.log(
+  it("matches inline snapshots", () => {
+    expect(
       generate({
-        a: some([1, 2, 3]),
+        a: some([1, 2]),
+        c: 6,
+      })
+    ).toMatchSnapshot();
+  });
+  it("matches inline snapshots", () => {
+    expect(
+      generate({
+        a: some([1, 2]),
         l: optional(5),
         b: 10,
         c: 6,
       })
-    );
+    ).toMatchSnapshot();
   });
 });
