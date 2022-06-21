@@ -23,30 +23,53 @@ it("returns all combinations of an array", () => {
 });
 
 it("returns all combinations of an object", () => {
-  expect(
-    combinate(["a", "b"], { a: 1, b: 2, c: 3, d: 4 })
-  ).toMatchInlineSnapshot(`
-    [
-      {
-        "c": 3,
-        "d": 4,
+  expect(combinate(["a", "b"], { a: 1, b: 2, c: 3, d: 4 })).toEqual([
+    {
+      c: 3,
+      d: 4,
+    },
+    {
+      a: 1,
+      c: 3,
+      d: 4,
+    },
+    {
+      b: 2,
+      c: 3,
+      d: 4,
+    },
+    {
+      a: 1,
+      b: 2,
+      c: 3,
+      d: 4,
+    },
+  ]);
+});
+
+it("behaves properly with nested objects", () => {
+  expect(combinate(["a", "c"], { a: 1, b: 2, c: { d: 3, e: 4 } })).toEqual([
+    {
+      b: 2,
+    },
+    {
+      a: 1,
+      b: 2,
+    },
+    {
+      b: 2,
+      c: {
+        d: 3,
+        e: 4,
       },
-      {
-        "a": 1,
-        "c": 3,
-        "d": 4,
+    },
+    {
+      a: 1,
+      b: 2,
+      c: {
+        d: 3,
+        e: 4,
       },
-      {
-        "b": 2,
-        "c": 3,
-        "d": 4,
-      },
-      {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4,
-      },
-    ]
-  `);
+    },
+  ]);
 });
