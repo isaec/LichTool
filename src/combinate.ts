@@ -1,23 +1,23 @@
 // https://codereview.stackexchange.com/questions/7001/generating-all-combinations-of-an-array
 
-type value =
+type Value =
   | string
   | number
   | {
-      [key: string]: value;
+      [key: string]: Value;
     }
-  | Array<value>;
+  | Array<Value>;
 
 interface Combination {
-  (): Array<value>;
+  (): Array<Value>;
 }
-const isCombination = (data: Combination | value): data is Combination =>
+const isCombination = (data: Combination | Value): data is Combination =>
   typeof data === "function";
 
 /**
  * returns an array with every combination of the keys of the passed array - not every ordering is returned
  */
-export const arrayCombinate = <T extends value>(
+export const arrayCombinate = <T extends Value>(
   array: T[]
 ): Array<Array<T>> => {
   const resultStack: Array<Array<T>> = [[]];
@@ -48,7 +48,7 @@ const makeBaseObject = <T>(
   }, {} as Partial<typeof object>);
 
 /* returns an array containing every object combination of keys */
-export const combinate = <T extends Record<string, value>>(
+export const combinate = <T extends Record<string, Value>>(
   keys: Array<keyof T & string>,
   object: T
 ): Array<T> => {
@@ -71,16 +71,16 @@ export const combinate = <T extends Record<string, value>>(
   return resultStack;
 };
 
-export const some = (array: Array<value>): Combination => {
+export const some = (array: Array<Value>): Combination => {
   return () => array;
 };
 
 export const optional =
-  (value: value): Combination =>
+  (value: Value): Combination =>
   () =>
     [value];
 
-export const generate = <T extends Record<string, value | Combination>>(
+export const generate = <T extends Record<string, Value | Combination>>(
   object: T
 ) => {
   const resultStack: Partial<T>[] = [];
@@ -88,7 +88,7 @@ export const generate = <T extends Record<string, value | Combination>>(
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
     object
-  ) as Partial<Record<keyof T, value>>;
+  ) as Partial<Record<keyof T, Value>>;
 
   const combinationArray = arrayCombinate(
     Object.entries(object).reduce((arr, [key, valueFn]) => {
@@ -103,15 +103,15 @@ export const generate = <T extends Record<string, value | Combination>>(
         return [...arr, ...objValues];
       }
       return arr;
-    }, [] as Array<[string, value]>)
+    }, [] as Array<[string, Value]>)
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
 
-    kvArr.forEach(([key, value]: [keyof T & string, value]) => {
+    kvArr.forEach(([key, value]: [keyof T & string, Value]) => {
       if (newObject[key] === undefined) {
         newObject[key] = value;
       } else if (Array.isArray(newObject[key])) {
-        (newObject[key] as value[]).push(value);
+        (newObject[key] as Value[]).push(value);
       } else {
         newObject[key] = [newObject[key]!, value];
       }
@@ -119,7 +119,7 @@ export const generate = <T extends Record<string, value | Combination>>(
 
     arr.push(newObject);
     return arr;
-  }, [] as Array<Partial<Record<keyof T, value>>>);
+  }, [] as Array<Partial<Record<keyof T, Value>>>);
 
   console.log(combinationArray);
 };
