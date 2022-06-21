@@ -23,19 +23,19 @@ export const arrayCombinate = <T extends string | number>(
 };
 
 /* returns an array containing every object combination of keys*/
-export const combinate = <T extends object>(
-  keys: Array<keyof T & string>,
+export const combinate = <T extends Record<string, any>>(
+  keys: Array<keyof T>,
   object: T
 ): Array<T> => {
   const resultStack: Array<T> = [];
 
   // object with the keys not present in keys array
-  const baseObject = Object.keys(object).reduce((acc, key) => {
+  const baseObject = Object.keys(object).reduce((acc, key: keyof T) => {
     if (!keys.includes(key)) {
       acc[key] = object[key];
     }
     return acc;
-  }, {} as T);
+  }, {} as Record<keyof T, any>);
 
   const len = Math.pow(2, keys.length);
   for (let i = 0; i < len; i++) {
