@@ -100,7 +100,7 @@ export const generate = <T extends Record<string, Value | Combination>>(
           return valueObjArray;
         }, [] as any);
 
-        return [...arr, ...objValues];
+        return arr.concat(objValues);
       }
       return arr;
     }, [] as Array<[string, Value]>)
