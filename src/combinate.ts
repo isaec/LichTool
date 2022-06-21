@@ -96,15 +96,30 @@ export const generate = <T extends Record<string, value | Combination>>(
         const values = valueFn();
 
         const objValues = values.reduce((valueObjArray, value) => {
-          valueObjArray.push({ [key]: value });
+          valueObjArray.push([key, value]);
           return valueObjArray;
-        }, [] as Array<Record<string, any>>);
+        }, [] as any);
 
         return [...arr, ...objValues];
       }
       return arr;
-    }, [] as Record<string, value>[])
-  );
+    }, [] as Array<[string, value]>)
+  ).reduce((arr, kvArr) => {
+    const newObject = { ...baseObject };
+
+    kvArr.forEach(([key, value]) => {
+      if (newObject[key] === undefined) {
+        newObject[key] = value;
+      } else if (Array.isArray(newObject[key])) {
+        newObject[key].push(value);
+      } else {
+        newObject[key] = [newObject[key], value];
+      }
+    });
+
+    arr.push(newObject);
+    return arr;
+  }, [] as T[]);
 
   console.log(combinationArray);
 };
