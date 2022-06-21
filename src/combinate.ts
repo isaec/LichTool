@@ -1,8 +1,5 @@
 // https://codereview.stackexchange.com/questions/7001/generating-all-combinations-of-an-array
 
-const none = () => null;
-const isNone = (fn: Function): fn is typeof none => fn() === null;
-
 type value =
   | string
   | number
@@ -12,7 +9,7 @@ type value =
   | Array<value>;
 
 interface Combination {
-  (): Array<value | typeof none>;
+  (): Array<value>;
 }
 const isCombination = (data: Combination | value): data is Combination =>
   typeof data === "function";
@@ -74,16 +71,18 @@ export const combinate = <T extends Record<string, value>>(
   return resultStack;
 };
 
-const some = (array: Array<value>): Combination => {
+export const some = (array: Array<value>): Combination => {
   return () => arrayCombinate(array);
 };
 
-const optional =
+export const optional =
   (value: value): Combination =>
   () =>
-    [value, none];
+    [value];
 
-const generate = <T extends Record<string, value | Combination>>(object: T) => {
+export const generate = <T extends Record<string, value | Combination>>(
+  object: T
+) => {
   const resultStack: Partial<T>[] = [];
 
   const baseObject = makeBaseObject(
@@ -91,15 +90,16 @@ const generate = <T extends Record<string, value | Combination>>(object: T) => {
     object
   ) as Partial<Record<keyof T, value>>;
 
-  const combinationObject = Object.entries(object).reduce(
-    (obj, [key, value]) => {
+  const combinationArray = Object.entries(
+    Object.entries(object).reduce((obj, [key, value]) => {
       if (typeof value === "function") {
-        obj[key] = value;
+        obj[key] = value();
       }
       return obj;
-    },
-    {} as Record<string, Combination>
+    }, {} as Record<string, ReturnType<Combination>>)
   );
+
+  console.log(combinationArray);
 
   return resultStack;
 };
