@@ -14,6 +14,8 @@ type value =
 interface Combination {
   (): Array<value | typeof none>;
 }
+const isCombination = (data: Combination | value): data is Combination =>
+  typeof data === "function";
 
 /**
  * returns an array with every combination of the keys of the passed array - not every ordering is returned
@@ -37,20 +39,20 @@ export const arrayCombinate = <T extends value>(
   return resultStack;
 };
 
-const makeBaseObject = <Values, T extends Record<string, Values>>(
-  shouldRemove: (key: keyof T) => boolean,
-  object: T
-): Record<keyof T, Values> =>
-  Object.keys(object).reduce((baseObject, key: keyof T) => {
+const makeBaseObject = <T>(
+  shouldRemove: (key: keyof typeof object) => boolean,
+  object: Record<string, T>
+) =>
+  Object.keys(object).reduce((baseObject, key: keyof typeof object) => {
     if (!shouldRemove(key)) {
       baseObject[key] = object[key];
     }
     return baseObject;
-  }, {} as Record<keyof T, Values>);
+  }, {} as Partial<typeof object>);
 
 /* returns an array containing every object combination of keys */
 export const combinate = <T extends Record<string, value>>(
-  keys: Array<keyof T>,
+  keys: Array<keyof T & string>,
   object: T
 ): Array<T> => {
   const resultStack: T[] = [];
@@ -81,13 +83,13 @@ const optional =
   () =>
     [value, none];
 
-const generate = (object: Record<string, value | Combination>) => {
-  const resultStack: Record<keyof typeof object, value>[] = [];
+const generate = <T extends Record<string, value | Combination>>(object: T) => {
+  const resultStack: Partial<T>[] = [];
 
   const baseObject = makeBaseObject(
-    (key) => typeof object[key] === "function",
+    (key) => isCombination(object[key]),
     object
-  );
+  ) as Partial<Record<keyof T, value>>;
 
   const combinationObject = Object.entries(object).reduce(
     (obj, [key, value]) => {
