@@ -2,6 +2,7 @@ import { Component } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
+import { combinate } from "../../combinate";
 import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
 import { DataNode, InsetData, ListData, QuoteData, SectionData } from "./types";
@@ -41,22 +42,12 @@ describe("entryTypes", () => {
     },
   ];
   const quoteData: Array<QuoteData> = [
-    {
+    ...combinate<QuoteData>(["by", "from"], {
       type: "quote",
       entries: ["Look, don't quote me on this, but"],
       by: "Anon",
       from: "Archive of Lost Chats",
-    },
-    {
-      type: "quote",
-      entries: ["e"],
-      by: "Anon",
-    },
-    {
-      type: "quote",
-      entries: ["e"],
-      from: "place",
-    },
+    }),
     {
       type: "quote",
       entries: ["e", "i", "o"],

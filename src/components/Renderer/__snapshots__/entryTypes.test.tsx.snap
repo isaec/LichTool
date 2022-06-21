@@ -80,12 +80,30 @@ exports[`entryTypes > rendering { type: 'list', items: [Array] } matches snapsho
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "Look, don't quote me on this, but"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } matches snapshot 1`] = `
 <div>
   <figure>
     <blockquote>
       <p>
-        "e"
+        "Look, don't quote me on this, but"
       </p>
     </blockquote>
     <figcaption>
@@ -98,12 +116,12 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } 
 </div>
 `;
 
-exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place' } matches snapshot 1`] = `
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'Archive of Lost Chats' } matches snapshot 1`] = `
 <div>
   <figure>
     <blockquote>
       <p>
-        "e"
+        "Look, don't quote me on this, but"
       </p>
     </blockquote>
     <figcaption>
@@ -111,14 +129,14 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place'
       
       
       <cite>
-        place
+        Archive of Lost Chats
       </cite>
     </figcaption>
   </figure>
 </div>
 `;
 
-exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place' } matches snapshot 2`] = `
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place' } matches snapshot 1`] = `
 <div>
   <figure>
     <blockquote>
