@@ -38,11 +38,11 @@ export const arrayCombinate = <T extends value>(
 };
 
 const makeBaseObject = <T extends Record<string, value>>(
-  removeKeys: Array<keyof T>,
+  shouldRemove: (key: keyof T) => boolean,
   object: T
 ): Record<keyof T, value> =>
   Object.keys(object).reduce((baseObject, key: keyof T) => {
-    if (!removeKeys.includes(key)) {
+    if (!shouldRemove(key)) {
       baseObject[key] = object[key];
     }
     return baseObject;
@@ -56,7 +56,7 @@ export const combinate = <T extends Record<string, any>>(
   const resultStack: Array<T> = [];
 
   // object with the keys not present in keys array
-  const baseObject = makeBaseObject(keys, object);
+  const baseObject = makeBaseObject((key) => keys.includes(key), object);
 
   const len = Math.pow(2, keys.length);
   for (let i = 0; i < len; i++) {
