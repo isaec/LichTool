@@ -37,23 +37,23 @@ export const arrayCombinate = <T extends value>(
   return resultStack;
 };
 
-const makeBaseObject = <T extends Record<string, value>>(
+const makeBaseObject = <Values, T extends Record<string, Values>>(
   shouldRemove: (key: keyof T) => boolean,
   object: T
-): Record<keyof T, value> =>
+): Record<keyof T, Values> =>
   Object.keys(object).reduce((baseObject, key: keyof T) => {
     if (!shouldRemove(key)) {
       baseObject[key] = object[key];
     }
     return baseObject;
-  }, {} as Record<keyof T, any>);
+  }, {} as Record<keyof T, Values>);
 
 /* returns an array containing every object combination of keys */
-export const combinate = <T extends Record<string, any>>(
+export const combinate = <T extends Record<string, value>>(
   keys: Array<keyof T>,
   object: T
 ): Array<T> => {
-  const resultStack: Array<T> = [];
+  const resultStack: T[] = [];
 
   // object with the keys not present in keys array
   const baseObject = makeBaseObject((key) => keys.includes(key), object);
@@ -66,7 +66,7 @@ export const combinate = <T extends Record<string, any>>(
         newObject[keys[j]] = object[keys[j]];
       }
     }
-    if (Object.keys(newObject).length !== 0) resultStack.push(newObject);
+    if (Object.keys(newObject).length !== 0) resultStack.push(newObject as T);
   }
 
   return resultStack;
@@ -81,9 +81,23 @@ const optional =
   () =>
     [value, none];
 
-const generate = <T extends Record<string, value>>(obj: T) => {
-  const resultStack: Record<keyof T, value>[] = [];
-  /* iterate the keys of obj, pushing each combination to resultStack */
+const generate = (object: Record<string, value | Combination>) => {
+  const resultStack: Record<keyof typeof object, value>[] = [];
+
+  const baseObject = makeBaseObject(
+    (key) => typeof object[key] === "function",
+    object
+  );
+
+  const combinationObject = Object.entries(object).reduce(
+    (obj, [key, value]) => {
+      if (typeof value === "function") {
+        obj[key] = value;
+      }
+      return obj;
+    },
+    {} as Record<string, Combination>
+  );
 
   return resultStack;
 };
