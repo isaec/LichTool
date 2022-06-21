@@ -107,19 +107,19 @@ export const generate = <T extends Record<string, value | Combination>>(
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
 
-    kvArr.forEach(([key, value]) => {
+    kvArr.forEach(([key, value]: [keyof T & string, value]) => {
       if (newObject[key] === undefined) {
         newObject[key] = value;
       } else if (Array.isArray(newObject[key])) {
-        newObject[key].push(value);
+        (newObject[key] as value[]).push(value);
       } else {
-        newObject[key] = [newObject[key], value];
+        newObject[key] = [newObject[key]!, value];
       }
     });
 
     arr.push(newObject);
     return arr;
-  }, [] as T[]);
+  }, [] as Array<Partial<Record<keyof T, value>>>);
 
   console.log(combinationArray);
 };
