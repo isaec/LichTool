@@ -1,8 +1,7 @@
 // https://codereview.stackexchange.com/questions/7001/generating-all-combinations-of-an-array
 
-type None = () => null;
-const none: None = () => null;
-const isNone = (fn: Function): fn is None => fn() === null;
+const none = () => null;
+const isNone = (fn: Function): fn is typeof none => fn() === null;
 
 type value =
   | string
@@ -13,7 +12,7 @@ type value =
   | Array<value>;
 
 interface Combination {
-  (): Array<value>;
+  (): Array<value | typeof none>;
 }
 
 /**
@@ -38,6 +37,17 @@ export const arrayCombinate = <T extends value>(
   return resultStack;
 };
 
+const makeBaseObject = <T extends Record<string, value>>(
+  removeKeys: Array<keyof T>,
+  object: T
+): Record<keyof T, value> =>
+  Object.keys(object).reduce((baseObject, key: keyof T) => {
+    if (!removeKeys.includes(key)) {
+      baseObject[key] = object[key];
+    }
+    return baseObject;
+  }, {} as Record<keyof T, any>);
+
 /* returns an array containing every object combination of keys */
 export const combinate = <T extends Record<string, any>>(
   keys: Array<keyof T>,
@@ -46,12 +56,7 @@ export const combinate = <T extends Record<string, any>>(
   const resultStack: Array<T> = [];
 
   // object with the keys not present in keys array
-  const baseObject = Object.keys(object).reduce((acc, key: keyof T) => {
-    if (!keys.includes(key)) {
-      acc[key] = object[key];
-    }
-    return acc;
-  }, {} as Record<keyof T, any>);
+  const baseObject = makeBaseObject(keys, object);
 
   const len = Math.pow(2, keys.length);
   for (let i = 0; i < len; i++) {
@@ -78,7 +83,7 @@ const optional =
 
 const generate = <T extends Record<string, value>>(obj: T) => {
   const resultStack: Record<keyof T, value>[] = [];
-  /* iterate the keys of object, */
+  /* iterate the keys of obj, pushing each combination to resultStack */
 
   return resultStack;
 };
