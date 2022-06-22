@@ -9,9 +9,9 @@ type Value =
   | Value[];
 
 const enum CombinationType {
-  Array,
-  Value,
-  ArrayOrValue,
+  Array = "Array",
+  Value = "Value",
+  ArrayOrValue = "ArrayOrValue",
 }
 
 interface Combination {
@@ -106,11 +106,13 @@ const some = (array: Value[]) =>
   makeCombination(() => array, CombinationType.Array);
 some.asArrayOrValue = (array: Value[]) =>
   makeCombination(() => array, CombinationType.ArrayOrValue);
-
 export { some };
 
 export const optional = (value: Value): Combination =>
   makeCombination(() => [value], CombinationType.Value);
+
+export const one = (values: Value[]) =>
+  makeCombination(() => values, CombinationType.Value);
 
 export const generate = <T extends Record<string, Value | Combination>>(
   object: T

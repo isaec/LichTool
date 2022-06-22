@@ -83,3 +83,18 @@ exports[`matches snapshots for { a: [Function], l: [Function], b: 10, c: 6 } 1`]
   },
 ]
 `;
+
+exports[`matches snapshots for { one: [Function] } 1`] = `
+[
+  {},
+  {
+    "one": 1,
+  },
+  {
+    "one": 2,
+  },
+  {
+    "one": 2,
+  },
+]
+`;

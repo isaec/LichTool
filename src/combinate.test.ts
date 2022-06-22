@@ -3,6 +3,7 @@ import {
   arrayCombinate,
   combinate,
   generate,
+  one,
   optional,
   some,
 } from "./combinate";
@@ -94,6 +95,9 @@ it.each([
     l: optional(5),
     b: 10,
     c: 6,
+  },
+  {
+    one: one([1, 2]),
   },
 ])(`matches snapshots for %s`, (generateObject) => {
   console.log(generateObject);
