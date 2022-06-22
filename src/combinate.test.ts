@@ -14,8 +14,9 @@ it.each([
   },
   {
     one: one([1, 2]),
+    optional: optional(5),
   },
 ])(`matches snapshots for %s`, (generateObject) => {
-  console.log(generateObject);
+  // console.log(generateObject);
   expect(generate(generateObject as any)).toMatchSnapshot();
 });

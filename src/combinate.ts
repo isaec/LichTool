@@ -8,35 +8,14 @@ type Value =
     }
   | Value[];
 
-const enum CombinationType {
-  Array = "Array",
-  Value = "Value",
-  ArrayOrValue = "ArrayOrValue",
-}
-
 class Combination {
-  type: CombinationType;
   values: () => Value[];
-  constructor(values: () => Value[], type: CombinationType) {
-    this.type = type;
+  constructor(values: () => Value[]) {
     this.values = values;
   }
 }
 
-interface CombinationKeyValue<T> extends Array<Value> {
-  0: keyof T & string;
-  1: Value;
-  length: 2;
-  type: CombinationType;
-}
-
-const makeCombinationKeyValue = <T>(
-  array: Value[],
-  type: CombinationType
-): CombinationKeyValue<T> => {
-  (array as CombinationKeyValue<T>).type = type;
-  return array as CombinationKeyValue<T>;
-};
+type CombinationKeyValue<T> = [keyof T & string, Value];
 
 const isCombination = (data: Combination | Value): data is Combination =>
   data instanceof Combination;
@@ -63,12 +42,6 @@ export const arrayCombinate = <T extends Value>(
   return resultStack;
 };
 
-const keyValueCombinate = <T>(
-  kvArray: CombinationKeyValue<T>[]
-): Array<Array<CombinationKeyValue<T>>> => {
-  return arrayCombinate(kvArray);
-};
-
 const makeBaseObject = <T>(
   shouldRemove: (key: keyof typeof object) => boolean,
   object: Record<string, T>
@@ -80,17 +53,14 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
-const some = (array: Value[]) =>
-  new Combination(() => array, CombinationType.Array);
-some.asArrayOrValue = (array: Value[]) =>
-  new Combination(() => array, CombinationType.ArrayOrValue);
+const some = (array: Value[]) => new Combination(() => array);
+some.asArrayOrValue = (array: Value[]) => new Combination(() => array);
 export { some };
 
 export const optional = (value: Value): Combination =>
-  new Combination(() => [value], CombinationType.Value);
+  new Combination(() => [value]);
 
-export const one = (values: Value[]) =>
-  new Combination(() => values, CombinationType.Value);
+export const one = (values: Value[]) => new Combination(() => values);
 
 export const generate = <T extends Record<string, Value>>(
   object: Record<keyof T, Combination | Value>
@@ -99,56 +69,6 @@ export const generate = <T extends Record<string, Value>>(
     (key) => isCombination(object[key]),
     object
   ) as Partial<Record<keyof T, Value>>;
-
-  const combinationKeyValueArray = Object.entries(object).reduce(
-    (arr, [key, combination]) => {
-      if (isCombination(combination)) {
-        const values: ReturnType<typeof combination["values"]> =
-          combination.values();
-
-        const objValues = values.reduce(
-          (valueObjArray: CombinationKeyValue<T>[], value) => {
-            valueObjArray.push(
-              makeCombinationKeyValue([key, value], combination.type)
-            );
-            return valueObjArray;
-          },
-          [] as CombinationKeyValue<T>[]
-        );
-
-        return arr.concat(objValues);
-      }
-      return arr;
-    },
-    [] as Array<CombinationKeyValue<T>>
-  );
-
-  return arrayCombinate(combinationKeyValueArray).reduce((arr, kvArr) => {
-    const newObject = { ...baseObject };
-    kvArr.forEach((kv) => {
-      const [key, value] = kv;
-      switch (kv.type) {
-        case CombinationType.Array:
-          if (newObject[key] === undefined) newObject[key] = [value];
-          else (newObject[key] as Value[]).push(value);
-          break;
-        case CombinationType.Value:
-          newObject[key] = value;
-          break;
-        case CombinationType.ArrayOrValue:
-          if (newObject[key] === undefined) newObject[key] = value;
-          else if (Array.isArray(newObject[key]))
-            (newObject[key] as Value[]).push(value);
-          else (newObject[key] as Value[]) = [newObject[key]!, value];
-          break;
-      }
-    });
-
-    arr.push(
-      newObject as T /* this assertion could be wrong, but it lets combinate return good types */
-    );
-    return arr;
-  }, [] as T[]);
 };
 
 // goal api
