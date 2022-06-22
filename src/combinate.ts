@@ -20,6 +20,9 @@ interface Combination {
 }
 
 interface CombinationKeyValue extends Array<Value> {
+  0: string;
+  1: Value;
+  length: 2;
   type: CombinationType;
 }
 
@@ -122,22 +125,24 @@ export const generate = <T extends Record<string, Value | Combination>>(
       if (typeof valueFn === "function") {
         const values = valueFn();
 
-        const objValues = values.reduce((valueObjArray, value) => {
-          valueObjArray.push(
-            makeCombinationKeyValue([key, value], valueFn.type)
-          );
-          return valueObjArray;
-        }, [] as any);
+        const objValues = values.reduce(
+          (valueObjArray: CombinationKeyValue[], value) => {
+            valueObjArray.push(
+              makeCombinationKeyValue([key, value], valueFn.type)
+            );
+            return valueObjArray;
+          },
+          [] as CombinationKeyValue[]
+        );
 
         return arr.concat(objValues);
       }
       return arr;
-    }, [] as Array<[string, Value]>)
+    }, [] as Array<CombinationKeyValue>)
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
 
     kvArr.forEach((kv) => {
-      // @ts-ignore
       console.log(kv.type);
       const [key, value]: [keyof T & string, Value] = kv;
       if (newObject[key] === undefined) {
