@@ -59,6 +59,12 @@ export const arrayCombinate = <T extends Value>(
   return resultStack;
 };
 
+const keyValueCombinate = <T>(
+  kvArray: CombinationKeyValue<T>[]
+): Array<Array<CombinationKeyValue<T>>> => {
+  return arrayCombinate(kvArray);
+};
+
 const makeBaseObject = <T>(
   shouldRemove: (key: keyof typeof object) => boolean,
   object: Record<string, T>
