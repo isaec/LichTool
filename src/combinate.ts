@@ -19,19 +19,19 @@ interface Combination {
   type: CombinationType;
 }
 
-interface CombinationKeyValue extends Array<Value> {
-  0: string;
+interface CombinationKeyValue<T> extends Array<Value> {
+  0: keyof T & string;
   1: Value;
   length: 2;
   type: CombinationType;
 }
 
-const makeCombinationKeyValue = (
+const makeCombinationKeyValue = <T>(
   array: Value[],
   type: CombinationType
-): CombinationKeyValue => {
-  (array as CombinationKeyValue).type = type;
-  return array as CombinationKeyValue;
+): CombinationKeyValue<T> => {
+  (array as CombinationKeyValue<T>).type = type;
+  return array as CombinationKeyValue<T>;
 };
 
 const isCombination = (data: Combination | Value): data is Combination =>
@@ -126,25 +126,25 @@ export const generate = <T extends Record<string, Value | Combination>>(
         const values = valueFn();
 
         const objValues = values.reduce(
-          (valueObjArray: CombinationKeyValue[], value) => {
+          (valueObjArray: CombinationKeyValue<T>[], value) => {
             valueObjArray.push(
               makeCombinationKeyValue([key, value], valueFn.type)
             );
             return valueObjArray;
           },
-          [] as CombinationKeyValue[]
+          [] as CombinationKeyValue<T>[]
         );
 
         return arr.concat(objValues);
       }
       return arr;
-    }, [] as Array<CombinationKeyValue>)
+    }, [] as Array<CombinationKeyValue<T>>)
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
 
     kvArr.forEach((kv) => {
       console.log(kv.type);
-      const [key, value]: [keyof T & string, Value] = kv;
+      const [key, value] = kv;
       if (newObject[key] === undefined) {
         newObject[key] = value;
       } else if (Array.isArray(newObject[key])) {
