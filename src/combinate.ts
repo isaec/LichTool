@@ -8,7 +8,7 @@ type Value =
     }
   | Value[];
 
-enum CombinationType {
+const enum CombinationType {
   Array,
   Value,
   ArrayOrValue,
@@ -19,7 +19,7 @@ interface Combination {
   type: CombinationType;
 }
 const isCombination = (data: Combination | Value): data is Combination =>
-  typeof data === "function";
+  typeof data === "function" && data.type !== undefined;
 
 /**
  * returns an array with every combination of the keys of the passed array - not every ordering is returned
