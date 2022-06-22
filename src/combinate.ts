@@ -76,30 +76,6 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
-/* returns an array containing every object combination of keys */
-export const combinate = <T extends Record<string, Value>>(
-  keys: Array<keyof T & string>,
-  object: T
-): Array<T> => {
-  const resultStack: T[] = [];
-
-  // object with the keys not present in keys array
-  const baseObject = makeBaseObject((key) => keys.includes(key), object);
-
-  const len = Math.pow(2, keys.length);
-  for (let i = 0; i < len; i++) {
-    const newObject = { ...baseObject };
-    for (let j = 0; j < keys.length; j++) {
-      if (i & Math.pow(2, j)) {
-        newObject[keys[j]] = object[keys[j]];
-      }
-    }
-    if (Object.keys(newObject).length !== 0) resultStack.push(newObject as T);
-  }
-
-  return resultStack;
-};
-
 const makeCombination = (
   fn: () => ReturnType<Combination>,
   type: CombinationType
@@ -120,9 +96,9 @@ export const optional = (value: Value): Combination =>
 export const one = (values: Value[]) =>
   makeCombination(() => values, CombinationType.Value);
 
-export const generate = <T extends Record<string, Value | Combination>>(
-  object: T
-) => {
+export const generate = <T extends Record<string, Value>>(
+  object: Record<keyof T, Combination | Value>
+): T[] => {
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
     object
@@ -131,7 +107,7 @@ export const generate = <T extends Record<string, Value | Combination>>(
   return arrayCombinate(
     Object.entries(object).reduce((arr, [key, valueFn]) => {
       if (typeof valueFn === "function") {
-        const values = valueFn();
+        const values: ReturnType<typeof valueFn> = valueFn();
 
         const objValues = values.reduce(
           (valueObjArray: CombinationKeyValue<T>[], value) => {
@@ -149,7 +125,7 @@ export const generate = <T extends Record<string, Value | Combination>>(
     }, [] as Array<CombinationKeyValue<T>>)
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
-
+    console.log(kvArr);
     kvArr.forEach((kv) => {
       const [key, value] = kv;
       switch (kv.type) {
@@ -169,9 +145,11 @@ export const generate = <T extends Record<string, Value | Combination>>(
       }
     });
 
-    arr.push(newObject);
+    arr.push(
+      newObject as T /* this assertion could be wrong, but it lets combinate return good types */
+    );
     return arr;
-  }, [] as Array<Partial<Record<keyof T, Value>>>);
+  }, [] as T[]);
 };
 
 // goal api
