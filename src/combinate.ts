@@ -100,8 +100,8 @@ export const generate = <T extends Record<string, Value>>(
     object
   ) as Partial<Record<keyof T, Value>>;
 
-  return arrayCombinate(
-    Object.entries(object).reduce((arr, [key, combination]) => {
+  const combinationKeyValueArray = Object.entries(object).reduce(
+    (arr, [key, combination]) => {
       if (isCombination(combination)) {
         const values: ReturnType<typeof combination["values"]> =
           combination.values();
@@ -119,8 +119,11 @@ export const generate = <T extends Record<string, Value>>(
         return arr.concat(objValues);
       }
       return arr;
-    }, [] as Array<CombinationKeyValue<T>>)
-  ).reduce((arr, kvArr) => {
+    },
+    [] as Array<CombinationKeyValue<T>>
+  );
+
+  return arrayCombinate(combinationKeyValueArray).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
     kvArr.forEach((kv) => {
       const [key, value] = kv;
