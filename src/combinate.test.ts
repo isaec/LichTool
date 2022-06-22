@@ -84,23 +84,18 @@ describe("combinate", () => {
   });
 });
 
-describe("generate", () => {
-  it("matches inline snapshots", () => {
-    expect(
-      generate({
-        a: some.asArrayOrValue([1, 2]),
-        c: 6,
-      })
-    ).toMatchSnapshot();
-  });
-  it("matches inline snapshots", () => {
-    expect(
-      generate({
-        a: some([1, 2]),
-        l: optional(5),
-        b: 10,
-        c: 6,
-      })
-    ).toMatchSnapshot();
-  });
+it.each([
+  {
+    a: some.asArrayOrValue([1, 2]),
+    c: 6,
+  },
+  {
+    a: some([1, 2]),
+    l: optional(5),
+    b: 10,
+    c: 6,
+  },
+])(`matches snapshots for %s`, (generateObject) => {
+  console.log(generateObject);
+  expect(generate(generateObject as any)).toMatchSnapshot();
 });
