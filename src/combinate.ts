@@ -6,10 +6,17 @@ type Value =
   | {
       [key: string]: Value;
     }
-  | Array<Value>;
+  | Value[];
+
+enum CombinationType {
+  Array,
+  Value,
+  ArrayOrValue,
+}
 
 interface Combination {
-  (): Array<Value>;
+  (): Value[];
+  type: CombinationType;
 }
 const isCombination = (data: Combination | Value): data is Combination =>
   typeof data === "function";
@@ -71,14 +78,23 @@ export const combinate = <T extends Record<string, Value>>(
   return resultStack;
 };
 
-export const some = (array: Array<Value>): Combination => {
-  return () => array;
+const makeCombination = (
+  fn: () => ReturnType<Combination>,
+  type: CombinationType
+): Combination => {
+  (fn as Combination).type = type;
+  return fn as Combination;
 };
 
-export const optional =
-  (value: Value): Combination =>
-  () =>
-    [value];
+const some = (array: Value[]) =>
+  makeCombination(() => array, CombinationType.Array);
+some.asArrayOrValue = (array: Value[]) =>
+  makeCombination(() => array, CombinationType.ArrayOrValue);
+
+export { some };
+
+export const optional = (value: Value): Combination =>
+  makeCombination(() => [value], CombinationType.Value);
 
 export const generate = <T extends Record<string, Value | Combination>>(
   object: T

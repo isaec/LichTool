@@ -88,7 +88,7 @@ describe("generate", () => {
   it("matches inline snapshots", () => {
     expect(
       generate({
-        a: some([1, 2]),
+        a: some.asArrayOrValue([1, 2]),
         c: 6,
       })
     ).toMatchSnapshot();
