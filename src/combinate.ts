@@ -9,8 +9,8 @@ type Value =
   | Value[];
 
 class Combination {
-  values: () => Value[];
-  constructor(values: () => Value[]) {
+  values: () => Array<Value | null>;
+  constructor(values: () => ReturnType<Combination["values"]>) {
     this.values = values;
   }
 }
@@ -53,12 +53,11 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
-const some = (array: Value[]) => new Combination(() => array);
-some.asArrayOrValue = (array: Value[]) => new Combination(() => array);
-export { some };
+export const some = (array: Value[]) =>
+  new Combination(() => arrayCombinate(array));
 
 export const optional = (value: Value): Combination =>
-  new Combination(() => [value]);
+  new Combination(() => [value, null]);
 
 export const one = (values: Value[]) => new Combination(() => values);
 

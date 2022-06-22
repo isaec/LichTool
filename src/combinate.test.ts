@@ -3,7 +3,7 @@ import { generate, one, optional, some } from "./combinate";
 
 it.each([
   {
-    a: some.asArrayOrValue([1, 2]),
+    a: some([1, 2]),
     c: 6,
   },
   {
