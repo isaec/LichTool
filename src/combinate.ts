@@ -143,14 +143,21 @@ export const generate = <T extends Record<string, Value | Combination>>(
     const newObject = { ...baseObject };
 
     kvArr.forEach((kv) => {
-      console.log(kv.type);
       const [key, value] = kv;
-      if (newObject[key] === undefined) {
-        newObject[key] = value;
-      } else if (Array.isArray(newObject[key])) {
-        (newObject[key] as Value[]).push(value);
-      } else {
-        newObject[key] = [newObject[key]!, value];
+      switch (kv.type) {
+        case CombinationType.Array:
+          if (newObject[key] === undefined) newObject[key] = [value];
+          else (newObject[key] as Value[]).push(value);
+          break;
+        case CombinationType.Value:
+          newObject[key] = value;
+          break;
+        case CombinationType.ArrayOrValue:
+          if (newObject[key] === undefined) newObject[key] = value;
+          else if (Array.isArray(newObject[key]))
+            (newObject[key] as Value[]).push(value);
+          else (newObject[key] as Value[]) = [newObject[key]!, value];
+          break;
       }
     });
 
