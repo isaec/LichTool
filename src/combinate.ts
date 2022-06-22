@@ -14,9 +14,13 @@ const enum CombinationType {
   ArrayOrValue = "ArrayOrValue",
 }
 
-interface Combination {
-  (): Value[];
+class Combination {
   type: CombinationType;
+  values: () => Value[];
+  constructor(values: () => Value[], type: CombinationType) {
+    this.type = type;
+    this.values = values;
+  }
 }
 
 interface CombinationKeyValue<T> extends Array<Value> {
@@ -35,7 +39,7 @@ const makeCombinationKeyValue = <T>(
 };
 
 const isCombination = (data: Combination | Value): data is Combination =>
-  typeof data === "function" && data.type !== undefined;
+  data instanceof Combination;
 
 /**
  * returns an array with every combination of the keys of the passed array - not every ordering is returned
@@ -76,25 +80,17 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
-const makeCombination = (
-  fn: () => ReturnType<Combination>,
-  type: CombinationType
-): Combination => {
-  (fn as Combination).type = type;
-  return fn as Combination;
-};
-
 const some = (array: Value[]) =>
-  makeCombination(() => array, CombinationType.Array);
+  new Combination(() => array, CombinationType.Array);
 some.asArrayOrValue = (array: Value[]) =>
-  makeCombination(() => array, CombinationType.ArrayOrValue);
+  new Combination(() => array, CombinationType.ArrayOrValue);
 export { some };
 
 export const optional = (value: Value): Combination =>
-  makeCombination(() => [value], CombinationType.Value);
+  new Combination(() => [value], CombinationType.Value);
 
 export const one = (values: Value[]) =>
-  makeCombination(() => values, CombinationType.Value);
+  new Combination(() => values, CombinationType.Value);
 
 export const generate = <T extends Record<string, Value>>(
   object: Record<keyof T, Combination | Value>
@@ -105,14 +101,15 @@ export const generate = <T extends Record<string, Value>>(
   ) as Partial<Record<keyof T, Value>>;
 
   return arrayCombinate(
-    Object.entries(object).reduce((arr, [key, valueFn]) => {
-      if (typeof valueFn === "function") {
-        const values: ReturnType<typeof valueFn> = valueFn();
+    Object.entries(object).reduce((arr, [key, combination]) => {
+      if (isCombination(combination)) {
+        const values: ReturnType<typeof combination["values"]> =
+          combination.values();
 
         const objValues = values.reduce(
           (valueObjArray: CombinationKeyValue<T>[], value) => {
             valueObjArray.push(
-              makeCombinationKeyValue([key, value], valueFn.type)
+              makeCombinationKeyValue([key, value], combination.type)
             );
             return valueObjArray;
           },
@@ -125,7 +122,6 @@ export const generate = <T extends Record<string, Value>>(
     }, [] as Array<CombinationKeyValue<T>>)
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
-    console.log(kvArr);
     kvArr.forEach((kv) => {
       const [key, value] = kv;
       switch (kv.type) {
