@@ -18,6 +18,19 @@ interface Combination {
   (): Value[];
   type: CombinationType;
 }
+
+interface CombinationKeyValue extends Array<Value> {
+  type: CombinationType;
+}
+
+const makeCombinationKeyValue = (
+  array: Value[],
+  type: CombinationType
+): CombinationKeyValue => {
+  (array as CombinationKeyValue).type = type;
+  return array as CombinationKeyValue;
+};
+
 const isCombination = (data: Combination | Value): data is Combination =>
   typeof data === "function" && data.type !== undefined;
 
@@ -110,7 +123,9 @@ export const generate = <T extends Record<string, Value | Combination>>(
         const values = valueFn();
 
         const objValues = values.reduce((valueObjArray, value) => {
-          valueObjArray.push([key, value]);
+          valueObjArray.push(
+            makeCombinationKeyValue([key, value], valueFn.type)
+          );
           return valueObjArray;
         }, [] as any);
 
@@ -121,7 +136,10 @@ export const generate = <T extends Record<string, Value | Combination>>(
   ).reduce((arr, kvArr) => {
     const newObject = { ...baseObject };
 
-    kvArr.forEach(([key, value]: [keyof T & string, Value]) => {
+    kvArr.forEach((kv) => {
+      // @ts-ignore
+      console.log(kv.type);
+      const [key, value]: [keyof T & string, Value] = kv;
       if (newObject[key] === undefined) {
         newObject[key] = value;
       } else if (Array.isArray(newObject[key])) {
