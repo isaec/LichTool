@@ -42,6 +42,16 @@ export const arrayCombinate = <T extends Value>(
   return resultStack;
 };
 
+export const some = (array: Value[]) =>
+  new Combination(() => arrayCombinate(array));
+
+export const optional = (value: Value): Combination =>
+  new Combination(() => [value, null]);
+
+export const one = (values: Value[]) => new Combination(() => values);
+
+// generate and associated functions below
+
 const makeBaseObject = <T>(
   shouldRemove: (key: keyof typeof object) => boolean,
   object: Record<string, T>
@@ -52,14 +62,6 @@ const makeBaseObject = <T>(
     }
     return baseObject;
   }, {} as Partial<typeof object>);
-
-export const some = (array: Value[]) =>
-  new Combination(() => arrayCombinate(array));
-
-export const optional = (value: Value): Combination =>
-  new Combination(() => [value, null]);
-
-export const one = (values: Value[]) => new Combination(() => values);
 
 export const generate = <T extends Record<string, Value>>(
   object: Record<keyof T, Combination | Value>
@@ -105,11 +107,9 @@ export const generate = <T extends Record<string, Value>>(
   return combos;
 };
 
-// goal api
 /*
 generate({
   a: some([1, 2, 3]),
   b: optional(10),
 })
-
 */
