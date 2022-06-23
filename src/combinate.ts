@@ -42,9 +42,21 @@ export const arrayCombinate = <T extends Value>(
   return resultStack;
 };
 
-export const some = (array: Value[]) =>
-  new Combination(() => arrayCombinate(array));
+/**
+ * generates the combination of all elements in values
+ *
+ * @param values the values to combine
+ * @returns the combination of every value in values, including an empty array
+ */
+export const some = (values: Value[]) =>
+  new Combination(() => arrayCombinate(values));
 
+/**
+ * generates the combination of defined and undefined for a value
+ *
+ * @param value the value which is optionally defined on the property
+ * @returns the combination of the defined and undefined state of the value
+ */
 export const optional = (value: Value): Combination =>
   new Combination(() => [value, null]);
 
