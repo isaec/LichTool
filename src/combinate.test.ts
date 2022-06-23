@@ -4,7 +4,7 @@ import { generate, one, optional, some } from "./combinate";
 generate<{
   opt?: number;
   required: number;
-  numberArray: number[];
+  numberArray?: Array<1 | 2 | 3> | "test";
 }>({
   opt: optional(1),
   required: 5,

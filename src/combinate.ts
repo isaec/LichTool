@@ -76,12 +76,13 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
-type GetElementType<T extends any[]> = T extends (infer U)[] ? U : never;
 type generateTemplate<Obj> = {
-  [key in keyof Obj]: undefined extends Obj[key]
-    ? undefined | Obj[key] | Combination<Obj[key]>
+  [key in keyof Obj]: undefined | Array<any> extends Obj[key]
+    ? Obj[key] | Combination<Obj[key]>
+    : undefined extends Obj[key]
+    ? Obj[key] | Combination<Obj[key]>
     : Obj[key] extends Array<any>
-    ? Obj[key] | Combination<Array<GetElementType<Obj[key]>>>
+    ? Obj[key] | Combination<Obj[key]>
     : Obj[key];
 };
 export const generate = <T extends Record<string, Value>>(
