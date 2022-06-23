@@ -90,15 +90,18 @@ export const generate = <T extends Record<string, Value>>(
 ): T[] => {
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
-    object
-  ) as Partial<T>;
+    object as Record<keyof T, Value>
+  );
 
-  const objectCombinations = Object.entries(object).reduce((array, [k, v]) => {
-    if (isCombination(v)) {
-      array.push([k, v.values()]);
-    }
-    return array;
-  }, [] as Array<CombinationKeyValues<T>>);
+  const objectCombinations = Object.entries(object).reduce(
+    (array, [k, v]: [string, Combination<Value> | Value]) => {
+      if (isCombination(v)) {
+        array.push([k, v.values()]);
+      }
+      return array;
+    },
+    [] as Array<CombinationKeyValues<T>>
+  );
 
   let combos: T[] = [];
 

@@ -4,10 +4,12 @@ import { generate, one, optional, some } from "./combinate";
 generate<{
   opt?: number;
   required: number;
+  alsoOptional?: number[] | string;
   numberArray?: Array<1 | 2 | 3> | "test";
 }>({
   opt: optional(1),
   required: 5,
+  alsoRequired: optional("10"),
   numberArray: some([1, 2, 3]),
 });
 
