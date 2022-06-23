@@ -4,22 +4,26 @@ exports[`matches snapshots for { a: [Combination], c: 6 } 1`] = `
 [
   {
     "a": [],
+    "c": 6,
   },
   {
     "a": [
       1,
     ],
+    "c": 6,
   },
   {
     "a": [
       2,
     ],
+    "c": 6,
   },
   {
     "a": [
       1,
       2,
     ],
+    "c": 6,
   },
 ]
 `;
@@ -28,18 +32,24 @@ exports[`matches snapshots for { a: [Combination], l: [Combination], b: 10, c: 6
 [
   {
     "a": [],
+    "b": 10,
+    "c": 6,
     "l": 5,
   },
   {
     "a": [
       1,
     ],
+    "b": 10,
+    "c": 6,
     "l": 5,
   },
   {
     "a": [
       2,
     ],
+    "b": 10,
+    "c": 6,
     "l": 5,
   },
   {
@@ -47,26 +57,36 @@ exports[`matches snapshots for { a: [Combination], l: [Combination], b: 10, c: 6
       1,
       2,
     ],
+    "b": 10,
+    "c": 6,
     "l": 5,
   },
   {
     "a": [],
+    "b": 10,
+    "c": 6,
   },
   {
     "a": [
       1,
     ],
+    "b": 10,
+    "c": 6,
   },
   {
     "a": [
       2,
     ],
+    "b": 10,
+    "c": 6,
   },
   {
     "a": [
       1,
       2,
     ],
+    "b": 10,
+    "c": 6,
   },
 ]
 `;

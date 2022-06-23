@@ -94,7 +94,7 @@ export const generate = <T extends Record<string, Value>>(
     for (let j = 0; j < values.length; j++) {
       const value = values[j];
       for (let k = 0; k < (combos.length || 1); k++) {
-        const combo = { ...combos[k] };
+        const combo = { ...baseObject, ...combos[k] };
         if (value !== null) combo[key] = value;
         scratch.push(combo);
       }
