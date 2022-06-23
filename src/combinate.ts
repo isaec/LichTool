@@ -67,7 +67,7 @@ export const generate = <T extends Record<string, Value>>(
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
     object
-  ) as Partial<Record<keyof T, Value>>;
+  ) as Partial<T>;
 
   const objectCombinations = Object.entries(object).reduce((array, [k, v]) => {
     if (isCombination(v)) {
@@ -76,26 +76,26 @@ export const generate = <T extends Record<string, Value>>(
     return array;
   }, [] as Array<CombinationKeyValues<T>>);
 
-  console.log(objectCombinations);
-
   let combos: T[] = [];
 
-  // iterate keys
-  //   make scratch array
-  //   iterate the values of that key
-  //     iterate every old combo
-  //       add this new key to that combo
-  //       add new combo to scratch
-  //   set combos to scratch
-
+  /*
+  iterate keys
+    make scratch array
+    iterate the values of that key
+      iterate every old combo
+        add this new key to that combo
+        add new combo to scratch
+    set combos to scratch
+  */
   for (let i = 0; i < objectCombinations.length; i++) {
     const [key, values] = objectCombinations[i];
     const scratch: T[] = [];
     for (let j = 0; j < values.length; j++) {
       const value = values[j];
       for (let k = 0; k < (combos.length || 1); k++) {
-        const combo = { ...baseObject, ...combos[k] };
-        if (value !== null) combo[key] = value;
+        const combo: T = Object.assign({}, baseObject, combos[k]);
+        // THIS CAST COULD BE INVALID FOR SOME GENERICS, RESULTING IN A RUNTIME ERROR
+        if (value !== null) (combo as Record<keyof T, Value>)[key] = value;
         scratch.push(combo);
       }
     }
