@@ -85,7 +85,8 @@ export type generateTemplate<Obj> = {
     : Obj[key];
 };
 export const generate = <T extends Record<string, Value>>(
-  object: generateTemplate<T>
+  object: generateTemplate<T>,
+  log = false
 ): T[] => {
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
@@ -101,6 +102,21 @@ export const generate = <T extends Record<string, Value>>(
     },
     [] as Array<CombinationKeyValues<T>>
   );
+
+  if (log) {
+    console.log("base object:", baseObject);
+    let hasNull = false;
+    console.log(
+      "combinations to apply:",
+      objectCombinations.reduce((obj, [k, values]) => {
+        obj[k] = values;
+        if (values.includes(null)) hasNull = true;
+        return obj;
+      }, {} as Record<string, Array<Value | null>>)
+    );
+    if (hasNull)
+      console.log("key will not be defined when combination value is", null);
+  }
 
   let combos: T[] = [];
 

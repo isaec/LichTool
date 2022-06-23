@@ -20,10 +20,10 @@ generate<{
   numberArray: some([1, 2, 3]),
 });
 
-const genTest = <T extends Record<string, Value>>(obj: generateTemplate<T>) => [
-  obj,
-  generate<T>(obj),
-];
+const genTest = <T extends Record<string, Value>>(
+  obj: generateTemplate<T>,
+  log?: boolean
+) => [obj, generate<T>(obj, log)];
 
 it.each([
   genTest({
