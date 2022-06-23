@@ -8,17 +8,18 @@ type Value =
     }
   | Value[];
 
-class Combination {
-  values: () => Array<Value | null>;
-  constructor(values: () => ReturnType<Combination["values"]>) {
+class Combination<T> {
+  values: () => Array<T>;
+  constructor(values: () => ReturnType<Combination<T>["values"]>) {
     this.values = values;
   }
 }
 
 type CombinationKeyValues<T> = [keyof T & string, Array<Value | null>];
 
-const isCombination = (data: Combination | Value): data is Combination =>
-  data instanceof Combination;
+const isCombination = <T>(
+  data: Combination<T> | Value
+): data is Combination<T> => data instanceof Combination;
 
 /**
  * returns an array with every combination of the keys of the passed array - not every ordering is returned
@@ -57,8 +58,8 @@ export const some = (values: Value[]) =>
  * @param value the value which is optionally defined on the property
  * @returns the combination of the defined and undefined state of the value
  */
-export const optional = (value: Value): Combination =>
-  new Combination(() => [value, null]);
+export const optional = <T>(value: T): Combination<T | undefined> =>
+  new Combination(() => [value, null as unknown as undefined]);
 
 export const one = (values: Value[]) => new Combination(() => values);
 
@@ -75,8 +76,13 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
+type generateTemplate<Obj> = {
+  [key in keyof Obj]: undefined extends Obj[key]
+    ? undefined | Obj[key] | Combination<Obj[key]>
+    : Obj[key];
+};
 export const generate = <T extends Record<string, Value>>(
-  object: Record<keyof T, Combination | Value>
+  object: generateTemplate<T>
 ): T[] => {
   const baseObject = makeBaseObject(
     (key) => isCombination(object[key]),
