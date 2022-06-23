@@ -1,5 +1,12 @@
 import { expect, it, describe } from "vitest";
-import { generate, one, optional, some } from "./combinate";
+import {
+  generate,
+  generateTemplate,
+  one,
+  optional,
+  some,
+  Value,
+} from "./combinate";
 
 generate<{
   opt?: number;
@@ -13,22 +20,34 @@ generate<{
   numberArray: some([1, 2, 3]),
 });
 
+const genTest = <T extends Record<string, Value>>(obj: generateTemplate<T>) => [
+  obj,
+  generate<T>(obj),
+];
+
 it.each([
-  {
+  genTest({
     a: some([1, 2]),
     c: 6,
-  },
-  {
+  }),
+  genTest<{
+    a: number[];
+    l?: number;
+    b: number;
+    c: number;
+  }>({
     a: some([1, 2]),
     l: optional(5),
     b: 10,
     c: 6,
-  },
-  {
+  }),
+  genTest<{
+    one: number;
+    optional?: 5;
+  }>({
     one: one([1, 2]),
     optional: optional(5),
-  },
-])(`matches snapshots for %s`, (generateObject) => {
-  // console.log(generateObject);
-  expect(generate(generateObject as any)).toMatchSnapshot();
+  }),
+])(`matches snapshots for %s`, (_template, generateObject) => {
+  expect(generateObject).toMatchSnapshot();
 });

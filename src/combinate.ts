@@ -1,6 +1,6 @@
 // https://codereview.stackexchange.com/questions/7001/generating-all-combinations-of-an-array
 
-type Value =
+export type Value =
   | string
   | number
   | {
@@ -79,7 +79,7 @@ const makeBaseObject = <T>(
     return baseObject;
   }, {} as Partial<typeof object>);
 
-type generateTemplate<Obj> = {
+export type generateTemplate<Obj> = {
   [key in keyof Obj]: Obj[key] extends infer T
     ? Obj[key] | Combination<T>
     : Obj[key];
