@@ -79,6 +79,8 @@ const makeBaseObject = <T>(
 type generateTemplate<Obj> = {
   [key in keyof Obj]: undefined extends Obj[key]
     ? undefined | Obj[key] | Combination<Obj[key]>
+    : Array<any> extends Obj[key]
+    ? Obj[key] | Combination<Array<any>>
     : Obj[key];
 };
 export const generate = <T extends Record<string, Value>>(

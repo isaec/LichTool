@@ -1,6 +1,16 @@
 import { expect, it, describe } from "vitest";
 import { generate, one, optional, some } from "./combinate";
 
+generate<{
+  opt?: number;
+  required: number;
+  numberArray: number[];
+}>({
+  opt: optional(1),
+  required: 5,
+  numberArray: some([1, 2, 3]),
+});
+
 it.each([
   {
     a: some([1, 2]),
