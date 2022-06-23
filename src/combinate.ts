@@ -15,7 +15,7 @@ class Combination {
   }
 }
 
-type CombinationKeyValue<T> = [keyof T & string, Value];
+type CombinationKeyValues<T> = [keyof T & string, Array<Value | null>];
 
 const isCombination = (data: Combination | Value): data is Combination =>
   data instanceof Combination;
@@ -68,6 +68,34 @@ export const generate = <T extends Record<string, Value>>(
     (key) => isCombination(object[key]),
     object
   ) as Partial<Record<keyof T, Value>>;
+
+  const objectCombinations = Object.entries(object).reduce((array, [k, v]) => {
+    if (isCombination(v)) {
+      array.push([k, v.values()]);
+    }
+    return array;
+  }, [] as Array<CombinationKeyValues<T>>);
+
+  console.log(objectCombinations);
+
+  const results: T[] = [];
+
+  for (
+    let i = 0;
+    i < objectCombinations.length;
+    i++
+  ) /* iterating object keys */ {
+    const key = objectCombinations[i][0];
+    for (
+      let j = 0;
+      j < objectCombinations[i][1].length;
+      j++
+    ) /* iterating key options */ {
+      const val = objectCombinations[i][1][j];
+    }
+  }
+
+  return results;
 };
 
 // goal api
