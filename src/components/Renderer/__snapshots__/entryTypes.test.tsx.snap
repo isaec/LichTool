@@ -1,5 +1,31 @@
 // Vitest Snapshot v1
 
+exports[`entryTypes > rendering {
+  type: 'quote',
+  entries: [Array],
+  by: 'Anon',
+  from: 'Archive of Lost Chats'
+} matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "Look, don't quote me on this, but"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      Anon
+      ,
+       
+      <cite>
+        Archive of Lost Chats
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] } matches snapshot 1`] = `
 <div>
   <div
@@ -51,6 +77,62 @@ exports[`entryTypes > rendering { type: 'list', items: [Array] } matches snapsho
       </p>
     </li>
   </ul>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "Look, don't quote me on this, but"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "Look, don't quote me on this, but"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      Anon
+      
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'Archive of Lost Chats' } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "Look, don't quote me on this, but"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite>
+        Archive of Lost Chats
+      </cite>
+    </figcaption>
+  </figure>
 </div>
 `;
 

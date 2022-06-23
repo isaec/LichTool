@@ -42,12 +42,12 @@ describe("entryTypes", () => {
     },
   ];
   const quoteData: Array<QuoteData> = [
-    // ...generate<QuoteData>({
-    //   type: "quote",
-    //   entries: ["Look, don't quote me on this, but"],
-    //   by: optional("Anon"),
-    //   from: optional("Archive of Lost Chats"),
-    // }),
+    ...generate<QuoteData>({
+      type: "quote",
+      entries: ["Look, don't quote me on this, but"],
+      by: optional("Anon"),
+      from: optional("Archive of Lost Chats"),
+    }),
     {
       type: "quote",
       entries: ["e", "i", "o"],
