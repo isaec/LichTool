@@ -78,24 +78,31 @@ export const generate = <T extends Record<string, Value>>(
 
   console.log(objectCombinations);
 
-  const results: T[] = [];
+  let combos: T[] = [];
 
-  for (
-    let i = 0;
-    i < objectCombinations.length;
-    i++
-  ) /* iterating object keys */ {
-    const key = objectCombinations[i][0];
-    for (
-      let j = 0;
-      j < objectCombinations[i][1].length;
-      j++
-    ) /* iterating key options */ {
-      const val = objectCombinations[i][1][j];
+  // iterate keys
+  //   make scratch array
+  //   iterate the values of that key
+  //     iterate every old combo
+  //       add this new key to that combo
+  //       add new combo to scratch
+  //   set combos to scratch
+
+  for (let i = 0; i < objectCombinations.length; i++) {
+    const [key, values] = objectCombinations[i];
+    const scratch: T[] = [];
+    for (let j = 0; j < values.length; j++) {
+      const value = values[j];
+      for (let k = 0; k < (combos.length || 1); k++) {
+        const combo = { ...combos[k] };
+        if (value !== null) combo[key] = value;
+        scratch.push(combo);
+      }
     }
+    combos = scratch;
   }
 
-  return results;
+  return combos;
 };
 
 // goal api
