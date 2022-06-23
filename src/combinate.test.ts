@@ -51,3 +51,14 @@ it.each([
 ])(`matches snapshots for %s`, (_template, generateObject) => {
   expect(generateObject).toMatchSnapshot();
 });
+
+// 1048576 combinations
+// console.log(
+//   generate<{}>({
+//     a: some([1, 2, 3, 4]),
+//     b: some([1, 2, 3, 4]),
+//     c: some([1, 2, 3, 4]),
+//     d: some([1, 2, 3, 4]),
+//     e: some([1, 2, 3, 4]),
+//   }).length
+// );
