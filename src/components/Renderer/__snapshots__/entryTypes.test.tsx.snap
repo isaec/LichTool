@@ -1,31 +1,5 @@
 // Vitest Snapshot v1
 
-exports[`entryTypes > rendering {
-  type: 'quote',
-  entries: [Array],
-  by: 'Anon',
-  from: 'Archive of Lost Chats'
-} matches snapshot 1`] = `
-<div>
-  <figure>
-    <blockquote>
-      <p>
-        "Look, don't quote me on this, but"
-      </p>
-    </blockquote>
-    <figcaption>
-      — 
-      Anon
-      ,
-       
-      <cite>
-        Archive of Lost Chats
-      </cite>
-    </figcaption>
-  </figure>
-</div>
-`;
-
 exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] } matches snapshot 1`] = `
 <div>
   <div
@@ -85,7 +59,7 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snap
   <figure>
     <blockquote>
       <p>
-        "Look, don't quote me on this, but"
+        "body of the quote"
       </p>
     </blockquote>
     <figcaption>
@@ -98,17 +72,20 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snap
 </div>
 `;
 
-exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } matches snapshot 1`] = `
+exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snapshot 2`] = `
 <div>
   <figure>
     <blockquote>
       <p>
-        "Look, don't quote me on this, but"
+        "two entries
+      </p>
+      <p>
+        for this quote"
       </p>
     </blockquote>
     <figcaption>
       — 
-      Anon
+      
       
       <cite />
     </figcaption>
@@ -116,38 +93,96 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'Anon' } 
 </div>
 `;
 
-exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'Archive of Lost Chats' } matches snapshot 1`] = `
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author' } matches snapshot 1`] = `
 <div>
   <figure>
     <blockquote>
       <p>
-        "Look, don't quote me on this, but"
+        "body of the quote"
       </p>
     </blockquote>
     <figcaption>
       — 
+      author
       
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author' } matches snapshot 2`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "two entries
+      </p>
+      <p>
+        for this quote"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      author
       
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author', from: 'source' } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "body of the quote"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      author
+      ,
+       
       <cite>
-        Archive of Lost Chats
+        source
       </cite>
     </figcaption>
   </figure>
 </div>
 `;
 
-exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place' } matches snapshot 1`] = `
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author', from: 'source' } matches snapshot 2`] = `
 <div>
   <figure>
     <blockquote>
       <p>
-        "e
+        "two entries
       </p>
       <p>
-        i
+        for this quote"
       </p>
+    </blockquote>
+    <figcaption>
+      — 
+      author
+      ,
+       
+      <cite>
+        source
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'source' } matches snapshot 1`] = `
+<div>
+  <figure>
+    <blockquote>
       <p>
-        o"
+        "body of the quote"
       </p>
     </blockquote>
     <figcaption>
@@ -155,7 +190,30 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'place'
       
       
       <cite>
-        place
+        source
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'source' } matches snapshot 2`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "two entries
+      </p>
+      <p>
+        for this quote"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite>
+        source
       </cite>
     </figcaption>
   </figure>
