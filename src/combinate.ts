@@ -59,9 +59,12 @@ export const some = <T extends Value>(values: T[]) =>
  * @returns the combination of the defined and undefined state of the value
  */
 export const optional = <T>(value: T): Combination<T | undefined> =>
-  new Combination(() => [value, null as unknown as undefined]);
+  new Combination(() => [
+    value,
+    null /* this is a necessary evil to allow optional to apply to undefined unions */ as unknown as undefined,
+  ]);
 
-export const one = (values: Value[]) => new Combination(() => values);
+export const one = <T>(values: T[]) => new Combination(() => values);
 
 // generate and associated functions below
 
@@ -77,12 +80,8 @@ const makeBaseObject = <T>(
   }, {} as Partial<typeof object>);
 
 type generateTemplate<Obj> = {
-  [key in keyof Obj]: undefined | Array<any> extends Obj[key]
-    ? Obj[key] | Combination<Obj[key]>
-    : undefined extends Obj[key]
-    ? Obj[key] | Combination<Obj[key]>
-    : Obj[key] extends Array<any>
-    ? Obj[key] | Combination<Obj[key]>
+  [key in keyof Obj]: Obj[key] extends infer T
+    ? Obj[key] | Combination<T>
     : Obj[key];
 };
 export const generate = <T extends Record<string, Value>>(

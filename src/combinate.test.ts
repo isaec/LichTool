@@ -8,8 +8,8 @@ generate<{
   numberArray?: Array<1 | 2 | 3> | "test";
 }>({
   opt: optional(1),
-  required: 5,
-  alsoRequired: optional("10"),
+  required: one([5, 6]),
+  alsoOptional: optional([1]),
   numberArray: some([1, 2, 3]),
 });
 
