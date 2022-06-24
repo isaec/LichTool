@@ -2,7 +2,7 @@ import { Component } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
-import { generate, one, optional } from "../../combinate";
+import { generate, one, optional } from "generate-combinations";
 import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
 import { DataNode, InsetData, ListData, QuoteData, SectionData } from "./types";
