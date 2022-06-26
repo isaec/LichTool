@@ -1,4 +1,4 @@
-const enum TokenTypes {
+export enum TokenTypes {
   "NUMBER",
   "ID",
   "+",
@@ -55,15 +55,24 @@ export class Lexer {
   }
 }
 
-const lex = (str: string) => {
+export const lex = (str: string) => {
   const cleanString = str.replace(/\s+/g, ""); // remove whitespace
 
-  const tkns = [];
-  while (s.length > 0) {
-    const token = tokens.find((t) => normalizeRegExp(t.re).test(s));
-    const match = normalizeRegExp(token.re).exec(s);
-    tkns.push({ type: token.type, match: match[0] });
-    s = s.substr(match[0].length);
+  let currentString = cleanString;
+
+  const tokenStack: Token[] = [];
+  while (currentString.length > 0) {
+    const validTokenMatcher = tokenMatchers.find((tokenMatcher) =>
+      tokenMatcher.re.test(currentString)
+    );
+    if (!validTokenMatcher) {
+      throw new Error(`Unknown token: ${currentString}`);
+    }
+    // known to not be null because matched test execution above
+    const match = validTokenMatcher.re.exec(currentString)![0];
+
+    tokenStack.push({ type: validTokenMatcher.type, match: match });
+    currentString = currentString.slice(match.length);
   }
-  return new Lexer(tkns);
+  return new Lexer(tokenStack);
 };
