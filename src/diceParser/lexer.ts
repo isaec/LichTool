@@ -1,6 +1,6 @@
 export enum TokenTypes {
   "NUMBER",
-  "ID",
+  "DICE",
   "+",
   "-",
   "*",
@@ -10,15 +10,15 @@ export enum TokenTypes {
   ")",
   "EOF",
 }
-export type Token = Readonly<{ type: TokenTypes; match?: string }>;
+export type Token = Readonly<{ type: TokenTypes; match: string }>;
 
 type TokenMatcher = Readonly<{
   type: TokenTypes;
   re: RegExp;
 }>;
-const tokenMatchers: TokenMatcher[] = [
+const tokenMatchers: Readonly<TokenMatcher[]> = [
   { type: TokenTypes["NUMBER"], re: /^(?:\d+(?:\.\d*)?|\.\d+)/ },
-  { type: TokenTypes["ID"], re: /^[A-Za-z]+/ },
+  { type: TokenTypes["DICE"], re: /^d/i },
   { type: TokenTypes["+"], re: /^\+/ },
   { type: TokenTypes["-"], re: /^-/ },
   { type: TokenTypes["*"], re: /^\*/ },
@@ -28,7 +28,7 @@ const tokenMatchers: TokenMatcher[] = [
   { type: TokenTypes[")"], re: /^\)/ },
 ];
 
-const EOF: Token = { type: TokenTypes["EOF"] };
+const EOF: Token = { type: TokenTypes["EOF"], match: "<<EOF>>" };
 
 // https://github.com/jrop/pratt-calculator
 
@@ -47,8 +47,7 @@ export class Lexer {
   }
   expect(type: TokenTypes) {
     const t = this.next();
-    if (type != t.type)
-      throw new Error(`Unexpected token: ${t.match || "<<EOF>>"}`);
+    if (type != t.type) throw new Error(`Unexpected token: ${t.match}`);
   }
   eof() {
     return this.position >= this.tokens.length;
