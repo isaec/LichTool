@@ -10,13 +10,7 @@ exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] 
     </h4>
     <p>
       <p>
-        a
-      </p>
-      <p>
-        b
-      </p>
-      <p>
-        c
+        woo
       </p>
     </p>
   </div>
@@ -33,7 +27,13 @@ exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] 
     </h4>
     <p>
       <p>
-        woo
+        a
+      </p>
+      <p>
+        b
+      </p>
+      <p>
+        c
       </p>
     </p>
   </div>
@@ -93,6 +93,39 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snap
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snapshot 3`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "quote with an
+      </p>
+      <div
+        class="inset"
+      >
+        <h4>
+          name
+        </h4>
+        <p>
+          <p>
+            inset!
+          </p>
+        </p>
+      </div>
+      <p>
+        "
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author' } matches snapshot 1`] = `
 <div>
   <figure>
@@ -120,6 +153,39 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author' 
       </p>
       <p>
         for this quote"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      author
+      
+      <cite />
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author' } matches snapshot 3`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "quote with an
+      </p>
+      <div
+        class="inset"
+      >
+        <h4>
+          name
+        </h4>
+        <p>
+          <p>
+            inset!
+          </p>
+        </p>
+      </div>
+      <p>
+        "
       </p>
     </blockquote>
     <figcaption>
@@ -177,6 +243,42 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author',
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], by: 'author', from: 'source' } matches snapshot 3`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "quote with an
+      </p>
+      <div
+        class="inset"
+      >
+        <h4>
+          name
+        </h4>
+        <p>
+          <p>
+            inset!
+          </p>
+        </p>
+      </div>
+      <p>
+        "
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      author
+      ,
+       
+      <cite>
+        source
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'source' } matches snapshot 1`] = `
 <div>
   <figure>
@@ -206,6 +308,41 @@ exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'source
       </p>
       <p>
         for this quote"
+      </p>
+    </blockquote>
+    <figcaption>
+      — 
+      
+      
+      <cite>
+        source
+      </cite>
+    </figcaption>
+  </figure>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'quote', entries: [Array], from: 'source' } matches snapshot 3`] = `
+<div>
+  <figure>
+    <blockquote>
+      <p>
+        "quote with an
+      </p>
+      <div
+        class="inset"
+      >
+        <h4>
+          name
+        </h4>
+        <p>
+          <p>
+            inset!
+          </p>
+        </p>
+      </div>
+      <p>
+        "
       </p>
     </blockquote>
     <figcaption>

@@ -29,26 +29,22 @@ describe("entryTypes", () => {
       items: ["stuff"],
     },
   ];
-  const insetData: Array<InsetData> = [
-    {
-      type: "inset",
-      name: "name",
-      entries: ["a", "b", "c"],
-    },
-    {
-      type: "inset",
-      name: "name",
-      entries: ["woo"],
-    },
-  ];
-  const quoteData: Array<QuoteData> = [
-    ...generate<QuoteData>({
-      type: "quote",
-      entries: one([["body of the quote"], ["two entries", "for this quote"]]),
-      by: optional("author"),
-      from: optional("source"),
-    }),
-  ];
+
+  const insetData = generate<InsetData>({
+    type: "inset",
+    name: one(["name"]),
+    entries: one([["woo"], ["a", "b", "c"]]),
+  });
+  const quoteData = generate<QuoteData>({
+    type: "quote",
+    entries: one([
+      ["body of the quote"],
+      ["two entries", "for this quote"],
+      ["quote with an", { type: "inset", name: "name", entries: ["inset!"] }],
+    ]),
+    by: optional("author"),
+    from: optional("source"),
+  });
   const tests: Array<DataNode> = [
     ...sectionData,
     ...listData,
