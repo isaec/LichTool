@@ -54,6 +54,34 @@ exports[`entryTypes > rendering { type: 'list', items: [Array] } matches snapsho
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'list', items: [Array] } matches snapshot 2`] = `
+<div>
+  <ul
+    class="list"
+  >
+    <li>
+      <p>
+        stuff
+      </p>
+    </li>
+    <li>
+      <div
+        class="inset"
+      >
+        <h4>
+          name
+        </h4>
+        <p>
+          <p>
+            inset!
+          </p>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'quote', entries: [Array] } matches snapshot 1`] = `
 <div>
   <figure>
@@ -366,6 +394,31 @@ exports[`entryTypes > rendering { type: 'section', name: 'name', entries: [Array
     <p>
       entry
     </p>
+  </p>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'section', name: 'name', entries: [Array] } matches snapshot 2`] = `
+<div>
+  <h1>
+    name
+  </h1>
+  <p>
+    <p>
+      entry
+    </p>
+    <div
+      class="inset"
+    >
+      <h4>
+        name
+      </h4>
+      <p>
+        <p>
+          inset!
+        </p>
+      </p>
+    </div>
   </p>
 </div>
 `;

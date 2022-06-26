@@ -16,20 +16,16 @@ vi.mock("./Renderer.module.scss", () => ({
 }));
 
 describe("entryTypes", () => {
-  const sectionData: SectionData[] = [
-    {
-      type: "section",
-      name: "name",
-      entries: ["entry"],
-    },
-  ];
-  const listData: ListData[] = [
-    {
-      type: "list",
-      items: ["stuff"],
-    },
-  ];
-
+  const inset: InsetData = { type: "inset", name: "name", entries: ["inset!"] };
+  const sectionData = generate<SectionData>({
+    type: "section",
+    name: "name",
+    entries: one([["entry"], ["entry", inset]]),
+  });
+  const listData: ListData[] = generate<ListData>({
+    type: "list",
+    items: one([["stuff"], ["stuff", inset]]),
+  });
   const insetData = generate<InsetData>({
     type: "inset",
     name: one(["name"]),
@@ -40,7 +36,7 @@ describe("entryTypes", () => {
     entries: one([
       ["body of the quote"],
       ["two entries", "for this quote"],
-      ["quote with an", { type: "inset", name: "name", entries: ["inset!"] }],
+      ["quote with an", inset],
     ]),
     by: optional("author"),
     from: optional("source"),
