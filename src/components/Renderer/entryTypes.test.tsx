@@ -5,7 +5,14 @@ import { vi, expect, describe, it, test } from "vitest";
 import { generate, one, optional } from "generate-combinations";
 import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
-import { DataNode, InsetData, ListData, QuoteData, SectionData } from "./types";
+import {
+  BonusData,
+  DataNode,
+  InsetData,
+  ListData,
+  QuoteData,
+  SectionData,
+} from "./types";
 
 vi.mock("./Renderer.module.scss", () => ({
   default: new Proxy(new Object(), {
@@ -16,36 +23,37 @@ vi.mock("./Renderer.module.scss", () => ({
 }));
 
 describe("entryTypes", () => {
+  // this is used to test how embedded type behaves
   const inset: InsetData = { type: "inset", name: "name", entries: ["inset!"] };
-  const sectionData = generate<SectionData>({
-    type: "section",
-    name: "name",
-    entries: one([["entry"], ["entry", inset]]),
-  });
-  const listData: ListData[] = generate<ListData>({
-    type: "list",
-    items: one([["stuff"], ["stuff", inset]]),
-  });
-  const insetData = generate<InsetData>({
-    type: "inset",
-    name: one(["name"]),
-    entries: one([["woo"], ["a", "b", "c"]]),
-  });
-  const quoteData = generate<QuoteData>({
-    type: "quote",
-    entries: one([
-      ["body of the quote"],
-      ["two entries", "for this quote"],
-      ["quote with an", inset],
-    ]),
-    by: optional("author"),
-    from: optional("source"),
-  });
   const tests: Array<DataNode> = [
-    ...sectionData,
-    ...listData,
-    ...insetData,
-    ...quoteData,
+    ...generate<SectionData>({
+      type: "section",
+      name: "name",
+      entries: one([["entry"], ["entry", inset]]),
+    }),
+    ...generate<ListData>({
+      type: "list",
+      items: one([["stuff"], ["stuff", inset]]),
+    }),
+    ...generate<InsetData>({
+      type: "inset",
+      name: one(["name"]),
+      entries: one([["woo"], ["a", "b", "c"]]),
+    }),
+    ...generate<QuoteData>({
+      type: "quote",
+      entries: one([
+        ["body of the quote"],
+        ["two entries", "for this quote"],
+        ["quote with an", inset],
+      ]),
+      by: optional("author"),
+      from: optional("source"),
+    }),
+    ...generate<BonusData>({
+      type: "bonus",
+      value: one([1, -2, 0]),
+    }),
   ];
   it.each(tests)(`rendering %s matches snapshot`, (data) => {
     const { unmount, container } = render(() => (

@@ -14,8 +14,16 @@ export type QuoteData = {
   by?: string;
   from?: string;
 };
-
-export type DataNode = SectionData | ListData | InsetData | QuoteData;
+export type BonusData = {
+  type: "bonus";
+  value: number;
+};
+export type DataNode =
+  | SectionData
+  | ListData
+  | InsetData
+  | QuoteData
+  | BonusData;
 export const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
 export type DataGroup = Array<DataNode | string>;

@@ -1,5 +1,32 @@
 // Vitest Snapshot v1
 
+exports[`entryTypes > rendering { type: 'bonus', value: -2 } matches snapshot 1`] = `
+<div>
+  <span>
+    
+    -2
+  </span>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'bonus', value: 0 } matches snapshot 1`] = `
+<div>
+  <span>
+    +
+    0
+  </span>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'bonus', value: 1 } matches snapshot 1`] = `
+<div>
+  <span>
+    +
+    1
+  </span>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] } matches snapshot 1`] = `
 <div>
   <div

@@ -2144,14 +2144,9 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
       <p>
         The 'bonus' type just sticks a + in front of things
       </p>
-      <span
-        class="error"
-      >
-        UNKNOWN type=bonus ERROR: 
-        <code>
-          {"type":"bonus","value":3}
-        </code>
-        
+      <span>
+        +
+        3
       </span>
       <p>
         We don't use that one much. It's useful because it allows us to store the data as a number, and render it with a plus sign as required, but it's mostly just forgotten about.

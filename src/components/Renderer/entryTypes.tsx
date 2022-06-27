@@ -1,6 +1,7 @@
 import { Component, createMemo, For, JSX, Show } from "solid-js";
 import { DataGroupRenderer, DataRenderer } from "./Renderer";
 import {
+  BonusData,
   InsetData,
   isDataNode,
   ListData,
@@ -126,6 +127,12 @@ const entryTypes = new Map(
         </figure>
       );
     },
+    bonus: (props: { data: BonusData }) => (
+      <span>
+        <Show when={props.data.value >= 0}>+</Show>
+        {props.data.value}
+      </span>
+    ),
   })
 );
 export default entryTypes;
