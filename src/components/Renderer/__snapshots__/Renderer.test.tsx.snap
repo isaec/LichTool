@@ -156,15 +156,9 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
               -4
             </code>
              which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="scaledice" ERROR: 
-              <code>
-                {@scaledice 2d6;3d6|2-9|1d6}
-              </code>
-              
-            </span>
+            <code>
+              1d6
+            </code>
              for each level beyond 2nd), for when a spell effect scales at higher levels. 
             <span
               class="error"

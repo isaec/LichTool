@@ -13,7 +13,7 @@ vi.mock("./Renderer.module.scss", () => ({
 }));
 
 describe("tags", () => {
-  const needPipe = new Set(["color", "link", "filter"]);
+  const needPipe = new Set(["color", "link", "filter", "scaledice"]);
   it.each([
     ["color", "test|ffffff"],
     ["color", "test|f00"],
@@ -30,6 +30,7 @@ describe("tags", () => {
       "filter",
       "Bard cantrips and first-level spells|spells|level=0;1|class=bard",
     ],
+    ["scaledice", "2d6;3d6|2-9|1d6"],
     ...[...tagMap.keys()]
       .filter((tag) => !needPipe.has(tag))
       .map((key) => [key, `${key} string!`]),

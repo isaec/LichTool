@@ -70,5 +70,6 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     hit: (props: { children: JSX.Element }) => <code>d20{props.children}</code>,
     damage: tag("code"),
     d20: (props: { children: JSX.Element }) => <code>d20{props.children}</code>,
+    scaledice: pipe((props) => <code>{props.p[2]}</code>),
   })
 );
