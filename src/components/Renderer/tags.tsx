@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
-import { Dynamic } from "solid-js/web";
+import { Dynamic, template } from "solid-js/web";
 
 import styles from "./Renderer.module.scss";
 
@@ -40,6 +40,25 @@ const tag =
       />
     );
 
+const templateTag =
+  (
+    tagString: keyof JSX.IntrinsicElements,
+    templater: (arg0: JSX.Element) => JSX.Element,
+    obj?: {
+      class?: string;
+      style?: string;
+    }
+  ): Component<{ children: JSX.Element }> =>
+  (props) =>
+    (
+      <Dynamic
+        component={tagString}
+        children={templater(props.children)}
+        class={obj?.class}
+        style={obj?.style}
+      />
+    );
+
 export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
   Object.entries({
     // intrinsic tags
@@ -67,9 +86,9 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
       </a>
     )),
     dice: tag("code"),
-    hit: (props: { children: JSX.Element }) => <code>d20{props.children}</code>,
+    hit: templateTag("code", (c) => <>d20{c}</>),
     damage: tag("code"),
-    d20: (props: { children: JSX.Element }) => <code>d20{props.children}</code>,
+    d20: templateTag("code", (c) => <>d20{c}</>),
     scaledice: pipe((props) => <code>{props.p[2]}</code>),
   })
 );
