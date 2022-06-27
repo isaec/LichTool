@@ -122,85 +122,39 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         <li>
           <p>
             Dice roller tags; 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="dice" ERROR: 
-              <code>
-                {@dice 1d2-2+2d3+5}
-              </code>
-              
-            </span>
+            <code>
+              1d2-2+2d3+5
+            </code>
              for regular dice rolls (
-            <span
-              class="error"
-            >
-              UNKNOWN tag="dice" ERROR: 
-              <code>
-                {@dice 1d6;2d6}
-              </code>
-              
-            </span>
+            <code>
+              1d6;2d6
+            </code>
              for multiple options; 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="dice" ERROR: 
-              <code>
-                {@dice 1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#}
-              </code>
-              
-            </span>
+            <code>
+              1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#
+            </code>
              for input prompts), with extended 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="dice" ERROR: 
-              <code>
-                {@dice 1d20+2|display text}
-              </code>
-              
-            </span>
+            <code>
+              1d20+2|display text
+            </code>
              and 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="dice" ERROR: 
-              <code>
-                {@dice 1d20+2|display text|rolled by name}
-              </code>
-              
-            </span>
+            <code>
+              1d20+2|display text|rolled by name
+            </code>
             , and a special 'hit' version which assumes a d20 is to be rolled 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="hit" ERROR: 
-              <code>
-                {@hit +7}
-              </code>
-              
-            </span>
+            <code>
+              d20
+              +7
+            </code>
              (and rolls advantage on shift-click, disadvantage on alt-click). There's also 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="damage" ERROR: 
-              <code>
-                {@damage 1d12+3}
-              </code>
-              
-            </span>
+            <code>
+              1d12+3
+            </code>
              which will roll critical hits on shift-click and half damage (rounding down) on alt-click, and 
-            <span
-              class="error"
-            >
-              UNKNOWN tag="d20" ERROR: 
-              <code>
-                {@d20 -4}
-              </code>
-              
-            </span>
+            <code>
+              d20
+              -4
+            </code>
              which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra 
             <span
               class="error"

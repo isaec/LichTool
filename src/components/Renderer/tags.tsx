@@ -59,11 +59,16 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
         {props.p0}
       </a>
     )),
+    // bad / unsupported tags
     filter: pipe((props) => (
       <a title={props.p?.slice(1).join("|")} href="#">
         {"UNSUPPORTED "}
         {props.p0}
       </a>
     )),
+    dice: tag("code"),
+    hit: (props: { children: JSX.Element }) => <code>d20{props.children}</code>,
+    damage: tag("code"),
+    d20: (props: { children: JSX.Element }) => <code>d20{props.children}</code>,
   })
 );

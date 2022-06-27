@@ -56,6 +56,31 @@ exports[`tags > {@color test|illegal-color} matches snapshot 1`] = `
 </div>
 `;
 
+exports[`tags > {@d20 d20 string!} matches snapshot 1`] = `
+<div>
+  <code>
+    d20
+    d20 string!
+  </code>
+</div>
+`;
+
+exports[`tags > {@damage damage string!} matches snapshot 1`] = `
+<div>
+  <code>
+    damage string!
+  </code>
+</div>
+`;
+
+exports[`tags > {@dice dice string!} matches snapshot 1`] = `
+<div>
+  <code>
+    dice string!
+  </code>
+</div>
+`;
+
 exports[`tags > {@filter Bard cantrips and first-level spells|spells|level=0;1|class=bard} matches snapshot 1`] = `
 <div>
   <a
@@ -77,6 +102,15 @@ exports[`tags > {@filter Races that have a bonus to Intelligence|races|Ability B
     UNSUPPORTED 
     Races that have a bonus to Intelligence
   </a>
+</div>
+`;
+
+exports[`tags > {@hit hit string!} matches snapshot 1`] = `
+<div>
+  <code>
+    d20
+    hit string!
+  </code>
 </div>
 `;
 
