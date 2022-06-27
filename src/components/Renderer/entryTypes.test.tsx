@@ -2,7 +2,7 @@ import { Component } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
-import { generate, one, optional } from "generate-combinations";
+import { generate, one, optional, illegal } from "generate-combinations";
 import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
 import {
@@ -10,6 +10,7 @@ import {
   BonusSpeed,
   DataNode,
   InsetData,
+  InsetReadaloudData,
   ListData,
   QuoteData,
   SectionData,
@@ -36,8 +37,8 @@ describe("entryTypes", () => {
       type: "list",
       items: one([["stuff"], ["stuff", inset]]),
     }),
-    ...generate<InsetData>({
-      type: "inset",
+    ...generate<InsetData | InsetReadaloudData>({
+      type: illegal<any, any>(one(["inset", "insetReadaloud"])),
       name: one(["name"]),
       entries: one([["woo"], ["a", "b", "c"]]),
     }),

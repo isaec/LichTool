@@ -8,6 +8,11 @@ export type ListData = {
   name?: string;
 };
 export type InsetData = { type: "inset"; name: string; entries: Data };
+export type InsetReadaloudData = {
+  type: "insetReadaloud";
+  name: string;
+  entries: Data;
+};
 export type QuoteData = {
   type: "quote";
   entries: DataGroup;
@@ -26,6 +31,7 @@ export type DataNode =
   | SectionData
   | ListData
   | InsetData
+  | InsetReadaloudData
   | QuoteData
   | BonusData
   | BonusSpeed;

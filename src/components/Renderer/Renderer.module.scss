@@ -51,6 +51,9 @@
 
   & .inset {
     background-color: $color-grey-800;
+    &.readaloud {
+      background-color: dim($color-blue-700);
+    }
   }
 
   & .underline {

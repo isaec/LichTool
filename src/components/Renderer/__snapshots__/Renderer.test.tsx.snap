@@ -2258,15 +2258,18 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           </p>
         </p>
       </div>
-      <span
-        class="error"
+      <div
+        class="inset readaloud"
       >
-        UNKNOWN type=insetReadaloud ERROR: 
-        <code>
-          {"type":"insetReadaloud","name":"Same As Above","entries":["But a different color."]}
-        </code>
-        
-      </span>
+        <h4>
+          Same As Above
+        </h4>
+        <p>
+          <p>
+            But a different color.
+          </p>
+        </p>
+      </div>
       <span
         class="error"
       >

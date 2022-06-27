@@ -9,6 +9,7 @@ import {
   QuoteData,
   SectionData,
   BonusSpeed,
+  InsetReadaloudData,
 } from "./types";
 
 import styles from "./Renderer.module.scss";
@@ -73,6 +74,12 @@ const entryTypes = new Map(
     },
     inset: (props: { data: InsetData }) => (
       <div class={styles.inset}>
+        <h4>{props.data.name}</h4>
+        {<DataRenderer data={props.data.entries} />}
+      </div>
+    ),
+    insetReadaloud: (props: { data: InsetReadaloudData }) => (
+      <div classList={{ [styles.inset]: true, [styles.readaloud]: true }}>
         <h4>{props.data.name}</h4>
         {<DataRenderer data={props.data.entries} />}
       </div>

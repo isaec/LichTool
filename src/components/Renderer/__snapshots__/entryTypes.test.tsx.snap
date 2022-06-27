@@ -97,6 +97,46 @@ exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] 
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'insetReadaloud', name: 'name', entries: [Array] } matches snapshot 1`] = `
+<div>
+  <div
+    class="inset readaloud"
+  >
+    <h4>
+      name
+    </h4>
+    <p>
+      <p>
+        woo
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'insetReadaloud', name: 'name', entries: [Array] } matches snapshot 2`] = `
+<div>
+  <div
+    class="inset readaloud"
+  >
+    <h4>
+      name
+    </h4>
+    <p>
+      <p>
+        a
+      </p>
+      <p>
+        b
+      </p>
+      <p>
+        c
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'list', items: [Array] } matches snapshot 1`] = `
 <div>
   <ul
