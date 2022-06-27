@@ -18,12 +18,17 @@ export type BonusData = {
   type: "bonus";
   value: number;
 };
+export type BonusSpeed = {
+  type: "bonusSpeed";
+  value: number;
+};
 export type DataNode =
   | SectionData
   | ListData
   | InsetData
   | QuoteData
-  | BonusData;
+  | BonusData
+  | BonusSpeed;
 export const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
 export type DataGroup = Array<DataNode | string>;

@@ -7,6 +7,7 @@ import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
 import {
   BonusData,
+  BonusSpeed,
   DataNode,
   InsetData,
   ListData,
@@ -53,6 +54,10 @@ describe("entryTypes", () => {
     ...generate<BonusData>({
       type: "bonus",
       value: one([1, -2, 0]),
+    }),
+    ...generate<BonusSpeed>({
+      type: "bonusSpeed",
+      value: one([100, -2, 15]),
     }),
   ];
   it.each(tests)(`rendering %s matches snapshot`, (data) => {

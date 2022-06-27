@@ -27,6 +27,36 @@ exports[`entryTypes > rendering { type: 'bonus', value: 1 } matches snapshot 1`]
 </div>
 `;
 
+exports[`entryTypes > rendering { type: 'bonusSpeed', value: -2 } matches snapshot 1`] = `
+<div>
+  <span>
+    
+    -2
+     ft.
+  </span>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'bonusSpeed', value: 15 } matches snapshot 1`] = `
+<div>
+  <span>
+    +
+    15
+     ft.
+  </span>
+</div>
+`;
+
+exports[`entryTypes > rendering { type: 'bonusSpeed', value: 100 } matches snapshot 1`] = `
+<div>
+  <span>
+    +
+    100
+     ft.
+  </span>
+</div>
+`;
+
 exports[`entryTypes > rendering { type: 'inset', name: 'name', entries: [Array] } matches snapshot 1`] = `
 <div>
   <div

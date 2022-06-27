@@ -8,6 +8,7 @@ import {
   listStyles,
   QuoteData,
   SectionData,
+  BonusSpeed,
 } from "./types";
 
 import styles from "./Renderer.module.scss";
@@ -131,6 +132,13 @@ const entryTypes = new Map(
       <span>
         <Show when={props.data.value >= 0}>+</Show>
         {props.data.value}
+      </span>
+    ),
+    bonusSpeed: (props: { data: BonusSpeed }) => (
+      <span>
+        <Show when={props.data.value >= 0}>+</Show>
+        {props.data.value}
+        {" ft."}
       </span>
     ),
   })

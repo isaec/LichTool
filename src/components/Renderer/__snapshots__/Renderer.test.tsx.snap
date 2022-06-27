@@ -2154,14 +2154,10 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
       <p>
         Similar story with 'bonusSpeed' type (these 'bonus' flavors are mainly used in the class tables)
       </p>
-      <span
-        class="error"
-      >
-        UNKNOWN type=bonusSpeed ERROR: 
-        <code>
-          {"type":"bonusSpeed","value":100}
-        </code>
-        
+      <span>
+        +
+        100
+         ft.
       </span>
       <p>
         The 'dice' type is rarely used, since the shorthand tag exists, but it looks like this:
