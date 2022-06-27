@@ -51,6 +51,8 @@
 
   & .inset {
     background-color: $color-grey-800;
+    margin: $size-2;
+    padding: $size-2;
     &.readaloud {
       background-color: dim($color-blue-700);
     }
