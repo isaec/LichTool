@@ -1,10 +1,22 @@
-import { Component } from "solid-js";
+import { Component, For } from "solid-js";
 import { DataSpell } from "./types";
+
+import styles from "./DataSpellElement.module.scss";
 
 const DataSpellElement: Component<{
   data: DataSpell;
 }> = (props) => {
-  return <p>{JSON.stringify(props.data, undefined, 2)}</p>;
+  return (
+    <div class={styles.DataSpellElement}>
+      <For each={Object.entries(props.data)}>
+        {([key, value]: [string, any]) => (
+          <p>
+            {key}: {JSON.stringify(value)}
+          </p>
+        )}
+      </For>
+    </div>
+  );
 };
 
 export default DataSpellElement;

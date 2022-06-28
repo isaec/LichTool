@@ -30,6 +30,8 @@ export type BonusSpeed = {
 /** the data of a spell */
 export type DataSpell = {
   name: string;
+  level: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+  school: "V";
 };
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {
