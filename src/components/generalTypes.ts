@@ -34,3 +34,42 @@ export const schoolAbbreviationMap: Map<SchoolAbbreviations, Schools> = new Map(
   ]
 );
 export type Sources = "PHB" | "XGE" | "SCAG";
+export type Distances =
+  | "feet"
+  | "miles"
+  | "self"
+  | "touch"
+  | "unlimited"
+  | "plane"
+  | "sight";
+export type Range =
+  | "special"
+  | "point"
+  | "line"
+  | "cube"
+  | "cone"
+  | "radius"
+  | "sphere"
+  | "hemisphere"
+  | "cylinder";
+export type DamageTypes =
+  | "acid"
+  | "bludgeoning"
+  | "cold"
+  | "fire"
+  | "force"
+  | "lightning"
+  | "necrotic"
+  | "piercing"
+  | "poison"
+  | "psychic"
+  | "radiant"
+  | "slashing"
+  | "thunder";
+export type Abilities =
+  | "strength"
+  | "constitution"
+  | "dexterity"
+  | "intelligence"
+  | "wisdom"
+  | "charisma";
