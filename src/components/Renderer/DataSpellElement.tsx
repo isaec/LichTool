@@ -1,4 +1,4 @@
-import { Component, For } from "solid-js";
+import { Component, For, Match, Switch } from "solid-js";
 import { DataSpell } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
@@ -9,7 +9,14 @@ const DataSpellElement: Component<{
   return (
     <div class={styles.DataSpellElement}>
       <i>
-        {props.data.level} level {props.data.school}
+        <Switch>
+          <Match when={props.data.level === 0}>Cantrip</Match>
+          <Match when={props.data.level === 1}>1st level</Match>
+          <Match when={props.data.level === 2}>2nd level</Match>
+          <Match when={props.data.level === 3}>3rd level</Match>
+          <Match when={props.data.level >= 4}>{props.data.level}th level</Match>
+        </Switch>{" "}
+        {props.data.school}
       </i>
       <p>
         <b>Casting time: </b>
