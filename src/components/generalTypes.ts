@@ -73,3 +73,12 @@ export type Abilities =
   | "intelligence"
   | "wisdom"
   | "charisma";
+export type Durations = "instant" | "timed" | "permanent" | "special";
+export type TimeUnits =
+  | "hour"
+  | "minute"
+  | "turn"
+  | "round"
+  | "week"
+  | "day"
+  | "year";

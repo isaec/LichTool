@@ -1,9 +1,11 @@
 import {
   Distances,
+  Durations,
   Levels,
   Ranges,
   SchoolAbbreviations,
   Sources,
+  TimeUnits,
 } from "@components/generalTypes";
 
 export type SectionData = { type: "section"; name: string; entries: DataGroup };
@@ -43,7 +45,15 @@ export type DataSpell = {
   time: { number: number; unit: "action" }[];
   range: { type: Ranges; distance: { type: Distances; amount: number } };
   components: { v: boolean; s: boolean; m: string };
-  duration: [{ type: "instant" }];
+  duration: [
+    {
+      type: Durations;
+      duration?: {
+        type: TimeUnits;
+        amount: number;
+      };
+    }
+  ];
   entries: DataGroup;
   source: Sources;
   page: number;

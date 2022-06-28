@@ -1,11 +1,9 @@
-import { Component, createMemo, For, JSX, Match, Switch } from "solid-js";
+import { Component, createMemo, For, JSX, Match, Show, Switch } from "solid-js";
 import { DataSpell } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer } from "./Renderer";
-
-const durationMap = new Map([["instant", "Instantaneous"]]);
 
 const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
   <p>
@@ -13,6 +11,9 @@ const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
     {props.children}
   </p>
 );
+
+const plural = (num: number, str: string) =>
+  `${num} ${str}${num > 1 ? "s" : ""}`;
 
 const DataSpellElement: Component<{
   data: DataSpell;
@@ -53,7 +54,17 @@ const DataSpellElement: Component<{
       </KeyValue>
       <KeyValue key={"Components"}>{components()}</KeyValue>
       <KeyValue key={"Duration"}>
-        {durationMap.get(props.data.duration[0].type)}
+        <Switch fallback={props.data.duration[0].type}>
+          <Match when={props.data.duration[0].type === "timed"}>
+            {plural(
+              props.data.duration[0].duration!.amount,
+              props.data.duration[0].duration!.type
+            )}
+          </Match>
+          <Match when={props.data.duration[0].type === "instant"}>
+            Instantaneous
+          </Match>
+        </Switch>
       </KeyValue>
       <DataGroupRenderer group={props.data.entries} />
     </div>
