@@ -43,7 +43,7 @@ export type DataSpell = {
   level: Levels;
   school: SchoolAbbreviations;
   time: { number: number; unit: "action" }[];
-  range: { type: Ranges; distance: { type: Distances; amount: number } };
+  range: { type: Ranges; distance?: { type: Distances; amount: number } };
   components: { v: boolean; s: boolean; m: string };
   duration: [
     {

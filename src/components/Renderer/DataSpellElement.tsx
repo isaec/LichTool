@@ -49,8 +49,22 @@ const DataSpellElement: Component<{
         {props.data.time[0].number} {props.data.time[0].unit}
       </KeyValue>
       <KeyValue key={"Range"}>
-        {props.data.range.type} {props.data.range.distance.amount}{" "}
-        {props.data.range.distance.type}
+        <Switch
+          fallback={
+            <>
+              {props.data.range.type}{" "}
+              <Show when={props.data.range.distance !== undefined}>
+                {props.data.range.distance!.amount}{" "}
+                {props.data.range.distance!.type}
+              </Show>
+            </>
+          }
+        >
+          <Match when={props.data.range.type === "point"}>
+            {props.data.range.distance!.amount}{" "}
+            {props.data.range.distance!.type}
+          </Match>
+        </Switch>
       </KeyValue>
       <KeyValue key={"Components"}>{components()}</KeyValue>
       <KeyValue key={"Duration"}>
