@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@testing-library/jest-dom': ^5.16.4
   '@types/babel__core': ^7.1.19
-  generate-combinations: ^1.0.0
+  generate-combinations: ^1.0.1
   jsdom: ^19.0.0
   sass: ^1.53.0
   solid-js: ^1.4.4
@@ -20,7 +20,7 @@ dependencies:
 devDependencies:
   '@testing-library/jest-dom': 5.16.4
   '@types/babel__core': 7.1.19
-  generate-combinations: 1.0.0
+  generate-combinations: 1.0.1
   jsdom: 19.0.0
   solid-testing-library: 0.3.0_solid-js@1.4.4
   typescript: 4.7.4
@@ -1140,8 +1140,8 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
-  /generate-combinations/1.0.0:
-    resolution: {integrity: sha512-JmWngpUg13iijM6+AclJmaUmQ9+y4HEZ1A+1dmX+MdxtL3tYhE3eyhNBNcPDy4GqzqQi3qa5R1VU1FZOt3eGaQ==}
+  /generate-combinations/1.0.1:
+    resolution: {integrity: sha512-E5jKkR/38rSYDCVnUpz6gGWgMlDxVo/B7MpvqIJ4CnpmsiKhkUAeAOOlLL8Q7BKzP1YPkrpU7g3/A5hiq7jgHA==}
     dev: true
 
   /gensync/1.0.0-beta.2:

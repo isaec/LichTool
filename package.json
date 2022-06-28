@@ -13,7 +13,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@types/babel__core": "^7.1.19",
-    "generate-combinations": "^1.0.0",
+    "generate-combinations": "^1.0.1",
     "jsdom": "^19.0.0",
     "solid-testing-library": "^0.3.0",
     "typescript": "^4.7.4",
