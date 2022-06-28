@@ -42,7 +42,7 @@ export type Distances =
   | "unlimited"
   | "plane"
   | "sight";
-export type Range =
+export type Ranges =
   | "special"
   | "point"
   | "line"

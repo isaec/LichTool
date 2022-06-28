@@ -1,4 +1,10 @@
-import { Levels, SchoolAbbreviations, Sources } from "@components/generalTypes";
+import {
+  Distances,
+  Levels,
+  Ranges,
+  SchoolAbbreviations,
+  Sources,
+} from "@components/generalTypes";
 
 export type SectionData = { type: "section"; name: string; entries: DataGroup };
 export const listStyles = new Set(["list-hang", "list-no-bullets"]);
@@ -35,7 +41,7 @@ export type DataSpell = {
   level: Levels;
   school: SchoolAbbreviations;
   time: { number: number; unit: "action" }[];
-  range: { type: "point"; distance: { type: "feet"; amount: number } };
+  range: { type: Ranges; distance: { type: Distances; amount: number } };
   components: { v: boolean; s: boolean; m: string };
   duration: [{ type: "instant" }];
   entries: DataGroup;
