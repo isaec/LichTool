@@ -1,4 +1,4 @@
-import { Component, createMemo, For, Match, Switch } from "solid-js";
+import { Component, createMemo, For, JSX, Match, Switch } from "solid-js";
 import { DataSpell } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
@@ -6,6 +6,13 @@ import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer } from "./Renderer";
 
 const durationMap = new Map([["instant", "Instantaneous"]]);
+
+const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
+  <p>
+    <b>{`${props.key}: `}</b>
+    {props.children}
+  </p>
+);
 
 const DataSpellElement: Component<{
   data: DataSpell;
@@ -37,23 +44,17 @@ const DataSpellElement: Component<{
         </Switch>{" "}
         {schoolAbbreviationMap.get(props.data.school)}
       </i>
-      <p>
-        <b>Casting time: </b>
+      <KeyValue key={"Casting time"}>
         {props.data.time[0].number} {props.data.time[0].unit}
-      </p>
-      <p>
-        <b>Range: </b>
+      </KeyValue>
+      <KeyValue key={"Range"}>
         {props.data.range.type} {props.data.range.distance.amount}{" "}
         {props.data.range.distance.type}
-      </p>
-      <p>
-        <b>Components: </b>
-        {components()}
-      </p>
-      <p>
-        <b>Duration: </b>
+      </KeyValue>
+      <KeyValue key={"Components"}>{components()}</KeyValue>
+      <KeyValue key={"Duration"}>
         {durationMap.get(props.data.duration[0].type)}
-      </p>
+      </KeyValue>
       <DataGroupRenderer group={props.data.entries} />
     </div>
   );
