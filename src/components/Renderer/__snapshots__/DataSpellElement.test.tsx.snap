@@ -1,0 +1,513 @@
+// Vitest Snapshot v1
+
+exports[`DataSpellElement displays text for levels > matches snapshot for {
+  name: 'spell name',
+  source: 'PHB',
+  page: 100,
+  school: 'P',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  level: 1
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          100
+        </small>
+      </h2>
+    </div>
+    <i>
+      1st-level
+       
+      Psionic
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        lol
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataSpellElement displays text for levels > matches snapshot for {
+  name: 'spell name',
+  source: 'PHB',
+  page: 100,
+  school: 'P',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  level: 2
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          100
+        </small>
+      </h2>
+    </div>
+    <i>
+      2nd-level
+       
+      Psionic
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        lol
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataSpellElement displays text for levels > matches snapshot for {
+  name: 'spell name',
+  source: 'PHB',
+  page: 100,
+  school: 'P',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  level: 3
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          100
+        </small>
+      </h2>
+    </div>
+    <i>
+      3rd-level
+       
+      Psionic
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        lol
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataSpellElement displays text for levels > matches snapshot for {
+  name: 'spell name',
+  source: 'PHB',
+  page: 100,
+  school: 'P',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  level: 4
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          100
+        </small>
+      </h2>
+    </div>
+    <i>
+      4
+      th-level
+       
+      Psionic
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        lol
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataSpellElement displays text for levels > matches snapshot for {
+  name: 'spell name',
+  source: 'PHB',
+  page: 100,
+  school: 'P',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  level: 5
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          100
+        </small>
+      </h2>
+    </div>
+    <i>
+      5
+      th-level
+       
+      Psionic
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        lol
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataSpellElement exhibits general behavior > matches snapshot for {
+  name: 'spell name',
+  page: 219,
+  level: 3,
+  school: 'I',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  source: 'PHB'
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          219
+        </small>
+      </h2>
+    </div>
+    <i>
+      3rd-level
+       
+      Illusion
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        Entry text, 
+        <b>
+          bold!
+        </b>
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataSpellElement exhibits general behavior > matches snapshot for {
+  name: 'spell name',
+  page: 219,
+  level: 3,
+  school: 'I',
+  time: [Array],
+  range: [Object],
+  components: [Object],
+  duration: [Array],
+  entries: [Array],
+  source: 'XGE'
+} 1`] = `
+<div>
+  <div
+    class="_DataSpellElement_1ty9d_1"
+  >
+    <div
+      class="_head_1ty9d_5"
+    >
+      <h2>
+        spell name
+      </h2>
+      <h2>
+        XGE
+         
+        <small>
+          p
+          219
+        </small>
+      </h2>
+    </div>
+    <i>
+      3rd-level
+       
+      Illusion
+    </i>
+    <p>
+      <b>
+        Casting time: 
+      </b>
+      1
+       
+      action
+    </p>
+    <p>
+      <b>
+        Range: 
+      </b>
+       
+      self
+    </p>
+    <p>
+      <b>
+        Components: 
+      </b>
+      V
+    </p>
+    <p>
+      <b>
+        Duration: 
+      </b>
+      1 minute
+    </p>
+    <p>
+      <p>
+        Entry text, 
+        <b>
+          bold!
+        </b>
+      </p>
+    </p>
+  </div>
+</div>
+`;

@@ -43,8 +43,8 @@ export type DataSpell = {
   level: Levels;
   school: SchoolAbbreviations;
   time: { number: number; unit: "action" }[];
-  range: { type: Ranges; distance?: { type: Distances; amount: number } };
-  components: { v: boolean; s: boolean; m: string };
+  range: { type: Ranges; distance?: { type: Distances; amount?: number } };
+  components: { v?: boolean; s?: boolean; m?: string };
   duration: [
     {
       type: Durations;
@@ -52,11 +52,14 @@ export type DataSpell = {
         type: TimeUnits;
         amount: number;
       };
+      concentration?: boolean;
     }
   ];
   entries: DataGroup;
   source: Sources;
   page: number;
+  srd?: boolean;
+  basicRules?: boolean;
 };
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {
