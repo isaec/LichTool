@@ -27,6 +27,15 @@ export type BonusSpeed = {
   type: "bonusSpeed";
   value: number;
 };
+/** the data of a spell */
+export type DataSpell = {
+  name: string;
+};
+/** the DataNode containing the data of a spell */
+export type DataSpellData = {
+  type: "dataSpell";
+  dataSpell: DataSpell;
+};
 export type DataNode =
   | SectionData
   | ListData
@@ -34,7 +43,8 @@ export type DataNode =
   | InsetReadaloudData
   | QuoteData
   | BonusData
-  | BonusSpeed;
+  | BonusSpeed
+  | DataSpellData;
 export const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
 export type DataGroup = Array<DataNode | string>;

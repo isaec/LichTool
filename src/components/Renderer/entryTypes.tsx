@@ -13,6 +13,7 @@ import {
 } from "./types";
 
 import styles from "./Renderer.module.scss";
+import DataSpellElement from "./DataSpellElement";
 
 const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
   props
@@ -147,6 +148,9 @@ const entryTypes = new Map(
         {props.data.value}
         {" ft."}
       </span>
+    ),
+    dataSpell: (props: { data: any }) => (
+      <DataSpellElement data={props.data.dataSpell} />
     ),
   })
 );
