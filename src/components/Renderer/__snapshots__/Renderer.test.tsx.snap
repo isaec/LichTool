@@ -2309,65 +2309,41 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
       <div
         class="_DataSpellElement_21okw_1"
       >
-        <p>
-          name
-          : 
-          "Fireball"
-        </p>
-        <p>
-          level
-          : 
+        <i>
           3
+           level 
+          V
+        </i>
+        <p>
+          <b>
+            Casting time: 
+          </b>
+          1
+           
+          action
         </p>
         <p>
-          school
-          : 
-          "V"
+          <b>
+            Range: 
+          </b>
+          point
+           
+          150
+          <!---->
+           
+          feet
         </p>
         <p>
-          time
-          : 
-          [{"number":1,"unit":"action"}]
-        </p>
-        <p>
-          range
-          : 
-          {"type":"point","distance":{"type":"feet","amount":150}}
-        </p>
-        <p>
-          components
-          : 
+          <b>
+            Components: 
+          </b>
           {"v":true,"s":true,"m":"a tiny ball of bat guano and sulfur"}
         </p>
         <p>
-          duration
-          : 
-          [{"type":"instant"}]
-        </p>
-        <p>
-          classes
-          : 
-          {"fromClassList":[{"name":"Sorcerer","source":"PHB"},{"name":"Wizard","source":"PHB"}],"fromSubclass":[{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Light","source":"PHB"}},{"class":{"name":"Warlock","source":"PHB"},"subclass":{"name":"Fiend","source":"PHB"}},{"class":{"name":"Cleric","source":"PHB"},"subclass":{"name":"Zeal (PSA)","source":"PSA"}}]}
-        </p>
-        <p>
-          source
-          : 
-          "PHB"
-        </p>
-        <p>
-          entries
-          : 
-          ["A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes {@dice 8d6} fire damage on a failed save, or half as much damage on a successful one.","The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried."]
-        </p>
-        <p>
-          entriesHigherLevel
-          : 
-          [{"type":"entries","name":"At Higher Levels","entries":["When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledice 8d6|3-9|1d6} for each slot level above 3rd."]}]
-        </p>
-        <p>
-          page
-          : 
-          241
+          <b>
+            Duration: 
+          </b>
+          instant
         </p>
       </div>
     </p>

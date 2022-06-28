@@ -8,13 +8,26 @@ const DataSpellElement: Component<{
 }> = (props) => {
   return (
     <div class={styles.DataSpellElement}>
-      <For each={Object.entries(props.data)}>
-        {([key, value]: [string, any]) => (
-          <p>
-            {key}: {JSON.stringify(value)}
-          </p>
-        )}
-      </For>
+      <i>
+        {props.data.level} level {props.data.school}
+      </i>
+      <p>
+        <b>Casting time: </b>
+        {props.data.time[0].number} {props.data.time[0].unit}
+      </p>
+      <p>
+        <b>Range: </b>
+        {props.data.range.type} {props.data.range.distance.amount}{" "}
+        {props.data.range.distance.type}
+      </p>
+      <p>
+        <b>Components: </b>
+        {JSON.stringify(props.data.components)}
+      </p>
+      <p>
+        <b>Duration: </b>
+        {props.data.duration[0].type}
+      </p>
     </div>
   );
 };

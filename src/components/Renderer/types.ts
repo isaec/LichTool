@@ -1,3 +1,5 @@
+import { Levels, Schools } from "components/generalTypes";
+
 export type SectionData = { type: "section"; name: string; entries: DataGroup };
 export const listStyles = new Set(["list-hang", "list-no-bullets"]);
 export type ListData = {
@@ -30,8 +32,12 @@ export type BonusSpeed = {
 /** the data of a spell */
 export type DataSpell = {
   name: string;
-  level: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-  school: "V";
+  level: Levels;
+  school: Schools;
+  time: { number: number; unit: "action" }[];
+  range: { type: "point"; distance: { type: "feet"; amount: number } };
+  components: { v: boolean; s: boolean; m: string };
+  duration: [{ type: "instant" }];
 };
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {
