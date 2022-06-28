@@ -1,4 +1,13 @@
+@use "@src/config" as *;
+
 .DataSpellElement {
   display: flex;
   flex-direction: column;
+  & .head {
+    display: flex;
+    justify-content: space-between;
+    & > h2 > small {
+      font-size: $scale-000;
+    }
+  }
 }

@@ -21,6 +21,12 @@ const DataSpellElement: Component<{
   );
   return (
     <div class={styles.DataSpellElement}>
+      <div class={styles.head}>
+        <h2>{props.data.name}</h2>
+        <h2>
+          {props.data.source} <small>p{props.data.page}</small>
+        </h2>
+      </div>
       <i>
         <Switch>
           <Match when={props.data.level === 0}>Cantrip</Match>

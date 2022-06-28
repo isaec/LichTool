@@ -1,4 +1,4 @@
-import { Levels, SchoolAbbreviations } from "@components/generalTypes";
+import { Levels, SchoolAbbreviations, Sources } from "@components/generalTypes";
 
 export type SectionData = { type: "section"; name: string; entries: DataGroup };
 export const listStyles = new Set(["list-hang", "list-no-bullets"]);
@@ -39,6 +39,8 @@ export type DataSpell = {
   components: { v: boolean; s: boolean; m: string };
   duration: [{ type: "instant" }];
   entries: DataGroup;
+  source: Sources;
+  page: number;
 };
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {

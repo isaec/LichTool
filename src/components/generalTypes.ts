@@ -33,3 +33,4 @@ export const schoolAbbreviationMap: Map<SchoolAbbreviations, Schools> = new Map(
     ["P", "Psionic"],
   ]
 );
+export type Sources = "PHB" | "XGE" | "SCAG";

@@ -2307,8 +2307,23 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         Spells; as above:
       </p>
       <div
-        class="_DataSpellElement_21okw_1"
+        class="_DataSpellElement_1ty9d_1"
       >
+        <div
+          class="_head_1ty9d_5"
+        >
+          <h2>
+            Fireball
+          </h2>
+          <h2>
+            PHB
+             
+            <small>
+              p
+              241
+            </small>
+          </h2>
+        </div>
         <i>
           3rd-level
            
