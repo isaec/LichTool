@@ -3,6 +3,7 @@ import { DataSpell } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
+import { DataGroupRenderer } from "./Renderer";
 
 const durationMap = new Map([["instant", "Instantaneous"]]);
 
@@ -47,6 +48,7 @@ const DataSpellElement: Component<{
         <b>Duration: </b>
         {durationMap.get(props.data.duration[0].type)}
       </p>
+      <DataGroupRenderer group={props.data.entries} />
     </div>
   );
 };

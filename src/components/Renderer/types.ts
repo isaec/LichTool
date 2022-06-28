@@ -38,6 +38,7 @@ export type DataSpell = {
   range: { type: "point"; distance: { type: "feet"; amount: number } };
   components: { v: boolean; s: boolean; m: string };
   duration: [{ type: "instant" }];
+  entries: DataGroup;
 };
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {
