@@ -1,12 +1,23 @@
-import { Component, For, Match, Switch } from "solid-js";
+import { Component, createMemo, For, Match, Switch } from "solid-js";
 import { DataSpell } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 
+const durationMap = new Map([["instant", "Instantaneous"]]);
+
 const DataSpellElement: Component<{
   data: DataSpell;
 }> = (props) => {
+  const components = createMemo(() =>
+    Object.entries(props.data.components)
+      .map(([component, value]) =>
+        value === true
+          ? component.toUpperCase()
+          : `${component.toUpperCase()} (${value})`
+      )
+      .join(", ")
+  );
   return (
     <div class={styles.DataSpellElement}>
       <i>
@@ -30,11 +41,11 @@ const DataSpellElement: Component<{
       </p>
       <p>
         <b>Components: </b>
-        {JSON.stringify(props.data.components)}
+        {components()}
       </p>
       <p>
         <b>Duration: </b>
-        {props.data.duration[0].type}
+        {durationMap.get(props.data.duration[0].type)}
       </p>
     </div>
   );

@@ -2337,13 +2337,13 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <b>
             Components: 
           </b>
-          {"v":true,"s":true,"m":"a tiny ball of bat guano and sulfur"}
+          V, S, M (a tiny ball of bat guano and sulfur)
         </p>
         <p>
           <b>
             Duration: 
           </b>
-          instant
+          Instantaneous
         </p>
       </div>
     </p>
