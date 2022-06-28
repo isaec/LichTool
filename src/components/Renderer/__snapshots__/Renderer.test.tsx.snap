@@ -2310,9 +2310,9 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         class="_DataSpellElement_21okw_1"
       >
         <i>
-          3rd level
+          3rd-level
            
-          V
+          Evocation
         </i>
         <p>
           <b>
