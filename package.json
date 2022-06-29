@@ -14,6 +14,8 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@types/babel__core": "^7.1.19",
     "generate-combinations": "^1.0.1",
+    "glob": "^8.0.3",
+    "glob-promise": "^4.2.2",
     "jsdom": "^19.0.0",
     "sass": "^1.53.0",
     "solid-testing-library": "^0.3.0",
