@@ -4,8 +4,6 @@ import { DataSpell, EntriesData, EntryLevels } from "./types";
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer } from "./Renderer";
-import entryTypes from "./entryTypes";
-import { Dynamic } from "solid-js/web";
 
 const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
   <p>

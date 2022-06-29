@@ -3,7 +3,7 @@ import { Dynamic } from "solid-js/web";
 import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
 import { generate, one, optional, illegal } from "generate-combinations";
-import entryTypes from "./entryTypes";
+import * as entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
 import {
   BonusData,
@@ -63,7 +63,7 @@ describe("entryTypes", () => {
   ];
   it.each(tests)(`rendering %s matches snapshot`, (data) => {
     const { unmount, container } = render(() => (
-      <Dynamic component={entryTypes.get(data.type) as any} data={data} />
+      <Dynamic component={entryTypes[data.type] as any} data={data} />
     ));
 
     expect(container).toMatchSnapshot();
