@@ -7,7 +7,7 @@ import entryTypes from "./entryTypes";
 import styles from "./Renderer.module.scss";
 import {
   BonusData,
-  BonusSpeed,
+  BonusSpeedData,
   DataNode,
   InsetData,
   InsetReadaloudData,
@@ -56,7 +56,7 @@ describe("entryTypes", () => {
       type: "bonus",
       value: one([1, -2, 0]),
     }),
-    ...generate<BonusSpeed>({
+    ...generate<BonusSpeedData>({
       type: "bonusSpeed",
       value: one([100, -2, 15]),
     }),

@@ -8,8 +8,10 @@ import {
   listStyles,
   QuoteData,
   SectionData,
-  BonusSpeed,
+  BonusSpeedData,
   InsetReadaloudData,
+  DataSpellData,
+  EntriesData,
 } from "./types";
 
 import styles from "./Renderer.module.scss";
@@ -142,15 +144,18 @@ const entryTypes = new Map(
         {props.data.value}
       </span>
     ),
-    bonusSpeed: (props: { data: BonusSpeed }) => (
+    bonusSpeed: (props: { data: BonusSpeedData }) => (
       <span>
         <Show when={props.data.value >= 0}>+</Show>
         {props.data.value}
         {" ft."}
       </span>
     ),
-    dataSpell: (props: { data: any }) => (
+    dataSpell: (props: { data: DataSpellData }) => (
       <DataSpellElement data={props.data.dataSpell} />
+    ),
+    entries: (props: { data: EntriesData; level?: 0 | 1 | 2 }) => (
+      <p>{JSON.stringify(props.data)}</p>
     ),
   })
 );

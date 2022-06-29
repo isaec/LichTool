@@ -1535,15 +1535,9 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                 </a>
                  where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.
               </p>
-              <span
-                class="error"
-              >
-                UNKNOWN type=entries ERROR: 
-                <code>
-                  {"type":"entries","name":"Note","entries":["Setting a filter to \\"no value\\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.","The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."]}
-                </code>
-                
-              </span>
+              <p>
+                {"type":"entries","name":"Note","entries":["Setting a filter to \\"no value\\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.","The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."]}
+              </p>
             </p>
           </div>
         </li>
@@ -1919,24 +1913,12 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         </b>
         , although there are often better ways to get the combination of bold and italic that you're probably going to use this for; consider using one of the properly typed objects below (such as level 2 headers).
       </p>
-      <span
-        class="error"
-      >
-        UNKNOWN type=entries ERROR: 
-        <code>
-          {"type":"entries","name":"A Subclass Name, For Example","entries":["The above is a 'level 0' header.","The 'name' property is optional",{"type":"entries","name":"A Subclass Feature Name","entries":["The above is a 'level 1' header.",{"type":"entries","name":"A Subclass Feature Inline Header","entries":["This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.","Note that the period in the inline name is added automagically."]}]}]}
-        </code>
-        
-      </span>
-      <span
-        class="error"
-      >
-        UNKNOWN type=entries ERROR: 
-        <code>
-          {"type":"entries","entries":[{"type":"entries","entries":[{"type":"entries","name":"This is an example of a level 2 header with no real parents","entries":["This technique can be useful, sometimes."]}]}]}
-        </code>
-        
-      </span>
+      <p>
+        {"type":"entries","name":"A Subclass Name, For Example","entries":["The above is a 'level 0' header.","The 'name' property is optional",{"type":"entries","name":"A Subclass Feature Name","entries":["The above is a 'level 1' header.",{"type":"entries","name":"A Subclass Feature Inline Header","entries":["This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.","Note that the period in the inline name is added automagically."]}]}]}
+      </p>
+      <p>
+        {"type":"entries","entries":[{"type":"entries","entries":[{"type":"entries","name":"This is an example of a level 2 header with no real parents","entries":["This technique can be useful, sometimes."]}]}]}
+      </p>
       <span
         class="error"
       >

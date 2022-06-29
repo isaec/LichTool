@@ -33,9 +33,14 @@ export type BonusData = {
   type: "bonus";
   value: number;
 };
-export type BonusSpeed = {
+export type BonusSpeedData = {
   type: "bonusSpeed";
   value: number;
+};
+export type EntriesData = {
+  type: "entries";
+  name?: string;
+  entries: DataGroup;
 };
 /** the data of a spell */
 export type DataSpell = {
@@ -73,7 +78,7 @@ export type DataNode =
   | InsetReadaloudData
   | QuoteData
   | BonusData
-  | BonusSpeed
+  | BonusSpeedData
   | DataSpellData;
 export const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";
