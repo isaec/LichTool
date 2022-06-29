@@ -1535,10 +1535,10 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                 </a>
                  where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.
               </p>
-              <p>
-                <b>
-                  (L0) Note
-                </b>
+              <div>
+                <h2>
+                  Note
+                </h2>
                 <p>
                   <p>
                     Setting a filter to "no value", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.
@@ -1547,7 +1547,7 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                     The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag.
                   </p>
                 </p>
-              </p>
+              </div>
             </p>
           </div>
         </li>
@@ -1923,10 +1923,10 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         </b>
         , although there are often better ways to get the combination of bold and italic that you're probably going to use this for; consider using one of the properly typed objects below (such as level 2 headers).
       </p>
-      <p>
-        <b>
-          (L0) A Subclass Name, For Example
-        </b>
+      <div>
+        <h2>
+          A Subclass Name, For Example
+        </h2>
         <p>
           <p>
             The above is a 'level 0' header.
@@ -1934,17 +1934,17 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <p>
             The 'name' property is optional
           </p>
-          <p>
-            <b>
-              (L1) A Subclass Feature Name
-            </b>
+          <div>
+            <h3>
+              A Subclass Feature Name
+            </h3>
             <p>
               <p>
                 The above is a 'level 1' header.
               </p>
-              <p>
+              <div>
                 <b>
-                  (L2) A Subclass Feature Inline Header
+                  A Subclass Feature Inline Header
                 </b>
                 <p>
                   <p>
@@ -1954,35 +1954,31 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                     Note that the period in the inline name is added automagically.
                   </p>
                 </p>
-              </p>
+              </div>
             </p>
-          </p>
+          </div>
         </p>
-      </p>
-      <p>
-        <b>
-          (L0) undefined
-        </b>
+      </div>
+      <div>
+        <h2 />
         <p>
-          <p>
-            <b>
-              (L1) undefined
-            </b>
+          <div>
+            <h3 />
             <p>
-              <p>
+              <div>
                 <b>
-                  (L2) This is an example of a level 2 header with no real parents
+                  This is an example of a level 2 header with no real parents
                 </b>
                 <p>
                   <p>
                     This technique can be useful, sometimes.
                   </p>
                 </p>
-              </p>
+              </div>
             </p>
-          </p>
+          </div>
         </p>
-      </p>
+      </div>
       <span
         class="error"
       >
