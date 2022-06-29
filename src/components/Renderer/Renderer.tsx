@@ -198,27 +198,23 @@ export const DataGroupRenderer: Component<{
 export const DataNodeRenderer: Component<{
   data: DataNode;
   entryLevel?: EntryLevels;
-}> = (props) => {
-  const Entry = createMemo(() => entryTypes.get(props.data.type));
-
-  return (
-    <Show
-      when={Entry() !== undefined}
-      fallback={
-        <RenderError
-          error={`UNKNOWN type=${props.data.type}`}
-          details={JSON.stringify(props.data)}
-        />
-      }
-    >
-      <Dynamic
-        component={Entry() as any}
-        data={props.data}
-        entryLevel={props.entryLevel}
+}> = (props) => (
+  <Show
+    when={entryTypes.has(props.data.type)}
+    fallback={
+      <RenderError
+        error={`UNKNOWN type=${props.data.type}`}
+        details={JSON.stringify(props.data)}
       />
-    </Show>
-  );
-};
+    }
+  >
+    <Dynamic
+      component={entryTypes.get(props.data.type) as any}
+      data={props.data}
+      entryLevel={props.entryLevel}
+    />
+  </Show>
+);
 
 export const DataRenderer: Component<{
   data: Data;

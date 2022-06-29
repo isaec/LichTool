@@ -1,4 +1,13 @@
-import { Component, createMemo, For, JSX, mergeProps, Show } from "solid-js";
+import {
+  Component,
+  createMemo,
+  For,
+  JSX,
+  Match,
+  mergeProps,
+  Show,
+  Switch,
+} from "solid-js";
 import { DataGroupRenderer, DataRenderer } from "./Renderer";
 import {
   BonusData,
@@ -17,6 +26,7 @@ import {
 
 import styles from "./Renderer.module.scss";
 import DataSpellElement from "./DataSpellElement";
+import RenderError from "./RenderError";
 
 const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
   props
@@ -158,13 +168,41 @@ const entryTypes = new Map(
     entries: (props: { data: EntriesData; entryLevel?: EntryLevels }) => {
       const merged = mergeProps({ entryLevel: 0 }, props);
       return (
-        <p>
-          <b>{`(L${merged.entryLevel}) ${merged.data.name}`}</b>
-          <DataGroupRenderer
-            group={merged.data.entries}
-            entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
-          />
-        </p>
+        <Switch
+          fallback={
+            <RenderError
+              error={`unexpected entry nest depth ${merged.entryLevel}`}
+            />
+          }
+        >
+          <Match when={merged.entryLevel === 0}>
+            <div>
+              <h2>{merged.data.name}</h2>
+              <DataGroupRenderer
+                group={merged.data.entries}
+                entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
+              />
+            </div>
+          </Match>
+          <Match when={merged.entryLevel === 1}>
+            <div>
+              <h3>{merged.data.name}</h3>
+              <DataGroupRenderer
+                group={merged.data.entries}
+                entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
+              />
+            </div>
+          </Match>
+          <Match when={merged.entryLevel === 2}>
+            <div>
+              <b>{merged.data.name}</b>
+              <DataGroupRenderer
+                group={merged.data.entries}
+                entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
+              />
+            </div>
+          </Match>
+        </Switch>
       );
     },
   })
