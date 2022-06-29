@@ -195,7 +195,11 @@ const entryTypes = new Map(
           </Match>
           <Match when={merged.entryLevel === 2}>
             <div>
-              <b>{merged.data.name}</b>
+              <b>
+                <i>{`${merged.data.name}${
+                  merged.data.name?.at(-1) === "." ? "" : "."
+                }`}</i>
+              </b>
               <DataGroupRenderer
                 group={merged.data.entries}
                 entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}

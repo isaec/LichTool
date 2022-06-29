@@ -1944,7 +1944,9 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
               </p>
               <div>
                 <b>
-                  A Subclass Feature Inline Header
+                  <i>
+                    A Subclass Feature Inline Header.
+                  </i>
                 </b>
                 <p>
                   <p>
@@ -1967,7 +1969,9 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             <p>
               <div>
                 <b>
-                  This is an example of a level 2 header with no real parents
+                  <i>
+                    This is an example of a level 2 header with no real parents.
+                  </i>
                 </b>
                 <p>
                   <p>
