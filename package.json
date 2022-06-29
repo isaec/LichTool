@@ -1,5 +1,5 @@
 {
-  "name": "vite-template-solid",
+  "name": "lich-tool",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -15,6 +15,7 @@
     "@types/babel__core": "^7.1.19",
     "generate-combinations": "^1.0.1",
     "jsdom": "^19.0.0",
+    "sass": "^1.53.0",
     "solid-testing-library": "^0.3.0",
     "typescript": "^4.7.4",
     "vite": "^2.9.12",
@@ -22,7 +23,6 @@
     "vitest": "^0.15.2"
   },
   "dependencies": {
-    "sass": "^1.53.0",
     "solid-js": "^1.4.4"
   }
 }
