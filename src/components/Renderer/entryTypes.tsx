@@ -177,7 +177,9 @@ const entryTypes = new Map(
         >
           <Match when={merged.entryLevel === 0}>
             <div>
-              <h2>{merged.data.name}</h2>
+              <Show when={merged.data.name !== undefined}>
+                <h2>{merged.data.name}</h2>
+              </Show>
               <DataGroupRenderer
                 group={merged.data.entries}
                 entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
@@ -186,7 +188,9 @@ const entryTypes = new Map(
           </Match>
           <Match when={merged.entryLevel === 1}>
             <div>
-              <h3>{merged.data.name}</h3>
+              <Show when={merged.data.name !== undefined}>
+                <h3>{merged.data.name}</h3>
+              </Show>
               <DataGroupRenderer
                 group={merged.data.entries}
                 entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
