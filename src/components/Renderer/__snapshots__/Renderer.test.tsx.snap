@@ -1944,13 +1944,12 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
               </p>
               <div>
                 <div
-                  class="entries"
+                  class="inlineHeader"
                 >
                   <b>
                     <i>
-                      A Subclass Feature Inline Header.
+                      A Subclass Feature Inline Header. 
                     </i>
-                     
                   </b>
                   <p>
                     This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.
@@ -1972,13 +1971,12 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             <p>
               <div>
                 <div
-                  class="entries"
+                  class="inlineHeader"
                 >
                   <b>
                     <i>
-                      This is an example of a level 2 header with no real parents.
+                      This is an example of a level 2 header with no real parents. 
                     </i>
-                     
                   </b>
                   <p>
                     This technique can be useful, sometimes.
@@ -2334,26 +2332,26 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           </p>
           <div>
             <div
-              class="entries"
+              class="inlineHeader"
             >
               <b>
                 <i>
-                  Inline Header.
+                  Inline Header. 
                 </i>
-                 
               </b>
               <p>
                 Text text text
               </p>
-              <span
-                class="error"
+              <div
+                class="inlineHeader"
               >
-                UNKNOWN type=variantSub ERROR: 
-                <code>
-                  {"type":"variantSub","name":"These can have child items","entries":["And the header style for them is unique, so this exists to cope with that."]}
-                </code>
-                
-              </span>
+                <i>
+                  These can have child items. 
+                </i>
+                <p>
+                  And the header style for them is unique, so this exists to cope with that.
+                </p>
+              </div>
             </div>
           </div>
         </p>
@@ -2451,13 +2449,12 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         <p>
           <div>
             <div
-              class="entries"
+              class="inlineHeader"
             >
               <b>
                 <i>
-                  At Higher Levels.
+                  At Higher Levels. 
                 </i>
-                 
               </b>
               <p>
                 When you cast this spell using a spell slot of 4th level or higher, the damage increases by 

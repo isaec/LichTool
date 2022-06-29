@@ -34,6 +34,11 @@ const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
   props
 ) => (props.condition ? props.children : <li>{props.children}</li>);
 
+/**
+ * adds a period if last char is not a period, and includes space regardless.
+ */
+const addPeriod = (str: string) => (str.endsWith(".") ? `${str} ` : `${str}. `);
+
 const entryTypes = new Map(
   Object.entries({
     // each key corresponds to a "type": "xxx"
@@ -105,6 +110,18 @@ const entryTypes = new Map(
         <h4>{props.data.name}</h4>
         {<DataRenderer data={props.data.entries} entryLevel={2} />}
       </div>
+    ),
+    variantSub: (props: { data: VariantData }) => (
+      <DataGroupRenderer
+        group={props.data.entries}
+        entryLevel={2}
+        wrapper={(wProps) => (
+          <div class={styles.inlineHeader}>
+            <i>{addPeriod(props.data.name)}</i>
+            {wProps.children}
+          </div>
+        )}
+      />
     ),
     quote: (props: { data: QuoteData }) => {
       const entries = createMemo(() => {
@@ -211,11 +228,9 @@ const entryTypes = new Map(
                 group={merged.data.entries}
                 entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
                 wrapper={(wProps) => (
-                  <div class={styles.entries}>
+                  <div class={styles.inlineHeader}>
                     <b>
-                      <i>{`${merged.data.name}${
-                        merged.data.name?.at(-1) === "." ? "" : "."
-                      }`}</i>{" "}
+                      <i>{addPeriod(merged.data.name)}</i>
                     </b>
                     {wProps.children}
                   </div>

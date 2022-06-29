@@ -71,8 +71,8 @@
     color: $color-grey-400;
   }
 
-  & .entries {
-    & b + p {
+  & .inlineHeader {
+    & :first-child + p {
       display: inline;
     }
   }

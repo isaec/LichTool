@@ -30,6 +30,11 @@ export type VariantData = {
   name: string;
   entries: DataGroup;
 };
+export type VariantSubData = {
+  type: "variantSub";
+  name: string;
+  entries: DataGroup;
+};
 export type QuoteData = {
   type: "quote";
   entries: DataGroup;
