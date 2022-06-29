@@ -12,7 +12,7 @@ import {
   Switch,
 } from "solid-js";
 import { Dynamic } from "solid-js/web";
-import * as entryTypes from "./entryTypes";
+import { EntryTypeSelector } from "./entryTypes";
 import parseData from "./parseData";
 import RenderError from "./RenderError";
 import { tagAlias, tagMap } from "./tags";
@@ -199,26 +199,7 @@ export const DataNodeRenderer: Component<{
   data: DataNode;
   entryLevel?: EntryLevels;
 }> = (props) => (
-  <Show
-    when={entryTypes[props.data.type] !== undefined}
-    fallback={
-      <RenderError
-        error={`UNKNOWN type=${props.data.type}`}
-        details={JSON.stringify(props.data)}
-      />
-    }
-  >
-    <Dynamic
-      component={
-        entryTypes[props.data.type] as Component<{
-          data: DataNode;
-          entryLevel?: EntryLevels;
-        }>
-      }
-      data={props.data}
-      entryLevel={props.entryLevel}
-    />
-  </Show>
+  <EntryTypeSelector data={props.data} entryLevel={props.entryLevel} />
 );
 
 export const DataRenderer: Component<{

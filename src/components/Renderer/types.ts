@@ -89,6 +89,8 @@ export type DataNode =
   | ListData
   | InsetData
   | InsetReadaloudData
+  | VariantData
+  | VariantSubData
   | QuoteData
   | BonusData
   | BonusSpeedData

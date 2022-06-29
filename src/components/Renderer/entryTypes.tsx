@@ -24,11 +24,13 @@ import {
   EntriesData,
   EntryLevels,
   VariantData,
+  DataNode,
 } from "./types";
 
 import styles from "./Renderer.module.scss";
 import DataSpellElement from "./DataSpellElement";
 import RenderError from "./RenderError";
+import { Dynamic } from "solid-js/web";
 
 const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
   props
@@ -40,12 +42,25 @@ const ListItem: Component<{ condition: boolean; children: JSX.Element }> = (
 const addPeriod = (str?: string) =>
   str === undefined ? "" : str.endsWith(".") ? `${str} ` : `${str}. `;
 
+type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends (
+  k: infer I
+) => void
+  ? I
+  : never;
+
+const entryTypes = new Map<
+  DataNode["type"],
+  Component<{ data: UnionToIntersection<DataNode> }>
+>();
+
 export const section = (props: { data: SectionData }) => (
   <>
     <h1>{props.data.name}</h1>
     <DataGroupRenderer group={props.data.entries} />
   </>
 );
+entryTypes.set("section", section);
+
 export const list = (props: { data: ListData }) => {
   const classes = createMemo(() => {
     // if there is no style, we don't need to give it a class
@@ -90,24 +105,32 @@ export const list = (props: { data: ListData }) => {
     </>
   );
 };
+entryTypes.set("list", list);
+
 export const inset = (props: { data: InsetData }) => (
   <div class={styles.inset}>
     <h4>{props.data.name}</h4>
     {<DataRenderer data={props.data.entries} />}
   </div>
 );
+entryTypes.set("inset", inset);
+
 export const insetReadaloud = (props: { data: InsetReadaloudData }) => (
   <div classList={{ [styles.inset]: true, [styles.readaloud]: true }}>
     <h4>{props.data.name}</h4>
     {<DataRenderer data={props.data.entries} />}
   </div>
 );
+entryTypes.set("insetReadaloud", insetReadaloud);
+
 export const variant = (props: { data: VariantData }) => (
   <div class={styles.inset}>
     <h4>{props.data.name}</h4>
     {<DataRenderer data={props.data.entries} entryLevel={2} />}
   </div>
 );
+entryTypes.set("variant", variant);
+
 export const variantSub = (props: { data: VariantData }) => (
   <DataGroupRenderer
     group={props.data.entries}
@@ -120,6 +143,8 @@ export const variantSub = (props: { data: VariantData }) => (
     )}
   />
 );
+entryTypes.set("variantSub", variantSub);
+
 export const quote = (props: { data: QuoteData }) => {
   const entries = createMemo(() => {
     // if we only have one string, quote it
@@ -169,12 +194,16 @@ export const quote = (props: { data: QuoteData }) => {
     </figure>
   );
 };
+entryTypes.set("quote", quote);
+
 export const bonus = (props: { data: BonusData }) => (
   <span>
     <Show when={props.data.value >= 0}>+</Show>
     {props.data.value}
   </span>
 );
+entryTypes.set("bonus", bonus);
+
 export const bonusSpeed = (props: { data: BonusSpeedData }) => (
   <span>
     <Show when={props.data.value >= 0}>+</Show>
@@ -182,9 +211,13 @@ export const bonusSpeed = (props: { data: BonusSpeedData }) => (
     {" ft."}
   </span>
 );
+entryTypes.set("bonusSpeed", bonusSpeed);
+
 export const dataSpell = (props: { data: DataSpellData }) => (
   <DataSpellElement data={props.data.dataSpell} />
 );
+entryTypes.set("dataSpell", dataSpell);
+
 export const entries = (props: {
   data: EntriesData;
   entryLevel?: EntryLevels;
@@ -239,3 +272,30 @@ export const entries = (props: {
     </Switch>
   );
 };
+entryTypes.set("entries", entries);
+
+export const EntryTypeSelector: Component<{
+  data: DataNode;
+  entryLevel?: EntryLevels;
+}> = (props) => (
+  <Show
+    when={entryTypes.get(props.data.type) !== undefined}
+    fallback={
+      <RenderError
+        error={`UNKNOWN type=${props.data.type}`}
+        details={JSON.stringify(props.data)}
+      />
+    }
+  >
+    <Dynamic
+      component={
+        entryTypes.get(props.data.type) as Component<{
+          data: DataNode;
+          entryLevel?: EntryLevels;
+        }>
+      }
+      data={props.data}
+      entryLevel={props.entryLevel}
+    />
+  </Show>
+);
