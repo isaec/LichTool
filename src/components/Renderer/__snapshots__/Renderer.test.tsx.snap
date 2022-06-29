@@ -2421,6 +2421,27 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.
           </p>
         </p>
+        <p>
+          <div>
+            <div
+              class="entries"
+            >
+              <b>
+                <i>
+                  At Higher Levels.
+                </i>
+                 
+              </b>
+              <p>
+                When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
+                <code>
+                  1d6
+                </code>
+                 for each slot level above 3rd.
+              </p>
+            </div>
+          </div>
+        </p>
       </div>
     </p>
   </p>

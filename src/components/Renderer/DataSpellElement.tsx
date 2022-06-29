@@ -1,9 +1,11 @@
 import { Component, createMemo, For, JSX, Match, Show, Switch } from "solid-js";
-import { DataSpell } from "./types";
+import { DataSpell, EntriesData, EntryLevels } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer } from "./Renderer";
+import entryTypes from "./entryTypes";
+import { Dynamic } from "solid-js/web";
 
 const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
   <p>
@@ -80,7 +82,13 @@ const DataSpellElement: Component<{
           </Match>
         </Switch>
       </KeyValue>
-      <DataGroupRenderer group={props.data.entries} />
+      <DataGroupRenderer group={props.data.entries} entryLevel={2} />
+      <Show when={props.data.entriesHigherLevel !== undefined}>
+        <DataGroupRenderer
+          group={props.data.entriesHigherLevel!}
+          entryLevel={2}
+        />
+      </Show>
     </div>
   );
 };

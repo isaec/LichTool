@@ -68,6 +68,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         lol
       </p>
     </p>
+    
   </div>
 </div>
 `;
@@ -140,6 +141,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         lol
       </p>
     </p>
+    
   </div>
 </div>
 `;
@@ -212,6 +214,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         lol
       </p>
     </p>
+    
   </div>
 </div>
 `;
@@ -285,6 +288,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         lol
       </p>
     </p>
+    
   </div>
 </div>
 `;
@@ -358,6 +362,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         lol
       </p>
     </p>
+    
   </div>
 </div>
 `;
@@ -433,6 +438,7 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
         </b>
       </p>
     </p>
+    
   </div>
 </div>
 `;
@@ -508,6 +514,7 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
         </b>
       </p>
     </p>
+    
   </div>
 </div>
 `;

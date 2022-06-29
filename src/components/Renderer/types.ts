@@ -63,6 +63,7 @@ export type DataSpell = {
     }
   ];
   entries: DataGroup;
+  entriesHigherLevel?: DataGroup;
   source: Sources;
   page: number;
   srd?: boolean;
