@@ -178,7 +178,7 @@ export const DataStringRenderer: Component<Readonly<{ string: string }>> = (
 
 export const DataGroupRenderer: Component<{
   group: DataGroup;
-  wrapper?: keyof JSX.IntrinsicElements | FlowComponent;
+  wrapper?: keyof JSX.IntrinsicElements | Component<{ children: JSX.Element }>;
   entryLevel?: EntryLevels;
 }> = (props) => {
   const merged = mergeProps({ wrapper: "p" }, props);

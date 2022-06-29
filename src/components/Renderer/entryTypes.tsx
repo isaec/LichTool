@@ -1,6 +1,7 @@
 import {
   Component,
   createMemo,
+  FlowComponent,
   For,
   JSX,
   Match,
@@ -199,14 +200,19 @@ const entryTypes = new Map(
           </Match>
           <Match when={merged.entryLevel === 2}>
             <div>
-              <b>
-                <i>{`${merged.data.name}${
-                  merged.data.name?.at(-1) === "." ? "" : "."
-                }`}</i>
-              </b>
               <DataGroupRenderer
                 group={merged.data.entries}
                 entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
+                wrapper={(wProps) => (
+                  <div>
+                    <b>
+                      <i>{`${merged.data.name}${
+                        merged.data.name?.at(-1) === "." ? "" : "."
+                      }`}</i>
+                    </b>
+                    {wProps.children}
+                  </div>
+                )}
               />
             </div>
           </Match>
