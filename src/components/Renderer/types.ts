@@ -8,6 +8,8 @@ import {
   TimeUnits,
 } from "@components/generalTypes";
 
+export type EntryLevels = 0 | 1 | 2;
+
 export type SectionData = { type: "section"; name: string; entries: DataGroup };
 export const listStyles = new Set(["list-hang", "list-no-bullets"]);
 export type ListData = {
@@ -79,6 +81,7 @@ export type DataNode =
   | QuoteData
   | BonusData
   | BonusSpeedData
+  | EntriesData
   | DataSpellData;
 export const isDataNode = (data: Data | object): data is DataNode =>
   typeof (data as DataNode).type === "string";

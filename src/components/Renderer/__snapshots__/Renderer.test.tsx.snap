@@ -1536,7 +1536,17 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                  where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.
               </p>
               <p>
-                {"type":"entries","name":"Note","entries":["Setting a filter to \\"no value\\", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.","The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag."]}
+                <b>
+                  (L0) Note
+                </b>
+                <p>
+                  <p>
+                    Setting a filter to "no value", i.e. ..|school=|.. is equivalent to 'clear the filter,' resetting it to all-white.
+                  </p>
+                  <p>
+                    The pages that support this functionality are those with the 'magnet' button; the link this button exports will give clues as to what one could do with the filter tag.
+                  </p>
+                </p>
               </p>
             </p>
           </div>
@@ -1914,10 +1924,64 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         , although there are often better ways to get the combination of bold and italic that you're probably going to use this for; consider using one of the properly typed objects below (such as level 2 headers).
       </p>
       <p>
-        {"type":"entries","name":"A Subclass Name, For Example","entries":["The above is a 'level 0' header.","The 'name' property is optional",{"type":"entries","name":"A Subclass Feature Name","entries":["The above is a 'level 1' header.",{"type":"entries","name":"A Subclass Feature Inline Header","entries":["This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.","Note that the period in the inline name is added automagically."]}]}]}
+        <b>
+          (L0) A Subclass Name, For Example
+        </b>
+        <p>
+          <p>
+            The above is a 'level 0' header.
+          </p>
+          <p>
+            The 'name' property is optional
+          </p>
+          <p>
+            <b>
+              (L1) A Subclass Feature Name
+            </b>
+            <p>
+              <p>
+                The above is a 'level 1' header.
+              </p>
+              <p>
+                <b>
+                  (L2) A Subclass Feature Inline Header
+                </b>
+                <p>
+                  <p>
+                    This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.
+                  </p>
+                  <p>
+                    Note that the period in the inline name is added automagically.
+                  </p>
+                </p>
+              </p>
+            </p>
+          </p>
+        </p>
       </p>
       <p>
-        {"type":"entries","entries":[{"type":"entries","entries":[{"type":"entries","name":"This is an example of a level 2 header with no real parents","entries":["This technique can be useful, sometimes."]}]}]}
+        <b>
+          (L0) undefined
+        </b>
+        <p>
+          <p>
+            <b>
+              (L1) undefined
+            </b>
+            <p>
+              <p>
+                <b>
+                  (L2) This is an example of a level 2 header with no real parents
+                </b>
+                <p>
+                  <p>
+                    This technique can be useful, sometimes.
+                  </p>
+                </p>
+              </p>
+            </p>
+          </p>
+        </p>
       </p>
       <span
         class="error"

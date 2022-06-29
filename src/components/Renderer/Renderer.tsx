@@ -16,7 +16,7 @@ import entryTypes from "./entryTypes";
 import parseData from "./parseData";
 import RenderError from "./RenderError";
 import { tagAlias, tagMap } from "./tags";
-import { Data, DataGroup, DataNode } from "./types";
+import { Data, DataGroup, DataNode, EntryLevels } from "./types";
 
 import styles from "./Renderer.module.scss";
 
@@ -179,6 +179,7 @@ export const DataStringRenderer: Component<Readonly<{ string: string }>> = (
 export const DataGroupRenderer: Component<{
   group: DataGroup;
   wrapper?: keyof JSX.IntrinsicElements | FlowComponent;
+  entryLevel?: EntryLevels;
 }> = (props) => {
   const merged = mergeProps({ wrapper: "p" }, props);
 
@@ -186,13 +187,18 @@ export const DataGroupRenderer: Component<{
     <Dynamic
       component={merged.wrapper}
       children={
-        <For each={props.group}>{(data) => <DataRenderer data={data} />}</For>
+        <For each={props.group}>
+          {(data) => <DataRenderer data={data} entryLevel={props.entryLevel} />}
+        </For>
       }
     />
   );
 };
 
-export const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
+export const DataNodeRenderer: Component<{
+  data: DataNode;
+  entryLevel?: EntryLevels;
+}> = (props) => {
   const Entry = createMemo(() => entryTypes.get(props.data.type));
 
   return (
@@ -205,13 +211,27 @@ export const DataNodeRenderer: Component<{ data: DataNode }> = (props) => {
         />
       }
     >
-      <Dynamic component={Entry() as any} data={props.data} />
+      <Dynamic
+        component={Entry() as any}
+        data={props.data}
+        entryLevel={props.entryLevel}
+      />
     </Show>
   );
 };
 
-export const DataRenderer: Component<{ data: Data }> = (props) => (
-  <Switch fallback={<DataNodeRenderer data={props.data as DataNode} />}>
+export const DataRenderer: Component<{
+  data: Data;
+  entryLevel?: EntryLevels;
+}> = (props) => (
+  <Switch
+    fallback={
+      <DataNodeRenderer
+        data={props.data as DataNode}
+        entryLevel={props.entryLevel}
+      />
+    }
+  >
     <Match when={typeof props.data === "string"}>
       <DataStringRenderer
         string={
@@ -220,7 +240,10 @@ export const DataRenderer: Component<{ data: Data }> = (props) => (
       />
     </Match>
     <Match when={Array.isArray(props.data)}>
-      <DataGroupRenderer group={props.data as DataGroup} />
+      <DataGroupRenderer
+        group={props.data as DataGroup}
+        entryLevel={props.entryLevel}
+      />
     </Match>
   </Switch>
 );

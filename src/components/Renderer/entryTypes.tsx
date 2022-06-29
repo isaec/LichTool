@@ -1,4 +1,4 @@
-import { Component, createMemo, For, JSX, Show } from "solid-js";
+import { Component, createMemo, For, JSX, mergeProps, Show } from "solid-js";
 import { DataGroupRenderer, DataRenderer } from "./Renderer";
 import {
   BonusData,
@@ -12,6 +12,7 @@ import {
   InsetReadaloudData,
   DataSpellData,
   EntriesData,
+  EntryLevels,
 } from "./types";
 
 import styles from "./Renderer.module.scss";
@@ -154,9 +155,18 @@ const entryTypes = new Map(
     dataSpell: (props: { data: DataSpellData }) => (
       <DataSpellElement data={props.data.dataSpell} />
     ),
-    entries: (props: { data: EntriesData; level?: 0 | 1 | 2 }) => (
-      <p>{JSON.stringify(props.data)}</p>
-    ),
+    entries: (props: { data: EntriesData; entryLevel?: EntryLevels }) => {
+      const merged = mergeProps({ entryLevel: 0 }, props);
+      return (
+        <p>
+          <b>{`(L${merged.entryLevel}) ${merged.data.name}`}</b>
+          <DataGroupRenderer
+            group={merged.data.entries}
+            entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
+          />
+        </p>
+      );
+    },
   })
 );
 export default entryTypes;
