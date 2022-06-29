@@ -70,4 +70,10 @@
   & i.note {
     color: $color-grey-400;
   }
+
+  & .entries {
+    & b + p {
+      display: inline;
+    }
+  }
 }

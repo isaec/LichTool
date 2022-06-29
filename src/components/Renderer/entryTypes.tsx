@@ -204,11 +204,11 @@ const entryTypes = new Map(
                 group={merged.data.entries}
                 entryLevel={Math.min(merged.entryLevel + 1, 2) as 0 | 1 | 2}
                 wrapper={(wProps) => (
-                  <div>
+                  <div class={styles.entries}>
                     <b>
                       <i>{`${merged.data.name}${
                         merged.data.name?.at(-1) === "." ? "" : "."
-                      }`}</i>
+                      }`}</i>{" "}
                     </b>
                     {wProps.children}
                   </div>

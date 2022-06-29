@@ -1943,11 +1943,14 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                 The above is a 'level 1' header.
               </p>
               <div>
-                <div>
+                <div
+                  class="entries"
+                >
                   <b>
                     <i>
                       A Subclass Feature Inline Header.
                     </i>
+                     
                   </b>
                   <p>
                     This bold-italic inline header is a 'level 2' header, please use this as opposed to nesting tags. You can make a chain of empty entry objects with no names to get to this header level, if required.
@@ -1968,11 +1971,14 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             
             <p>
               <div>
-                <div>
+                <div
+                  class="entries"
+                >
                   <b>
                     <i>
                       This is an example of a level 2 header with no real parents.
                     </i>
+                     
                   </b>
                   <p>
                     This technique can be useful, sometimes.
