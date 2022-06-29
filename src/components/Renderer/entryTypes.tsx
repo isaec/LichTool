@@ -23,6 +23,7 @@ import {
   DataSpellData,
   EntriesData,
   EntryLevels,
+  VariantData,
 } from "./types";
 
 import styles from "./Renderer.module.scss";
@@ -97,6 +98,12 @@ const entryTypes = new Map(
       <div classList={{ [styles.inset]: true, [styles.readaloud]: true }}>
         <h4>{props.data.name}</h4>
         {<DataRenderer data={props.data.entries} />}
+      </div>
+    ),
+    variant: (props: { data: VariantData }) => (
+      <div class={styles.inset}>
+        <h4>{props.data.name}</h4>
+        {<DataRenderer data={props.data.entries} entryLevel={2} />}
       </div>
     ),
     quote: (props: { data: QuoteData }) => {

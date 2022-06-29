@@ -19,11 +19,16 @@ export type ListData = {
   style?: string;
   name?: string;
 };
-export type InsetData = { type: "inset"; name: string; entries: Data };
+export type InsetData = { type: "inset"; name: string; entries: DataGroup };
 export type InsetReadaloudData = {
   type: "insetReadaloud";
   name: string;
-  entries: Data;
+  entries: DataGroup;
+};
+export type VariantData = {
+  type: "variant";
+  name: string;
+  entries: DataGroup;
 };
 export type QuoteData = {
   type: "quote";

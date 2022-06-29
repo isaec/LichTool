@@ -2322,15 +2322,42 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           </p>
         </p>
       </div>
-      <span
-        class="error"
+      <div
+        class="inset"
       >
-        UNKNOWN type=variant ERROR: 
-        <code>
-          {"type":"variant","name":"Better Monster","entries":["Some variant monster text",{"type":"entries","name":"Inline Header","entries":["Text text text",{"type":"variantSub","name":"These can have child items","entries":["And the header style for them is unique, so this exists to cope with that."]}]}]}
-        </code>
-        
-      </span>
+        <h4>
+          Better Monster
+        </h4>
+        <p>
+          <p>
+            Some variant monster text
+          </p>
+          <div>
+            <div
+              class="entries"
+            >
+              <b>
+                <i>
+                  Inline Header.
+                </i>
+                 
+              </b>
+              <p>
+                Text text text
+              </p>
+              <span
+                class="error"
+              >
+                UNKNOWN type=variantSub ERROR: 
+                <code>
+                  {"type":"variantSub","name":"These can have child items","entries":["And the header style for them is unique, so this exists to cope with that."]}
+                </code>
+                
+              </span>
+            </div>
+          </div>
+        </p>
+      </div>
       <p>
         Images (similar to the structure of the 'link' type):
       </p>
