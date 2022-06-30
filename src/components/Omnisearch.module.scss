@@ -9,5 +9,5 @@
 .results {
   display: grid;
   $max-chips: 4;
-  grid-template-columns: repeat($max-chips, 1fr);
+  grid-template-columns: repeat($max-chips, minmax(min-content, auto));
 }
