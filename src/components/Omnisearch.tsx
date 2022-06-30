@@ -1,6 +1,6 @@
-import MiniSearch from "minisearch";
+import MiniSearch, { SearchResult } from "minisearch";
 import { DataSpell } from "./Renderer/types";
-import { spellArray } from "@src/dataLookup";
+import { spellArray, spellMap } from "@src/dataLookup";
 import { Component, createMemo, For } from "solid-js";
 import { createStore } from "solid-js/store";
 import { searchResultFn } from "./SearchResult";
@@ -39,11 +39,43 @@ const searchEngine = new MiniSearch({
 });
 searchEngine.addAll(spellArray);
 
+const isOnlyDigits = /^[0-9]+$/;
+const parseFilter = (filter: string) => {
+  if (isOnlyDigits.test(filter)) return parseInt(filter);
+  return filter;
+};
+
+const Filter: Component<{
+  search: {
+    filters: { [key: string]: string };
+  };
+  setSearch: (arg0: string, arg1: string, arg2: string | undefined) => void;
+  filterKey: string;
+}> = (props) => (
+  <input
+    value={props.search.filters[props.filterKey] ?? ""}
+    onInput={(e) => {
+      props.setSearch("filters", "level", e.currentTarget.value);
+    }}
+  />
+);
+
 const Omnisearch: Component<{}> = () => {
   const [search, setSearch] = createStore({
     query: "",
+    filters: {} as { [key: string]: string },
   });
-  const results = createMemo(() => searchEngine.search(search.query));
+  const filterFn = (result: SearchResult) => {
+    const dataObj = spellMap.get(result.id);
+    return !Object.entries(search.filters).some(([key, filter]) => {
+      return dataObj![key as keyof DataSpell] !== parseFilter(filter);
+    });
+  };
+  const results = createMemo(() =>
+    searchEngine.search(search.query, {
+      filter: filterFn,
+    })
+  );
   return (
     <>
       <input
@@ -52,6 +84,8 @@ const Omnisearch: Component<{}> = () => {
           setSearch("query", e.currentTarget.value);
         }}
       />
+      <Filter search={search} setSearch={setSearch} filterKey={"level"} />
+      <Filter search={search} setSearch={setSearch} filterKey={"school"} />
       <For each={results()}>{searchResultFn}</For>
     </>
   );
