@@ -5,6 +5,8 @@ import { Component, createMemo, For } from "solid-js";
 import { createStore } from "solid-js/store";
 import { searchResultFn } from "./SearchResult";
 
+import styles from "./Omnisearch.module.scss";
+
 // use the same minisearch for each search instance
 const searchEngine = new MiniSearch({
   fields: ["name", "entries"],
@@ -54,16 +56,19 @@ const Filter: Component<{
   };
   filterKey: string;
 }> = (props) => (
-  <input
-    value={props.store.search.filters[props.filterKey] ?? ""}
-    onInput={(e) => {
-      props.store.setSearch(
-        "filters",
-        props.filterKey,
-        e.currentTarget.value === "" ? undefined : e.currentTarget.value
-      );
-    }}
-  />
+  <>
+    <label>{`${props.filterKey}: `}</label>
+    <input
+      value={props.store.search.filters[props.filterKey] ?? ""}
+      onInput={(e) => {
+        props.store.setSearch(
+          "filters",
+          props.filterKey,
+          e.currentTarget.value === "" ? undefined : e.currentTarget.value
+        );
+      }}
+    />
+  </>
 );
 
 const Omnisearch: Component<{}> = () => {
@@ -85,14 +90,17 @@ const Omnisearch: Component<{}> = () => {
   const searchStore = { search, setSearch };
   return (
     <>
-      <input
-        value={search.query}
-        onInput={(e) => {
-          setSearch("query", e.currentTarget.value);
-        }}
-      />
-      <Filter store={searchStore} filterKey={"level"} />
-      <Filter store={searchStore} filterKey={"school"} />
+      <div class={styles.Omnisearch}>
+        <input
+          class={styles.entryBar}
+          value={search.query}
+          onInput={(e) => {
+            setSearch("query", e.currentTarget.value);
+          }}
+        />
+        <Filter store={searchStore} filterKey={"level"} />
+        <Filter store={searchStore} filterKey={"school"} />
+      </div>
       <For each={results()}>{searchResultFn}</For>
     </>
   );

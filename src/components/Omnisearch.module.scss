@@ -1,0 +1,7 @@
+.Omnisearch {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  & .entryBar {
+    grid-column: -1 / 1;
+  }
+}
