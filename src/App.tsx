@@ -1,5 +1,4 @@
 import { Component, createSignal } from "solid-js";
-// @ts-ignore
 import renderdemo from "@data/renderdemo.json";
 
 import styles from "./App.module.scss";
