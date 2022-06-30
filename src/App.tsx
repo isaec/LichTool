@@ -1,27 +1,12 @@
-import { Component, createSignal } from "solid-js";
-import renderdemo from "@data/renderdemo.json";
+import { Route, Routes } from "solid-app-router";
+import { Component } from "solid-js";
 
-import styles from "./App.module.scss";
-import { Renderer } from "./components";
+import { RenderDemo } from "@routes";
 
-const App: Component = () => {
-  const [data, setData] = createSignal(
-    JSON.stringify(renderdemo.data[0], undefined, 2)
-  );
-
-  return (
-    <div class={styles.App}>
-      <textarea
-        value={data()}
-        onInput={(event) => {
-          console.log("input!");
-          // @ts-ignore
-          setData(event.target.value);
-        }}
-      ></textarea>
-      <Renderer data={data()} />
-    </div>
-  );
-};
+const App: Component = () => (
+  <Routes>
+    <Route path="/renderdemo" component={RenderDemo} />
+  </Routes>
+);
 
 export default App;

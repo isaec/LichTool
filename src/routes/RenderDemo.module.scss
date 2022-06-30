@@ -1,6 +1,6 @@
-@use "config" as *;
+@use "@src/config" as *;
 
-.App {
+.RenderDemo {
   display: grid;
   // this is all for renderer demo
   gap: $size-4;

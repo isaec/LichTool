@@ -30,6 +30,7 @@ export default defineConfig({
       { find: "@src", replacement: `${process.cwd()}/src` },
       { find: "@components", replacement: `${process.cwd()}/src/components` },
       { find: "@data", replacement: `${process.cwd()}/processed_data` },
+      { find: "@routes", replacement: `${process.cwd()}/src/routes` },
     ],
   },
 });

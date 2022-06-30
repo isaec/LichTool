@@ -16,6 +16,8 @@
       "@src/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@components": ["src/components"],
+      "@routes/*": ["src/routes/*"],
+      "@routes": ["src/routes"],
       "@data/*": ["processed_data/*"]
     },
     "resolveJsonModule": true
