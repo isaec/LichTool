@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { render, fireEvent, queryAllByText } from "solid-testing-library";
 // @ts-ignore
-import renderdemo from "@src/data/renderdemo.json";
+import renderdemo from "@data/renderdemo.json";
 
 import styles from "./Renderer.module.scss";
 

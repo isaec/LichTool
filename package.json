@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:update-snapshot": "vitest -u --run"
+    "test:update-snapshot": "vitest -u --run",
+    "process": "node ./process_data.mjs"
   },
   "license": "MIT",
   "devDependencies": {

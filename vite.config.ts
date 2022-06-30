@@ -1,15 +1,15 @@
-import { defineConfig, UserConfigExport } from 'vite';
-import solidPlugin from 'vite-plugin-solid';
+import { defineConfig, UserConfigExport } from "vite";
+import solidPlugin from "vite-plugin-solid";
 
 export default defineConfig({
   plugins: [solidPlugin()],
   test: {
-    environment: 'jsdom',
+    environment: "jsdom",
     globals: true,
     transformMode: {
       web: [/\.[jt]sx?$/],
     },
-    setupFiles: './setupVitest.ts',
+    setupFiles: "./setupVitest.ts",
     // solid needs to be inline to work around
     // a resolution issue in vitest:
     deps: {
@@ -21,14 +21,15 @@ export default defineConfig({
     isolate: false,
   },
   build: {
-    target: 'esnext',
+    target: "esnext",
     polyfillDynamicImport: false,
   },
   resolve: {
-    conditions: ['development', 'browser'],
+    conditions: ["development", "browser"],
     alias: [
-      {find: '@src', replacement: `${process.cwd()}/src`},
-      {find: '@components', replacement: `${process.cwd()}/src/components`}
+      { find: "@src", replacement: `${process.cwd()}/src` },
+      { find: "@components", replacement: `${process.cwd()}/src/components` },
+      { find: "@data", replacement: `${process.cwd()}/processed_data` },
     ],
-  }
+  },
 });
