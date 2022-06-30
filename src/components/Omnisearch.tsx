@@ -124,7 +124,9 @@ const Omnisearch: Component<{}> = () => {
         <Filter store={searchStore} filterKey={"level"} />
         <Filter store={searchStore} filterKey={"school"} />
       </div>
-      <For each={results()}>{searchResultFn}</For>
+      <div class={styles.results}>
+        <For each={results()}>{searchResultFn}</For>
+      </div>
     </>
   );
 };

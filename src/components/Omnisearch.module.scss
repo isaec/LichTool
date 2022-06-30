@@ -5,3 +5,9 @@
     grid-column: -1 / 1;
   }
 }
+
+.results {
+  display: grid;
+  $max-chips: 3;
+  grid-template-columns: repeat($max-chips, 1fr);
+}
