@@ -5,17 +5,34 @@ import { DataSpell } from "./Renderer/types";
 
 import styles from "./SearchResult.module.scss";
 
+const Chip: Component<{
+  children: string;
+  final?: boolean;
+  primary?: boolean;
+}> = (props) => (
+  <p
+    classList={{
+      [styles.chip]: true,
+      [styles.primary]: props.primary,
+      [styles.final]: props.final,
+    }}
+  >
+    {props.children}
+  </p>
+);
+
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
     spellMap.get(props.id)
   ) as Accessor<DataSpell>;
   return (
     <>
-      <p class={styles.primaryChip}>{dataObj().name}</p>
-      <p class={styles.chip}>{`lvl ${dataObj().level}`}</p>
-      <p class={styles.finalChip}>
-        {schoolAbbreviationMap.get(dataObj().school)}
-      </p>
+      <Chip primary>{dataObj().name}</Chip>
+      <Chip>
+        {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
+      </Chip>
+      <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
+      <Chip final>{dataObj().source}</Chip>
     </>
   );
 };
