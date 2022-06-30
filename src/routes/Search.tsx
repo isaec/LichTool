@@ -5,8 +5,7 @@ type Spell = typeof spells.spell[number];
 
 // use the same minisearch for each search instance
 const search = new MiniSearch({
-  idField: "name",
-  fields: ["name", "level", "source", "school", "entries"],
+  fields: ["name", "entries"],
   // highly naive field extraction
   extractField: (spell, field) => {
     const val: Spell[keyof Spell] = spell[field];
@@ -17,11 +16,11 @@ const search = new MiniSearch({
     const recurse = (data: Node) => {
       if (typeof data === "string") results.push(data);
       else if (typeof data === "number") results.push(data.toString());
-      else if (Array.isArray(data)) data.forEach((d) => recurse(d as any));
+      else if (Array.isArray(data)) data.forEach((d) => recurse(d));
       else if (typeof data === "object" && data.entries !== undefined)
         recurse(data.entries);
     };
-    recurse(val as any);
+    recurse(val as Node);
     return results.join("");
   },
   searchOptions: {
@@ -32,8 +31,7 @@ const search = new MiniSearch({
       prefix: 2,
     },
     boost: {
-      name: 5,
-      entries: 0.5,
+      name: 10,
     },
   },
 });

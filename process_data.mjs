@@ -31,7 +31,11 @@ await Promise.all(
       await fs.readFile(spellPath, "utf8")
     ).spell;
     spellFileData.forEach((spell) => {
-      if (spell.srd === true) processedSpells.push(spell);
+      if (spell.srd === true)
+        processedSpells.push({
+          ...spell,
+          id: `spell_${spell.name}_${spell.source}`,
+        });
     });
   })
 );
