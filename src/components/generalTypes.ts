@@ -20,6 +20,9 @@ export type Schools =
   | "Enchantment"
   | "Transmutation"
   | "Psionic";
+/**
+ * map from abbreviation to school name
+ */
 export const schoolAbbreviationMap: Map<SchoolAbbreviations, Schools> = new Map(
   [
     ["V", "Evocation"],

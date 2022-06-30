@@ -6,6 +6,7 @@ import { createStore } from "solid-js/store";
 import { searchResultFn } from "./SearchResult";
 
 import styles from "./Omnisearch.module.scss";
+import { schoolAbbreviationMap } from "./generalTypes";
 
 // use the same minisearch for each search instance
 const searchEngine = new MiniSearch({
@@ -44,7 +45,7 @@ searchEngine.addAll(spellArray);
 const isOnlyDigits = /^[0-9]+$/;
 const parseFilter = (filter: string) => {
   if (isOnlyDigits.test(filter)) return parseInt(filter);
-  return filter;
+  return filter.toLowerCase();
 };
 
 const Filter: Component<{
@@ -71,6 +72,28 @@ const Filter: Component<{
   </>
 );
 
+const filterValueTransforms = new Map([["school", schoolAbbreviationMap]]);
+
+const testFilter = (
+  dataObj: DataSpell,
+  key: string,
+  filter: string | number
+) => {
+  const val = dataObj[key as keyof DataSpell];
+  if (typeof filter === "number") return val === filter;
+  if (typeof filter === "string" && typeof val === "string") {
+    const transformedValue = filterValueTransforms.get(key)?.get(val as any);
+    if (transformedValue !== undefined) {
+      return (
+        transformedValue.toLowerCase().includes(filter) ||
+        val.toLowerCase().includes(filter)
+      );
+    }
+    return val.toLowerCase().includes(filter);
+  }
+  return false;
+};
+
 const Omnisearch: Component<{}> = () => {
   const [search, setSearch] = createStore({
     query: "",
@@ -78,9 +101,9 @@ const Omnisearch: Component<{}> = () => {
   });
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id);
-    return !Object.entries(search.filters).some(([key, filter]) => {
-      return dataObj![key as keyof DataSpell] !== parseFilter(filter);
-    });
+    return !Object.entries(search.filters).some(
+      ([key, filter]) => !testFilter(dataObj!, key, parseFilter(filter))
+    );
   };
   const results = createMemo(() =>
     searchEngine.search(search.query, {
