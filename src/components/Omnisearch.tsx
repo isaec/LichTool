@@ -46,16 +46,22 @@ const parseFilter = (filter: string) => {
 };
 
 const Filter: Component<{
-  search: {
-    filters: { [key: string]: string };
+  store: {
+    search: {
+      filters: { [key: string]: string };
+    };
+    setSearch: (arg0: string, arg1: string, arg2: string | undefined) => void;
   };
-  setSearch: (arg0: string, arg1: string, arg2: string | undefined) => void;
   filterKey: string;
 }> = (props) => (
   <input
-    value={props.search.filters[props.filterKey] ?? ""}
+    value={props.store.search.filters[props.filterKey] ?? ""}
     onInput={(e) => {
-      props.setSearch("filters", "level", e.currentTarget.value);
+      props.store.setSearch(
+        "filters",
+        props.filterKey,
+        e.currentTarget.value === "" ? undefined : e.currentTarget.value
+      );
     }}
   />
 );
@@ -76,6 +82,7 @@ const Omnisearch: Component<{}> = () => {
       filter: filterFn,
     })
   );
+  const searchStore = { search, setSearch };
   return (
     <>
       <input
@@ -84,8 +91,8 @@ const Omnisearch: Component<{}> = () => {
           setSearch("query", e.currentTarget.value);
         }}
       />
-      <Filter search={search} setSearch={setSearch} filterKey={"level"} />
-      <Filter search={search} setSearch={setSearch} filterKey={"school"} />
+      <Filter store={searchStore} filterKey={"level"} />
+      <Filter store={searchStore} filterKey={"school"} />
       <For each={results()}>{searchResultFn}</For>
     </>
   );
