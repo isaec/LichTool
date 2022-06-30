@@ -33,6 +33,7 @@ const search = new MiniSearch({
     },
     boost: {
       name: 5,
+      entries: 0.5,
     },
   },
 });
@@ -49,7 +50,13 @@ const Search: Component<{}> = () => {
           setQuery(e.currentTarget.value);
         }}
       />
-      <For each={results()}>{(result) => <p>{result.id}</p>}</For>
+      <For each={results()}>
+        {(result) => (
+          <p>
+            {result.id} {JSON.stringify(result.match)}
+          </p>
+        )}
+      </For>
     </div>
   );
 };
