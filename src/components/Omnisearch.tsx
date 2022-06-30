@@ -2,7 +2,7 @@ import MiniSearch from "minisearch";
 import { DataSpell } from "./Renderer/types";
 import { spellArray } from "@src/dataLookup";
 import { Component, createMemo, createSignal, For } from "solid-js";
-import { Dynamic } from "solid-js/web";
+import { searchResultFn } from "./SearchResult";
 
 // use the same minisearch for each search instance
 const search = new MiniSearch({
@@ -38,9 +38,7 @@ const search = new MiniSearch({
 });
 search.addAll(spellArray);
 
-const Omnisearch: Component<{ Result: Component<{ id: string }> }> = (
-  props
-) => {
+const Omnisearch: Component<{}> = (props) => {
   const [query, setQuery] = createSignal("");
   const results = createMemo(() => search.search(query()));
   return (
@@ -51,9 +49,7 @@ const Omnisearch: Component<{ Result: Component<{ id: string }> }> = (
           setQuery(e.currentTarget.value);
         }}
       />
-      <For each={results()}>
-        {(result) => <Dynamic component={props.Result} id={result.id} />}
-      </For>
+      <For each={results()}>{searchResultFn}</For>
     </>
   );
 };
