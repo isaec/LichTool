@@ -1,11 +1,12 @@
 import MiniSearch from "minisearch";
 import { DataSpell } from "./Renderer/types";
 import { spellArray } from "@src/dataLookup";
-import { Component, createMemo, createSignal, For } from "solid-js";
+import { Component, createMemo, For } from "solid-js";
+import { createStore } from "solid-js/store";
 import { searchResultFn } from "./SearchResult";
 
 // use the same minisearch for each search instance
-const search = new MiniSearch({
+const searchEngine = new MiniSearch({
   fields: ["name", "entries"],
   // highly naive field extraction
   extractField: (spell, field) => {
@@ -36,17 +37,19 @@ const search = new MiniSearch({
     },
   },
 });
-search.addAll(spellArray);
+searchEngine.addAll(spellArray);
 
-const Omnisearch: Component<{}> = (props) => {
-  const [query, setQuery] = createSignal("");
-  const results = createMemo(() => search.search(query()));
+const Omnisearch: Component<{}> = () => {
+  const [search, setSearch] = createStore({
+    query: "",
+  });
+  const results = createMemo(() => searchEngine.search(search.query));
   return (
     <>
       <input
-        value={query()}
+        value={search.query}
         onInput={(e) => {
-          setQuery(e.currentTarget.value);
+          setSearch("query", e.currentTarget.value);
         }}
       />
       <For each={results()}>{searchResultFn}</For>
