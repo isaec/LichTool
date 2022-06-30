@@ -8,6 +8,6 @@
 
 .results {
   display: grid;
-  $max-chips: 4;
+  $max-chips: 5;
   grid-template-columns: repeat($max-chips, minmax(min-content, auto));
 }

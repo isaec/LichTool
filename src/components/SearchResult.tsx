@@ -1,12 +1,12 @@
 import { spellMap } from "@src/dataLookup";
-import { Accessor, Component, createMemo } from "solid-js";
+import { Accessor, Component, createMemo, JSX, Show } from "solid-js";
 import { schoolAbbreviationMap } from "./generalTypes";
 import { DataSpell } from "./Renderer/types";
 
 import styles from "./SearchResult.module.scss";
 
 const Chip: Component<{
-  children: string;
+  children: JSX.Element;
   final?: boolean;
   primary?: boolean;
 }> = (props) => (
@@ -32,6 +32,11 @@ export const SearchResult: Component<{ id: string }> = (props) => {
         {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
       </Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
+      <Show when={dataObj().duration[0].concentration !== undefined}>
+        <Chip>
+          <small>Concentration</small>
+        </Chip>
+      </Show>
       <Chip final>{dataObj().source}</Chip>
     </>
   );
