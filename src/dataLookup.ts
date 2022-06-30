@@ -4,12 +4,10 @@ import spells from "@data/spells.json?raw";
 import { DataSpell } from "./components/Renderer/types";
 
 /** the array of all spells - id is always undefined */
-export const spellArray = JSON.parse(spells).spell as Readonly<
-  Array<
-    DataSpell & {
-      id: string;
-    }
-  >
+export const spellArray = JSON.parse(spells).spell as Array<
+  DataSpell & {
+    id: string;
+  }
 >;
 
 /**
