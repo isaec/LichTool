@@ -6,7 +6,12 @@ const baseRanges = new Set(["self", ""]);
 export const fmtRange = (data: DataSpell["range"]) => {
   if (data.distance === undefined) return capitalize(data.type);
   if (data.distance.amount === undefined) return capitalize(data.distance.type);
-  return capitalize(
-    `${data.type} ${data.distance.type} ${data.distance.amount}`
-  );
+  switch (data.type) {
+    case "point":
+      return capitalize(`${data.distance.amount} ${data.distance.type}`);
+    default:
+      return capitalize(
+        `${data.type} ${data.distance.type} ${data.distance.amount}`
+      );
+  }
 };
