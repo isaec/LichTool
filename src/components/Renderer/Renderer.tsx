@@ -247,7 +247,12 @@ const Renderer: Component<{ data: string | object }> = (props) => {
     }
   });
   return (
-    <p class={styles.Renderer}>
+    <p
+      classList={{
+        [styles.renderer]: true,
+        [styles.scroll]: true,
+      }}
+    >
       <ErrorBoundary
         fallback={(err, reset) => (
           <RenderError
