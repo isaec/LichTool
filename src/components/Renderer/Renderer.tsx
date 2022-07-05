@@ -268,3 +268,12 @@ const Renderer: Component<{ data: string | object }> = (props) => {
 };
 
 export default Renderer;
+
+/**
+ * wrap naked Renderer components in this component to apply styles
+ *
+ * for example, if you are using DataGroupRenderer, you can wrap it with this component to style its elements
+ */
+export const RendererStyles: Component<{ children: JSX.Element }> = (props) => (
+  <p class={styles.Renderer}>{props.children}</p>
+);

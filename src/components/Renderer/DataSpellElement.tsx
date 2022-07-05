@@ -3,7 +3,7 @@ import { DataSpell, EntriesData, EntryLevels } from "./types";
 
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
-import { DataGroupRenderer } from "./Renderer";
+import { DataGroupRenderer, RendererStyles } from "./Renderer";
 import { fmtRange } from "@src/formatter";
 
 const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
@@ -64,13 +64,15 @@ const DataSpellElement: Component<{
           </Match>
         </Switch>
       </KeyValue>
-      <DataGroupRenderer group={props.data.entries} entryLevel={2} />
-      <Show when={props.data.entriesHigherLevel !== undefined}>
-        <DataGroupRenderer
-          group={props.data.entriesHigherLevel!}
-          entryLevel={2}
-        />
-      </Show>
+      <RendererStyles>
+        <DataGroupRenderer group={props.data.entries} entryLevel={2} />
+        <Show when={props.data.entriesHigherLevel !== undefined}>
+          <DataGroupRenderer
+            group={props.data.entriesHigherLevel!}
+            entryLevel={2}
+          />
+        </Show>
+      </RendererStyles>
     </div>
   );
 };
