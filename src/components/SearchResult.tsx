@@ -5,6 +5,7 @@ import { DataSpell } from "./Renderer/types";
 import { fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";
+import { Navigate, useNavigate } from "solid-app-router";
 
 const Chip: Component<{
   children: JSX.Element;
@@ -23,15 +24,29 @@ const Chip: Component<{
 );
 
 const ChipRow: Component<{
+  id: string;
   children: JSX.Element;
-}> = (props) => <div class={styles.chipRow}>{props.children}</div>;
+}> = (props) => {
+  const navigate = useNavigate();
+
+  return (
+    <div
+      class={styles.chipRow}
+      onClick={() => {
+        navigate(`/view/${props.id}`);
+      }}
+    >
+      {props.children}
+    </div>
+  );
+};
 
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
     spellMap.get(props.id)
   ) as Accessor<DataSpell>;
   return (
-    <ChipRow>
+    <ChipRow id={props.id}>
       <Chip primary>{dataObj().name}</Chip>
       <Chip>
         {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
