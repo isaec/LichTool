@@ -1,6 +1,5 @@
 .chip {
   margin: auto;
-  white-space: nowrap;
   &.primary {
     grid-column-start: 0;
     margin-left: 0px;
@@ -8,6 +7,12 @@
   &.final {
     grid-column-end: -1;
     margin-right: 0px;
+  }
+  &.nowrap {
+    white-space: nowrap;
+  }
+  &:not(.nowrap) {
+    word-wrap: break-all;
   }
 }
 

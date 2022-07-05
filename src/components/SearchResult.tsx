@@ -11,12 +11,14 @@ const Chip: Component<{
   children: JSX.Element;
   final?: boolean;
   primary?: boolean;
+  nowrap?: boolean;
 }> = (props) => (
   <p
     classList={{
       [styles.chip]: true,
       [styles.primary]: props.primary,
       [styles.final]: props.final,
+      [styles.nowrap]: props.nowrap,
     }}
   >
     {props.children}
@@ -48,11 +50,9 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   return (
     <ChipRow id={props.id}>
       <Chip primary>{dataObj().name}</Chip>
-      <Chip>
-        {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
-      </Chip>
+      <Chip nowrap>{`lvl ${dataObj().level}`}</Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
-      <Chip>{fmtRange(dataObj().range)}</Chip>
+      <Chip nowrap>{fmtRange(dataObj().range)}</Chip>
       <Show when={dataObj().duration[0].concentration !== undefined}>
         <Chip>
           <small>Concentration</small>
