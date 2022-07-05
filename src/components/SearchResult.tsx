@@ -2,6 +2,7 @@ import { spellMap } from "@src/dataLookup";
 import { Accessor, Component, createMemo, JSX, Show } from "solid-js";
 import { schoolAbbreviationMap } from "./generalTypes";
 import { DataSpell } from "./Renderer/types";
+import { fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";
 
@@ -32,6 +33,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
         {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
       </Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
+      <Chip>{fmtRange(dataObj().range)}</Chip>
       <Show when={dataObj().duration[0].concentration !== undefined}>
         <Chip>
           <small>Concentration</small>
