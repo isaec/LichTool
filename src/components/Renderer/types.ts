@@ -78,6 +78,9 @@ export type DataSpell = {
   page: number;
   srd?: boolean;
   basicRules?: boolean;
+  meta?: {
+    ritual?: boolean;
+  };
 };
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {
