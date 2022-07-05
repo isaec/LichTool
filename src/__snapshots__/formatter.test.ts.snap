@@ -44,13 +44,13 @@ exports[`fmtRange > {"type":"point","distance":{"type":"touch"}} matches snapsho
 
 exports[`fmtRange > {"type":"point","distance":{"type":"unlimited"}} matches snapshot 1`] = `"Unlimited"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Radius feet 10"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Self (10-feet radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Radius feet 15"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Self (15-feet radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot 1`] = `"Radius feet 30"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot 1`] = `"Self (30-feet radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot 1`] = `"Radius miles 5"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot 1`] = `"Self (5-miles radius)"`;
 
 exports[`fmtRange > {"type":"special"} matches snapshot 1`] = `"Special"`;
 
