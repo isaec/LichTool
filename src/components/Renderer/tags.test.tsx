@@ -12,8 +12,13 @@ vi.mock("./Renderer.module.scss", () => ({
   }),
 }));
 
+vi.mock("solid-app-router", () => ({
+  ...import("solid-app-router"),
+  Link: (props: any) => <a href={props.href}>{props.children}</a>,
+}));
+
 describe("tags", () => {
-  const needPipe = new Set(["color", "link", "filter", "scaledice"]);
+  const needPipe = new Set(["color", "link", "filter", "scaledice", "spell"]);
   it.each([
     ["color", "test|ffffff"],
     ["color", "test|f00"],
@@ -31,6 +36,9 @@ describe("tags", () => {
       "Bard cantrips and first-level spells|spells|level=0;1|class=bard",
     ],
     ["scaledice", "2d6;3d6|2-9|1d6"],
+    ["spell", "name of spell"],
+    ["spell", "name of spell|XGE"],
+    ["spell", "name of spell|XGE|displayed text"],
     ...[...tagMap.keys()]
       .filter((tag) => !needPipe.has(tag))
       .map((key) => [key, `${key} string!`]),

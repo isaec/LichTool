@@ -14,6 +14,11 @@ vi.mock("./Renderer.module.scss", () => ({
   }),
 }));
 
+vi.mock("solid-app-router", () => ({
+  ...import("solid-app-router"),
+  Link: (props: any) => <a href={props.href}>{props.children}</a>,
+}));
+
 describe("Renderer", () => {
   describe("e2e tests", () => {
     it("matches snapshot", () => {

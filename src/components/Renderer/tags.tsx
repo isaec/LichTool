@@ -2,7 +2,7 @@ import { fmtDataUrl } from "@src/formatter";
 import { Link } from "solid-app-router";
 import { Component } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
-import { Dynamic, template } from "solid-js/web";
+import { Dynamic } from "solid-js/web";
 
 import styles from "./Renderer.module.scss";
 

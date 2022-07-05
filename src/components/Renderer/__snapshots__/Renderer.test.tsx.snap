@@ -358,35 +358,23 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <li>
             <p>
               Spells: 
-              <span
-                class="error"
+              <a
+                href="/view/spell_PHB-acid-splash"
               >
-                UNKNOWN tag="spell" ERROR: 
-                <code>
-                  {@spell acid splash}
-                </code>
-                
-              </span>
+                acid splash
+              </a>
                assumes PHB by default, 
-              <span
-                class="error"
+              <a
+                href="/view/spell_XGE-tiny-servant"
               >
-                UNKNOWN tag="spell" ERROR: 
-                <code>
-                  {@spell tiny servant|xge}
-                </code>
-                
-              </span>
+                tiny servant
+              </a>
                can have sources added with a pipe, 
-              <span
-                class="error"
+              <a
+                href="/view/spell_XGE-tiny-servant"
               >
-                UNKNOWN tag="spell" ERROR: 
-                <code>
-                  {@spell tiny servant|xge|and optional link text added with another pipe}
-                </code>
-                
-              </span>
+                and optional link text added with another pipe
+              </a>
               .
             </p>
           </li>
@@ -1908,15 +1896,11 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           
           <i>
             
-            <span
-              class="error"
+            <a
+              href="/view/spell_PHB-fireball"
             >
-              UNKNOWN tag="spell" ERROR: 
-              <code>
-                {@spell fireball|phb|nested}
-              </code>
-              
-            </span>
+              nested
+            </a>
             
           </i>
           
