@@ -1,6 +1,12 @@
+import { Distances } from "./components/generalTypes";
 import { DataSpell } from "./components/Renderer/types";
 
 const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1);
+
+const pastTenseMap = new Map<Distances, string>([
+  ["miles", "mile"],
+  ["feet", "foot"],
+]);
 
 export const fmtRange = (data: DataSpell["range"]) => {
   if (data.distance === undefined) return capitalize(data.type);
@@ -13,7 +19,9 @@ export const fmtRange = (data: DataSpell["range"]) => {
       return capitalize(`${data.distance.amount} ${data.distance.type}`);
     case "radius":
       return capitalize(
-        `Self (${data.distance.amount}-${data.distance.type} ${data.type})`
+        `Self (${data.distance.amount}-${pastTenseMap.get(
+          data.distance.type
+        )} ${data.type})`
       );
     default:
       return capitalize(
