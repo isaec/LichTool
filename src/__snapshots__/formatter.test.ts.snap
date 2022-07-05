@@ -1,16 +1,16 @@
 // Vitest Snapshot v1
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Cone feet 15"`;
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Self (15-foot cone)"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot 1`] = `"Cone feet 30"`;
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot 1`] = `"Self (30-foot cone)"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot 1`] = `"Cone feet 60"`;
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot 1`] = `"Self (60-foot cone)"`;
 
-exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Cube feet 15"`;
+exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Self (15-foot cube)"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot 1`] = `"Line feet 60"`;
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot 1`] = `"Self (60-foot line)"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot 1`] = `"Line feet 100"`;
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot 1`] = `"Self (100-foot line)"`;
 
 exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":5}} matches snapshot 1`] = `"5 feet"`;
 
