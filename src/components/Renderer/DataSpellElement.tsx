@@ -4,6 +4,7 @@ import { DataSpell, EntriesData, EntryLevels } from "./types";
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer } from "./Renderer";
+import { fmtRange } from "@src/formatter";
 
 const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
   <p>
@@ -48,24 +49,7 @@ const DataSpellElement: Component<{
       <KeyValue key={"Casting time"}>
         {props.data.time[0].number} {props.data.time[0].unit}
       </KeyValue>
-      <KeyValue key={"Range"}>
-        <Switch
-          fallback={
-            <>
-              {props.data.range.type}{" "}
-              <Show when={props.data.range.distance !== undefined}>
-                {props.data.range.distance!.amount}{" "}
-                {props.data.range.distance!.type}
-              </Show>
-            </>
-          }
-        >
-          <Match when={props.data.range.type === "point"}>
-            {props.data.range.distance!.amount}{" "}
-            {props.data.range.distance!.type}
-          </Match>
-        </Switch>
-      </KeyValue>
+      <KeyValue key={"Range"}>{fmtRange(props.data.range)}</KeyValue>
       <KeyValue key={"Components"}>{components()}</KeyValue>
       <KeyValue key={"Duration"}>
         <Switch fallback={props.data.duration[0].type}>
