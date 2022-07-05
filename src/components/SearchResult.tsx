@@ -54,9 +54,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
       <Chip nowrap>{fmtRange(dataObj().range)}</Chip>
       <Show when={dataObj().duration[0].concentration !== undefined}>
-        <Chip>
-          <small>Concentration</small>
-        </Chip>
+        <Chip>x</Chip>
       </Show>
       <Chip final>{dataObj().source}</Chip>
     </ChipRow>
