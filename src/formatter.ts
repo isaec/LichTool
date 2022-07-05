@@ -39,3 +39,6 @@ export const fmtRange = (data: DataSpell["range"]) => {
       );
   }
 };
+
+export const fmtDataUrl = (type: string, name: string, source: string) =>
+  `${type}_${source}-${name.replaceAll(/\s/g, "-")}`;
