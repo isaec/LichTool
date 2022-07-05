@@ -54,4 +54,4 @@ exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} mat
 
 exports[`fmtRange > {"type":"special"} matches snapshot 1`] = `"Special"`;
 
-exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Sphere feet 10"`;
+exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Self (10-foot radius)"`;

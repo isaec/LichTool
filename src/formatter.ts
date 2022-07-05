@@ -17,6 +17,13 @@ export const fmtRange = (data: DataSpell["range"]) => {
       if (data.distance.type === "miles" && data.distance.amount === 1)
         return "1 mile";
       return capitalize(`${data.distance.amount} ${data.distance.type}`);
+    case "sphere":
+      // sphere is weird, its an alias of range
+      return capitalize(
+        `Self (${data.distance.amount}-${pastTenseMap.get(
+          data.distance.type
+        )} radius)`
+      );
     case "radius":
     case "line":
     case "cube":
