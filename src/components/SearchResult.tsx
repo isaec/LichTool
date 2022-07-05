@@ -22,12 +22,16 @@ const Chip: Component<{
   </p>
 );
 
+const ChipRow: Component<{
+  children: JSX.Element;
+}> = (props) => <div class={styles.chipRow}>{props.children}</div>;
+
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
     spellMap.get(props.id)
   ) as Accessor<DataSpell>;
   return (
-    <>
+    <ChipRow>
       <Chip primary>{dataObj().name}</Chip>
       <Chip>
         {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
@@ -40,7 +44,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
         </Chip>
       </Show>
       <Chip final>{dataObj().source}</Chip>
-    </>
+    </ChipRow>
   );
 };
 export const searchResultFn = (result: { id: string }) => (
