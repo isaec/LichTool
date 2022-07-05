@@ -40,8 +40,50 @@ export const fmtRange = (data: DataSpell["range"]) => {
   }
 };
 
+// this is a hacky solution for lowercase titles...
+const leaveLowerCase = new Set([
+  "without",
+  "and",
+  "as",
+  "at",
+  "but",
+  "by",
+  "for",
+  "from",
+  "if",
+  "in",
+  "into",
+  "like",
+  "near",
+  "nor",
+  "of",
+  "off",
+  "on",
+  "once",
+  "onto",
+  "or",
+  "over",
+  "past",
+  "so",
+  "than",
+  "that",
+  "till",
+  "to",
+  "up",
+  "upon",
+  "with",
+  "when",
+  "yet",
+  "via",
+  "the",
+]);
+
 export const fmtDataUrl = (type: string, name: string, source: string) =>
-  `${type.toLowerCase()}_${source.toUpperCase()}-${name.replaceAll(
-    /\s/g,
-    "-"
-  )}`;
+  `${type.toLowerCase()}_${source.toUpperCase()}-${name
+    .split(/\s/)
+    .map((s) =>
+      leaveLowerCase.has(s.toLowerCase())
+        ? s.toLowerCase()
+        : `${s[0].toUpperCase()}${s.slice(1)}`
+    )
+    .join("-")}`;
