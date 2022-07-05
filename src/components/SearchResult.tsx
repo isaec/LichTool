@@ -50,7 +50,9 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   return (
     <ChipRow id={props.id}>
       <Chip primary>{dataObj().name}</Chip>
-      <Chip nowrap>{`lvl ${dataObj().level}`}</Chip>
+      <Chip nowrap>
+        {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
+      </Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
       <Chip nowrap>{fmtRange(dataObj().range)}</Chip>
       <Show when={dataObj().duration[0].concentration !== undefined}>
@@ -60,6 +62,3 @@ export const SearchResult: Component<{ id: string }> = (props) => {
     </ChipRow>
   );
 };
-export const searchResultFn = (result: { id: string }) => (
-  <SearchResult id={result.id} />
-);
