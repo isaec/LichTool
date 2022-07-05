@@ -1,6 +1,6 @@
 import { spellMap } from "@src/dataLookup";
 import { Accessor, Component, createMemo, JSX, Show } from "solid-js";
-import { schoolAbbreviationMap } from "./generalTypes";
+import { Levels, schoolAbbreviationMap } from "./generalTypes";
 import { DataSpell } from "./Renderer/types";
 import { fmtRange } from "@src/formatter";
 
@@ -43,6 +43,12 @@ const ChipRow: Component<{
   );
 };
 
+const fmtLevel = (level: Levels, ritual?: boolean) => {
+  if (level === 0) return "Cantrip";
+  if (ritual) return `lvl ${level} rit`;
+  return `lvl ${level}`;
+};
+
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
     spellMap.get(props.id)
@@ -50,15 +56,15 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   return (
     <ChipRow id={props.id}>
       <Chip primary>{dataObj().name}</Chip>
-      <Chip nowrap>
-        {dataObj().level === 0 ? "Cantrip" : `lvl ${dataObj().level}`}
-      </Chip>
+      <Chip nowrap>{fmtLevel(dataObj().level, dataObj().meta?.ritual)}</Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
       <Chip nowrap>{fmtRange(dataObj().range)}</Chip>
       <Show when={dataObj().duration[0].concentration !== undefined}>
-        <Chip>x</Chip>
+        <Chip nowrap>x</Chip>
       </Show>
-      <Chip final>{dataObj().source}</Chip>
+      <Chip final nowrap>
+        {dataObj().source}
+      </Chip>
     </ChipRow>
   );
 };

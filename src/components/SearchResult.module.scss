@@ -12,8 +12,8 @@
     white-space: nowrap;
   }
   &:not(.nowrap) {
-    white-space: wrap;
-    word-wrap: break-all;
+    white-space: normal;
+    word-break: break-all;
   }
 }
 
