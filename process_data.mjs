@@ -34,7 +34,7 @@ await Promise.all(
       if (spell.srd === true)
         processedSpells.push({
           ...spell,
-          id: `spell_${spell.name}_${spell.source}`,
+          id: `spell_${spell.source}-${spell.name.replaceAll(/\s/g, "-")}`,
         });
     });
   })
