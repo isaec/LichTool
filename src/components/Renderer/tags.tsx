@@ -1,3 +1,5 @@
+import { fmtDataUrl } from "@src/formatter";
+import { Link } from "solid-app-router";
 import { Component } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 import { Dynamic, template } from "solid-js/web";
@@ -15,11 +17,18 @@ export const tagAlias = new Map([
 ]);
 
 const pipe =
-  (Element: Component<{ p: string[]; p0?: string; p1?: string }>) =>
+  (Element: Component<{ p: string[]; p0: string; p1?: string; p2?: string }>) =>
   (props: { children: JSX.Element }): JSX.Element => {
     const pipeSplit =
-      typeof props.children === "string" ? props.children.split("|") : [];
-    return <Element p={pipeSplit} p0={pipeSplit[0]} p1={pipeSplit[1]} />;
+      typeof props.children === "string" ? props.children.split("|") : [""];
+    return (
+      <Element
+        p={pipeSplit}
+        p0={pipeSplit[0]}
+        p1={pipeSplit[1]}
+        p2={pipeSplit[2]}
+      />
+    );
   };
 
 const tag =
@@ -78,6 +87,12 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
         {props.p0}
       </a>
     )),
+    // link tags
+    spell: pipe((props) => (
+      <Link href={`/view/${fmtDataUrl("spell", props.p0, props.p1 ?? "phb")}`}>
+        {props.p2 ?? props.p0}
+      </Link>
+    )),
     // bad / unsupported tags
     filter: pipe((props) => (
       <a title={props.p?.slice(1).join("|")} href="#">
@@ -89,6 +104,6 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     hit: templateTag("code", (c) => <>d20{c}</>),
     damage: tag("code"),
     d20: templateTag("code", (c) => <>d20{c}</>),
-    scaledice: pipe((props) => <code>{props.p[2]}</code>),
+    scaledice: pipe((props) => <code>{props.p2}</code>),
   })
 );
