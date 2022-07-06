@@ -7,6 +7,7 @@ import { SearchResult as SearchResultElement } from "./SearchResult";
 
 import styles from "./Omnisearch.module.scss";
 import { schoolAbbreviationMap } from "./generalTypes";
+import { useSearchParams } from "solid-app-router";
 
 // use the same minisearch for each search instance
 const searchEngine = new MiniSearch({
@@ -95,8 +96,10 @@ const testFilter = (
 };
 
 const Omnisearch: Component<{}> = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [search, setSearch] = createStore({
-    query: "",
+    query: searchParams.query,
     filters: {} as { [key: string]: string },
   });
   const filterFn = (result: SearchResult) => {
@@ -119,6 +122,7 @@ const Omnisearch: Component<{}> = () => {
           value={search.query}
           onInput={(e) => {
             setSearch("query", e.currentTarget.value);
+            setSearchParams({ query: e.currentTarget.value });
           }}
         />
         <Filter store={searchStore} filterKey={"level"} />
