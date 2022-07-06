@@ -62,12 +62,15 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        lol
+        <p>
+          lol
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;
@@ -134,12 +137,15 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        lol
+        <p>
+          lol
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;
@@ -206,12 +212,15 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        lol
+        <p>
+          lol
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;
@@ -279,12 +288,15 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        lol
+        <p>
+          lol
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;
@@ -352,12 +364,15 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        lol
+        <p>
+          lol
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;
@@ -424,15 +439,18 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        Entry text, 
-        <b>
-          bold!
-        </b>
+        <p>
+          Entry text, 
+          <b>
+            bold!
+          </b>
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;
@@ -499,15 +517,18 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
       </b>
       1 minute
     </p>
-    <p>
+    <p
+      class="_Renderer_5kjti_1"
+    >
       <p>
-        Entry text, 
-        <b>
-          bold!
-        </b>
+        <p>
+          Entry text, 
+          <b>
+            bold!
+          </b>
+        </p>
       </p>
     </p>
-    
   </div>
 </div>
 `;

@@ -249,7 +249,7 @@ const Renderer: Component<{ data: string | object }> = (props) => {
   return (
     <p
       classList={{
-        [styles.renderer]: true,
+        [styles.Renderer]: true,
         [styles.scroll]: true,
       }}
     >

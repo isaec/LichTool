@@ -37,19 +37,19 @@ describe("Renderer", () => {
       ));
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
-      NodeList [
-        <p>
-          this is some text, 
-          <b>
-            and now its bold
-          </b>
-           
-          <b>
-            with shorthand, too!
-          </b>
-        </p>,
-      ]
-    `);
+          NodeList [
+            <p>
+              this is some text, 
+              <b>
+                and now its bold
+              </b>
+               
+              <b>
+                with shorthand, too!
+              </b>
+            </p>,
+          ]
+        `);
       unmount();
     });
     it("renders italic, strikes, underline", () => {
@@ -58,25 +58,25 @@ describe("Renderer", () => {
       ));
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
-        NodeList [
-          <p>
-            this is some text, 
-            <s>
-              and now its struck
-            </s>
-             
-            <span
-              class="underline"
-            >
-              underline
-            </span>
-             
-            <i>
-              with italic shorthand, too!
-            </i>
-          </p>,
-        ]
-      `);
+          NodeList [
+            <p>
+              this is some text, 
+              <s>
+                and now its struck
+              </s>
+               
+              <span
+                class="underline"
+              >
+                underline
+              </span>
+               
+              <i>
+                with italic shorthand, too!
+              </i>
+            </p>,
+          ]
+        `);
       unmount();
     });
     it.each([
@@ -100,20 +100,20 @@ describe("Renderer", () => {
       ));
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
-      NodeList [
-        <p>
-          some text: 
-          <b>
-            bolded 
-            <i>
-              and italic
-            </i>
-             and now just bold
-          </b>
-          
-        </p>,
-      ]
-    `);
+          NodeList [
+            <p>
+              some text: 
+              <b>
+                bolded 
+                <i>
+                  and italic
+                </i>
+                 and now just bold
+              </b>
+              
+            </p>,
+          ]
+        `);
       unmount();
     });
 
@@ -163,38 +163,38 @@ describe("Renderer", () => {
 
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
-        NodeList [
-          <p>
-            some text: 
-            <b>
-              bolded 
-              <i>
-                and italic
-              </i>
-               and now just bold - now 
-              <s>
-                struck bold! 
-                <span
-                  class="underline"
-                >
-                  underline 
-                  <i>
-                    italic
-                  </i>
+          NodeList [
+            <p>
+              some text: 
+              <b>
+                bolded 
+                <i>
+                  and italic
+                </i>
+                 and now just bold - now 
+                <s>
+                  struck bold! 
+                  <span
+                    class="underline"
+                  >
+                    underline 
+                    <i>
+                      italic
+                    </i>
+                    
+                  </span>
                   
-                </span>
-                
-              </s>
-              , bold
-            </b>
-            , more text (
-            <i>
-              italic
-            </i>
-            )
-          </p>,
-        ]
-      `);
+                </s>
+                , bold
+              </b>
+              , more text (
+              <i>
+                italic
+              </i>
+              )
+            </p>,
+          ]
+        `);
 
       unmount();
     });

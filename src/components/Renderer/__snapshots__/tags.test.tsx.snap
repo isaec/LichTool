@@ -179,7 +179,7 @@ exports[`tags > {@scaledice 2d6;3d6|2-9|1d6} matches snapshot 1`] = `
 exports[`tags > {@spell name of spell|XGE|displayed text} matches snapshot 1`] = `
 <div>
   <a
-    href="/view/spell_XGE-name-of-spell"
+    href="/view/spell_XGE-Name-of-Spell"
   >
     displayed text
   </a>
@@ -189,7 +189,7 @@ exports[`tags > {@spell name of spell|XGE|displayed text} matches snapshot 1`] =
 exports[`tags > {@spell name of spell|XGE} matches snapshot 1`] = `
 <div>
   <a
-    href="/view/spell_XGE-name-of-spell"
+    href="/view/spell_XGE-Name-of-Spell"
   >
     name of spell
   </a>
@@ -199,7 +199,7 @@ exports[`tags > {@spell name of spell|XGE} matches snapshot 1`] = `
 exports[`tags > {@spell name of spell} matches snapshot 1`] = `
 <div>
   <a
-    href="/view/spell_PHB-name-of-spell"
+    href="/view/spell_PHB-Name-of-Spell"
   >
     name of spell
   </a>

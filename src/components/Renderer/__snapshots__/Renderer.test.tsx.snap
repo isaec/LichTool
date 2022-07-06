@@ -3,7 +3,7 @@
 exports[`Renderer > e2e tests > matches snapshot 1`] = `
 <div>
   <p
-    class="Renderer"
+    class="Renderer scroll"
   >
     <h1>
       Renderer Demo
@@ -359,19 +359,19 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             <p>
               Spells: 
               <a
-                href="/view/spell_PHB-acid-splash"
+                href="/view/spell_PHB-Acid-Splash"
               >
                 acid splash
               </a>
                assumes PHB by default, 
               <a
-                href="/view/spell_XGE-tiny-servant"
+                href="/view/spell_XGE-Tiny-Servant"
               >
                 tiny servant
               </a>
                can have sources added with a pipe, 
               <a
-                href="/view/spell_XGE-tiny-servant"
+                href="/view/spell_XGE-Tiny-Servant"
               >
                 and optional link text added with another pipe
               </a>
@@ -1897,7 +1897,7 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <i>
             
             <a
-              href="/view/spell_PHB-fireball"
+              href="/view/spell_PHB-Fireball"
             >
               nested
             </a>
@@ -2416,37 +2416,41 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           </b>
           Instantaneous
         </p>
-        <p>
+        <p
+          class="Renderer"
+        >
           <p>
-            A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 
-            <code>
-              8d6
-            </code>
-             fire damage on a failed save, or half as much damage on a successful one.
+            <p>
+              A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 
+              <code>
+                8d6
+              </code>
+               fire damage on a failed save, or half as much damage on a successful one.
+            </p>
+            <p>
+              The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.
+            </p>
           </p>
           <p>
-            The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried.
-          </p>
-        </p>
-        <p>
-          <div>
-            <div
-              class="inlineHeader"
-            >
-              <b>
-                <i>
-                  At Higher Levels. 
-                </i>
-              </b>
-              <p>
-                When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-                <code>
-                  1d6
-                </code>
-                 for each slot level above 3rd.
-              </p>
+            <div>
+              <div
+                class="inlineHeader"
+              >
+                <b>
+                  <i>
+                    At Higher Levels. 
+                  </i>
+                </b>
+                <p>
+                  When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
+                  <code>
+                    1d6
+                  </code>
+                   for each slot level above 3rd.
+                </p>
+              </div>
             </div>
-          </div>
+          </p>
         </p>
       </div>
     </p>
