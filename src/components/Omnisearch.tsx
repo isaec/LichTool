@@ -99,7 +99,7 @@ const Omnisearch: Component<{}> = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [search, setSearch] = createStore({
-    query: searchParams.query,
+    query: searchParams.query ?? "",
     filters: {} as { [key: string]: string },
   });
   const filterFn = (result: SearchResult) => {
