@@ -1,7 +1,14 @@
 import MiniSearch, { SearchResult } from "minisearch";
 import { DataSpell } from "./Renderer/types";
 import { spellArray, spellMap } from "@src/dataLookup";
-import { Component, createMemo, createSignal, For, untrack } from "solid-js";
+import {
+  Component,
+  createDeferred,
+  createMemo,
+  createSignal,
+  For,
+  untrack,
+} from "solid-js";
 import { createStore } from "solid-js/store";
 import { SearchResult as SearchResultElement } from "./SearchResult";
 
@@ -95,31 +102,6 @@ const testFilter = (
   return false;
 };
 
-const createDebouncedMemo = <T, V>(
-  signal: () => V,
-  fn: (arg0: V) => T,
-  timeout = 100
-): (() => T) => {
-  let callable = true;
-  const [refresh, setRefresh] = createSignal(0, { equals: false });
-  let id: number | undefined;
-  return createMemo((last: T | undefined) => {
-    refresh();
-    const value = signal();
-    clearTimeout(id);
-    if (!callable) {
-      id = setTimeout(() => {
-        callable = true;
-        clearTimeout(id);
-        setRefresh(0);
-      }, timeout) as unknown as number;
-      return last!;
-    }
-    callable = false;
-    return untrack(() => fn(value));
-  });
-};
-
 const Omnisearch: Component<{}> = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -133,13 +115,11 @@ const Omnisearch: Component<{}> = () => {
       ([key, filter]) => !testFilter(dataObj!, key, parseFilter(filter))
     );
   };
-  const results = createDebouncedMemo(
-    () => search.query,
-    (query) =>
-      searchEngine.search(query, {
-        filter: filterFn,
-      }),
-    50
+  const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
+  const results = createMemo(() =>
+    searchEngine.search(deferredQuery(), {
+      filter: filterFn,
+    })
   );
   const searchStore = { search, setSearch };
   return (
