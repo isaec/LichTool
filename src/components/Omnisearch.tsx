@@ -137,7 +137,10 @@ const SmartInput: Component<{
           }
         }}
         onKeyDown={(e) => {
-          if (e.key === "Backspace" && props.value === "") {
+          if (
+            e.key === "Backspace" &&
+            (props.value === "" || props.value === undefined)
+          ) {
             e.preventDefault();
             props.onEscape();
           }
@@ -178,6 +181,7 @@ const FilterComponent: Component<{
   filter: Filter | BlankFilter;
   setFilter: (filter: Partial<Filter>) => void;
   focusOmnisearch: () => void;
+  removeSelf: () => void;
 }> = (props) => {
   const keyOptions = createMemo(() => {
     if (props.filter.key === undefined) return filterKeys;
@@ -210,9 +214,7 @@ const FilterComponent: Component<{
         onFinish={() => {
           setState("value");
         }}
-        onEscape={() => {
-          console.log("remove filter!");
-        }}
+        onEscape={props.removeSelf}
         onInput={(s) => {
           props.setFilter({ key: s });
         }}
@@ -301,6 +303,12 @@ const Omnisearch: Component<{}> = () => {
               filter={filter}
               setFilter={(newFilter: Partial<Filter>) => {
                 setSearch("filters", index(), newFilter);
+              }}
+              removeSelf={() => {
+                const arr = [...search.filters];
+                arr.splice(index(), 1);
+                setSearch("filters", arr);
+                if (arr.length === 0) focusOmnisearch();
               }}
               focusOmnisearch={focusOmnisearch}
             />
