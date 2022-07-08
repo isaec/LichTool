@@ -9,6 +9,7 @@ import {
   createMemo,
   createSignal,
   For,
+  Show,
   untrack,
 } from "solid-js";
 import { createStore } from "solid-js/store";
@@ -74,6 +75,27 @@ type Filter = BlankFilter | PopulatedFilter;
 const isBlank = (filter: Filter): filter is BlankFilter => !filter.use;
 const isPopulated = (filter: Filter): filter is PopulatedFilter => filter.use;
 
+const SmartInput: Component<{
+  /* undefined union means it must be passed but can be undefined */
+  value: string | undefined;
+  options: string[] | undefined;
+  onInput: (value: string) => void;
+}> = (props) => {
+  return (
+    <div class={styles.smartInput}>
+      <input
+        value={props.value ?? ""}
+        onInput={(e) => props.onInput(e.currentTarget.value)}
+      />
+      <Show when={props.options !== undefined && props.options.length !== 0}>
+        <div class={styles.keyDropdown}>
+          <For each={props.options}>{(option) => <p>{option}</p>}</For>
+        </div>
+      </Show>
+    </div>
+  );
+};
+
 const FilterComponent: Component<{
   filter: Filter | BlankFilter;
   setFilter: (filter: Partial<Filter>) => void;
@@ -94,29 +116,18 @@ const FilterComponent: Component<{
   });
   return (
     <>
-      <div class={styles.smartInput}>
-        <input
-          value={props.filter.key ?? ""}
-          onInput={(e) => {
-            props.setFilter({ key: e.currentTarget.value });
-          }}
-        />
-        <div class={styles.keyDropdown}>
-          <For each={keyOptions()}>{(option) => <p>{option}</p>}</For>
-        </div>
-      </div>
-      <input
-        value={props.filter.value ?? ""}
-        disabled={
-          !(
-            props.filter.key !== undefined &&
-            filterKeys.includes(props.filter.key)
-          )
-        }
-        onInput={(e) => {
-          props.setFilter({
-            value: e.currentTarget.value,
-          });
+      <SmartInput
+        value={props.filter.key}
+        options={keyOptions()}
+        onInput={(s) => {
+          props.setFilter({ key: s });
+        }}
+      />
+      <SmartInput
+        value={props.filter.value}
+        options={undefined}
+        onInput={(s) => {
+          props.setFilter({ value: s });
         }}
       />
     </>
