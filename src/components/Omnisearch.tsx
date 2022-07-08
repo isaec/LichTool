@@ -148,6 +148,7 @@ const SmartInput: Component<{
 const FilterComponent: Component<{
   filter: Filter | BlankFilter;
   setFilter: (filter: Partial<Filter>) => void;
+  focusOmnisearch: () => void;
 }> = (props) => {
   const keyOptions = createMemo(() => {
     if (props.filter.key === undefined) return filterKeys;
@@ -155,19 +156,20 @@ const FilterComponent: Component<{
       .filter((key) => key.includes(props.filter.key!))
       .sort(hammingDistanceFrom(props.filter.key));
   });
-  // make use true if the filter validates
-  createEffect(() => {
-    if (props.filter.key === undefined || props.filter.value === undefined) {
-      props.setFilter({ use: false });
-    } else {
-      props.setFilter({ use: true });
-    }
-  });
+
   type States = "key" | "value" | "use";
   const [state, setState] = createSignal<States>("key");
+
+  // make use true if the filter validates
   createEffect(() => {
-    console.log(state());
+    if (state() === "use") {
+      props.setFilter({ use: true });
+      props.focusOmnisearch();
+    } else {
+      props.setFilter({ use: false });
+    }
   });
+
   return (
     <>
       <SmartInput
@@ -226,6 +228,10 @@ const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
 };
 
 const Omnisearch: Component<{}> = () => {
+  let ref: HTMLInputElement | undefined;
+  const focusOmnisearch = () => {
+    ref?.focus();
+  };
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [search, setSearch] = createStore({
@@ -261,10 +267,12 @@ const Omnisearch: Component<{}> = () => {
               setFilter={(newFilter: Partial<Filter>) => {
                 setSearch("filters", index(), newFilter);
               }}
+              focusOmnisearch={focusOmnisearch}
             />
           )}
         </For>
         <input
+          ref={ref}
           class={styles.entryBar}
           value={search.query}
           onInput={(e) => {
