@@ -10,7 +10,6 @@ import {
   createSignal,
   For,
   Show,
-  untrack,
 } from "solid-js";
 import { createStore } from "solid-js/store";
 import { SearchResult as SearchResultElement } from "./SearchResult";
@@ -81,13 +80,20 @@ const SmartInput: Component<{
   options: string[] | undefined;
   onInput: (value: string) => void;
 }> = (props) => {
+  const [focused, setFocused] = createSignal(false);
   return (
     <div class={styles.smartInput}>
       <input
         value={props.value ?? ""}
         onInput={(e) => props.onInput(e.currentTarget.value)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
       />
-      <Show when={props.options !== undefined && props.options.length !== 0}>
+      <Show
+        when={
+          props.options !== undefined && props.options.length !== 0 && focused()
+        }
+      >
         <div class={styles.keyDropdown}>
           <For each={props.options}>{(option) => <p>{option}</p>}</For>
         </div>
@@ -223,3 +229,6 @@ const Omnisearch: Component<{}> = () => {
   );
 };
 export default Omnisearch;
+function createComputation(arg0: () => boolean) {
+  throw new Error("Function not implemented.");
+}
