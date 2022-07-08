@@ -17,6 +17,11 @@
 
 .smartInput {
   position: relative;
+  & input:not(:focus) {
+    & + .keyDropdown {
+      opacity: 0;
+    }
+  }
   & .keyDropdown {
     position: absolute;
     z-index: $layer-2;

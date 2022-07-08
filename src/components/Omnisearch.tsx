@@ -81,13 +81,17 @@ const SmartInput: Component<{
   onInput: (value: string) => void;
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
+  const [hasMouseDown, setHasMouseDown] = createSignal(false);
   return (
     <div class={styles.smartInput}>
       <input
         value={props.value ?? ""}
+        spellcheck={false}
         onInput={(e) => props.onInput(e.currentTarget.value)}
         onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
+        onBlur={() => {
+          if (!hasMouseDown()) setFocused(false);
+        }}
       />
       <Show
         when={
@@ -96,7 +100,19 @@ const SmartInput: Component<{
       >
         <div class={styles.keyDropdown}>
           <For each={props.options}>
-            {(option) => <button>{option}</button>}
+            {(option) => (
+              <button
+                onFocus={() => setFocused(true)}
+                onMouseDown={() => setHasMouseDown(true)}
+                onMouseUp={() => setHasMouseDown(false)}
+                onClick={() => {
+                  props.onInput(option);
+                  setFocused(false);
+                }}
+              >
+                {option}
+              </button>
+            )}
           </For>
         </div>
       </Show>
@@ -128,6 +144,7 @@ const FilterComponent: Component<{
         value={props.filter.key}
         options={keyOptions()}
         onInput={(s) => {
+          console.log("input!");
           props.setFilter({ key: s });
         }}
       />
