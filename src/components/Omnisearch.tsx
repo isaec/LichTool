@@ -78,6 +78,7 @@ const SmartInput: Component<{
   /* undefined union means it must be passed but can be undefined */
   value: string | undefined;
   options: string[] | undefined;
+  focus: boolean;
   valid: boolean;
   finishKey: string;
   onFinish: () => void;
@@ -86,16 +87,21 @@ const SmartInput: Component<{
   const [focused, setFocused] = createSignal(false);
   const [hasMouseDown, setHasMouseDown] = createSignal(false);
   const [finished, setFinished] = createSignal(false);
+  let ref: HTMLInputElement | undefined;
+  createEffect(() => {
+    if (props.focus) ref?.focus();
+  });
   return (
     <div class={styles.smartInput}>
       <input
+        ref={ref}
         classList={{
           [styles.error]:
             !props.valid &&
             (props.options?.length === 0 || props.options === undefined),
         }}
         value={props.value ?? ""}
-        disabled={finished()}
+        disabled={finished() && !props.focus}
         spellcheck={false}
         onInput={(e) => props.onInput(e.currentTarget.value)}
         onKeyDown={(e) => {
@@ -159,12 +165,16 @@ const FilterComponent: Component<{
   });
   type States = "key" | "value" | "use";
   const [state, setState] = createSignal<States>("key");
+  createEffect(() => {
+    console.log(state());
+  });
   return (
     <>
       <SmartInput
         value={props.filter.key}
         valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
+        focus={state() === "key"}
         finishKey=" "
         onFinish={() => {
           setState("value");
@@ -177,8 +187,11 @@ const FilterComponent: Component<{
         value={props.filter.value}
         valid={true}
         options={undefined}
+        focus={state() === "value"}
         finishKey="Enter"
-        onFinish={() => {}}
+        onFinish={() => {
+          setState("use");
+        }}
         onInput={(s) => {
           props.setFilter({ value: s });
         }}
