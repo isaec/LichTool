@@ -91,9 +91,18 @@ const SmartInput: Component<{
   createEffect(() => {
     if (props.focus) ref?.focus();
   });
-  createEffect(() => {
-    if (finished()) props.onFinish();
-  });
+  const tryFinish = () => {
+    if (
+      !props.valid &&
+      (props.options === undefined || props.options.length === 0)
+    )
+      return;
+    if (!props.valid) {
+      props.onInput(props.options![0]);
+    }
+    setFinished(true);
+    props.onFinish();
+  };
   return (
     <div class={styles.smartInput}>
       <input
@@ -113,7 +122,7 @@ const SmartInput: Component<{
             props.finishKey === "Space" &&
             val.charAt(val.length - 1) === " "
           ) {
-            setFinished(true);
+            tryFinish();
             e.preventDefault();
           } else {
             props.onInput(val);
@@ -121,7 +130,7 @@ const SmartInput: Component<{
         }}
         onKeyPress={(e) => {
           if (props.finishKey === "Enter" && e.key === "Enter") {
-            setFinished(true);
+            tryFinish();
             e.preventDefault();
           }
         }}
