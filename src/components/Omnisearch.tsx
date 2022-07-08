@@ -82,6 +82,7 @@ const SmartInput: Component<{
   valid: boolean;
   finishKey: "Enter" | "Space";
   onFinish: () => void;
+  onEscape: () => void;
   onInput: (value: string) => void;
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
@@ -124,6 +125,7 @@ const SmartInput: Component<{
           ) {
             tryFinish();
             e.preventDefault();
+            e.currentTarget.value = props.value ?? "";
           } else {
             props.onInput(val);
           }
@@ -132,6 +134,12 @@ const SmartInput: Component<{
           if (props.finishKey === "Enter" && e.key === "Enter") {
             tryFinish();
             e.preventDefault();
+          }
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Backspace" && props.value === "") {
+            e.preventDefault();
+            props.onEscape();
           }
         }}
         onFocus={() => setFocused(true)}
@@ -202,6 +210,9 @@ const FilterComponent: Component<{
         onFinish={() => {
           setState("value");
         }}
+        onEscape={() => {
+          console.log("remove filter!");
+        }}
         onInput={(s) => {
           props.setFilter({ key: s });
         }}
@@ -214,6 +225,9 @@ const FilterComponent: Component<{
         finishKey="Enter"
         onFinish={() => {
           setState("use");
+        }}
+        onEscape={() => {
+          setState("key");
         }}
         onInput={(s) => {
           props.setFilter({ value: s });
