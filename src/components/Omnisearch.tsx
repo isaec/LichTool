@@ -79,10 +79,13 @@ const SmartInput: Component<{
   value: string | undefined;
   options: string[] | undefined;
   valid: boolean;
+  finishKey: string;
+  onFinish: () => void;
   onInput: (value: string) => void;
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
   const [hasMouseDown, setHasMouseDown] = createSignal(false);
+  const [finished, setFinished] = createSignal(false);
   return (
     <div class={styles.smartInput}>
       <input
@@ -92,9 +95,18 @@ const SmartInput: Component<{
             (props.options?.length === 0 || props.options === undefined),
         }}
         value={props.value ?? ""}
-        // disabled={props.valid}
+        disabled={finished()}
         spellcheck={false}
         onInput={(e) => props.onInput(e.currentTarget.value)}
+        onKeyDown={(e) => {
+          if (e.key === props.finishKey) {
+            if (props.valid) {
+              setFinished(true);
+              props.onFinish();
+            }
+            e.preventDefault();
+          }
+        }}
         onFocus={() => setFocused(true)}
         onBlur={() => {
           if (!hasMouseDown()) setFocused(false);
@@ -145,12 +157,18 @@ const FilterComponent: Component<{
       props.setFilter({ use: true });
     }
   });
+  type States = "key" | "value" | "use";
+  const [state, setState] = createSignal<States>("key");
   return (
     <>
       <SmartInput
         value={props.filter.key}
         valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
+        finishKey=" "
+        onFinish={() => {
+          setState("value");
+        }}
         onInput={(s) => {
           props.setFilter({ key: s });
         }}
@@ -159,6 +177,8 @@ const FilterComponent: Component<{
         value={props.filter.value}
         valid={true}
         options={undefined}
+        finishKey="Enter"
+        onFinish={() => {}}
         onInput={(s) => {
           props.setFilter({ value: s });
         }}
