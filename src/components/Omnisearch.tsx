@@ -81,6 +81,7 @@ const SmartInput: Component<{
   options: string[] | undefined;
   focus: boolean;
   valid: boolean;
+  disabled?: boolean;
   finishKey: "Enter" | "Space";
   onFinish: () => void;
   onEscape: () => void;
@@ -88,7 +89,6 @@ const SmartInput: Component<{
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
   const [hasMouseDown, setHasMouseDown] = createSignal(false);
-  const [finished, setFinished] = createSignal(false);
   let ref: HTMLInputElement | undefined;
   createEffect(() => {
     if (props.focus) ref?.focus();
@@ -102,7 +102,6 @@ const SmartInput: Component<{
     if (!props.valid) {
       props.onInput(props.options![0]);
     }
-    setFinished(true);
     props.onFinish();
   };
   return (
@@ -111,12 +110,13 @@ const SmartInput: Component<{
         ref={ref}
         classList={{
           [styles.error]:
+            !props.disabled &&
             !props.valid &&
             (props.options?.length === 0 || props.options === undefined),
         }}
         type="search"
         value={props.value ?? ""}
-        disabled={finished() && !props.focus}
+        disabled={props.disabled}
         spellcheck={false}
         onInput={(e) => {
           const val = e.currentTarget.value;
@@ -214,6 +214,7 @@ const FilterComponent: Component<{
         valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
         focus={state() === "key"}
+        disabled={state() === "use" || state() === "value"}
         finishKey="Space"
         onFinish={() => {
           setState("value");
@@ -231,6 +232,7 @@ const FilterComponent: Component<{
         }
         options={undefined}
         focus={state() === "value"}
+        disabled={state() === "key"}
         finishKey="Enter"
         onFinish={() => {
           setState("use");
@@ -297,13 +299,8 @@ const Omnisearch: Component<{}> = () => {
     },
   });
 
-  createEffect(() => {
-    console.log(JSON.stringify(search.query), JSON.stringify(search.filters));
-  });
-
   // keep search params up to date with store filters, query
   createEffect(() => {
-    console.log("update search params");
     setSearchParams(
       search.filters.reduce(
         (acc, filter) => {
