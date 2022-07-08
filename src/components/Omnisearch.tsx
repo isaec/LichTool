@@ -119,6 +119,12 @@ const SmartInput: Component<{
             props.onInput(val);
           }
         }}
+        onKeyPress={(e) => {
+          if (props.finishKey === "Enter" && e.key === "Enter") {
+            setFinished(true);
+            e.preventDefault();
+          }
+        }}
         onFocus={() => setFocused(true)}
         onBlur={() => {
           if (!hasMouseDown()) setFocused(false);
