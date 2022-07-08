@@ -80,7 +80,7 @@ const SmartInput: Component<{
   options: string[] | undefined;
   focus: boolean;
   valid: boolean;
-  finishKey: string;
+  finishKey: "Enter" | "Space";
   onFinish: () => void;
   onInput: (value: string) => void;
 }> = (props) => {
@@ -91,6 +91,9 @@ const SmartInput: Component<{
   createEffect(() => {
     if (props.focus) ref?.focus();
   });
+  createEffect(() => {
+    if (finished()) props.onFinish();
+  });
   return (
     <div class={styles.smartInput}>
       <input
@@ -100,17 +103,20 @@ const SmartInput: Component<{
             !props.valid &&
             (props.options?.length === 0 || props.options === undefined),
         }}
+        type="search"
         value={props.value ?? ""}
         disabled={finished() && !props.focus}
         spellcheck={false}
-        onInput={(e) => props.onInput(e.currentTarget.value)}
-        onKeyDown={(e) => {
-          if (e.key === props.finishKey) {
-            if (props.valid) {
-              setFinished(true);
-              props.onFinish();
-            }
+        onInput={(e) => {
+          const val = e.currentTarget.value;
+          if (
+            props.finishKey === "Space" &&
+            val.charAt(val.length - 1) === " "
+          ) {
+            setFinished(true);
             e.preventDefault();
+          } else {
+            props.onInput(val);
           }
         }}
         onFocus={() => setFocused(true)}
@@ -177,7 +183,7 @@ const FilterComponent: Component<{
         valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
         focus={state() === "key"}
-        finishKey=" "
+        finishKey="Space"
         onFinish={() => {
           setState("value");
         }}
@@ -275,6 +281,7 @@ const Omnisearch: Component<{}> = () => {
           ref={ref}
           class={styles.entryBar}
           value={search.query}
+          type="search"
           onInput={(e) => {
             batch(() => {
               if (e.currentTarget.value[0] === ".") {
