@@ -40,7 +40,7 @@ const searchEngine = new MiniSearch({
     return results.join("");
   },
   searchOptions: {
-    fuzzy: 0.2,
+    fuzzy: 0.5,
     prefix: true,
     weights: {
       fuzzy: 1,
@@ -221,7 +221,10 @@ const FilterComponent: Component<{
       />
       <SmartInput
         value={props.filter.value}
-        valid={true}
+        valid={
+          typeof props.filter.value === "string" &&
+          props.filter.value.length > 0
+        }
         options={undefined}
         focus={state() === "value"}
         finishKey="Enter"
