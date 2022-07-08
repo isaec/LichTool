@@ -95,7 +95,9 @@ const SmartInput: Component<{
         }
       >
         <div class={styles.keyDropdown}>
-          <For each={props.options}>{(option) => <p>{option}</p>}</For>
+          <For each={props.options}>
+            {(option) => <button>{option}</button>}
+          </For>
         </div>
       </Show>
     </div>

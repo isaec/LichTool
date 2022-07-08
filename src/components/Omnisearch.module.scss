@@ -29,14 +29,37 @@
 
     border-radius: $radius-xs;
 
-    & > p {
+    & > button {
+      border: 0;
+
+      line-height: normal;
+      -webkit-appearance: none;
+
+      text-align: left;
+
       padding: $size-1;
       border-radius: $radius-xs;
       color: $color-grey-200;
 
       background-color: $color-grey-700;
-      &:first-of-type {
-        background-color: $color-green-700;
+      // don't overpower hover or focus
+      &:not(:hover):not(:focus) {
+        &:first-of-type {
+          background-color: $color-blue-700;
+        }
+        // only one element, its the first and last
+        &:first-of-type:last-of-type {
+          background-color: $color-green-700;
+        }
+      }
+
+      transition: all 0.35s $easing-decelerate;
+      transition-property: color, background-color;
+
+      &:hover,
+      &:focus {
+        color: $color-grey-100;
+        background-color: $color-green-500;
       }
     }
   }
