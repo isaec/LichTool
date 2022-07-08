@@ -2,8 +2,10 @@ import MiniSearch, { SearchResult } from "minisearch";
 import { DataSpell } from "./Renderer/types";
 import { spellArray, spellMap } from "@src/dataLookup";
 import {
+  batch,
   Component,
   createDeferred,
+  createEffect,
   createMemo,
   createSignal,
   For,
@@ -50,43 +52,54 @@ const searchEngine = new MiniSearch({
 });
 searchEngine.addAll(spellArray);
 
-const isOnlyDigits = /^[0-9]+$/;
+const isOnlyDigits = /^\d+$/;
 const parseFilter = (filter: string) => {
   if (isOnlyDigits.test(filter)) return parseInt(filter);
   return filter.toLowerCase();
 };
 
-const Filter: Component<{
-  store: {
-    search: {
-      filters: { [key: string]: string };
-    };
-    setSearch: (arg0: string, arg1: string, arg2: string | undefined) => void;
-  };
-  filterKey: string;
-}> = (props) => (
-  <>
-    <label>{`${props.filterKey}: `}</label>
-    <input
-      value={props.store.search.filters[props.filterKey] ?? ""}
-      onInput={(e) => {
-        props.store.setSearch(
-          "filters",
-          props.filterKey,
-          e.currentTarget.value === "" ? undefined : e.currentTarget.value
-        );
-      }}
-    />
-  </>
-);
+type PopulatedFilter = {
+  use: true;
+  key: string;
+  value: string;
+};
+type BlankFilter = {
+  use: false;
+};
+type Filter = BlankFilter | PopulatedFilter;
+
+const isBlank = (filter: Filter): filter is BlankFilter => !filter.use;
+const isPopulated = (filter: Filter): filter is PopulatedFilter => filter.use;
+
+const FilterComponent: Component<{
+  filter: Filter | BlankFilter;
+  setFilter: (filter: Partial<Filter>) => void;
+}> = (props) => {
+  return (
+    <>
+      <label>{`${props.filter.key}: `}</label>
+      <input
+        value={props.filter.value}
+        onInput={(e) => {
+          props.setFilter({
+            value: e.currentTarget.value,
+          });
+        }}
+      />
+    </>
+  );
+};
 
 const filterValueTransforms = new Map([["school", schoolAbbreviationMap]]);
 
-const testFilter = (
-  dataObj: DataSpell,
-  key: string,
-  filter: string | number
-) => {
+/**
+ * @param dataObj the data object to filter based on
+ * @param filterObj the details of the filter to apply
+ * @returns true if the data object matches the filter
+ */
+const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
+  const filter = parseFilter(filterObj.value);
+  const key = filterObj.key;
   const val = dataObj[key as keyof DataSpell];
   if (typeof filter === "number") return val === filter;
   if (typeof filter === "string" && typeof val === "string") {
@@ -107,12 +120,19 @@ const Omnisearch: Component<{}> = () => {
 
   const [search, setSearch] = createStore({
     query: searchParams.query ?? "",
-    filters: {} as { [key: string]: string },
+    filters: [] as Filter[],
+    get populatedFilters() {
+      return this.filters.filter(isPopulated);
+    },
   });
+  const setQuery = (query: string) => {
+    setSearch("query", query);
+    setSearchParams({ query });
+  };
   const filterFn = (result: SearchResult) => {
-    const dataObj = spellMap.get(result.id);
-    return !Object.entries(search.filters).some(
-      ([key, filter]) => !testFilter(dataObj!, key, parseFilter(filter))
+    const dataObj = spellMap.get(result.id)!;
+    return !search.populatedFilters.some(
+      (filter) => !testFilter(dataObj, filter)
     );
   };
   const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
@@ -121,20 +141,36 @@ const Omnisearch: Component<{}> = () => {
       filter: filterFn,
     })
   );
-  const searchStore = { search, setSearch };
   return (
     <>
       <div class={styles.Omnisearch}>
+        <For each={search.filters}>
+          {(filter, index) => (
+            <FilterComponent
+              filter={filter}
+              setFilter={(newFilter: Partial<Filter>) => {
+                setSearch("filters", index(), newFilter);
+              }}
+            />
+          )}
+        </For>
         <input
           class={styles.entryBar}
           value={search.query}
           onInput={(e) => {
-            setSearch("query", e.currentTarget.value);
-            setSearchParams({ query: e.currentTarget.value });
+            batch(() => {
+              if (e.currentTarget.value[0] === ".") {
+                setQuery("");
+                setSearch("filters", (arr) => arr.concat({ use: false }));
+                e.currentTarget.value = "";
+              } else {
+                setQuery(e.currentTarget.value);
+              }
+            });
           }}
-        />
-        <Filter store={searchStore} filterKey={"level"} />
-        <Filter store={searchStore} filterKey={"school"} />
+        >
+          {search.query}
+        </input>
       </div>
       <div class={styles.results}>
         <For each={results()}>
