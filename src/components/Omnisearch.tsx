@@ -10,6 +10,7 @@ import {
   createSignal,
   For,
   Show,
+  untrack,
 } from "solid-js";
 import { createStore } from "solid-js/store";
 import { SearchResult as SearchResultElement } from "./SearchResult";
@@ -191,7 +192,10 @@ const FilterComponent: Component<{
   });
 
   type States = "key" | "value" | "use";
-  const [state, setState] = createSignal<States>("key");
+  // if filter is made from url data, it is ready to use
+  const [state, setState] = createSignal<States>(
+    props.filter.use ? "use" : "key"
+  );
 
   // make use true if the filter validates
   createEffect(() => {
@@ -267,6 +271,9 @@ const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
   return false;
 };
 
+// this regex is used to match the filter keys
+const isFilter = /^f_/;
+
 const Omnisearch: Component<{}> = () => {
   let ref: HTMLInputElement | undefined;
   const focusOmnisearch = () => {
@@ -276,14 +283,48 @@ const Omnisearch: Component<{}> = () => {
 
   const [search, setSearch] = createStore({
     query: searchParams.query ?? "",
-    filters: [] as Filter[],
+    filters: Object.entries(searchParams)
+      .filter(([key]) => isFilter.test(key))
+      .map(
+        ([param, value]): Filter => ({
+          key: param.substring(2),
+          value,
+          use: true,
+        })
+      ),
     get populatedFilters() {
       return this.filters.filter(isPopulated);
     },
   });
+
+  createEffect(() => {
+    console.log(JSON.stringify(search.query), JSON.stringify(search.filters));
+  });
+
+  // keep search params up to date with store filters, query
+  createEffect(() => {
+    console.log("update search params");
+    setSearchParams(
+      search.filters.reduce(
+        (acc, filter) => {
+          if (!filter.use) return acc;
+          acc[`f_${filter.key}`] = filter.value;
+          return acc;
+        },
+        Object.entries(searchParams).reduce(
+          (acc, [key]) => {
+            if (key === "query") return acc;
+            else acc[key] = null;
+            return acc;
+          },
+          { query: search.query } as Record<string, string | null>
+        )
+      )
+    );
+  });
   const setQuery = (query: string) => {
     setSearch("query", query);
-    setSearchParams({ query });
+    // setSearchParams({ query });
   };
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
