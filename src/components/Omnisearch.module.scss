@@ -27,6 +27,8 @@
     flex-direction: column;
     gap: $size-1;
 
+    border-radius: $radius-xs;
+
     & > p {
       padding: $size-1;
       border-radius: $radius-xs;
