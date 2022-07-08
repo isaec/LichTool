@@ -1,8 +1,10 @@
 import Omnisearch from "@src/components/Omnisearch";
 
+import styles from "./Search.module.scss";
+
 const Search = () => {
   return (
-    <div>
+    <div class={styles.Search}>
       <Omnisearch />
     </div>
   );

@@ -118,6 +118,7 @@ const SmartInput: Component<{
         value={props.value ?? ""}
         disabled={props.disabled}
         spellcheck={false}
+        autocapitalize="none"
         onInput={(e) => {
           const val = e.currentTarget.value;
           if (

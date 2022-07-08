@@ -1,0 +1,9 @@
+.Search {
+  overflow-y: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  & > div:first-child {
+    flex-basis: content;
+  }
+}

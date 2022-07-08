@@ -13,6 +13,7 @@
   display: grid;
   $max-chips: 6;
   grid-template-columns: repeat($max-chips, auto);
+  overflow-y: auto;
 }
 
 .smartInput {
