@@ -1,6 +1,6 @@
 import MiniSearch, { SearchResult } from "minisearch";
 import { DataSpell } from "./Renderer/types";
-import { spellArray, spellMap } from "@src/dataLookup";
+import { spellArray, spellMap, filterKeys } from "@src/dataLookup";
 import {
   batch,
   Component,
@@ -58,12 +58,14 @@ const parseFilter = (filter: string) => {
   return filter.toLowerCase();
 };
 
-type PopulatedFilter = {
-  use: true;
+type FilterData = {
   key: string;
   value: string;
 };
-type BlankFilter = {
+type PopulatedFilter = FilterData & {
+  use: true;
+};
+type BlankFilter = Partial<FilterData> & {
   use: false;
 };
 type Filter = BlankFilter | PopulatedFilter;
@@ -75,11 +77,34 @@ const FilterComponent: Component<{
   filter: Filter | BlankFilter;
   setFilter: (filter: Partial<Filter>) => void;
 }> = (props) => {
+  const keyOptions = createMemo(() => {
+    if (props.filter.key === undefined) return filterKeys;
+    return filterKeys.filter((key) => key.includes(props.filter.key!));
+  });
+  // make use true if the filter validates
+  createEffect(() => {
+    if (props.filter.key === undefined || props.filter.value === undefined) {
+      props.setFilter({ use: false });
+    } else {
+      props.setFilter({ use: true });
+    }
+  });
   return (
     <>
-      <label>{`${props.filter.key}: `}</label>
       <input
-        value={props.filter.value}
+        value={props.filter.key ?? ""}
+        onInput={(e) => {
+          props.setFilter({ key: e.currentTarget.value });
+        }}
+      />
+      <input
+        value={props.filter.value ?? ""}
+        disabled={
+          !(
+            props.filter.key !== undefined &&
+            filterKeys.includes(props.filter.key)
+          )
+        }
         onInput={(e) => {
           props.setFilter({
             value: e.currentTarget.value,

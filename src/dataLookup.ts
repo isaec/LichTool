@@ -1,6 +1,7 @@
 // embedding raw is a performance optimization
 // https://v8.dev/blog/cost-of-javascript-2019#json
 import spells from "@data/spells.json?raw";
+import filters from "@data/filters.json?raw";
 import { DataSpell } from "./components/Renderer/types";
 
 /** the array of all spells - id is always undefined */
@@ -18,3 +19,15 @@ export const spellMap = new Map(
   // id is known not to be undefined bc it was inserted when data was processed
   spellArray.map((spell) => [spell.id, spell])
 ) as ReadonlyMap<string, DataSpell>;
+
+type ValueTypes = string | number | boolean;
+
+/**
+ * an array of all possible values for a filter
+ */
+export const filterMap = new Map<string, ValueTypes[]>(JSON.parse(filters));
+
+/**
+ * The keys of {@link filterMap} as an array
+ */
+export const filterKeys = [...filterMap.keys()];
