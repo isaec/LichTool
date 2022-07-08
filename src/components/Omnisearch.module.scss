@@ -17,6 +17,13 @@
 
 .smartInput {
   position: relative;
+  & input {
+    border: 1px solid $color-grey-300;
+    background-color: $color-grey-700;
+    &.error {
+      background-color: dim($color-red-700);
+    }
+  }
   & input:not(:focus) {
     & + .keyDropdown {
       opacity: 0;

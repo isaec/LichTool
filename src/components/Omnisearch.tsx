@@ -78,6 +78,7 @@ const SmartInput: Component<{
   /* undefined union means it must be passed but can be undefined */
   value: string | undefined;
   options: string[] | undefined;
+  valid: boolean;
   onInput: (value: string) => void;
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
@@ -85,7 +86,13 @@ const SmartInput: Component<{
   return (
     <div class={styles.smartInput}>
       <input
+        classList={{
+          [styles.error]:
+            !props.valid &&
+            (props.options?.length === 0 || props.options === undefined),
+        }}
         value={props.value ?? ""}
+        // disabled={props.valid}
         spellcheck={false}
         onInput={(e) => props.onInput(e.currentTarget.value)}
         onFocus={() => setFocused(true)}
@@ -142,14 +149,15 @@ const FilterComponent: Component<{
     <>
       <SmartInput
         value={props.filter.key}
+        valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
         onInput={(s) => {
-          console.log("input!");
           props.setFilter({ key: s });
         }}
       />
       <SmartInput
         value={props.filter.value}
+        valid={true}
         options={undefined}
         onInput={(s) => {
           props.setFilter({ value: s });
