@@ -17,6 +17,7 @@ import { SearchResult as SearchResultElement } from "./SearchResult";
 import styles from "./Omnisearch.module.scss";
 import { schoolAbbreviationMap } from "./generalTypes";
 import { useSearchParams } from "solid-app-router";
+import { hammingDistanceFrom } from "@src/hamming";
 
 // use the same minisearch for each search instance
 const searchEngine = new MiniSearch({
@@ -79,7 +80,9 @@ const FilterComponent: Component<{
 }> = (props) => {
   const keyOptions = createMemo(() => {
     if (props.filter.key === undefined) return filterKeys;
-    return filterKeys.filter((key) => key.includes(props.filter.key!));
+    return filterKeys
+      .filter((key) => key.includes(props.filter.key!))
+      .sort(hammingDistanceFrom(props.filter.key));
   });
   // make use true if the filter validates
   createEffect(() => {
