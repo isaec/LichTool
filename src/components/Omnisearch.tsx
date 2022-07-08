@@ -94,12 +94,17 @@ const FilterComponent: Component<{
   });
   return (
     <>
-      <input
-        value={props.filter.key ?? ""}
-        onInput={(e) => {
-          props.setFilter({ key: e.currentTarget.value });
-        }}
-      />
+      <div class={styles.smartInput}>
+        <input
+          value={props.filter.key ?? ""}
+          onInput={(e) => {
+            props.setFilter({ key: e.currentTarget.value });
+          }}
+        />
+        <div class={styles.keyDropdown}>
+          <For each={keyOptions()}>{(option) => <p>{option}</p>}</For>
+        </div>
+      </div>
       <input
         value={props.filter.value ?? ""}
         disabled={
@@ -196,9 +201,7 @@ const Omnisearch: Component<{}> = () => {
               }
             });
           }}
-        >
-          {search.query}
-        </input>
+        />
       </div>
       <div class={styles.results}>
         <For each={results()}>

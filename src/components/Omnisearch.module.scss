@@ -1,13 +1,26 @@
+@use "@src/config" as *;
+
 .Omnisearch {
   display: grid;
   grid-template-columns: min-content 1fr;
   & .entryBar {
     grid-column: -1 / 1;
   }
+  height: 100%;
 }
 
 .results {
   display: grid;
   $max-chips: 6;
   grid-template-columns: repeat($max-chips, auto);
+}
+
+.smartInput {
+  position: relative;
+  & .keyDropdown {
+    position: absolute;
+    z-index: $layer-2;
+    background-color: rebeccapurple;
+    // margin-top: -5px;
+  }
 }
