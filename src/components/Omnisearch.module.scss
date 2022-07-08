@@ -20,7 +20,22 @@
   & .keyDropdown {
     position: absolute;
     z-index: $layer-2;
-    background-color: rebeccapurple;
-    // margin-top: -5px;
+
+    background-color: $color-grey-800;
+
+    display: flex;
+    flex-direction: column;
+    gap: $size-1;
+
+    & > p {
+      padding: $size-1;
+      border-radius: $radius-xs;
+      color: $color-grey-200;
+
+      background-color: $color-grey-700;
+      &:first-of-type {
+        background-color: $color-green-700;
+      }
+    }
   }
 }
