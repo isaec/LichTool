@@ -5,10 +5,10 @@
  */
 export const hammingDistance = (a: string, b: string) => {
   let distance = 0;
-  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+  for (let i = 0; i < Math.min(a.length, b.length); i++) {
     if (a[i] !== b[i]) distance++;
   }
-  return distance;
+  return distance + Math.abs(a.length - b.length);
 };
 
 /**
