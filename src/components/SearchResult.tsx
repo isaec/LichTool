@@ -58,7 +58,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
       <Chip primary>{dataObj().name}</Chip>
       <Chip nowrap>{fmtLevel(dataObj().level, dataObj().meta?.ritual)}</Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
-      <Chip nowrap>{fmtRange(dataObj().range)}</Chip>
+      <Chip>{fmtRange(dataObj().range)}</Chip>
       <Show when={dataObj().duration[0].concentration !== undefined}>
         <Chip nowrap>x</Chip>
       </Show>
