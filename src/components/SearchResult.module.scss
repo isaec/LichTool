@@ -27,9 +27,9 @@
       overflow-wrap: break-word;
     }
   }
-  &:not(:last-of-type) {
+  &:nth-child(odd) {
     & > .chip {
-      border-bottom: 1px solid $color-grey-700;
+      background-color: mix($color-grey-900, $color-blue-700, 95%);
     }
   }
 }
