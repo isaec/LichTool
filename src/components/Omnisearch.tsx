@@ -4,6 +4,7 @@ import { spellArray, spellMap, filterKeys } from "@src/dataLookup";
 import {
   batch,
   Component,
+  createComputed,
   createDeferred,
   createEffect,
   createMemo,
@@ -281,29 +282,27 @@ const Omnisearch: Component<{}> = () => {
   });
 
   // keep search params up to date with store filters, query
-  createEffect(() => {
-    setSearchParams(
-      search.filters.reduce(
-        (acc, filter) => {
-          if (!filter.use) return acc;
-          acc[`f_${filter.key}`] = filter.value;
-          return acc;
-        },
-        Object.entries(searchParams).reduce(
-          (acc, [key]) => {
-            if (key === "query") return acc;
-            else acc[key] = null;
+  createComputed(() => {
+    batch(() => {
+      setSearchParams(
+        search.filters.reduce(
+          (acc, filter) => {
+            if (!filter.use) return acc;
+            acc[`f_${filter.key}`] = filter.value;
             return acc;
           },
-          { query: search.query } as Record<string, string | null>
+          untrack(() => Object.entries(searchParams)).reduce(
+            (acc, [key]) => {
+              if (key === "query") return acc;
+              else acc[key] = null;
+              return acc;
+            },
+            { query: search.query } as Record<string, string | null>
+          )
         )
-      )
-    );
+      );
+    });
   });
-  const setQuery = (query: string) => {
-    setSearch("query", query);
-    // setSearchParams({ query });
-  };
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
     return !search.populatedFilters.some(
@@ -344,11 +343,11 @@ const Omnisearch: Component<{}> = () => {
           onInput={(e) => {
             batch(() => {
               if (e.currentTarget.value[0] === ".") {
-                setQuery("");
+                setSearch("query", e.currentTarget.value);
                 setSearch("filters", (arr) => arr.concat({ use: false }));
                 e.currentTarget.value = "";
               } else {
-                setQuery(e.currentTarget.value);
+                setSearch("query", e.currentTarget.value);
               }
             });
           }}
