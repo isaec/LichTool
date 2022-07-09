@@ -2457,3 +2457,490 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
   </p>
 </div>
 `;
+
+exports[`Renderer > nested tags > renders complex nesting of tags 2`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > nested tags > renders nested tags 2`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > nested tags > renders nested tags correctly with arbitrary spaces "{@b bold {@i italic}    }" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > nested tags > renders nested tags correctly with arbitrary spaces "{@b bold {@i italic}   }" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > nested tags > renders nested tags correctly with arbitrary spaces "{@b bold {@i italic}  }" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > nested tags > renders nested tags correctly with arbitrary spaces "{@b bold {@i italic} }" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > nested tags > renders nested tags correctly with arbitrary spaces "{@b bold {@i italic}}" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+}
+`;
+
+exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}e {@i wee}{@b eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" 1`] = `
+{
+  "isNestedTag test": false,
+  "tagMatcher matchAll": [
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "e {@i wee}",
+      "e ",
+      "i",
+      "wee",
+    ],
+    [
+      "{@b eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "{@b eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      undefined,
+      undefined,
+    ],
+  ],
+}
+`;
+
+exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee{@underline e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold} e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold} e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold} e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold} e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold} " 1`] = `
+{
+  "isNestedTag test": false,
+  "tagMatcher matchAll": [
+    [
+      "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee{@underline e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold}",
+      "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "underline",
+      "e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold",
+    ],
+    [
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold}",
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u ",
+      "b",
+      "bold",
+    ],
+    [
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold}",
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u ",
+      "b",
+      "bold",
+    ],
+    [
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold}",
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u ",
+      "b",
+      "bold",
+    ],
+    [
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u {@b bold}",
+      " e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u e i o u ",
+      "b",
+      "bold",
+    ],
+    [
+      " ",
+      " ",
+      undefined,
+      undefined,
+    ],
+  ],
+}
+`;
+
+exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "waa {@b bold} {@b never ever closing!" 1`] = `
+{
+  "isNestedTag test": false,
+  "tagMatcher matchAll": [
+    [
+      "waa {@b bold}",
+      "waa ",
+      "b",
+      "bold",
+    ],
+    [
+      " {@b never ever closing!",
+      " {@b never ever closing!",
+      undefined,
+      undefined,
+    ],
+  ],
+}
+`;
+
+exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "waa {@b never ever closing! {@b bold}" 1`] = `
+{
+  "isNestedTag test": false,
+  "tagMatcher matchAll": [
+    [
+      "waa {@b never ever closing! {@b bold}",
+      "waa ",
+      "b",
+      "never ever closing! {@b bold",
+    ],
+  ],
+}
+`;
+
+exports[`Renderer > unnested tags > renders bold 2`] = `
+{
+  "isNestedTag test": false,
+  "tagMatcher matchAll": [
+    [
+      "this is some text, {@bold and now its bold}",
+      "this is some text, ",
+      "bold",
+      "and now its bold",
+    ],
+    [
+      " {@b with shorthand, too!}",
+      " ",
+      "b",
+      "with shorthand, too!",
+    ],
+  ],
+}
+`;
+
+exports[`Renderer > unnested tags > renders italic, strikes, underline 2`] = `
+{
+  "isNestedTag test": false,
+  "tagMatcher matchAll": [
+    [
+      "this is some text, {@strike and now its struck}",
+      "this is some text, ",
+      "strike",
+      "and now its struck",
+    ],
+    [
+      " {@u underline}",
+      " ",
+      "u",
+      "underline",
+    ],
+    [
+      " {@i with italic shorthand, too!}",
+      " ",
+      "i",
+      "with italic shorthand, too!",
+    ],
+  ],
+}
+`;

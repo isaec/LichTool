@@ -23,9 +23,9 @@ import styles from "./Renderer.module.scss";
 const cleanText = (text: string) => text.replaceAll("&quot;", '"');
 
 /** cannot match nested tags */
-const tagMatcher = /(?!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
+export const tagMatcher = /(?!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, (string | JSXElement)?];
-const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/;
+export const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/;
 const unclosedTag = /{@[^}]*$/m;
 const unclosedTagGroup = /(.*?)({@\w*)([^}]*)$/m;
 const firstWord = /\w+/;

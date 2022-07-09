@@ -4,7 +4,12 @@ import renderdemo from "@data/renderdemo.json";
 
 import styles from "./Renderer.module.scss";
 
-import Renderer from "./Renderer";
+import Renderer, {
+  isNestedTag,
+  tagMatcher,
+  unclosedTag,
+  unclosedTagGroup,
+} from "./Renderer";
 
 vi.mock("./Renderer.module.scss", () => ({
   default: new Proxy(new Object(), {
@@ -30,11 +35,20 @@ describe("Renderer", () => {
     });
   });
 
+  const expectRegexMatchConsistency = (str: string) => {
+    expect({
+      "tagMatcher matchAll": isNestedTag.test(str)
+        ? "nested!"
+        : [...str.matchAll(tagMatcher)],
+      "isNestedTag test": isNestedTag.test(str),
+    }).toMatchSnapshot();
+  };
+
   describe("unnested tags", () => {
     it("renders bold", () => {
-      const { unmount, container } = render(() => (
-        <Renderer data="this is some text, {@bold and now its bold} {@b with shorthand, too!}" />
-      ));
+      const data =
+        "this is some text, {@bold and now its bold} {@b with shorthand, too!}";
+      const { unmount, container } = render(() => <Renderer data={data} />);
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
           NodeList [
@@ -50,12 +64,13 @@ describe("Renderer", () => {
             </p>,
           ]
         `);
+      expectRegexMatchConsistency(data);
       unmount();
     });
     it("renders italic, strikes, underline", () => {
-      const { unmount, container } = render(() => (
-        <Renderer data="this is some text, {@strike and now its struck} {@u underline} {@i with italic shorthand, too!}" />
-      ));
+      const data =
+        "this is some text, {@strike and now its struck} {@u underline} {@i with italic shorthand, too!}";
+      const { unmount, container } = render(() => <Renderer data={data} />);
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
           NodeList [
@@ -77,6 +92,7 @@ describe("Renderer", () => {
             </p>,
           ]
         `);
+      expectRegexMatchConsistency(data);
       unmount();
     });
     it.each([
@@ -89,15 +105,15 @@ describe("Renderer", () => {
     ])(`doesn't error when rendering unclosed tags "%s"`, (str) => {
       const { unmount, container } = render(() => <Renderer data={str} />);
       expect(container.querySelectorAll(`.${styles.error}`).length).toBe(0);
+      expectRegexMatchConsistency(str);
       unmount();
     });
   });
 
   describe("nested tags", () => {
     it("renders nested tags", () => {
-      const { unmount, container } = render(() => (
-        <Renderer data="some text: {@b bolded {@i and italic} and now just bold}" />
-      ));
+      const data = "some text: {@b bolded {@i and italic} and now just bold}";
+      const { unmount, container } = render(() => <Renderer data={data} />);
       expect(container.querySelectorAll(`.${styles.Renderer} > *`))
         .toMatchInlineSnapshot(`
           NodeList [
@@ -114,6 +130,7 @@ describe("Renderer", () => {
             </p>,
           ]
         `);
+      expectRegexMatchConsistency(data);
       unmount();
     });
 
@@ -138,12 +155,15 @@ describe("Renderer", () => {
         const { unmount, getByText } = render(() => <Renderer data={str} />);
         expect((getByText(/bold/) as HTMLElement).tagName).toBe("B");
         expect((getByText(/italic/) as HTMLElement).tagName).toBe("I");
+        expectRegexMatchConsistency(str);
         unmount();
       }
     );
     it("renders complex nesting of tags", () => {
+      const data =
+        "some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold! {@underline underline {@italic italic}}}, bold}, more text ({@i italic})";
       const { unmount, container, getByText } = render(() => (
-        <Renderer data="some text: {@b bolded {@i and italic} and now just bold - now {@s struck bold! {@underline underline {@italic italic}}}, bold}, more text ({@i italic})" />
+        <Renderer data={data} />
       ));
       // @ts-ignore
       expect(getByText(/some text:/)).toBeInTheDocument();
@@ -195,7 +215,7 @@ describe("Renderer", () => {
             </p>,
           ]
         `);
-
+      expectRegexMatchConsistency(data);
       unmount();
     });
   });
