@@ -80,7 +80,12 @@ const SmartInput: Component<{
     props.onFinish();
   };
   return (
-    <div class={styles.smartInput}>
+    <div
+      classList={{
+        [styles.smartInput]: true,
+        [styles.valid]: props.valid,
+      }}
+    >
       <input
         ref={ref}
         classList={{

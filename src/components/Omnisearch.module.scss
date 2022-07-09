@@ -22,7 +22,13 @@
 .smartInput {
   position: relative;
   width: 100%;
-  & input {
+  &.valid > input:disabled {
+    background-color: $color-green-700;
+    color: $color-grey-200;
+    border: 1px solid $color-green-300;
+    border-radius: $radius-xs;
+  }
+  & > input {
     width: 100%;
     border: 1px solid $color-grey-300;
     background-color: $color-grey-700;
@@ -30,12 +36,12 @@
       background-color: dim($color-red-700);
     }
   }
-  & input:not(:focus) {
+  & > input:not(:focus) {
     & + .keyDropdown {
       opacity: 0;
     }
   }
-  & .keyDropdown {
+  & > .keyDropdown {
     position: absolute;
     z-index: $layer-2;
 
