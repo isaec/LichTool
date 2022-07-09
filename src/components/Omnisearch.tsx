@@ -319,7 +319,7 @@ const Omnisearch: Component<{}> = () => {
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
     if (populatedFilters().length === 0) return true;
-    return populatedFilters().some((filter) => !testFilter(dataObj, filter));
+    return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
   const results = createMemo(() =>
@@ -354,15 +354,15 @@ const Omnisearch: Component<{}> = () => {
           value={search.query}
           type="search"
           onInput={(e) => {
-            batch(() => {
-              if (e.currentTarget.value[0] === ".") {
-                setSearch("query", e.currentTarget.value);
+            if (e.currentTarget.value[0] === ".") {
+              batch(() => {
+                setSearch("query", e.currentTarget.value.slice(1));
                 setSearch("filters", (arr) => arr.concat({ use: false }));
-                e.currentTarget.value = "";
-              } else {
-                setSearch("query", e.currentTarget.value);
-              }
-            });
+              });
+              e.currentTarget.value = search.query;
+            } else {
+              setSearch("query", e.currentTarget.value);
+            }
           }}
         />
       </div>
