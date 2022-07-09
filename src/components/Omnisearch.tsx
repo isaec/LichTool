@@ -241,17 +241,26 @@ const FilterComponent: Component<{
   );
 };
 
+/**
+ * this is a cache of parsed filters, but only expensive filters will be cached
+ */
+const filterParseMap = new Map<string, ReturnType<typeof parseFilter>>();
+
 const isOnlyDigits = /^\d+$/;
 // flags m i and u aren't that useful, but are allowed
 // i is the most useful of them
 const isValidRegex = /^\/(.+)\/([miu]*)$/;
-const parseFilter = (filter: string) => {
+const parseFilter = (filter: string): boolean | number | RegExp | string => {
   if (filter === "true" || filter === "false") return filter ? true : false;
   if (isOnlyDigits.test(filter)) return parseInt(filter);
   if (isValidRegex.test(filter)) {
+    // it would be faster for regex to read cache earlier and not need to test
+    // but only checking cache for valid regex speeds up other cases
+    if (filterParseMap.has(filter)) return filterParseMap.get(filter)!;
     const [, regex, flags] = isValidRegex.exec(filter)!;
-    console.log(regex, flags);
-    return new RegExp(regex, flags);
+    const val = new RegExp(regex, flags);
+    filterParseMap.set(filter, val);
+    return val;
   }
   return filter.toLowerCase();
 };
