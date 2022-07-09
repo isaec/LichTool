@@ -243,6 +243,7 @@ const FilterComponent: Component<{
 
 const isOnlyDigits = /^\d+$/;
 const parseFilter = (filter: string) => {
+  if (filter === "true" || filter === "false") return filter ? true : false;
   if (isOnlyDigits.test(filter)) return parseInt(filter);
   return filter.toLowerCase();
 };
@@ -258,7 +259,8 @@ const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
   const filter = parseFilter(filterObj.value);
   const key = filterObj.key;
   const val = dataObj[key as keyof DataSpell];
-  if (typeof filter === "number") return val === filter;
+  if (typeof filter === "number" || typeof filter === "boolean")
+    return val === filter;
   if (typeof filter === "string" && typeof val === "string") {
     const transformedValue = filterValueTransforms.get(key)?.get(val as any);
     if (transformedValue !== undefined) {
@@ -270,19 +272,6 @@ const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
     return val.toLowerCase().includes(filter);
   }
   return false;
-};
-
-const filterArraysAreEqual = (a: Filter[], b: Filter[]) => {
-  if (a.length !== b.length) return false;
-  for (let i = 0; i < a.length; i++) {
-    if (
-      a[i].key !== b[i].key ||
-      a[i].value !== b[i].value ||
-      a[i].use !== b[i].use
-    )
-      return false;
-  }
-  return true;
 };
 
 // this regex is used to match the filter keys
