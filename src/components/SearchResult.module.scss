@@ -7,6 +7,9 @@
     align-items: center;
     width: 100%;
     padding: $size-4 0;
+    &:not(:last-of-type) {
+      padding-right: $size-2;
+    }
     &.primary {
       grid-column-start: 1;
       justify-content: flex-start;
