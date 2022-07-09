@@ -4,6 +4,6 @@
   display: flex;
   flex-direction: column;
   & > div:first-child {
-    flex-basis: content;
+    flex-basis: 0px;
   }
 }
