@@ -12,6 +12,7 @@ const Chip: Component<{
   final?: boolean;
   primary?: boolean;
   nowrap?: boolean;
+  mono?: boolean;
 }> = (props) => (
   <p
     classList={{
@@ -19,6 +20,7 @@ const Chip: Component<{
       [styles.primary]: props.primary,
       [styles.final]: props.final,
       [styles.nowrap]: props.nowrap,
+      [styles.mono]: props.mono,
     }}
   >
     {props.children}
@@ -57,7 +59,9 @@ export const SearchResult: Component<{ id: string }> = (props) => {
     <ChipRow id={props.id}>
       <Chip primary>{dataObj().name}</Chip>
       <Chip nowrap>{fmtLevel(dataObj().level, dataObj().meta?.ritual)}</Chip>
-      <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
+      <Chip mono>
+        {schoolAbbreviationMap.get(dataObj().school)!.slice(0, 5)}
+      </Chip>
       <Chip>{fmtRange(dataObj().range)}</Chip>
       <Chip nowrap>
         {dataObj().duration[0].concentration !== undefined ? "x" : ""}

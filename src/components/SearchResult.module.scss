@@ -26,6 +26,9 @@
       word-break: break-all;
       overflow-wrap: break-word;
     }
+    &.mono {
+      font-family: $font-mono;
+    }
   }
   &:nth-child(odd) {
     & > .chip {
