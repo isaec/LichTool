@@ -27,7 +27,7 @@ const searchEngine = new MiniSearch({
     fuzzy: 0.5,
     prefix: true,
     weights: {
-      fuzzy: 0.2,
+      fuzzy: 0.65,
       prefix: 1,
     },
   },
