@@ -29,6 +29,7 @@
     "vitest": "^0.15.2"
   },
   "dependencies": {
+    "@solid-primitives/memo": "^1.0.0",
     "minisearch": "^5.0.0",
     "solid-app-router": "^0.4.1",
     "solid-js": "^1.4.4"

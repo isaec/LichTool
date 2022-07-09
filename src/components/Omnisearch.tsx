@@ -5,7 +5,6 @@ import {
   batch,
   Component,
   createComputed,
-  createDeferred,
   createEffect,
   createMemo,
   createSignal,
@@ -20,6 +19,7 @@ import styles from "./Omnisearch.module.scss";
 import { schoolAbbreviationMap } from "./generalTypes";
 import { useSearchParams } from "solid-app-router";
 import { hammingDistanceFrom } from "@src/hamming";
+import { createDebouncedMemo } from "@solid-primitives/memo";
 
 // use the same minisearch for each search instance
 const searchEngine = new MiniSearch({
@@ -272,6 +272,19 @@ const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
   return false;
 };
 
+const filterArraysAreEqual = (a: Filter[], b: Filter[]) => {
+  if (a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i++) {
+    if (
+      a[i].key !== b[i].key ||
+      a[i].value !== b[i].value ||
+      a[i].use !== b[i].use
+    )
+      return false;
+  }
+  return true;
+};
+
 // this regex is used to match the filter keys
 const isFilter = /^f_/;
 
@@ -316,14 +329,14 @@ const Omnisearch: Component<{}> = () => {
       setSearchParams(newParams, { replace });
     });
   });
+  const debouncedQuery = createDebouncedMemo(() => search.query, 50);
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
     if (populatedFilters().length === 0) return true;
     return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
-  const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
   const results = createMemo(() => {
-    if (deferredQuery().length === 0 && populatedFilters().length > 0) {
+    if (debouncedQuery().length === 0 && populatedFilters().length > 0) {
       // filter without any search
       return [...spellMap.values()].filter((data) =>
         // EVIL CODE EVIL CODE EVIL CODE EVIL CODE
@@ -336,11 +349,10 @@ const Omnisearch: Component<{}> = () => {
         } as SearchResult)
       );
     }
-    return searchEngine.search(deferredQuery(), {
+    return searchEngine.search(debouncedQuery(), {
       filter: filterFn,
     });
   });
-  createEffect(() => console.log(JSON.stringify(search.filters)));
   return (
     <>
       <div class={styles.Omnisearch}>

@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@solid-primitives/memo': ^1.0.0
   '@testing-library/jest-dom': ^5.16.4
   '@types/babel__core': ^7.1.19
   '@types/node': ^18.0.1
@@ -20,6 +21,7 @@ specifiers:
   vitest: ^0.15.2
 
 dependencies:
+  '@solid-primitives/memo': 1.0.0_solid-js@1.4.4
   minisearch: 5.0.0
   solid-app-router: 0.4.1_solid-js@1.4.4
   solid-js: 1.4.4
@@ -437,6 +439,32 @@ packages:
   /@sinclair/typebox/0.23.5:
     resolution: {integrity: sha512-AFBVi/iT4g20DHoujvMH1aEDn8fGJh4xsRGCP6d8RpLPMqsNPvW01Jcn0QysXTsg++/xj25NmJsGyH9xug/wKg==}
     dev: true
+
+  /@solid-primitives/memo/1.0.0_solid-js@1.4.4:
+    resolution: {integrity: sha512-OWDb0xtv3zIm4Xw9d3h0dcOF1iiSCVBLK2XKN6AQE+LNfdgI9kluiiXPjzo3exjYo8diU3TRePpP9bQOeCA0/w==}
+    peerDependencies:
+      solid-js: ^1.4.2
+    dependencies:
+      '@solid-primitives/scheduled': 1.0.0_solid-js@1.4.4
+      '@solid-primitives/utils': 2.2.1_solid-js@1.4.4
+      solid-js: 1.4.4
+    dev: false
+
+  /@solid-primitives/scheduled/1.0.0_solid-js@1.4.4:
+    resolution: {integrity: sha512-FfzYoAkFCRGBuCuXF8G7fU4J4SK9PhKbwxZvzqk+VVBcowPS1eGlLAtlqW/29paSKlUSxuLuhZxq1sPzwmuvoQ==}
+    peerDependencies:
+      solid-js: ^1.4.0
+    dependencies:
+      solid-js: 1.4.4
+    dev: false
+
+  /@solid-primitives/utils/2.2.1_solid-js@1.4.4:
+    resolution: {integrity: sha512-vaBO3MGOpjzitbSAVuJkYZnzNPRl6sRrw2do390DEBbfeqMfPpW4fAEb5/tI4b5T13V1xAY+giHoxqvVg2SRhQ==}
+    peerDependencies:
+      solid-js: ^1.4.1
+    dependencies:
+      solid-js: 1.4.4
+    dev: false
 
   /@testing-library/dom/7.31.2:
     resolution: {integrity: sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ==}
