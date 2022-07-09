@@ -242,9 +242,17 @@ const FilterComponent: Component<{
 };
 
 const isOnlyDigits = /^\d+$/;
+// flags m i and u aren't that useful, but are allowed
+// i is the most useful of them
+const isValidRegex = /^\/(.+)\/([miu]*)$/;
 const parseFilter = (filter: string) => {
   if (filter === "true" || filter === "false") return filter ? true : false;
   if (isOnlyDigits.test(filter)) return parseInt(filter);
+  if (isValidRegex.test(filter)) {
+    const [, regex, flags] = isValidRegex.exec(filter)!;
+    console.log(regex, flags);
+    return new RegExp(regex, flags);
+  }
   return filter.toLowerCase();
 };
 
@@ -259,6 +267,9 @@ const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
   const filter = parseFilter(filterObj.value);
   const key = filterObj.key;
   const val = dataObj[key as keyof DataSpell];
+  if (filter instanceof RegExp) {
+    return filter.test((val ?? "").toString());
+  }
   if (typeof filter === "number" || typeof filter === "boolean")
     return val === filter;
   if (typeof filter === "string" && typeof val === "string") {
