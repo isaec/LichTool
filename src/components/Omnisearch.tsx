@@ -332,7 +332,6 @@ const Omnisearch: Component<{}> = () => {
   const debouncedQuery = createDebouncedMemo(() => search.query, 50);
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
-    if (populatedFilters().length === 0) return true;
     return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const results = createMemo(() => {
@@ -350,7 +349,7 @@ const Omnisearch: Component<{}> = () => {
       );
     }
     return searchEngine.search(debouncedQuery(), {
-      filter: filterFn,
+      filter: populatedFilters().length === 0 ? undefined : filterFn,
     });
   });
   return (
