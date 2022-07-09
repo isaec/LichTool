@@ -322,11 +322,24 @@ const Omnisearch: Component<{}> = () => {
     return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
-  const results = createMemo(() =>
-    searchEngine.search(deferredQuery(), {
+  const results = createMemo(() => {
+    if (deferredQuery().length === 0 && populatedFilters().length > 0) {
+      // filter without any search
+      return [...spellMap.values()].filter((data) =>
+        // EVIL CODE EVIL CODE EVIL CODE EVIL CODE
+        // this is a nasty hack to simulate a search without a search
+        // if filterFn starts reading other keys this will break
+        filterFn({
+          // id key is there but not in the types...
+          // @ts-expect-error
+          id: data.id,
+        } as SearchResult)
+      );
+    }
+    return searchEngine.search(deferredQuery(), {
       filter: filterFn,
-    })
-  );
+    });
+  });
   createEffect(() => console.log(JSON.stringify(search.filters)));
   return (
     <>
