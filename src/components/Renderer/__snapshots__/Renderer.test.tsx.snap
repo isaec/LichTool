@@ -2458,6 +2458,70 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
 </div>
 `;
 
+exports[`Renderer > nested tags > catches errors when parsing illegal string "{@b bold {@i italic{ lol}} {@" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": true,
+    "unclosedTagGroup match": [
+      "{@b bold {@i italic{ lol}} {@",
+      "{@b bold {@i italic{ lol}} ",
+      "{@",
+      "",
+    ],
+  },
+}
+`;
+
+exports[`Renderer > nested tags > catches errors when parsing illegal string "{@b bold {@i italic{lol}}{@" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": true,
+    "unclosedTagGroup match": [
+      "{@b bold {@i italic{lol}}{@",
+      "{@b bold {@i italic{lol}}",
+      "{@",
+      "",
+    ],
+  },
+}
+`;
+
+exports[`Renderer > nested tags > catches errors when parsing illegal string "{@b not} {@i lol {@b lmao}} {@ more text" 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": true,
+    "unclosedTagGroup match": [
+      "{@b not} {@i lol {@b lmao}} {@ more text",
+      "{@b not} {@i lol {@b lmao}} ",
+      "{@",
+      " more text",
+    ],
+  },
+}
+`;
+
+exports[`Renderer > nested tags > regex consistent for unclosed tag when parsing illegal string {@b bold {@i italic}} {@asdfb {@i 1`] = `
+{
+  "isNestedTag test": true,
+  "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": true,
+    "unclosedTagGroup match": [
+      "{@b bold {@i italic}} {@asdfb {@i",
+      "{@b bold {@i italic}} ",
+      "{@asdfb",
+      " {@i",
+    ],
+  },
+}
+`;
+
 exports[`Renderer > nested tags > renders complex nesting of tags 2`] = `
 {
   "isNestedTag test": true,

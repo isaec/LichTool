@@ -150,8 +150,16 @@ describe("Renderer", () => {
       const { unmount, queryByText } = render(() => <Renderer data={str} />);
       // there should be no error that reaches the error boundary
       expect(queryByText(/renderer caught an uncaught/)).toBeNull();
+      expectRegexMatchConsistency(str);
       unmount();
     });
+
+    it.each(["{@b bold {@i italic}} {@asdfb {@i"])(
+      `regex consistent for unclosed tag when parsing illegal string %s`,
+      (str) => {
+        expectRegexMatchConsistency(str);
+      }
+    );
 
     const nestedTags = [];
     for (let i = 0; i <= 4; i++) {
