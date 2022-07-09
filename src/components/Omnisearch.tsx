@@ -341,12 +341,13 @@ const Omnisearch: Component<{}> = () => {
         // EVIL CODE EVIL CODE EVIL CODE EVIL CODE
         // this is a nasty hack to simulate a search without a search
         // if filterFn starts reading other keys this will break
+        // if searchResult starts reading other keys this will break
         filterFn({
           // id key is there but not in the types...
           // @ts-expect-error
           id: data.id,
         } as SearchResult)
-      );
+      ) as unknown as SearchResult[];
     }
     return searchEngine.search(debouncedQuery(), {
       filter: populatedFilters().length === 0 ? undefined : filterFn,
