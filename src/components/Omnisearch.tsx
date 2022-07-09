@@ -297,34 +297,26 @@ const Omnisearch: Component<{}> = () => {
       return this.filters.filter(isPopulated);
     },
   });
+  const populatedFilters = createMemo(() => search.populatedFilters);
 
   // keep search params up to date with store filters, query
   createComputed(() => {
     batch(() => {
       setSearchParams(
-        search.filters.reduce(
+        populatedFilters().reduce(
           (acc, filter) => {
-            if (!filter.use) return acc;
             acc[`f_${filter.key}`] = filter.value;
             return acc;
           },
-          untrack(() => Object.entries(searchParams)).reduce(
-            (acc, [key]) => {
-              if (key === "query") return acc;
-              else acc[key] = null;
-              return acc;
-            },
-            { query: search.query } as Record<string, string | null>
-          )
-        )
+          { query: search.query } as Record<string, string | null>
+        ),
+        { replace: true }
       );
     });
   });
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
-    return !search.populatedFilters.some(
-      (filter) => !testFilter(dataObj, filter)
-    );
+    return populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
   const results = createMemo(() =>
