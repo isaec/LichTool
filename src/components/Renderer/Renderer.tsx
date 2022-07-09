@@ -26,8 +26,8 @@ const cleanText = (text: string) => text.replaceAll("&quot;", '"');
 export const tagMatcher = /(?!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, (string | JSXElement)?];
 export const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/;
-const unclosedTag = /{@[^}]*$/m;
-const unclosedTagGroup = /(.*?)({@\w*)([^}]*)$/m;
+export const unclosedTag = /{@[^}]*$/m;
+export const unclosedTagGroup = /(.*?)({@\w*)([^}]*)$/m;
 const firstWord = /\w+/;
 
 const processTag = (elementStack: JSXElement[], matchValue: matchedTag) => {

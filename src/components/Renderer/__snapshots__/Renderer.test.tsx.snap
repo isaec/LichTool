@@ -2462,6 +2462,10 @@ exports[`Renderer > nested tags > renders complex nesting of tags 2`] = `
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2469,6 +2473,10 @@ exports[`Renderer > nested tags > renders nested tags 2`] = `
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2476,6 +2484,10 @@ exports[`Renderer > nested tags > renders nested tags correctly with arbitrary s
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2483,6 +2495,10 @@ exports[`Renderer > nested tags > renders nested tags correctly with arbitrary s
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2490,6 +2506,10 @@ exports[`Renderer > nested tags > renders nested tags correctly with arbitrary s
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2497,6 +2517,10 @@ exports[`Renderer > nested tags > renders nested tags correctly with arbitrary s
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2504,6 +2528,10 @@ exports[`Renderer > nested tags > renders nested tags correctly with arbitrary s
 {
   "isNestedTag test": true,
   "tagMatcher matchAll": "nested!",
+  "unclosedTag test & unclosedTagGroup match": {
+    "unclosedTag test": false,
+    "unclosedTagGroup match": "not unclosed",
+  },
 }
 `;
 
@@ -2818,6 +2846,7 @@ exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "
       undefined,
     ],
   ],
+  "unclosedTag test & unclosedTagGroup match": "not nested",
 }
 `;
 
@@ -2862,6 +2891,7 @@ exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "
       undefined,
     ],
   ],
+  "unclosedTag test & unclosedTagGroup match": "not nested",
 }
 `;
 
@@ -2882,6 +2912,7 @@ exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "
       undefined,
     ],
   ],
+  "unclosedTag test & unclosedTagGroup match": "not nested",
 }
 `;
 
@@ -2896,6 +2927,7 @@ exports[`Renderer > unnested tags > doesn't error when rendering unclosed tags "
       "never ever closing! {@b bold",
     ],
   ],
+  "unclosedTag test & unclosedTagGroup match": "not nested",
 }
 `;
 
@@ -2916,6 +2948,7 @@ exports[`Renderer > unnested tags > renders bold 2`] = `
       "with shorthand, too!",
     ],
   ],
+  "unclosedTag test & unclosedTagGroup match": "not nested",
 }
 `;
 
@@ -2942,5 +2975,6 @@ exports[`Renderer > unnested tags > renders italic, strikes, underline 2`] = `
       "with italic shorthand, too!",
     ],
   ],
+  "unclosedTag test & unclosedTagGroup match": "not nested",
 }
 `;

@@ -36,11 +36,19 @@ describe("Renderer", () => {
   });
 
   const expectRegexMatchConsistency = (str: string) => {
+    const nested = isNestedTag.test(str);
+    const unclosed = unclosedTag.test(str);
     expect({
-      "tagMatcher matchAll": isNestedTag.test(str)
-        ? "nested!"
-        : [...str.matchAll(tagMatcher)],
-      "isNestedTag test": isNestedTag.test(str),
+      "tagMatcher matchAll": nested ? "nested!" : [...str.matchAll(tagMatcher)],
+      "isNestedTag test": nested,
+      "unclosedTag test & unclosedTagGroup match": !nested
+        ? "not nested"
+        : {
+            "unclosedTag test": unclosed,
+            "unclosedTagGroup match": !unclosed
+              ? "not unclosed"
+              : str.match(unclosedTagGroup),
+          },
     }).toMatchSnapshot();
   };
 
