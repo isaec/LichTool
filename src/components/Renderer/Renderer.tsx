@@ -23,7 +23,7 @@ import styles from "./Renderer.module.scss";
 const cleanText = (text: string) => text.replaceAll("&quot;", '"');
 
 /** cannot match nested tags */
-const tagMatcher = /(?<!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
+const tagMatcher = /(?!$)(.*?)(?:{@(\w*)\s(.*?)}|$)/gm;
 type matchedTag = [string, string?, string?, (string | JSXElement)?];
 const isNestedTag = /{@[^}]*?{@.*?}[^{]*?}/;
 const unclosedTag = /{@[^}]*$/m;
