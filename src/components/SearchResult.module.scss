@@ -1,5 +1,6 @@
 .chip {
   margin: auto;
+  width: 100%;
   &.primary {
     grid-column-start: 0;
     margin-left: 0px;
@@ -7,13 +8,17 @@
   &.final {
     grid-column-end: -1;
     margin-right: 0px;
+    text-align: right;
+  }
+  &:not(.primary):not(.final) {
+    text-align: center;
   }
   &.nowrap {
     white-space: nowrap;
   }
   &:not(.nowrap) {
     white-space: normal;
-    word-break: break-all;
+    overflow-wrap: break-word;
   }
 }
 
