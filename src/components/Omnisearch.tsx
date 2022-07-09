@@ -70,13 +70,20 @@ const SmartInput: Component<{
   });
   const tryFinish = () => {
     if (
+      // if the input is not valid
       !props.valid &&
+      // and there are no valid options
       (props.options === undefined || props.options.length === 0)
-    )
+    ) {
+      // return, we can't finish yet
       return;
+    }
+    // if the input is invalid but there are valid options
     if (!props.valid) {
+      // pretend the user typed the best valid option
       props.onInput(props.options![0]);
     }
+    // call the finish function, which will advance focus, state
     props.onFinish();
   };
   return (
@@ -146,7 +153,7 @@ const SmartInput: Component<{
                 onMouseUp={() => setHasMouseDown(false)}
                 onClick={() => {
                   props.onInput(option);
-                  setFocused(false);
+                  tryFinish();
                 }}
               >
                 {option}
