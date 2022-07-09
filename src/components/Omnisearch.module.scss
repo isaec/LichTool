@@ -13,7 +13,7 @@
   display: grid;
   $max-chips: 6;
   grid-template-columns: repeat($max-chips, auto);
-  align-items: center;
+  align-items: stretch;
   overflow-y: auto;
   // overflow-x: hidden;
   // max-width: 100%;

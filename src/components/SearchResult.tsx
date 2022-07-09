@@ -59,9 +59,9 @@ export const SearchResult: Component<{ id: string }> = (props) => {
       <Chip nowrap>{fmtLevel(dataObj().level, dataObj().meta?.ritual)}</Chip>
       <Chip>{schoolAbbreviationMap.get(dataObj().school)!}</Chip>
       <Chip>{fmtRange(dataObj().range)}</Chip>
-      <Show when={dataObj().duration[0].concentration !== undefined}>
-        <Chip nowrap>x</Chip>
-      </Show>
+      <Chip nowrap>
+        {dataObj().duration[0].concentration !== undefined ? "x" : ""}
+      </Chip>
       <Chip final nowrap>
         {dataObj().source}
       </Chip>
