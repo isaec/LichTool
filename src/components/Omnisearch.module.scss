@@ -35,10 +35,13 @@
     &.error {
       background-color: dim($color-red-700);
     }
-  }
-  & > input:not(:focus) {
-    & + .keyDropdown {
-      opacity: 0;
+    &:not(:focus) {
+      & + .keyDropdown {
+        opacity: 0;
+      }
+    }
+    &:disabled {
+      background-color: $color-grey-800;
     }
   }
   & > .keyDropdown {
