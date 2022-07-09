@@ -35,12 +35,6 @@ const searchEngine = new MiniSearch({
 });
 searchEngine.addAll(spellArray);
 
-const isOnlyDigits = /^\d+$/;
-const parseFilter = (filter: string) => {
-  if (isOnlyDigits.test(filter)) return parseInt(filter);
-  return filter.toLowerCase();
-};
-
 type FilterData = {
   key: string;
   value: string;
@@ -181,11 +175,16 @@ const FilterComponent: Component<{
 
   // make use true if the filter validates
   createEffect(() => {
-    if (state() === "use") {
-      props.setFilter({ use: true });
-      props.focusOmnisearch();
-    } else {
-      props.setFilter({ use: false });
+    switch (true) {
+      case state() === "use":
+        props.focusOmnisearch();
+      // fallthrough
+      case state() === "value" && typeof props.filter.value === "string":
+        props.setFilter({ use: true });
+        break;
+      default:
+        props.setFilter({ use: false });
+        break;
     }
   });
 
@@ -228,6 +227,12 @@ const FilterComponent: Component<{
       />
     </>
   );
+};
+
+const isOnlyDigits = /^\d+$/;
+const parseFilter = (filter: string) => {
+  if (isOnlyDigits.test(filter)) return parseInt(filter);
+  return filter.toLowerCase();
 };
 
 const filterValueTransforms = new Map([["school", schoolAbbreviationMap]]);
