@@ -5,6 +5,7 @@
   & > .chip {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     padding: $size-4 0;
     &:not(:last-of-type) {
@@ -16,9 +17,6 @@
     }
     &.final {
       grid-column-end: -1;
-    }
-    &:not(.primary):not(.final) {
-      text-align: center;
     }
     &.nowrap {
       white-space: nowrap;
