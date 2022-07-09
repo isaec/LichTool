@@ -302,20 +302,23 @@ const Omnisearch: Component<{}> = () => {
   // keep search params up to date with store filters, query
   createComputed(() => {
     batch(() => {
-      setSearchParams(
-        populatedFilters().reduce(
-          (acc, filter) => {
-            acc[`f_${filter.key}`] = filter.value;
-            return acc;
-          },
-          { query: search.query } as Record<string, string | null>
-        ),
-        { replace: true }
+      const newParams = populatedFilters().reduce(
+        (acc, filter) => {
+          acc[`f_${filter.key}`] = filter.value;
+          return acc;
+        },
+        { query: search.query } as Record<string, string | null>
       );
+      const currentKeys = untrack(() => Object.keys(searchParams));
+      const replace = Object.keys(newParams).every((key) =>
+        currentKeys.includes(key)
+      );
+      setSearchParams(newParams, { replace });
     });
   });
   const filterFn = (result: SearchResult) => {
     const dataObj = spellMap.get(result.id)!;
+    if (populatedFilters().length === 0) return true;
     return populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const deferredQuery = createDeferred(() => search.query, { timeoutMs: 200 });
@@ -324,6 +327,7 @@ const Omnisearch: Component<{}> = () => {
       filter: filterFn,
     })
   );
+  createEffect(() => console.log(JSON.stringify(search.filters)));
   return (
     <>
       <div class={styles.Omnisearch}>
