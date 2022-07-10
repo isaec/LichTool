@@ -11,6 +11,7 @@ table.results {
 
 tr.TableRow {
   & > td.Data {
+    padding: $size-4 0;
     color: $color-grey-200;
     &:not(:first-of-type) {
       text-align: center;
