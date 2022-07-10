@@ -356,10 +356,10 @@ const Omnisearch: Component<{}> = () => {
     const dataObj = spellMap.get(result.id)!;
     return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
-  const results = createMemo(() => {
+  const results = createMemo((): SearchResult[] => {
     // show everything if there are no params
     if (debouncedQuery().length === 0 && populatedFilters().length === 0) {
-      return [...spellMap.values()];
+      return [...spellMap.values()] as unknown as SearchResult[];
     }
     if (debouncedQuery().length === 0) {
       // filter without any search
