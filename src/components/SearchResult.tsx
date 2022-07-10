@@ -55,7 +55,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
     <TableRow id={props.id}>
       <Data>{dataObj().name}</Data>
       <Data nowrap>{fmtLevel(dataObj().level, dataObj().meta?.ritual)}</Data>
-      <Data mono>
+      <Data mono nowrap>
         {schoolAbbreviationMap.get(dataObj().school)!.slice(0, 5)}
       </Data>
       <Data>{fmtRange(dataObj().range)}</Data>
