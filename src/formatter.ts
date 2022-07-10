@@ -32,22 +32,19 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
       );
     case "sphere":
       // sphere is weird, its an alias of range
-      return capitalize(
-        `Self (${data.distance.amount}-${dispPastDistance(
-          data.distance.type,
-          shorten
-        )} radius)`
-      );
+      return `Self (${data.distance.amount}-${dispPastDistance(
+        data.distance.type,
+        shorten
+      )} radius)`;
     case "radius":
     case "line":
     case "cube":
     case "cone":
-      return capitalize(
-        `Self (${data.distance.amount}-${dispPastDistance(
-          data.distance.type,
-          shorten
-        )} ${data.type})`
-      );
+      return `Self (${data.distance.amount}-${dispPastDistance(
+        data.distance.type,
+        shorten
+      )} ${data.type})`;
+
     default:
       return capitalize(
         `${data.type} ${data.distance.type} ${data.distance.amount}`
