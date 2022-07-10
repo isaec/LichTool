@@ -14,6 +14,7 @@ specifiers:
   solid-app-router: ^0.4.1
   solid-js: ^1.4.4
   solid-testing-library: ^0.3.0
+  solid-toast: ^0.1.5
   ts-node: ^10.8.2
   typescript: ^4.7.4
   vite: ^2.9.12
@@ -25,6 +26,7 @@ dependencies:
   minisearch: 5.0.0
   solid-app-router: 0.4.1_solid-js@1.4.4
   solid-js: 1.4.4
+  solid-toast: 0.1.5_solid-js@1.4.4
 
 devDependencies:
   '@testing-library/jest-dom': 5.16.4
@@ -1305,6 +1307,12 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /goober/2.1.10:
+    resolution: {integrity: sha512-7PpuQMH10jaTWm33sQgBQvz45pHR8N4l3Cu3WMGEWmHShAcTuuP7I+5/DwKo39fwti5A80WAjvqgz6SSlgWmGA==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dev: false
+
   /has-flag/3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -1781,6 +1789,17 @@ packages:
       '@testing-library/dom': 7.31.2
       solid-js: 1.4.4
     dev: true
+
+  /solid-toast/0.1.5_solid-js@1.4.4:
+    resolution: {integrity: sha512-0c5n5Va8jzs03b7E0GJMu4xEZ7MMlmK3PNl93C3P0jm1itD0ypdSgqUQF1aGtPuX8LO898XZRvk+oQz72aStwQ==}
+    peerDependencies:
+      solid-js: ^1.4.2
+    dependencies:
+      goober: 2.1.10
+      solid-js: 1.4.4
+    transitivePeerDependencies:
+      - csstype
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
