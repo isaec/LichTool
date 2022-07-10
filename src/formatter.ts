@@ -8,7 +8,7 @@ const pastTenseMap = new Map<Distances, string>([
   ["feet", "foot"],
 ]);
 
-export const fmtRange = (data: DataSpell["range"]) => {
+export const fmtRange = (data: DataSpell["range"], shorten?: true) => {
   if (data.distance === undefined) return capitalize(data.type);
   if (data.distance.amount === undefined) return capitalize(data.distance.type);
   switch (data.type) {

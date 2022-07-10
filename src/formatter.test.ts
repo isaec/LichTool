@@ -9,5 +9,6 @@ describe("fmtRange", () => {
     )
   )("%s matches snapshot", (_display, range) => {
     expect(fmtRange(range)).toMatchSnapshot();
+    expect(fmtRange(range, true)).toMatchSnapshot();
   });
 });
