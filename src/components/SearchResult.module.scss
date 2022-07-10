@@ -4,13 +4,17 @@
   overflow-y: auto;
 }
 
-.results {
+table.results {
+  border-collapse: collapse;
   width: 100%;
 }
 
-.TableRow {
+tr.TableRow {
   & > td.Data {
     color: $color-grey-200;
+    &:not(:first-of-type) {
+      text-align: center;
+    }
     &.nowrap {
       white-space: nowrap;
     }
