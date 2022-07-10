@@ -10,7 +10,15 @@ render(
   () => (
     <Router>
       <App />
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          duration: 2000,
+          style: {
+            "background-color": "#2c343f",
+            color: "#e8eaed",
+          },
+        }}
+      />
     </Router>
   ),
   document.getElementById("root") as HTMLElement

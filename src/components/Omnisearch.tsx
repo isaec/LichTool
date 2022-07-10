@@ -20,6 +20,7 @@ import { schoolAbbreviationMap } from "./generalTypes";
 import { useSearchParams } from "solid-app-router";
 import { hammingDistanceFrom } from "@src/hamming";
 import { createDebouncedMemo } from "@solid-primitives/memo";
+import toast from "solid-toast";
 
 // use the same minisearch for each search instance
 const searchEngine = new MiniSearch({
@@ -250,7 +251,9 @@ const isOnlyDigits = /^\d+$/;
 // flags m i and u aren't that useful, but are allowed
 // i is the most useful of them
 const isValidRegex = /^\/(.+)\/([miu]*)$/;
-const parseFilter = (filter: string): boolean | number | RegExp | string => {
+const parseFilter = (
+  filter: string
+): boolean | number | RegExp | string | null => {
   if (filter === "true" || filter === "false") return filter ? true : false;
   if (isOnlyDigits.test(filter)) return parseInt(filter);
   if (isValidRegex.test(filter)) {
@@ -258,9 +261,18 @@ const parseFilter = (filter: string): boolean | number | RegExp | string => {
     // but only checking cache for valid regex speeds up other cases
     if (filterParseMap.has(filter)) return filterParseMap.get(filter)!;
     const [, regex, flags] = isValidRegex.exec(filter)!;
-    const val = new RegExp(regex, flags);
-    filterParseMap.set(filter, val);
-    return val;
+    try {
+      const val = new RegExp(regex, flags);
+      filterParseMap.set(filter, val);
+      return val;
+    } catch (e) {
+      // this prevents the immense cost of parsing invalid regex 1000x
+      filterParseMap.set(filter, null);
+      // this removes the invalid regex from the cache
+      setTimeout(() => filterParseMap.delete(filter), 1000);
+      toast.error((e as Error).message, { unmountDelay: 3000 });
+      return null;
+    }
   }
   return filter.toLowerCase();
 };
@@ -274,6 +286,7 @@ const filterValueTransforms = new Map([["school", schoolAbbreviationMap]]);
  */
 const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
   const filter = parseFilter(filterObj.value);
+  if (filter === null) return false;
   const key = filterObj.key;
   const val = dataObj[key as keyof DataSpell];
   if (filter instanceof RegExp) {
