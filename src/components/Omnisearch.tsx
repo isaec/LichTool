@@ -357,7 +357,11 @@ const Omnisearch: Component<{}> = () => {
     return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const results = createMemo(() => {
-    if (debouncedQuery().length === 0 && populatedFilters().length > 0) {
+    // show everything if there are no params
+    if (debouncedQuery().length === 0 && populatedFilters().length === 0) {
+      return [...spellMap.values()];
+    }
+    if (debouncedQuery().length === 0) {
       // filter without any search
       return [...spellMap.values()].filter((data) =>
         // EVIL CODE EVIL CODE EVIL CODE EVIL CODE
