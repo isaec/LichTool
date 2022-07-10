@@ -1,23 +1,16 @@
 @use "@src/config" as *;
 
-.chipRow {
-  display: contents;
-  & > .chip {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: $size-4 0;
-    &:not(:last-of-type) {
-      padding-right: $size-2;
-    }
-    &.primary {
-      grid-column-start: 1;
-      justify-content: flex-start;
-    }
-    &.final {
-      grid-column-end: -1;
-    }
+.resultsWrapper {
+  overflow-y: auto;
+}
+
+.results {
+  width: 100%;
+}
+
+.TableRow {
+  & > td.Data {
+    color: $color-grey-200;
     &.nowrap {
       white-space: nowrap;
     }
@@ -31,8 +24,6 @@
     }
   }
   &:nth-child(odd) {
-    & > .chip {
-      background-color: mix($color-grey-900, $color-blue-700, 95%);
-    }
+    background-color: mix($color-grey-900, $color-blue-700, 95%);
   }
 }

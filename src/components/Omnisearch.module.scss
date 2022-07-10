@@ -9,16 +9,6 @@
   height: 100%;
 }
 
-.results {
-  display: grid;
-  $max-chips: 6;
-  grid-template-columns: repeat($max-chips, auto);
-  align-items: stretch;
-  overflow-y: auto;
-  // overflow-x: hidden;
-  // max-width: 100%;
-}
-
 .smartInput {
   position: relative;
   width: 100%;

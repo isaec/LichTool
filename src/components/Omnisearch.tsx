@@ -13,7 +13,7 @@ import {
   untrack,
 } from "solid-js";
 import { createStore } from "solid-js/store";
-import { SearchResult as SearchResultElement } from "./SearchResult";
+import { Results } from "./SearchResult";
 
 import styles from "./Omnisearch.module.scss";
 import { schoolAbbreviationMap } from "./generalTypes";
@@ -417,11 +417,7 @@ const Omnisearch: Component<{}> = () => {
           }}
         />
       </div>
-      <div class={styles.results}>
-        <For each={results()}>
-          {(result) => <SearchResultElement id={result.id} />}
-        </For>
-      </div>
+      <Results results={results()} />
     </>
   );
 };
