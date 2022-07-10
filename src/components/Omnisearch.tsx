@@ -270,7 +270,7 @@ const parseFilter = (
       filterParseMap.set(filter, null);
       // this removes the invalid regex from the cache
       setTimeout(() => filterParseMap.delete(filter), 1000);
-      toast.error((e as Error).message, { unmountDelay: 3000 });
+      toast.error((e as Error).message);
       return null;
     }
   }
