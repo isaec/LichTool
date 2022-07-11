@@ -31,7 +31,7 @@ type DataBaseShape = {
 
 const filters = new Map<string, Set<string | number | boolean>>();
 
-const processedData: {}[] = [];
+const processedData: Array<DataBaseShape & { id: string }> = [];
 
 const processJson = async (paths: string | string[], checkSrd = true) => {
   const iterPaths = Array.isArray(paths) ? paths : [paths];
@@ -77,7 +77,10 @@ await fs.writeFile(
   )
 );
 
-await fs.writeFile("processed_data/data.json", JSON.stringify(processedData));
+await fs.writeFile(
+  "processed_data/data.json",
+  JSON.stringify(processedData.sort((a, b) => a.name.localeCompare(b.name)))
+);
 
 // copy renderdemo over
 await copyJsonMinify("data/renderdemo.json", "processed_data/renderdemo.json");

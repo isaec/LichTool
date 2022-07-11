@@ -50,6 +50,8 @@ exports[`fmtDataUrl > Bless from PHB fmt matches snapshot 1`] = `"spell_PHB-Bles
 
 exports[`fmtDataUrl > Blight from PHB fmt matches snapshot 1`] = `"spell_PHB-Blight"`;
 
+exports[`fmtDataUrl > Blinded from PHB fmt matches snapshot 1`] = `"condition_PHB-Blinded"`;
+
 exports[`fmtDataUrl > Blindness/Deafness from PHB fmt matches snapshot 1`] = `"spell_PHB-Blindness/Deafness"`;
 
 exports[`fmtDataUrl > Blink from PHB fmt matches snapshot 1`] = `"spell_PHB-Blink"`;
@@ -60,6 +62,8 @@ exports[`fmtDataUrl > Branding Smite from PHB fmt matches snapshot 1`] = `"spell
 
 exports[`fmtDataUrl > Burning Hands from PHB fmt matches snapshot 1`] = `"spell_PHB-Burning-Hands"`;
 
+exports[`fmtDataUrl > Cackle Fever from DMG fmt matches snapshot 1`] = `"disease_DMG-Cackle-Fever"`;
+
 exports[`fmtDataUrl > Call Lightning from PHB fmt matches snapshot 1`] = `"spell_PHB-Call-Lightning"`;
 
 exports[`fmtDataUrl > Calm Emotions from PHB fmt matches snapshot 1`] = `"spell_PHB-Calm-Emotions"`;
@@ -67,6 +71,8 @@ exports[`fmtDataUrl > Calm Emotions from PHB fmt matches snapshot 1`] = `"spell_
 exports[`fmtDataUrl > Chain Lightning from PHB fmt matches snapshot 1`] = `"spell_PHB-Chain-Lightning"`;
 
 exports[`fmtDataUrl > Charm Person from PHB fmt matches snapshot 1`] = `"spell_PHB-Charm-Person"`;
+
+exports[`fmtDataUrl > Charmed from PHB fmt matches snapshot 1`] = `"condition_PHB-Charmed"`;
 
 exports[`fmtDataUrl > Chill Touch from PHB fmt matches snapshot 1`] = `"spell_PHB-Chill-Touch"`;
 
@@ -89,6 +95,8 @@ exports[`fmtDataUrl > Commune with Nature from PHB fmt matches snapshot 1`] = `"
 exports[`fmtDataUrl > Comprehend Languages from PHB fmt matches snapshot 1`] = `"spell_PHB-Comprehend-Languages"`;
 
 exports[`fmtDataUrl > Compulsion from PHB fmt matches snapshot 1`] = `"spell_PHB-Compulsion"`;
+
+exports[`fmtDataUrl > Concentration from PHB fmt matches snapshot 1`] = `"status_PHB-Concentration"`;
 
 exports[`fmtDataUrl > Cone of Cold from PHB fmt matches snapshot 1`] = `"spell_PHB-Cone-of-Cold"`;
 
@@ -137,6 +145,8 @@ exports[`fmtDataUrl > Darkness from PHB fmt matches snapshot 1`] = `"spell_PHB-D
 exports[`fmtDataUrl > Darkvision from PHB fmt matches snapshot 1`] = `"spell_PHB-Darkvision"`;
 
 exports[`fmtDataUrl > Daylight from PHB fmt matches snapshot 1`] = `"spell_PHB-Daylight"`;
+
+exports[`fmtDataUrl > Deafened from PHB fmt matches snapshot 1`] = `"condition_PHB-Deafened"`;
 
 exports[`fmtDataUrl > Death Ward from PHB fmt matches snapshot 1`] = `"spell_PHB-Death-Ward"`;
 
@@ -192,6 +202,8 @@ exports[`fmtDataUrl > Enthrall from PHB fmt matches snapshot 1`] = `"spell_PHB-E
 
 exports[`fmtDataUrl > Etherealness from PHB fmt matches snapshot 1`] = `"spell_PHB-Etherealness"`;
 
+exports[`fmtDataUrl > Exhaustion from PHB fmt matches snapshot 1`] = `"condition_PHB-Exhaustion"`;
+
 exports[`fmtDataUrl > Expeditious Retreat from PHB fmt matches snapshot 1`] = `"spell_PHB-Expeditious-Retreat"`;
 
 exports[`fmtDataUrl > Eyebite from PHB fmt matches snapshot 1`] = `"spell_PHB-Eyebite"`;
@@ -246,6 +258,8 @@ exports[`fmtDataUrl > Foresight from PHB fmt matches snapshot 1`] = `"spell_PHB-
 
 exports[`fmtDataUrl > Freedom of Movement from PHB fmt matches snapshot 1`] = `"spell_PHB-Freedom-of-Movement"`;
 
+exports[`fmtDataUrl > Frightened from PHB fmt matches snapshot 1`] = `"condition_PHB-Frightened"`;
+
 exports[`fmtDataUrl > Gaseous Form from PHB fmt matches snapshot 1`] = `"spell_PHB-Gaseous-Form"`;
 
 exports[`fmtDataUrl > Gate from PHB fmt matches snapshot 1`] = `"spell_PHB-Gate"`;
@@ -263,6 +277,8 @@ exports[`fmtDataUrl > Globe of Invulnerability from PHB fmt matches snapshot 1`]
 exports[`fmtDataUrl > Glyph of Warding from PHB fmt matches snapshot 1`] = `"spell_PHB-Glyph-of-Warding"`;
 
 exports[`fmtDataUrl > Goodberry from PHB fmt matches snapshot 1`] = `"spell_PHB-Goodberry"`;
+
+exports[`fmtDataUrl > Grappled from PHB fmt matches snapshot 1`] = `"condition_PHB-Grappled"`;
 
 exports[`fmtDataUrl > Grease from PHB fmt matches snapshot 1`] = `"spell_PHB-Grease"`;
 
@@ -318,6 +334,8 @@ exports[`fmtDataUrl > Illusory Script from PHB fmt matches snapshot 1`] = `"spel
 
 exports[`fmtDataUrl > Imprisonment from PHB fmt matches snapshot 1`] = `"spell_PHB-Imprisonment"`;
 
+exports[`fmtDataUrl > Incapacitated from PHB fmt matches snapshot 1`] = `"condition_PHB-Incapacitated"`;
+
 exports[`fmtDataUrl > Incendiary Cloud from PHB fmt matches snapshot 1`] = `"spell_PHB-Incendiary-Cloud"`;
 
 exports[`fmtDataUrl > Inflict Wounds from PHB fmt matches snapshot 1`] = `"spell_PHB-Inflict-Wounds"`;
@@ -325,6 +343,8 @@ exports[`fmtDataUrl > Inflict Wounds from PHB fmt matches snapshot 1`] = `"spell
 exports[`fmtDataUrl > Insect Plague from PHB fmt matches snapshot 1`] = `"spell_PHB-Insect-Plague"`;
 
 exports[`fmtDataUrl > Invisibility from PHB fmt matches snapshot 1`] = `"spell_PHB-Invisibility"`;
+
+exports[`fmtDataUrl > Invisible from PHB fmt matches snapshot 1`] = `"condition_PHB-Invisible"`;
 
 exports[`fmtDataUrl > Jump from PHB fmt matches snapshot 1`] = `"spell_PHB-Jump"`;
 
@@ -402,9 +422,13 @@ exports[`fmtDataUrl > Move Earth from PHB fmt matches snapshot 1`] = `"spell_PHB
 
 exports[`fmtDataUrl > Nondetection from PHB fmt matches snapshot 1`] = `"spell_PHB-Nondetection"`;
 
+exports[`fmtDataUrl > Paralyzed from PHB fmt matches snapshot 1`] = `"condition_PHB-Paralyzed"`;
+
 exports[`fmtDataUrl > Pass without Trace from PHB fmt matches snapshot 1`] = `"spell_PHB-Pass-without-Trace"`;
 
 exports[`fmtDataUrl > Passwall from PHB fmt matches snapshot 1`] = `"spell_PHB-Passwall"`;
+
+exports[`fmtDataUrl > Petrified from PHB fmt matches snapshot 1`] = `"condition_PHB-Petrified"`;
 
 exports[`fmtDataUrl > Phantasmal Killer from PHB fmt matches snapshot 1`] = `"spell_PHB-Phantasmal-Killer"`;
 
@@ -419,6 +443,8 @@ exports[`fmtDataUrl > Plane Shift from PHB fmt matches snapshot 1`] = `"spell_PH
 exports[`fmtDataUrl > Plant Growth from PHB fmt matches snapshot 1`] = `"spell_PHB-Plant-Growth"`;
 
 exports[`fmtDataUrl > Poison Spray from PHB fmt matches snapshot 1`] = `"spell_PHB-Poison-Spray"`;
+
+exports[`fmtDataUrl > Poisoned from PHB fmt matches snapshot 1`] = `"condition_PHB-Poisoned"`;
 
 exports[`fmtDataUrl > Polymorph from PHB fmt matches snapshot 1`] = `"spell_PHB-Polymorph"`;
 
@@ -439,6 +465,8 @@ exports[`fmtDataUrl > Produce Flame from PHB fmt matches snapshot 1`] = `"spell_
 exports[`fmtDataUrl > Programmed Illusion from PHB fmt matches snapshot 1`] = `"spell_PHB-Programmed-Illusion"`;
 
 exports[`fmtDataUrl > Project Image from PHB fmt matches snapshot 1`] = `"spell_PHB-Project-Image"`;
+
+exports[`fmtDataUrl > Prone from PHB fmt matches snapshot 1`] = `"condition_PHB-Prone"`;
 
 exports[`fmtDataUrl > Protection from Energy from PHB fmt matches snapshot 1`] = `"spell_PHB-Protection-from-Energy"`;
 
@@ -461,6 +489,8 @@ exports[`fmtDataUrl > Reincarnate from PHB fmt matches snapshot 1`] = `"spell_PH
 exports[`fmtDataUrl > Remove Curse from PHB fmt matches snapshot 1`] = `"spell_PHB-Remove-Curse"`;
 
 exports[`fmtDataUrl > Resistance from PHB fmt matches snapshot 1`] = `"spell_PHB-Resistance"`;
+
+exports[`fmtDataUrl > Restrained from PHB fmt matches snapshot 1`] = `"condition_PHB-Restrained"`;
 
 exports[`fmtDataUrl > Resurrection from PHB fmt matches snapshot 1`] = `"spell_PHB-Resurrection"`;
 
@@ -486,6 +516,8 @@ exports[`fmtDataUrl > Sending from PHB fmt matches snapshot 1`] = `"spell_PHB-Se
 
 exports[`fmtDataUrl > Sequester from PHB fmt matches snapshot 1`] = `"spell_PHB-Sequester"`;
 
+exports[`fmtDataUrl > Sewer Plague from DMG fmt matches snapshot 1`] = `"disease_DMG-Sewer-Plague"`;
+
 exports[`fmtDataUrl > Shapechange from PHB fmt matches snapshot 1`] = `"spell_PHB-Shapechange"`;
 
 exports[`fmtDataUrl > Shatter from PHB fmt matches snapshot 1`] = `"spell_PHB-Shatter"`;
@@ -497,6 +529,8 @@ exports[`fmtDataUrl > Shield of Faith from PHB fmt matches snapshot 1`] = `"spel
 exports[`fmtDataUrl > Shillelagh from PHB fmt matches snapshot 1`] = `"spell_PHB-Shillelagh"`;
 
 exports[`fmtDataUrl > Shocking Grasp from PHB fmt matches snapshot 1`] = `"spell_PHB-Shocking-Grasp"`;
+
+exports[`fmtDataUrl > Sight Rot from DMG fmt matches snapshot 1`] = `"disease_DMG-Sight-Rot"`;
 
 exports[`fmtDataUrl > Silence from PHB fmt matches snapshot 1`] = `"spell_PHB-Silence"`;
 
@@ -534,6 +568,8 @@ exports[`fmtDataUrl > Stoneskin from PHB fmt matches snapshot 1`] = `"spell_PHB-
 
 exports[`fmtDataUrl > Storm of Vengeance from PHB fmt matches snapshot 1`] = `"spell_PHB-Storm-of-Vengeance"`;
 
+exports[`fmtDataUrl > Stunned from PHB fmt matches snapshot 1`] = `"condition_PHB-Stunned"`;
+
 exports[`fmtDataUrl > Suggestion from PHB fmt matches snapshot 1`] = `"spell_PHB-Suggestion"`;
 
 exports[`fmtDataUrl > Sunbeam from PHB fmt matches snapshot 1`] = `"spell_PHB-Sunbeam"`;
@@ -567,6 +603,8 @@ exports[`fmtDataUrl > True Resurrection from PHB fmt matches snapshot 1`] = `"sp
 exports[`fmtDataUrl > True Seeing from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Seeing"`;
 
 exports[`fmtDataUrl > True Strike from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Strike"`;
+
+exports[`fmtDataUrl > Unconscious from PHB fmt matches snapshot 1`] = `"condition_PHB-Unconscious"`;
 
 exports[`fmtDataUrl > Unseen Servant from PHB fmt matches snapshot 1`] = `"spell_PHB-Unseen-Servant"`;
 

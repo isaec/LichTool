@@ -57,8 +57,40 @@ export type DataSpell = IdData & {
   };
 };
 
+export type RawConditionData = RawData<DataCondition>;
+export const isDataCondition = isType<DataCondition>("condition");
+export type DataCondition = IdData & {
+  name: string;
+  entries: DataGroup;
+  source: Sources;
+  page: number;
+  srd?: boolean;
+  basicRules?: boolean;
+};
+
+export type RawDiseaseData = RawData<DataDisease>;
+export const isDataDisease = isType<DataDisease>("disease");
+export type DataDisease = IdData & {
+  name: string;
+  entries: DataGroup;
+  source: Sources;
+  page: number;
+  srd?: boolean;
+};
+
+export type RawStatusData = RawData<DataStatus>;
+export const isDataStatus = isType<DataStatus>("status");
+export type DataStatus = IdData & {
+  name: string;
+  entries: DataGroup;
+  source: Sources;
+  page: number;
+  srd?: boolean;
+  basicRules?: boolean;
+};
+
 // IdData is temporary to find bad typings
-export type DataUnion = DataSpell | IdData;
+export type DataUnion = DataSpell | DataCondition | DataDisease | DataStatus;
 
 // data object collections
 
