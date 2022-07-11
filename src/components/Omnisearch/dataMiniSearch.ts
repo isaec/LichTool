@@ -1,4 +1,4 @@
-import { spellArray } from "@src/dataLookup";
+import { dataArray } from "@src/dataLookup";
 import MiniSearch from "minisearch";
 
 // use the same minisearch for each search instance
@@ -13,6 +13,6 @@ const searchEngine = new MiniSearch({
     },
   },
 });
-searchEngine.addAll(spellArray);
+searchEngine.addAll(dataArray);
 
 export default searchEngine;

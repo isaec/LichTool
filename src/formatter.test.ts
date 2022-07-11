@@ -1,31 +1,34 @@
 import { describe, expect, it } from "vitest";
-import { spellArray } from "./dataLookup";
+import { dataArray } from "./dataLookup";
 import { extractTypeFromUrl, fmtDataUrl, fmtRange } from "./formatter";
 
 describe("fmtRange", () => {
   it.each(
-    [
-      ...new Set(spellArray.map((spell) => JSON.stringify(spell.range))),
-    ].flatMap((range) => [
-      [range, false, JSON.parse(range)],
-      [range, true, JSON.parse(range)],
-    ])
+    [...new Set(dataArray.map((spell) => JSON.stringify(spell.range)))].flatMap(
+      (range) => [
+        [range, false, JSON.parse(range)],
+        [range, true, JSON.parse(range)],
+      ]
+    )
   )("%s matches snapshot, shorten: %s", (_display, shorten, range) => {
     expect(fmtRange(range, shorten)).toMatchSnapshot();
   });
 });
 
 describe("fmtDataUrl", () => {
-  it.each(spellArray.map((spell) => [spell.name, spell.source]))(
-    "%s from %s fmt matches snapshot",
-    (name, source) => {
-      expect(fmtDataUrl("spell", name, source)).toMatchSnapshot();
-    }
-  );
-  it.each(spellArray.map((spell) => [spell.name, spell.source]))(
+  it.each(
+    dataArray.map((data) => [
+      data.name,
+      data.source,
+      extractTypeFromUrl(data.id),
+    ])
+  )("%s from %s fmt matches snapshot", (name, source, type) => {
+    expect(fmtDataUrl(type, name, source)).toMatchSnapshot();
+  });
+  it.each(dataArray.map((spell) => [spell.name, spell.source]))(
     "%s from %s is parsed into url with same formatting as original",
     (name, source) => {
-      const url = fmtDataUrl("spell", name, source);
+      const url = fmtDataUrl("", name, source);
       const urlNameSegment = url.split("-").slice(1).join(" ");
       expect(
         urlNameSegment,
@@ -36,7 +39,7 @@ describe("fmtDataUrl", () => {
 });
 
 describe("extractTypeFromUrl", () => {
-  it.each(spellArray.map((spell) => [spell.id]))(
+  it.each(dataArray.map((spell) => [spell.id]))(
     "spell id %s has type extracted to spell",
     (url) => {
       expect(extractTypeFromUrl(url)).toEqual("spell");

@@ -1,23 +1,17 @@
 // embedding raw is a performance optimization
 // https://v8.dev/blog/cost-of-javascript-2019#json
-import spells from "@data/spells.json?raw";
+import data from "@data/data.json?raw";
 import filters from "@data/filters.json?raw";
 import { DataSpell } from "./components/Renderer/types";
 
 /** the array of all spells - id is always undefined */
-export const spellArray = JSON.parse(spells).spell as Array<
-  DataSpell & {
-    id: string;
-  }
->;
+export const dataArray = JSON.parse(data) as Array<DataSpell>;
 
 /**
-map from spellId to spell.
-while id does exist on the values, it is not in the type because it should not be further used
+map from id to data.
 */
-export const spellMap = new Map(
-  // id is known not to be undefined bc it was inserted when data was processed
-  spellArray.map((spell) => [spell.id, spell])
+export const dataMap = new Map(
+  dataArray.map((data) => [data.id, data])
 ) as ReadonlyMap<string, DataSpell>;
 
 type ValueTypes = string | number | boolean;

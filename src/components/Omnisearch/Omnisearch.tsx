@@ -1,5 +1,5 @@
 import { SearchResult } from "minisearch";
-import { spellMap } from "@src/dataLookup";
+import { dataArray } from "@src/dataLookup";
 import {
   batch,
   Component,

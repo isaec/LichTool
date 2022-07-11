@@ -1,4 +1,4 @@
-import { spellMap } from "@src/dataLookup";
+import { dataArray } from "@src/dataLookup";
 import { Accessor, Component, createMemo, For, JSX, Show } from "solid-js";
 import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
 import { DataSpell } from "@components/Renderer/types";

@@ -56,6 +56,7 @@ export type EntriesData = {
 };
 /** the data of a spell */
 export type DataSpell = {
+  id: string;
   name: string;
   level: Levels;
   school: SchoolAbbreviations;
