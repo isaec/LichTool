@@ -1,5 +1,5 @@
 import MiniSearch, { SearchResult } from "minisearch";
-import { DataSpell } from "./Renderer/types";
+import { DataSpell } from "@components/Renderer/types";
 import { spellArray, spellMap, filterKeys } from "@src/dataLookup";
 import {
   batch,
@@ -16,7 +16,7 @@ import { createStore } from "solid-js/store";
 import { Results } from "./SearchResult";
 
 import styles from "./Omnisearch.module.scss";
-import { schoolAbbreviationMap } from "./generalTypes";
+import { schoolAbbreviationMap } from "@components/generalTypes";
 import { useSearchParams } from "solid-app-router";
 import { hammingDistanceFrom } from "@src/hamming";
 import { createDebouncedMemo } from "@solid-primitives/memo";

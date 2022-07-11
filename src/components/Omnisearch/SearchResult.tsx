@@ -1,7 +1,7 @@
 import { spellMap } from "@src/dataLookup";
 import { Accessor, Component, createMemo, For, JSX, Show } from "solid-js";
-import { Levels, schoolAbbreviationMap } from "./generalTypes";
-import { DataSpell } from "./Renderer/types";
+import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
+import { DataSpell } from "@components/Renderer/types";
 import { fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";
