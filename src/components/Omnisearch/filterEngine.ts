@@ -1,6 +1,8 @@
 import toast from "solid-toast";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataSpell } from "@components/Renderer/types";
+import { dataMap } from "@src/dataLookup";
+import { SearchResult } from "minisearch";
 
 export type FilterData = {
   key: string;
@@ -65,11 +67,14 @@ const filterValueTransforms = new Map([["school", schoolAbbreviationMap]]);
  * @param filterObj the details of the filter to apply
  * @returns true if the data object matches the filter
  */
-export const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
+export const testFilter = (
+  dataObj: Record<string, any>,
+  filterObj: PopulatedFilter
+) => {
   const filter = parseFilter(filterObj.value);
   if (filter === null) return false;
   const key = filterObj.key;
-  const val = dataObj[key as keyof DataSpell];
+  const val = dataObj[key];
   if (filter instanceof RegExp) {
     return filter.test((val ?? "").toString());
   }
@@ -90,3 +95,17 @@ export const testFilter = (dataObj: DataSpell, filterObj: PopulatedFilter) => {
 
 // this regex is used to match the filter keys in the url param
 export const isParamFilter = /^f_/;
+
+/**
+ * Higher order function that returns a function to be used for filter execution
+ *
+ * If there are not filters, returns undefined
+ */
+export const executeFilters = (filters: PopulatedFilter[]) => {
+  if (filters.length === 0) return undefined;
+  console.log(filters);
+  return (result: { id: any }) => {
+    const dataObj = dataMap.get(result.id)!;
+    return !filters.some((filter) => !testFilter(dataObj, filter));
+  };
+};

@@ -16,7 +16,13 @@ import { useSearchParams } from "solid-app-router";
 import { createDebouncedMemo } from "@solid-primitives/memo";
 import searchEngine from "./dataMiniSearch";
 import FilterComponent from "./FilterComponent";
-import { isParamFilter, Filter, isPopulated, testFilter } from "./filterEngine";
+import {
+  isParamFilter,
+  Filter,
+  isPopulated,
+  testFilter,
+  executeFilters,
+} from "./filterEngine";
 
 const Omnisearch: Component<{}> = () => {
   let ref: HTMLInputElement | undefined;
@@ -60,10 +66,7 @@ const Omnisearch: Component<{}> = () => {
     });
   });
   const debouncedQuery = createDebouncedMemo(() => search.query, 50);
-  const filterFn = (result: SearchResult) => {
-    const dataObj = dataMap.get(result.id)!;
-    return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
-  };
+
   const results = createMemo((): SearchResult[] => {
     // show everything if there are no params
     if (debouncedQuery().length === 0 && populatedFilters().length === 0) {
@@ -71,18 +74,12 @@ const Omnisearch: Component<{}> = () => {
     }
     if (debouncedQuery().length === 0) {
       // filter without any search
-      return [...dataMap.values()].filter((data) =>
-        // EVIL CODE EVIL CODE EVIL CODE EVIL CODE
-        // this is a nasty hack to simulate a search without a search
-        // if filterFn starts reading other keys this will break
-        // if searchResult starts reading other keys this will break
-        filterFn({
-          id: data.id,
-        } as SearchResult)
+      return [...dataMap.values()].filter(
+        executeFilters(populatedFilters())!
       ) as unknown as SearchResult[];
     }
     return searchEngine.search(debouncedQuery(), {
-      filter: populatedFilters().length === 0 ? undefined : filterFn,
+      filter: executeFilters(populatedFilters()),
     });
   });
   return (
