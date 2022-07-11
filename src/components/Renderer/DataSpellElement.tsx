@@ -1,5 +1,5 @@
 import { Component, createMemo, JSX, Match, Show, Switch } from "solid-js";
-import styles from "./DataSpellElement.module.scss";
+import styles from "./DataElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "./Renderer";
 import { fmtRange } from "@src/formatter";
@@ -28,7 +28,7 @@ const DataSpellElement: Component<{
       .join(", ")
   );
   return (
-    <div class={styles.DataSpellElement}>
+    <div class={styles.DataElement}>
       <div class={styles.head}>
         <h2>{props.data.name}</h2>
         <h2>

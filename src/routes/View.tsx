@@ -1,4 +1,5 @@
 import DataSpellElement from "@components/Renderer/DataSpellElement";
+import DataGenericElement from "@components/Renderer/DataGenericElement";
 import {
   dataArray,
   dataMap,
@@ -17,7 +18,7 @@ const View = () => {
   const data = createMemo(() => dataMap.get(params.id) ?? firstData);
 
   return (
-    <Switch fallback={<p>{JSON.stringify(data())}</p>}>
+    <Switch fallback={<DataGenericElement data={data()} />}>
       <Match when={isDataSpell(data())}>
         <DataSpellElement data={data() as DataSpell} />
       </Match>

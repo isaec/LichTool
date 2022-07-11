@@ -1,6 +1,6 @@
 @use "@src/config" as *;
 
-.DataSpellElement {
+.DataElement {
   display: flex;
   flex-direction: column;
   & .head {
