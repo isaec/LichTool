@@ -2,13 +2,12 @@ import { generate, one } from "generate-combinations";
 import { render } from "solid-testing-library";
 import { describe, expect, it } from "vitest";
 import DataSpellElement from "./DataSpellElement";
-import { DataSpell } from "./types";
+import { DataSpell, RawDataSpell } from "@src/dataLookup";
 
 describe.each([
   [
     "exhibits general behavior",
-    generate<DataSpell>({
-      id: "id",
+    generate<RawDataSpell>({
       name: "spell name",
       source: one(["PHB", "XGE"]),
       page: 219,
@@ -44,8 +43,7 @@ describe.each([
   ],
   [
     "displays text for levels",
-    generate<DataSpell>({
-      id: "id",
+    generate<RawDataSpell>({
       name: "spell name",
       source: "PHB",
       page: 100,

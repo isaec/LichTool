@@ -7,6 +7,7 @@ import {
   Sources,
   TimeUnits,
 } from "@components/generalTypes";
+import { RawDataSpell } from "@src/dataLookup";
 
 export type EntryLevels = 0 | 1 | 2;
 
@@ -54,39 +55,11 @@ export type EntriesData = {
   name?: string;
   entries: DataGroup;
 };
-/** the data of a spell */
-export type DataSpell = {
-  id: string;
-  name: string;
-  level: Levels;
-  school: SchoolAbbreviations;
-  time: { number: number; unit: "action" }[];
-  range: { type: Ranges; distance?: { type: Distances; amount?: number } };
-  components: { v?: boolean; s?: boolean; m?: string };
-  duration: [
-    {
-      type: Durations;
-      duration?: {
-        type: TimeUnits;
-        amount: number;
-      };
-      concentration?: boolean;
-    }
-  ];
-  entries: DataGroup;
-  entriesHigherLevel?: DataGroup;
-  source: Sources;
-  page: number;
-  srd?: boolean;
-  basicRules?: boolean;
-  meta?: {
-    ritual?: boolean;
-  };
-};
+
 /** the DataNode containing the data of a spell */
 export type DataSpellData = {
   type: "dataSpell";
-  dataSpell: DataSpell;
+  dataSpell: RawDataSpell;
 };
 export type DataNode =
   | SectionData

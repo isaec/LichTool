@@ -1,7 +1,7 @@
 import { dataArray, dataMap } from "@src/dataLookup";
 import { Accessor, Component, createMemo, For, JSX, Show } from "solid-js";
 import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
-import { DataSpell } from "@components/Renderer/types";
+import { DataSpell } from "@src/dataLookup";
 import { fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";

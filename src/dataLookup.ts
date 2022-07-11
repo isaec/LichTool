@@ -2,7 +2,52 @@
 // https://v8.dev/blog/cost-of-javascript-2019#json
 import data from "@data/data.json?raw";
 import filters from "@data/filters.json?raw";
-import { DataSpell } from "./components/Renderer/types";
+import {
+  Distances,
+  Durations,
+  Levels,
+  Ranges,
+  SchoolAbbreviations,
+  Sources,
+  TimeUnits,
+} from "@components/generalTypes";
+import { DataGroup } from "./components/Renderer/types";
+
+export type IdData = {
+  id: string;
+};
+
+export type RawData<T> = Omit<T, "id">;
+
+export type RawDataSpell = RawData<DataSpell>;
+export type DataSpell = IdData & {
+  idType: "spell";
+  name: string;
+  level: Levels;
+  school: SchoolAbbreviations;
+  time: { number: number; unit: "action" }[];
+  range: { type: Ranges; distance?: { type: Distances; amount?: number } };
+  components: { v?: boolean; s?: boolean; m?: string };
+  duration: [
+    {
+      type: Durations;
+      duration?: {
+        type: TimeUnits;
+        amount: number;
+      };
+      concentration?: boolean;
+    }
+  ];
+  entries: DataGroup;
+  entriesHigherLevel?: DataGroup;
+  source: Sources;
+  page: number;
+  srd?: boolean;
+  basicRules?: boolean;
+  meta?: {
+    ritual?: boolean;
+  };
+};
 
 type DataUnion =
   | DataSpell

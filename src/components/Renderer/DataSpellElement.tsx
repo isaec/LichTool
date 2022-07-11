@@ -1,10 +1,9 @@
-import { Component, createMemo, For, JSX, Match, Show, Switch } from "solid-js";
-import { DataSpell, EntriesData, EntryLevels } from "./types";
-
+import { Component, createMemo, JSX, Match, Show, Switch } from "solid-js";
 import styles from "./DataSpellElement.module.scss";
 import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "./Renderer";
 import { fmtRange } from "@src/formatter";
+import { RawDataSpell } from "@src/dataLookup";
 
 const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
   <p>
@@ -17,7 +16,7 @@ const plural = (num: number, str: string) =>
   `${num} ${str}${num > 1 ? "s" : ""}`;
 
 const DataSpellElement: Component<{
-  data: DataSpell;
+  data: RawDataSpell;
 }> = (props) => {
   const components = createMemo(() =>
     Object.entries(props.data.components)
