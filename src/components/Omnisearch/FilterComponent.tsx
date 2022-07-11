@@ -1,4 +1,4 @@
-import { dataArray } from "@src/dataLookup";
+import { filterKeys } from "@src/dataLookup";
 import { hammingDistanceFrom } from "@src/hamming";
 import {
   Component,
