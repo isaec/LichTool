@@ -22,9 +22,6 @@ const dispPastDistance = (str: Distances, shorten: boolean) =>
 export const fmtRange = (data: DataSpell["range"], shorten = false) => {
   if (data.distance === undefined) return capitalize(data.type);
   if (data.distance.amount === undefined) return capitalize(data.distance.type);
-
-  const self = shorten ? "S" : "Self ";
-
   switch (data.type) {
     case "point":
       // handle the case of single mile, the only unit to be plural
@@ -35,18 +32,18 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
       );
     case "sphere":
       // sphere is weird, its an alias of range
-      return `${self}(${data.distance.amount}-${dispPastDistance(
+      return `${data.distance.amount}-${dispPastDistance(
         data.distance.type,
         shorten
-      )} radi)`;
+      )} radi`;
     case "radius":
     case "line":
     case "cube":
     case "cone":
-      return `${self}(${data.distance.amount}-${dispPastDistance(
+      return `${data.distance.amount}-${dispPastDistance(
         data.distance.type,
         shorten
-      )} ${shorten ? data.type.slice(0, 4) : data.type})`;
+      )} ${shorten ? data.type.slice(0, 4) : data.type}`;
 
     default:
       return capitalize(
