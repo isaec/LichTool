@@ -1,4 +1,4 @@
-import { dataArray, dataMap, isDataSpell } from "@src/dataLookup";
+import { dataMap, DataSpell } from "@src/dataLookup";
 import {
   Accessor,
   Component,
@@ -6,16 +6,15 @@ import {
   For,
   JSX,
   Match,
-  Show,
   Switch,
 } from "solid-js";
-import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
-import { DataSpell } from "@src/dataLookup";
+import { schoolAbbreviationMap } from "@components/generalTypes";
 import { extractTypeFromUrl, fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";
-import { Navigate, useNavigate } from "solid-app-router";
+import { useNavigate } from "solid-app-router";
 import { ResultsGroup } from "./groupResults";
+import { Dynamic } from "solid-js/web";
 
 const Data: Component<{
   children: JSX.Element;
@@ -59,6 +58,38 @@ const TableRow: Component<{
   );
 };
 
+const Head: Component<{ children: JSX.Element }> = (props) => (
+  <thead class={styles.Head}>{props.children}</thead>
+);
+
+const Col: Component<{
+  children: string;
+  optional?: boolean;
+}> = (props) => (
+  <th
+    scope="col"
+    classList={{
+      [styles.optional]: props.optional,
+    }}
+  >
+    {props.children}
+  </th>
+);
+
+// implementations
+
+const SpellHeader: Component = () => (
+  <Head>
+    <Col>name</Col>
+    <Col>level</Col>
+    <Col>school</Col>
+    <Col>range</Col>
+    <Col optional>con</Col>
+    <Col optional>rit</Col>
+    <Col>source</Col>
+  </Head>
+);
+
 const SpellSearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(
     () => dataMap.get(props.id)!
@@ -84,6 +115,14 @@ const SpellSearchResult: Component<{ id: string }> = (props) => {
   );
 };
 
+const GenericHeader: Component = () => (
+  <Head>
+    <Col>name</Col>
+    <Col>page</Col>
+    <Col>source</Col>
+  </Head>
+);
+
 const GenericSearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() => dataMap.get(props.id)!);
   return (
@@ -94,6 +133,8 @@ const GenericSearchResult: Component<{ id: string }> = (props) => {
     </TableRow>
   );
 };
+
+const headMap = new Map([["spell", SpellHeader]]);
 
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataType = createMemo(() => extractTypeFromUrl(props.id));
@@ -111,7 +152,7 @@ export const Results: Component<{ results: ResultsGroup[] }> = (props) => (
     <For each={props.results}>
       {(resultGroup) => (
         <table class={styles.results}>
-          <thead>{resultGroup.type}</thead>
+          <Dynamic component={headMap.get(resultGroup.type) ?? GenericHeader} />
           <For each={resultGroup.results}>
             {(result) => <SearchResult id={result.id} />}
           </For>

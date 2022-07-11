@@ -10,10 +10,29 @@ table.results {
   table-layout: fixed;
 }
 
-tr.TableRow {
-  &:first-of-type > th.Key {
-    width: clamp(8em, 30%, 22em);
+@mixin optionalCell {
+  &.optional {
+    display: none;
   }
+  @media (min-width: 34em) {
+    &.optional {
+      display: table-cell;
+    }
+  }
+}
+
+thead.Head {
+  & > th {
+    &:first-of-type {
+      text-align: left;
+      width: clamp(8em, 30%, 22em);
+    }
+    font-weight: normal;
+    @include optionalCell;
+  }
+}
+
+tr.TableRow {
   & > th.Key {
     font-weight: normal;
     text-align: left;
@@ -38,14 +57,7 @@ tr.TableRow {
     &.mono {
       font-family: $font-mono;
     }
-    &.optional {
-      display: none;
-    }
-    @media (min-width: 34em) {
-      &.optional {
-        display: table-cell;
-      }
-    }
+    @include optionalCell;
   }
   &:nth-child(odd) {
     background-color: mix($color-grey-900, $color-blue-700, 95%);
