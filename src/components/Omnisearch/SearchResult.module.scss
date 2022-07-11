@@ -22,13 +22,18 @@ table.results {
 }
 
 thead.Head {
+  background-color: $color-grey-700;
+  position: sticky;
+  top: 0px;
   & > th {
+    width: min-content;
     &:first-of-type {
       text-align: left;
-      width: clamp(8em, 30%, 22em);
+      width: clamp(8em, 30vw, 22em);
     }
     font-weight: normal;
     @include optionalCell;
+    padding: 0 $size-2;
   }
 }
 
