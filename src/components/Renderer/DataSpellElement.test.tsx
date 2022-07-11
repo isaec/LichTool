@@ -1,8 +1,16 @@
 import { generate, one } from "generate-combinations";
 import { render } from "solid-testing-library";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import DataSpellElement from "./DataSpellElement";
 import { DataSpell, RawDataSpell } from "@src/dataLookup";
+
+vi.mock("./DataElement.module.scss", () => ({
+  default: new Proxy(new Object(), {
+    get(_, style) {
+      return style;
+    },
+  }),
+}));
 
 describe.each([
   [

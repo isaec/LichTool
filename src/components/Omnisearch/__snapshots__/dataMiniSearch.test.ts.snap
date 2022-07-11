@@ -12,7 +12,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 45.067279574640395,
+    "score": 45.31141436990952,
     "terms": [
       "antipathy",
       "sympathy",
@@ -25,7 +25,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 8.541426451107707,
+    "score": 8.579000772279432,
     "terms": [
       "path",
     ],
@@ -37,7 +37,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 3.516810833859222,
+    "score": 3.53586181499294,
     "terms": [
       "antimagic",
     ],
@@ -49,7 +49,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 3.12605407454153,
+    "score": 3.142988279993724,
     "terms": [
       "antilife",
     ],
@@ -61,7 +61,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.9632387581591586,
+    "score": 2.9792909737440505,
     "terms": [
       "ability",
     ],
@@ -73,7 +73,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.921541969759381,
+    "score": 2.9409112045594137,
     "terms": [
       "animate",
     ],
@@ -85,7 +85,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.921541969759381,
+    "score": 2.9409112045594137,
     "terms": [
       "animate",
     ],
@@ -97,7 +97,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.490250958234545,
+    "score": 2.509127772436078,
     "terms": [
       "animals",
     ],
@@ -109,7 +109,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.328546350556977,
+    "score": 2.346197397602567,
     "terms": [
       "animal",
     ],
@@ -121,7 +121,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.328546350556977,
+    "score": 2.346197397602567,
     "terms": [
       "animal",
     ],
@@ -133,7 +133,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.328546350556977,
+    "score": 2.346197397602567,
     "terms": [
       "animal",
     ],
@@ -145,7 +145,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.2167527609378372,
+    "score": 2.231294760233709,
     "terms": [
       "animals",
     ],
@@ -157,7 +157,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
         "name",
       ],
     },
-    "score": 2.0212528353946912,
+    "score": 2.033464837961121,
     "terms": [
       "animals",
     ],
@@ -174,7 +174,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 6.197695365537282,
+    "score": 6.2496899407357525,
     "terms": [
       "find",
     ],
@@ -186,7 +186,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 6.197695365537282,
+    "score": 6.2496899407357525,
     "terms": [
       "find",
     ],
@@ -198,7 +198,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 6.197695365537282,
+    "score": 6.2496899407357525,
     "terms": [
       "find",
     ],
@@ -210,7 +210,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 5.517017579122408,
+    "score": 5.557668513752126,
     "terms": [
       "find",
     ],
@@ -225,7 +225,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 4.208050117365236,
+    "score": 4.2359228998453915,
     "terms": [
       "and",
       "food",
@@ -241,7 +241,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 4.208050117365236,
+    "score": 4.2359228998453915,
     "terms": [
       "and",
       "food",
@@ -254,7 +254,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 4.063870296903989,
+    "score": 4.085884763991841,
     "terms": [
       "mind",
     ],
@@ -266,7 +266,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.628455622235705,
+    "score": 3.648111396421287,
     "terms": [
       "field",
     ],
@@ -278,7 +278,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.5494790483567633,
+    "score": 3.5757334443693742,
     "terms": [
       "aid",
     ],
@@ -290,7 +290,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.415201314150233,
+    "score": 3.441089516483765,
     "terms": [
       "wind",
     ],
@@ -302,7 +302,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.415201314150233,
+    "score": 3.441089516483765,
     "terms": [
       "wind",
     ],
@@ -314,7 +314,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "bond",
     ],
@@ -326,7 +326,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "hand",
     ],
@@ -338,7 +338,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 3.0401180721433194,
+    "score": 3.0600613854633725,
     "terms": [
       "wind",
     ],
@@ -350,7 +350,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -362,7 +362,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -374,7 +374,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -386,7 +386,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -398,7 +398,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 2.2767446173990367,
+    "score": 2.295155294872023,
     "terms": [
       "fire",
     ],
@@ -410,7 +410,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 1.8905439320209625,
+    "score": 1.9082197915003174,
     "terms": [
       "and",
     ],
@@ -422,7 +422,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 1.7238130252373944,
+    "score": 1.73903417794562,
     "terms": [
       "and",
     ],
@@ -434,7 +434,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 1.7238130252373944,
+    "score": 1.73903417794562,
     "terms": [
       "and",
     ],
@@ -446,7 +446,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 1.7238130252373944,
+    "score": 1.73903417794562,
     "terms": [
       "and",
     ],
@@ -458,7 +458,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
         "name",
       ],
     },
-    "score": 1.59869758584024,
+    "score": 1.6124347827577272,
     "terms": [
       "and",
     ],
@@ -478,7 +478,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 18.634915618320587,
+    "score": 18.794209789662332,
     "terms": [
       "fire",
       "bolt",
@@ -494,7 +494,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 16.772772345408953,
+    "score": 16.866876332925255,
     "terms": [
       "fireball",
       "blast",
@@ -507,7 +507,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 7.152520197593664,
+    "score": 7.214115968152095,
     "terms": [
       "fireball",
     ],
@@ -519,7 +519,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 5.90225649501006,
+    "score": 5.9560153783474,
     "terms": [
       "fire",
     ],
@@ -531,7 +531,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 5.90225649501006,
+    "score": 5.9560153783474,
     "terms": [
       "fire",
     ],
@@ -543,7 +543,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 5.90225649501006,
+    "score": 5.9560153783474,
     "terms": [
       "fire",
     ],
@@ -555,7 +555,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 5.254026040151623,
+    "score": 5.296512218935438,
     "terms": [
       "fire",
     ],
@@ -567,7 +567,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.9438656092852926,
+    "score": 3.9730371604104158,
     "terms": [
       "blur",
     ],
@@ -579,7 +579,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.5494790483567633,
+    "score": 3.5757334443693742,
     "terms": [
       "fly",
     ],
@@ -591,7 +591,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.415201314150233,
+    "score": 3.441089516483765,
     "terms": [
       "bolt",
     ],
@@ -603,7 +603,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.415201314150233,
+    "score": 3.441089516483765,
     "terms": [
       "bolt",
     ],
@@ -615,7 +615,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "form",
     ],
@@ -627,7 +627,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "life",
     ],
@@ -639,7 +639,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "lore",
     ],
@@ -651,7 +651,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "time",
     ],
@@ -663,7 +663,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.2792818027911426,
+    "score": 3.301022780627913,
     "terms": [
       "blast",
     ],
@@ -675,7 +675,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.229951178990309,
+    "score": 3.244159955903987,
     "terms": [
       "force",
     ],
@@ -687,9 +687,21 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 3.0606630159383994,
+    "score": 3.0809545952527193,
     "terms": [
       "cure",
+    ],
+  },
+  {
+    "id": "disease_DMG-Sight-Rot",
+    "match": {
+      "rot": [
+        "name",
+      ],
+    },
+    "score": 3.064413572993881,
+    "terms": [
+      "rot",
     ],
   },
   {
@@ -699,7 +711,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.7545967143445598,
+    "score": 2.772859135727447,
     "terms": [
       "ice",
     ],
@@ -711,7 +723,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.724517851683425,
+    "score": 2.739803815662597,
     "terms": [
       "cure",
     ],
@@ -723,7 +735,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.685667991732822,
+    "score": 2.708198974318826,
     "terms": [
       "find",
     ],
@@ -735,7 +747,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.685667991732822,
+    "score": 2.708198974318826,
     "terms": [
       "find",
     ],
@@ -747,7 +759,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.685667991732822,
+    "score": 2.708198974318826,
     "terms": [
       "find",
     ],
@@ -759,7 +771,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.4520660665150826,
+    "score": 2.465823434096337,
     "terms": [
       "ice",
     ],
@@ -771,7 +783,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
         "name",
       ],
     },
-    "score": 2.39070761761971,
+    "score": 2.4083230226259214,
     "terms": [
       "find",
     ],
@@ -788,7 +800,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 8.225398227232713,
+    "score": 8.296233363374908,
     "terms": [
       "fireball",
     ],
@@ -800,7 +812,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 6.287348888500212,
+    "score": 6.3226241899906075,
     "terms": [
       "fireball",
     ],
@@ -812,7 +824,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 3.014621100390955,
+    "score": 3.027882625510388,
     "terms": [
       "recall",
     ],
@@ -824,7 +836,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 2.82213215062777,
+    "score": 2.837419974994334,
     "terms": [
       "field",
     ],
@@ -836,7 +848,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 2.539918935564993,
+    "score": 2.5536779774949006,
     "terms": [
       "fall",
     ],
@@ -848,7 +860,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 1.9182333608782696,
+    "score": 1.935704997962905,
     "terms": [
       "fire",
     ],
@@ -860,7 +872,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 1.9182333608782696,
+    "score": 1.935704997962905,
     "terms": [
       "fire",
     ],
@@ -872,7 +884,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 1.9182333608782696,
+    "score": 1.935704997962905,
     "terms": [
       "fire",
     ],
@@ -884,7 +896,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 1.9182333608782696,
+    "score": 1.935704997962905,
     "terms": [
       "fire",
     ],
@@ -896,7 +908,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query firebal
         "name",
       ],
     },
-    "score": 1.7075584630492775,
+    "score": 1.7213664711540173,
     "terms": [
       "fire",
     ],
@@ -916,7 +928,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 16.59413704569129,
+    "score": 16.684029452966683,
     "terms": [
       "mind",
       "blank",
@@ -929,7 +941,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 14.648643691631086,
+    "score": 14.756995167238689,
     "terms": [
       "bane",
     ],
@@ -944,7 +956,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 10.938853074716217,
+    "score": 11.01678564314427,
     "terms": [
       "wind",
       "walk",
@@ -960,7 +972,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 5.6770735038889795,
+    "score": 5.720654028081544,
     "terms": [
       "flame",
       "blade",
@@ -973,7 +985,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 4.225570295662814,
+    "score": 4.25682552901116,
     "terms": [
       "blink",
     ],
@@ -985,7 +997,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.9438656092852926,
+    "score": 3.9730371604104158,
     "terms": [
       "maze",
     ],
@@ -997,7 +1009,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.6973740087049616,
+    "score": 3.724722337884765,
     "terms": [
       "alarm",
     ],
@@ -1009,7 +1021,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.6973740087049616,
+    "score": 3.724722337884765,
     "terms": [
       "bless",
     ],
@@ -1021,7 +1033,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.6973740087049616,
+    "score": 3.724722337884765,
     "terms": [
       "knock",
     ],
@@ -1033,9 +1045,21 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.628455622235705,
+    "score": 3.648111396421287,
     "terms": [
       "smite",
+    ],
+  },
+  {
+    "id": "spell_PHB-Blur",
+    "match": {
+      "blur": [
+        "name",
+      ],
+    },
+    "score": 3.405460423208928,
+    "terms": [
+      "blur",
     ],
   },
   {
@@ -1045,7 +1069,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "life",
     ],
@@ -1057,7 +1081,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "move",
     ],
@@ -1069,7 +1093,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "time",
     ],
@@ -1081,21 +1105,9 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.3865585807533245,
+    "score": 3.404903969993201,
     "terms": [
       "lock",
-    ],
-  },
-  {
-    "id": "spell_PHB-Blur",
-    "match": {
-      "blur": [
-        "name",
-      ],
-    },
-    "score": 3.3804562365302506,
-    "terms": [
-      "blur",
     ],
   },
   {
@@ -1105,7 +1117,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.2792818027911426,
+    "score": 3.301022780627913,
     "terms": [
       "minor",
     ],
@@ -1117,7 +1129,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.2792818027911426,
+    "score": 3.301022780627913,
     "terms": [
       "blade",
     ],
@@ -1129,7 +1141,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.2792818027911426,
+    "score": 3.301022780627913,
     "terms": [
       "blast",
     ],
@@ -1141,7 +1153,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.1748986694562418,
+    "score": 3.192097471868626,
     "terms": [
       "beast",
     ],
@@ -1153,7 +1165,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.1748986694562418,
+    "score": 3.192097471868626,
     "terms": [
       "plant",
     ],
@@ -1165,7 +1177,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.1748986694562418,
+    "score": 3.192097471868626,
     "terms": [
       "trick",
     ],
@@ -1177,7 +1189,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.0606630159383994,
+    "score": 3.0809545952527193,
     "terms": [
       "mage",
     ],
@@ -1189,7 +1201,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.0606630159383994,
+    "score": 3.0809545952527193,
     "terms": [
       "mage",
     ],
@@ -1201,7 +1213,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.014621100390955,
+    "score": 3.027882625510388,
     "terms": [
       "cone",
     ],
@@ -1213,7 +1225,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.014621100390955,
+    "score": 3.027882625510388,
     "terms": [
       "zone",
     ],
@@ -1225,7 +1237,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 3.014621100390955,
+    "score": 3.027882625510388,
     "terms": [
       "beacon",
     ],
@@ -1237,7 +1249,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.9191262696608127,
+    "score": 2.935504088209925,
     "terms": [
       "minor",
     ],
@@ -1249,7 +1261,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.9191262696608127,
+    "score": 2.935504088209925,
     "terms": [
       "blast",
     ],
@@ -1261,7 +1273,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.8693715774422497,
+    "score": 2.888394933049424,
     "terms": [
       "plane",
     ],
@@ -1273,7 +1285,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.846001095125194,
+    "score": 2.867574597069804,
     "terms": [
       "wind",
     ],
@@ -1285,7 +1297,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.8262072816165205,
+    "score": 2.8386399614159883,
     "terms": [
       "trace",
     ],
@@ -1297,7 +1309,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.7545967143445598,
+    "score": 2.772859135727447,
     "terms": [
       "ice",
     ],
@@ -1309,7 +1321,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.685667991732822,
+    "score": 2.708198974318826,
     "terms": [
       "find",
     ],
@@ -1321,7 +1333,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.685667991732822,
+    "score": 2.708198974318826,
     "terms": [
       "find",
     ],
@@ -1333,7 +1345,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.685667991732822,
+    "score": 2.708198974318826,
     "terms": [
       "find",
     ],
@@ -1345,7 +1357,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.623425442232914,
+    "score": 2.640818224502331,
     "terms": [
       "walk",
     ],
@@ -1357,7 +1369,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.5839609431922472,
+    "score": 2.5953279647231895,
     "terms": [
       "mark",
     ],
@@ -1369,7 +1381,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -1381,7 +1393,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -1393,7 +1405,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -1405,7 +1417,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.557644481171026,
+    "score": 2.5809399972838736,
     "terms": [
       "fire",
     ],
@@ -1417,7 +1429,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.5542354859532113,
+    "score": 2.5685660771836845,
     "terms": [
       "plane",
     ],
@@ -1429,7 +1441,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.5334317267860995,
+    "score": 2.5500511545528104,
     "terms": [
       "wind",
     ],
@@ -1441,7 +1453,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.4520660665150826,
+    "score": 2.465823434096337,
     "terms": [
       "ice",
     ],
@@ -1453,7 +1465,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.397791701097837,
+    "score": 2.4196312474536312,
     "terms": [
       "flame",
     ],
@@ -1465,7 +1477,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.397791701097837,
+    "score": 2.4196312474536312,
     "terms": [
       "flame",
     ],
@@ -1477,7 +1489,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.397791701097837,
+    "score": 2.4196312474536312,
     "terms": [
       "flame",
     ],
@@ -1489,7 +1501,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.397791701097837,
+    "score": 2.4196312474536312,
     "terms": [
       "flame",
     ],
@@ -1501,7 +1513,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.39070761761971,
+    "score": 2.4083230226259214,
     "terms": [
       "find",
     ],
@@ -1513,7 +1525,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
         "name",
       ],
     },
-    "score": 2.2767446173990367,
+    "score": 2.295155294872023,
     "terms": [
       "fire",
     ],

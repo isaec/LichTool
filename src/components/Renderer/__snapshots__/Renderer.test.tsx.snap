@@ -2368,10 +2368,10 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         Spells; as above:
       </p>
       <div
-        class="_DataSpellElement_1ty9d_1"
+        class="_DataElement_7a3yu_1"
       >
         <div
-          class="_head_1ty9d_5"
+          class="_head_7a3yu_5"
         >
           <h2>
             Fireball

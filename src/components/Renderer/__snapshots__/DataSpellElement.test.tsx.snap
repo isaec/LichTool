@@ -14,10 +14,10 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name
@@ -89,10 +89,10 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name
@@ -164,10 +164,10 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name
@@ -239,10 +239,10 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name
@@ -315,10 +315,10 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name
@@ -391,10 +391,10 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name
@@ -469,10 +469,10 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
 } 1`] = `
 <div>
   <div
-    class="_DataSpellElement_1ty9d_1"
+    class="DataElement"
   >
     <div
-      class="_head_1ty9d_5"
+      class="head"
     >
       <h2>
         spell name

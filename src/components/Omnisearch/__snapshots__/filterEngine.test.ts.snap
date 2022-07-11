@@ -9,7 +9,7 @@ exports[`filterEngine > matches snapshot for search results given query fireball
         "name",
       ],
     },
-    "score": 8.225398227232713,
+    "score": 8.296233363374908,
     "terms": [
       "fireball",
     ],
@@ -21,7 +21,7 @@ exports[`filterEngine > matches snapshot for search results given query fireball
         "name",
       ],
     },
-    "score": 6.287348888500212,
+    "score": 6.3226241899906075,
     "terms": [
       "fireball",
     ],
@@ -38,7 +38,7 @@ exports[`filterEngine > matches snapshot for search results given query m, filte
         "name",
       ],
     },
-    "score": 6.302528376091795,
+    "score": 6.336669919342185,
     "terms": [
       "major",
     ],
@@ -50,7 +50,7 @@ exports[`filterEngine > matches snapshot for search results given query m, filte
         "name",
       ],
     },
-    "score": 5.67903503998296,
+    "score": 5.70401750488613,
     "terms": [
       "meld",
     ],
@@ -62,7 +62,7 @@ exports[`filterEngine > matches snapshot for search results given query m, filte
         "name",
       ],
     },
-    "score": 4.503687819691761,
+    "score": 4.536872256124184,
     "terms": [
       "mass",
     ],
@@ -74,7 +74,7 @@ exports[`filterEngine > matches snapshot for search results given query m, filte
         "name",
       ],
     },
-    "score": 4.391636030244226,
+    "score": 4.437189081101136,
     "terms": [
       "magic",
     ],
@@ -86,7 +86,7 @@ exports[`filterEngine > matches snapshot for search results given query m, filte
         "name",
       ],
     },
-    "score": 4.391636030244226,
+    "score": 4.437189081101136,
     "terms": [
       "magic",
     ],

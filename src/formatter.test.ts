@@ -32,7 +32,7 @@ describe("fmtDataUrl", () => {
   it.each(dataArray.map((spell) => [spell.name, spell.source]))(
     "%s from %s is parsed into url with same formatting as original",
     (name, source) => {
-      const url = fmtDataUrl("", name, source);
+      const url = fmtDataUrl("type", name, source);
       const urlNameSegment = url.split("-").slice(1).join(" ");
       expect(
         urlNameSegment,
@@ -43,7 +43,7 @@ describe("fmtDataUrl", () => {
 });
 
 describe("extractTypeFromUrl", () => {
-  it.each(dataArray.map((spell) => [spell.id]))(
+  it.each(dataArray.filter(isDataSpell).map((spell) => [spell.id]))(
     "spell id %s has type extracted to spell",
     (url) => {
       expect(extractTypeFromUrl(url)).toEqual("spell");
