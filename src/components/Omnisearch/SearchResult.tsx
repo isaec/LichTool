@@ -1,8 +1,17 @@
 import { dataArray, dataMap, isDataSpell } from "@src/dataLookup";
-import { Accessor, Component, createMemo, For, JSX, Show } from "solid-js";
+import {
+  Accessor,
+  Component,
+  createMemo,
+  For,
+  JSX,
+  Match,
+  Show,
+  Switch,
+} from "solid-js";
 import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
 import { DataSpell } from "@src/dataLookup";
-import { fmtRange } from "@src/formatter";
+import { extractTypeFromUrl, fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";
 import { Navigate, useNavigate } from "solid-app-router";
@@ -49,17 +58,10 @@ const TableRow: Component<{
   );
 };
 
-export const SearchResult: Component<{ id: string }> = (props) => {
-  const dataObj = createMemo(() =>
-    dataMap.get(props.id)
+const SpellSearchResult: Component<{ id: string }> = (props) => {
+  const dataObj = createMemo(
+    () => dataMap.get(props.id)!
   ) as Accessor<DataSpell>;
-  if (!isDataSpell(dataObj())) {
-    return (
-      <TableRow id={props.id}>
-        <Key>{dataObj().name}</Key>
-      </TableRow>
-    );
-  }
   return (
     <TableRow id={props.id}>
       <Key>{dataObj().name}</Key>
@@ -78,6 +80,28 @@ export const SearchResult: Component<{ id: string }> = (props) => {
       </Data>
       <Data nowrap>{dataObj().source}</Data>
     </TableRow>
+  );
+};
+
+const GenericSearchResult: Component<{ id: string }> = (props) => {
+  const dataObj = createMemo(() => dataMap.get(props.id)!);
+  return (
+    <TableRow id={props.id}>
+      <Key>{dataObj().name}</Key>
+      <Data>p{dataObj().page}</Data>
+      <Data>{dataObj().source}</Data>
+    </TableRow>
+  );
+};
+
+export const SearchResult: Component<{ id: string }> = (props) => {
+  const dataType = createMemo(() => extractTypeFromUrl(props.id));
+  return (
+    <Switch fallback={<GenericSearchResult id={props.id} />}>
+      <Match when={dataType() === "spell"}>
+        <SpellSearchResult id={props.id} />
+      </Match>
+    </Switch>
   );
 };
 
