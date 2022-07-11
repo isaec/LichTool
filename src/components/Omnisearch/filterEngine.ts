@@ -27,10 +27,12 @@ const isOnlyDigits = /^\d+$/;
 // flags m i and u aren't that useful, but are allowed
 // i is the most useful of them
 const isValidRegex = /^\/(.+)\/([miu]*)$/;
-const parseFilter = (
+export const parseFilter = (
   filter: string
 ): boolean | number | RegExp | string | null => {
-  if (filter === "true" || filter === "false") return filter ? true : false;
+  if (filter === "true") return true;
+  if (filter === "false") return false;
+
   if (isOnlyDigits.test(filter)) return parseInt(filter);
   if (isValidRegex.test(filter)) {
     // it would be faster for regex to read cache earlier and not need to test
