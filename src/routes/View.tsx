@@ -1,9 +1,8 @@
 import DataSpellElement from "@components/Renderer/DataSpellElement";
-import { DataSpell } from "@src/components/Renderer/types";
-import { dataArray, dataMap } from "@src/dataLookup";
+import { dataArray, dataMap, DataUnion } from "@src/dataLookup";
 import { useParams } from "solid-app-router";
 
-const firstData: DataSpell = dataArray[0];
+const firstData: DataUnion = dataArray[0];
 
 const View = () => {
   const params = useParams();

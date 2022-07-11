@@ -58,7 +58,7 @@ export type DataSpell = IdData & {
 };
 
 // IdData is temporary to find bad typings
-type DataUnion = DataSpell | IdData;
+export type DataUnion = DataSpell | IdData;
 
 // data object collections
 
