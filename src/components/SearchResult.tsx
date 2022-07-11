@@ -58,7 +58,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
       <Data mono nowrap>
         {schoolAbbreviationMap.get(dataObj().school)!.slice(0, 5)}
       </Data>
-      <Data>{fmtRange(dataObj().range)}</Data>
+      <Data>{fmtRange(dataObj().range, true)}</Data>
       <Data nowrap>
         {dataObj().duration[0].concentration !== undefined ? "x" : ""}
       </Data>
