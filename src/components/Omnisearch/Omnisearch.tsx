@@ -1,6 +1,6 @@
-import MiniSearch, { SearchResult } from "minisearch";
+import { SearchResult } from "minisearch";
 import { DataSpell } from "@components/Renderer/types";
-import { spellArray, spellMap, filterKeys } from "@src/dataLookup";
+import { spellMap, filterKeys } from "@src/dataLookup";
 import {
   batch,
   Component,
@@ -21,20 +21,7 @@ import { useSearchParams } from "solid-app-router";
 import { hammingDistanceFrom } from "@src/hamming";
 import { createDebouncedMemo } from "@solid-primitives/memo";
 import toast from "solid-toast";
-
-// use the same minisearch for each search instance
-const searchEngine = new MiniSearch({
-  fields: ["name"],
-  searchOptions: {
-    fuzzy: 0.5,
-    prefix: true,
-    weights: {
-      fuzzy: 0.65,
-      prefix: 1,
-    },
-  },
-});
-searchEngine.addAll(spellArray);
+import searchEngine from "./dataMiniSearch";
 
 type FilterData = {
   key: string;
