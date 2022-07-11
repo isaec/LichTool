@@ -41,12 +41,6 @@ const TableRow: Component<{
   );
 };
 
-const fmtLevel = (level: Levels, ritual?: boolean) => {
-  if (level === 0) return "Cantrip";
-  if (ritual) return `lvl ${level} rit`;
-  return `lvl ${level}`;
-};
-
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
     spellMap.get(props.id)
@@ -54,7 +48,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   return (
     <TableRow id={props.id}>
       <Data>{dataObj().name}</Data>
-      <Data nowrap>{fmtLevel(dataObj().level, dataObj().meta?.ritual)}</Data>
+      <Data nowrap>{dataObj().level}</Data>
       <Data mono nowrap>
         {schoolAbbreviationMap.get(dataObj().school)!.slice(0, 5)}
       </Data>

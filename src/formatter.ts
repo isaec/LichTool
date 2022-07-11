@@ -8,20 +8,23 @@ const pastTenseMap = new Map<Distances, string>([
   ["feet", "foot"],
 ]);
 
-const shortenMap = new Map<Distances, string>([
+const shortenDistanceMap = new Map<Distances, string>([
   ["miles", "mi"],
   ["feet", "ft"],
 ]);
 
 const dispDistance = (str: Distances, shorten: boolean) =>
-  shorten ? shortenMap.get(str) : str;
+  shorten ? shortenDistanceMap.get(str) : str;
 
 const dispPastDistance = (str: Distances, shorten: boolean) =>
-  shorten ? shortenMap.get(str) : pastTenseMap.get(str);
+  shorten ? shortenDistanceMap.get(str) : pastTenseMap.get(str);
 
 export const fmtRange = (data: DataSpell["range"], shorten = false) => {
   if (data.distance === undefined) return capitalize(data.type);
   if (data.distance.amount === undefined) return capitalize(data.distance.type);
+
+  const self = shorten ? "S" : "Self ";
+
   switch (data.type) {
     case "point":
       // handle the case of single mile, the only unit to be plural
@@ -32,18 +35,18 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
       );
     case "sphere":
       // sphere is weird, its an alias of range
-      return `Self (${data.distance.amount}-${dispPastDistance(
+      return `${self}(${data.distance.amount}-${dispPastDistance(
         data.distance.type,
         shorten
-      )} radius)`;
+      )} radi)`;
     case "radius":
     case "line":
     case "cube":
     case "cone":
-      return `Self (${data.distance.amount}-${dispPastDistance(
+      return `${self}(${data.distance.amount}-${dispPastDistance(
         data.distance.type,
         shorten
-      )} ${data.type})`;
+      )} ${shorten ? data.type.slice(0, 4) : data.type})`;
 
     default:
       return capitalize(

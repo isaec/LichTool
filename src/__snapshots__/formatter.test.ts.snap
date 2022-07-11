@@ -2,27 +2,27 @@
 
 exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Self (15-foot cone)"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot 2`] = `"Self (15-ft cone)"`;
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot 2`] = `"S(15-ft cone)"`;
 
 exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot 1`] = `"Self (30-foot cone)"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot 2`] = `"Self (30-ft cone)"`;
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot 2`] = `"S(30-ft cone)"`;
 
 exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot 1`] = `"Self (60-foot cone)"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot 2`] = `"Self (60-ft cone)"`;
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot 2`] = `"S(60-ft cone)"`;
 
 exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Self (15-foot cube)"`;
 
-exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot 2`] = `"Self (15-ft cube)"`;
+exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot 2`] = `"S(15-ft cube)"`;
 
 exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot 1`] = `"Self (60-foot line)"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot 2`] = `"Self (60-ft line)"`;
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot 2`] = `"S(60-ft line)"`;
 
 exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot 1`] = `"Self (100-foot line)"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot 2`] = `"Self (100-ft line)"`;
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot 2`] = `"S(100-ft line)"`;
 
 exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":5}} matches snapshot 1`] = `"5 feet"`;
 
@@ -90,24 +90,24 @@ exports[`fmtRange > {"type":"point","distance":{"type":"unlimited"}} matches sna
 
 exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Self (10-foot radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot 2`] = `"Self (10-ft radius)"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot 2`] = `"S(10-ft radi)"`;
 
 exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot 1`] = `"Self (15-foot radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot 2`] = `"Self (15-ft radius)"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot 2`] = `"S(15-ft radi)"`;
 
 exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot 1`] = `"Self (30-foot radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot 2`] = `"Self (30-ft radius)"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot 2`] = `"S(30-ft radi)"`;
 
 exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot 1`] = `"Self (5-mile radius)"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot 2`] = `"Self (5-mi radius)"`;
+exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot 2`] = `"S(5-mi radi)"`;
 
 exports[`fmtRange > {"type":"special"} matches snapshot 1`] = `"Special"`;
 
 exports[`fmtRange > {"type":"special"} matches snapshot 2`] = `"Special"`;
 
-exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Self (10-foot radius)"`;
+exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot 1`] = `"Self (10-foot radi)"`;
 
-exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot 2`] = `"Self (10-ft radius)"`;
+exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot 2`] = `"S(10-ft radi)"`;
