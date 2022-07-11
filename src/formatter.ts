@@ -90,6 +90,13 @@ const leaveLowerCase = new Set([
   "the",
 ]);
 
+const extractType = /\w+(?=_)/;
+export const extractTypeFromUrl = (url: string): string | "unknown" => {
+  const match = url.match(extractType);
+  if (match) return match[0];
+  return "unknown";
+};
+
 export const fmtDataUrl = (type: string, name: string, source: string) =>
   `${type.toLowerCase()}_${source.toUpperCase()}-${name
     .split(/\s/)

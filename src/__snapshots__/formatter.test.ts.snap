@@ -1,113 +1,717 @@
 // Vitest Snapshot v1
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot,  shorten: false 1`] = `"15-foot cone"`;
+exports[`fmtDataUrl > Acid Splash from PHB fmt matches snapshot 1`] = `"spell_PHB-Acid-Splash"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot,  shorten: true 1`] = `"15-ft cone"`;
+exports[`fmtDataUrl > Aid from PHB fmt matches snapshot 1`] = `"spell_PHB-Aid"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot,  shorten: false 1`] = `"30-foot cone"`;
+exports[`fmtDataUrl > Alarm from PHB fmt matches snapshot 1`] = `"spell_PHB-Alarm"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot,  shorten: true 1`] = `"30-ft cone"`;
+exports[`fmtDataUrl > Alter Self from PHB fmt matches snapshot 1`] = `"spell_PHB-Alter-Self"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot,  shorten: false 1`] = `"60-foot cone"`;
+exports[`fmtDataUrl > Animal Friendship from PHB fmt matches snapshot 1`] = `"spell_PHB-Animal-Friendship"`;
 
-exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot,  shorten: true 1`] = `"60-ft cone"`;
+exports[`fmtDataUrl > Animal Messenger from PHB fmt matches snapshot 1`] = `"spell_PHB-Animal-Messenger"`;
 
-exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot,  shorten: false 1`] = `"15-foot cube"`;
+exports[`fmtDataUrl > Animal Shapes from PHB fmt matches snapshot 1`] = `"spell_PHB-Animal-Shapes"`;
 
-exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot,  shorten: true 1`] = `"15-ft cube"`;
+exports[`fmtDataUrl > Animate Dead from PHB fmt matches snapshot 1`] = `"spell_PHB-Animate-Dead"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot,  shorten: false 1`] = `"60-foot line"`;
+exports[`fmtDataUrl > Animate Objects from PHB fmt matches snapshot 1`] = `"spell_PHB-Animate-Objects"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot,  shorten: true 1`] = `"60-ft line"`;
+exports[`fmtDataUrl > Antilife Shell from PHB fmt matches snapshot 1`] = `"spell_PHB-Antilife-Shell"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot,  shorten: false 1`] = `"100-foot line"`;
+exports[`fmtDataUrl > Antimagic Field from PHB fmt matches snapshot 1`] = `"spell_PHB-Antimagic-Field"`;
 
-exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot,  shorten: true 1`] = `"100-ft line"`;
+exports[`fmtDataUrl > Antipathy/Sympathy from PHB fmt matches snapshot 1`] = `"spell_PHB-Antipathy/Sympathy"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":5}} matches snapshot,  shorten: false 1`] = `"5 feet"`;
+exports[`fmtDataUrl > Arcane Eye from PHB fmt matches snapshot 1`] = `"spell_PHB-Arcane-Eye"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":5}} matches snapshot,  shorten: true 1`] = `"5 ft"`;
+exports[`fmtDataUrl > Arcane Lock from PHB fmt matches snapshot 1`] = `"spell_PHB-Arcane-Lock"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":10}} matches snapshot,  shorten: false 1`] = `"10 feet"`;
+exports[`fmtDataUrl > Astral Projection from PHB fmt matches snapshot 1`] = `"spell_PHB-Astral-Projection"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":10}} matches snapshot,  shorten: true 1`] = `"10 ft"`;
+exports[`fmtDataUrl > Augury from PHB fmt matches snapshot 1`] = `"spell_PHB-Augury"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":30}} matches snapshot,  shorten: false 1`] = `"30 feet"`;
+exports[`fmtDataUrl > Awaken from PHB fmt matches snapshot 1`] = `"spell_PHB-Awaken"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":30}} matches snapshot,  shorten: true 1`] = `"30 ft"`;
+exports[`fmtDataUrl > Bane from PHB fmt matches snapshot 1`] = `"spell_PHB-Bane"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":60}} matches snapshot,  shorten: false 1`] = `"60 feet"`;
+exports[`fmtDataUrl > Banishment from PHB fmt matches snapshot 1`] = `"spell_PHB-Banishment"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":60}} matches snapshot,  shorten: true 1`] = `"60 ft"`;
+exports[`fmtDataUrl > Barkskin from PHB fmt matches snapshot 1`] = `"spell_PHB-Barkskin"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":90}} matches snapshot,  shorten: false 1`] = `"90 feet"`;
+exports[`fmtDataUrl > Beacon of Hope from PHB fmt matches snapshot 1`] = `"spell_PHB-Beacon-of-Hope"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":90}} matches snapshot,  shorten: true 1`] = `"90 ft"`;
+exports[`fmtDataUrl > Bestow Curse from PHB fmt matches snapshot 1`] = `"spell_PHB-Bestow-Curse"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":100}} matches snapshot,  shorten: false 1`] = `"100 feet"`;
+exports[`fmtDataUrl > Blade Barrier from PHB fmt matches snapshot 1`] = `"spell_PHB-Blade-Barrier"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":100}} matches snapshot,  shorten: true 1`] = `"100 ft"`;
+exports[`fmtDataUrl > Bless from PHB fmt matches snapshot 1`] = `"spell_PHB-Bless"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":120}} matches snapshot,  shorten: false 1`] = `"120 feet"`;
+exports[`fmtDataUrl > Blight from PHB fmt matches snapshot 1`] = `"spell_PHB-Blight"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":120}} matches snapshot,  shorten: true 1`] = `"120 ft"`;
+exports[`fmtDataUrl > Blindness/Deafness from PHB fmt matches snapshot 1`] = `"spell_PHB-Blindness/Deafness"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":150}} matches snapshot,  shorten: false 1`] = `"150 feet"`;
+exports[`fmtDataUrl > Blink from PHB fmt matches snapshot 1`] = `"spell_PHB-Blink"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":150}} matches snapshot,  shorten: true 1`] = `"150 ft"`;
+exports[`fmtDataUrl > Blur from PHB fmt matches snapshot 1`] = `"spell_PHB-Blur"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":300}} matches snapshot,  shorten: false 1`] = `"300 feet"`;
+exports[`fmtDataUrl > Branding Smite from PHB fmt matches snapshot 1`] = `"spell_PHB-Branding-Smite"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":300}} matches snapshot,  shorten: true 1`] = `"300 ft"`;
+exports[`fmtDataUrl > Burning Hands from PHB fmt matches snapshot 1`] = `"spell_PHB-Burning-Hands"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":500}} matches snapshot,  shorten: false 1`] = `"500 feet"`;
+exports[`fmtDataUrl > Call Lightning from PHB fmt matches snapshot 1`] = `"spell_PHB-Call-Lightning"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":500}} matches snapshot,  shorten: true 1`] = `"500 ft"`;
+exports[`fmtDataUrl > Calm Emotions from PHB fmt matches snapshot 1`] = `"spell_PHB-Calm-Emotions"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":1}} matches snapshot,  shorten: false 1`] = `"1 mile"`;
+exports[`fmtDataUrl > Chain Lightning from PHB fmt matches snapshot 1`] = `"spell_PHB-Chain-Lightning"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":1}} matches snapshot,  shorten: true 1`] = `"1 mile"`;
+exports[`fmtDataUrl > Charm Person from PHB fmt matches snapshot 1`] = `"spell_PHB-Charm-Person"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":500}} matches snapshot,  shorten: false 1`] = `"500 miles"`;
+exports[`fmtDataUrl > Chill Touch from PHB fmt matches snapshot 1`] = `"spell_PHB-Chill-Touch"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":500}} matches snapshot,  shorten: true 1`] = `"500 mi"`;
+exports[`fmtDataUrl > Circle of Death from PHB fmt matches snapshot 1`] = `"spell_PHB-Circle-of-Death"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"self"}} matches snapshot,  shorten: false 1`] = `"Self"`;
+exports[`fmtDataUrl > Clairvoyance from PHB fmt matches snapshot 1`] = `"spell_PHB-Clairvoyance"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"self"}} matches snapshot,  shorten: true 1`] = `"Self"`;
+exports[`fmtDataUrl > Clone from PHB fmt matches snapshot 1`] = `"spell_PHB-Clone"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"sight"}} matches snapshot,  shorten: false 1`] = `"Sight"`;
+exports[`fmtDataUrl > Cloudkill from PHB fmt matches snapshot 1`] = `"spell_PHB-Cloudkill"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"sight"}} matches snapshot,  shorten: true 1`] = `"Sight"`;
+exports[`fmtDataUrl > Color Spray from PHB fmt matches snapshot 1`] = `"spell_PHB-Color-Spray"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"touch"}} matches snapshot,  shorten: false 1`] = `"Touch"`;
+exports[`fmtDataUrl > Command from PHB fmt matches snapshot 1`] = `"spell_PHB-Command"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"touch"}} matches snapshot,  shorten: true 1`] = `"Touch"`;
+exports[`fmtDataUrl > Commune from PHB fmt matches snapshot 1`] = `"spell_PHB-Commune"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"unlimited"}} matches snapshot,  shorten: false 1`] = `"Unlimited"`;
+exports[`fmtDataUrl > Commune with Nature from PHB fmt matches snapshot 1`] = `"spell_PHB-Commune-with-Nature"`;
 
-exports[`fmtRange > {"type":"point","distance":{"type":"unlimited"}} matches snapshot,  shorten: true 1`] = `"Unlimited"`;
+exports[`fmtDataUrl > Comprehend Languages from PHB fmt matches snapshot 1`] = `"spell_PHB-Comprehend-Languages"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot,  shorten: false 1`] = `"10-foot radius"`;
+exports[`fmtDataUrl > Compulsion from PHB fmt matches snapshot 1`] = `"spell_PHB-Compulsion"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot,  shorten: true 1`] = `"10-ft radi"`;
+exports[`fmtDataUrl > Cone of Cold from PHB fmt matches snapshot 1`] = `"spell_PHB-Cone-of-Cold"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot,  shorten: false 1`] = `"15-foot radius"`;
+exports[`fmtDataUrl > Confusion from PHB fmt matches snapshot 1`] = `"spell_PHB-Confusion"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot,  shorten: true 1`] = `"15-ft radi"`;
+exports[`fmtDataUrl > Conjure Animals from PHB fmt matches snapshot 1`] = `"spell_PHB-Conjure-Animals"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot,  shorten: false 1`] = `"30-foot radius"`;
+exports[`fmtDataUrl > Conjure Celestial from PHB fmt matches snapshot 1`] = `"spell_PHB-Conjure-Celestial"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot,  shorten: true 1`] = `"30-ft radi"`;
+exports[`fmtDataUrl > Conjure Elemental from PHB fmt matches snapshot 1`] = `"spell_PHB-Conjure-Elemental"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot,  shorten: false 1`] = `"5-mile radius"`;
+exports[`fmtDataUrl > Conjure Fey from PHB fmt matches snapshot 1`] = `"spell_PHB-Conjure-Fey"`;
 
-exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot,  shorten: true 1`] = `"5-mi radi"`;
+exports[`fmtDataUrl > Conjure Minor Elementals from PHB fmt matches snapshot 1`] = `"spell_PHB-Conjure-Minor-Elementals"`;
 
-exports[`fmtRange > {"type":"special"} matches snapshot,  shorten: false 1`] = `"Special"`;
+exports[`fmtDataUrl > Conjure Woodland Beings from PHB fmt matches snapshot 1`] = `"spell_PHB-Conjure-Woodland-Beings"`;
 
-exports[`fmtRange > {"type":"special"} matches snapshot,  shorten: true 1`] = `"Special"`;
+exports[`fmtDataUrl > Contact Other Plane from PHB fmt matches snapshot 1`] = `"spell_PHB-Contact-Other-Plane"`;
 
-exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot,  shorten: false 1`] = `"10-foot radi"`;
+exports[`fmtDataUrl > Contagion from PHB fmt matches snapshot 1`] = `"spell_PHB-Contagion"`;
 
-exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot,  shorten: true 1`] = `"10-ft radi"`;
+exports[`fmtDataUrl > Contingency from PHB fmt matches snapshot 1`] = `"spell_PHB-Contingency"`;
+
+exports[`fmtDataUrl > Continual Flame from PHB fmt matches snapshot 1`] = `"spell_PHB-Continual-Flame"`;
+
+exports[`fmtDataUrl > Control Water from PHB fmt matches snapshot 1`] = `"spell_PHB-Control-Water"`;
+
+exports[`fmtDataUrl > Control Weather from PHB fmt matches snapshot 1`] = `"spell_PHB-Control-Weather"`;
+
+exports[`fmtDataUrl > Counterspell from PHB fmt matches snapshot 1`] = `"spell_PHB-Counterspell"`;
+
+exports[`fmtDataUrl > Create Food and Water from PHB fmt matches snapshot 1`] = `"spell_PHB-Create-Food-and-Water"`;
+
+exports[`fmtDataUrl > Create Undead from PHB fmt matches snapshot 1`] = `"spell_PHB-Create-Undead"`;
+
+exports[`fmtDataUrl > Create or Destroy Water from PHB fmt matches snapshot 1`] = `"spell_PHB-Create-or-Destroy-Water"`;
+
+exports[`fmtDataUrl > Creation from PHB fmt matches snapshot 1`] = `"spell_PHB-Creation"`;
+
+exports[`fmtDataUrl > Cure Wounds from PHB fmt matches snapshot 1`] = `"spell_PHB-Cure-Wounds"`;
+
+exports[`fmtDataUrl > Dancing Lights from PHB fmt matches snapshot 1`] = `"spell_PHB-Dancing-Lights"`;
+
+exports[`fmtDataUrl > Darkness from PHB fmt matches snapshot 1`] = `"spell_PHB-Darkness"`;
+
+exports[`fmtDataUrl > Darkvision from PHB fmt matches snapshot 1`] = `"spell_PHB-Darkvision"`;
+
+exports[`fmtDataUrl > Daylight from PHB fmt matches snapshot 1`] = `"spell_PHB-Daylight"`;
+
+exports[`fmtDataUrl > Death Ward from PHB fmt matches snapshot 1`] = `"spell_PHB-Death-Ward"`;
+
+exports[`fmtDataUrl > Delayed Blast Fireball from PHB fmt matches snapshot 1`] = `"spell_PHB-Delayed-Blast-Fireball"`;
+
+exports[`fmtDataUrl > Demiplane from PHB fmt matches snapshot 1`] = `"spell_PHB-Demiplane"`;
+
+exports[`fmtDataUrl > Detect Evil and Good from PHB fmt matches snapshot 1`] = `"spell_PHB-Detect-Evil-and-Good"`;
+
+exports[`fmtDataUrl > Detect Magic from PHB fmt matches snapshot 1`] = `"spell_PHB-Detect-Magic"`;
+
+exports[`fmtDataUrl > Detect Poison and Disease from PHB fmt matches snapshot 1`] = `"spell_PHB-Detect-Poison-and-Disease"`;
+
+exports[`fmtDataUrl > Detect Thoughts from PHB fmt matches snapshot 1`] = `"spell_PHB-Detect-Thoughts"`;
+
+exports[`fmtDataUrl > Dimension Door from PHB fmt matches snapshot 1`] = `"spell_PHB-Dimension-Door"`;
+
+exports[`fmtDataUrl > Disguise Self from PHB fmt matches snapshot 1`] = `"spell_PHB-Disguise-Self"`;
+
+exports[`fmtDataUrl > Disintegrate from PHB fmt matches snapshot 1`] = `"spell_PHB-Disintegrate"`;
+
+exports[`fmtDataUrl > Dispel Evil and Good from PHB fmt matches snapshot 1`] = `"spell_PHB-Dispel-Evil-and-Good"`;
+
+exports[`fmtDataUrl > Dispel Magic from PHB fmt matches snapshot 1`] = `"spell_PHB-Dispel-Magic"`;
+
+exports[`fmtDataUrl > Divination from PHB fmt matches snapshot 1`] = `"spell_PHB-Divination"`;
+
+exports[`fmtDataUrl > Divine Favor from PHB fmt matches snapshot 1`] = `"spell_PHB-Divine-Favor"`;
+
+exports[`fmtDataUrl > Divine Word from PHB fmt matches snapshot 1`] = `"spell_PHB-Divine-Word"`;
+
+exports[`fmtDataUrl > Dominate Beast from PHB fmt matches snapshot 1`] = `"spell_PHB-Dominate-Beast"`;
+
+exports[`fmtDataUrl > Dominate Monster from PHB fmt matches snapshot 1`] = `"spell_PHB-Dominate-Monster"`;
+
+exports[`fmtDataUrl > Dominate Person from PHB fmt matches snapshot 1`] = `"spell_PHB-Dominate-Person"`;
+
+exports[`fmtDataUrl > Dream from PHB fmt matches snapshot 1`] = `"spell_PHB-Dream"`;
+
+exports[`fmtDataUrl > Druidcraft from PHB fmt matches snapshot 1`] = `"spell_PHB-Druidcraft"`;
+
+exports[`fmtDataUrl > Earthquake from PHB fmt matches snapshot 1`] = `"spell_PHB-Earthquake"`;
+
+exports[`fmtDataUrl > Eldritch Blast from PHB fmt matches snapshot 1`] = `"spell_PHB-Eldritch-Blast"`;
+
+exports[`fmtDataUrl > Enhance Ability from PHB fmt matches snapshot 1`] = `"spell_PHB-Enhance-Ability"`;
+
+exports[`fmtDataUrl > Enlarge/Reduce from PHB fmt matches snapshot 1`] = `"spell_PHB-Enlarge/Reduce"`;
+
+exports[`fmtDataUrl > Entangle from PHB fmt matches snapshot 1`] = `"spell_PHB-Entangle"`;
+
+exports[`fmtDataUrl > Enthrall from PHB fmt matches snapshot 1`] = `"spell_PHB-Enthrall"`;
+
+exports[`fmtDataUrl > Etherealness from PHB fmt matches snapshot 1`] = `"spell_PHB-Etherealness"`;
+
+exports[`fmtDataUrl > Expeditious Retreat from PHB fmt matches snapshot 1`] = `"spell_PHB-Expeditious-Retreat"`;
+
+exports[`fmtDataUrl > Eyebite from PHB fmt matches snapshot 1`] = `"spell_PHB-Eyebite"`;
+
+exports[`fmtDataUrl > Fabricate from PHB fmt matches snapshot 1`] = `"spell_PHB-Fabricate"`;
+
+exports[`fmtDataUrl > Faerie Fire from PHB fmt matches snapshot 1`] = `"spell_PHB-Faerie-Fire"`;
+
+exports[`fmtDataUrl > False Life from PHB fmt matches snapshot 1`] = `"spell_PHB-False-Life"`;
+
+exports[`fmtDataUrl > Fear from PHB fmt matches snapshot 1`] = `"spell_PHB-Fear"`;
+
+exports[`fmtDataUrl > Feather Fall from PHB fmt matches snapshot 1`] = `"spell_PHB-Feather-Fall"`;
+
+exports[`fmtDataUrl > Feeblemind from PHB fmt matches snapshot 1`] = `"spell_PHB-Feeblemind"`;
+
+exports[`fmtDataUrl > Find Familiar from PHB fmt matches snapshot 1`] = `"spell_PHB-Find-Familiar"`;
+
+exports[`fmtDataUrl > Find Steed from PHB fmt matches snapshot 1`] = `"spell_PHB-Find-Steed"`;
+
+exports[`fmtDataUrl > Find Traps from PHB fmt matches snapshot 1`] = `"spell_PHB-Find-Traps"`;
+
+exports[`fmtDataUrl > Find the Path from PHB fmt matches snapshot 1`] = `"spell_PHB-Find-the-Path"`;
+
+exports[`fmtDataUrl > Finger of Death from PHB fmt matches snapshot 1`] = `"spell_PHB-Finger-of-Death"`;
+
+exports[`fmtDataUrl > Fire Bolt from PHB fmt matches snapshot 1`] = `"spell_PHB-Fire-Bolt"`;
+
+exports[`fmtDataUrl > Fire Shield from PHB fmt matches snapshot 1`] = `"spell_PHB-Fire-Shield"`;
+
+exports[`fmtDataUrl > Fire Storm from PHB fmt matches snapshot 1`] = `"spell_PHB-Fire-Storm"`;
+
+exports[`fmtDataUrl > Fireball from PHB fmt matches snapshot 1`] = `"spell_PHB-Fireball"`;
+
+exports[`fmtDataUrl > Flame Blade from PHB fmt matches snapshot 1`] = `"spell_PHB-Flame-Blade"`;
+
+exports[`fmtDataUrl > Flame Strike from PHB fmt matches snapshot 1`] = `"spell_PHB-Flame-Strike"`;
+
+exports[`fmtDataUrl > Flaming Sphere from PHB fmt matches snapshot 1`] = `"spell_PHB-Flaming-Sphere"`;
+
+exports[`fmtDataUrl > Flesh to Stone from PHB fmt matches snapshot 1`] = `"spell_PHB-Flesh-to-Stone"`;
+
+exports[`fmtDataUrl > Fly from PHB fmt matches snapshot 1`] = `"spell_PHB-Fly"`;
+
+exports[`fmtDataUrl > Fog Cloud from PHB fmt matches snapshot 1`] = `"spell_PHB-Fog-Cloud"`;
+
+exports[`fmtDataUrl > Forbiddance from PHB fmt matches snapshot 1`] = `"spell_PHB-Forbiddance"`;
+
+exports[`fmtDataUrl > Forcecage from PHB fmt matches snapshot 1`] = `"spell_PHB-Forcecage"`;
+
+exports[`fmtDataUrl > Foresight from PHB fmt matches snapshot 1`] = `"spell_PHB-Foresight"`;
+
+exports[`fmtDataUrl > Freedom of Movement from PHB fmt matches snapshot 1`] = `"spell_PHB-Freedom-of-Movement"`;
+
+exports[`fmtDataUrl > Gaseous Form from PHB fmt matches snapshot 1`] = `"spell_PHB-Gaseous-Form"`;
+
+exports[`fmtDataUrl > Gate from PHB fmt matches snapshot 1`] = `"spell_PHB-Gate"`;
+
+exports[`fmtDataUrl > Geas from PHB fmt matches snapshot 1`] = `"spell_PHB-Geas"`;
+
+exports[`fmtDataUrl > Gentle Repose from PHB fmt matches snapshot 1`] = `"spell_PHB-Gentle-Repose"`;
+
+exports[`fmtDataUrl > Giant Insect from PHB fmt matches snapshot 1`] = `"spell_PHB-Giant-Insect"`;
+
+exports[`fmtDataUrl > Glibness from PHB fmt matches snapshot 1`] = `"spell_PHB-Glibness"`;
+
+exports[`fmtDataUrl > Globe of Invulnerability from PHB fmt matches snapshot 1`] = `"spell_PHB-Globe-of-Invulnerability"`;
+
+exports[`fmtDataUrl > Glyph of Warding from PHB fmt matches snapshot 1`] = `"spell_PHB-Glyph-of-Warding"`;
+
+exports[`fmtDataUrl > Goodberry from PHB fmt matches snapshot 1`] = `"spell_PHB-Goodberry"`;
+
+exports[`fmtDataUrl > Grease from PHB fmt matches snapshot 1`] = `"spell_PHB-Grease"`;
+
+exports[`fmtDataUrl > Greater Invisibility from PHB fmt matches snapshot 1`] = `"spell_PHB-Greater-Invisibility"`;
+
+exports[`fmtDataUrl > Greater Restoration from PHB fmt matches snapshot 1`] = `"spell_PHB-Greater-Restoration"`;
+
+exports[`fmtDataUrl > Guardian of Faith from PHB fmt matches snapshot 1`] = `"spell_PHB-Guardian-of-Faith"`;
+
+exports[`fmtDataUrl > Guards and Wards from PHB fmt matches snapshot 1`] = `"spell_PHB-Guards-and-Wards"`;
+
+exports[`fmtDataUrl > Guidance from PHB fmt matches snapshot 1`] = `"spell_PHB-Guidance"`;
+
+exports[`fmtDataUrl > Guiding Bolt from PHB fmt matches snapshot 1`] = `"spell_PHB-Guiding-Bolt"`;
+
+exports[`fmtDataUrl > Gust of Wind from PHB fmt matches snapshot 1`] = `"spell_PHB-Gust-of-Wind"`;
+
+exports[`fmtDataUrl > Hallow from PHB fmt matches snapshot 1`] = `"spell_PHB-Hallow"`;
+
+exports[`fmtDataUrl > Hallucinatory Terrain from PHB fmt matches snapshot 1`] = `"spell_PHB-Hallucinatory-Terrain"`;
+
+exports[`fmtDataUrl > Harm from PHB fmt matches snapshot 1`] = `"spell_PHB-Harm"`;
+
+exports[`fmtDataUrl > Haste from PHB fmt matches snapshot 1`] = `"spell_PHB-Haste"`;
+
+exports[`fmtDataUrl > Heal from PHB fmt matches snapshot 1`] = `"spell_PHB-Heal"`;
+
+exports[`fmtDataUrl > Healing Word from PHB fmt matches snapshot 1`] = `"spell_PHB-Healing-Word"`;
+
+exports[`fmtDataUrl > Heat Metal from PHB fmt matches snapshot 1`] = `"spell_PHB-Heat-Metal"`;
+
+exports[`fmtDataUrl > Hellish Rebuke from PHB fmt matches snapshot 1`] = `"spell_PHB-Hellish-Rebuke"`;
+
+exports[`fmtDataUrl > Heroes' Feast from PHB fmt matches snapshot 1`] = `"spell_PHB-Heroes'-Feast"`;
+
+exports[`fmtDataUrl > Heroism from PHB fmt matches snapshot 1`] = `"spell_PHB-Heroism"`;
+
+exports[`fmtDataUrl > Hold Monster from PHB fmt matches snapshot 1`] = `"spell_PHB-Hold-Monster"`;
+
+exports[`fmtDataUrl > Hold Person from PHB fmt matches snapshot 1`] = `"spell_PHB-Hold-Person"`;
+
+exports[`fmtDataUrl > Holy Aura from PHB fmt matches snapshot 1`] = `"spell_PHB-Holy-Aura"`;
+
+exports[`fmtDataUrl > Hunter's Mark from PHB fmt matches snapshot 1`] = `"spell_PHB-Hunter's-Mark"`;
+
+exports[`fmtDataUrl > Hypnotic Pattern from PHB fmt matches snapshot 1`] = `"spell_PHB-Hypnotic-Pattern"`;
+
+exports[`fmtDataUrl > Ice Storm from PHB fmt matches snapshot 1`] = `"spell_PHB-Ice-Storm"`;
+
+exports[`fmtDataUrl > Identify from PHB fmt matches snapshot 1`] = `"spell_PHB-Identify"`;
+
+exports[`fmtDataUrl > Illusory Script from PHB fmt matches snapshot 1`] = `"spell_PHB-Illusory-Script"`;
+
+exports[`fmtDataUrl > Imprisonment from PHB fmt matches snapshot 1`] = `"spell_PHB-Imprisonment"`;
+
+exports[`fmtDataUrl > Incendiary Cloud from PHB fmt matches snapshot 1`] = `"spell_PHB-Incendiary-Cloud"`;
+
+exports[`fmtDataUrl > Inflict Wounds from PHB fmt matches snapshot 1`] = `"spell_PHB-Inflict-Wounds"`;
+
+exports[`fmtDataUrl > Insect Plague from PHB fmt matches snapshot 1`] = `"spell_PHB-Insect-Plague"`;
+
+exports[`fmtDataUrl > Invisibility from PHB fmt matches snapshot 1`] = `"spell_PHB-Invisibility"`;
+
+exports[`fmtDataUrl > Jump from PHB fmt matches snapshot 1`] = `"spell_PHB-Jump"`;
+
+exports[`fmtDataUrl > Knock from PHB fmt matches snapshot 1`] = `"spell_PHB-Knock"`;
+
+exports[`fmtDataUrl > Legend Lore from PHB fmt matches snapshot 1`] = `"spell_PHB-Legend-Lore"`;
+
+exports[`fmtDataUrl > Lesser Restoration from PHB fmt matches snapshot 1`] = `"spell_PHB-Lesser-Restoration"`;
+
+exports[`fmtDataUrl > Levitate from PHB fmt matches snapshot 1`] = `"spell_PHB-Levitate"`;
+
+exports[`fmtDataUrl > Light from PHB fmt matches snapshot 1`] = `"spell_PHB-Light"`;
+
+exports[`fmtDataUrl > Lightning Bolt from PHB fmt matches snapshot 1`] = `"spell_PHB-Lightning-Bolt"`;
+
+exports[`fmtDataUrl > Locate Animals or Plants from PHB fmt matches snapshot 1`] = `"spell_PHB-Locate-Animals-or-Plants"`;
+
+exports[`fmtDataUrl > Locate Creature from PHB fmt matches snapshot 1`] = `"spell_PHB-Locate-Creature"`;
+
+exports[`fmtDataUrl > Locate Object from PHB fmt matches snapshot 1`] = `"spell_PHB-Locate-Object"`;
+
+exports[`fmtDataUrl > Longstrider from PHB fmt matches snapshot 1`] = `"spell_PHB-Longstrider"`;
+
+exports[`fmtDataUrl > Mage Armor from PHB fmt matches snapshot 1`] = `"spell_PHB-Mage-Armor"`;
+
+exports[`fmtDataUrl > Mage Hand from PHB fmt matches snapshot 1`] = `"spell_PHB-Mage-Hand"`;
+
+exports[`fmtDataUrl > Magic Circle from PHB fmt matches snapshot 1`] = `"spell_PHB-Magic-Circle"`;
+
+exports[`fmtDataUrl > Magic Jar from PHB fmt matches snapshot 1`] = `"spell_PHB-Magic-Jar"`;
+
+exports[`fmtDataUrl > Magic Missile from PHB fmt matches snapshot 1`] = `"spell_PHB-Magic-Missile"`;
+
+exports[`fmtDataUrl > Magic Mouth from PHB fmt matches snapshot 1`] = `"spell_PHB-Magic-Mouth"`;
+
+exports[`fmtDataUrl > Magic Weapon from PHB fmt matches snapshot 1`] = `"spell_PHB-Magic-Weapon"`;
+
+exports[`fmtDataUrl > Major Image from PHB fmt matches snapshot 1`] = `"spell_PHB-Major-Image"`;
+
+exports[`fmtDataUrl > Mass Cure Wounds from PHB fmt matches snapshot 1`] = `"spell_PHB-Mass-Cure-Wounds"`;
+
+exports[`fmtDataUrl > Mass Heal from PHB fmt matches snapshot 1`] = `"spell_PHB-Mass-Heal"`;
+
+exports[`fmtDataUrl > Mass Healing Word from PHB fmt matches snapshot 1`] = `"spell_PHB-Mass-Healing-Word"`;
+
+exports[`fmtDataUrl > Mass Suggestion from PHB fmt matches snapshot 1`] = `"spell_PHB-Mass-Suggestion"`;
+
+exports[`fmtDataUrl > Maze from PHB fmt matches snapshot 1`] = `"spell_PHB-Maze"`;
+
+exports[`fmtDataUrl > Meld into Stone from PHB fmt matches snapshot 1`] = `"spell_PHB-Meld-into-Stone"`;
+
+exports[`fmtDataUrl > Mending from PHB fmt matches snapshot 1`] = `"spell_PHB-Mending"`;
+
+exports[`fmtDataUrl > Message from PHB fmt matches snapshot 1`] = `"spell_PHB-Message"`;
+
+exports[`fmtDataUrl > Meteor Swarm from PHB fmt matches snapshot 1`] = `"spell_PHB-Meteor-Swarm"`;
+
+exports[`fmtDataUrl > Mind Blank from PHB fmt matches snapshot 1`] = `"spell_PHB-Mind-Blank"`;
+
+exports[`fmtDataUrl > Minor Illusion from PHB fmt matches snapshot 1`] = `"spell_PHB-Minor-Illusion"`;
+
+exports[`fmtDataUrl > Mirage Arcane from PHB fmt matches snapshot 1`] = `"spell_PHB-Mirage-Arcane"`;
+
+exports[`fmtDataUrl > Mirror Image from PHB fmt matches snapshot 1`] = `"spell_PHB-Mirror-Image"`;
+
+exports[`fmtDataUrl > Mislead from PHB fmt matches snapshot 1`] = `"spell_PHB-Mislead"`;
+
+exports[`fmtDataUrl > Misty Step from PHB fmt matches snapshot 1`] = `"spell_PHB-Misty-Step"`;
+
+exports[`fmtDataUrl > Modify Memory from PHB fmt matches snapshot 1`] = `"spell_PHB-Modify-Memory"`;
+
+exports[`fmtDataUrl > Moonbeam from PHB fmt matches snapshot 1`] = `"spell_PHB-Moonbeam"`;
+
+exports[`fmtDataUrl > Move Earth from PHB fmt matches snapshot 1`] = `"spell_PHB-Move-Earth"`;
+
+exports[`fmtDataUrl > Nondetection from PHB fmt matches snapshot 1`] = `"spell_PHB-Nondetection"`;
+
+exports[`fmtDataUrl > Pass without Trace from PHB fmt matches snapshot 1`] = `"spell_PHB-Pass-without-Trace"`;
+
+exports[`fmtDataUrl > Passwall from PHB fmt matches snapshot 1`] = `"spell_PHB-Passwall"`;
+
+exports[`fmtDataUrl > Phantasmal Killer from PHB fmt matches snapshot 1`] = `"spell_PHB-Phantasmal-Killer"`;
+
+exports[`fmtDataUrl > Phantom Steed from PHB fmt matches snapshot 1`] = `"spell_PHB-Phantom-Steed"`;
+
+exports[`fmtDataUrl > Planar Ally from PHB fmt matches snapshot 1`] = `"spell_PHB-Planar-Ally"`;
+
+exports[`fmtDataUrl > Planar Binding from PHB fmt matches snapshot 1`] = `"spell_PHB-Planar-Binding"`;
+
+exports[`fmtDataUrl > Plane Shift from PHB fmt matches snapshot 1`] = `"spell_PHB-Plane-Shift"`;
+
+exports[`fmtDataUrl > Plant Growth from PHB fmt matches snapshot 1`] = `"spell_PHB-Plant-Growth"`;
+
+exports[`fmtDataUrl > Poison Spray from PHB fmt matches snapshot 1`] = `"spell_PHB-Poison-Spray"`;
+
+exports[`fmtDataUrl > Polymorph from PHB fmt matches snapshot 1`] = `"spell_PHB-Polymorph"`;
+
+exports[`fmtDataUrl > Power Word Kill from PHB fmt matches snapshot 1`] = `"spell_PHB-Power-Word-Kill"`;
+
+exports[`fmtDataUrl > Power Word Stun from PHB fmt matches snapshot 1`] = `"spell_PHB-Power-Word-Stun"`;
+
+exports[`fmtDataUrl > Prayer of Healing from PHB fmt matches snapshot 1`] = `"spell_PHB-Prayer-of-Healing"`;
+
+exports[`fmtDataUrl > Prestidigitation from PHB fmt matches snapshot 1`] = `"spell_PHB-Prestidigitation"`;
+
+exports[`fmtDataUrl > Prismatic Spray from PHB fmt matches snapshot 1`] = `"spell_PHB-Prismatic-Spray"`;
+
+exports[`fmtDataUrl > Prismatic Wall from PHB fmt matches snapshot 1`] = `"spell_PHB-Prismatic-Wall"`;
+
+exports[`fmtDataUrl > Produce Flame from PHB fmt matches snapshot 1`] = `"spell_PHB-Produce-Flame"`;
+
+exports[`fmtDataUrl > Programmed Illusion from PHB fmt matches snapshot 1`] = `"spell_PHB-Programmed-Illusion"`;
+
+exports[`fmtDataUrl > Project Image from PHB fmt matches snapshot 1`] = `"spell_PHB-Project-Image"`;
+
+exports[`fmtDataUrl > Protection from Energy from PHB fmt matches snapshot 1`] = `"spell_PHB-Protection-from-Energy"`;
+
+exports[`fmtDataUrl > Protection from Evil and Good from PHB fmt matches snapshot 1`] = `"spell_PHB-Protection-from-Evil-and-Good"`;
+
+exports[`fmtDataUrl > Protection from Poison from PHB fmt matches snapshot 1`] = `"spell_PHB-Protection-from-Poison"`;
+
+exports[`fmtDataUrl > Purify Food and Drink from PHB fmt matches snapshot 1`] = `"spell_PHB-Purify-Food-and-Drink"`;
+
+exports[`fmtDataUrl > Raise Dead from PHB fmt matches snapshot 1`] = `"spell_PHB-Raise-Dead"`;
+
+exports[`fmtDataUrl > Ray of Enfeeblement from PHB fmt matches snapshot 1`] = `"spell_PHB-Ray-of-Enfeeblement"`;
+
+exports[`fmtDataUrl > Ray of Frost from PHB fmt matches snapshot 1`] = `"spell_PHB-Ray-of-Frost"`;
+
+exports[`fmtDataUrl > Regenerate from PHB fmt matches snapshot 1`] = `"spell_PHB-Regenerate"`;
+
+exports[`fmtDataUrl > Reincarnate from PHB fmt matches snapshot 1`] = `"spell_PHB-Reincarnate"`;
+
+exports[`fmtDataUrl > Remove Curse from PHB fmt matches snapshot 1`] = `"spell_PHB-Remove-Curse"`;
+
+exports[`fmtDataUrl > Resistance from PHB fmt matches snapshot 1`] = `"spell_PHB-Resistance"`;
+
+exports[`fmtDataUrl > Resurrection from PHB fmt matches snapshot 1`] = `"spell_PHB-Resurrection"`;
+
+exports[`fmtDataUrl > Reverse Gravity from PHB fmt matches snapshot 1`] = `"spell_PHB-Reverse-Gravity"`;
+
+exports[`fmtDataUrl > Revivify from PHB fmt matches snapshot 1`] = `"spell_PHB-Revivify"`;
+
+exports[`fmtDataUrl > Rope Trick from PHB fmt matches snapshot 1`] = `"spell_PHB-Rope-Trick"`;
+
+exports[`fmtDataUrl > Sacred Flame from PHB fmt matches snapshot 1`] = `"spell_PHB-Sacred-Flame"`;
+
+exports[`fmtDataUrl > Sanctuary from PHB fmt matches snapshot 1`] = `"spell_PHB-Sanctuary"`;
+
+exports[`fmtDataUrl > Scorching Ray from PHB fmt matches snapshot 1`] = `"spell_PHB-Scorching-Ray"`;
+
+exports[`fmtDataUrl > Scrying from PHB fmt matches snapshot 1`] = `"spell_PHB-Scrying"`;
+
+exports[`fmtDataUrl > See Invisibility from PHB fmt matches snapshot 1`] = `"spell_PHB-See-Invisibility"`;
+
+exports[`fmtDataUrl > Seeming from PHB fmt matches snapshot 1`] = `"spell_PHB-Seeming"`;
+
+exports[`fmtDataUrl > Sending from PHB fmt matches snapshot 1`] = `"spell_PHB-Sending"`;
+
+exports[`fmtDataUrl > Sequester from PHB fmt matches snapshot 1`] = `"spell_PHB-Sequester"`;
+
+exports[`fmtDataUrl > Shapechange from PHB fmt matches snapshot 1`] = `"spell_PHB-Shapechange"`;
+
+exports[`fmtDataUrl > Shatter from PHB fmt matches snapshot 1`] = `"spell_PHB-Shatter"`;
+
+exports[`fmtDataUrl > Shield from PHB fmt matches snapshot 1`] = `"spell_PHB-Shield"`;
+
+exports[`fmtDataUrl > Shield of Faith from PHB fmt matches snapshot 1`] = `"spell_PHB-Shield-of-Faith"`;
+
+exports[`fmtDataUrl > Shillelagh from PHB fmt matches snapshot 1`] = `"spell_PHB-Shillelagh"`;
+
+exports[`fmtDataUrl > Shocking Grasp from PHB fmt matches snapshot 1`] = `"spell_PHB-Shocking-Grasp"`;
+
+exports[`fmtDataUrl > Silence from PHB fmt matches snapshot 1`] = `"spell_PHB-Silence"`;
+
+exports[`fmtDataUrl > Silent Image from PHB fmt matches snapshot 1`] = `"spell_PHB-Silent-Image"`;
+
+exports[`fmtDataUrl > Simulacrum from PHB fmt matches snapshot 1`] = `"spell_PHB-Simulacrum"`;
+
+exports[`fmtDataUrl > Sleep from PHB fmt matches snapshot 1`] = `"spell_PHB-Sleep"`;
+
+exports[`fmtDataUrl > Sleet Storm from PHB fmt matches snapshot 1`] = `"spell_PHB-Sleet-Storm"`;
+
+exports[`fmtDataUrl > Slow from PHB fmt matches snapshot 1`] = `"spell_PHB-Slow"`;
+
+exports[`fmtDataUrl > Spare the Dying from PHB fmt matches snapshot 1`] = `"spell_PHB-Spare-the-Dying"`;
+
+exports[`fmtDataUrl > Speak with Animals from PHB fmt matches snapshot 1`] = `"spell_PHB-Speak-with-Animals"`;
+
+exports[`fmtDataUrl > Speak with Dead from PHB fmt matches snapshot 1`] = `"spell_PHB-Speak-with-Dead"`;
+
+exports[`fmtDataUrl > Speak with Plants from PHB fmt matches snapshot 1`] = `"spell_PHB-Speak-with-Plants"`;
+
+exports[`fmtDataUrl > Spider Climb from PHB fmt matches snapshot 1`] = `"spell_PHB-Spider-Climb"`;
+
+exports[`fmtDataUrl > Spike Growth from PHB fmt matches snapshot 1`] = `"spell_PHB-Spike-Growth"`;
+
+exports[`fmtDataUrl > Spirit Guardians from PHB fmt matches snapshot 1`] = `"spell_PHB-Spirit-Guardians"`;
+
+exports[`fmtDataUrl > Spiritual Weapon from PHB fmt matches snapshot 1`] = `"spell_PHB-Spiritual-Weapon"`;
+
+exports[`fmtDataUrl > Stinking Cloud from PHB fmt matches snapshot 1`] = `"spell_PHB-Stinking-Cloud"`;
+
+exports[`fmtDataUrl > Stone Shape from PHB fmt matches snapshot 1`] = `"spell_PHB-Stone-Shape"`;
+
+exports[`fmtDataUrl > Stoneskin from PHB fmt matches snapshot 1`] = `"spell_PHB-Stoneskin"`;
+
+exports[`fmtDataUrl > Storm of Vengeance from PHB fmt matches snapshot 1`] = `"spell_PHB-Storm-of-Vengeance"`;
+
+exports[`fmtDataUrl > Suggestion from PHB fmt matches snapshot 1`] = `"spell_PHB-Suggestion"`;
+
+exports[`fmtDataUrl > Sunbeam from PHB fmt matches snapshot 1`] = `"spell_PHB-Sunbeam"`;
+
+exports[`fmtDataUrl > Sunburst from PHB fmt matches snapshot 1`] = `"spell_PHB-Sunburst"`;
+
+exports[`fmtDataUrl > Symbol from PHB fmt matches snapshot 1`] = `"spell_PHB-Symbol"`;
+
+exports[`fmtDataUrl > Telekinesis from PHB fmt matches snapshot 1`] = `"spell_PHB-Telekinesis"`;
+
+exports[`fmtDataUrl > Teleport from PHB fmt matches snapshot 1`] = `"spell_PHB-Teleport"`;
+
+exports[`fmtDataUrl > Teleportation Circle from PHB fmt matches snapshot 1`] = `"spell_PHB-Teleportation-Circle"`;
+
+exports[`fmtDataUrl > Thaumaturgy from PHB fmt matches snapshot 1`] = `"spell_PHB-Thaumaturgy"`;
+
+exports[`fmtDataUrl > Thunderwave from PHB fmt matches snapshot 1`] = `"spell_PHB-Thunderwave"`;
+
+exports[`fmtDataUrl > Time Stop from PHB fmt matches snapshot 1`] = `"spell_PHB-Time-Stop"`;
+
+exports[`fmtDataUrl > Tongues from PHB fmt matches snapshot 1`] = `"spell_PHB-Tongues"`;
+
+exports[`fmtDataUrl > Transport via Plants from PHB fmt matches snapshot 1`] = `"spell_PHB-Transport-via-Plants"`;
+
+exports[`fmtDataUrl > Tree Stride from PHB fmt matches snapshot 1`] = `"spell_PHB-Tree-Stride"`;
+
+exports[`fmtDataUrl > True Polymorph from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Polymorph"`;
+
+exports[`fmtDataUrl > True Resurrection from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Resurrection"`;
+
+exports[`fmtDataUrl > True Seeing from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Seeing"`;
+
+exports[`fmtDataUrl > True Strike from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Strike"`;
+
+exports[`fmtDataUrl > Unseen Servant from PHB fmt matches snapshot 1`] = `"spell_PHB-Unseen-Servant"`;
+
+exports[`fmtDataUrl > Vampiric Touch from PHB fmt matches snapshot 1`] = `"spell_PHB-Vampiric-Touch"`;
+
+exports[`fmtDataUrl > Vicious Mockery from PHB fmt matches snapshot 1`] = `"spell_PHB-Vicious-Mockery"`;
+
+exports[`fmtDataUrl > Wall of Fire from PHB fmt matches snapshot 1`] = `"spell_PHB-Wall-of-Fire"`;
+
+exports[`fmtDataUrl > Wall of Force from PHB fmt matches snapshot 1`] = `"spell_PHB-Wall-of-Force"`;
+
+exports[`fmtDataUrl > Wall of Ice from PHB fmt matches snapshot 1`] = `"spell_PHB-Wall-of-Ice"`;
+
+exports[`fmtDataUrl > Wall of Stone from PHB fmt matches snapshot 1`] = `"spell_PHB-Wall-of-Stone"`;
+
+exports[`fmtDataUrl > Wall of Thorns from PHB fmt matches snapshot 1`] = `"spell_PHB-Wall-of-Thorns"`;
+
+exports[`fmtDataUrl > Warding Bond from PHB fmt matches snapshot 1`] = `"spell_PHB-Warding-Bond"`;
+
+exports[`fmtDataUrl > Water Breathing from PHB fmt matches snapshot 1`] = `"spell_PHB-Water-Breathing"`;
+
+exports[`fmtDataUrl > Water Walk from PHB fmt matches snapshot 1`] = `"spell_PHB-Water-Walk"`;
+
+exports[`fmtDataUrl > Web from PHB fmt matches snapshot 1`] = `"spell_PHB-Web"`;
+
+exports[`fmtDataUrl > Weird from PHB fmt matches snapshot 1`] = `"spell_PHB-Weird"`;
+
+exports[`fmtDataUrl > Wind Walk from PHB fmt matches snapshot 1`] = `"spell_PHB-Wind-Walk"`;
+
+exports[`fmtDataUrl > Wind Wall from PHB fmt matches snapshot 1`] = `"spell_PHB-Wind-Wall"`;
+
+exports[`fmtDataUrl > Wish from PHB fmt matches snapshot 1`] = `"spell_PHB-Wish"`;
+
+exports[`fmtDataUrl > Word of Recall from PHB fmt matches snapshot 1`] = `"spell_PHB-Word-of-Recall"`;
+
+exports[`fmtDataUrl > Zone of Truth from PHB fmt matches snapshot 1`] = `"spell_PHB-Zone-of-Truth"`;
+
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot, shorten: false 1`] = `"15-foot cone"`;
+
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot, shorten: true 1`] = `"15-ft cone"`;
+
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot, shorten: false 1`] = `"30-foot cone"`;
+
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":30}} matches snapshot, shorten: true 1`] = `"30-ft cone"`;
+
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot, shorten: false 1`] = `"60-foot cone"`;
+
+exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":60}} matches snapshot, shorten: true 1`] = `"60-ft cone"`;
+
+exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot, shorten: false 1`] = `"15-foot cube"`;
+
+exports[`fmtRange > {"type":"cube","distance":{"type":"feet","amount":15}} matches snapshot, shorten: true 1`] = `"15-ft cube"`;
+
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot, shorten: false 1`] = `"60-foot line"`;
+
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":60}} matches snapshot, shorten: true 1`] = `"60-ft line"`;
+
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot, shorten: false 1`] = `"100-foot line"`;
+
+exports[`fmtRange > {"type":"line","distance":{"type":"feet","amount":100}} matches snapshot, shorten: true 1`] = `"100-ft line"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":5}} matches snapshot, shorten: false 1`] = `"5 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":5}} matches snapshot, shorten: true 1`] = `"5 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":10}} matches snapshot, shorten: false 1`] = `"10 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":10}} matches snapshot, shorten: true 1`] = `"10 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":30}} matches snapshot, shorten: false 1`] = `"30 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":30}} matches snapshot, shorten: true 1`] = `"30 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":60}} matches snapshot, shorten: false 1`] = `"60 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":60}} matches snapshot, shorten: true 1`] = `"60 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":90}} matches snapshot, shorten: false 1`] = `"90 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":90}} matches snapshot, shorten: true 1`] = `"90 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":100}} matches snapshot, shorten: false 1`] = `"100 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":100}} matches snapshot, shorten: true 1`] = `"100 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":120}} matches snapshot, shorten: false 1`] = `"120 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":120}} matches snapshot, shorten: true 1`] = `"120 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":150}} matches snapshot, shorten: false 1`] = `"150 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":150}} matches snapshot, shorten: true 1`] = `"150 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":300}} matches snapshot, shorten: false 1`] = `"300 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":300}} matches snapshot, shorten: true 1`] = `"300 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":500}} matches snapshot, shorten: false 1`] = `"500 feet"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"feet","amount":500}} matches snapshot, shorten: true 1`] = `"500 ft"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":1}} matches snapshot, shorten: false 1`] = `"1 mile"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":1}} matches snapshot, shorten: true 1`] = `"1 mile"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":500}} matches snapshot, shorten: false 1`] = `"500 miles"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"miles","amount":500}} matches snapshot, shorten: true 1`] = `"500 mi"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"self"}} matches snapshot, shorten: false 1`] = `"Self"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"self"}} matches snapshot, shorten: true 1`] = `"Self"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"sight"}} matches snapshot, shorten: false 1`] = `"Sight"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"sight"}} matches snapshot, shorten: true 1`] = `"Sight"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"touch"}} matches snapshot, shorten: false 1`] = `"Touch"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"touch"}} matches snapshot, shorten: true 1`] = `"Touch"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"unlimited"}} matches snapshot, shorten: false 1`] = `"Unlimited"`;
+
+exports[`fmtRange > {"type":"point","distance":{"type":"unlimited"}} matches snapshot, shorten: true 1`] = `"Unlimited"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot, shorten: false 1`] = `"10-foot radius"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":10}} matches snapshot, shorten: true 1`] = `"10-ft radi"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot, shorten: false 1`] = `"15-foot radius"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":15}} matches snapshot, shorten: true 1`] = `"15-ft radi"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot, shorten: false 1`] = `"30-foot radius"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"feet","amount":30}} matches snapshot, shorten: true 1`] = `"30-ft radi"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot, shorten: false 1`] = `"5-mile radius"`;
+
+exports[`fmtRange > {"type":"radius","distance":{"type":"miles","amount":5}} matches snapshot, shorten: true 1`] = `"5-mi radi"`;
+
+exports[`fmtRange > {"type":"special"} matches snapshot, shorten: false 1`] = `"Special"`;
+
+exports[`fmtRange > {"type":"special"} matches snapshot, shorten: true 1`] = `"Special"`;
+
+exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot, shorten: false 1`] = `"10-foot radi"`;
+
+exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot, shorten: true 1`] = `"10-ft radi"`;
