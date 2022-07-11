@@ -1,6 +1,7 @@
 // Vitest Snapshot v1
 
 exports[`DataSpellElement displays text for levels > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   source: 'PHB',
   page: 100,
@@ -76,6 +77,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 `;
 
 exports[`DataSpellElement displays text for levels > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   source: 'PHB',
   page: 100,
@@ -151,6 +153,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 `;
 
 exports[`DataSpellElement displays text for levels > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   source: 'PHB',
   page: 100,
@@ -226,6 +229,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 `;
 
 exports[`DataSpellElement displays text for levels > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   source: 'PHB',
   page: 100,
@@ -302,6 +306,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 `;
 
 exports[`DataSpellElement displays text for levels > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   source: 'PHB',
   page: 100,
@@ -378,6 +383,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
 `;
 
 exports[`DataSpellElement exhibits general behavior > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   page: 219,
   level: 3,
@@ -456,6 +462,7 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
 `;
 
 exports[`DataSpellElement exhibits general behavior > matches snapshot for {
+  id: 'id',
   name: 'spell name',
   page: 219,
   level: 3,

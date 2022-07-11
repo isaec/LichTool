@@ -4,7 +4,11 @@ import data from "@data/data.json?raw";
 import filters from "@data/filters.json?raw";
 import { DataSpell } from "./components/Renderer/types";
 
-type DataUnion = DataSpell;
+type DataUnion =
+  | DataSpell
+  | {
+      id: string;
+    };
 
 /** the array of all spells - id is always undefined */
 export const dataArray = JSON.parse(data) as Array<DataUnion>;

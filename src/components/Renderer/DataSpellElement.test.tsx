@@ -8,6 +8,7 @@ describe.each([
   [
     "exhibits general behavior",
     generate<DataSpell>({
+      id: "id",
       name: "spell name",
       source: one(["PHB", "XGE"]),
       page: 219,
@@ -44,6 +45,7 @@ describe.each([
   [
     "displays text for levels",
     generate<DataSpell>({
+      id: "id",
       name: "spell name",
       source: "PHB",
       page: 100,
