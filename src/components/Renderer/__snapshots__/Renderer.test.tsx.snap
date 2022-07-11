@@ -711,35 +711,23 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <li>
             <p>
               Conditions: 
-              <span
-                class="error"
+              <a
+                href="/view/condition_PHB-Stunned"
               >
-                UNKNOWN tag="condition" ERROR: 
-                <code>
-                  {@condition stunned}
-                </code>
-                
-              </span>
+                stunned
+              </a>
                assumes PHB by default, 
-              <span
-                class="error"
+              <a
+                href="/view/condition_PHB-Stunned"
               >
-                UNKNOWN tag="condition" ERROR: 
-                <code>
-                  {@condition stunned|PHB}
-                </code>
-                
-              </span>
+                stunned
+              </a>
                can have sources added with a pipe (not that it's ever useful), 
-              <span
-                class="error"
+              <a
+                href="/view/condition_PHB-Stunned"
               >
-                UNKNOWN tag="condition" ERROR: 
-                <code>
-                  {@condition stunned|PHB|and optional link text added with another pipe}
-                </code>
-                
-              </span>
+                and optional link text added with another pipe
+              </a>
               .
             </p>
           </li>

@@ -31,6 +31,19 @@ const pipe =
     );
   };
 
+const refTag = (type: string, defaultSource: string) =>
+  pipe((props) => (
+    <Link
+      href={`/view/${fmtDataUrl(
+        type,
+        props.p0,
+        props.p1 === undefined || props.p1 === "" ? defaultSource : props.p1
+      )}`}
+    >
+      {props.p2 ?? props.p0}
+    </Link>
+  ));
+
 const tag =
   (
     tagString: keyof JSX.IntrinsicElements,
@@ -88,11 +101,8 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
       </a>
     )),
     // link tags
-    spell: pipe((props) => (
-      <Link href={`/view/${fmtDataUrl("spell", props.p0, props.p1 ?? "phb")}`}>
-        {props.p2 ?? props.p0}
-      </Link>
-    )),
+    spell: refTag("spell", "phb"),
+    condition: refTag("condition", "phb"),
     // bad / unsupported tags
     filter: pipe((props) => (
       <a title={props.p?.slice(1).join("|")} href="#">

@@ -18,7 +18,14 @@ vi.mock("solid-app-router", () => ({
 }));
 
 describe("tags", () => {
-  const needPipe = new Set(["color", "link", "filter", "scaledice", "spell"]);
+  const needPipe = new Set([
+    "color",
+    "link",
+    "filter",
+    "scaledice",
+    "spell",
+    "condition",
+  ]);
   it.each([
     ["color", "test|ffffff"],
     ["color", "test|f00"],
