@@ -22,6 +22,17 @@ describe("fmtDataUrl", () => {
       expect(fmtDataUrl("spell", name, source)).toMatchSnapshot();
     }
   );
+  it.each(spellArray.map((spell) => [spell.name, spell.source]))(
+    "%s from %s is parsed into url with same formatting as original",
+    (name, source) => {
+      const url = fmtDataUrl("spell", name, source);
+      const urlNameSegment = url.split("-").slice(1).join(" ");
+      expect(
+        urlNameSegment,
+        `${name}, which parsed to the url ${url} should have a name segment equal to the original name, not ${urlNameSegment}`
+      ).toBe(name);
+    }
+  );
 });
 
 describe("extractTypeFromUrl", () => {
