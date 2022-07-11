@@ -1,4 +1,4 @@
-import { dataArray } from "@src/dataLookup";
+import { dataArray, dataMap } from "@src/dataLookup";
 import { Accessor, Component, createMemo, For, JSX, Show } from "solid-js";
 import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
 import { DataSpell } from "@components/Renderer/types";
@@ -51,7 +51,7 @@ const TableRow: Component<{
 
 export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
-    spellMap.get(props.id)
+    dataMap.get(props.id)
   ) as Accessor<DataSpell>;
   return (
     <TableRow id={props.id}>

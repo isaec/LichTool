@@ -1,5 +1,5 @@
 import { SearchResult } from "minisearch";
-import { dataArray } from "@src/dataLookup";
+import { dataArray, dataMap } from "@src/dataLookup";
 import {
   batch,
   Component,
@@ -61,24 +61,22 @@ const Omnisearch: Component<{}> = () => {
   });
   const debouncedQuery = createDebouncedMemo(() => search.query, 50);
   const filterFn = (result: SearchResult) => {
-    const dataObj = spellMap.get(result.id)!;
+    const dataObj = dataMap.get(result.id)!;
     return !populatedFilters().some((filter) => !testFilter(dataObj, filter));
   };
   const results = createMemo((): SearchResult[] => {
     // show everything if there are no params
     if (debouncedQuery().length === 0 && populatedFilters().length === 0) {
-      return [...spellMap.values()] as unknown as SearchResult[];
+      return [...dataMap.values()] as unknown as SearchResult[];
     }
     if (debouncedQuery().length === 0) {
       // filter without any search
-      return [...spellMap.values()].filter((data) =>
+      return [...dataMap.values()].filter((data) =>
         // EVIL CODE EVIL CODE EVIL CODE EVIL CODE
         // this is a nasty hack to simulate a search without a search
         // if filterFn starts reading other keys this will break
         // if searchResult starts reading other keys this will break
         filterFn({
-          // id key is there but not in the types...
-          // @ts-expect-error
           id: data.id,
         } as SearchResult)
       ) as unknown as SearchResult[];
