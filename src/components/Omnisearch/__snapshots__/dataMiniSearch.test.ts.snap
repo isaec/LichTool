@@ -1,0 +1,1522 @@
+// Vitest Snapshot v1
+
+exports[`dataMiniSearch > matches snapshot for search results with query antipathy sympathy 1`] = `
+[
+  {
+    "id": "spell_PHB-Antipathy/Sympathy",
+    "match": {
+      "antipathy": [
+        "name",
+      ],
+      "sympathy": [
+        "name",
+      ],
+    },
+    "score": 45.067279574640395,
+    "terms": [
+      "antipathy",
+      "sympathy",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-the-Path",
+    "match": {
+      "path": [
+        "name",
+      ],
+    },
+    "score": 8.541426451107707,
+    "terms": [
+      "path",
+    ],
+  },
+  {
+    "id": "spell_PHB-Antimagic-Field",
+    "match": {
+      "antimagic": [
+        "name",
+      ],
+    },
+    "score": 3.516810833859222,
+    "terms": [
+      "antimagic",
+    ],
+  },
+  {
+    "id": "spell_PHB-Antilife-Shell",
+    "match": {
+      "antilife": [
+        "name",
+      ],
+    },
+    "score": 3.12605407454153,
+    "terms": [
+      "antilife",
+    ],
+  },
+  {
+    "id": "spell_PHB-Enhance-Ability",
+    "match": {
+      "ability": [
+        "name",
+      ],
+    },
+    "score": 2.9632387581591586,
+    "terms": [
+      "ability",
+    ],
+  },
+  {
+    "id": "spell_PHB-Animate-Dead",
+    "match": {
+      "animate": [
+        "name",
+      ],
+    },
+    "score": 2.921541969759381,
+    "terms": [
+      "animate",
+    ],
+  },
+  {
+    "id": "spell_PHB-Animate-Objects",
+    "match": {
+      "animate": [
+        "name",
+      ],
+    },
+    "score": 2.921541969759381,
+    "terms": [
+      "animate",
+    ],
+  },
+  {
+    "id": "spell_PHB-Conjure-Animals",
+    "match": {
+      "animals": [
+        "name",
+      ],
+    },
+    "score": 2.490250958234545,
+    "terms": [
+      "animals",
+    ],
+  },
+  {
+    "id": "spell_PHB-Animal-Friendship",
+    "match": {
+      "animal": [
+        "name",
+      ],
+    },
+    "score": 2.328546350556977,
+    "terms": [
+      "animal",
+    ],
+  },
+  {
+    "id": "spell_PHB-Animal-Messenger",
+    "match": {
+      "animal": [
+        "name",
+      ],
+    },
+    "score": 2.328546350556977,
+    "terms": [
+      "animal",
+    ],
+  },
+  {
+    "id": "spell_PHB-Animal-Shapes",
+    "match": {
+      "animal": [
+        "name",
+      ],
+    },
+    "score": 2.328546350556977,
+    "terms": [
+      "animal",
+    ],
+  },
+  {
+    "id": "spell_PHB-Speak-with-Animals",
+    "match": {
+      "animals": [
+        "name",
+      ],
+    },
+    "score": 2.2167527609378372,
+    "terms": [
+      "animals",
+    ],
+  },
+  {
+    "id": "spell_PHB-Locate-Animals-or-Plants",
+    "match": {
+      "animals": [
+        "name",
+      ],
+    },
+    "score": 2.0212528353946912,
+    "terms": [
+      "animals",
+    ],
+  },
+]
+`;
+
+exports[`dataMiniSearch > matches snapshot for search results with query find 1`] = `
+[
+  {
+    "id": "spell_PHB-Find-Familiar",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 6.197695365537282,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Steed",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 6.197695365537282,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Traps",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 6.197695365537282,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-the-Path",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 5.517017579122408,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Create-Food-and-Water",
+    "match": {
+      "and": [
+        "name",
+      ],
+      "food": [
+        "name",
+      ],
+    },
+    "score": 4.208050117365236,
+    "terms": [
+      "and",
+      "food",
+    ],
+  },
+  {
+    "id": "spell_PHB-Purify-Food-and-Drink",
+    "match": {
+      "and": [
+        "name",
+      ],
+      "food": [
+        "name",
+      ],
+    },
+    "score": 4.208050117365236,
+    "terms": [
+      "and",
+      "food",
+    ],
+  },
+  {
+    "id": "spell_PHB-Mind-Blank",
+    "match": {
+      "mind": [
+        "name",
+      ],
+    },
+    "score": 4.063870296903989,
+    "terms": [
+      "mind",
+    ],
+  },
+  {
+    "id": "spell_PHB-Antimagic-Field",
+    "match": {
+      "field": [
+        "name",
+      ],
+    },
+    "score": 3.628455622235705,
+    "terms": [
+      "field",
+    ],
+  },
+  {
+    "id": "spell_PHB-Aid",
+    "match": {
+      "aid": [
+        "name",
+      ],
+    },
+    "score": 3.5494790483567633,
+    "terms": [
+      "aid",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wind-Walk",
+    "match": {
+      "wind": [
+        "name",
+      ],
+    },
+    "score": 3.415201314150233,
+    "terms": [
+      "wind",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wind-Wall",
+    "match": {
+      "wind": [
+        "name",
+      ],
+    },
+    "score": 3.415201314150233,
+    "terms": [
+      "wind",
+    ],
+  },
+  {
+    "id": "spell_PHB-Warding-Bond",
+    "match": {
+      "bond": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "bond",
+    ],
+  },
+  {
+    "id": "spell_PHB-Mage-Hand",
+    "match": {
+      "hand": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "hand",
+    ],
+  },
+  {
+    "id": "spell_PHB-Gust-of-Wind",
+    "match": {
+      "wind": [
+        "name",
+      ],
+    },
+    "score": 3.0401180721433194,
+    "terms": [
+      "wind",
+    ],
+  },
+  {
+    "id": "spell_PHB-Faerie-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Bolt",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Shield",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Storm",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.2767446173990367,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Guards-and-Wards",
+    "match": {
+      "and": [
+        "name",
+      ],
+    },
+    "score": 1.8905439320209625,
+    "terms": [
+      "and",
+    ],
+  },
+  {
+    "id": "spell_PHB-Detect-Evil-and-Good",
+    "match": {
+      "and": [
+        "name",
+      ],
+    },
+    "score": 1.7238130252373944,
+    "terms": [
+      "and",
+    ],
+  },
+  {
+    "id": "spell_PHB-Detect-Poison-and-Disease",
+    "match": {
+      "and": [
+        "name",
+      ],
+    },
+    "score": 1.7238130252373944,
+    "terms": [
+      "and",
+    ],
+  },
+  {
+    "id": "spell_PHB-Dispel-Evil-and-Good",
+    "match": {
+      "and": [
+        "name",
+      ],
+    },
+    "score": 1.7238130252373944,
+    "terms": [
+      "and",
+    ],
+  },
+  {
+    "id": "spell_PHB-Protection-from-Evil-and-Good",
+    "match": {
+      "and": [
+        "name",
+      ],
+    },
+    "score": 1.59869758584024,
+    "terms": [
+      "and",
+    ],
+  },
+]
+`;
+
+exports[`dataMiniSearch > matches snapshot for search results with query fire blt 1`] = `
+[
+  {
+    "id": "spell_PHB-Fire-Bolt",
+    "match": {
+      "bolt": [
+        "name",
+      ],
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 18.634915618320587,
+    "terms": [
+      "fire",
+      "bolt",
+    ],
+  },
+  {
+    "id": "spell_PHB-Delayed-Blast-Fireball",
+    "match": {
+      "blast": [
+        "name",
+      ],
+      "fireball": [
+        "name",
+      ],
+    },
+    "score": 16.772772345408953,
+    "terms": [
+      "fireball",
+      "blast",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fireball",
+    "match": {
+      "fireball": [
+        "name",
+      ],
+    },
+    "score": 7.152520197593664,
+    "terms": [
+      "fireball",
+    ],
+  },
+  {
+    "id": "spell_PHB-Faerie-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 5.90225649501006,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Shield",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 5.90225649501006,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Storm",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 5.90225649501006,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 5.254026040151623,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Blur",
+    "match": {
+      "blur": [
+        "name",
+      ],
+    },
+    "score": 3.9438656092852926,
+    "terms": [
+      "blur",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fly",
+    "match": {
+      "fly": [
+        "name",
+      ],
+    },
+    "score": 3.5494790483567633,
+    "terms": [
+      "fly",
+    ],
+  },
+  {
+    "id": "spell_PHB-Guiding-Bolt",
+    "match": {
+      "bolt": [
+        "name",
+      ],
+    },
+    "score": 3.415201314150233,
+    "terms": [
+      "bolt",
+    ],
+  },
+  {
+    "id": "spell_PHB-Lightning-Bolt",
+    "match": {
+      "bolt": [
+        "name",
+      ],
+    },
+    "score": 3.415201314150233,
+    "terms": [
+      "bolt",
+    ],
+  },
+  {
+    "id": "spell_PHB-Gaseous-Form",
+    "match": {
+      "form": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "form",
+    ],
+  },
+  {
+    "id": "spell_PHB-False-Life",
+    "match": {
+      "life": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "life",
+    ],
+  },
+  {
+    "id": "spell_PHB-Legend-Lore",
+    "match": {
+      "lore": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "lore",
+    ],
+  },
+  {
+    "id": "spell_PHB-Time-Stop",
+    "match": {
+      "time": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "time",
+    ],
+  },
+  {
+    "id": "spell_PHB-Eldritch-Blast",
+    "match": {
+      "blast": [
+        "name",
+      ],
+    },
+    "score": 3.2792818027911426,
+    "terms": [
+      "blast",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Force",
+    "match": {
+      "force": [
+        "name",
+      ],
+    },
+    "score": 3.229951178990309,
+    "terms": [
+      "force",
+    ],
+  },
+  {
+    "id": "spell_PHB-Cure-Wounds",
+    "match": {
+      "cure": [
+        "name",
+      ],
+    },
+    "score": 3.0606630159383994,
+    "terms": [
+      "cure",
+    ],
+  },
+  {
+    "id": "spell_PHB-Ice-Storm",
+    "match": {
+      "ice": [
+        "name",
+      ],
+    },
+    "score": 2.7545967143445598,
+    "terms": [
+      "ice",
+    ],
+  },
+  {
+    "id": "spell_PHB-Mass-Cure-Wounds",
+    "match": {
+      "cure": [
+        "name",
+      ],
+    },
+    "score": 2.724517851683425,
+    "terms": [
+      "cure",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Familiar",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.685667991732822,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Steed",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.685667991732822,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Traps",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.685667991732822,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Ice",
+    "match": {
+      "ice": [
+        "name",
+      ],
+    },
+    "score": 2.4520660665150826,
+    "terms": [
+      "ice",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-the-Path",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.39070761761971,
+    "terms": [
+      "find",
+    ],
+  },
+]
+`;
+
+exports[`dataMiniSearch > matches snapshot for search results with query fireball 1`] = `
+[
+  {
+    "id": "spell_PHB-Fireball",
+    "match": {
+      "fireball": [
+        "name",
+      ],
+    },
+    "score": 8.225398227232713,
+    "terms": [
+      "fireball",
+    ],
+  },
+  {
+    "id": "spell_PHB-Delayed-Blast-Fireball",
+    "match": {
+      "fireball": [
+        "name",
+      ],
+    },
+    "score": 6.287348888500212,
+    "terms": [
+      "fireball",
+    ],
+  },
+  {
+    "id": "spell_PHB-Word-of-Recall",
+    "match": {
+      "recall": [
+        "name",
+      ],
+    },
+    "score": 3.014621100390955,
+    "terms": [
+      "recall",
+    ],
+  },
+  {
+    "id": "spell_PHB-Antimagic-Field",
+    "match": {
+      "field": [
+        "name",
+      ],
+    },
+    "score": 2.82213215062777,
+    "terms": [
+      "field",
+    ],
+  },
+  {
+    "id": "spell_PHB-Feather-Fall",
+    "match": {
+      "fall": [
+        "name",
+      ],
+    },
+    "score": 2.539918935564993,
+    "terms": [
+      "fall",
+    ],
+  },
+  {
+    "id": "spell_PHB-Faerie-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 1.9182333608782696,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Bolt",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 1.9182333608782696,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Shield",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 1.9182333608782696,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Storm",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 1.9182333608782696,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 1.7075584630492775,
+    "terms": [
+      "fire",
+    ],
+  },
+]
+`;
+
+exports[`dataMiniSearch > matches snapshot for search results with query mine black 1`] = `
+[
+  {
+    "id": "spell_PHB-Mind-Blank",
+    "match": {
+      "blank": [
+        "name",
+      ],
+      "mind": [
+        "name",
+      ],
+    },
+    "score": 16.59413704569129,
+    "terms": [
+      "mind",
+      "blank",
+    ],
+  },
+  {
+    "id": "spell_PHB-Bane",
+    "match": {
+      "bane": [
+        "name",
+      ],
+    },
+    "score": 14.648643691631086,
+    "terms": [
+      "bane",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wind-Walk",
+    "match": {
+      "walk": [
+        "name",
+      ],
+      "wind": [
+        "name",
+      ],
+    },
+    "score": 10.938853074716217,
+    "terms": [
+      "wind",
+      "walk",
+    ],
+  },
+  {
+    "id": "spell_PHB-Flame-Blade",
+    "match": {
+      "blade": [
+        "name",
+      ],
+      "flame": [
+        "name",
+      ],
+    },
+    "score": 5.6770735038889795,
+    "terms": [
+      "flame",
+      "blade",
+    ],
+  },
+  {
+    "id": "spell_PHB-Blink",
+    "match": {
+      "blink": [
+        "name",
+      ],
+    },
+    "score": 4.225570295662814,
+    "terms": [
+      "blink",
+    ],
+  },
+  {
+    "id": "spell_PHB-Maze",
+    "match": {
+      "maze": [
+        "name",
+      ],
+    },
+    "score": 3.9438656092852926,
+    "terms": [
+      "maze",
+    ],
+  },
+  {
+    "id": "spell_PHB-Alarm",
+    "match": {
+      "alarm": [
+        "name",
+      ],
+    },
+    "score": 3.6973740087049616,
+    "terms": [
+      "alarm",
+    ],
+  },
+  {
+    "id": "spell_PHB-Bless",
+    "match": {
+      "bless": [
+        "name",
+      ],
+    },
+    "score": 3.6973740087049616,
+    "terms": [
+      "bless",
+    ],
+  },
+  {
+    "id": "spell_PHB-Knock",
+    "match": {
+      "knock": [
+        "name",
+      ],
+    },
+    "score": 3.6973740087049616,
+    "terms": [
+      "knock",
+    ],
+  },
+  {
+    "id": "spell_PHB-Branding-Smite",
+    "match": {
+      "smite": [
+        "name",
+      ],
+    },
+    "score": 3.628455622235705,
+    "terms": [
+      "smite",
+    ],
+  },
+  {
+    "id": "spell_PHB-False-Life",
+    "match": {
+      "life": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "life",
+    ],
+  },
+  {
+    "id": "spell_PHB-Move-Earth",
+    "match": {
+      "move": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "move",
+    ],
+  },
+  {
+    "id": "spell_PHB-Time-Stop",
+    "match": {
+      "time": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "time",
+    ],
+  },
+  {
+    "id": "spell_PHB-Arcane-Lock",
+    "match": {
+      "lock": [
+        "name",
+      ],
+    },
+    "score": 3.3865585807533245,
+    "terms": [
+      "lock",
+    ],
+  },
+  {
+    "id": "spell_PHB-Blur",
+    "match": {
+      "blur": [
+        "name",
+      ],
+    },
+    "score": 3.3804562365302506,
+    "terms": [
+      "blur",
+    ],
+  },
+  {
+    "id": "spell_PHB-Minor-Illusion",
+    "match": {
+      "minor": [
+        "name",
+      ],
+    },
+    "score": 3.2792818027911426,
+    "terms": [
+      "minor",
+    ],
+  },
+  {
+    "id": "spell_PHB-Blade-Barrier",
+    "match": {
+      "blade": [
+        "name",
+      ],
+    },
+    "score": 3.2792818027911426,
+    "terms": [
+      "blade",
+    ],
+  },
+  {
+    "id": "spell_PHB-Eldritch-Blast",
+    "match": {
+      "blast": [
+        "name",
+      ],
+    },
+    "score": 3.2792818027911426,
+    "terms": [
+      "blast",
+    ],
+  },
+  {
+    "id": "spell_PHB-Dominate-Beast",
+    "match": {
+      "beast": [
+        "name",
+      ],
+    },
+    "score": 3.1748986694562418,
+    "terms": [
+      "beast",
+    ],
+  },
+  {
+    "id": "spell_PHB-Plant-Growth",
+    "match": {
+      "plant": [
+        "name",
+      ],
+    },
+    "score": 3.1748986694562418,
+    "terms": [
+      "plant",
+    ],
+  },
+  {
+    "id": "spell_PHB-Rope-Trick",
+    "match": {
+      "trick": [
+        "name",
+      ],
+    },
+    "score": 3.1748986694562418,
+    "terms": [
+      "trick",
+    ],
+  },
+  {
+    "id": "spell_PHB-Mage-Armor",
+    "match": {
+      "mage": [
+        "name",
+      ],
+    },
+    "score": 3.0606630159383994,
+    "terms": [
+      "mage",
+    ],
+  },
+  {
+    "id": "spell_PHB-Mage-Hand",
+    "match": {
+      "mage": [
+        "name",
+      ],
+    },
+    "score": 3.0606630159383994,
+    "terms": [
+      "mage",
+    ],
+  },
+  {
+    "id": "spell_PHB-Cone-of-Cold",
+    "match": {
+      "cone": [
+        "name",
+      ],
+    },
+    "score": 3.014621100390955,
+    "terms": [
+      "cone",
+    ],
+  },
+  {
+    "id": "spell_PHB-Zone-of-Truth",
+    "match": {
+      "zone": [
+        "name",
+      ],
+    },
+    "score": 3.014621100390955,
+    "terms": [
+      "zone",
+    ],
+  },
+  {
+    "id": "spell_PHB-Beacon-of-Hope",
+    "match": {
+      "beacon": [
+        "name",
+      ],
+    },
+    "score": 3.014621100390955,
+    "terms": [
+      "beacon",
+    ],
+  },
+  {
+    "id": "spell_PHB-Conjure-Minor-Elementals",
+    "match": {
+      "minor": [
+        "name",
+      ],
+    },
+    "score": 2.9191262696608127,
+    "terms": [
+      "minor",
+    ],
+  },
+  {
+    "id": "spell_PHB-Delayed-Blast-Fireball",
+    "match": {
+      "blast": [
+        "name",
+      ],
+    },
+    "score": 2.9191262696608127,
+    "terms": [
+      "blast",
+    ],
+  },
+  {
+    "id": "spell_PHB-Plane-Shift",
+    "match": {
+      "plane": [
+        "name",
+      ],
+    },
+    "score": 2.8693715774422497,
+    "terms": [
+      "plane",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wind-Wall",
+    "match": {
+      "wind": [
+        "name",
+      ],
+    },
+    "score": 2.846001095125194,
+    "terms": [
+      "wind",
+    ],
+  },
+  {
+    "id": "spell_PHB-Pass-without-Trace",
+    "match": {
+      "trace": [
+        "name",
+      ],
+    },
+    "score": 2.8262072816165205,
+    "terms": [
+      "trace",
+    ],
+  },
+  {
+    "id": "spell_PHB-Ice-Storm",
+    "match": {
+      "ice": [
+        "name",
+      ],
+    },
+    "score": 2.7545967143445598,
+    "terms": [
+      "ice",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Familiar",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.685667991732822,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Steed",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.685667991732822,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-Traps",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.685667991732822,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Water-Walk",
+    "match": {
+      "walk": [
+        "name",
+      ],
+    },
+    "score": 2.623425442232914,
+    "terms": [
+      "walk",
+    ],
+  },
+  {
+    "id": "spell_PHB-Hunter's-Mark",
+    "match": {
+      "mark": [
+        "name",
+      ],
+    },
+    "score": 2.5839609431922472,
+    "terms": [
+      "mark",
+    ],
+  },
+  {
+    "id": "spell_PHB-Faerie-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Bolt",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Shield",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Fire-Storm",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.557644481171026,
+    "terms": [
+      "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Contact-Other-Plane",
+    "match": {
+      "plane": [
+        "name",
+      ],
+    },
+    "score": 2.5542354859532113,
+    "terms": [
+      "plane",
+    ],
+  },
+  {
+    "id": "spell_PHB-Gust-of-Wind",
+    "match": {
+      "wind": [
+        "name",
+      ],
+    },
+    "score": 2.5334317267860995,
+    "terms": [
+      "wind",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Ice",
+    "match": {
+      "ice": [
+        "name",
+      ],
+    },
+    "score": 2.4520660665150826,
+    "terms": [
+      "ice",
+    ],
+  },
+  {
+    "id": "spell_PHB-Continual-Flame",
+    "match": {
+      "flame": [
+        "name",
+      ],
+    },
+    "score": 2.397791701097837,
+    "terms": [
+      "flame",
+    ],
+  },
+  {
+    "id": "spell_PHB-Flame-Strike",
+    "match": {
+      "flame": [
+        "name",
+      ],
+    },
+    "score": 2.397791701097837,
+    "terms": [
+      "flame",
+    ],
+  },
+  {
+    "id": "spell_PHB-Produce-Flame",
+    "match": {
+      "flame": [
+        "name",
+      ],
+    },
+    "score": 2.397791701097837,
+    "terms": [
+      "flame",
+    ],
+  },
+  {
+    "id": "spell_PHB-Sacred-Flame",
+    "match": {
+      "flame": [
+        "name",
+      ],
+    },
+    "score": 2.397791701097837,
+    "terms": [
+      "flame",
+    ],
+  },
+  {
+    "id": "spell_PHB-Find-the-Path",
+    "match": {
+      "find": [
+        "name",
+      ],
+    },
+    "score": 2.39070761761971,
+    "terms": [
+      "find",
+    ],
+  },
+  {
+    "id": "spell_PHB-Wall-of-Fire",
+    "match": {
+      "fire": [
+        "name",
+      ],
+    },
+    "score": 2.2767446173990367,
+    "terms": [
+      "fire",
+    ],
+  },
+]
+`;
