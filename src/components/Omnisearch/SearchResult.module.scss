@@ -29,6 +29,7 @@ thead.Head {
     width: min-content;
     &:first-of-type {
       text-align: left;
+      min-width: unquote("0vw");
       width: clamp(8em, 30vw, 22em);
     }
     font-weight: normal;
