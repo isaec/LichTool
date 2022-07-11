@@ -44,12 +44,13 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
       Object.entries(dataTypeDataRecord).forEach(([type, fileData]) => {
         fileData.forEach((data: DataBaseShape) => {
           if (data.srd === true) {
-            processedData.push({
+            const newData = {
               ...data,
               id: fmtDataUrl(type, data.name, data.source),
-            });
+            };
+            processedData.push(newData);
             // build up the filters
-            Object.entries(data).forEach(([key, value]) => {
+            Object.entries(newData).forEach(([key, value]) => {
               if (typeof value === "object") return;
               if (!filters.has(key)) filters.set(key, new Set());
               filters.get(key)!.add(value);

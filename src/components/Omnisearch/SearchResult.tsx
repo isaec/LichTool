@@ -1,4 +1,4 @@
-import { dataArray, dataMap } from "@src/dataLookup";
+import { dataArray, dataMap, isDataSpell } from "@src/dataLookup";
 import { Accessor, Component, createMemo, For, JSX, Show } from "solid-js";
 import { Levels, schoolAbbreviationMap } from "@components/generalTypes";
 import { DataSpell } from "@src/dataLookup";
@@ -53,6 +53,13 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   const dataObj = createMemo(() =>
     dataMap.get(props.id)
   ) as Accessor<DataSpell>;
+  if (!isDataSpell(dataObj())) {
+    return (
+      <TableRow id={props.id}>
+        <Key>{dataObj().name}</Key>
+      </TableRow>
+    );
+  }
   return (
     <TableRow id={props.id}>
       <Key>{dataObj().name}</Key>
