@@ -46,7 +46,10 @@ const parseFilter = (
       filterParseMap.set(filter, null);
       // this removes the invalid regex from the cache
       setTimeout(() => filterParseMap.delete(filter), 1000);
-      toast.error((e as Error).message);
+      // show that error once we finish rendering
+      setTimeout(() => {
+        toast.error((e as Error).message);
+      }, 0);
       return null;
     }
   }
