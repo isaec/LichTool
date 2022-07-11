@@ -7,22 +7,33 @@
 table.results {
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 
 tr.TableRow {
-  & > td.Data {
-    padding: $size-4 0;
+  &:first-of-type > th.Key {
+    width: clamp(8em, 30%, 22em);
+  }
+  & > th.Key {
+    font-weight: normal;
+    text-align: left;
+  }
+
+  & > td.Data,
+  & > th.Key {
     color: $color-grey-200;
-    &:not(:first-of-type) {
-      text-align: center;
-    }
+    word-wrap: break-word;
+    padding: $size-4 $size-2;
+  }
+
+  & > td.Data {
+    text-align: center;
     &.nowrap {
       white-space: nowrap;
+      max-width: min-content;
     }
     &:not(.nowrap) {
-      white-space: normal;
-      word-break: break-all;
-      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
     &.mono {
       font-family: $font-mono;

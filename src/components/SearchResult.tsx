@@ -25,6 +25,12 @@ const Data: Component<{
   </td>
 );
 
+const Key: Component<{ children: string }> = (props) => (
+  <th class={styles.Key} scope="row">
+    {props.children}
+  </th>
+);
+
 const TableRow: Component<{
   id: string;
   children: JSX.Element;
@@ -49,7 +55,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   ) as Accessor<DataSpell>;
   return (
     <TableRow id={props.id}>
-      <Data>{dataObj().name}</Data>
+      <Key>{dataObj().name}</Key>
       <Data mono nowrap>
         {dataObj().level}
       </Data>
@@ -71,6 +77,7 @@ export const SearchResult: Component<{ id: string }> = (props) => {
 export const Results: Component<{ results: { id: string }[] }> = (props) => (
   <div class={styles.resultsWrapper}>
     <table class={styles.results}>
+      <thead></thead>
       <For each={props.results}>
         {(result) => <SearchResult id={result.id} />}
       </For>
