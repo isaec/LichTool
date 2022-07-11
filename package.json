@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
+    "typecheck": "tsc --noEmit",
     "test:update-snapshot": "vitest -u --run",
     "process": "ts-node --esm ./process_data.ts"
   },
