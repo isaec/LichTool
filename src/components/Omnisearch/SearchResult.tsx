@@ -63,7 +63,7 @@ const Head: Component<{ children: JSX.Element }> = (props) => (
 );
 
 const Col: Component<{
-  children: string;
+  children: JSX.Element;
   optional?: boolean;
 }> = (props) => (
   <th
@@ -80,7 +80,7 @@ const Col: Component<{
 
 const SpellHeader: Component = () => (
   <Head>
-    <Col>name</Col>
+    <Col>spell name</Col>
     <Col>level</Col>
     <Col>school</Col>
     <Col>range</Col>
@@ -115,9 +115,9 @@ const SpellSearchResult: Component<{ id: string }> = (props) => {
   );
 };
 
-const GenericHeader: Component = () => (
+const GenericHeader: Component<{ type: string }> = (props) => (
   <Head>
-    <Col>name</Col>
+    <Col>{props.type} name</Col>
     <Col>page</Col>
     <Col>source</Col>
   </Head>
@@ -152,7 +152,10 @@ export const Results: Component<{ results: ResultsGroup[] }> = (props) => (
     <For each={props.results}>
       {(resultGroup) => (
         <table class={styles.results}>
-          <Dynamic component={headMap.get(resultGroup.type) ?? GenericHeader} />
+          <Dynamic
+            component={headMap.get(resultGroup.type) ?? GenericHeader}
+            type={resultGroup.type}
+          />
           <For each={resultGroup.results}>
             {(result) => <SearchResult id={result.id} />}
           </For>
