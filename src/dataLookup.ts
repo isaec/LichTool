@@ -12,16 +12,24 @@ import {
   TimeUnits,
 } from "@components/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
+import { extractTypeFromUrl } from "./formatter";
+
+const isType =
+  <T extends IdData>(type: string) =>
+  (dataObj: DataUnion): dataObj is T =>
+    extractTypeFromUrl(dataObj.id) === type;
 
 export type IdData = {
   id: string;
+  name: string;
+  source: Sources;
 };
 
 export type RawData<T> = Omit<T, "id">;
 
 export type RawDataSpell = RawData<DataSpell>;
+export const isDataSpell = isType<DataSpell>("spell");
 export type DataSpell = IdData & {
-  idType: "spell";
   name: string;
   level: Levels;
   school: SchoolAbbreviations;
@@ -49,11 +57,10 @@ export type DataSpell = IdData & {
   };
 };
 
-type DataUnion =
-  | DataSpell
-  | {
-      id: string;
-    };
+// IdData is temporary to find bad typings
+type DataUnion = DataSpell | IdData;
+
+// data object collections
 
 /** the array of all spells - id is always undefined */
 export const dataArray = JSON.parse(data) as Array<DataUnion>;

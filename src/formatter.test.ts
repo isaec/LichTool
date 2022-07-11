@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { dataArray } from "./dataLookup";
+import { dataArray, isDataSpell } from "./dataLookup";
 import { extractTypeFromUrl, fmtDataUrl, fmtRange } from "./formatter";
 
 describe("fmtRange", () => {
@@ -7,7 +7,7 @@ describe("fmtRange", () => {
     [
       ...new Set(
         dataArray
-          .filter((data) => extractTypeFromUrl(data.id) === "spell")
+          .filter(isDataSpell)
           .map((spell) => JSON.stringify(spell.range))
       ),
     ].flatMap((range) => [
