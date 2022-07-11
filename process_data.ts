@@ -31,30 +31,37 @@ type DataBaseShape = {
 
 const filters = new Map<string, Set<string | number | boolean>>();
 
-// copy spells over
-const spells = await dataGlob("spells/spells-*.json");
-const processedSpells: {}[] = [];
-await Promise.all(
-  spells.map(async (spellPath) => {
-    const spellFileData = JSON.parse(
-      await fs.readFile(spellPath, "utf8")
-    ).spell;
-    spellFileData.forEach((spell: DataBaseShape) => {
-      if (spell.srd === true) {
-        processedSpells.push({
-          ...spell,
-          id: fmtDataUrl("spell", spell.name, spell.source),
+const processedData: {}[] = [];
+
+const processJson = async (paths: string | string[], checkSrd = true) => {
+  const iterPaths = Array.isArray(paths) ? paths : [paths];
+
+  await Promise.all(
+    iterPaths.map(async (pathOfJson) => {
+      const dataTypeDataRecord: Record<string, DataBaseShape[]> = JSON.parse(
+        await fs.readFile(pathOfJson, "utf8")
+      );
+      Object.entries(dataTypeDataRecord).forEach(([type, fileData]) => {
+        fileData.forEach((data: DataBaseShape) => {
+          if (data.srd === true) {
+            processedData.push({
+              ...data,
+              id: fmtDataUrl(type, data.name, data.source),
+            });
+            // build up the filters
+            Object.entries(data).forEach(([key, value]) => {
+              if (typeof value === "object") return;
+              if (!filters.has(key)) filters.set(key, new Set());
+              filters.get(key)!.add(value);
+            });
+          }
         });
-        // build up the filters
-        Object.entries(spell).forEach(([key, value]) => {
-          if (typeof value === "object") return;
-          if (!filters.has(key)) filters.set(key, new Set());
-          filters.get(key)!.add(value);
-        });
-      }
-    });
-  })
-);
+      });
+    })
+  );
+};
+
+await processJson(await dataGlob("spells/spells-*.json"));
 
 // create map of sets json for filters
 await fs.writeFile(
@@ -67,10 +74,7 @@ await fs.writeFile(
   )
 );
 
-await fs.writeFile(
-  "processed_data/spells.json",
-  JSON.stringify({ spell: processedSpells })
-);
+await fs.writeFile("processed_data/data.json", JSON.stringify(processedData));
 
 // copy renderdemo over
 await copyJsonMinify("data/renderdemo.json", "processed_data/renderdemo.json");
