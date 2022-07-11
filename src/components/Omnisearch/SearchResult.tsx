@@ -15,6 +15,7 @@ import { extractTypeFromUrl, fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";
 import { Navigate, useNavigate } from "solid-app-router";
+import { ResultsGroup } from "./groupResults";
 
 const Data: Component<{
   children: JSX.Element;
@@ -105,13 +106,17 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   );
 };
 
-export const Results: Component<{ results: { id: string }[] }> = (props) => (
+export const Results: Component<{ results: ResultsGroup[] }> = (props) => (
   <div class={styles.resultsWrapper}>
-    <table class={styles.results}>
-      <thead></thead>
-      <For each={props.results}>
-        {(result) => <SearchResult id={result.id} />}
-      </For>
-    </table>
+    <For each={props.results}>
+      {(resultGroup) => (
+        <table class={styles.results}>
+          <thead>{resultGroup.type}</thead>
+          <For each={resultGroup.results}>
+            {(result) => <SearchResult id={result.id} />}
+          </For>
+        </table>
+      )}
+    </For>
   </div>
 );

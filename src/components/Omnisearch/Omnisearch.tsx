@@ -23,6 +23,7 @@ import {
   testFilter,
   executeFilters,
 } from "./filterEngine";
+import { groupResults } from "./groupResults";
 
 const Omnisearch: Component<{}> = () => {
   let ref: HTMLInputElement | undefined;
@@ -67,20 +68,22 @@ const Omnisearch: Component<{}> = () => {
   });
   const debouncedQuery = createDebouncedMemo(() => search.query, 50);
 
-  const results = createMemo((): SearchResult[] => {
+  const results = createMemo(() => {
     // show everything if there are no params
     if (debouncedQuery().length === 0 && populatedFilters().length === 0) {
-      return [...dataMap.values()] as unknown as SearchResult[];
+      return groupResults([...dataMap.values()]);
     }
     if (debouncedQuery().length === 0) {
       // filter without any search
-      return [...dataMap.values()].filter(
-        executeFilters(populatedFilters())!
-      ) as unknown as SearchResult[];
+      return groupResults(
+        [...dataMap.values()].filter(executeFilters(populatedFilters())!)
+      );
     }
-    return searchEngine.search(debouncedQuery(), {
-      filter: executeFilters(populatedFilters()),
-    });
+    return groupResults(
+      searchEngine.search(debouncedQuery(), {
+        filter: executeFilters(populatedFilters()),
+      })
+    );
   });
   return (
     <>
