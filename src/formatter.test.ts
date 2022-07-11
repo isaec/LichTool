@@ -4,12 +4,16 @@ import { extractTypeFromUrl, fmtDataUrl, fmtRange } from "./formatter";
 
 describe("fmtRange", () => {
   it.each(
-    [...new Set(dataArray.map((spell) => JSON.stringify(spell.range)))].flatMap(
-      (range) => [
-        [range, false, JSON.parse(range)],
-        [range, true, JSON.parse(range)],
-      ]
-    )
+    [
+      ...new Set(
+        dataArray
+          .filter((data) => extractTypeFromUrl(data.id) === "spell")
+          .map((spell) => JSON.stringify(spell.range))
+      ),
+    ].flatMap((range) => [
+      [range, false, JSON.parse(range)],
+      [range, true, JSON.parse(range)],
+    ])
   )("%s matches snapshot, shorten: %s", (_display, shorten, range) => {
     expect(fmtRange(range, shorten)).toMatchSnapshot();
   });
