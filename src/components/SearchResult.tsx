@@ -11,15 +11,17 @@ const Data: Component<{
   children: JSX.Element;
   nowrap?: boolean;
   mono?: boolean;
+  optional?: boolean;
 }> = (props) => (
   <td
     classList={{
       [styles.Data]: true,
       [styles.nowrap]: props.nowrap,
       [styles.mono]: props.mono,
+      [styles.optional]: props.optional,
     }}
   >
-    {props.children}
+    {props.children === true ? "x" : props.children}
   </td>
 );
 
@@ -48,13 +50,18 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   return (
     <TableRow id={props.id}>
       <Data>{dataObj().name}</Data>
-      <Data nowrap>{dataObj().level}</Data>
+      <Data mono nowrap>
+        {dataObj().level}
+      </Data>
       <Data mono nowrap>
         {schoolAbbreviationMap.get(dataObj().school)!.slice(0, 5)}
       </Data>
       <Data>{fmtRange(dataObj().range, true)}</Data>
-      <Data nowrap>
-        {dataObj().duration[0].concentration !== undefined ? "x" : ""}
+      <Data nowrap optional>
+        {dataObj().duration[0].concentration}
+      </Data>
+      <Data nowrap optional>
+        {dataObj().meta?.ritual}
       </Data>
       <Data nowrap>{dataObj().source}</Data>
     </TableRow>

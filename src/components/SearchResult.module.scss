@@ -27,6 +27,14 @@ tr.TableRow {
     &.mono {
       font-family: $font-mono;
     }
+    &.optional {
+      display: none;
+    }
+    @media (min-width: 34em) {
+      &.optional {
+        display: table-cell;
+      }
+    }
   }
   &:nth-child(odd) {
     background-color: mix($color-grey-900, $color-blue-700, 95%);
