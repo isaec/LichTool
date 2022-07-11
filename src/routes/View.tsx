@@ -1,13 +1,28 @@
 import DataSpellElement from "@components/Renderer/DataSpellElement";
-import { dataArray, dataMap, DataUnion } from "@src/dataLookup";
+import {
+  dataArray,
+  dataMap,
+  DataSpell,
+  DataUnion,
+  isDataSpell,
+} from "@src/dataLookup";
 import { useParams } from "solid-app-router";
+import { createMemo, Match, Switch } from "solid-js";
 
 const firstData: DataUnion = dataArray[0];
 
 const View = () => {
   const params = useParams();
 
-  return <DataSpellElement data={dataMap.get(params.id) ?? firstData} />;
+  const data = createMemo(() => dataMap.get(params.id) ?? firstData);
+
+  return (
+    <Switch fallback={<p>{JSON.stringify(data())}</p>}>
+      <Match when={isDataSpell(data())}>
+        <DataSpellElement data={data() as DataSpell} />
+      </Match>
+    </Switch>
+  );
 };
 
 export default View;

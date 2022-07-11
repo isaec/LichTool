@@ -15,7 +15,7 @@ import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "./formatter";
 
 const isType =
-  <T extends IdData>(type: string) =>
+  <T extends DataUnion>(type: string) =>
   (dataObj: DataUnion): dataObj is T =>
     extractTypeFromUrl(dataObj.id) === type;
 
@@ -89,7 +89,6 @@ export type DataStatus = IdData & {
   basicRules?: boolean;
 };
 
-// IdData is temporary to find bad typings
 export type DataUnion = DataSpell | DataCondition | DataDisease | DataStatus;
 
 // data object collections
