@@ -1,4 +1,4 @@
-import glob from "glob-promise";
+import glob, { promise } from "glob-promise";
 import path from "path";
 import { PathLike, promises as fs } from "fs";
 import { fmtDataUrl } from "./src/formatter.js";
@@ -61,7 +61,10 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
   );
 };
 
-await processJson(await dataGlob("spells/spells-*.json"));
+await Promise.all([
+  processJson(await dataGlob("spells/spells-*.json")),
+  processJson("data/conditionsdiseases.json"),
+]);
 
 // create map of sets json for filters
 await fs.writeFile(
