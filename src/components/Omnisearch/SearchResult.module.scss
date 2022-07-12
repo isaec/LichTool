@@ -32,6 +32,7 @@ thead.Head {
       min-width: unquote("0vw");
       width: clamp(8em, 30vw, 22em);
     }
+    width: auto;
     font-weight: normal;
     @include optionalCell;
     padding: 0 $size-2;
