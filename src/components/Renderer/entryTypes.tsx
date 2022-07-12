@@ -28,7 +28,7 @@ import {
 } from "./types";
 
 import styles from "./Renderer.module.scss";
-import DataSpellElement from "./DataSpellElement";
+import { DataSpellElement } from "./DataElements";
 import RenderError from "./RenderError";
 import { Dynamic } from "solid-js/web";
 

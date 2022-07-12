@@ -1,5 +1,4 @@
-import DataSpellElement from "@components/Renderer/DataSpellElement";
-import DataGenericElement from "@components/Renderer/DataGenericElement";
+import { DataSpellElement, DataGenericElement } from "@components/Renderer";
 import {
   dataArray,
   dataMap,

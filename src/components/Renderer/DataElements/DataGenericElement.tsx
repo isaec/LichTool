@@ -1,6 +1,6 @@
 import { DataUnion, RawData } from "@src/dataLookup";
 import { Component } from "solid-js";
-import { DataGroupRenderer, RendererStyles } from "./Renderer";
+import { DataGroupRenderer, RendererStyles } from "../Renderer";
 
 import styles from "./DataElement.module.scss";
 
