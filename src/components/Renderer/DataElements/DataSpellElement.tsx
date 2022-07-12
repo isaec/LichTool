@@ -4,13 +4,8 @@ import { schoolAbbreviationMap } from "@components/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
 import { fmtRange } from "@src/formatter";
 import { RawDataSpell } from "@src/dataLookup";
-
-const KeyValue: Component<{ key: string; children: JSX.Element }> = (props) => (
-  <p>
-    <b>{`${props.key}: `}</b>
-    {props.children}
-  </p>
-);
+import KeyValue from "./KeyValue";
+import DataFooter from "./DataFooter";
 
 const plural = (num: number, str: string) =>
   `${num} ${str}${num > 1 ? "s" : ""}`;
@@ -76,6 +71,7 @@ const DataSpellElement: Component<{
           />
         </Show>
       </RendererStyles>
+      <DataFooter data={props.data} />
     </div>
   );
 };

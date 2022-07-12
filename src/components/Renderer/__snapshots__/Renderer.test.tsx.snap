@@ -2441,6 +2441,18 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             </div>
           </p>
         </p>
+        <p>
+          <b>
+            Source: 
+          </b>
+          <i>
+            PHB
+            ,
+          </i>
+           page 
+          241
+          .
+        </p>
       </div>
     </p>
   </p>

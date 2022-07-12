@@ -3,6 +3,7 @@ import { Component } from "solid-js";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
 
 import styles from "./DataElement.module.scss";
+import DataFooter from "./DataFooter";
 
 const DataGenericElement: Component<{
   data: RawData<DataUnion>;
@@ -17,6 +18,7 @@ const DataGenericElement: Component<{
     <RendererStyles>
       <DataGroupRenderer group={props.data.entries} entryLevel={2} />
     </RendererStyles>
+    <DataFooter data={props.data} />
   </div>
 );
 

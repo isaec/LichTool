@@ -72,6 +72,18 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         </p>
       </p>
     </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      100
+      .
+    </p>
   </div>
 </div>
 `;
@@ -148,6 +160,18 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         </p>
       </p>
     </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      100
+      .
+    </p>
   </div>
 </div>
 `;
@@ -223,6 +247,18 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
           lol
         </p>
       </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      100
+      .
     </p>
   </div>
 </div>
@@ -301,6 +337,18 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
         </p>
       </p>
     </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      100
+      .
+    </p>
   </div>
 </div>
 `;
@@ -377,6 +425,18 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
           lol
         </p>
       </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      100
+      .
     </p>
   </div>
 </div>
@@ -459,6 +519,18 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
         </p>
       </p>
     </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      219
+      .
+    </p>
   </div>
 </div>
 `;
@@ -539,6 +611,18 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
           </b>
         </p>
       </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        XGE
+        ,
+      </i>
+       page 
+      219
+      .
     </p>
   </div>
 </div>
