@@ -29,7 +29,7 @@ describe("fmtDataUrl", () => {
   )("%s from %s fmt matches snapshot", (name, source, type) => {
     expect(fmtDataUrl(type, name, source)).toMatchSnapshot();
   });
-  it.each(dataArray.map((spell) => [spell.name, spell.source]))(
+  it.each(dataArray.map((data) => [data.name, data.source]))(
     "%s from %s is parsed into url with same formatting as original",
     (name, source) => {
       const url = fmtDataUrl("type", name, source);
