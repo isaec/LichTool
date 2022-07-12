@@ -3,7 +3,7 @@
 .DataElement {
   display: flex;
   flex-direction: column;
-  & .head {
+  & .DataHeader {
     display: flex;
     justify-content: space-between;
     & > h2 > small {

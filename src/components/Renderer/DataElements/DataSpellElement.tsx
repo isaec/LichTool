@@ -6,6 +6,7 @@ import { fmtRange } from "@src/formatter";
 import { RawDataSpell } from "@src/dataLookup";
 import KeyValue from "./KeyValue";
 import DataFooter from "./DataFooter";
+import DataHeader from "./DataHeader";
 
 const plural = (num: number, str: string) =>
   `${num} ${str}${num > 1 ? "s" : ""}`;
@@ -24,12 +25,7 @@ const DataSpellElement: Component<{
   );
   return (
     <div class={styles.DataElement}>
-      <div class={styles.head}>
-        <h2>{props.data.name}</h2>
-        <h2>
-          {props.data.source} <small>p{props.data.page}</small>
-        </h2>
-      </div>
+      <DataHeader data={props.data} />
       <i>
         <Switch>
           <Match when={props.data.level === 0}>Cantrip</Match>

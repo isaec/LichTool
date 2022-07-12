@@ -17,7 +17,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
@@ -105,7 +105,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
@@ -193,7 +193,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
@@ -281,7 +281,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
@@ -370,7 +370,7 @@ exports[`DataSpellElement displays text for levels > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
@@ -459,7 +459,7 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
@@ -552,7 +552,7 @@ exports[`DataSpellElement exhibits general behavior > matches snapshot for {
     class="DataElement"
   >
     <div
-      class="head"
+      class="DataHeader"
     >
       <h2>
         spell name
