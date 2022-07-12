@@ -100,16 +100,12 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
         {props.p0}
       </a>
     )),
+    // not supported so just show the text
+    filter: pipe((props) => props.p0),
     // link tags
     spell: refTag("spell", "phb"),
     condition: refTag("condition", "phb"),
     // bad / unsupported tags
-    filter: pipe((props) => (
-      <a title={props.p?.slice(1).join("|")} href="#">
-        {"UNSUPPORTED "}
-        {props.p0}
-      </a>
-    )),
     dice: tag("code"),
     hit: templateTag("code", (c) => <>d20{c}</>),
     damage: tag("code"),

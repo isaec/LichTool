@@ -1412,103 +1412,43 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="races|Ability Bonus (Including Subrace)=Intelligence +any"
-                >
-                  UNSUPPORTED 
-                  Races that have a bonus to Intelligence
-                </a>
+                Races that have a bonus to Intelligence
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="spells|level=0;1|class=bard"
-                >
-                  UNSUPPORTED 
-                  Bard cantrips and first-level spells
-                </a>
+                Bard cantrips and first-level spells
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="bestiary|challenge rating=[&0;&1]|type=beast"
-                >
-                  UNSUPPORTED 
-                  Beast with challenge rating 1 or lower
-                </a>
+                Beast with challenge rating 1 or lower
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="bestiary|strength=[18;]"
-                >
-                  UNSUPPORTED 
-                  Creatures with a Strength score of 18 or more
-                </a>
+                Creatures with a Strength score of 18 or more
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="spells|school=D;V"
-                >
-                  UNSUPPORTED 
-                  Divination and Evocation spells
-                </a>
+                Divination and Evocation spells
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="items|source=|type=|rarity=uncommon|miscellaneous=Magic"
-                >
-                  UNSUPPORTED 
-                  All uncommon magic items
-                </a>
+                All uncommon magic items
               </p>
               <p>
                 
-                <a
-                  href="#"
-                  title="items|source=phb|category=basic|type=simple weapon;melee weapon=sand"
-                >
-                  UNSUPPORTED 
-                  Simple melee weapons
-                </a>
+                Simple melee weapons
               </p>
               <p>
                 Meta-options can be set; inline for individual filters, and using 'fbmt' for filtering meta-options 
-                <a
-                  href="#"
-                  title="spells|level=1;2=sor~sand~b1|fbmt=sor|fbmh=source"
-                >
-                  UNSUPPORTED 
-                  filter meta example
-                </a>
+                filter meta example
               </p>
               <p>
                 Search can be set; 
-                <a
-                  href="#"
-                  title="bestiary|search=dinosaur"
-                >
-                  UNSUPPORTED 
-                  view dinosaurs
-                </a>
+                view dinosaurs
               </p>
               <p>
                 An exact starting entity; 
-                <a
-                  href="#"
-                  title="bestiary|type=beast|hash=cat_mm"
-                >
-                  UNSUPPORTED 
-                  filter for beasts and show cat
-                </a>
+                filter for beasts and show cat
                  where 'hash' is the part after a '#' and before any commas which appears in the URL bar when viewing the entity.
               </p>
               <div>

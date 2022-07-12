@@ -83,25 +83,13 @@ exports[`tags > {@dice dice string!} matches snapshot 1`] = `
 
 exports[`tags > {@filter Bard cantrips and first-level spells|spells|level=0;1|class=bard} matches snapshot 1`] = `
 <div>
-  <a
-    href="#"
-    title="spells|level=0;1|class=bard"
-  >
-    UNSUPPORTED 
-    Bard cantrips and first-level spells
-  </a>
+  Bard cantrips and first-level spells
 </div>
 `;
 
 exports[`tags > {@filter Races that have a bonus to Intelligence|races|Ability Bonus (Including Subrace)=Intelligence +any} matches snapshot 1`] = `
 <div>
-  <a
-    href="#"
-    title="races|Ability Bonus (Including Subrace)=Intelligence +any"
-  >
-    UNSUPPORTED 
-    Races that have a bonus to Intelligence
-  </a>
+  Races that have a bonus to Intelligence
 </div>
 `;
 
