@@ -44,6 +44,7 @@ const DataSpellElement: Component<{
           <Match when={props.data.level >= 4}>{props.data.level}th-level</Match>
         </Switch>{" "}
         {schoolAbbreviationMap.get(props.data.school)}
+        <Show when={props.data.meta?.ritual === true}> (ritual)</Show>
       </i>
       <KeyValue key={"Casting time"}>
         {props.data.time[0].number} {props.data.time[0].unit}
@@ -53,6 +54,9 @@ const DataSpellElement: Component<{
       <KeyValue key={"Duration"}>
         <Switch fallback={props.data.duration[0].type}>
           <Match when={props.data.duration[0].type === "timed"}>
+            <Show when={props.data.duration[0].concentration === true}>
+              Concentration, up to{" "}
+            </Show>
             {plural(
               props.data.duration[0].duration!.amount,
               props.data.duration[0].duration!.type
