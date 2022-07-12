@@ -1,3 +1,4 @@
+import { fail } from "assert";
 import { Dynamic } from "solid-js/web";
 import { render } from "solid-testing-library";
 import { vi, expect, describe, it, test } from "vitest";
@@ -23,10 +24,11 @@ describe("tags", () => {
     "link",
     "filter",
     "scaledice",
+    "scaledamage",
     "spell",
     "condition",
   ]);
-  it.each([
+  const pipeTests = [
     ["color", "test|ffffff"],
     ["color", "test|f00"],
     ["color", "test|illegal-color"],
@@ -46,6 +48,11 @@ describe("tags", () => {
     ["spell", "name of spell"],
     ["spell", "name of spell|XGE"],
     ["spell", "name of spell|XGE|displayed text"],
+    ["condition", "name of condition"],
+    ["scaledamage", "8d8|4-9|1d8"],
+  ];
+  it.each([
+    ...pipeTests,
     ...[...tagMap.keys()]
       .filter((tag) => !needPipe.has(tag))
       .map((key) => [key, `${key} string!`]),
@@ -56,5 +63,12 @@ describe("tags", () => {
 
     expect(container).toMatchSnapshot();
     unmount();
+  });
+
+  // find missing explicit tests
+  [...needPipe.entries()].forEach(([pipeName]) => {
+    if (!pipeTests.some(([tag]) => tag === pipeName)) {
+      fail(`write explicit test for ${pipeName}`);
+    }
   });
 });

@@ -56,6 +56,16 @@ exports[`tags > {@color test|illegal-color} matches snapshot 1`] = `
 </div>
 `;
 
+exports[`tags > {@condition name of condition} matches snapshot 1`] = `
+<div>
+  <a
+    href="/view/condition_PHB-Name-of-Condition"
+  >
+    name of condition
+  </a>
+</div>
+`;
+
 exports[`tags > {@d20 d20 string!} matches snapshot 1`] = `
 <div>
   <code>
@@ -153,6 +163,14 @@ exports[`tags > {@note note string!} matches snapshot 1`] = `
   >
     note string!
   </i>
+</div>
+`;
+
+exports[`tags > {@scaledamage 8d8|4-9|1d8} matches snapshot 1`] = `
+<div>
+  <code>
+    1d8
+  </code>
 </div>
 `;
 
