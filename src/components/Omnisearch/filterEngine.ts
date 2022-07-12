@@ -103,7 +103,6 @@ export const isParamFilter = /^f_/;
  */
 export const executeFilters = (filters: PopulatedFilter[]) => {
   if (filters.length === 0) return undefined;
-  console.log(filters);
   return (result: { id: any }) => {
     const dataObj = dataMap.get(result.id)!;
     return !filters.some((filter) => !testFilter(dataObj, filter));

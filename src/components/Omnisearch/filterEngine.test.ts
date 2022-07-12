@@ -46,7 +46,6 @@ describe("filterEngine", () => {
     "matches snapshot for search results given query %s, filter %s",
     (query, _filters, filters) => {
       if (query === undefined) {
-        console.log(filters);
         expect(dataArray.filter(executeFilters(filters)!)).toMatchSnapshot();
       } else {
         expect(
