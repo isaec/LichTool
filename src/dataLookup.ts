@@ -12,6 +12,8 @@ import {
   DurationUnits,
   TimeObject,
   DurationObject,
+  ComponentsObject,
+  Abilities,
 } from "@src/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "./formatter";
@@ -37,12 +39,20 @@ export type DataSpell = IdData & {
   school: SchoolAbbreviations;
   time: TimeObject[];
   range: { type: Ranges; distance?: { type: Distances; amount?: number } };
-  components: { v?: boolean; s?: boolean; m?: string };
+  components: ComponentsObject;
   duration: DurationObject[];
   entries: DataGroup;
   entriesHigherLevel?: DataGroup;
   source: Sources;
   page: number;
+  savingThrow?: Abilities[];
+  abilityCheck?: Abilities[];
+  /**
+   * M: Melee
+   * R: Ranged
+   * O: Other/Unknown
+   */
+  spellAttack?: Array<"M" | "R" | "O">;
   srd?: boolean;
   basicRules?: boolean;
   meta?: {

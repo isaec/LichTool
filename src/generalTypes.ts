@@ -112,3 +112,13 @@ export type TimeObject = {
   unit: TimeUnits;
   condition?: string;
 };
+
+export type ComponentsObject = {
+  v?: boolean;
+  s?: boolean;
+  m?:
+    | boolean
+    | string
+    | { text: string; cost?: number; consume?: boolean | string };
+  r?: boolean;
+};
