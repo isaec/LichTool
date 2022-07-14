@@ -49,9 +49,14 @@ describe("filterEngine", () => {
         expect(dataArray.filter(executeFilters(filters)!)).toMatchSnapshot();
       } else {
         expect(
-          dataMiniSearch.search(query, {
-            filter: executeFilters(filters),
-          })
+          dataMiniSearch
+            .search(query, {
+              filter: executeFilters(filters),
+            })
+            .map((q) => ({
+              id: q.id,
+              terms: q.terms,
+            }))
         ).toMatchSnapshot();
       }
     }

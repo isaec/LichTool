@@ -65,6 +65,7 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
 await Promise.all([
   processJson(await dataGlob("spells/spells-*.json")),
   processJson("data/conditionsdiseases.json"),
+  processJson("data/actions.json"),
 ]);
 
 // create map of sets json for filters

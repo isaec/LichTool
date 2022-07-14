@@ -57,7 +57,9 @@ const leaveLowerCase = new Set([
   "without",
   "and",
   "as",
+  "an",
   "at",
+  "a",
   "but",
   "by",
   "for",
@@ -97,12 +99,15 @@ export const extractTypeFromUrl = (url: string): string | "unknown" => {
   return "unknown";
 };
 
-export const fmtDataUrl = (type: string, name: string, source: string) =>
-  `${type.toLowerCase()}_${source.toUpperCase()}-${name
+export const fmtNameForUrl = (name: string): string =>
+  name
     .split(/\s/)
     .map((s) =>
       leaveLowerCase.has(s.toLowerCase())
         ? s.toLowerCase()
-        : `${s[0].toUpperCase()}${s.slice(1)}`
+        : `${s.charAt(0).toUpperCase()}${s.slice(1)}`
     )
-    .join("-")}`;
+    .join("-");
+
+export const fmtDataUrl = (type: string, name: string, source: string) =>
+  `${type.toLowerCase()}_${source.toUpperCase()}-${fmtNameForUrl(name)}`;

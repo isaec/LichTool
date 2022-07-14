@@ -4,24 +4,12 @@ exports[`filterEngine > matches snapshot for search results given query fireball
 [
   {
     "id": "spell_PHB-Fireball",
-    "match": {
-      "fireball": [
-        "name",
-      ],
-    },
-    "score": 8.296233363374908,
     "terms": [
       "fireball",
     ],
   },
   {
     "id": "spell_PHB-Delayed-Blast-Fireball",
-    "match": {
-      "fireball": [
-        "name",
-      ],
-    },
-    "score": 6.3226241899906075,
     "terms": [
       "fireball",
     ],
@@ -33,60 +21,30 @@ exports[`filterEngine > matches snapshot for search results given query m, filte
 [
   {
     "id": "spell_PHB-Major-Image",
-    "match": {
-      "major": [
-        "name",
-      ],
-    },
-    "score": 6.336669919342185,
     "terms": [
       "major",
     ],
   },
   {
     "id": "spell_PHB-Meld-into-Stone",
-    "match": {
-      "meld": [
-        "name",
-      ],
-    },
-    "score": 5.70401750488613,
     "terms": [
       "meld",
     ],
   },
   {
     "id": "spell_PHB-Mass-Healing-Word",
-    "match": {
-      "mass": [
-        "name",
-      ],
-    },
-    "score": 4.536872256124184,
     "terms": [
       "mass",
     ],
   },
   {
     "id": "spell_PHB-Dispel-Magic",
-    "match": {
-      "magic": [
-        "name",
-      ],
-    },
-    "score": 4.437189081101136,
     "terms": [
       "magic",
     ],
   },
   {
     "id": "spell_PHB-Magic-Circle",
-    "match": {
-      "magic": [
-        "name",
-      ],
-    },
-    "score": 4.437189081101136,
     "terms": [
       "magic",
     ],

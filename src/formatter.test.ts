@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { dataArray, isDataSpell } from "./dataLookup";
-import { extractTypeFromUrl, fmtDataUrl, fmtRange } from "./formatter";
+import {
+  extractTypeFromUrl,
+  fmtDataUrl,
+  fmtNameForUrl,
+  fmtRange,
+} from "./formatter";
 
 describe("fmtRange", () => {
   it.each(
@@ -29,15 +34,15 @@ describe("fmtDataUrl", () => {
   )("%s from %s fmt matches snapshot", (name, source, type) => {
     expect(fmtDataUrl(type, name, source)).toMatchSnapshot();
   });
-  it.each(dataArray.map((data) => [data.name, data.source]))(
-    "%s from %s is parsed into url with same formatting as original",
-    (name, source) => {
-      const url = fmtDataUrl("type", name, source);
-      const urlNameSegment = url.split("-").slice(1).join(" ");
+  it.each(dataArray.map((data) => data.name))(
+    "%s is name parsed with same capitalization",
+    (name) => {
+      const hyphenated = name.replaceAll(/\s/g, "-");
+
       expect(
-        urlNameSegment,
-        `${name}, which parsed to the url ${url} should have a name segment equal to the original name, not ${urlNameSegment}`
-      ).toBe(name);
+        fmtNameForUrl(name),
+        `${name}, hyphenated as "${hyphenated}" should match the formatted variant`
+      ).toBe(hyphenated);
     }
   );
 });

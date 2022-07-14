@@ -5,7 +5,12 @@ describe("dataMiniSearch", () => {
   it.each(["fireball", "fire blt", "antipathy sympathy", "mine black", "find"])(
     "matches snapshot for search results with query %s",
     (query) => {
-      expect(dataMiniSearch.search(query)).toMatchSnapshot();
+      expect(
+        dataMiniSearch.search(query).map((q) => ({
+          id: q.id,
+          terms: q.terms,
+        }))
+      ).toMatchSnapshot();
     }
   );
 });
