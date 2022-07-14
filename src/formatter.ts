@@ -1,4 +1,4 @@
-import { Distances } from "./components/generalTypes";
+import { Distances } from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

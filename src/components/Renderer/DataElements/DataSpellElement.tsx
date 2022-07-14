@@ -1,6 +1,6 @@
 import { Component, createMemo, JSX, Match, Show, Switch } from "solid-js";
 import styles from "./DataElement.module.scss";
-import { schoolAbbreviationMap } from "@components/generalTypes";
+import { schoolAbbreviationMap } from "@src/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
 import { fmtRange } from "@src/formatter";
 import { RawDataSpell } from "@src/dataLookup";

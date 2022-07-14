@@ -10,7 +10,7 @@ import {
   SchoolAbbreviations,
   Sources,
   TimeUnits,
-} from "@components/generalTypes";
+} from "@src/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "./formatter";
 

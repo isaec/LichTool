@@ -8,7 +8,7 @@ import {
   Match,
   Switch,
 } from "solid-js";
-import { schoolAbbreviationMap } from "@components/generalTypes";
+import { schoolAbbreviationMap } from "@src/generalTypes";
 import { extractTypeFromUrl, fmtRange } from "@src/formatter";
 
 import styles from "./SearchResult.module.scss";

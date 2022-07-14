@@ -6,7 +6,7 @@ import {
   SchoolAbbreviations,
   Sources,
   TimeUnits,
-} from "@components/generalTypes";
+} from "@src/generalTypes";
 import { RawDataSpell } from "@src/dataLookup";
 
 export type EntryLevels = 0 | 1 | 2;

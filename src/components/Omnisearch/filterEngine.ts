@@ -1,5 +1,5 @@
 import toast from "solid-toast";
-import { schoolAbbreviationMap } from "@components/generalTypes";
+import { schoolAbbreviationMap } from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 import { dataMap } from "@src/dataLookup";
 import { SearchResult } from "minisearch";
