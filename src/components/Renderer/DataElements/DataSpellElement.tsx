@@ -2,7 +2,7 @@ import { Component, createMemo, JSX, Match, Show, Switch } from "solid-js";
 import styles from "./DataElement.module.scss";
 import { schoolAbbreviationMap } from "@src/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
-import { fmtRange } from "@src/formatter";
+import { fmtDuration, fmtRange } from "@src/formatter";
 import { RawDataSpell } from "@src/dataLookup";
 import KeyValue from "./KeyValue";
 import DataFooter from "./DataFooter";
@@ -50,20 +50,7 @@ const DataSpellElement: Component<{
       <KeyValue key={"Range"}>{fmtRange(props.data.range)}</KeyValue>
       <KeyValue key={"Components"}>{components()}</KeyValue>
       <KeyValue key={"Duration"}>
-        <Switch fallback={props.data.duration[0].type}>
-          <Match when={props.data.duration[0].type === "timed"}>
-            <Show when={props.data.duration[0].concentration === true}>
-              Concentration, up to{" "}
-            </Show>
-            {plural(
-              props.data.duration[0].duration!.amount!,
-              props.data.duration[0].duration!.type
-            )}
-          </Match>
-          <Match when={props.data.duration[0].type === "instant"}>
-            Instantaneous
-          </Match>
-        </Switch>
+        {fmtDuration(props.data.duration[0])}
       </KeyValue>
       <RendererStyles>
         <DataGroupRenderer group={props.data.entries} entryLevel={2} />

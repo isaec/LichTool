@@ -79,6 +79,8 @@ export const fmtDuration = (data: DurationObject) => {
         data.duration!.amount!,
         data.duration!.type
       )}`;
+    case "instant":
+      return "Instantaneous";
     default:
       return capitalize(data.type);
   }

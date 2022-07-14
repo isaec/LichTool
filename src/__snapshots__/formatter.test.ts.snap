@@ -680,7 +680,7 @@ exports[`fmtDataUrl > Word of Recall from PHB fmt matches snapshot 1`] = `"spell
 
 exports[`fmtDataUrl > Zone of Truth from PHB fmt matches snapshot 1`] = `"spell_PHB-Zone-of-Truth"`;
 
-exports[`fmtDuration > [{"type":"instant"}] matches snapshot 1`] = `"Instant"`;
+exports[`fmtDuration > [{"type":"instant"}] matches snapshot 1`] = `"Instantaneous"`;
 
 exports[`fmtDuration > [{"type":"permanent","ends":["dispel","trigger"]}] matches snapshot 1`] = `"Permanent"`;
 

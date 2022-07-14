@@ -329,9 +329,7 @@ exports[`DataSpellElement > Alter Self > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -653,9 +651,7 @@ exports[`DataSpellElement > Animal Shapes > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      24 hours
+      Concentration, up to 24 hours
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -868,9 +864,7 @@ exports[`DataSpellElement > Animate Objects > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -983,9 +977,7 @@ exports[`DataSpellElement > Antilife Shell > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -1070,9 +1062,7 @@ exports[`DataSpellElement > Antimagic Field > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -1442,9 +1432,7 @@ exports[`DataSpellElement > Arcane Eye > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -1538,7 +1526,7 @@ exports[`DataSpellElement > Arcane Lock > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -1632,7 +1620,7 @@ exports[`DataSpellElement > Astral Projection > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      special
+      Special
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -1975,9 +1963,7 @@ exports[`DataSpellElement > Bane > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2076,9 +2062,7 @@ exports[`DataSpellElement > Banishment > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2184,9 +2168,7 @@ exports[`DataSpellElement > Barkskin > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2264,9 +2246,7 @@ exports[`DataSpellElement > Beacon of Hope > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2344,9 +2324,7 @@ exports[`DataSpellElement > Bestow Curse > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2478,9 +2456,7 @@ exports[`DataSpellElement > Blade Barrier > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2575,9 +2551,7 @@ exports[`DataSpellElement > Bless > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -2975,9 +2949,7 @@ exports[`DataSpellElement > Blur > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -3065,9 +3037,7 @@ exports[`DataSpellElement > Branding Smite > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -3286,9 +3256,7 @@ exports[`DataSpellElement > Call Lightning > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -3400,9 +3368,7 @@ exports[`DataSpellElement > Calm Emotions > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -3919,9 +3885,7 @@ exports[`DataSpellElement > Clairvoyance > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -4104,9 +4068,7 @@ exports[`DataSpellElement > Cloudkill > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -4795,9 +4757,7 @@ exports[`DataSpellElement > Compulsion > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -4991,9 +4951,7 @@ exports[`DataSpellElement > Confusion > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -5106,9 +5064,7 @@ exports[`DataSpellElement > Conjure Animals > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -5240,9 +5196,7 @@ exports[`DataSpellElement > Conjure Celestial > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -5357,9 +5311,7 @@ exports[`DataSpellElement > Conjure Elemental > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -5485,9 +5437,7 @@ exports[`DataSpellElement > Conjure Fey > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -5595,9 +5545,7 @@ exports[`DataSpellElement > Conjure Minor Elementals > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -5730,9 +5678,7 @@ exports[`DataSpellElement > Conjure Woodland Beings > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -6263,7 +6209,7 @@ exports[`DataSpellElement > Continual Flame > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -6342,9 +6288,7 @@ exports[`DataSpellElement > Control Water > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -6529,9 +6473,7 @@ exports[`DataSpellElement > Control Weather > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      8 hours
+      Concentration, up to 8 hours
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -7132,7 +7074,7 @@ exports[`DataSpellElement > Creation > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      special
+      Special
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -7343,9 +7285,7 @@ exports[`DataSpellElement > Dancing Lights > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -7426,9 +7366,7 @@ exports[`DataSpellElement > Darkness > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -7780,9 +7718,7 @@ exports[`DataSpellElement > Delayed Blast Fireball > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -7979,9 +7915,7 @@ exports[`DataSpellElement > Detect Evil and Good > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -8062,9 +7996,7 @@ exports[`DataSpellElement > Detect Magic > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -8155,9 +8087,7 @@ exports[`DataSpellElement > Detect Poison and Disease > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -8238,9 +8168,7 @@ exports[`DataSpellElement > Detect Thoughts > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -8644,9 +8572,7 @@ exports[`DataSpellElement > Dispel Evil and Good > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -8968,9 +8894,7 @@ exports[`DataSpellElement > Divine Favor > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -9201,9 +9125,7 @@ exports[`DataSpellElement > Dominate Beast > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -9319,9 +9241,7 @@ exports[`DataSpellElement > Dominate Monster > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -9437,9 +9357,7 @@ exports[`DataSpellElement > Dominate Person > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -9749,9 +9667,7 @@ exports[`DataSpellElement > Earthquake > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -10004,9 +9920,7 @@ exports[`DataSpellElement > Enhance Ability > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -10194,9 +10108,7 @@ exports[`DataSpellElement > Enlarge/Reduce > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -10313,9 +10225,7 @@ exports[`DataSpellElement > Entangle > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -10628,9 +10538,7 @@ exports[`DataSpellElement > Expeditious Retreat > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -10715,9 +10623,7 @@ exports[`DataSpellElement > Eyebite > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -10946,9 +10852,7 @@ exports[`DataSpellElement > Faerie Fire > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -11133,9 +11037,7 @@ exports[`DataSpellElement > Fear > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -11922,9 +11824,7 @@ exports[`DataSpellElement > Find the Path > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 day
+      Concentration, up to 1 day
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -12486,9 +12386,7 @@ exports[`DataSpellElement > Flame Blade > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -12703,9 +12601,7 @@ exports[`DataSpellElement > Flaming Sphere > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -12814,9 +12710,7 @@ exports[`DataSpellElement > Flesh to Stone > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -12927,9 +12821,7 @@ exports[`DataSpellElement > Fly > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -13023,9 +12915,7 @@ exports[`DataSpellElement > Fog Cloud > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -13515,9 +13405,7 @@ exports[`DataSpellElement > Gaseous Form > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -13614,9 +13502,7 @@ exports[`DataSpellElement > Gate > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -13926,9 +13812,7 @@ exports[`DataSpellElement > Giant Insect > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -14145,9 +14029,7 @@ exports[`DataSpellElement > Globe of Invulnerability > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -14244,7 +14126,7 @@ exports[`DataSpellElement > Glyph of Warding > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -14581,9 +14463,7 @@ exports[`DataSpellElement > Greater Invisibility > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -15116,9 +14996,7 @@ exports[`DataSpellElement > Guidance > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -15302,9 +15180,7 @@ exports[`DataSpellElement > Gust of Wind > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -15402,7 +15278,7 @@ exports[`DataSpellElement > Hallow > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -15837,9 +15713,7 @@ exports[`DataSpellElement > Haste > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16159,9 +16033,7 @@ exports[`DataSpellElement > Heat Metal > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16460,9 +16332,7 @@ exports[`DataSpellElement > Heroism > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16563,9 +16433,7 @@ exports[`DataSpellElement > Hold Monster > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16665,9 +16533,7 @@ exports[`DataSpellElement > Hold Person > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16768,9 +16634,7 @@ exports[`DataSpellElement > Holy Aura > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16854,9 +16718,7 @@ exports[`DataSpellElement > Hunter's Mark > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -16974,9 +16836,7 @@ exports[`DataSpellElement > Hypnotic Pattern > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -17374,7 +17234,7 @@ exports[`DataSpellElement > Imprisonment > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -17573,9 +17433,7 @@ exports[`DataSpellElement > Incendiary Cloud > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -17766,9 +17624,7 @@ exports[`DataSpellElement > Insect Plague > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -17883,9 +17739,7 @@ exports[`DataSpellElement > Invisibility > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -18376,9 +18230,7 @@ exports[`DataSpellElement > Levitate > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -18727,9 +18579,7 @@ exports[`DataSpellElement > Locate Creature > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -18829,9 +18679,7 @@ exports[`DataSpellElement > Locate Object > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -19303,7 +19151,7 @@ exports[`DataSpellElement > Magic Jar > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -19509,7 +19357,7 @@ exports[`DataSpellElement > Magic Mouth > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -19593,9 +19441,7 @@ exports[`DataSpellElement > Magic Weapon > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -19689,9 +19535,7 @@ exports[`DataSpellElement > Major Image > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -20218,9 +20062,7 @@ exports[`DataSpellElement > Maze > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -21081,9 +20923,7 @@ exports[`DataSpellElement > Mislead > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -21264,9 +21104,7 @@ exports[`DataSpellElement > Modify Memory > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -21402,9 +21240,7 @@ exports[`DataSpellElement > Moonbeam > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -21516,9 +21352,7 @@ exports[`DataSpellElement > Move Earth > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      2 hours
+      Concentration, up to 2 hours
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -21686,9 +21520,7 @@ exports[`DataSpellElement > Pass without Trace > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -21859,9 +21691,7 @@ exports[`DataSpellElement > Phantasmal Killer > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -22546,9 +22376,7 @@ exports[`DataSpellElement > Polymorph > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -23631,7 +23459,7 @@ exports[`DataSpellElement > Programmed Illusion > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -23729,9 +23557,7 @@ exports[`DataSpellElement > Project Image > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 day
+      Concentration, up to 1 day
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -23840,9 +23666,7 @@ exports[`DataSpellElement > Protection from Energy > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -23920,9 +23744,7 @@ exports[`DataSpellElement > Protection from Evil and Good > matches snapshot 1`]
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -24286,9 +24108,7 @@ exports[`DataSpellElement > Ray of Enfeeblement > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -24732,9 +24552,7 @@ exports[`DataSpellElement > Resistance > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -24908,9 +24726,7 @@ exports[`DataSpellElement > Reverse Gravity > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -25449,9 +25265,7 @@ exports[`DataSpellElement > Scrying > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -25836,7 +25650,7 @@ exports[`DataSpellElement > Sequester > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -25939,9 +25753,7 @@ exports[`DataSpellElement > Shapechange > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -26239,9 +26051,7 @@ exports[`DataSpellElement > Shield of Faith > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -26522,9 +26332,7 @@ exports[`DataSpellElement > Silence > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -26608,9 +26416,7 @@ exports[`DataSpellElement > Silent Image > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -26705,7 +26511,7 @@ exports[`DataSpellElement > Simulacrum > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -26918,9 +26724,7 @@ exports[`DataSpellElement > Sleet Storm > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -27020,9 +26824,7 @@ exports[`DataSpellElement > Slow > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -27472,9 +27274,7 @@ exports[`DataSpellElement > Spider Climb > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -27552,9 +27352,7 @@ exports[`DataSpellElement > Spike Growth > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -27659,9 +27457,7 @@ exports[`DataSpellElement > Spirit Guardians > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -27878,9 +27674,7 @@ exports[`DataSpellElement > Stinking Cloud > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28044,9 +27838,7 @@ exports[`DataSpellElement > Stoneskin > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28125,9 +27917,7 @@ exports[`DataSpellElement > Storm of Vengeance > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28300,9 +28090,7 @@ exports[`DataSpellElement > Suggestion > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      8 hours
+      Concentration, up to 8 hours
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28396,9 +28184,7 @@ exports[`DataSpellElement > Sunbeam > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28612,7 +28398,7 @@ exports[`DataSpellElement > Symbol > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      permanent
+      Permanent
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28859,9 +28645,7 @@ exports[`DataSpellElement > Telekinesis > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -29718,9 +29502,7 @@ exports[`DataSpellElement > Tree Stride > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -29802,9 +29584,7 @@ exports[`DataSpellElement > True Polymorph > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30121,9 +29901,7 @@ exports[`DataSpellElement > True Strike > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 round
+      Concentration, up to 1 round
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30291,9 +30069,7 @@ exports[`DataSpellElement > Vampiric Touch > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30497,9 +30273,7 @@ exports[`DataSpellElement > Wall of Fire > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30612,9 +30386,7 @@ exports[`DataSpellElement > Wall of Force > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30708,9 +30480,7 @@ exports[`DataSpellElement > Wall of Ice > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30827,9 +30597,7 @@ exports[`DataSpellElement > Wall of Stone > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -30923,9 +30691,7 @@ exports[`DataSpellElement > Wall of Thorns > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      10 minutes
+      Concentration, up to 10 minutes
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -31277,9 +31043,7 @@ exports[`DataSpellElement > Web > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 hour
+      Concentration, up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -31402,9 +31166,7 @@ exports[`DataSpellElement > Weird > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -31592,9 +31354,7 @@ exports[`DataSpellElement > Wind Wall > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Concentration, up to
-       
-      1 minute
+      Concentration, up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
