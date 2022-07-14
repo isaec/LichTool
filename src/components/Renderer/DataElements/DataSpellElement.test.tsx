@@ -41,7 +41,7 @@ describe("DataSpellElement", () => {
         <DataSpellElement data={spell} />
       ));
 
-      expect(queryByText(/undefined/i)).toBeNull();
+      expect(queryByText(/undefined/i), "don't render undefined").toBeNull();
       unmount();
     });
     it(`never renders with html containing "[object Object]"`, () => {
@@ -49,7 +49,10 @@ describe("DataSpellElement", () => {
         <DataSpellElement data={spell} />
       ));
 
-      expect(queryByText(/\[object Object\]/)).toBeNull();
+      expect(
+        queryByText(/\[object Object\]/),
+        "don't render [object Object]"
+      ).toBeNull();
       unmount();
     });
   });
