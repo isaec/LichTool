@@ -1532,7 +1532,7 @@ exports[`DataSpellElement > Arcane Lock > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -1626,7 +1626,7 @@ exports[`DataSpellElement > Astral Projection > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -1731,7 +1731,7 @@ exports[`DataSpellElement > Augury > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -1850,7 +1850,7 @@ exports[`DataSpellElement > Awaken > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -3811,7 +3811,7 @@ exports[`DataSpellElement > Circle of Death > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -3913,7 +3913,7 @@ exports[`DataSpellElement > Clairvoyance > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -4016,7 +4016,7 @@ exports[`DataSpellElement > Clone > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -6161,7 +6161,7 @@ exports[`DataSpellElement > Contingency > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -6257,7 +6257,7 @@ exports[`DataSpellElement > Continual Flame > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -6813,7 +6813,7 @@ exports[`DataSpellElement > Create Undead > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -8868,7 +8868,7 @@ exports[`DataSpellElement > Divination > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -11416,7 +11416,7 @@ exports[`DataSpellElement > Find Familiar > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -11916,7 +11916,7 @@ exports[`DataSpellElement > Find the Path > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -13114,7 +13114,7 @@ exports[`DataSpellElement > Forbiddance > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -13218,7 +13218,7 @@ exports[`DataSpellElement > Forcecage > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -13608,7 +13608,7 @@ exports[`DataSpellElement > Gate > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -14139,7 +14139,7 @@ exports[`DataSpellElement > Globe of Invulnerability > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -14238,7 +14238,7 @@ exports[`DataSpellElement > Glyph of Warding > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -14668,7 +14668,7 @@ exports[`DataSpellElement > Greater Restoration > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -14871,7 +14871,7 @@ exports[`DataSpellElement > Guards and Wards > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -15396,7 +15396,7 @@ exports[`DataSpellElement > Hallow > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -16363,7 +16363,7 @@ exports[`DataSpellElement > Heroes' Feast > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -16762,7 +16762,7 @@ exports[`DataSpellElement > Holy Aura > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -17189,7 +17189,7 @@ exports[`DataSpellElement > Identify > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -17270,7 +17270,7 @@ exports[`DataSpellElement > Illusory Script > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      S, 
+      S, M ([object Object])
     </p>
     <p>
       <b>
@@ -17368,7 +17368,7 @@ exports[`DataSpellElement > Imprisonment > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -18187,7 +18187,7 @@ exports[`DataSpellElement > Legend Lore > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -19165,7 +19165,7 @@ exports[`DataSpellElement > Magic Circle > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -19297,7 +19297,7 @@ exports[`DataSpellElement > Magic Jar > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -19503,7 +19503,7 @@ exports[`DataSpellElement > Magic Mouth > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -21602,7 +21602,7 @@ exports[`DataSpellElement > Nondetection > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -22155,7 +22155,7 @@ exports[`DataSpellElement > Planar Binding > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -22267,7 +22267,7 @@ exports[`DataSpellElement > Plane Shift > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -23625,7 +23625,7 @@ exports[`DataSpellElement > Programmed Illusion > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -23723,7 +23723,7 @@ exports[`DataSpellElement > Project Image > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -23914,7 +23914,7 @@ exports[`DataSpellElement > Protection from Evil and Good > matches snapshot 1`]
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -24193,7 +24193,7 @@ exports[`DataSpellElement > Raise Dead > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -24551,7 +24551,7 @@ exports[`DataSpellElement > Reincarnate > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -24811,7 +24811,7 @@ exports[`DataSpellElement > Resurrection > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -24988,7 +24988,7 @@ exports[`DataSpellElement > Revivify > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -25443,7 +25443,7 @@ exports[`DataSpellElement > Scrying > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -25830,7 +25830,7 @@ exports[`DataSpellElement > Sequester > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -25933,7 +25933,7 @@ exports[`DataSpellElement > Shapechange > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -26699,7 +26699,7 @@ exports[`DataSpellElement > Simulacrum > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -28038,7 +28038,7 @@ exports[`DataSpellElement > Stoneskin > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -28606,7 +28606,7 @@ exports[`DataSpellElement > Symbol > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -29164,7 +29164,7 @@ exports[`DataSpellElement > Teleportation Circle > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, 
+      V, M ([object Object])
     </p>
     <p>
       <b>
@@ -29942,7 +29942,7 @@ exports[`DataSpellElement > True Resurrection > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -30027,7 +30027,7 @@ exports[`DataSpellElement > True Seeing > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
@@ -31031,7 +31031,7 @@ exports[`DataSpellElement > Warding Bond > matches snapshot 1`] = `
       <b>
         Components: 
       </b>
-      V, S, 
+      V, S, M ([object Object])
     </p>
     <p>
       <b>
