@@ -75,10 +75,14 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
 export const fmtDuration = (data: DurationObject) => {
   switch (data.type) {
     case "timed":
-      return `${data.concentration ? "Concentration, up to " : ""}${plural(
-        data.duration!.amount!,
-        data.duration!.type
-      )}`;
+      return capitalize(
+        `${data.concentration ? "Concentration, " : ""}${
+          data.duration?.upTo ||
+          (data.concentration && data.duration?.upTo !== false)
+            ? "up to "
+            : ""
+        }${plural(data.duration!.amount!, data.duration!.type)}`
+      );
     case "instant":
       return "Instantaneous";
     default:

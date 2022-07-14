@@ -10432,7 +10432,7 @@ exports[`DataSpellElement > Etherealness > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      8 hours
+      Up to 8 hours
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -22743,7 +22743,7 @@ exports[`DataSpellElement > Prestidigitation > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      1 hour
+      Up to 1 hour
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -29038,7 +29038,7 @@ exports[`DataSpellElement > Thaumaturgy > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      1 minute
+      Up to 1 minute
     </p>
     <p
       class="_Renderer_5kjti_1"
