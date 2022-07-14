@@ -40,8 +40,13 @@ describe("fmtDataUrl", () => {
       const hyphenated = name.replaceAll(/\s/g, "-");
 
       expect(
-        fmtNameForUrl(name),
-        `${name}, hyphenated as "${hyphenated}" should match the formatted variant`
+        fmtNameForUrl(name.toLowerCase()),
+        `${name}, hyphenated as "${hyphenated}" should match the formatted variant as lowercase`
+      ).toBe(hyphenated);
+
+      expect(
+        fmtNameForUrl(name.toUpperCase()),
+        `${name}, hyphenated as "${hyphenated}" should match the formatted variant as uppercase`
       ).toBe(hyphenated);
     }
   );

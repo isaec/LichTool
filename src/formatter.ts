@@ -1,7 +1,9 @@
 import { Distances } from "./components/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 
-const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1);
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const upperFirst = (s: string) =>
+  s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 
 const pastTenseMap = new Map<Distances, string>([
   ["miles", "mile"],
@@ -99,15 +101,22 @@ export const extractTypeFromUrl = (url: string): string | "unknown" => {
   return "unknown";
 };
 
-export const fmtNameForUrl = (name: string): string =>
-  name
-    .split(/\s/)
-    .map((s) =>
-      leaveLowerCase.has(s.toLowerCase())
-        ? s.toLowerCase()
-        : `${s.charAt(0).toUpperCase()}${s.slice(1)}`
-    )
-    .join("-");
-
+const wordsRegex = /([\w']+)([\s\-\/])?/gm;
+export const fmtNameForUrl = (name: string): string => {
+  const words = Array.from(name.matchAll(wordsRegex));
+  const result: string[] = [];
+  words.forEach(([, word, sep]) => {
+    if (leaveLowerCase.has(word.toLowerCase())) {
+      result.push(word.toLowerCase());
+    } else {
+      result.push(upperFirst(word));
+    }
+    if (sep) {
+      if (sep === " ") result.push("-");
+      else result.push(sep);
+    }
+  });
+  return result.join("");
+};
 export const fmtDataUrl = (type: string, name: string, source: string) =>
   `${type.toLowerCase()}_${source.toUpperCase()}-${fmtNameForUrl(name)}`;
