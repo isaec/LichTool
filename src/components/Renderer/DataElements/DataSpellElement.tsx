@@ -49,7 +49,7 @@ const DataSpellElement: Component<{
               Concentration, up to{" "}
             </Show>
             {plural(
-              props.data.duration[0].duration!.amount,
+              props.data.duration[0].duration!.amount!,
               props.data.duration[0].duration!.type
             )}
           </Match>

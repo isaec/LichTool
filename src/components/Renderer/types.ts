@@ -1,12 +1,3 @@
-import {
-  Distances,
-  Durations,
-  Levels,
-  Ranges,
-  SchoolAbbreviations,
-  Sources,
-  TimeUnits,
-} from "@src/generalTypes";
 import { RawDataSpell } from "@src/dataLookup";
 
 export type EntryLevels = 0 | 1 | 2;

@@ -9,7 +9,9 @@ import {
   Ranges,
   SchoolAbbreviations,
   Sources,
-  TimeUnits,
+  DurationUnits,
+  TimeObject,
+  DurationObject,
 } from "@src/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "./formatter";
@@ -33,19 +35,10 @@ export type DataSpell = IdData & {
   name: string;
   level: Levels;
   school: SchoolAbbreviations;
-  time: { number: number; unit: "action" }[];
+  time: TimeObject[];
   range: { type: Ranges; distance?: { type: Distances; amount?: number } };
   components: { v?: boolean; s?: boolean; m?: string };
-  duration: [
-    {
-      type: Durations;
-      duration?: {
-        type: TimeUnits;
-        amount: number;
-      };
-      concentration?: boolean;
-    }
-  ];
+  duration: DurationObject[];
   entries: DataGroup;
   entriesHigherLevel?: DataGroup;
   source: Sources;

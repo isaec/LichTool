@@ -77,7 +77,7 @@ export type Abilities =
   | "wisdom"
   | "charisma";
 export type Durations = "instant" | "timed" | "permanent" | "special";
-export type TimeUnits =
+export type DurationUnits =
   | "hour"
   | "minute"
   | "turn"
@@ -85,3 +85,30 @@ export type TimeUnits =
   | "week"
   | "day"
   | "year";
+
+export type SpellEnds = "dispel" | "trigger" | "discharge";
+
+export type DurationObject = {
+  type: Durations;
+  duration?: {
+    type: DurationUnits;
+    amount?: number;
+    upTo?: boolean;
+  };
+  concentration?: boolean;
+  ends?: SpellEnds[];
+};
+
+export type TimeUnits =
+  | "action"
+  | "bonus"
+  | "reaction"
+  | "round"
+  | "minute"
+  | "hour";
+
+export type TimeObject = {
+  number?: number;
+  unit: TimeUnits;
+  condition?: string;
+};
