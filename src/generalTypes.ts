@@ -87,8 +87,14 @@ export type DurationUnits =
   | "year";
 
 export type SpellEnds = "dispel" | "trigger" | "discharge";
+export const spellEndsMap = new Map<SpellEnds, string>([
+  ["dispel", "dispelled"],
+  ["trigger", "triggered"],
+  ["discharge", "discharged"],
+]);
 
 export type DurationObject = {
+  /** this determines if duration, ends matter */
   type: Durations;
   duration?: {
     type: DurationUnits;

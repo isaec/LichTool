@@ -1,4 +1,4 @@
-import { Distances, DurationObject } from "@src/generalTypes";
+import { Distances, DurationObject, spellEndsMap } from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 
 /**
@@ -85,6 +85,9 @@ export const fmtDuration = (data: DurationObject) => {
       );
     case "instant":
       return "Instantaneous";
+    case "permanent":
+      if (data.ends === undefined) return "Permanent";
+      return `Until ${data.ends.map((end) => spellEndsMap.get(end)).join(" ")}`;
     default:
       return capitalize(data.type);
   }
