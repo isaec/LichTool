@@ -1,4 +1,4 @@
-import { Distances } from "@src/generalTypes";
+import { Distances, DurationObject } from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -52,6 +52,10 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
         `${data.type} ${data.distance.type} ${data.distance.amount}`
       );
   }
+};
+
+export const fmtDistance = (data: DurationObject) => {
+  return data;
 };
 
 // this is a hacky solution for lowercase titles...
