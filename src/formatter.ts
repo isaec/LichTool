@@ -54,8 +54,15 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
   }
 };
 
-export const fmtDistance = (data: DurationObject) => {
-  return data;
+export const fmtDuration = (data: DurationObject) => {
+  switch (data.type) {
+    case "timed":
+      return `${data.concentration ? "Concentration, up to " : ""}${
+        data.duration!.amount
+      } ${data.duration!.type}`;
+    default:
+      return capitalize(data.type);
+  }
 };
 
 // this is a hacky solution for lowercase titles...

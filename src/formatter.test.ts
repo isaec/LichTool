@@ -3,6 +3,7 @@ import { dataArray, isDataSpell } from "./dataLookup";
 import {
   extractTypeFromUrl,
   fmtDataUrl,
+  fmtDuration,
   fmtNameForUrl,
   fmtRange,
 } from "./formatter";
@@ -63,12 +64,11 @@ describe("extractTypeFromUrl", () => {
   );
 });
 
-// describe("fmtDuration", () => {
-//   it.each([
-//     ...new Set(
-//       dataArray
-//         .filter(isDataSpell)
-//         .map((spell) => JSON.stringify(spell.duration))
-//     ),
-//   ])();
-// });
+describe("fmtDuration", () => {
+  it.each(dedupe(dataArray.filter(isDataSpell).map((spell) => spell.duration)))(
+    `%s matches snapshot`,
+    (_display, duration) => {
+      expect(fmtDuration(duration[0])).toMatchSnapshot();
+    }
+  );
+});
