@@ -692,11 +692,11 @@ exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":1},"co
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":1}}] matches snapshot 1`] = `"1 day"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":7}}] matches snapshot 1`] = `"7 day"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":7}}] matches snapshot 1`] = `"7 days"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":10}}] matches snapshot 1`] = `"10 day"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":10}}] matches snapshot 1`] = `"10 days"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":30}}] matches snapshot 1`] = `"30 day"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"day","amount":30}}] matches snapshot 1`] = `"30 days"`;
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":1,"upTo":true}}] matches snapshot 1`] = `"1 hour"`;
 
@@ -704,17 +704,17 @@ exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":1},"c
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":1}}] matches snapshot 1`] = `"1 hour"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":2},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 2 hour"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":2},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 2 hours"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":8,"upTo":true}}] matches snapshot 1`] = `"8 hour"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":8,"upTo":true}}] matches snapshot 1`] = `"8 hours"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":8},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 8 hour"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":8},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 8 hours"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":8}}] matches snapshot 1`] = `"8 hour"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":8}}] matches snapshot 1`] = `"8 hours"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":24},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 24 hour"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":24},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 24 hours"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":24}}] matches snapshot 1`] = `"24 hour"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"hour","amount":24}}] matches snapshot 1`] = `"24 hours"`;
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":1,"upTo":true}}] matches snapshot 1`] = `"1 minute"`;
 
@@ -722,9 +722,9 @@ exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":1},
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":1}}] matches snapshot 1`] = `"1 minute"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":10},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 10 minute"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":10},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 10 minutes"`;
 
-exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":10}}] matches snapshot 1`] = `"10 minute"`;
+exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":10}}] matches snapshot 1`] = `"10 minutes"`;
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"round","amount":1},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 1 round"`;
 

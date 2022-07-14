@@ -1,9 +1,27 @@
 import { Distances, DurationObject } from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 
+/**
+ * Ensure the first char of string is uppercase
+ * @param s the string to capitalize
+ * @returns string with first char capitalized
+ */
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+/**
+ * Ensure only the first char of string is uppercase
+ * @param s the string to capitalize
+ * @returns the string with ***only the first char*** capitalized
+ */
 const upperFirst = (s: string) =>
   s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+
+/**
+ * @param num the quantity of the description
+ * @param str the unit of the description
+ * @returns a string describing the data, pluralized if needed
+ */
+const plural = (num: number, str: string) =>
+  `${num} ${str}${num > 1 ? "s" : ""}`;
 
 const pastTenseMap = new Map<Distances, string>([
   ["miles", "mile"],
@@ -57,9 +75,10 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
 export const fmtDuration = (data: DurationObject) => {
   switch (data.type) {
     case "timed":
-      return `${data.concentration ? "Concentration, up to " : ""}${
-        data.duration!.amount
-      } ${data.duration!.type}`;
+      return `${data.concentration ? "Concentration, up to " : ""}${plural(
+        data.duration!.amount!,
+        data.duration!.type
+      )}`;
     default:
       return capitalize(data.type);
   }
