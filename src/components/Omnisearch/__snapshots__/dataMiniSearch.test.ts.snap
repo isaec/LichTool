@@ -34,7 +34,7 @@ exports[`dataMiniSearch > matches snapshot for search results with query antipat
     ],
   },
   {
-    "id": "action_DMG-Activate-An-Item",
+    "id": "action_DMG-Activate-an-Item",
     "terms": [
       "activate",
     ],
