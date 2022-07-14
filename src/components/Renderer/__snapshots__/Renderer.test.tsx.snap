@@ -1234,35 +1234,23 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <li>
             <p>
               Actions: 
-              <span
-                class="error"
+              <a
+                href="/view/action_PHB-Attack"
               >
-                UNKNOWN tag="action" ERROR: 
-                <code>
-                  {@action Attack}
-                </code>
-                
-              </span>
+                Attack
+              </a>
                assumes PHB by default, 
-              <span
-                class="error"
+              <a
+                href="/view/action_DMG-Tumble"
               >
-                UNKNOWN tag="action" ERROR: 
-                <code>
-                  {@action Tumble|DMG}
-                </code>
-                
-              </span>
+                Tumble
+              </a>
                can have sources added with a pipe, 
-              <span
-                class="error"
+              <a
+                href="/view/action_DMG-Tumble"
               >
-                UNKNOWN tag="action" ERROR: 
-                <code>
-                  {@action Tumble|DMG|and optional link text added with another pipe}
-                </code>
-                
-              </span>
+                and optional link text added with another pipe
+              </a>
               .
             </p>
           </li>

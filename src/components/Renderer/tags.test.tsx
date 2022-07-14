@@ -27,6 +27,7 @@ describe("tags", () => {
     "scaledamage",
     "spell",
     "condition",
+    "action",
   ]);
   const pipeTests = [
     ["color", "test|ffffff"],
@@ -50,6 +51,9 @@ describe("tags", () => {
     ["spell", "name of spell|XGE|displayed text"],
     ["condition", "name of condition"],
     ["scaledamage", "8d8|4-9|1d8"],
+    ["action", "name of action"],
+    ["action", "name of action|XGE"],
+    ["action", "name of action|XGE|displayed text"],
   ];
   it.each([
     ...pipeTests,

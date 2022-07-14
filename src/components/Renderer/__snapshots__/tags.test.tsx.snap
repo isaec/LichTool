@@ -1,5 +1,35 @@
 // Vitest Snapshot v1
 
+exports[`tags > {@action name of action|XGE|displayed text} matches snapshot 1`] = `
+<div>
+  <a
+    href="/view/action_XGE-Name-of-Action"
+  >
+    displayed text
+  </a>
+</div>
+`;
+
+exports[`tags > {@action name of action|XGE} matches snapshot 1`] = `
+<div>
+  <a
+    href="/view/action_XGE-Name-of-Action"
+  >
+    name of action
+  </a>
+</div>
+`;
+
+exports[`tags > {@action name of action} matches snapshot 1`] = `
+<div>
+  <a
+    href="/view/action_PHB-Name-of-Action"
+  >
+    name of action
+  </a>
+</div>
+`;
+
 exports[`tags > {@bold bold string!} matches snapshot 1`] = `
 <div>
   <b>

@@ -103,6 +103,7 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     // link tags
     spell: refTag("spell", "phb"),
     condition: refTag("condition", "phb"),
+    action: refTag("action", "phb"),
     // bad / unsupported tags
     filter: pipe((props) => props.p0),
     dice: tag("code"),
