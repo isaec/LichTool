@@ -1526,7 +1526,7 @@ exports[`DataSpellElement > Arcane Lock > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -6209,7 +6209,7 @@ exports[`DataSpellElement > Continual Flame > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -14126,7 +14126,7 @@ exports[`DataSpellElement > Glyph of Warding > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled triggered
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -15278,7 +15278,7 @@ exports[`DataSpellElement > Hallow > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -17234,7 +17234,7 @@ exports[`DataSpellElement > Imprisonment > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -19151,7 +19151,7 @@ exports[`DataSpellElement > Magic Jar > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -19357,7 +19357,7 @@ exports[`DataSpellElement > Magic Mouth > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -23459,7 +23459,7 @@ exports[`DataSpellElement > Programmed Illusion > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -25650,7 +25650,7 @@ exports[`DataSpellElement > Sequester > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -26511,7 +26511,7 @@ exports[`DataSpellElement > Simulacrum > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28398,7 +28398,7 @@ exports[`DataSpellElement > Symbol > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Permanent
+      Until dispelled triggered
     </p>
     <p
       class="_Renderer_5kjti_1"

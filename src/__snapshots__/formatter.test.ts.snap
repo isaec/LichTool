@@ -682,9 +682,9 @@ exports[`fmtDataUrl > Zone of Truth from PHB fmt matches snapshot 1`] = `"spell_
 
 exports[`fmtDuration > [{"type":"instant"}] matches snapshot 1`] = `"Instantaneous"`;
 
-exports[`fmtDuration > [{"type":"permanent","ends":["dispel","trigger"]}] matches snapshot 1`] = `"Permanent"`;
+exports[`fmtDuration > [{"type":"permanent","ends":["dispel","trigger"]}] matches snapshot 1`] = `"Until dispelled triggered"`;
 
-exports[`fmtDuration > [{"type":"permanent","ends":["dispel"]}] matches snapshot 1`] = `"Permanent"`;
+exports[`fmtDuration > [{"type":"permanent","ends":["dispel"]}] matches snapshot 1`] = `"Until dispelled"`;
 
 exports[`fmtDuration > [{"type":"special"}] matches snapshot 1`] = `"Special"`;
 
