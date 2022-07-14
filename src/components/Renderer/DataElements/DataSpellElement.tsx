@@ -16,11 +16,18 @@ const DataSpellElement: Component<{
 }> = (props) => {
   const components = createMemo(() =>
     Object.entries(props.data.components)
-      .map(([component, value]) =>
-        value === true
-          ? component.toUpperCase()
-          : `${component.toUpperCase()} (${value})`
-      )
+      .filter(([, value]) => value !== false && value !== undefined)
+      .map(([component, value]) => {
+        const key = component.toUpperCase();
+        switch (true) {
+          case value === true:
+            return key;
+          case typeof value === "string":
+            return `${key} (${value})`;
+          case typeof value === "object":
+            return `${key} (${(value as { text: string }).text})`;
+        }
+      })
       .join(", ")
   );
   return (
