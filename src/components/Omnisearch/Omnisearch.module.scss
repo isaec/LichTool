@@ -35,6 +35,10 @@
     }
   }
   & > .keyDropdown {
+    max-height: $size-64;
+    overflow-y: auto;
+    overflow-x: hidden;
+
     position: absolute;
     z-index: $layer-2;
 
