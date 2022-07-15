@@ -105,7 +105,9 @@ export const fmtDuration = (data: DurationObject) => {
       return "Instantaneous";
     case "permanent":
       if (data.ends === undefined) return "Permanent";
-      return `Until ${data.ends.map((end) => spellEndsMap.get(end)).join(" ")}`;
+      return `Until ${fmtOrList(
+        data.ends.map((end) => spellEndsMap.get(end)!)
+      )}`;
     default:
       return capitalize(data.type);
   }

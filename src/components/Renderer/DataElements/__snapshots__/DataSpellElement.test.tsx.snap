@@ -14126,7 +14126,7 @@ exports[`DataSpellElement > Glyph of Warding > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Until dispelled triggered
+      Until dispelled or triggered
     </p>
     <p
       class="_Renderer_5kjti_1"
@@ -28398,7 +28398,7 @@ exports[`DataSpellElement > Symbol > matches snapshot 1`] = `
       <b>
         Duration: 
       </b>
-      Until dispelled triggered
+      Until dispelled or triggered
     </p>
     <p
       class="_Renderer_5kjti_1"
