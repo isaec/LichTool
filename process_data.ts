@@ -94,7 +94,11 @@ const processItems = async () => {
     baseItemObject.itemType.map((type) => [type.abbreviation, type])
   );
   const propertyMap = new Map(
-    baseItemObject.itemProperty.map((p) => [p.abbreviation, p])
+    baseItemObject.itemProperty
+      // filter out special property
+      // it isn't needed for our system, it only exists in base data to enable filtering
+      .filter((p) => p.abbreviation !== "S")
+      .map((p) => [p.abbreviation, p])
   );
   const typeAdditionalEntriesMap = new Map(
     baseItemObject.itemTypeAdditionalEntries.map((type) => [
@@ -122,8 +126,6 @@ const processItems = async () => {
           }
         });
 
-      // hack for strange "special" entries
-      if (result.name === "special") result.name = item.name;
       result.id = fmtDataUrl("item", result.name, result.source);
 
       processedData.push(result as Item & { id: string });
