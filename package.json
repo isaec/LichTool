@@ -10,7 +10,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "test:update-snapshot": "vitest -u --run",
-    "process": "ts-node --esm ./process_data.ts"
+    "process": "vite-node ./process_data.ts"
   },
   "license": "MIT",
   "devDependencies": {
@@ -23,9 +23,9 @@
     "jsdom": "^19.0.0",
     "sass": "^1.53.0",
     "solid-testing-library": "^0.3.0",
-    "ts-node": "^10.8.2",
     "typescript": "^4.7.4",
     "vite": "^2.9.12",
+    "vite-node": "^0.18.0",
     "vite-plugin-solid": "^2.2.6",
     "vitest": "^0.15.2"
   },

@@ -1,7 +1,7 @@
 import glob, { promise } from "glob-promise";
 import path from "path";
 import { PathLike, promises as fs } from "fs";
-import { fmtDataUrl } from "./src/formatter.js";
+import { fmtDataUrl } from "@src/formatter";
 
 /**
  * copies a src file to a dest file, using JSON.parse and JSON.stringify to minify it

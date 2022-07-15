@@ -21,8 +21,5 @@
       "@data/*": ["processed_data/*"]
     },
     "resolveJsonModule": true
-  },
-  "ts-node": {
-    "esm": true
   }
 }
