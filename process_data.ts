@@ -62,10 +62,85 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
   );
 };
 
+const deepMerge = (
+  obj1: Readonly<Record<string, any>>,
+  obj2: Readonly<Record<string, any>>
+) => {
+  const result: Record<string, any> = structuredClone(obj1);
+
+  Object.entries(obj2).forEach(([key, value]) => {
+    switch (true) {
+      case Array.isArray(value) === true:
+        if (!result[key]) result[key] = value;
+        else result[key] = result[key].concat(value);
+        break;
+      case typeof value === "object":
+        if (!result[key]) result[key] = {};
+        result[key] = deepMerge(result[key], value);
+        break;
+      default:
+        result[key] = value;
+    }
+  });
+  return result;
+};
+
+const processItems = async () => {
+  const baseItemsFile = await fs.readFile("data/items-base.json", "utf8");
+  const baseItemObject: {
+    baseitem: any[];
+    itemProperty: any[];
+    itemType: any[];
+    itemEntry: any[];
+    itemTypeAdditionalEntries: any[];
+  } & DataBaseShape = JSON.parse(baseItemsFile);
+
+  const baseItems = baseItemObject.baseitem;
+  const typeMap = new Map(
+    baseItemObject.itemType.map((type) => [type.abbreviation, type])
+  );
+  const propertyMap = new Map(
+    baseItemObject.itemProperty.map((p) => [p.abbreviation, p])
+  );
+  const typeAdditionalEntriesMap = new Map(
+    baseItemObject.itemTypeAdditionalEntries.map((type) => [
+      type.abbreviation,
+      type,
+    ])
+  );
+
+  const expandedItems: any[] = [];
+
+  baseItems
+    .filter((item) => item.srd === true)
+    .forEach((item) => {
+      let result: Record<string, any> = structuredClone(item);
+
+      if (typeMap.has(item.type)) {
+        result = deepMerge(result, typeMap.get(item.type));
+      }
+
+      if (item.property !== undefined)
+        item.property.forEach((property: string) => {
+          if (propertyMap.has(property)) {
+            result = deepMerge(result, propertyMap.get(property));
+          }
+        });
+
+      expandedItems.push(result);
+    });
+
+  await fs.writeFile(
+    "processed_data/items.json",
+    JSON.stringify(expandedItems, undefined, 2)
+  );
+};
+
 await Promise.all([
   processJson(await dataGlob("spells/spells-*.json")),
   processJson("data/conditionsdiseases.json"),
   processJson("data/actions.json"),
+  processItems(),
 ]);
 
 // create map of sets json for filters
