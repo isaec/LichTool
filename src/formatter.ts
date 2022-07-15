@@ -6,13 +6,13 @@ import { DataSpell } from "@src/dataLookup";
  * @param s the string to capitalize
  * @returns string with first char capitalized
  */
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 /**
  * Ensure only the first char of string is uppercase
  * @param s the string to capitalize
  * @returns the string with ***only the first char*** capitalized
  */
-const upperFirst = (s: string) =>
+export const upperFirst = (s: string) =>
   s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 
 /**
@@ -20,8 +20,26 @@ const upperFirst = (s: string) =>
  * @param str the unit of the description
  * @returns a string describing the data, pluralized if needed
  */
-const plural = (num: number, str: string) =>
+export const plural = (num: number, str: string) =>
   `${num} ${str}${num > 1 ? "s" : ""}`;
+
+const joinList = (
+  list: Readonly<string[]>,
+  joiner: string,
+  serialJoin: boolean,
+  lastJoiner: string
+) =>
+  list.length > 2
+    ? `${list.slice(0, -1).join(`${joiner} `)}${
+        serialJoin ? joiner : ""
+      } ${lastJoiner} ${list[list.length - 1]}`
+    : list.join(` ${lastJoiner} `);
+
+export const fmtAndList = (list: Readonly<string[]>, serialComma = true) =>
+  joinList(list, ",", serialComma, "and");
+
+export const fmtOrList = (list: Readonly<string[]>, serialComma = true) =>
+  joinList(list, ",", serialComma, "or");
 
 const pastTenseMap = new Map<Distances, string>([
   ["miles", "mile"],

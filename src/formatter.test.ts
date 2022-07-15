@@ -2,9 +2,11 @@ import { describe, expect, it } from "vitest";
 import { dataArray, isDataSpell } from "./dataLookup";
 import {
   extractTypeFromUrl,
+  fmtAndList,
   fmtDataUrl,
   fmtDuration,
   fmtNameForUrl,
+  fmtOrList,
   fmtRange,
 } from "./formatter";
 
@@ -13,6 +15,37 @@ const dedupe = <T>(arr: T[]): Array<[string, T]> =>
     v,
     JSON.parse(v),
   ]);
+
+const lists = [
+  ["one"] as const,
+  ["one", "two"] as const,
+  ["one", "two", "three"] as const,
+  ["one", "two", "three", "four"] as const,
+  ["one", "two", "three", "four", "five"] as const,
+  ["one", "two", "three", "four", "five", "six"] as const,
+] as const;
+
+describe("fmtAndList", () => {
+  lists.forEach((list) => {
+    it(`should format ${list}`, () => {
+      expect(fmtAndList(list)).toMatchSnapshot();
+    });
+    it(`should format ${list} without serial comma`, () => {
+      expect(fmtAndList(list, false)).toMatchSnapshot();
+    });
+  });
+});
+
+describe("fmtOrList", () => {
+  lists.forEach((list) => {
+    it(`should format ${list}`, () => {
+      expect(fmtOrList(list)).toMatchSnapshot();
+    });
+    it(`should format ${list} without serial comma`, () => {
+      expect(fmtOrList(list, false)).toMatchSnapshot();
+    });
+  });
+});
 
 describe("fmtRange", () => {
   it.each(

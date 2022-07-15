@@ -1,5 +1,29 @@
 // Vitest Snapshot v1
 
+exports[`fmtAndList > should format one 1`] = `"one"`;
+
+exports[`fmtAndList > should format one without serial comma 1`] = `"one"`;
+
+exports[`fmtAndList > should format one,two 1`] = `"one and two"`;
+
+exports[`fmtAndList > should format one,two without serial comma 1`] = `"one and two"`;
+
+exports[`fmtAndList > should format one,two,three 1`] = `"one, two, and three"`;
+
+exports[`fmtAndList > should format one,two,three without serial comma 1`] = `"one, two and three"`;
+
+exports[`fmtAndList > should format one,two,three,four 1`] = `"one, two, three, and four"`;
+
+exports[`fmtAndList > should format one,two,three,four without serial comma 1`] = `"one, two, three and four"`;
+
+exports[`fmtAndList > should format one,two,three,four,five 1`] = `"one, two, three, four, and five"`;
+
+exports[`fmtAndList > should format one,two,three,four,five without serial comma 1`] = `"one, two, three, four and five"`;
+
+exports[`fmtAndList > should format one,two,three,four,five,six 1`] = `"one, two, three, four, five, and six"`;
+
+exports[`fmtAndList > should format one,two,three,four,five,six without serial comma 1`] = `"one, two, three, four, five and six"`;
+
 exports[`fmtDataUrl > Acid Splash from PHB fmt matches snapshot 1`] = `"spell_PHB-Acid-Splash"`;
 
 exports[`fmtDataUrl > Activate an Item from DMG fmt matches snapshot 1`] = `"action_DMG-Activate-an-Item"`;
@@ -729,6 +753,30 @@ exports[`fmtDuration > [{"type":"timed","duration":{"type":"minute","amount":10}
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"round","amount":1},"concentration":true}] matches snapshot 1`] = `"Concentration, up to 1 round"`;
 
 exports[`fmtDuration > [{"type":"timed","duration":{"type":"round","amount":1}}] matches snapshot 1`] = `"1 round"`;
+
+exports[`fmtOrList > should format one 1`] = `"one"`;
+
+exports[`fmtOrList > should format one without serial comma 1`] = `"one"`;
+
+exports[`fmtOrList > should format one,two 1`] = `"one or two"`;
+
+exports[`fmtOrList > should format one,two without serial comma 1`] = `"one or two"`;
+
+exports[`fmtOrList > should format one,two,three 1`] = `"one, two, or three"`;
+
+exports[`fmtOrList > should format one,two,three without serial comma 1`] = `"one, two or three"`;
+
+exports[`fmtOrList > should format one,two,three,four 1`] = `"one, two, three, or four"`;
+
+exports[`fmtOrList > should format one,two,three,four without serial comma 1`] = `"one, two, three or four"`;
+
+exports[`fmtOrList > should format one,two,three,four,five 1`] = `"one, two, three, four, or five"`;
+
+exports[`fmtOrList > should format one,two,three,four,five without serial comma 1`] = `"one, two, three, four or five"`;
+
+exports[`fmtOrList > should format one,two,three,four,five,six 1`] = `"one, two, three, four, five, or six"`;
+
+exports[`fmtOrList > should format one,two,three,four,five,six without serial comma 1`] = `"one, two, three, four, five or six"`;
 
 exports[`fmtRange > {"type":"cone","distance":{"type":"feet","amount":15}} matches snapshot, shorten: false 1`] = `"15-foot cone"`;
 
