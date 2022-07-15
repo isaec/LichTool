@@ -49,12 +49,6 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
               id: fmtDataUrl(type, data.name, data.source),
             };
             processedData.push(newData);
-            // build up the filters
-            Object.entries(newData).forEach(([key, value]) => {
-              if (typeof value === "object") return;
-              if (!filters.has(key)) filters.set(key, new Set());
-              filters.get(key)!.add(value);
-            });
           }
         });
       });
@@ -114,26 +108,25 @@ const processItems = async () => {
   baseItems
     .filter((item) => item.srd === true)
     .forEach((item) => {
-      let result: Record<string, any> = structuredClone(item);
+      type Item = Record<string, any> & DataBaseShape;
+      let result: Item = structuredClone(item);
 
       if (typeMap.has(item.type)) {
-        result = deepMerge(result, typeMap.get(item.type));
+        result = deepMerge(result, typeMap.get(item.type)) as Item;
       }
 
       if (item.property !== undefined)
         item.property.forEach((property: string) => {
           if (propertyMap.has(property)) {
-            result = deepMerge(result, propertyMap.get(property));
+            result = deepMerge(result, propertyMap.get(property)) as Item;
           }
         });
 
+      result.id = fmtDataUrl("item", result.name, result.source);
+
+      // processedData.push(result as Item & { id: string });
       expandedItems.push(result);
     });
-
-  await fs.writeFile(
-    "processed_data/items.json",
-    JSON.stringify(expandedItems, undefined, 2)
-  );
 };
 
 await Promise.all([
@@ -143,14 +136,21 @@ await Promise.all([
   processItems(),
 ]);
 
+processedData.forEach((data) =>
+  Object.entries(data).forEach(([key, value]) => {
+    if (typeof value === "object") return;
+    if (!filters.has(key)) filters.set(key, new Set());
+    filters.get(key)!.add(value);
+  })
+);
+
 // create map of sets json for filters
 await fs.writeFile(
   "processed_data/filters.json",
   JSON.stringify(
-    [...filters.entries()].map(([key, value]) => [
-      key,
-      [...value.entries()].map(([e]) => e),
-    ])
+    [...filters.entries()]
+      .sort()
+      .map(([key, value]) => [key, [...value.entries()].map(([e]) => e).sort()])
   )
 );
 
