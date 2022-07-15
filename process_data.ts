@@ -122,9 +122,11 @@ const processItems = async () => {
           }
         });
 
+      // hack for strange "special" entries
+      if (result.name === "special") result.name = item.name;
       result.id = fmtDataUrl("item", result.name, result.source);
 
-      // processedData.push(result as Item & { id: string });
+      processedData.push(result as Item & { id: string });
       expandedItems.push(result);
     });
 };

@@ -54,6 +54,10 @@ exports[`fmtDataUrl > Arcane Eye from PHB fmt matches snapshot 1`] = `"spell_PHB
 
 exports[`fmtDataUrl > Arcane Lock from PHB fmt matches snapshot 1`] = `"spell_PHB-Arcane-Lock"`;
 
+exports[`fmtDataUrl > Arrow from PHB fmt matches snapshot 1`] = `"item_PHB-Arrow"`;
+
+exports[`fmtDataUrl > Arrows (20) from PHB fmt matches snapshot 1`] = `"item_PHB-Arrows-(20)"`;
+
 exports[`fmtDataUrl > Astral Projection from PHB fmt matches snapshot 1`] = `"spell_PHB-Astral-Projection"`;
 
 exports[`fmtDataUrl > Attack from PHB fmt matches snapshot 1`] = `"action_PHB-Attack"`;
@@ -67,6 +71,8 @@ exports[`fmtDataUrl > Bane from PHB fmt matches snapshot 1`] = `"spell_PHB-Bane"
 exports[`fmtDataUrl > Banishment from PHB fmt matches snapshot 1`] = `"spell_PHB-Banishment"`;
 
 exports[`fmtDataUrl > Barkskin from PHB fmt matches snapshot 1`] = `"spell_PHB-Barkskin"`;
+
+exports[`fmtDataUrl > Battleaxe from PHB fmt matches snapshot 1`] = `"item_PHB-Battleaxe"`;
 
 exports[`fmtDataUrl > Beacon of Hope from PHB fmt matches snapshot 1`] = `"spell_PHB-Beacon-of-Hope"`;
 
@@ -84,9 +90,17 @@ exports[`fmtDataUrl > Blindness/Deafness from PHB fmt matches snapshot 1`] = `"s
 
 exports[`fmtDataUrl > Blink from PHB fmt matches snapshot 1`] = `"spell_PHB-Blink"`;
 
+exports[`fmtDataUrl > Blowgun Needle from PHB fmt matches snapshot 1`] = `"item_PHB-Blowgun-Needle"`;
+
+exports[`fmtDataUrl > Blowgun Needles (50) from PHB fmt matches snapshot 1`] = `"item_PHB-Blowgun-Needles-(50)"`;
+
+exports[`fmtDataUrl > Blowgun from PHB fmt matches snapshot 1`] = `"item_PHB-Blowgun"`;
+
 exports[`fmtDataUrl > Blur from PHB fmt matches snapshot 1`] = `"spell_PHB-Blur"`;
 
 exports[`fmtDataUrl > Branding Smite from PHB fmt matches snapshot 1`] = `"spell_PHB-Branding-Smite"`;
+
+exports[`fmtDataUrl > Breastplate from PHB fmt matches snapshot 1`] = `"item_PHB-Breastplate"`;
 
 exports[`fmtDataUrl > Burning Hands from PHB fmt matches snapshot 1`] = `"spell_PHB-Burning-Hands"`;
 
@@ -99,6 +113,10 @@ exports[`fmtDataUrl > Calm Emotions from PHB fmt matches snapshot 1`] = `"spell_
 exports[`fmtDataUrl > Cast a Spell from PHB fmt matches snapshot 1`] = `"action_PHB-Cast-a-Spell"`;
 
 exports[`fmtDataUrl > Chain Lightning from PHB fmt matches snapshot 1`] = `"spell_PHB-Chain-Lightning"`;
+
+exports[`fmtDataUrl > Chain Mail from PHB fmt matches snapshot 1`] = `"item_PHB-Chain-Mail"`;
+
+exports[`fmtDataUrl > Chain Shirt from PHB fmt matches snapshot 1`] = `"item_PHB-Chain-Shirt"`;
 
 exports[`fmtDataUrl > Charm Person from PHB fmt matches snapshot 1`] = `"spell_PHB-Charm-Person"`;
 
@@ -113,6 +131,8 @@ exports[`fmtDataUrl > Clairvoyance from PHB fmt matches snapshot 1`] = `"spell_P
 exports[`fmtDataUrl > Clone from PHB fmt matches snapshot 1`] = `"spell_PHB-Clone"`;
 
 exports[`fmtDataUrl > Cloudkill from PHB fmt matches snapshot 1`] = `"spell_PHB-Cloudkill"`;
+
+exports[`fmtDataUrl > Club from PHB fmt matches snapshot 1`] = `"item_PHB-Club"`;
 
 exports[`fmtDataUrl > Color Spray from PHB fmt matches snapshot 1`] = `"spell_PHB-Color-Spray"`;
 
@@ -166,13 +186,23 @@ exports[`fmtDataUrl > Create or Destroy Water from PHB fmt matches snapshot 1`] 
 
 exports[`fmtDataUrl > Creation from PHB fmt matches snapshot 1`] = `"spell_PHB-Creation"`;
 
+exports[`fmtDataUrl > Crossbow Bolt from PHB fmt matches snapshot 1`] = `"item_PHB-Crossbow-Bolt"`;
+
+exports[`fmtDataUrl > Crossbow Bolts (20) from PHB fmt matches snapshot 1`] = `"item_PHB-Crossbow-Bolts-(20)"`;
+
+exports[`fmtDataUrl > Crystal from PHB fmt matches snapshot 1`] = `"item_PHB-Crystal"`;
+
 exports[`fmtDataUrl > Cure Wounds from PHB fmt matches snapshot 1`] = `"spell_PHB-Cure-Wounds"`;
+
+exports[`fmtDataUrl > Dagger from PHB fmt matches snapshot 1`] = `"item_PHB-Dagger"`;
 
 exports[`fmtDataUrl > Dancing Lights from PHB fmt matches snapshot 1`] = `"spell_PHB-Dancing-Lights"`;
 
 exports[`fmtDataUrl > Darkness from PHB fmt matches snapshot 1`] = `"spell_PHB-Darkness"`;
 
 exports[`fmtDataUrl > Darkvision from PHB fmt matches snapshot 1`] = `"spell_PHB-Darkvision"`;
+
+exports[`fmtDataUrl > Dart from PHB fmt matches snapshot 1`] = `"item_PHB-Dart"`;
 
 exports[`fmtDataUrl > Dash from PHB fmt matches snapshot 1`] = `"action_PHB-Dash"`;
 
@@ -280,6 +310,8 @@ exports[`fmtDataUrl > Fire Storm from PHB fmt matches snapshot 1`] = `"spell_PHB
 
 exports[`fmtDataUrl > Fireball from PHB fmt matches snapshot 1`] = `"spell_PHB-Fireball"`;
 
+exports[`fmtDataUrl > Flail from PHB fmt matches snapshot 1`] = `"item_PHB-Flail"`;
+
 exports[`fmtDataUrl > Flame Blade from PHB fmt matches snapshot 1`] = `"spell_PHB-Flame-Blade"`;
 
 exports[`fmtDataUrl > Flame Strike from PHB fmt matches snapshot 1`] = `"spell_PHB-Flame-Strike"`;
@@ -312,6 +344,8 @@ exports[`fmtDataUrl > Gentle Repose from PHB fmt matches snapshot 1`] = `"spell_
 
 exports[`fmtDataUrl > Giant Insect from PHB fmt matches snapshot 1`] = `"spell_PHB-Giant-Insect"`;
 
+exports[`fmtDataUrl > Glaive from PHB fmt matches snapshot 1`] = `"item_PHB-Glaive"`;
+
 exports[`fmtDataUrl > Glibness from PHB fmt matches snapshot 1`] = `"spell_PHB-Glibness"`;
 
 exports[`fmtDataUrl > Globe of Invulnerability from PHB fmt matches snapshot 1`] = `"spell_PHB-Globe-of-Invulnerability"`;
@@ -326,9 +360,15 @@ exports[`fmtDataUrl > Grappled from PHB fmt matches snapshot 1`] = `"condition_P
 
 exports[`fmtDataUrl > Grease from PHB fmt matches snapshot 1`] = `"spell_PHB-Grease"`;
 
+exports[`fmtDataUrl > Greataxe from PHB fmt matches snapshot 1`] = `"item_PHB-Greataxe"`;
+
+exports[`fmtDataUrl > Greatclub from PHB fmt matches snapshot 1`] = `"item_PHB-Greatclub"`;
+
 exports[`fmtDataUrl > Greater Invisibility from PHB fmt matches snapshot 1`] = `"spell_PHB-Greater-Invisibility"`;
 
 exports[`fmtDataUrl > Greater Restoration from PHB fmt matches snapshot 1`] = `"spell_PHB-Greater-Restoration"`;
+
+exports[`fmtDataUrl > Greatsword from PHB fmt matches snapshot 1`] = `"item_PHB-Greatsword"`;
 
 exports[`fmtDataUrl > Guardian of Faith from PHB fmt matches snapshot 1`] = `"spell_PHB-Guardian-of-Faith"`;
 
@@ -340,9 +380,17 @@ exports[`fmtDataUrl > Guiding Bolt from PHB fmt matches snapshot 1`] = `"spell_P
 
 exports[`fmtDataUrl > Gust of Wind from PHB fmt matches snapshot 1`] = `"spell_PHB-Gust-of-Wind"`;
 
+exports[`fmtDataUrl > Halberd from PHB fmt matches snapshot 1`] = `"item_PHB-Halberd"`;
+
+exports[`fmtDataUrl > Half Plate Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Half-Plate-Armor"`;
+
 exports[`fmtDataUrl > Hallow from PHB fmt matches snapshot 1`] = `"spell_PHB-Hallow"`;
 
 exports[`fmtDataUrl > Hallucinatory Terrain from PHB fmt matches snapshot 1`] = `"spell_PHB-Hallucinatory-Terrain"`;
+
+exports[`fmtDataUrl > Hand Crossbow from PHB fmt matches snapshot 1`] = `"item_PHB-Hand-Crossbow"`;
+
+exports[`fmtDataUrl > Handaxe from PHB fmt matches snapshot 1`] = `"item_PHB-Handaxe"`;
 
 exports[`fmtDataUrl > Harm from PHB fmt matches snapshot 1`] = `"spell_PHB-Harm"`;
 
@@ -354,6 +402,8 @@ exports[`fmtDataUrl > Healing Word from PHB fmt matches snapshot 1`] = `"spell_P
 
 exports[`fmtDataUrl > Heat Metal from PHB fmt matches snapshot 1`] = `"spell_PHB-Heat-Metal"`;
 
+exports[`fmtDataUrl > Heavy Crossbow from PHB fmt matches snapshot 1`] = `"item_PHB-Heavy-Crossbow"`;
+
 exports[`fmtDataUrl > Hellish Rebuke from PHB fmt matches snapshot 1`] = `"spell_PHB-Hellish-Rebuke"`;
 
 exports[`fmtDataUrl > Help from PHB fmt matches snapshot 1`] = `"action_PHB-Help"`;
@@ -361,6 +411,8 @@ exports[`fmtDataUrl > Help from PHB fmt matches snapshot 1`] = `"action_PHB-Help
 exports[`fmtDataUrl > Heroes' Feast from PHB fmt matches snapshot 1`] = `"spell_PHB-Heroes'-Feast"`;
 
 exports[`fmtDataUrl > Heroism from PHB fmt matches snapshot 1`] = `"spell_PHB-Heroism"`;
+
+exports[`fmtDataUrl > Hide Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Hide-Armor"`;
 
 exports[`fmtDataUrl > Hide from PHB fmt matches snapshot 1`] = `"action_PHB-Hide"`;
 
@@ -394,15 +446,25 @@ exports[`fmtDataUrl > Invisibility from PHB fmt matches snapshot 1`] = `"spell_P
 
 exports[`fmtDataUrl > Invisible from PHB fmt matches snapshot 1`] = `"condition_PHB-Invisible"`;
 
+exports[`fmtDataUrl > Javelin from PHB fmt matches snapshot 1`] = `"item_PHB-Javelin"`;
+
 exports[`fmtDataUrl > Jump from PHB fmt matches snapshot 1`] = `"spell_PHB-Jump"`;
 
 exports[`fmtDataUrl > Knock from PHB fmt matches snapshot 1`] = `"spell_PHB-Knock"`;
+
+exports[`fmtDataUrl > Lance from PHB fmt matches snapshot 1`] = `"item_PHB-Lance"`;
+
+exports[`fmtDataUrl > Leather Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Leather-Armor"`;
 
 exports[`fmtDataUrl > Legend Lore from PHB fmt matches snapshot 1`] = `"spell_PHB-Legend-Lore"`;
 
 exports[`fmtDataUrl > Lesser Restoration from PHB fmt matches snapshot 1`] = `"spell_PHB-Lesser-Restoration"`;
 
 exports[`fmtDataUrl > Levitate from PHB fmt matches snapshot 1`] = `"spell_PHB-Levitate"`;
+
+exports[`fmtDataUrl > Light Crossbow from PHB fmt matches snapshot 1`] = `"item_PHB-Light-Crossbow"`;
+
+exports[`fmtDataUrl > Light Hammer from PHB fmt matches snapshot 1`] = `"item_PHB-Light-Hammer"`;
 
 exports[`fmtDataUrl > Light from PHB fmt matches snapshot 1`] = `"spell_PHB-Light"`;
 
@@ -414,7 +476,13 @@ exports[`fmtDataUrl > Locate Creature from PHB fmt matches snapshot 1`] = `"spel
 
 exports[`fmtDataUrl > Locate Object from PHB fmt matches snapshot 1`] = `"spell_PHB-Locate-Object"`;
 
+exports[`fmtDataUrl > Longbow from PHB fmt matches snapshot 1`] = `"item_PHB-Longbow"`;
+
 exports[`fmtDataUrl > Longstrider from PHB fmt matches snapshot 1`] = `"spell_PHB-Longstrider"`;
+
+exports[`fmtDataUrl > Longsword from PHB fmt matches snapshot 1`] = `"item_PHB-Longsword"`;
+
+exports[`fmtDataUrl > Mace from PHB fmt matches snapshot 1`] = `"item_PHB-Mace"`;
 
 exports[`fmtDataUrl > Mage Armor from PHB fmt matches snapshot 1`] = `"spell_PHB-Mage-Armor"`;
 
@@ -439,6 +507,8 @@ exports[`fmtDataUrl > Mass Heal from PHB fmt matches snapshot 1`] = `"spell_PHB-
 exports[`fmtDataUrl > Mass Healing Word from PHB fmt matches snapshot 1`] = `"spell_PHB-Mass-Healing-Word"`;
 
 exports[`fmtDataUrl > Mass Suggestion from PHB fmt matches snapshot 1`] = `"spell_PHB-Mass-Suggestion"`;
+
+exports[`fmtDataUrl > Maul from PHB fmt matches snapshot 1`] = `"item_PHB-Maul"`;
 
 exports[`fmtDataUrl > Maze from PHB fmt matches snapshot 1`] = `"spell_PHB-Maze"`;
 
@@ -466,13 +536,21 @@ exports[`fmtDataUrl > Modify Memory from PHB fmt matches snapshot 1`] = `"spell_
 
 exports[`fmtDataUrl > Moonbeam from PHB fmt matches snapshot 1`] = `"spell_PHB-Moonbeam"`;
 
+exports[`fmtDataUrl > Morningstar from PHB fmt matches snapshot 1`] = `"item_PHB-Morningstar"`;
+
 exports[`fmtDataUrl > Move Earth from PHB fmt matches snapshot 1`] = `"spell_PHB-Move-Earth"`;
+
+exports[`fmtDataUrl > Net from PHB fmt matches snapshot 1`] = `"item_PHB-Net"`;
 
 exports[`fmtDataUrl > Nondetection from PHB fmt matches snapshot 1`] = `"spell_PHB-Nondetection"`;
 
 exports[`fmtDataUrl > Opportunity Attack from PHB fmt matches snapshot 1`] = `"action_PHB-Opportunity-Attack"`;
 
+exports[`fmtDataUrl > Orb from PHB fmt matches snapshot 1`] = `"item_PHB-Orb"`;
+
 exports[`fmtDataUrl > Other Activity from PHB fmt matches snapshot 1`] = `"action_PHB-Other-Activity"`;
+
+exports[`fmtDataUrl > Padded Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Padded-Armor"`;
 
 exports[`fmtDataUrl > Paralyzed from PHB fmt matches snapshot 1`] = `"condition_PHB-Paralyzed"`;
 
@@ -486,6 +564,8 @@ exports[`fmtDataUrl > Phantasmal Killer from PHB fmt matches snapshot 1`] = `"sp
 
 exports[`fmtDataUrl > Phantom Steed from PHB fmt matches snapshot 1`] = `"spell_PHB-Phantom-Steed"`;
 
+exports[`fmtDataUrl > Pike from PHB fmt matches snapshot 1`] = `"item_PHB-Pike"`;
+
 exports[`fmtDataUrl > Planar Ally from PHB fmt matches snapshot 1`] = `"spell_PHB-Planar-Ally"`;
 
 exports[`fmtDataUrl > Planar Binding from PHB fmt matches snapshot 1`] = `"spell_PHB-Planar-Binding"`;
@@ -493,6 +573,8 @@ exports[`fmtDataUrl > Planar Binding from PHB fmt matches snapshot 1`] = `"spell
 exports[`fmtDataUrl > Plane Shift from PHB fmt matches snapshot 1`] = `"spell_PHB-Plane-Shift"`;
 
 exports[`fmtDataUrl > Plant Growth from PHB fmt matches snapshot 1`] = `"spell_PHB-Plant-Growth"`;
+
+exports[`fmtDataUrl > Plate Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Plate-Armor"`;
 
 exports[`fmtDataUrl > Poison Spray from PHB fmt matches snapshot 1`] = `"spell_PHB-Poison-Spray"`;
 
@@ -528,7 +610,11 @@ exports[`fmtDataUrl > Protection from Poison from PHB fmt matches snapshot 1`] =
 
 exports[`fmtDataUrl > Purify Food and Drink from PHB fmt matches snapshot 1`] = `"spell_PHB-Purify-Food-and-Drink"`;
 
+exports[`fmtDataUrl > Quarterstaff from PHB fmt matches snapshot 1`] = `"item_PHB-Quarterstaff"`;
+
 exports[`fmtDataUrl > Raise Dead from PHB fmt matches snapshot 1`] = `"spell_PHB-Raise-Dead"`;
+
+exports[`fmtDataUrl > Rapier from PHB fmt matches snapshot 1`] = `"item_PHB-Rapier"`;
 
 exports[`fmtDataUrl > Ray of Enfeeblement from PHB fmt matches snapshot 1`] = `"spell_PHB-Ray-of-Enfeeblement"`;
 
@@ -552,11 +638,19 @@ exports[`fmtDataUrl > Reverse Gravity from PHB fmt matches snapshot 1`] = `"spel
 
 exports[`fmtDataUrl > Revivify from PHB fmt matches snapshot 1`] = `"spell_PHB-Revivify"`;
 
+exports[`fmtDataUrl > Ring Mail from PHB fmt matches snapshot 1`] = `"item_PHB-Ring-Mail"`;
+
+exports[`fmtDataUrl > Rod from PHB fmt matches snapshot 1`] = `"item_PHB-Rod"`;
+
 exports[`fmtDataUrl > Rope Trick from PHB fmt matches snapshot 1`] = `"spell_PHB-Rope-Trick"`;
 
 exports[`fmtDataUrl > Sacred Flame from PHB fmt matches snapshot 1`] = `"spell_PHB-Sacred-Flame"`;
 
 exports[`fmtDataUrl > Sanctuary from PHB fmt matches snapshot 1`] = `"spell_PHB-Sanctuary"`;
+
+exports[`fmtDataUrl > Scale Mail from PHB fmt matches snapshot 1`] = `"item_PHB-Scale-Mail"`;
+
+exports[`fmtDataUrl > Scimitar from PHB fmt matches snapshot 1`] = `"item_PHB-Scimitar"`;
 
 exports[`fmtDataUrl > Scorching Ray from PHB fmt matches snapshot 1`] = `"spell_PHB-Scorching-Ray"`;
 
@@ -578,7 +672,9 @@ exports[`fmtDataUrl > Shapechange from PHB fmt matches snapshot 1`] = `"spell_PH
 
 exports[`fmtDataUrl > Shatter from PHB fmt matches snapshot 1`] = `"spell_PHB-Shatter"`;
 
-exports[`fmtDataUrl > Shield from PHB fmt matches snapshot 1`] = `"spell_PHB-Shield"`;
+exports[`fmtDataUrl > Shield from PHB fmt matches snapshot 1`] = `"item_PHB-Shield"`;
+
+exports[`fmtDataUrl > Shield from PHB fmt matches snapshot 2`] = `"spell_PHB-Shield"`;
 
 exports[`fmtDataUrl > Shield of Faith from PHB fmt matches snapshot 1`] = `"spell_PHB-Shield-of-Faith"`;
 
@@ -586,7 +682,13 @@ exports[`fmtDataUrl > Shillelagh from PHB fmt matches snapshot 1`] = `"spell_PHB
 
 exports[`fmtDataUrl > Shocking Grasp from PHB fmt matches snapshot 1`] = `"spell_PHB-Shocking-Grasp"`;
 
+exports[`fmtDataUrl > Shortbow from PHB fmt matches snapshot 1`] = `"item_PHB-Shortbow"`;
+
+exports[`fmtDataUrl > Shortsword from PHB fmt matches snapshot 1`] = `"item_PHB-Shortsword"`;
+
 exports[`fmtDataUrl > Shove from PHB fmt matches snapshot 1`] = `"action_PHB-Shove"`;
+
+exports[`fmtDataUrl > Sickle from PHB fmt matches snapshot 1`] = `"item_PHB-Sickle"`;
 
 exports[`fmtDataUrl > Sight Rot from DMG fmt matches snapshot 1`] = `"disease_DMG-Sight-Rot"`;
 
@@ -600,6 +702,12 @@ exports[`fmtDataUrl > Sleep from PHB fmt matches snapshot 1`] = `"spell_PHB-Slee
 
 exports[`fmtDataUrl > Sleet Storm from PHB fmt matches snapshot 1`] = `"spell_PHB-Sleet-Storm"`;
 
+exports[`fmtDataUrl > Sling Bullet from PHB fmt matches snapshot 1`] = `"item_PHB-Sling-Bullet"`;
+
+exports[`fmtDataUrl > Sling Bullets (20) from PHB fmt matches snapshot 1`] = `"item_PHB-Sling-Bullets-(20)"`;
+
+exports[`fmtDataUrl > Sling from PHB fmt matches snapshot 1`] = `"item_PHB-Sling"`;
+
 exports[`fmtDataUrl > Slow from PHB fmt matches snapshot 1`] = `"spell_PHB-Slow"`;
 
 exports[`fmtDataUrl > Spare the Dying from PHB fmt matches snapshot 1`] = `"spell_PHB-Spare-the-Dying"`;
@@ -610,6 +718,8 @@ exports[`fmtDataUrl > Speak with Dead from PHB fmt matches snapshot 1`] = `"spel
 
 exports[`fmtDataUrl > Speak with Plants from PHB fmt matches snapshot 1`] = `"spell_PHB-Speak-with-Plants"`;
 
+exports[`fmtDataUrl > Spear from PHB fmt matches snapshot 1`] = `"item_PHB-Spear"`;
+
 exports[`fmtDataUrl > Spider Climb from PHB fmt matches snapshot 1`] = `"spell_PHB-Spider-Climb"`;
 
 exports[`fmtDataUrl > Spike Growth from PHB fmt matches snapshot 1`] = `"spell_PHB-Spike-Growth"`;
@@ -618,6 +728,10 @@ exports[`fmtDataUrl > Spirit Guardians from PHB fmt matches snapshot 1`] = `"spe
 
 exports[`fmtDataUrl > Spiritual Weapon from PHB fmt matches snapshot 1`] = `"spell_PHB-Spiritual-Weapon"`;
 
+exports[`fmtDataUrl > Splint Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Splint-Armor"`;
+
+exports[`fmtDataUrl > Staff from PHB fmt matches snapshot 1`] = `"item_PHB-Staff"`;
+
 exports[`fmtDataUrl > Stinking Cloud from PHB fmt matches snapshot 1`] = `"spell_PHB-Stinking-Cloud"`;
 
 exports[`fmtDataUrl > Stone Shape from PHB fmt matches snapshot 1`] = `"spell_PHB-Stone-Shape"`;
@@ -625,6 +739,8 @@ exports[`fmtDataUrl > Stone Shape from PHB fmt matches snapshot 1`] = `"spell_PH
 exports[`fmtDataUrl > Stoneskin from PHB fmt matches snapshot 1`] = `"spell_PHB-Stoneskin"`;
 
 exports[`fmtDataUrl > Storm of Vengeance from PHB fmt matches snapshot 1`] = `"spell_PHB-Storm-of-Vengeance"`;
+
+exports[`fmtDataUrl > Studded Leather Armor from PHB fmt matches snapshot 1`] = `"item_PHB-Studded-Leather-Armor"`;
 
 exports[`fmtDataUrl > Stunned from PHB fmt matches snapshot 1`] = `"condition_PHB-Stunned"`;
 
@@ -653,6 +769,8 @@ exports[`fmtDataUrl > Tongues from PHB fmt matches snapshot 1`] = `"spell_PHB-To
 exports[`fmtDataUrl > Transport via Plants from PHB fmt matches snapshot 1`] = `"spell_PHB-Transport-via-Plants"`;
 
 exports[`fmtDataUrl > Tree Stride from PHB fmt matches snapshot 1`] = `"spell_PHB-Tree-Stride"`;
+
+exports[`fmtDataUrl > Trident from PHB fmt matches snapshot 1`] = `"item_PHB-Trident"`;
 
 exports[`fmtDataUrl > True Polymorph from PHB fmt matches snapshot 1`] = `"spell_PHB-True-Polymorph"`;
 
@@ -684,7 +802,13 @@ exports[`fmtDataUrl > Wall of Stone from PHB fmt matches snapshot 1`] = `"spell_
 
 exports[`fmtDataUrl > Wall of Thorns from PHB fmt matches snapshot 1`] = `"spell_PHB-Wall-of-Thorns"`;
 
+exports[`fmtDataUrl > Wand from PHB fmt matches snapshot 1`] = `"item_PHB-Wand"`;
+
+exports[`fmtDataUrl > War Pick from PHB fmt matches snapshot 1`] = `"item_PHB-War-Pick"`;
+
 exports[`fmtDataUrl > Warding Bond from PHB fmt matches snapshot 1`] = `"spell_PHB-Warding-Bond"`;
+
+exports[`fmtDataUrl > Warhammer from PHB fmt matches snapshot 1`] = `"item_PHB-Warhammer"`;
 
 exports[`fmtDataUrl > Water Breathing from PHB fmt matches snapshot 1`] = `"spell_PHB-Water-Breathing"`;
 
@@ -694,11 +818,15 @@ exports[`fmtDataUrl > Web from PHB fmt matches snapshot 1`] = `"spell_PHB-Web"`;
 
 exports[`fmtDataUrl > Weird from PHB fmt matches snapshot 1`] = `"spell_PHB-Weird"`;
 
+exports[`fmtDataUrl > Whip from PHB fmt matches snapshot 1`] = `"item_PHB-Whip"`;
+
 exports[`fmtDataUrl > Wind Walk from PHB fmt matches snapshot 1`] = `"spell_PHB-Wind-Walk"`;
 
 exports[`fmtDataUrl > Wind Wall from PHB fmt matches snapshot 1`] = `"spell_PHB-Wind-Wall"`;
 
 exports[`fmtDataUrl > Wish from PHB fmt matches snapshot 1`] = `"spell_PHB-Wish"`;
+
+exports[`fmtDataUrl > Wooden Staff from PHB fmt matches snapshot 1`] = `"item_PHB-Wooden-Staff"`;
 
 exports[`fmtDataUrl > Word of Recall from PHB fmt matches snapshot 1`] = `"spell_PHB-Word-of-Recall"`;
 

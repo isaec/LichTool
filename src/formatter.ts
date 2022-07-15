@@ -160,7 +160,7 @@ export const extractTypeFromUrl = (url: string): string | "unknown" => {
   return "unknown";
 };
 
-const wordsRegex = /([\w']+)([\s\-\/])?/gm;
+const wordsRegex = /([^\s\-\/]+)([\s\-\/])?/gm;
 export const fmtNameForUrl = (name: string): string => {
   const words = Array.from(name.matchAll(wordsRegex));
   const result: string[] = [];

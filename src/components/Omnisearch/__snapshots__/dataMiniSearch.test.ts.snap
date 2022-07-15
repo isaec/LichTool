@@ -143,6 +143,12 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
     ],
   },
   {
+    "id": "item_PHB-Wand",
+    "terms": [
+      "wand",
+    ],
+  },
+  {
     "id": "spell_PHB-Antimagic-Field",
     "terms": [
       "field",
@@ -170,6 +176,18 @@ exports[`dataMiniSearch > matches snapshot for search results with query find 1`
     "id": "spell_PHB-Warding-Bond",
     "terms": [
       "bond",
+    ],
+  },
+  {
+    "id": "item_PHB-Ring-Mail",
+    "terms": [
+      "ring",
+    ],
+  },
+  {
+    "id": "item_PHB-Hand-Crossbow",
+    "terms": [
+      "hand",
     ],
   },
   {
@@ -300,9 +318,9 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
     ],
   },
   {
-    "id": "action_PHB-Hide",
+    "id": "item_PHB-Pike",
     "terms": [
-      "hide",
+      "pike",
     ],
   },
   {
@@ -312,21 +330,21 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
     ],
   },
   {
+    "id": "action_PHB-Hide",
+    "terms": [
+      "hide",
+    ],
+  },
+  {
     "id": "spell_PHB-Fly",
     "terms": [
       "fly",
     ],
   },
   {
-    "id": "spell_PHB-Guiding-Bolt",
+    "id": "item_PHB-Net",
     "terms": [
-      "bolt",
-    ],
-  },
-  {
-    "id": "spell_PHB-Lightning-Bolt",
-    "terms": [
-      "bolt",
+      "net",
     ],
   },
   {
@@ -360,9 +378,33 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
     ],
   },
   {
+    "id": "item_PHB-Crossbow-Bolt",
+    "terms": [
+      "bolt",
+    ],
+  },
+  {
+    "id": "spell_PHB-Guiding-Bolt",
+    "terms": [
+      "bolt",
+    ],
+  },
+  {
+    "id": "spell_PHB-Lightning-Bolt",
+    "terms": [
+      "bolt",
+    ],
+  },
+  {
     "id": "spell_PHB-Wall-of-Force",
     "terms": [
       "force",
+    ],
+  },
+  {
+    "id": "item_PHB-Hide-Armor",
+    "terms": [
+      "hide",
     ],
   },
   {
@@ -375,6 +417,12 @@ exports[`dataMiniSearch > matches snapshot for search results with query fire bl
     "id": "disease_DMG-Sight-Rot",
     "terms": [
       "rot",
+    ],
+  },
+  {
+    "id": "item_PHB-Crossbow-Bolts-20",
+    "terms": [
+      "bolts",
     ],
   },
   {
@@ -503,6 +551,12 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
+    "id": "item_PHB-Mace",
+    "terms": [
+      "mace",
+    ],
+  },
+  {
     "id": "spell_PHB-Wind-Walk",
     "terms": [
       "wind",
@@ -523,15 +577,15 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
-    "id": "action_PHB-Hide",
-    "terms": [
-      "hide",
-    ],
-  },
-  {
     "id": "spell_PHB-Maze",
     "terms": [
       "maze",
+    ],
+  },
+  {
+    "id": "item_PHB-Pike",
+    "terms": [
+      "pike",
     ],
   },
   {
@@ -541,9 +595,21 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
+    "id": "item_PHB-Flail",
+    "terms": [
+      "flail",
+    ],
+  },
+  {
     "id": "spell_PHB-Bless",
     "terms": [
       "bless",
+    ],
+  },
+  {
+    "id": "item_PHB-Lance",
+    "terms": [
+      "lance",
     ],
   },
   {
@@ -559,9 +625,21 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
+    "id": "action_PHB-Hide",
+    "terms": [
+      "hide",
+    ],
+  },
+  {
     "id": "action_PHB-Attack",
     "terms": [
       "attack",
+    ],
+  },
+  {
+    "id": "spell_PHB-Blur",
+    "terms": [
+      "blur",
     ],
   },
   {
@@ -583,15 +661,15 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
-    "id": "spell_PHB-Arcane-Lock",
+    "id": "item_PHB-Ring-Mail",
     "terms": [
-      "lock",
+      "ring",
     ],
   },
   {
-    "id": "spell_PHB-Blur",
+    "id": "spell_PHB-Arcane-Lock",
     "terms": [
-      "blur",
+      "lock",
     ],
   },
   {
@@ -628,6 +706,12 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     "id": "spell_PHB-Rope-Trick",
     "terms": [
       "trick",
+    ],
+  },
+  {
+    "id": "item_PHB-Hide-Armor",
+    "terms": [
+      "hide",
     ],
   },
   {
@@ -679,6 +763,18 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
+    "id": "item_PHB-War-Pick",
+    "terms": [
+      "pick",
+    ],
+  },
+  {
+    "id": "item_PHB-Plate-Armor",
+    "terms": [
+      "plate",
+    ],
+  },
+  {
     "id": "spell_PHB-Plane-Shift",
     "terms": [
       "plane",
@@ -727,12 +823,6 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     ],
   },
   {
-    "id": "spell_PHB-Hunter's-Mark",
-    "terms": [
-      "mark",
-    ],
-  },
-  {
     "id": "spell_PHB-Faerie-Fire",
     "terms": [
       "fire",
@@ -754,6 +844,18 @@ exports[`dataMiniSearch > matches snapshot for search results with query mine bl
     "id": "spell_PHB-Fire-Storm",
     "terms": [
       "fire",
+    ],
+  },
+  {
+    "id": "spell_PHB-Hunter's-Mark",
+    "terms": [
+      "mark",
+    ],
+  },
+  {
+    "id": "item_PHB-Half-Plate-Armor",
+    "terms": [
+      "plate",
     ],
   },
   {
