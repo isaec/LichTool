@@ -1,4 +1,4 @@
-import { fmtDataUrl } from "@src/formatter";
+import { fmtDataUrl } from "@util/formatter";
 import { Link } from "solid-app-router";
 import { Component } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";

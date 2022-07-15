@@ -2,7 +2,7 @@ import { Component, createMemo, JSX, Match, Show, Switch } from "solid-js";
 import styles from "./DataElement.module.scss";
 import { schoolAbbreviationMap } from "@src/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
-import { fmtDuration, fmtRange } from "@src/formatter";
+import { fmtDuration, fmtRange } from "@util/formatter";
 import { RawDataSpell } from "@src/dataLookup";
 import KeyValue from "./KeyValue";
 import DataFooter from "./DataFooter";

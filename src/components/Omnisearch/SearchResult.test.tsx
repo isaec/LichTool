@@ -1,5 +1,5 @@
 import { dataArray, isType } from "@src/dataLookup";
-import { extractTypeFromUrl } from "@src/formatter";
+import { extractTypeFromUrl } from "@util/formatter";
 import { Dynamic } from "solid-js/web";
 import { render } from "solid-testing-library";
 import { describe, expect, it, vi } from "vitest";

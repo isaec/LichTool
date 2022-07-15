@@ -28,6 +28,7 @@ export default defineConfig({
     conditions: ["development", "browser"],
     alias: [
       { find: "@src", replacement: `${process.cwd()}/src` },
+      { find: "@util", replacement: `${process.cwd()}/src/util` },
       { find: "@components", replacement: `${process.cwd()}/src/components` },
       { find: "@data", replacement: `${process.cwd()}/processed_data` },
       { find: "@routes", replacement: `${process.cwd()}/src/routes` },

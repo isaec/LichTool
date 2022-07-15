@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { dataArray, isDataSpell } from "./dataLookup";
+import { dataArray, isDataSpell } from "@src/dataLookup";
 import {
   extractTypeFromUrl,
   fmtAndList,

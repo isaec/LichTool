@@ -18,7 +18,7 @@ import {
   ItemRarity,
 } from "@src/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
-import { extractTypeFromUrl } from "./formatter";
+import { extractTypeFromUrl } from "@util/formatter";
 
 export const isType =
   <T extends DataUnion>(type: string) =>

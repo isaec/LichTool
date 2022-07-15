@@ -9,7 +9,7 @@ import {
   Switch,
 } from "solid-js";
 import { schoolAbbreviationMap } from "@src/generalTypes";
-import { extractTypeFromUrl, fmtRange } from "@src/formatter";
+import { extractTypeFromUrl, fmtRange } from "@util/formatter";
 
 import styles from "./SearchResult.module.scss";
 import { useNavigate } from "solid-app-router";

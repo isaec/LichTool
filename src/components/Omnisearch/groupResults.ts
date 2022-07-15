@@ -1,4 +1,4 @@
-import { extractTypeFromUrl } from "@src/formatter";
+import { extractTypeFromUrl } from "@util/formatter";
 
 type Result = { id: string };
 
