@@ -62,6 +62,8 @@
       border-radius: $radius-xs;
       color: $color-grey-200;
 
+      min-width: 5em;
+
       background-color: $color-grey-700;
       // don't overpower hover or focus
       &:not(:hover):not(:focus) {
