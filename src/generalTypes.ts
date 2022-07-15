@@ -167,3 +167,30 @@ export type ItemTypes =
   | "WD";
 
 export type ItemRarity = "none" | "unknown" | "unknown (magic)" | "varies";
+
+/*
+Coin	      CP	SP	EP	GP	PP
+cp value  	1	  10	50	100	1,000
+*/
+
+/**
+ * shorthand string for currency
+ */
+export type Currency = "cp" | "sp" | "ep" | "gp" | "pp";
+/**
+ * maps from Currency to value in copper
+ */
+export const currencyToCopperMap = new Map<Currency, number>([
+  ["cp", 1],
+  ["sp", 10],
+  ["ep", 50],
+  ["gp", 100],
+  ["pp", 1_000],
+]);
+export const currencyToNameMap = new Map<Currency, string>([
+  ["cp", "copper"],
+  ["sp", "silver"],
+  ["ep", "electrum"],
+  ["gp", "gold"],
+  ["pp", "platinum"],
+]);
