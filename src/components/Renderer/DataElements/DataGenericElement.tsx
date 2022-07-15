@@ -1,6 +1,7 @@
 import { DataUnion, RawData } from "@src/dataLookup";
-import { Component } from "solid-js";
+import { Component, Show } from "solid-js";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
+import { DataBodyEntries, Entries } from "./DataBodyEntries";
 
 import styles from "./DataElement.module.scss";
 import DataFooter from "./DataFooter";
@@ -11,9 +12,7 @@ const DataGenericElement: Component<{
 }> = (props) => (
   <div class={styles.DataElement}>
     <DataHeader data={props.data} />
-    <RendererStyles>
-      <DataGroupRenderer group={props.data.entries} entryLevel={2} />
-    </RendererStyles>
+    <Entries data={props.data} />
     <DataFooter data={props.data} />
   </div>
 );

@@ -7,6 +7,7 @@ import { RawDataSpell } from "@src/dataLookup";
 import KeyValue from "./KeyValue";
 import DataFooter from "./DataFooter";
 import DataHeader from "./DataHeader";
+import { DataBodyEntries, Entries } from "./DataBodyEntries";
 
 const plural = (num: number, str: string) =>
   `${num} ${str}${num > 1 ? "s" : ""}`;
@@ -52,15 +53,7 @@ const DataSpellElement: Component<{
       <KeyValue key={"Duration"}>
         {fmtDuration(props.data.duration[0])}
       </KeyValue>
-      <RendererStyles>
-        <DataGroupRenderer group={props.data.entries} entryLevel={2} />
-        <Show when={props.data.entriesHigherLevel !== undefined}>
-          <DataGroupRenderer
-            group={props.data.entriesHigherLevel!}
-            entryLevel={2}
-          />
-        </Show>
-      </RendererStyles>
+      <Entries data={props.data} />
       <DataFooter data={props.data} />
     </div>
   );
