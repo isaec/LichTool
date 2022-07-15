@@ -76,9 +76,20 @@ const Col: Component<{
   </th>
 );
 
+type HeadComponent = Component<{}>;
+type GenericHeadComponent = Component<{
+  type: string;
+}>;
+type ResultComponent = Component<{
+  id: string;
+}>;
+
 // implementations
 
-const SpellHeader: Component = () => (
+const headMap = new Map<string, HeadComponent | GenericHeadComponent>();
+const resultMap = new Map<string, ResultComponent>();
+
+const SpellHeader: HeadComponent = () => (
   <Head>
     <Col>spell name</Col>
     <Col>level</Col>
@@ -89,8 +100,9 @@ const SpellHeader: Component = () => (
     <Col>source</Col>
   </Head>
 );
+headMap.set("spell", SpellHeader);
 
-const SpellSearchResult: Component<{ id: string }> = (props) => {
+const SpellSearchResult: ResultComponent = (props) => {
   const dataObj = createMemo(
     () => dataMap.get(props.id)!
   ) as Accessor<DataSpell>;
@@ -114,16 +126,18 @@ const SpellSearchResult: Component<{ id: string }> = (props) => {
     </TableRow>
   );
 };
+resultMap.set("spell", SpellSearchResult);
 
-const GenericHeader: Component<{ type: string }> = (props) => (
+const GenericHeader: GenericHeadComponent = (props) => (
   <Head>
     <Col>{props.type} name</Col>
     <Col>page</Col>
     <Col>source</Col>
   </Head>
 );
+headMap.set("generic", GenericHeader);
 
-const GenericSearchResult: Component<{ id: string }> = (props) => {
+const GenericSearchResult: ResultComponent = (props) => {
   const dataObj = createMemo(() => dataMap.get(props.id)!);
   return (
     <TableRow id={props.id}>
@@ -133,18 +147,21 @@ const GenericSearchResult: Component<{ id: string }> = (props) => {
     </TableRow>
   );
 };
+resultMap.set("generic", GenericSearchResult);
 
-const headMap = new Map([["spell", SpellHeader]]);
+const getComponentFromMap =
+  <T,>(map: Map<string, T>) =>
+  (type: string): T =>
+    map.get(type) ?? map.get("generic")!;
+
+export const getHead = getComponentFromMap(headMap);
+export const getResult = getComponentFromMap(resultMap);
 
 export const SearchResult: Component<{ id: string }> = (props) => {
-  const dataType = createMemo(() => extractTypeFromUrl(props.id));
-  return (
-    <Switch fallback={<GenericSearchResult id={props.id} />}>
-      <Match when={dataType() === "spell"}>
-        <SpellSearchResult id={props.id} />
-      </Match>
-    </Switch>
+  const resultComponent = createMemo(() =>
+    getResult(extractTypeFromUrl(props.id))
   );
+  return <Dynamic component={resultComponent()} id={props.id} />;
 };
 
 export const Results: Component<{ results: ResultsGroup[] }> = (props) => (
@@ -153,7 +170,7 @@ export const Results: Component<{ results: ResultsGroup[] }> = (props) => (
       {(resultGroup) => (
         <table class={styles.results}>
           <Dynamic
-            component={headMap.get(resultGroup.type) ?? GenericHeader}
+            component={getHead(resultGroup.type)}
             type={resultGroup.type}
           />
           <For each={resultGroup.results}>

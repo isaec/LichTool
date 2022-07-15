@@ -20,7 +20,7 @@ import {
 import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "./formatter";
 
-const isType =
+export const isType =
   <T extends DataUnion>(type: string) =>
   (dataObj: DataUnion): dataObj is T =>
     extractTypeFromUrl(dataObj.id) === type;
