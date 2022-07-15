@@ -70,6 +70,7 @@ export type DataItem = IdData & {
   rarity?: ItemRarity;
   entries?: DataGroup;
   additionalEntries?: DataGroup;
+  value?: number | null;
 };
 
 export type RawConditionData = RawData<DataCondition>;
