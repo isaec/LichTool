@@ -15,6 +15,14 @@ vi.mock("solid-app-router", () => ({
   useNavigate: () => (arg0: string) => undefined,
 }));
 
+vi.mock("./SearchResult.module.scss", () => ({
+  default: new Proxy(new Object(), {
+    get(_, style) {
+      return style;
+    },
+  }),
+}));
+
 describe("Headers", () => {
   describe.each(dataTypes)("%s", (type) => {
     it("matches snapshot", () => {

@@ -1,4 +1,4 @@
-import { dataMap, DataSpell } from "@src/dataLookup";
+import { DataItem, dataMap, DataSpell } from "@src/dataLookup";
 import {
   Accessor,
   Component,
@@ -127,6 +127,31 @@ const SpellSearchResult: ResultComponent = (props) => {
   );
 };
 resultMap.set("spell", SpellSearchResult);
+
+const ItemHeader: HeadComponent = () => (
+  <Head>
+    <Col>item name</Col>
+    <Col>type</Col>
+    <Col>rarity</Col>
+    <Col>source</Col>
+  </Head>
+);
+headMap.set("item", ItemHeader);
+
+const ItemSearchResult: ResultComponent = (props) => {
+  const dataObj = createMemo(
+    () => dataMap.get(props.id)!
+  ) as Accessor<DataItem>;
+  return (
+    <TableRow id={props.id}>
+      <Key>{dataObj().name}</Key>
+      <Data>{dataObj().type ?? ""}</Data>
+      <Data>{dataObj().rarity}</Data>
+      <Data>{dataObj().source}</Data>
+    </TableRow>
+  );
+};
+resultMap.set("item", ItemSearchResult);
 
 const GenericHeader: GenericHeadComponent = (props) => (
   <Head>
