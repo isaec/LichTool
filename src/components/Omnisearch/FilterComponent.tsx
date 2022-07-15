@@ -1,5 +1,5 @@
 import { filterKeys, filterMap } from "@src/dataLookup";
-import { hammingDistanceFrom } from "@src/hamming";
+import { hammingDistanceFrom } from "@util/hamming";
 import {
   Component,
   createSignal,
