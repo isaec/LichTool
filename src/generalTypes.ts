@@ -128,3 +128,42 @@ export type ComponentsObject = {
     | { text: string; cost?: number; consume?: boolean | string };
   r?: boolean;
 };
+
+/**
+ * the different types an item can have
+ */
+export type ItemTypes =
+  | "$"
+  | "A"
+  | "AF"
+  | "AIR"
+  | "AT"
+  | "EM"
+  | "EXP"
+  | "FD"
+  | "G"
+  | "GS"
+  | "GV"
+  | "HA"
+  | "INS"
+  | "LA"
+  | "M"
+  | "MA"
+  | "MNT"
+  | "MR"
+  | "OTH"
+  | "P"
+  | "R"
+  | "RD"
+  | "RG"
+  | "S"
+  | "SC"
+  | "SCF"
+  | "SHP"
+  | "T"
+  | "TAH"
+  | "TG"
+  | "VEH"
+  | "WD";
+
+export type ItemRarity = "none" | "unknown" | "unknown (magic)" | "varies";

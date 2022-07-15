@@ -14,6 +14,8 @@ import {
   DurationObject,
   ComponentsObject,
   Abilities,
+  ItemTypes,
+  ItemRarity,
 } from "@src/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "./formatter";
@@ -34,7 +36,6 @@ export type RawData<T> = Omit<T, "id">;
 export type RawDataSpell = RawData<DataSpell>;
 export const isDataSpell = isType<DataSpell>("spell");
 export type DataSpell = IdData & {
-  name: string;
   level: Levels;
   school: SchoolAbbreviations;
   time: TimeObject[];
@@ -43,7 +44,6 @@ export type DataSpell = IdData & {
   duration: DurationObject[];
   entries: DataGroup;
   entriesHigherLevel?: DataGroup;
-  source: Sources;
   page: number;
   savingThrow?: Abilities[];
   abilityCheck?: Abilities[];
@@ -60,12 +60,22 @@ export type DataSpell = IdData & {
   };
 };
 
+export type RawDataItem = RawData<DataItem>;
+export const isDataItem = isType<DataItem>("item");
+export type DataItem = IdData & {
+  page: number;
+  srd?: boolean;
+  basicRules?: boolean;
+  type?: ItemTypes;
+  rarity?: ItemRarity;
+  entries?: DataGroup;
+  additionalEntries?: DataGroup;
+};
+
 export type RawConditionData = RawData<DataCondition>;
 export const isDataCondition = isType<DataCondition>("condition");
 export type DataCondition = IdData & {
-  name: string;
   entries: DataGroup;
-  source: Sources;
   page: number;
   srd?: boolean;
   basicRules?: boolean;
@@ -74,9 +84,7 @@ export type DataCondition = IdData & {
 export type RawDiseaseData = RawData<DataDisease>;
 export const isDataDisease = isType<DataDisease>("disease");
 export type DataDisease = IdData & {
-  name: string;
   entries: DataGroup;
-  source: Sources;
   page: number;
   srd?: boolean;
 };
@@ -92,7 +100,12 @@ export type DataStatus = IdData & {
   basicRules?: boolean;
 };
 
-export type DataUnion = DataSpell | DataCondition | DataDisease | DataStatus;
+export type DataUnion =
+  | DataSpell
+  | DataItem
+  | DataCondition
+  | DataDisease
+  | DataStatus;
 
 // data object collections
 
