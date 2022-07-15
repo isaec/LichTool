@@ -1,4 +1,4 @@
-import { filterKeys } from "@src/dataLookup";
+import { filterKeys, filterMap } from "@src/dataLookup";
 import { hammingDistanceFrom } from "@src/hamming";
 import {
   Component,
@@ -141,6 +141,24 @@ const FilterComponent: Component<{
       .sort(hammingDistanceFrom(props.filter.key));
   });
 
+  // much jank!
+  const valueOptions = createMemo(() => {
+    if (props.filter.key === undefined || !filterMap.has(props.filter.key))
+      return undefined;
+    if (props.filter.value === undefined)
+      return filterMap.get(props.filter.key)!;
+    return (
+      filterMap
+        .get(props.filter.key)!
+        // temporary toString
+        .map((value) => value.toString())
+        .filter((value) =>
+          value.toLowerCase().includes(props.filter.value!.toLowerCase())
+        )
+        .sort(hammingDistanceFrom(props.filter.value))
+    );
+  });
+
   type States = "key" | "value" | "use";
   // if filter is made from url data, it is ready to use
   const [state, setState] = createSignal<States>(
@@ -185,7 +203,7 @@ const FilterComponent: Component<{
           typeof props.filter.value === "string" &&
           props.filter.value.length > 0
         }
-        options={undefined}
+        options={valueOptions()}
         focus={state() === "value"}
         disabled={state() === "key"}
         finishKey="Enter"
