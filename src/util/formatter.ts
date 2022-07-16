@@ -121,6 +121,17 @@ export const fmtDuration = (data: DurationObject) => {
 };
 
 /**
+ *
+ * @param value the number to format
+ * @maxDecimal the maximum number of decimal places to display
+ * @returns string representing the number, formatted with commas
+ */
+export const fmtNumber = (value: number, maxDecimal = 2) =>
+  value.toLocaleString("en-US", {
+    maximumFractionDigits: maxDecimal,
+  });
+
+/**
  * format a value in copper for display as currency.
  * @param value the value in copper to format for display
  * @param fullName full name of the currency vs abbreviation

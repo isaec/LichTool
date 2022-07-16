@@ -7,6 +7,7 @@ import {
   fmtDataUrl,
   fmtDuration,
   fmtNameForUrl,
+  fmtNumber,
   fmtOrList,
   fmtRange,
 } from "./formatter";
@@ -58,6 +59,36 @@ describe("fmtRange", () => {
     )
   )("%s matches snapshot, shorten: %s", (_display, shorten, range) => {
     expect(fmtRange(range, shorten)).toMatchSnapshot();
+  });
+});
+
+describe("fmtNumber", () => {
+  it.each([
+    [0, "0"],
+    [1, "1"],
+    [10, "10"],
+    [100, "100"],
+    [1000, "1,000"],
+    [10000, "10,000"],
+    [100000, "100,000"],
+    [1000000, "1,000,000"],
+    [1234567, "1,234,567"],
+    // decimal tests
+    [0.1, "0.1"],
+    [0.01, "0.01"],
+    [0.001, "0.001"],
+    [0.0001, "0.0001"],
+    [0.00001, "0.00001"],
+    // mixed tests
+    [1000.123, "1,000.123"],
+    [1234567.1234567, "1,234,567.1234567"],
+    // max decimal testing
+    [1.234567890123456789, "1.23", 2],
+    [1.1, "1", 0],
+    [1.5, "2", 0],
+    [1.4, "1", 0],
+  ])("%s is formatted to %s", (num, str, maxDecimal = 20) => {
+    expect(fmtNumber(num, maxDecimal)).toBe(str);
   });
 });
 
