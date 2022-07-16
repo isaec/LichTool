@@ -89,14 +89,18 @@ const deepMerge = <
 const processItems = async () => {
   const baseItemsFile = await fs.readFile("data/items-base.json", "utf8");
   type Item = DataBaseShape & {
+    type?: string;
+    property?: string[];
+  };
+  type ItemId = Item & { id: string };
+  const baseItemObject: {
     id: string;
-    baseitem: any[];
+    baseitem: Item[];
     itemProperty: any[];
     itemType: any[];
     itemEntry: any[];
     itemTypeAdditionalEntries: any[];
-  };
-  const baseItemObject: Item = JSON.parse(baseItemsFile);
+  } = JSON.parse(baseItemsFile);
 
   const baseItems = baseItemObject.baseitem;
   const typeMap = new Map(
@@ -118,7 +122,7 @@ const processItems = async () => {
     ])
   );
 
-  const expandedItems: Item[] = [];
+  const expandedItems: ItemId[] = [];
 
   baseItems
     .filter((item) => item.srd === true)
@@ -136,8 +140,8 @@ const processItems = async () => {
           }
         });
 
-      result.id = fmtDataUrl("item", result.name, result.source);
-      expandedItems.push(result);
+      (result as ItemId).id = fmtDataUrl("item", result.name, result.source);
+      expandedItems.push(result as ItemId);
     });
 
   processedData.push(...expandedItems);
