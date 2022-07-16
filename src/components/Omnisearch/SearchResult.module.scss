@@ -21,6 +21,13 @@ table.results {
   }
 }
 
+// query for really small mobile screens
+@mixin ultra-slim {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
 thead.Head {
   background-color: $color-grey-700;
   position: sticky;
@@ -30,12 +37,18 @@ thead.Head {
     &:first-of-type {
       text-align: left;
       min-width: unquote("0vw");
+      @include ultra-slim {
+        width: clamp(4em, 25vw, 8em);
+      }
       width: clamp(8em, 30vw, 22em);
     }
     width: auto;
     font-weight: normal;
     @include optionalCell;
     padding: 0 $size-2;
+    @include ultra-slim {
+      font-size: 0.8em;
+    }
   }
 }
 
@@ -50,6 +63,9 @@ tr.TableRow {
     color: $color-grey-200;
     word-wrap: break-word;
     padding: $size-4 $size-2;
+    @include ultra-slim {
+      font-size: 0.8em;
+    }
   }
 
   & > td.Data {
