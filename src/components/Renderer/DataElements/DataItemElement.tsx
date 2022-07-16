@@ -1,4 +1,5 @@
 import { DataItem, RawData } from "@src/dataLookup";
+import { fmtCurrency } from "@src/util/formatter";
 import { Component, Show } from "solid-js";
 import { Entries } from "./DataBodyEntries";
 
@@ -12,6 +13,10 @@ const DataItemElement: Component<{
   <div class={styles.DataElement}>
     <DataHeader data={props.data} />
     <i>{props.data.type}</i>
+    <p>{fmtCurrency(props.data.value)}</p>
+    <Show when={props.data.template !== undefined}>
+      <p>{props.data.template}</p>
+    </Show>
     <Entries data={props.data} />
     <DataFooter data={props.data} />
   </div>
