@@ -56,24 +56,34 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
   );
 };
 
-const deepMerge = (obj1: Record<string, any>, obj2: Record<string, any>) => {
-  const result: Record<string, any> = structuredClone(obj1);
+type Merge<A, B> = { [K in keyof (A | B)]: K extends keyof B ? B[K] : A[K] };
 
-  Object.entries(obj2).forEach(([key, value]) => {
+const deepMerge = <
+  T extends Record<string, any>,
+  K extends Record<string, any>
+>(
+  obj1: T,
+  obj2: K
+): Merge<T, K> => {
+  type Key = keyof Merge<T, K>;
+  type Val = Merge<T, K>[Key];
+  const result: Merge<T, K> = structuredClone(obj1);
+
+  Object.entries(obj2).forEach(([key, value]: [Key, Val]) => {
     switch (true) {
       case Array.isArray(value) === true:
         if (!result[key]) result[key] = value;
         else result[key] = result[key].concat(value);
         break;
       case typeof value === "object":
-        if (!result[key]) result[key] = {};
-        result[key] = deepMerge(result[key], value);
+        if (!result[key]) result[key] = value;
+        else result[key] = deepMerge(result[key], value) as Val;
         break;
       default:
         result[key] = value;
     }
   });
-  return result as DataBaseShape;
+  return result;
 };
 
 const processItems = async () => {
