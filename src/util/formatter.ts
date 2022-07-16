@@ -134,11 +134,11 @@ export const fmtNumber = (value: number, maxDecimal = 2) =>
 /**
  * format a value in copper for display as currency.
  * @param value the value in copper to format for display
- * @param fullName full name of the currency vs abbreviation
+ * @param long if false, use abbreviated currency names and only commas
  * @returns a string representing the value in copper
  */
-export const fmtCurrency = (value: number, fullName = false): string => {
-  const disp: (n: number, c: Currency) => string = fullName
+export const fmtCurrency = (value: number, long = false): string => {
+  const disp: (n: number, c: Currency) => string = long
     ? (n, c) => `${fmtNumber(n)} ${currencyToNameMap.get(c)!}`
     : (n, c) => `${fmtNumber(n)} ${c}`;
 
@@ -159,7 +159,7 @@ export const fmtCurrency = (value: number, fullName = false): string => {
       break;
     }
   }
-  return fmtAndList(results);
+  return long ? fmtAndList(results) : results.join(", ");
 };
 
 // this is a hacky solution for lowercase titles...

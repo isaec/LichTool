@@ -94,15 +94,16 @@ describe("fmtNumber", () => {
 
 describe("fmtCurrency", () => {
   it.each([
-    [0, "0 cp"],
-    [1, "1 cp"],
-    [2, "2 cp"],
-    [200, "2 gp"],
-    [2000, "2 pp"],
-    [2400, "2 pp and 4 gp"],
-    [1_000_000, "1,000 pp"],
-  ])("formats %s to %s", (value, expected) => {
+    [0, "0 cp", "0 copper"],
+    [1, "1 cp", "1 copper"],
+    [2, "2 cp", "2 copper"],
+    [200, "2 gp", "2 gold"],
+    [2000, "2 pp", "2 platinum"],
+    [2400, "2 pp, 4 gp", "2 platinum and 4 gold"],
+    [1_000_000, "1,000 pp", "1,000 platinum"],
+  ])("formats %s to %s, and full %s", (value, expected, expectedFull) => {
     expect(fmtCurrency(value)).toBe(expected);
+    expect(fmtCurrency(value, true)).toBe(expectedFull);
   });
 });
 
