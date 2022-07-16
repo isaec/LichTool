@@ -138,11 +138,11 @@ export const fmtNumber = (value: number, maxDecimal = 2) =>
  * @returns a string representing the value in copper
  */
 export const fmtCurrency = (value: number, fullName = false): string => {
-  const disp: (c: Currency) => string = fullName
-    ? (c) => currencyToNameMap.get(c)!
-    : (c) => c;
+  const disp: (n: number, c: Currency) => string = fullName
+    ? (n, c) => `${fmtNumber(n)} ${currencyToNameMap.get(c)!}`
+    : (n, c) => `${fmtNumber(n)} ${c}`;
 
-  if (value <= 1) return `${value} ${disp("cp")}`;
+  if (value <= 1) return disp(value, "cp");
 
   let remainder = value;
   const results: string[] = [];
@@ -155,7 +155,7 @@ export const fmtCurrency = (value: number, fullName = false): string => {
       const reductionInUnits = Math.floor(remainder / unitValue);
       const reductionCopper = reductionInUnits * unitValue;
       remainder -= reductionCopper;
-      results.push(`${reductionInUnits} ${disp(unit)}`);
+      results.push(disp(reductionInUnits, unit));
       break;
     }
   }
