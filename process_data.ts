@@ -128,6 +128,7 @@ type Item = DataBaseShape &
     entries?: any[];
     scfType: "arcane" | "druid" | "holy";
     property?: string[];
+    // template?: string;
   };
 
 const addEntriesToItem = (item: Item) => {
@@ -203,9 +204,9 @@ const processItems = async () => {
 
   const baseItems = baseItemObject.baseitem;
   const typeMap = new Map(
-    baseItemObject.itemType.map(({ abbreviation, ...type }) => [
+    baseItemObject.itemType.map(({ abbreviation, template, entries }) => [
       abbreviation,
-      type,
+      { template, entries },
     ])
   );
   const propertyMap = new Map(
@@ -213,13 +214,19 @@ const processItems = async () => {
       // filter out special property
       // it isn't needed for our system, it only exists in base data to enable filtering
       .filter((p) => p.abbreviation !== "S")
-      .map(({ abbreviation, ...p }) => [abbreviation, p])
+      .map(({ abbreviation, template, entries }) => [
+        abbreviation,
+        { template, entries },
+      ])
   );
 
   // this should be used eventually?
   const _typeAdditionalEntriesMap = new Map(
     baseItemObject.itemTypeAdditionalEntries.map(
-      ({ abbreviation, ...type }) => [abbreviation, type]
+      ({ abbreviation, template, entries }) => [
+        abbreviation,
+        { template, entries },
+      ]
     )
   );
 
