@@ -128,7 +128,7 @@ type Item = DataBaseShape &
     entries?: any[];
     scfType: "arcane" | "druid" | "holy";
     property?: string[];
-    // template?: string;
+    template?: string;
   };
 
 const addEntriesToItem = (item: Item) => {
@@ -238,13 +238,13 @@ const processItems = async () => {
       let result: Item = structuredClone(item);
 
       if (typeMap.has(item.type)) {
-        result = deepMerge(result, typeMap.get(item.type)) as Item;
+        result = deepMerge(result, typeMap.get(item.type)!) as Item;
       }
 
       if (item.property !== undefined)
         item.property.forEach((property: string) => {
           if (propertyMap.has(property)) {
-            result = deepMerge(result, propertyMap.get(property)) as Item;
+            result = deepMerge(result, propertyMap.get(property)!) as Item;
           }
         });
 
@@ -255,7 +255,18 @@ const processItems = async () => {
       expandedItems.push(result as ItemId);
     });
 
-  processedData.push(...expandedItems);
+  const expandedAndTemplatedItems = expandedItems.map((item) => {
+    if (!item.template) return item;
+    const template = item.template.replaceAll(
+      /{{item\.(\w+)}}/g,
+      (match, key: keyof typeof item) => {
+        return item[key]!.toString();
+      }
+    );
+    return { ...item, template };
+  });
+
+  processedData.push(...expandedAndTemplatedItems);
 };
 
 await Promise.all([
