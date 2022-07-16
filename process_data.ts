@@ -56,10 +56,7 @@ const processJson = async (paths: string | string[], checkSrd = true) => {
   );
 };
 
-const deepMerge = (
-  obj1: Readonly<Record<string, any>>,
-  obj2: Readonly<Record<string, any>>
-) => {
+const deepMerge = (obj1: Record<string, any>, obj2: Record<string, any>) => {
   const result: Record<string, any> = structuredClone(obj1);
 
   Object.entries(obj2).forEach(([key, value]) => {
@@ -76,18 +73,20 @@ const deepMerge = (
         result[key] = value;
     }
   });
-  return result;
+  return result as DataBaseShape;
 };
 
 const processItems = async () => {
   const baseItemsFile = await fs.readFile("data/items-base.json", "utf8");
-  const baseItemObject: {
+  type Item = DataBaseShape & {
+    id: string;
     baseitem: any[];
     itemProperty: any[];
     itemType: any[];
     itemEntry: any[];
     itemTypeAdditionalEntries: any[];
-  } & DataBaseShape = JSON.parse(baseItemsFile);
+  };
+  const baseItemObject: Item = JSON.parse(baseItemsFile);
 
   const baseItems = baseItemObject.baseitem;
   const typeMap = new Map(
@@ -100,19 +99,20 @@ const processItems = async () => {
       .filter((p) => p.abbreviation !== "S")
       .map((p) => [p.abbreviation, p])
   );
-  const typeAdditionalEntriesMap = new Map(
+
+  // this should be used eventually?
+  const _typeAdditionalEntriesMap = new Map(
     baseItemObject.itemTypeAdditionalEntries.map((type) => [
       type.abbreviation,
       type,
     ])
   );
 
-  const expandedItems: any[] = [];
+  const expandedItems: Item[] = [];
 
   baseItems
     .filter((item) => item.srd === true)
     .forEach((item) => {
-      type Item = Record<string, any> & DataBaseShape;
       let result: Item = structuredClone(item);
 
       if (typeMap.has(item.type)) {
@@ -127,10 +127,10 @@ const processItems = async () => {
         });
 
       result.id = fmtDataUrl("item", result.name, result.source);
-
-      processedData.push(result as Item & { id: string });
       expandedItems.push(result);
     });
+
+  processedData.push(...expandedItems);
 };
 
 await Promise.all([
