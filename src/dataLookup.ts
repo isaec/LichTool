@@ -71,6 +71,7 @@ export type DataItem = IdData & {
   entries?: DataGroup;
   additionalEntries?: DataGroup;
   value?: number | null;
+  template?: string;
 };
 
 export type RawConditionData = RawData<DataCondition>;

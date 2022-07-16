@@ -13,7 +13,9 @@ const DataItemElement: Component<{
   <div class={styles.DataElement}>
     <DataHeader data={props.data} />
     <i>{props.data.type}</i>
-    <p>{fmtCurrency(props.data.value)}</p>
+    <Show when={props.data.value !== undefined}>
+      <p>{fmtCurrency(props.data.value!)}</p>
+    </Show>
     <Show when={props.data.template !== undefined}>
       <p>{props.data.template}</p>
     </Show>
