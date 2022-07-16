@@ -33,6 +33,46 @@ const filters = new Map<string, Set<string | number | boolean>>();
 
 const processedData: Array<DataBaseShape & { id: string }> = [];
 
+const keyValueSubstitutions = new Map<string, Map<string, string>>([
+  [
+    "type",
+    new Map([
+      ["$", "Treasure"],
+      ["A", "Ammunition"],
+      ["AF", "Ammunition (futuristic)"],
+      ["AIR", "Vehicle (air)"],
+      ["AT", "Artisan Tool"],
+      ["EM", "Eldritch Machine"],
+      ["EXP", "Explosive"],
+      ["FD", "Food and Drink"],
+      ["G", "Adventuring Gear"],
+      ["GS", "Gaming Set"],
+      ["GV", "Generic Variant"],
+      ["HA", "Heavy Armor"],
+      ["INS", "Instrument"],
+      ["LA", "Light Armor"],
+      ["M", "Melee Weapon"],
+      ["MA", "Medium Armor"],
+      ["MNT", "Mount"],
+      ["MR", "Master Rune "],
+      ["OTH", "Other"],
+      ["P", "Potion"],
+      ["R", "Ranged Weapon"],
+      ["RD", "Rod"],
+      ["RG", "Ring"],
+      ["S", "Shield"],
+      ["SC", "Scroll"],
+      ["SCF", "Spellcasting Focus"],
+      ["SHP", "Vehicle (water)"],
+      ["T", "Tool"],
+      ["TAH", "Tack and Harness"],
+      ["TG", "Trade Good"],
+      ["VEH", "Vehicle (land)"],
+      ["WD", "Wand"],
+    ]),
+  ],
+]);
+
 const processJson = async (paths: string | string[], checkSrd = true) => {
   const iterPaths = Array.isArray(paths) ? paths : [paths];
 
@@ -276,6 +316,17 @@ await Promise.all([
   processItems(),
 ]);
 
+// iterate over all data to apply replacements
+processedData.forEach((data) => {
+  Object.entries(data).forEach(([key, value]) => {
+    if (keyValueSubstitutions.has(key) && typeof value === "string") {
+      // @ts-expect-error
+      data[key] = keyValueSubstitutions.get(key)?.get(value);
+    }
+  });
+});
+
+// iterate over all data to build filters
 processedData.forEach((data) =>
   Object.entries(data).forEach(([key, value]) => {
     if (typeof value === "object") return;
