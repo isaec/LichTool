@@ -9,7 +9,7 @@ import {
   Switch,
 } from "solid-js";
 import { schoolAbbreviationMap } from "@src/generalTypes";
-import { extractTypeFromUrl, fmtRange } from "@util/formatter";
+import { extractTypeFromUrl, fmtCurrency, fmtRange } from "@util/formatter";
 
 import styles from "./SearchResult.module.scss";
 import { useNavigate } from "solid-app-router";
@@ -132,6 +132,7 @@ const ItemHeader: HeadComponent = () => (
   <Head>
     <Col>item name</Col>
     <Col>type</Col>
+    <Col>value</Col>
     <Col>rarity</Col>
     <Col>source</Col>
   </Head>
@@ -146,6 +147,11 @@ const ItemSearchResult: ResultComponent = (props) => {
     <TableRow id={props.id}>
       <Key>{dataObj().name}</Key>
       <Data>{dataObj().type ?? ""}</Data>
+      <Data>
+        {typeof dataObj().value === "number"
+          ? fmtCurrency(dataObj().value as number)
+          : "-"}
+      </Data>
       <Data>{dataObj().rarity}</Data>
       <Data>{dataObj().source}</Data>
     </TableRow>
