@@ -188,6 +188,12 @@ export const currencyToCopperMap = new Map<Currency, number>([
   ["pp", 1_000],
 ]);
 export const currencyCopperArray = Array.from(currencyToCopperMap.entries());
+/**
+ * {@link currencyCopperArray} but without plat or electrum
+ */
+export const currencyCopperCommonArray = currencyCopperArray.filter(
+  ([c]) => c !== "pp" && c !== "ep"
+);
 export const currencyToNameMap = new Map<Currency, string>([
   ["cp", "copper"],
   ["sp", "silver"],

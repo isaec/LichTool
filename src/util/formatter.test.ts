@@ -101,10 +101,34 @@ describe("fmtCurrency", () => {
     [2000, "2 pp", "2 platinum"],
     [2400, "2 pp, 4 gp", "2 platinum and 4 gold"],
     [1_000_000, "1,000 pp", "1,000 platinum"],
-  ])("formats %s to %s, and full %s", (value, expected, expectedFull) => {
-    expect(fmtCurrency(value)).toBe(expected);
-    expect(fmtCurrency(value, true)).toBe(expectedFull);
-  });
+    [
+      12345,
+      "12 pp, 3 gp, 4 sp, 5 cp",
+      "12 platinum, 3 gold, 4 silver, and 5 copper",
+    ],
+  ])(
+    "formats %s to %s, and full %s using all currency",
+    (value, expected, expectedFull) => {
+      expect(fmtCurrency(value, false, false)).toBe(expected);
+      expect(fmtCurrency(value, true, false)).toBe(expectedFull);
+    }
+  );
+  it.each([
+    [0, "0 cp", "0 copper"],
+    [1, "1 cp", "1 copper"],
+    [2, "2 cp", "2 copper"],
+    [200, "2 gp", "2 gold"],
+    [2000, "20 gp", "20 gold"],
+    [2400, "24 gp", "24 gold"],
+    [1_000_000, "10,000 gp", "10,000 gold"],
+    [12345, "123 gp, 4 sp, 5 cp", "123 gold, 4 silver, and 5 copper"],
+  ])(
+    "formats %s to %s, and full %s without using rare currency",
+    (value, expected, expectedFull) => {
+      expect(fmtCurrency(value)).toBe(expected);
+      expect(fmtCurrency(value, true)).toBe(expectedFull);
+    }
+  );
 });
 
 describe("fmtDataUrl", () => {

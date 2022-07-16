@@ -1231,7 +1231,7 @@ exports[`Results > item > Battleaxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -1336,7 +1336,7 @@ exports[`Results > item > Blowgun matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -1371,7 +1371,7 @@ exports[`Results > item > Breastplate matches snapshot 1`] = `
     <td
       class="Data"
     >
-      40 pp
+      400 gp
     </td>
     <td
       class="Data"
@@ -1406,7 +1406,7 @@ exports[`Results > item > Chain Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      7 pp, 5 gp
+      75 gp
     </td>
     <td
       class="Data"
@@ -1441,7 +1441,7 @@ exports[`Results > item > Chain Shirt matches snapshot 1`] = `
     <td
       class="Data"
     >
-      5 pp
+      50 gp
     </td>
     <td
       class="Data"
@@ -1581,7 +1581,7 @@ exports[`Results > item > Crystal matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -1686,7 +1686,7 @@ exports[`Results > item > Flail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -1721,7 +1721,7 @@ exports[`Results > item > Glaive matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp
+      20 gp
     </td>
     <td
       class="Data"
@@ -1756,7 +1756,7 @@ exports[`Results > item > Greataxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      3 pp
+      30 gp
     </td>
     <td
       class="Data"
@@ -1826,7 +1826,7 @@ exports[`Results > item > Greatsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      5 pp
+      50 gp
     </td>
     <td
       class="Data"
@@ -1861,7 +1861,7 @@ exports[`Results > item > Halberd matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp
+      20 gp
     </td>
     <td
       class="Data"
@@ -1896,7 +1896,7 @@ exports[`Results > item > Half Plate Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      75 pp
+      750 gp
     </td>
     <td
       class="Data"
@@ -1931,7 +1931,7 @@ exports[`Results > item > Hand Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      7 pp, 5 gp
+      75 gp
     </td>
     <td
       class="Data"
@@ -2001,7 +2001,7 @@ exports[`Results > item > Heavy Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      5 pp
+      50 gp
     </td>
     <td
       class="Data"
@@ -2036,7 +2036,7 @@ exports[`Results > item > Hide Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -2071,7 +2071,7 @@ exports[`Results > item > Javelin matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 ep
+      5 sp
     </td>
     <td
       class="Data"
@@ -2106,7 +2106,7 @@ exports[`Results > item > Lance matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -2141,7 +2141,7 @@ exports[`Results > item > Leather Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -2176,7 +2176,7 @@ exports[`Results > item > Light Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp, 5 gp
+      25 gp
     </td>
     <td
       class="Data"
@@ -2246,7 +2246,7 @@ exports[`Results > item > Longbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      5 pp
+      50 gp
     </td>
     <td
       class="Data"
@@ -2281,7 +2281,7 @@ exports[`Results > item > Longsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp, 5 gp
+      15 gp
     </td>
     <td
       class="Data"
@@ -2351,7 +2351,7 @@ exports[`Results > item > Maul matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -2386,7 +2386,7 @@ exports[`Results > item > Morningstar matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp, 5 gp
+      15 gp
     </td>
     <td
       class="Data"
@@ -2456,7 +2456,7 @@ exports[`Results > item > Orb matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp
+      20 gp
     </td>
     <td
       class="Data"
@@ -2561,7 +2561,7 @@ exports[`Results > item > Plate Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      150 pp
+      1,500 gp
     </td>
     <td
       class="Data"
@@ -2631,7 +2631,7 @@ exports[`Results > item > Rapier matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp, 5 gp
+      25 gp
     </td>
     <td
       class="Data"
@@ -2666,7 +2666,7 @@ exports[`Results > item > Ring Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      3 pp
+      30 gp
     </td>
     <td
       class="Data"
@@ -2701,7 +2701,7 @@ exports[`Results > item > Rod matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -2736,7 +2736,7 @@ exports[`Results > item > Scale Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      5 pp
+      50 gp
     </td>
     <td
       class="Data"
@@ -2771,7 +2771,7 @@ exports[`Results > item > Scimitar matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp, 5 gp
+      25 gp
     </td>
     <td
       class="Data"
@@ -2806,7 +2806,7 @@ exports[`Results > item > Shield matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -2841,7 +2841,7 @@ exports[`Results > item > Shortbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      2 pp, 5 gp
+      25 gp
     </td>
     <td
       class="Data"
@@ -2876,7 +2876,7 @@ exports[`Results > item > Shortsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -3086,7 +3086,7 @@ exports[`Results > item > Splint Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      20 pp
+      200 gp
     </td>
     <td
       class="Data"
@@ -3156,7 +3156,7 @@ exports[`Results > item > Studded Leather Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      4 pp, 5 gp
+      45 gp
     </td>
     <td
       class="Data"
@@ -3226,7 +3226,7 @@ exports[`Results > item > Wand matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp
+      10 gp
     </td>
     <td
       class="Data"
@@ -3296,7 +3296,7 @@ exports[`Results > item > Warhammer matches snapshot 1`] = `
     <td
       class="Data"
     >
-      1 pp, 5 gp
+      15 gp
     </td>
     <td
       class="Data"

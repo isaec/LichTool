@@ -1,6 +1,7 @@
 import {
   Currency,
   currencyCopperArray,
+  currencyCopperCommonArray,
   currencyToNameMap,
   Distances,
   DurationObject,
@@ -135,9 +136,14 @@ export const fmtNumber = (value: number, maxDecimal = 2) =>
  * format a value in copper for display as currency.
  * @param value the value in copper to format for display
  * @param long if false, use abbreviated currency names and only commas
+ * @param onlyCommon if true, only display using common currencies
  * @returns a string representing the value in copper
  */
-export const fmtCurrency = (value: number, long = false): string => {
+export const fmtCurrency = (
+  value: number,
+  long = false,
+  onlyCommon = true
+): string => {
   const disp: (n: number, c: Currency) => string = long
     ? (n, c) => `${fmtNumber(n)} ${currencyToNameMap.get(c)!}`
     : (n, c) => `${fmtNumber(n)} ${c}`;
@@ -147,11 +153,13 @@ export const fmtCurrency = (value: number, long = false): string => {
   let remainder = value;
   const results: string[] = [];
 
-  while (remainder > 0) {
-    for (let i = currencyCopperArray.length - 1; i >= 0; i--) {
-      if (remainder < currencyCopperArray[i][1]) continue;
+  const refArray = onlyCommon ? currencyCopperCommonArray : currencyCopperArray;
 
-      const [unit, unitValue] = currencyCopperArray[i];
+  while (remainder > 0) {
+    for (let i = refArray.length - 1; i >= 0; i--) {
+      if (remainder < refArray[i][1]) continue;
+
+      const [unit, unitValue] = refArray[i];
       const reductionInUnits = Math.floor(remainder / unitValue);
       const reductionCopper = reductionInUnits * unitValue;
       remainder -= reductionCopper;
