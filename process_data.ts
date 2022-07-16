@@ -85,13 +85,112 @@ const deepMerge = <
   });
   return result;
 };
+// its own type so it can be collapsed
+type ItemTypes = {
+  type?:
+    | "$"
+    | "A"
+    | "AF"
+    | "AIR"
+    | "AT"
+    | "EM"
+    | "EXP"
+    | "FD"
+    | "G"
+    | "GS"
+    | "GV"
+    | "HA"
+    | "INS"
+    | "LA"
+    | "M"
+    | "MA"
+    | "MNT"
+    | "MR"
+    | "OTH"
+    | "P"
+    | "R"
+    | "RD"
+    | "RG"
+    | "S"
+    | "SC"
+    | "SCF"
+    | "SHP"
+    | "T"
+    | "TAH"
+    | "TG"
+    | "VEH"
+    | "WD";
+};
+type Item = DataBaseShape &
+  ItemTypes & {
+    stealth?: boolean;
+    strength?: boolean;
+    entries?: any[];
+    scfType: "arcane" | "druid" | "holy";
+    property?: string[];
+  };
+
+const addEntriesToItem = (item: Item) => {
+  const newItem = structuredClone(item);
+  const p = (entry: string) => {
+    if (!newItem.entries) newItem.entries = [entry];
+    else newItem.entries.push(entry);
+  };
+
+  // copied from render.js, could fall out of sync
+  if (["MA", "LA", "HA"].includes(newItem.type ?? "")) {
+    if (newItem.stealth)
+      p("The wearer has disadvantage on Dexterity ({@skill Stealth}) checks.");
+    if (newItem.type === "HA" && newItem.strength)
+      p(
+        `If the wearer has a Strength score lower than ${newItem.strength}, their speed is reduced by 10 feet.`
+      );
+  }
+  // evil, but this is the only way to do it - copied verbatim and macro-ed from render.js
+  if (newItem.type === "SCF") {
+    // @ts-expect-error
+    if (newItem._isItemGroup) {
+      // isItemGroup
+      if (newItem.scfType === "arcane" && newItem.source !== "ERLW") {
+        p(
+          "An arcane focus is a special item\u2014an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item\u2014designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+        );
+      }
+      if (newItem.scfType === "druid") {
+        p(
+          "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
+        );
+      }
+      if (newItem.scfType === "holy") {
+        p(
+          "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+        );
+      }
+      // end isItemGroup
+    } else {
+      if (newItem.scfType === "arcane") {
+        p(
+          "An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+        );
+      }
+      if (newItem.scfType === "druid") {
+        p("A druid can use this object as a spellcasting focus.");
+      }
+      if (newItem.scfType === "holy") {
+        p("A holy symbol is a representation of a god or pantheon.");
+        p(
+          "A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+        );
+      }
+    }
+  }
+  // end of evil
+  return newItem;
+};
 
 const processItems = async () => {
   const baseItemsFile = await fs.readFile("data/items-base.json", "utf8");
-  type Item = DataBaseShape & {
-    type?: string;
-    property?: string[];
-  };
+
   type ItemId = Item & { id: string };
   const baseItemObject: {
     id: string;
@@ -104,22 +203,24 @@ const processItems = async () => {
 
   const baseItems = baseItemObject.baseitem;
   const typeMap = new Map(
-    baseItemObject.itemType.map((type) => [type.abbreviation, type])
+    baseItemObject.itemType.map(({ abbreviation, ...type }) => [
+      abbreviation,
+      type,
+    ])
   );
   const propertyMap = new Map(
     baseItemObject.itemProperty
       // filter out special property
       // it isn't needed for our system, it only exists in base data to enable filtering
       .filter((p) => p.abbreviation !== "S")
-      .map((p) => [p.abbreviation, p])
+      .map(({ abbreviation, ...p }) => [abbreviation, p])
   );
 
   // this should be used eventually?
   const _typeAdditionalEntriesMap = new Map(
-    baseItemObject.itemTypeAdditionalEntries.map((type) => [
-      type.abbreviation,
-      type,
-    ])
+    baseItemObject.itemTypeAdditionalEntries.map(
+      ({ abbreviation, ...type }) => [abbreviation, type]
+    )
   );
 
   const expandedItems: ItemId[] = [];
@@ -141,6 +242,9 @@ const processItems = async () => {
         });
 
       (result as ItemId).id = fmtDataUrl("item", result.name, result.source);
+
+      result = addEntriesToItem(result);
+
       expandedItems.push(result as ItemId);
     });
 
