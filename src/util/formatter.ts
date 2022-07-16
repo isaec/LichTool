@@ -1,4 +1,11 @@
-import { Distances, DurationObject, spellEndsMap } from "@src/generalTypes";
+import {
+  Currency,
+  currencyCopperArray,
+  currencyToNameMap,
+  Distances,
+  DurationObject,
+  spellEndsMap,
+} from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 
 /**
@@ -111,6 +118,41 @@ export const fmtDuration = (data: DurationObject) => {
     default:
       return capitalize(data.type);
   }
+};
+
+/**
+ * format a value in copper for display as currency.
+ * @param value the value in copper to format for display
+ * @param fullName full name of the currency vs abbreviation
+ * @returns a string representing the value in copper
+ */
+export const fmtCurrency = (value: number, fullName = false): string => {
+  const disp: (c: Currency) => string = fullName
+    ? (c) => currencyToNameMap.get(c)!
+    : (c) => c;
+
+  if (value <= 1) return `${value} ${disp("cp")}`;
+
+  let remainder = value;
+  const results: string[] = [];
+
+  while (remainder > 0) {
+    for (let i = currencyCopperArray.length - 1; i >= 0; i--) {
+      console.log({ remainder, i, curr: currencyCopperArray[i][1] });
+      if (remainder < currencyCopperArray[i][1]) continue;
+      console.log("found");
+
+      const [unit, unitValue] = currencyCopperArray[i];
+      const reductionInUnits = Math.floor(remainder / unitValue);
+      const reductionCopper = reductionInUnits * unitValue;
+      remainder -= reductionCopper;
+      results.push(`${reductionInUnits} ${disp(unit)}`);
+      break;
+    }
+    console.log({ results, remainder });
+    break;
+  }
+  return fmtAndList(results);
 };
 
 // this is a hacky solution for lowercase titles...

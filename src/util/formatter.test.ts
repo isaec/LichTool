@@ -3,6 +3,7 @@ import { dataArray, isDataSpell } from "@src/dataLookup";
 import {
   extractTypeFromUrl,
   fmtAndList,
+  fmtCurrency,
   fmtDataUrl,
   fmtDuration,
   fmtNameForUrl,
@@ -57,6 +58,18 @@ describe("fmtRange", () => {
     )
   )("%s matches snapshot, shorten: %s", (_display, shorten, range) => {
     expect(fmtRange(range, shorten)).toMatchSnapshot();
+  });
+});
+
+describe("fmtCurrency", () => {
+  it.each([
+    [0, "0 cp"],
+    [1, "1 cp"],
+    [2, "2 cp"],
+    [200, "2 gp"],
+    [2000, "2 pp"],
+  ])("formats %s to %s", (value, expected) => {
+    expect(fmtCurrency(value)).toBe(expected);
   });
 });
 

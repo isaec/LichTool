@@ -187,6 +187,7 @@ export const currencyToCopperMap = new Map<Currency, number>([
   ["gp", 100],
   ["pp", 1_000],
 ]);
+export const currencyCopperArray = Array.from(currencyToCopperMap.entries());
 export const currencyToNameMap = new Map<Currency, string>([
   ["cp", "copper"],
   ["sp", "silver"],
