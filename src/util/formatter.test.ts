@@ -68,6 +68,8 @@ describe("fmtCurrency", () => {
     [2, "2 cp"],
     [200, "2 gp"],
     [2000, "2 pp"],
+    [2400, "2 pp and 4 gp"],
+    [1_000_000, "1000 pp"],
   ])("formats %s to %s", (value, expected) => {
     expect(fmtCurrency(value)).toBe(expected);
   });

@@ -138,9 +138,7 @@ export const fmtCurrency = (value: number, fullName = false): string => {
 
   while (remainder > 0) {
     for (let i = currencyCopperArray.length - 1; i >= 0; i--) {
-      console.log({ remainder, i, curr: currencyCopperArray[i][1] });
       if (remainder < currencyCopperArray[i][1]) continue;
-      console.log("found");
 
       const [unit, unitValue] = currencyCopperArray[i];
       const reductionInUnits = Math.floor(remainder / unitValue);
@@ -149,8 +147,6 @@ export const fmtCurrency = (value: number, fullName = false): string => {
       results.push(`${reductionInUnits} ${disp(unit)}`);
       break;
     }
-    console.log({ results, remainder });
-    break;
   }
   return fmtAndList(results);
 };
