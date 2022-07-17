@@ -4217,7 +4217,7 @@ exports[`DataItemElement > Spear > matches snapshot 1`] = `
          
         piercing
          - 
-        versatile (1d8)
+        thrown (20/60 ft.), versatile (1d8)
       </p>
     </div>
     <p
@@ -4520,7 +4520,7 @@ exports[`DataItemElement > Trident > matches snapshot 1`] = `
          
         piercing
          - 
-        versatile (1d8)
+        thrown (20/60 ft.), versatile (1d8)
       </p>
     </div>
     <p

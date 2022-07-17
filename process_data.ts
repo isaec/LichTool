@@ -174,6 +174,14 @@ const deepMerge = <
         // prevent value overwriting
         if (!result.hasOwnProperty(key)) result[key] = value;
         break;
+      // prevent template overwriting, templates should be merged instead
+      // this logic is flawed if the new template is a subset of the old one
+      case key === "template" &&
+        result.template !== undefined &&
+        result.template !== value:
+        // @ts-expect-error
+        result[key] = `${result[key]}, ${value}`;
+        break;
       case Array.isArray(value) === true:
         if (!result[key]) result[key] = value;
         else result[key] = result[key].concat(value);
