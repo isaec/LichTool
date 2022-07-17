@@ -65,6 +65,7 @@ export type DataItem = IdData & {
   srd?: boolean;
   basicRules?: boolean;
   type?: ItemTypes;
+  typeAlt?: ItemTypes;
   rarity?: ItemRarity;
   entries?: DataGroup;
   additionalEntries?: DataGroup;
@@ -75,6 +76,15 @@ export type DataItem = IdData & {
   dmg1?: string;
   dmg2?: string;
   dmgType?: string;
+  wondrous?: boolean;
+  tattoo?: boolean;
+  staff?: boolean;
+  ammo?: boolean;
+  firearm?: boolean;
+  age?: string;
+  poison?: boolean;
+  poisonTypes?: string[];
+  baseItem?: string;
 };
 
 export type RawConditionData = RawData<DataCondition>;
