@@ -71,6 +71,20 @@ const keyValueSubstitutions = new Map<string, Map<string, string>>([
       ["WD", "Wand"],
     ]),
   ],
+  [
+    "school",
+    new Map([
+      ["V", "Evocation"],
+      ["D", "Divination"],
+      ["I", "Illusion"],
+      ["N", "Necromancy"],
+      ["C", "Conjuration"],
+      ["A", "Abjuration"],
+      ["E", "Enchantment"],
+      ["T", "Transmutation"],
+      ["P", "Psionic"],
+    ]),
+  ],
 ]);
 
 const processJson = async (paths: string | string[], checkSrd = true) => {

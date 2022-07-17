@@ -1,5 +1,4 @@
 import toast from "solid-toast";
-import { schoolAbbreviationMap } from "@src/generalTypes";
 import { DataSpell } from "@src/dataLookup";
 import { dataMap } from "@src/dataLookup";
 import { SearchResult } from "minisearch";
@@ -60,7 +59,8 @@ export const parseFilter = (
   return filter.toLowerCase();
 };
 
-const filterValueTransforms = new Map([["school", schoolAbbreviationMap]]);
+// not in use right now...
+const filterValueTransforms = new Map<string, Map<any, any>>([]);
 
 /**
  * @param dataObj the data object to filter based on

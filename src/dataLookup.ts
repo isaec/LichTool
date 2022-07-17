@@ -4,18 +4,16 @@ import data from "@data/data.json?raw";
 import filters from "@data/filters.json?raw";
 import {
   Distances,
-  Durations,
   Levels,
   Ranges,
-  SchoolAbbreviations,
   Sources,
-  DurationUnits,
   TimeObject,
   DurationObject,
   ComponentsObject,
   Abilities,
   ItemTypes,
   ItemRarity,
+  Schools,
 } from "@src/generalTypes";
 import { DataGroup } from "./components/Renderer/types";
 import { extractTypeFromUrl } from "@util/formatter";
@@ -37,7 +35,7 @@ export type RawDataSpell = RawData<DataSpell>;
 export const isDataSpell = isType<DataSpell>("spell");
 export type DataSpell = IdData & {
   level: Levels;
-  school: SchoolAbbreviations;
+  school: Schools;
   time: TimeObject[];
   range: { type: Ranges; distance?: { type: Distances; amount?: number } };
   components: ComponentsObject;

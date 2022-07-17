@@ -114,7 +114,7 @@ exports[`filterEngine > matches snapshot for search results given query undefine
     "savingThrow": [
       "intelligence",
     ],
-    "school": "E",
+    "school": "Enchantment",
     "source": "PHB",
     "srd": true,
     "time": [
@@ -169,7 +169,7 @@ exports[`filterEngine > matches snapshot for search results given query undefine
       },
       "type": "point",
     },
-    "school": "A",
+    "school": "Abjuration",
     "source": "PHB",
     "srd": true,
     "time": [

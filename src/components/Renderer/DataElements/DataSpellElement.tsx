@@ -1,6 +1,5 @@
 import { Component, createMemo, JSX, Match, Show, Switch } from "solid-js";
 import styles from "./DataElement.module.scss";
-import { schoolAbbreviationMap } from "@src/generalTypes";
 import { DataGroupRenderer, RendererStyles } from "../Renderer";
 import { fmtDuration, fmtRange } from "@util/formatter";
 import { RawDataSpell } from "@src/dataLookup";
@@ -42,7 +41,7 @@ const DataSpellElement: Component<{
           <Match when={props.data.level === 3}>3rd-level</Match>
           <Match when={props.data.level >= 4}>{props.data.level}th-level</Match>
         </Switch>{" "}
-        {schoolAbbreviationMap.get(props.data.school)}
+        {props.data.school}
         <Show when={props.data.meta?.ritual === true}> (ritual)</Show>
       </i>
       <KeyValue key={"Casting time"}>

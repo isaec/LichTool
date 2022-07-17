@@ -8,7 +8,6 @@ import {
   Match,
   Switch,
 } from "solid-js";
-import { schoolAbbreviationMap } from "@src/generalTypes";
 import { extractTypeFromUrl, fmtCurrency, fmtRange } from "@util/formatter";
 
 import styles from "./SearchResult.module.scss";
@@ -113,7 +112,7 @@ const SpellSearchResult: ResultComponent = (props) => {
         {dataObj().level}
       </Data>
       <Data mono nowrap>
-        {schoolAbbreviationMap.get(dataObj().school)!.slice(0, 5)}
+        {dataObj().school.slice(0, 5)}
       </Data>
       <Data>{fmtRange(dataObj().range, true)}</Data>
       <Data nowrap optional>

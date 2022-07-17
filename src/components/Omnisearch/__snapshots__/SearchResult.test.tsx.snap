@@ -1156,7 +1156,7 @@ exports[`Results > item > Arrow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -1191,7 +1191,7 @@ exports[`Results > item > Arrows (20) matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -1226,7 +1226,7 @@ exports[`Results > item > Battleaxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1261,7 +1261,7 @@ exports[`Results > item > Blowgun Needle matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -1296,7 +1296,7 @@ exports[`Results > item > Blowgun Needles (50) matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -1331,7 +1331,7 @@ exports[`Results > item > Blowgun matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -1366,7 +1366,7 @@ exports[`Results > item > Breastplate matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MA
+      Medium Armor
     </td>
     <td
       class="Data"
@@ -1401,7 +1401,7 @@ exports[`Results > item > Chain Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HA
+      Heavy Armor
     </td>
     <td
       class="Data"
@@ -1436,7 +1436,7 @@ exports[`Results > item > Chain Shirt matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MA
+      Medium Armor
     </td>
     <td
       class="Data"
@@ -1471,7 +1471,7 @@ exports[`Results > item > Club matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1506,7 +1506,7 @@ exports[`Results > item > Crossbow Bolt matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -1541,7 +1541,7 @@ exports[`Results > item > Crossbow Bolts (20) matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -1576,7 +1576,7 @@ exports[`Results > item > Crystal matches snapshot 1`] = `
     <td
       class="Data"
     >
-      SCF
+      Spellcasting Focus
     </td>
     <td
       class="Data"
@@ -1611,7 +1611,7 @@ exports[`Results > item > Dagger matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1646,7 +1646,7 @@ exports[`Results > item > Dart matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -1681,7 +1681,7 @@ exports[`Results > item > Flail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1716,7 +1716,7 @@ exports[`Results > item > Glaive matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1751,7 +1751,7 @@ exports[`Results > item > Greataxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1786,7 +1786,7 @@ exports[`Results > item > Greatclub matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1821,7 +1821,7 @@ exports[`Results > item > Greatsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1856,7 +1856,7 @@ exports[`Results > item > Halberd matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1891,7 +1891,7 @@ exports[`Results > item > Half Plate Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MA
+      Medium Armor
     </td>
     <td
       class="Data"
@@ -1926,7 +1926,7 @@ exports[`Results > item > Hand Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -1961,7 +1961,7 @@ exports[`Results > item > Handaxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -1996,7 +1996,7 @@ exports[`Results > item > Heavy Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -2031,7 +2031,7 @@ exports[`Results > item > Hide Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MA
+      Medium Armor
     </td>
     <td
       class="Data"
@@ -2066,7 +2066,7 @@ exports[`Results > item > Javelin matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2101,7 +2101,7 @@ exports[`Results > item > Lance matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2136,7 +2136,7 @@ exports[`Results > item > Leather Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      LA
+      Light Armor
     </td>
     <td
       class="Data"
@@ -2171,7 +2171,7 @@ exports[`Results > item > Light Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -2206,7 +2206,7 @@ exports[`Results > item > Light Hammer matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2241,7 +2241,7 @@ exports[`Results > item > Longbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -2276,7 +2276,7 @@ exports[`Results > item > Longsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2311,7 +2311,7 @@ exports[`Results > item > Mace matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2346,7 +2346,7 @@ exports[`Results > item > Maul matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2381,7 +2381,7 @@ exports[`Results > item > Morningstar matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2416,7 +2416,7 @@ exports[`Results > item > Net matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -2451,7 +2451,7 @@ exports[`Results > item > Orb matches snapshot 1`] = `
     <td
       class="Data"
     >
-      SCF
+      Spellcasting Focus
     </td>
     <td
       class="Data"
@@ -2486,7 +2486,7 @@ exports[`Results > item > Padded Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      LA
+      Light Armor
     </td>
     <td
       class="Data"
@@ -2521,7 +2521,7 @@ exports[`Results > item > Pike matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2556,7 +2556,7 @@ exports[`Results > item > Plate Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HA
+      Heavy Armor
     </td>
     <td
       class="Data"
@@ -2591,7 +2591,7 @@ exports[`Results > item > Quarterstaff matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2626,7 +2626,7 @@ exports[`Results > item > Rapier matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2661,7 +2661,7 @@ exports[`Results > item > Ring Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HA
+      Heavy Armor
     </td>
     <td
       class="Data"
@@ -2696,7 +2696,7 @@ exports[`Results > item > Rod matches snapshot 1`] = `
     <td
       class="Data"
     >
-      SCF
+      Spellcasting Focus
     </td>
     <td
       class="Data"
@@ -2731,7 +2731,7 @@ exports[`Results > item > Scale Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MA
+      Medium Armor
     </td>
     <td
       class="Data"
@@ -2766,7 +2766,7 @@ exports[`Results > item > Scimitar matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2801,7 +2801,7 @@ exports[`Results > item > Shield matches snapshot 1`] = `
     <td
       class="Data"
     >
-      S
+      Shield
     </td>
     <td
       class="Data"
@@ -2836,7 +2836,7 @@ exports[`Results > item > Shortbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -2871,7 +2871,7 @@ exports[`Results > item > Shortsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2906,7 +2906,7 @@ exports[`Results > item > Sickle matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -2941,7 +2941,7 @@ exports[`Results > item > Sling Bullet matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -2976,7 +2976,7 @@ exports[`Results > item > Sling Bullets (20) matches snapshot 1`] = `
     <td
       class="Data"
     >
-      A
+      Ammunition
     </td>
     <td
       class="Data"
@@ -3011,7 +3011,7 @@ exports[`Results > item > Sling matches snapshot 1`] = `
     <td
       class="Data"
     >
-      R
+      Ranged Weapon
     </td>
     <td
       class="Data"
@@ -3046,7 +3046,7 @@ exports[`Results > item > Spear matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -3081,7 +3081,7 @@ exports[`Results > item > Splint Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HA
+      Heavy Armor
     </td>
     <td
       class="Data"
@@ -3116,7 +3116,7 @@ exports[`Results > item > Staff matches snapshot 1`] = `
     <td
       class="Data"
     >
-      SCF
+      Spellcasting Focus
     </td>
     <td
       class="Data"
@@ -3151,7 +3151,7 @@ exports[`Results > item > Studded Leather Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      LA
+      Light Armor
     </td>
     <td
       class="Data"
@@ -3186,7 +3186,7 @@ exports[`Results > item > Trident matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -3221,7 +3221,7 @@ exports[`Results > item > Wand matches snapshot 1`] = `
     <td
       class="Data"
     >
-      SCF
+      Spellcasting Focus
     </td>
     <td
       class="Data"
@@ -3256,7 +3256,7 @@ exports[`Results > item > War Pick matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -3291,7 +3291,7 @@ exports[`Results > item > Warhammer matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -3326,7 +3326,7 @@ exports[`Results > item > Whip matches snapshot 1`] = `
     <td
       class="Data"
     >
-      M
+      Melee Weapon
     </td>
     <td
       class="Data"
@@ -3361,7 +3361,7 @@ exports[`Results > item > Wooden Staff matches snapshot 1`] = `
     <td
       class="Data"
     >
-      SCF
+      Spellcasting Focus
     </td>
     <td
       class="Data"
