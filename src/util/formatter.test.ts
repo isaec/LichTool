@@ -6,11 +6,11 @@ import {
   fmtCurrency,
   fmtDataUrl,
   fmtDuration,
+  fmtItemType,
   fmtNameForUrl,
   fmtNumber,
   fmtOrList,
   fmtRange,
-  fmtWeaponType,
 } from "./formatter";
 
 const dedupe = <T>(arr: T[]): Array<[string, T]> =>
@@ -93,13 +93,13 @@ describe("fmtNumber", () => {
   });
 });
 
-describe("fmtWeaponType", () => {
+describe("fmtItemType", () => {
   it.each(
     dataArray
       .filter(isDataItem)
       .map((item): [string, DataItem] => [item.name, item])
   )("%s matches snapshot", (_display, item) => {
-    expect(fmtWeaponType(item)).toMatchSnapshot();
+    expect(fmtItemType(item)).toMatchSnapshot();
   });
 });
 

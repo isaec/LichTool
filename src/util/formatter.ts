@@ -106,7 +106,7 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
   }
 };
 
-export const fmtWeaponType = (item: DataItem): string => {
+export const fmtItemType = (item: DataItem): string => {
   const types: string[] = [];
   const subTypes: string[] = [];
   if (item.wondrous) types.push("wondrous item");
@@ -124,16 +124,16 @@ export const fmtWeaponType = (item: DataItem): string => {
     item.type !== "Melee Weapon" &&
     item.typeAlt !== "Melee Weapon"
   )
-    types.push("melee weapon");
-  if (item.type) types.push(item.type);
+    subTypes.push("melee weapon");
+  if (item.type) subTypes.push(item.type);
   if (item.typeAlt) types.push(item.typeAlt);
   if (item.poison)
     types.push(
       `poison${item.poisonTypes ? ` (${fmtOrList(item.poisonTypes)})` : ""}`
     );
-  return `${upperFirst(fmtAndList(types))}${
+  return `${upperFirst(types.join(", "))}${
     types.length > 0 && subTypes.length > 0 ? "\n" : ""
-  }${upperFirst(fmtAndList(subTypes))}`;
+  }${upperFirst(subTypes.join(", "))}`;
 };
 
 export const fmtDuration = (data: DurationObject) => {
