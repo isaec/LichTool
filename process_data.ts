@@ -265,10 +265,13 @@ const processItems = async () => {
     template?: string;
     entries?: any;
     // using the undefined type here is wrong but makes things easier so
-  }): [string | undefined, { template?: string; entries?: any }] => [
-    abbreviation,
-    { template, entries },
-  ];
+  }): [string | undefined, { template?: string; entries?: any }] => {
+    const obj: { template?: string; entries?: any } = {};
+    if (template !== undefined) obj.template = template;
+    if (entries !== undefined) obj.entries = entries;
+
+    return [abbreviation, obj];
+  };
 
   const baseItems = baseItemObject.baseitem;
   const typeMap = new Map(baseItemObject.itemType.map(templateKV));
