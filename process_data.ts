@@ -125,6 +125,10 @@ const deepMerge = <
 
   Object.entries(obj2).forEach(([key, value]: [Key, Val]) => {
     switch (true) {
+      case value === undefined:
+        // prevent value overwriting
+        if (!result.hasOwnProperty(key)) result[key] = value;
+        break;
       case Array.isArray(value) === true:
         if (!result[key]) result[key] = value;
         else result[key] = result[key].concat(value);
