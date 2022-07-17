@@ -72,6 +72,26 @@ const keyValueSubstitutions = new Map<string, Map<string, string>>([
     ]),
   ],
   [
+    "property",
+    new Map([
+      ["2H", "Two-Handed"],
+      ["A", "Ammunition"],
+      ["AF", "Ammunition (futuristic)"],
+      ["BF", "Burst Fire"],
+      ["EM", "Eldritch Machine"],
+      ["F", "Finesse"],
+      ["H", "Heavy"],
+      ["L", "Light"],
+      ["LD", "Loading"],
+      ["OTH", "Other"],
+      ["R", "Reach"],
+      ["RLD", "Reload"],
+      ["S", "Special"],
+      ["T", "Thrown"],
+      ["V", "Versatile"],
+    ]),
+  ],
+  [
     "school",
     new Map([
       ["V", "Evocation"],
@@ -285,6 +305,21 @@ const processItems = async () => {
       // it isn't needed for our system, it only exists in base data to enable filtering
       .filter((p) => p.abbreviation !== "S")
       .map(templateKV)
+      // map fn which replaces template values for the expanded name of the property
+      .map(([abbreviation, obj]) => {
+        if (obj.template === undefined) return [abbreviation, obj];
+        const newObj = {
+          ...obj,
+          template: obj.template.replaceAll(
+            "{{prop_name}}",
+            keyValueSubstitutions
+              .get("property")!
+              .get(abbreviation!)!
+              .toLowerCase()
+          ),
+        };
+        return [abbreviation, newObj];
+      })
   );
 
   // this should be used eventually?
