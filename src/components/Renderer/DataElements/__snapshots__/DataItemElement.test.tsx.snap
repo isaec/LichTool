@@ -138,7 +138,7 @@ exports[`DataItemElement > Battleaxe > matches snapshot 1`] = `
       <p>
         1d8
          
-        S
+        slashing
          - 
         versatile (1d10)
       </p>
@@ -216,7 +216,7 @@ exports[`DataItemElement > Blowgun > matches snapshot 1`] = `
       <p>
         1
          
-        P
+        piercing
          - 
         ammunition (25/100 ft.)
       </p>
@@ -844,7 +844,7 @@ exports[`DataItemElement > Dagger > matches snapshot 1`] = `
       <p>
         1d4
          
-        P
+        piercing
          - 
         thrown (20/60 ft.)
       </p>
@@ -950,7 +950,7 @@ exports[`DataItemElement > Dart > matches snapshot 1`] = `
       <p>
         1d4
          
-        P
+        piercing
          - 
         thrown (20/60 ft.)
       </p>
@@ -1619,7 +1619,7 @@ exports[`DataItemElement > Hand Crossbow > matches snapshot 1`] = `
       <p>
         1d6
          
-        P
+        piercing
          - 
         ammunition (30/120 ft.)
       </p>
@@ -1742,7 +1742,7 @@ exports[`DataItemElement > Handaxe > matches snapshot 1`] = `
       <p>
         1d6
          
-        S
+        slashing
          - 
         thrown (20/60 ft.)
       </p>
@@ -1834,7 +1834,7 @@ exports[`DataItemElement > Heavy Crossbow > matches snapshot 1`] = `
       <p>
         1d10
          
-        P
+        piercing
          - 
         ammunition (100/400 ft.)
       </p>
@@ -2028,7 +2028,7 @@ exports[`DataItemElement > Javelin > matches snapshot 1`] = `
       <p>
         1d6
          
-        P
+        piercing
          - 
         thrown (30/120 ft.)
       </p>
@@ -2248,7 +2248,7 @@ exports[`DataItemElement > Light Crossbow > matches snapshot 1`] = `
       <p>
         1d8
          
-        P
+        piercing
          - 
         ammunition (80/320 ft.)
       </p>
@@ -2371,7 +2371,7 @@ exports[`DataItemElement > Light Hammer > matches snapshot 1`] = `
       <p>
         1d4
          
-        B
+        bludgeoning
          - 
         thrown (20/60 ft.)
       </p>
@@ -2463,7 +2463,7 @@ exports[`DataItemElement > Longbow > matches snapshot 1`] = `
       <p>
         1d8
          
-        P
+        piercing
          - 
         ammunition (150/600 ft.)
       </p>
@@ -2586,7 +2586,7 @@ exports[`DataItemElement > Longsword > matches snapshot 1`] = `
       <p>
         1d8
          
-        S
+        slashing
          - 
         versatile (1d10)
       </p>
@@ -3265,7 +3265,7 @@ exports[`DataItemElement > Quarterstaff > matches snapshot 1`] = `
       <p>
         1d6
          
-        B
+        bludgeoning
          - 
         versatile (1d8)
       </p>
@@ -3753,7 +3753,7 @@ exports[`DataItemElement > Shortbow > matches snapshot 1`] = `
       <p>
         1d6
          
-        P
+        piercing
          - 
         ammunition (80/320 ft.)
       </p>
@@ -4018,7 +4018,7 @@ exports[`DataItemElement > Sling > matches snapshot 1`] = `
       <p>
         1d4
          
-        B
+        bludgeoning
          - 
         ammunition (30/120 ft.)
       </p>
@@ -4215,7 +4215,7 @@ exports[`DataItemElement > Spear > matches snapshot 1`] = `
       <p>
         1d6
          
-        P
+        piercing
          - 
         versatile (1d8)
       </p>
@@ -4380,7 +4380,7 @@ exports[`DataItemElement > Staff > matches snapshot 1`] = `
       <p>
         1d6
          
-        B
+        bludgeoning
          - 
         versatile (1d8)
       </p>
@@ -4518,7 +4518,7 @@ exports[`DataItemElement > Trident > matches snapshot 1`] = `
       <p>
         1d6
          
-        P
+        piercing
          - 
         versatile (1d8)
       </p>
@@ -4721,7 +4721,7 @@ exports[`DataItemElement > Warhammer > matches snapshot 1`] = `
       <p>
         1d8
          
-        B
+        bludgeoning
          - 
         versatile (1d10)
       </p>
@@ -4884,7 +4884,7 @@ exports[`DataItemElement > Wooden Staff > matches snapshot 1`] = `
       <p>
         1d6
          
-        B
+        bludgeoning
          - 
         versatile (1d8)
       </p>

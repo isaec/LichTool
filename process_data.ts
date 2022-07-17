@@ -33,6 +33,13 @@ const filters = new Map<string, Set<string | number | boolean>>();
 
 const processedData: Array<DataBaseShape & { id: string }> = [];
 
+// beautiful regex to produce these
+// /([\w\$]+?)\:\s(.+?)(?:\\n\s|$)/gm
+// lowercase:
+// ["$1", "\L$2\E"],
+// maintain case:
+// ["$1", "$2"],
+
 const keyValueSubstitutions = new Map<string, Map<string, string>>([
   [
     "type",
@@ -103,6 +110,24 @@ const keyValueSubstitutions = new Map<string, Map<string, string>>([
       ["E", "Enchantment"],
       ["T", "Transmutation"],
       ["P", "Psionic"],
+    ]),
+  ],
+  [
+    "dmgType",
+    new Map([
+      ["A", "acid"],
+      ["B", "bludgeoning"],
+      ["C", "cold"],
+      ["F", "fire"],
+      ["O", "force"],
+      ["L", "lightning"],
+      ["N", "necrotic"],
+      ["P", "piercing"],
+      ["I", "poison"],
+      ["Y", "psychic"],
+      ["R", "radiant"],
+      ["S", "slashing"],
+      ["T", "thunder"],
     ]),
   ],
 ]);
