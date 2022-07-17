@@ -99,7 +99,7 @@ describe("fmtItemType", () => {
       .filter(isDataItem)
       .map((item): [string, DataItem] => [item.name, item])
   )("%s matches snapshot", (_display, item) => {
-    expect(fmtItemType(item)).toMatchSnapshot();
+    expect(fmtItemType(item).join("\n")).toMatchSnapshot();
   });
 });
 

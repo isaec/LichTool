@@ -7,7 +7,7 @@ import {
   DurationObject,
   spellEndsMap,
 } from "@src/generalTypes";
-import { DataItem, DataSpell } from "@src/dataLookup";
+import { DataItem, DataSpell, RawData } from "@src/dataLookup";
 
 /**
  * Ensure the first char of string is uppercase
@@ -106,7 +106,7 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
   }
 };
 
-export const fmtItemType = (item: DataItem): string => {
+export const fmtItemType = (item: RawData<DataItem>): [string, string] => {
   const types: string[] = [];
   const subTypes: string[] = [];
   if (item.wondrous) types.push("wondrous item");
@@ -131,9 +131,7 @@ export const fmtItemType = (item: DataItem): string => {
     types.push(
       `poison${item.poisonTypes ? ` (${fmtOrList(item.poisonTypes)})` : ""}`
     );
-  return `${upperFirst(types.join(", "))}${
-    types.length > 0 && subTypes.length > 0 ? "\n" : ""
-  }${upperFirst(subTypes.join(", "))}`;
+  return [upperFirst(types.join(", ")), upperFirst(subTypes.join(", "))];
 };
 
 export const fmtDuration = (data: DurationObject) => {
