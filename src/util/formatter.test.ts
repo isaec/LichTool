@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { dataArray, isDataSpell } from "@src/dataLookup";
+import { dataArray, DataItem, isDataItem, isDataSpell } from "@src/dataLookup";
 import {
   extractTypeFromUrl,
   fmtAndList,
@@ -10,6 +10,7 @@ import {
   fmtNumber,
   fmtOrList,
   fmtRange,
+  fmtWeaponType,
 } from "./formatter";
 
 const dedupe = <T>(arr: T[]): Array<[string, T]> =>
@@ -89,6 +90,16 @@ describe("fmtNumber", () => {
     [1.4, "1", 0],
   ])("%s is formatted to %s", (num, str, maxDecimal = 20) => {
     expect(fmtNumber(num, maxDecimal)).toBe(str);
+  });
+});
+
+describe("fmtWeaponType", () => {
+  it.each(
+    dataArray
+      .filter(isDataItem)
+      .map((item): [string, DataItem] => [item.name, item])
+  )("%s matches snapshot", (_display, item) => {
+    expect(fmtWeaponType(item)).toMatchSnapshot();
   });
 });
 

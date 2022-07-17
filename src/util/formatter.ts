@@ -7,7 +7,7 @@ import {
   DurationObject,
   spellEndsMap,
 } from "@src/generalTypes";
-import { DataSpell } from "@src/dataLookup";
+import { DataItem, DataSpell } from "@src/dataLookup";
 
 /**
  * Ensure the first char of string is uppercase
@@ -104,6 +104,34 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
         `${data.type} ${data.distance.type} ${data.distance.amount}`
       );
   }
+};
+
+export const fmtWeaponType = (item: DataItem): string => {
+  const types: string[] = [];
+  const subTypes: string[] = [];
+  if (item.wondrous) types.push("wondrous item");
+  if (item.tattoo) types.push("tattoo");
+  if (item.staff) types.push("staff");
+  if (item.ammo) types.push(`ammunition`);
+  if (item.firearm) subTypes.push("firearm");
+  if (item.age) subTypes.push(item.age);
+  if (item.weaponCategory) {
+    types.push(`weapon${item.baseItem ? ` (${item.baseItem})` : ""}`);
+    subTypes.push(`${item.weaponCategory} weapon`);
+  }
+  if (
+    item.staff &&
+    item.type !== "Melee Weapon" &&
+    item.typeAlt !== "Melee Weapon"
+  )
+    types.push("melee weapon");
+  if (item.type) types.push(item.type);
+  if (item.typeAlt) types.push(item.typeAlt);
+  if (item.poison)
+    types.push(
+      `poison${item.poisonTypes ? ` (${fmtOrList(item.poisonTypes)})` : ""}`
+    );
+  return `${fmtAndList(types)}\n${fmtAndList(subTypes)}`;
 };
 
 export const fmtDuration = (data: DurationObject) => {

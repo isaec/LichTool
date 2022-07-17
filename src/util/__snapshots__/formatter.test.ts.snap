@@ -1017,3 +1017,323 @@ exports[`fmtRange > {"type":"special"} matches snapshot, shorten: true 1`] = `"S
 exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot, shorten: false 1`] = `"10-foot radi"`;
 
 exports[`fmtRange > {"type":"sphere","distance":{"type":"feet","amount":10}} matches snapshot, shorten: true 1`] = `"10-ft radi"`;
+
+exports[`fmtWeaponType > Arrow matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Arrows (20) matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Battleaxe matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Blowgun Needle matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Blowgun Needles (50) matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Blowgun matches snapshot 1`] = `
+"weapon and Ranged Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Breastplate matches snapshot 1`] = `
+"Medium Armor
+"
+`;
+
+exports[`fmtWeaponType > Chain Mail matches snapshot 1`] = `
+"Heavy Armor
+"
+`;
+
+exports[`fmtWeaponType > Chain Shirt matches snapshot 1`] = `
+"Medium Armor
+"
+`;
+
+exports[`fmtWeaponType > Club matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Crossbow Bolt matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Crossbow Bolts (20) matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Crystal matches snapshot 1`] = `
+"Spellcasting Focus
+"
+`;
+
+exports[`fmtWeaponType > Dagger matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Dart matches snapshot 1`] = `
+"weapon and Ranged Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Flail matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Glaive matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Greataxe matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Greatclub matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Greatsword matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Halberd matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Half Plate Armor matches snapshot 1`] = `
+"Medium Armor
+"
+`;
+
+exports[`fmtWeaponType > Hand Crossbow matches snapshot 1`] = `
+"weapon and Ranged Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Handaxe matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Heavy Crossbow matches snapshot 1`] = `
+"weapon and Ranged Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Hide Armor matches snapshot 1`] = `
+"Medium Armor
+"
+`;
+
+exports[`fmtWeaponType > Javelin matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Lance matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Leather Armor matches snapshot 1`] = `
+"Light Armor
+"
+`;
+
+exports[`fmtWeaponType > Light Crossbow matches snapshot 1`] = `
+"weapon and Ranged Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Light Hammer matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Longbow matches snapshot 1`] = `
+"weapon and Ranged Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Longsword matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Mace matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Maul matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Morningstar matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Net matches snapshot 1`] = `
+"weapon and Ranged Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Orb matches snapshot 1`] = `
+"Spellcasting Focus
+"
+`;
+
+exports[`fmtWeaponType > Padded Armor matches snapshot 1`] = `
+"Light Armor
+"
+`;
+
+exports[`fmtWeaponType > Pike matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Plate Armor matches snapshot 1`] = `
+"Heavy Armor
+"
+`;
+
+exports[`fmtWeaponType > Quarterstaff matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Rapier matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Ring Mail matches snapshot 1`] = `
+"Heavy Armor
+"
+`;
+
+exports[`fmtWeaponType > Rod matches snapshot 1`] = `
+"Spellcasting Focus
+"
+`;
+
+exports[`fmtWeaponType > Scale Mail matches snapshot 1`] = `
+"Medium Armor
+"
+`;
+
+exports[`fmtWeaponType > Scimitar matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Shield matches snapshot 1`] = `
+"Shield
+"
+`;
+
+exports[`fmtWeaponType > Shortbow matches snapshot 1`] = `
+"weapon and Ranged Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Shortsword matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Sickle matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Sling Bullet matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Sling Bullets (20) matches snapshot 1`] = `
+"Ammunition
+"
+`;
+
+exports[`fmtWeaponType > Sling matches snapshot 1`] = `
+"weapon and Ranged Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Spear matches snapshot 1`] = `
+"weapon and Melee Weapon
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Splint Armor matches snapshot 1`] = `
+"Heavy Armor
+"
+`;
+
+exports[`fmtWeaponType > Staff matches snapshot 1`] = `
+"staff, weapon, melee weapon, and Spellcasting Focus
+simple weapon"
+`;
+
+exports[`fmtWeaponType > Studded Leather Armor matches snapshot 1`] = `
+"Light Armor
+"
+`;
+
+exports[`fmtWeaponType > Trident matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Wand matches snapshot 1`] = `
+"Spellcasting Focus
+"
+`;
+
+exports[`fmtWeaponType > War Pick matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Warhammer matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Whip matches snapshot 1`] = `
+"weapon and Melee Weapon
+martial weapon"
+`;
+
+exports[`fmtWeaponType > Wooden Staff matches snapshot 1`] = `
+"weapon and Spellcasting Focus
+simple weapon"
+`;
