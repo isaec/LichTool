@@ -207,7 +207,7 @@ const addEntriesToItem = (item: Item) => {
   }
   // evil, but this is the only way to do it - copied verbatim and macro-ed from render.js
   if (newItem.type === "SCF") {
-    // @ts-expect-error
+    // @ts-expect-error we need to pass this in once we process item groups, it will always be false for now
     if (newItem._isItemGroup) {
       // isItemGroup
       if (newItem.scfType === "arcane" && newItem.source !== "ERLW") {
