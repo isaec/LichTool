@@ -256,32 +256,33 @@ const processItems = async () => {
     itemTypeAdditionalEntries: any[];
   } = JSON.parse(baseItemsFile);
 
+  const templateKV = ({
+    abbreviation,
+    template,
+    entries,
+  }: {
+    abbreviation: string;
+    template?: string;
+    entries?: any;
+    // using the undefined type here is wrong but makes things easier so
+  }): [string | undefined, { template?: string; entries?: any }] => [
+    abbreviation,
+    { template, entries },
+  ];
+
   const baseItems = baseItemObject.baseitem;
-  const typeMap = new Map(
-    baseItemObject.itemType.map(({ abbreviation, template, entries }) => [
-      abbreviation,
-      { template, entries },
-    ])
-  );
+  const typeMap = new Map(baseItemObject.itemType.map(templateKV));
   const propertyMap = new Map(
     baseItemObject.itemProperty
       // filter out special property
       // it isn't needed for our system, it only exists in base data to enable filtering
       .filter((p) => p.abbreviation !== "S")
-      .map(({ abbreviation, template, entries }) => [
-        abbreviation,
-        { template, entries },
-      ])
+      .map(templateKV)
   );
 
   // this should be used eventually?
   const _typeAdditionalEntriesMap = new Map(
-    baseItemObject.itemTypeAdditionalEntries.map(
-      ({ abbreviation, template, entries }) => [
-        abbreviation,
-        { template, entries },
-      ]
-    )
+    baseItemObject.itemTypeAdditionalEntries.map(templateKV)
   );
 
   const expandedItems: ItemId[] = [];
