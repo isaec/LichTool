@@ -72,6 +72,9 @@ export type DataItem = IdData & {
   template?: string;
   weight?: number;
   weaponCategory?: string;
+  dmg1?: string;
+  dmg2?: string;
+  dmgType?: string;
 };
 
 export type RawConditionData = RawData<DataCondition>;

@@ -1,5 +1,6 @@
 import { DataItem, RawData } from "@src/dataLookup";
 import { argList, capitalize, fmtCurrency } from "@src/util/formatter";
+import { allDefined } from "@src/util/validation";
 import { Component, Show } from "solid-js";
 import { Entries } from "./DataBodyEntries";
 
@@ -22,7 +23,13 @@ const DataItemElement: Component<{
         {argList(fmtCurrency(props.data.value!), [props.data.weight, "lb."])}
       </p>
       <Show when={props.data.template !== undefined}>
-        <p>{props.data.template}</p>
+        <p>
+          <Show when={allDefined(props.data.dmg1, props.data.dmgType)}>
+            {props.data.dmg1} {props.data.dmgType}
+            {" - "}
+          </Show>
+          {props.data.template}
+        </p>
       </Show>
     </HorizontalPair>
     <Entries data={props.data} />

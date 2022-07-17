@@ -136,6 +136,10 @@ exports[`DataItemElement > Battleaxe > matches snapshot 1`] = `
         10 gp, 4 lb.
       </p>
       <p>
+        1d8
+         
+        S
+         - 
         versatile (1d10)
       </p>
     </div>
@@ -210,6 +214,10 @@ exports[`DataItemElement > Blowgun > matches snapshot 1`] = `
         10 gp, 1 lb.
       </p>
       <p>
+        1
+         
+        P
+         - 
         ammunition (25/100 ft.)
       </p>
     </div>
@@ -834,6 +842,10 @@ exports[`DataItemElement > Dagger > matches snapshot 1`] = `
         2 gp, 1 lb.
       </p>
       <p>
+        1d4
+         
+        P
+         - 
         thrown (20/60 ft.)
       </p>
     </div>
@@ -936,6 +948,10 @@ exports[`DataItemElement > Dart > matches snapshot 1`] = `
         5 cp, 0.25 lb.
       </p>
       <p>
+        1d4
+         
+        P
+         - 
         thrown (20/60 ft.)
       </p>
     </div>
@@ -1601,6 +1617,10 @@ exports[`DataItemElement > Hand Crossbow > matches snapshot 1`] = `
         75 gp, 3 lb.
       </p>
       <p>
+        1d6
+         
+        P
+         - 
         ammunition (30/120 ft.)
       </p>
     </div>
@@ -1720,6 +1740,10 @@ exports[`DataItemElement > Handaxe > matches snapshot 1`] = `
         5 gp, 2 lb.
       </p>
       <p>
+        1d6
+         
+        S
+         - 
         thrown (20/60 ft.)
       </p>
     </div>
@@ -1808,6 +1832,10 @@ exports[`DataItemElement > Heavy Crossbow > matches snapshot 1`] = `
         50 gp, 18 lb.
       </p>
       <p>
+        1d10
+         
+        P
+         - 
         ammunition (100/400 ft.)
       </p>
     </div>
@@ -1998,6 +2026,10 @@ exports[`DataItemElement > Javelin > matches snapshot 1`] = `
         5 sp, 2 lb.
       </p>
       <p>
+        1d6
+         
+        P
+         - 
         thrown (30/120 ft.)
       </p>
     </div>
@@ -2214,6 +2246,10 @@ exports[`DataItemElement > Light Crossbow > matches snapshot 1`] = `
         25 gp, 5 lb.
       </p>
       <p>
+        1d8
+         
+        P
+         - 
         ammunition (80/320 ft.)
       </p>
     </div>
@@ -2333,6 +2369,10 @@ exports[`DataItemElement > Light Hammer > matches snapshot 1`] = `
         2 gp, 2 lb.
       </p>
       <p>
+        1d4
+         
+        B
+         - 
         thrown (20/60 ft.)
       </p>
     </div>
@@ -2421,6 +2461,10 @@ exports[`DataItemElement > Longbow > matches snapshot 1`] = `
         50 gp, 2 lb.
       </p>
       <p>
+        1d8
+         
+        P
+         - 
         ammunition (150/600 ft.)
       </p>
     </div>
@@ -2540,6 +2584,10 @@ exports[`DataItemElement > Longsword > matches snapshot 1`] = `
         15 gp, 3 lb.
       </p>
       <p>
+        1d8
+         
+        S
+         - 
         versatile (1d10)
       </p>
     </div>
@@ -2807,6 +2855,7 @@ exports[`DataItemElement > Net > matches snapshot 1`] = `
         1 gp, 3 lb.
       </p>
       <p>
+        
         thrown (5/15 ft.)
       </p>
     </div>
@@ -3214,6 +3263,10 @@ exports[`DataItemElement > Quarterstaff > matches snapshot 1`] = `
         2 sp, 4 lb.
       </p>
       <p>
+        1d6
+         
+        B
+         - 
         versatile (1d8)
       </p>
     </div>
@@ -3698,6 +3751,10 @@ exports[`DataItemElement > Shortbow > matches snapshot 1`] = `
         25 gp, 2 lb.
       </p>
       <p>
+        1d6
+         
+        P
+         - 
         ammunition (80/320 ft.)
       </p>
     </div>
@@ -3959,6 +4016,10 @@ exports[`DataItemElement > Sling > matches snapshot 1`] = `
         1 sp
       </p>
       <p>
+        1d4
+         
+        B
+         - 
         ammunition (30/120 ft.)
       </p>
     </div>
@@ -4152,6 +4213,10 @@ exports[`DataItemElement > Spear > matches snapshot 1`] = `
         1 gp, 3 lb.
       </p>
       <p>
+        1d6
+         
+        P
+         - 
         versatile (1d8)
       </p>
     </div>
@@ -4313,6 +4378,10 @@ exports[`DataItemElement > Staff > matches snapshot 1`] = `
         5 gp, 4 lb.
       </p>
       <p>
+        1d6
+         
+        B
+         - 
         versatile (1d8)
       </p>
     </div>
@@ -4447,6 +4516,10 @@ exports[`DataItemElement > Trident > matches snapshot 1`] = `
         5 gp, 4 lb.
       </p>
       <p>
+        1d6
+         
+        P
+         - 
         versatile (1d8)
       </p>
     </div>
@@ -4646,6 +4719,10 @@ exports[`DataItemElement > Warhammer > matches snapshot 1`] = `
         15 gp, 2 lb.
       </p>
       <p>
+        1d8
+         
+        B
+         - 
         versatile (1d10)
       </p>
     </div>
@@ -4805,6 +4882,10 @@ exports[`DataItemElement > Wooden Staff > matches snapshot 1`] = `
         5 gp, 4 lb.
       </p>
       <p>
+        1d6
+         
+        B
+         - 
         versatile (1d8)
       </p>
     </div>
