@@ -70,6 +70,7 @@ export type DataItem = IdData & {
   additionalEntries?: DataGroup;
   value?: number | null;
   template?: string;
+  weight?: number;
 };
 
 export type RawConditionData = RawData<DataCondition>;

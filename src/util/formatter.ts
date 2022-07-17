@@ -31,6 +31,14 @@ export const upperFirst = (s: string) =>
 export const plural = (num: number, str: string) =>
   `${num} ${str}${num > 1 ? "s" : ""}`;
 
+export const argList = (
+  ...args: Array<string | undefined | [string | number | undefined, string]>
+) =>
+  args
+    .filter((arg) => (Array.isArray(arg) ? arg[0] : arg) !== undefined)
+    .map((arg) => (Array.isArray(arg) ? arg.join(" ") : arg))
+    .join(", ");
+
 const joinList = (
   list: Readonly<string[]>,
   joiner: string,
