@@ -1,0 +1,4849 @@
+// Vitest Snapshot v1
+
+exports[`DataItemElement > Arrow > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Arrow
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 cp, 0.05 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Arrows (20) > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Arrows (20)
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 gp, 1 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Battleaxe > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Battleaxe
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 4 lb.
+      </p>
+      <p>
+        versatile (1d10)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Blowgun > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Blowgun
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 1 lb.
+      </p>
+      <p>
+        ammunition (25/100 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Loading. 
+              </i>
+            </b>
+            <p>
+              Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Blowgun Needle > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Blowgun Needle
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        2 cp, 0.02 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Blowgun Needles (50) > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Blowgun Needles (50)
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 gp, 1 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Breastplate > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Breastplate
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          145
+        </small>
+      </h2>
+    </div>
+    <i>
+      Medium Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        400 gp, 20 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          This armor consists of a fitted metal chest piece worn with supple leather. Although it leaves the legs and arms relatively unprotected, this armor provides good protection for the wearer's vital organs while leaving the wearer relatively unencumbered.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      145
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Chain Mail > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Chain Mail
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          145
+        </small>
+      </h2>
+    </div>
+    <i>
+      Heavy Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        75 gp, 55 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+        <p>
+          If the wearer has a Strength score lower than 13, their speed is reduced by 10 feet.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      145
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Chain Shirt > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Chain Shirt
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Medium Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        50 gp, 20 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          Made of interlocking metal rings, a chain shirt is worn between layers of clothing or leather. This armor offers modest protection to the wearer's upper body and allows the sound of the rings rubbing against one another to be muffled by outer layers.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Club > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Club
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 sp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Crossbow Bolt > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Crossbow Bolt
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 cp, 0.075 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Crossbow Bolts (20) > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Crossbow Bolts (20)
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 gp, 1.5 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Crystal > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Crystal
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          151
+        </small>
+      </h2>
+    </div>
+    <i>
+      Spellcasting Focus
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 1 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      151
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Dagger > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Dagger
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        2 gp, 1 lb.
+      </p>
+      <p>
+        thrown (20/60 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Finesse. 
+              </i>
+            </b>
+            <p>
+              When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Dart > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Dart
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 cp, 0.25 lb.
+      </p>
+      <p>
+        thrown (20/60 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Finesse. 
+              </i>
+            </b>
+            <p>
+              When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Flail > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Flail
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Glaive > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Glaive
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        20 gp, 6 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Reach. 
+              </i>
+            </b>
+            <p>
+              This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Greataxe > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Greataxe
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        30 gp, 7 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Greatclub > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Greatclub
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        2 sp, 10 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Greatsword > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Greatsword
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        50 gp, 6 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Halberd > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Halberd
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        20 gp, 6 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Reach. 
+              </i>
+            </b>
+            <p>
+              This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Half Plate Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Half Plate Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          145
+        </small>
+      </h2>
+    </div>
+    <i>
+      Medium Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        750 gp, 40 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          Half plate consists of shaped metal plates that cover most of the wearer's body. It does not include leg protection beyond simple greaves that are attached with leather straps.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      145
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Hand Crossbow > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Hand Crossbow
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        75 gp, 3 lb.
+      </p>
+      <p>
+        ammunition (30/120 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Loading. 
+              </i>
+            </b>
+            <p>
+              Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Handaxe > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Handaxe
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 2 lb.
+      </p>
+      <p>
+        thrown (20/60 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Heavy Crossbow > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Heavy Crossbow
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        50 gp, 18 lb.
+      </p>
+      <p>
+        ammunition (100/400 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Loading. 
+              </i>
+            </b>
+            <p>
+              Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Hide Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Hide Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Medium Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 12 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, evil humanoids, and other folk who lack access to the tools and materials needed to create better armor.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Javelin > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Javelin
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 sp, 2 lb.
+      </p>
+      <p>
+        thrown (30/120 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Lance > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Lance
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 6 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Special. 
+              </i>
+            </b>
+            <p>
+              You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Reach. 
+              </i>
+            </b>
+            <p>
+              This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Leather Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Leather Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Light Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 10 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Light Crossbow > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Light Crossbow
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        25 gp, 5 lb.
+      </p>
+      <p>
+        ammunition (80/320 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Loading. 
+              </i>
+            </b>
+            <p>
+              Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Light Hammer > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Light Hammer
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        2 gp, 2 lb.
+      </p>
+      <p>
+        thrown (20/60 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Longbow > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Longbow
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        50 gp, 2 lb.
+      </p>
+      <p>
+        ammunition (150/600 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Longsword > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Longsword
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        15 gp, 3 lb.
+      </p>
+      <p>
+        versatile (1d10)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Mace > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Mace
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 4 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Maul > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Maul
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 10 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Morningstar > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Morningstar
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        15 gp, 4 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Net > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Net
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 gp, 3 lb.
+      </p>
+      <p>
+        thrown (5/15 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Special. 
+              </i>
+            </b>
+            <p>
+              A Large or smaller creature hit by a net is 
+              <a
+                href="/view/condition_PHB-Restrained"
+              >
+                restrained
+              </a>
+               until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Orb > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Orb
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          151
+        </small>
+      </h2>
+    </div>
+    <i>
+      Spellcasting Focus
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        20 gp, 3 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      151
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Padded Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Padded Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Light Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 8 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          Padded armor consists of quilted layers of cloth and batting.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Pike > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Pike
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 18 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Heavy. 
+              </i>
+            </b>
+            <p>
+              Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Reach. 
+              </i>
+            </b>
+            <p>
+              This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Plate Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Plate Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          145
+        </small>
+      </h2>
+    </div>
+    <i>
+      Heavy Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1,500 gp, 65 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+        <p>
+          If the wearer has a Strength score lower than 15, their speed is reduced by 10 feet.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      145
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Quarterstaff > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Quarterstaff
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        2 sp, 4 lb.
+      </p>
+      <p>
+        versatile (1d8)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Rapier > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Rapier
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        25 gp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Finesse. 
+              </i>
+            </b>
+            <p>
+              When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Ring Mail > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Ring Mail
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          145
+        </small>
+      </h2>
+    </div>
+    <i>
+      Heavy Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        30 gp, 40 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          This armor is leather armor with heavy rings sewn into it. The rings help reinforce the armor against blows from swords and axes. Ring mail is inferior to chain mail, and it's usually worn only by those who can't afford better armor.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      145
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Rod > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Rod
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          151
+        </small>
+      </h2>
+    </div>
+    <i>
+      Spellcasting Focus
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      151
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Scale Mail > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Scale Mail
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Medium Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        50 gp, 45 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Scimitar > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Scimitar
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        25 gp, 3 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Finesse. 
+              </i>
+            </b>
+            <p>
+              When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Shield > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Shield
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Shield
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 6 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Shortbow > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Shortbow
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        25 gp, 2 lb.
+      </p>
+      <p>
+        ammunition (80/320 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Two-Handed. 
+              </i>
+            </b>
+            <p>
+              This weapon requires two hands to use. This property is relevant only when you attack with the weapon, not when you simply hold it.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Shortsword > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Shortsword
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Finesse. 
+              </i>
+            </b>
+            <p>
+              When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Sickle > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Sickle
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 gp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Light. 
+              </i>
+            </b>
+            <p>
+              A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Sling > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Sling
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ranged Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 sp
+      </p>
+      <p>
+        ammunition (30/120 ft.)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Range. 
+              </i>
+            </b>
+            <p>
+              A weapon that can be used to make a ranged attack has a range shown in parentheses after the ammunition or thrown property. The range lists two numbers. The first is the weapon's normal range in feet, and the second indicates the weapon's maximum range. When attacking a target beyond normal range, you have disadvantage on the attack roll. You can't attack a target beyond the weapon's long range.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Ammunition. 
+              </i>
+            </b>
+            <p>
+              You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.
+            </p>
+            <p>
+              If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Sling Bullet > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Sling Bullet
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        0.2 cp, 0.075 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Sling Bullets (20) > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Sling Bullets (20)
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          150
+        </small>
+      </h2>
+    </div>
+    <i>
+      Ammunition
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        4 cp, 1.5 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      150
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Spear > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Spear
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        1 gp, 3 lb.
+      </p>
+      <p>
+        versatile (1d8)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Splint Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Splint Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          145
+        </small>
+      </h2>
+    </div>
+    <i>
+      Heavy Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        200 gp, 60 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints.
+        </p>
+        <p>
+          The wearer has disadvantage on Dexterity (
+          <span
+            class="_error_5kjti_47"
+          >
+            UNKNOWN tag="skill" ERROR: 
+            <code>
+              {@skill Stealth}
+            </code>
+            
+          </span>
+          ) checks.
+        </p>
+        <p>
+          If the wearer has a Strength score lower than 15, their speed is reduced by 10 feet.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      145
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Staff > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Staff
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          151
+        </small>
+      </h2>
+    </div>
+    <i>
+      Spellcasting Focus
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 4 lb.
+      </p>
+      <p>
+        versatile (1d8)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+        <p>
+          An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      151
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Studded Leather Armor > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Studded Leather Armor
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          144
+        </small>
+      </h2>
+    </div>
+    <i>
+      Light Armor
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        45 gp, 13 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      144
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Trident > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Trident
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 4 lb.
+      </p>
+      <p>
+        versatile (1d8)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Thrown. 
+              </i>
+            </b>
+            <p>
+              If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Wand > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Wand
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          151
+        </small>
+      </h2>
+    </div>
+    <i>
+      Spellcasting Focus
+    </i>
+    
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        10 gp, 1 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <p>
+          An arcane focus is a special item designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      151
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > War Pick > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        War Pick
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 2 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    />
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Warhammer > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Warhammer
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        15 gp, 2 lb.
+      </p>
+      <p>
+        versatile (1d10)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Whip > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Whip
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          149
+        </small>
+      </h2>
+    </div>
+    <i>
+      Melee Weapon
+    </i>
+    <i>
+      Martial
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        2 gp, 3 lb.
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Finesse. 
+              </i>
+            </b>
+            <p>
+              When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Reach. 
+              </i>
+            </b>
+            <p>
+              This weapon adds 5 feet to your reach when you attack with it. This property also determines your reach for opportunity attacks with a reach weapon.
+            </p>
+          </div>
+        </div>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      149
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`DataItemElement > Wooden Staff > matches snapshot 1`] = `
+<div>
+  <div
+    class="DataElement"
+  >
+    <div
+      class="DataHeader"
+    >
+      <h2>
+        Wooden Staff
+      </h2>
+      <h2>
+        PHB
+         
+        <small>
+          p
+          151
+        </small>
+      </h2>
+    </div>
+    <i>
+      Spellcasting Focus
+    </i>
+    <i>
+      Simple
+       weapon
+    </i>
+    <div
+      class="HorizontalPair"
+    >
+      <p>
+        5 gp, 4 lb.
+      </p>
+      <p>
+        versatile (1d8)
+      </p>
+    </div>
+    <p
+      class="_Renderer_5kjti_1"
+    >
+      <p>
+        <div>
+          <div
+            class="_inlineHeader_5kjti_54"
+          >
+            <b>
+              <i>
+                Versatile. 
+              </i>
+            </b>
+            <p>
+              This weapon can be used with one or two hands. A damage value in parentheses appears with the property—the damage when the weapon is used with two hands to make a melee attack.
+            </p>
+          </div>
+        </div>
+        <p>
+          A druid can use this object as a spellcasting focus.
+        </p>
+      </p>
+    </p>
+    <p>
+      <b>
+        Source: 
+      </b>
+      <i>
+        PHB
+        ,
+      </i>
+       page 
+      151
+      .
+       Available in the SRD.
+    </p>
+  </div>
+</div>
+`;
