@@ -131,7 +131,9 @@ export const fmtWeaponType = (item: DataItem): string => {
     types.push(
       `poison${item.poisonTypes ? ` (${fmtOrList(item.poisonTypes)})` : ""}`
     );
-  return `${fmtAndList(types)}\n${fmtAndList(subTypes)}`;
+  return `${upperFirst(fmtAndList(types))}${
+    types.length > 0 && subTypes.length > 0 ? "\n" : ""
+  }${upperFirst(fmtAndList(subTypes))}`;
 };
 
 export const fmtDuration = (data: DurationObject) => {
