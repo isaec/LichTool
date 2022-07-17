@@ -1,5 +1,5 @@
 import { DataItem, RawData } from "@src/dataLookup";
-import { argList, fmtCurrency } from "@src/util/formatter";
+import { argList, capitalize, fmtCurrency } from "@src/util/formatter";
 import { Component, Show } from "solid-js";
 import { Entries } from "./DataBodyEntries";
 
@@ -14,6 +14,9 @@ const DataItemElement: Component<{
   <div class={styles.DataElement}>
     <DataHeader data={props.data} />
     <i>{props.data.type}</i>
+    <Show when={props.data.weaponCategory}>
+      <i>{capitalize(props.data.weaponCategory!)} weapon</i>
+    </Show>
     <HorizontalPair>
       <p>
         {argList(fmtCurrency(props.data.value!), [props.data.weight, "lb."])}
