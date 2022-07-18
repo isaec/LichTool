@@ -1,7 +1,5 @@
 import toast from "solid-toast";
-import { DataSpell } from "@src/dataLookup";
-import { dataMap } from "@src/dataLookup";
-import { SearchResult } from "minisearch";
+import { dataMap, filterMap } from "@src/dataLookup";
 
 export type FilterData = {
   key: string;
@@ -107,4 +105,23 @@ export const executeFilters = (filters: PopulatedFilter[]) => {
     const dataObj = dataMap.get(result.id)!;
     return !filters.some((filter) => !testFilter(dataObj, filter));
   };
+};
+
+export const filterIsValid = (filter: Filter) => {
+  if (filter.key === undefined || filter.value === undefined) return false;
+  if (filter.key === "") return false;
+  if (filter.value === "") return false;
+  // at this point the data is not literally missing
+  if (!filterMap.has(filter.key)) return false;
+  // we now know this could be a valid filter
+  // regex on a valid key is valid
+  if (isValidRegex.test(filter.value)) return true;
+  // if it's a number, it's valid
+  if (isOnlyDigits.test(filter.value)) return true;
+  // if its a string which is a substring of possible values, it's valid
+  const possibleValues = filterMap.get(filter.key)!;
+  return possibleValues.some(
+    (val) =>
+      typeof val === "string" && val.toLowerCase().includes(filter.value!)
+  );
 };

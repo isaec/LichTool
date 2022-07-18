@@ -8,7 +8,7 @@ import {
   For,
   createMemo,
 } from "solid-js";
-import { Filter, BlankFilter } from "./filterEngine";
+import { Filter, BlankFilter, filterIsValid } from "./filterEngine";
 
 import styles from "./Omnisearch.module.scss";
 
@@ -199,10 +199,7 @@ const FilterComponent: Component<{
       />
       <SmartInput
         value={props.filter.value}
-        valid={
-          typeof props.filter.value === "string" &&
-          props.filter.value.length > 0
-        }
+        valid={filterIsValid(props.filter)}
         options={valueOptions()}
         focus={state() === "value"}
         disabled={state() === "key"}
