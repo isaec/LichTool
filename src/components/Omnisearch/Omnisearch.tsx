@@ -1,5 +1,4 @@
-import { SearchResult } from "minisearch";
-import { dataArray, dataMap } from "@src/dataLookup";
+import { dataMap } from "@src/dataLookup";
 import {
   batch,
   Component,
@@ -20,7 +19,6 @@ import {
   isParamFilter,
   Filter,
   isPopulated,
-  testFilter,
   executeFilters,
 } from "./filterEngine";
 import { groupResults } from "./groupResults";
@@ -67,21 +65,31 @@ const Omnisearch: Component<{}> = () => {
     });
   });
   const debouncedQuery = createDebouncedMemo(() => search.query, 50);
+  const debouncedPopulatedFilters = createDebouncedMemo(
+    // this hack subscribes the function to the reading of every property of the filters
+    () => populatedFilters().map((f) => ({ ...f })),
+    150
+  );
 
   const results = createMemo(() => {
     // show everything if there are no params
-    if (debouncedQuery().length === 0 && populatedFilters().length === 0) {
+    if (
+      debouncedQuery().length === 0 &&
+      debouncedPopulatedFilters().length === 0
+    ) {
       return groupResults([...dataMap.values()]);
     }
     if (debouncedQuery().length === 0) {
       // filter without any search
       return groupResults(
-        [...dataMap.values()].filter(executeFilters(populatedFilters())!)
+        [...dataMap.values()].filter(
+          executeFilters(debouncedPopulatedFilters())!
+        )
       );
     }
     return groupResults(
       searchEngine.search(debouncedQuery(), {
-        filter: executeFilters(populatedFilters()),
+        filter: executeFilters(debouncedPopulatedFilters()),
       })
     );
   });
