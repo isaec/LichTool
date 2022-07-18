@@ -29,6 +29,15 @@ const SmartInput: Component<{
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
   const [hasMouseDown, setHasMouseDown] = createSignal(false);
+  // this is used to determine if focus loss is because of escape key
+  const [triggeredEscape, setTriggeredEscape] = createSignal(false);
+
+  const escape = () => {
+    props.onInput("");
+    setTriggeredEscape(true);
+    props.onEscape();
+  };
+
   let ref: HTMLInputElement | undefined;
   createEffect(() => {
     if (props.focus) ref?.focus();
@@ -67,7 +76,7 @@ const SmartInput: Component<{
             !props.valid &&
             (props.options?.length === 0 || props.options === undefined),
         }}
-        type="search"
+        type={props.finishKey === "Enter" ? "search" : "text"}
         value={props.value ?? ""}
         disabled={props.disabled}
         spellcheck={false}
@@ -98,9 +107,7 @@ const SmartInput: Component<{
             e.currentTarget.selectionEnd === 0
           ) {
             e.preventDefault();
-            // clear out the input
-            props.onInput("");
-            props.onEscape();
+            escape();
           }
         }}
         onFocus={() => {
@@ -108,7 +115,15 @@ const SmartInput: Component<{
           props.onFocus();
         }}
         onBlur={() => {
-          if (!hasMouseDown()) setFocused(false);
+          if (!hasMouseDown()) {
+            setFocused(false);
+            if (!triggeredEscape()) {
+              tryFinish();
+            } else {
+              // flip the flag back to false
+              setTriggeredEscape(false);
+            }
+          }
         }}
       />
       <Show
