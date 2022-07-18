@@ -65,7 +65,8 @@ const Omnisearch: Component<{}> = () => {
         `Legal range is 0..${search.filters.length}`
       );
     }
-    if (isFocus(focus.length)) {
+    if (isFocus(search.filters.length)) {
+      console.log("focus omni");
       // focus the omnisearch input
       ref?.focus();
     }
@@ -137,6 +138,7 @@ const Omnisearch: Component<{}> = () => {
                 setFocus((f) => Math.max(0, f - 1));
               }}
               isFocused={isFocus(index())}
+              onGainedFocus={() => setFocus(index())}
               onFinish={() => {
                 // focus the next filter down the page, or the omnisearch
                 // this should be safe to call without clamping?
@@ -163,6 +165,13 @@ const Omnisearch: Component<{}> = () => {
               e.currentTarget.value = search.query;
             } else {
               setSearch("query", e.currentTarget.value);
+            }
+          }}
+          onFocus={() => {
+            // IMPORTANT: this check is needed, because focus values are not diffed
+            // without this check, lots of deeply nested reactive code will trigger unnecessarily
+            if (!isFocus(search.filters.length)) {
+              setFocus(search.filters.length);
             }
           }}
         />

@@ -25,6 +25,7 @@ const SmartInput: Component<{
   onFinish: () => void;
   onEscape: () => void;
   onInput: (value: string) => void;
+  onFocus: () => void;
 }> = (props) => {
   const [focused, setFocused] = createSignal(false);
   const [hasMouseDown, setHasMouseDown] = createSignal(false);
@@ -99,7 +100,10 @@ const SmartInput: Component<{
             props.onEscape();
           }
         }}
-        onFocus={() => setFocused(true)}
+        onFocus={() => {
+          setFocused(true);
+          props.onFocus();
+        }}
         onBlur={() => {
           if (!hasMouseDown()) setFocused(false);
         }}
@@ -135,6 +139,7 @@ const FilterComponent: Component<{
   filter: Filter | BlankFilter;
   setFilter: (filter: Partial<Filter>) => void;
   isFocused: boolean;
+  onGainedFocus: () => void;
   onFinish: () => void;
   removeSelf: () => void;
 }> = (props) => {
@@ -178,6 +183,10 @@ const FilterComponent: Component<{
   );
   const isState = createSelector(state);
 
+  const onFocus = () => {
+    if (!props.isFocused) props.onGainedFocus();
+  };
+
   return (
     <>
       <SmartInput
@@ -194,6 +203,7 @@ const FilterComponent: Component<{
         onInput={(s) => {
           props.setFilter({ key: s });
         }}
+        onFocus={onFocus}
       />
       <SmartInput
         value={props.filter.value}
@@ -211,6 +221,7 @@ const FilterComponent: Component<{
         onInput={(s) => {
           props.setFilter({ value: s });
         }}
+        onFocus={onFocus}
       />
     </>
   );
