@@ -66,7 +66,6 @@ const Omnisearch: Component<{}> = () => {
       );
     }
     if (isFocus(search.filters.length)) {
-      console.log("focus omni");
       // focus the omnisearch input
       ref?.focus();
     }
@@ -172,6 +171,18 @@ const Omnisearch: Component<{}> = () => {
             // without this check, lots of deeply nested reactive code will trigger unnecessarily
             if (!isFocus(search.filters.length)) {
               setFocus(search.filters.length);
+            }
+          }}
+          // onkeydown to detect backspace
+          onKeyDown={(e) => {
+            if (
+              e.key === "Backspace" &&
+              e.currentTarget.selectionStart === 0 &&
+              e.currentTarget.selectionEnd === 0
+            ) {
+              e.preventDefault();
+              // switch focus to the previous filter
+              setFocus((f) => Math.max(0, f - 1));
             }
           }}
         />
