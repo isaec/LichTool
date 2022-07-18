@@ -7,6 +7,7 @@ import {
   Show,
   For,
   createMemo,
+  createSelector,
 } from "solid-js";
 import toast from "solid-toast";
 import { Filter, BlankFilter, filterIsValid } from "./filterEngine";
@@ -133,9 +134,16 @@ const SmartInput: Component<{
 const FilterComponent: Component<{
   filter: Filter | BlankFilter;
   setFilter: (filter: Partial<Filter>) => void;
-  focusOmnisearch: () => void;
+  isFocused: boolean;
+  onFinish: () => void;
   removeSelf: () => void;
 }> = (props) => {
+  const filterIsValidMemo = createMemo(() => filterIsValid(props.filter));
+  // keep filter use property in sync with filter validity
+  createEffect(() => {
+    props.setFilter({ use: filterIsValidMemo() });
+  });
+
   const keyOptions = createMemo(() => {
     if (props.filter.key === undefined) return filterKeys;
     return filterKeys
@@ -161,26 +169,14 @@ const FilterComponent: Component<{
     );
   });
 
-  type States = "key" | "value" | "use";
-  // if filter is made from url data, it is ready to use
+  type States = "key" | "value";
+  // if filter is made from url data, we can start in the value state
+  // if use is true at component inception, we know the filter is made from url data
+  // this code only runs once and is not in a reactive scope, thats why this works
   const [state, setState] = createSignal<States>(
-    props.filter.use ? "use" : "key"
+    props.filter.use ? "value" : "key"
   );
-
-  // make use true if the filter validates
-  createEffect(() => {
-    switch (true) {
-      case state() === "use":
-        props.focusOmnisearch();
-      // fallthrough
-      case state() === "value" && typeof props.filter.value === "string":
-        props.setFilter({ use: true });
-        break;
-      default:
-        props.setFilter({ use: false });
-        break;
-    }
-  });
+  const isState = createSelector(state);
 
   return (
     <>
@@ -188,8 +184,8 @@ const FilterComponent: Component<{
         value={props.filter.key}
         valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
-        focus={state() === "key"}
-        disabled={state() === "use" || state() === "value"}
+        focus={isState("key") && props.isFocused}
+        disabled={isState("value")}
         finishKey="Space"
         onFinish={() => {
           setState("value");
@@ -203,11 +199,11 @@ const FilterComponent: Component<{
         value={props.filter.value}
         valid={filterIsValid(props.filter)}
         options={valueOptions()}
-        focus={state() === "value"}
-        disabled={state() === "key"}
+        focus={isState("value") && props.isFocused}
+        disabled={isState("key")}
         finishKey="Enter"
         onFinish={() => {
-          setState("use");
+          props.onFinish();
         }}
         onEscape={() => {
           setState("key");

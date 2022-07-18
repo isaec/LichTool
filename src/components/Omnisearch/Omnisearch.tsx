@@ -3,7 +3,10 @@ import {
   batch,
   Component,
   createComputed,
+  createEffect,
   createMemo,
+  createSelector,
+  createSignal,
   For,
   untrack,
 } from "solid-js";
@@ -25,9 +28,6 @@ import { groupResults } from "./groupResults";
 
 const Omnisearch: Component<{}> = () => {
   let ref: HTMLInputElement | undefined;
-  const focusOmnisearch = () => {
-    ref?.focus();
-  };
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [search, setSearch] = createStore({
@@ -46,6 +46,31 @@ const Omnisearch: Component<{}> = () => {
     },
   });
   const populatedFilters = createMemo(() => search.populatedFilters);
+
+  // which portion of the search ui should be focused
+  // filters.length focus is the fuzzy search
+  // 0 is the top of the filters
+  // focus is only changed when the signal is updated, focus is not forced
+  const [focus, setFocus] = createSignal(search.filters.length, {
+    // when a new filter element is added it is in the same focus position
+    // but that focus position refers to a different element, so setting (f) => f is not equal
+    equals: false,
+  });
+  const isFocus = createSelector(focus);
+  createEffect(() => {
+    console.log("focus:", focus());
+    if (focus() < 0 || focus() > search.filters.length) {
+      console.error(
+        `Focus out of bounds: ${focus()}`,
+        `Legal range is 0..${search.filters.length}`
+      );
+    }
+    if (isFocus(focus.length)) {
+      // focus the omnisearch input
+      ref?.focus();
+    }
+    // other elements handle focusing themselves
+  });
 
   // keep search params up to date with store filters, query
   createComputed(() => {
@@ -104,12 +129,19 @@ const Omnisearch: Component<{}> = () => {
                 setSearch("filters", index(), newFilter);
               }}
               removeSelf={() => {
+                // remove this index from the filters array
                 const arr = [...search.filters];
                 arr.splice(index(), 1);
                 setSearch("filters", arr);
-                if (arr.length === 0) focusOmnisearch();
+                // focus the next filter up the page, or the omnisearch
+                setFocus((f) => Math.max(0, f - 1));
               }}
-              focusOmnisearch={focusOmnisearch}
+              isFocused={isFocus(index)}
+              onFinish={() => {
+                // focus the next filter down the page, or the omnisearch
+                // this should be safe to call without clamping?
+                setFocus((f) => f + 1);
+              }}
             />
           )}
         </For>
@@ -123,6 +155,9 @@ const Omnisearch: Component<{}> = () => {
               batch(() => {
                 setSearch("query", e.currentTarget.value.slice(1));
                 setSearch("filters", (arr) => arr.concat({ use: false }));
+                // focus hasn't moved, but the element in focus position has
+                // focus will always treat a write as a change, so we need to write here
+                setFocus((f) => f);
               });
               e.currentTarget.value = search.query;
             } else {
