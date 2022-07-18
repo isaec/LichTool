@@ -8,6 +8,7 @@ import {
   For,
   createMemo,
 } from "solid-js";
+import toast from "solid-toast";
 import { Filter, BlankFilter, filterIsValid } from "./filterEngine";
 
 import styles from "./Omnisearch.module.scss";
@@ -37,6 +38,7 @@ const SmartInput: Component<{
       // and there are no valid options
       (props.options === undefined || props.options.length === 0)
     ) {
+      toast.error("Invalid filter");
       // return, we can't finish yet
       return;
     }
