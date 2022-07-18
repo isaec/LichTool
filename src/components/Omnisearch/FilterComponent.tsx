@@ -142,11 +142,11 @@ const FilterComponent: Component<{
   });
 
   // much jank!
-  const valueOptions = createMemo(() => {
+  const valueOptions = createMemo((): string[] | undefined => {
     if (props.filter.key === undefined || !filterMap.has(props.filter.key))
       return undefined;
     if (props.filter.value === undefined)
-      return filterMap.get(props.filter.key)!;
+      return filterMap.get(props.filter.key)!.map((v) => v.toString());
     return (
       filterMap
         .get(props.filter.key)!
