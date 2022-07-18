@@ -155,9 +155,10 @@ const Omnisearch: Component<{}> = () => {
               batch(() => {
                 setSearch("query", e.currentTarget.value.slice(1));
                 setSearch("filters", (arr) => arr.concat({ use: false }));
-                // focus hasn't moved, but the element in focus position has
-                // focus will always treat a write as a change, so we need to write here
-                setFocus((f) => f);
+                // this line is highly strange and requires understanding solid-js internals
+                // the above call is batched, and thus not in effect yet
+                // because all these calls will go into effect at the same time, this is focusing the new element
+                setFocus(search.filters.length);
               });
               e.currentTarget.value = search.query;
             } else {
