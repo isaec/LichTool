@@ -94,9 +94,12 @@ const SmartInput: Component<{
         onKeyDown={(e) => {
           if (
             e.key === "Backspace" &&
-            (props.value === "" || props.value === undefined)
+            e.currentTarget.selectionStart === 0 &&
+            e.currentTarget.selectionEnd === 0
           ) {
             e.preventDefault();
+            // clear out the input
+            props.onInput("");
             props.onEscape();
           }
         }}
