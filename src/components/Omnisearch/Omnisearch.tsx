@@ -136,7 +136,7 @@ const Omnisearch: Component<{}> = () => {
                 // focus the next filter up the page, or the omnisearch
                 setFocus((f) => Math.max(0, f - 1));
               }}
-              isFocused={isFocus(index)}
+              isFocused={isFocus(index())}
               onFinish={() => {
                 // focus the next filter down the page, or the omnisearch
                 // this should be safe to call without clamping?
