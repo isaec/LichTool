@@ -3,6 +3,7 @@ import { Link } from "solid-app-router";
 import { Component } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 import { Dynamic } from "solid-js/web";
+import Crunch from "./Crunch";
 
 import styles from "./Renderer.module.scss";
 
@@ -130,7 +131,7 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     action: refTag("action", "phb"),
     // bad / unsupported tags
     filter: pipe((props) => props.p0),
-    dice: tag("code"),
+    dice: Crunch,
     hit: templateTag("code", (c) => <>d20{c}</>),
     damage: tag("code"),
     d20: templateTag("code", (c) => <>d20{c}</>),

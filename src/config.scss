@@ -17,10 +17,11 @@ $scale-000: 0.75rem;
 $scale-00: 0.875rem;
 
 // font-family
-$font-sans: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu,
-  Cantarell, Helvetica Neue;
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-$font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+$font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+  Liberation Mono, monospace;
 
 // font-weight
 $weight-light: 300;

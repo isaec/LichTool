@@ -115,9 +115,11 @@ exports[`tags > {@damage damage string!} matches snapshot 1`] = `
 
 exports[`tags > {@dice dice string!} matches snapshot 1`] = `
 <div>
-  <code>
+  <span
+    class="_Crunch_12ph0_1"
+  >
     dice string!
-  </code>
+  </span>
 </div>
 `;
 

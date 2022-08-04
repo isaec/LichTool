@@ -65,9 +65,11 @@ exports[`DataSpellElement > Acid Splash > matches snapshot 1`] = `
         </p>
         <p>
           This spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d6
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d6
@@ -1971,9 +1973,11 @@ exports[`DataSpellElement > Bane > matches snapshot 1`] = `
       <p>
         <p>
           Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d4
-          </code>
+          </span>
            and subtract the number rolled from the attack roll or saving throw.
         </p>
       </p>
@@ -2559,9 +2563,11 @@ exports[`DataSpellElement > Bless > matches snapshot 1`] = `
       <p>
         <p>
           You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d4
-          </code>
+          </span>
            and add the number rolled to the attack roll or saving throw.
         </p>
       </p>
@@ -2872,9 +2878,11 @@ exports[`DataSpellElement > Blink > matches snapshot 1`] = `
       <p>
         <p>
           Roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d20
-          </code>
+          </span>
            at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action.
         </p>
         <p>
@@ -3274,9 +3282,11 @@ exports[`DataSpellElement > Call Lightning > matches snapshot 1`] = `
         </p>
         <p>
           If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d10
-          </code>
+          </span>
           .
         </p>
       </p>
@@ -3696,9 +3706,11 @@ exports[`DataSpellElement > Chill Touch > matches snapshot 1`] = `
         </p>
         <p>
           This spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d8
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d8
@@ -4184,9 +4196,11 @@ exports[`DataSpellElement > Color Spray > matches snapshot 1`] = `
       <p>
         <p>
           A dazzling array of flashing, colored light springs from your hand. Roll 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             6d10
-          </code>
+          </span>
           ; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring 
           <a
             href="/view/condition_PHB-Unconscious"
@@ -4962,9 +4976,11 @@ exports[`DataSpellElement > Confusion > matches snapshot 1`] = `
         </p>
         <p>
           An affected target can't take reactions and must roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d10
-          </code>
+          </span>
            at the start of each of its turns to determine its behavior for that turn.
         </p>
         <span
@@ -6484,9 +6500,11 @@ exports[`DataSpellElement > Control Weather > matches snapshot 1`] = `
         </p>
         <p>
           When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d4 × 10
-          </code>
+          </span>
            minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.
         </p>
         <p>
@@ -7191,9 +7209,11 @@ exports[`DataSpellElement > Cure Wounds > matches snapshot 1`] = `
       <p>
         <p>
           A creature you touch regains a number of hit points equal to 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d8
-          </code>
+          </span>
            + your spellcasting ability modifier. This spell has no effect on undead or constructs.
         </p>
       </p>
@@ -7733,9 +7753,11 @@ exports[`DataSpellElement > Delayed Blast Fireball > matches snapshot 1`] = `
             12d6
           </code>
           . If at the end of your turn the bead has not yet detonated, the damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d6
-          </code>
+          </span>
           .
         </p>
         <p>
@@ -9712,13 +9734,17 @@ exports[`DataSpellElement > Earthquake > matches snapshot 1`] = `
             </b>
             <p>
               Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 1d6
-              </code>
+              </span>
                such fissures open in locations chosen by the DM. Each is 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 1d10 × 10
-              </code>
+              </span>
                feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.
             </p>
             <p>
@@ -9940,9 +9966,11 @@ exports[`DataSpellElement > Enhance Ability > matches snapshot 1`] = `
             </b>
             <p>
               The target has advantage on Constitution checks. It also gains 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 2d6
-              </code>
+              </span>
                temporary hit points, which are lost when the spell ends.
             </p>
           </div>
@@ -10947,9 +10975,11 @@ exports[`DataSpellElement > False Life > matches snapshot 1`] = `
       <p>
         <p>
           Bolstering yourself with a necromantic facsimile of life, you gain 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d4 + 4
-          </code>
+          </span>
            temporary hit points for the duration.
         </p>
       </p>
@@ -12016,9 +12046,11 @@ exports[`DataSpellElement > Fire Bolt > matches snapshot 1`] = `
         </p>
         <p>
           This spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d10
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d10
@@ -15004,9 +15036,11 @@ exports[`DataSpellElement > Guidance > matches snapshot 1`] = `
       <p>
         <p>
           You touch one willing creature. Once before the spell ends, the target can roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d4
-          </code>
+          </span>
            and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.
         </p>
       </p>
@@ -15939,9 +15973,11 @@ exports[`DataSpellElement > Healing Word > matches snapshot 1`] = `
       <p>
         <p>
           A creature of your choice that you can see within range regains hit points equal to 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d4
-          </code>
+          </span>
            + your spellcasting ability modifier. This spell has no effect on undead or constructs.
         </p>
       </p>
@@ -16258,9 +16294,11 @@ exports[`DataSpellElement > Heroes' Feast > matches snapshot 1`] = `
             frightened
           </a>
           , and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             2d10
-          </code>
+          </span>
           , and it gains the same number of hit points. These benefits last for 24 hours.
         </p>
       </p>
@@ -19664,9 +19702,11 @@ exports[`DataSpellElement > Mass Cure Wounds > matches snapshot 1`] = `
       <p>
         <p>
           A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             3d8
-          </code>
+          </span>
            + your spellcasting ability modifier. This spell has no effect on undead or constructs.
         </p>
       </p>
@@ -19857,9 +19897,11 @@ exports[`DataSpellElement > Mass Healing Word > matches snapshot 1`] = `
       <p>
         <p>
           As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d4
-          </code>
+          </span>
            + your spellcasting ability modifier. This spell has no effect on undead or constructs.
         </p>
       </p>
@@ -20829,9 +20871,11 @@ exports[`DataSpellElement > Mirror Image > matches snapshot 1`] = `
         </p>
         <p>
           Each time a creature targets you with an attack during the spell's duration, roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d20
-          </code>
+          </span>
            to determine whether the attack instead targets one of your duplicates.
         </p>
         <p>
@@ -22289,9 +22333,11 @@ exports[`DataSpellElement > Poison Spray > matches snapshot 1`] = `
         </p>
         <p>
           This spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d12
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d12
@@ -22649,9 +22695,11 @@ exports[`DataSpellElement > Prayer of Healing > matches snapshot 1`] = `
       <p>
         <p>
           Up to six creatures of your choice that you can see within range each regain hit points equal to 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             2d8
-          </code>
+          </span>
            + your spellcasting ability modifier. This spell has no effect on undead or constructs.
         </p>
       </p>
@@ -22867,9 +22915,11 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
       <p>
         <p>
           Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d8
-          </code>
+          </span>
            to determine which color ray affects it.
         </p>
         <div>
@@ -23372,9 +23422,11 @@ exports[`DataSpellElement > Produce Flame > matches snapshot 1`] = `
         </p>
         <p>
           This spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d8
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d8
@@ -24204,9 +24256,11 @@ exports[`DataSpellElement > Ray of Frost > matches snapshot 1`] = `
         </p>
         <p>
           The spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d8
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d8
@@ -24299,9 +24353,11 @@ exports[`DataSpellElement > Regenerate > matches snapshot 1`] = `
       <p>
         <p>
           You touch a creature and stimulate its natural healing ability. The target regains 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             4d8 + 15
-          </code>
+          </span>
            hit points. For the duration of the spell, the target regains 1 hit point at the start of each of its turns (10 hit points each minute).
         </p>
         <p>
@@ -24388,9 +24444,11 @@ exports[`DataSpellElement > Reincarnate > matches snapshot 1`] = `
         </p>
         <p>
           The magic fashions a new body for the creature to inhabit, which likely causes the creature's race to change. The DM rolls a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d100
-          </code>
+          </span>
            and consults the following table to determine what form the creature takes when restored to life, or the DM chooses a form.
         </p>
         <span
@@ -24560,9 +24618,11 @@ exports[`DataSpellElement > Resistance > matches snapshot 1`] = `
       <p>
         <p>
           You touch one willing creature. Once before the spell ends, the target can roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d4
-          </code>
+          </span>
            and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.
         </p>
       </p>
@@ -24990,9 +25050,11 @@ exports[`DataSpellElement > Sacred Flame > matches snapshot 1`] = `
         </p>
         <p>
           The spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d8
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d8
@@ -26157,9 +26219,11 @@ exports[`DataSpellElement > Shillelagh > matches snapshot 1`] = `
             
           </span>
            you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d8
-          </code>
+          </span>
           . The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.
         </p>
       </p>
@@ -26246,9 +26310,11 @@ exports[`DataSpellElement > Shocking Grasp > matches snapshot 1`] = `
         </p>
         <p>
           The spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d8
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d8
@@ -26606,9 +26672,11 @@ exports[`DataSpellElement > Sleep > matches snapshot 1`] = `
       <p>
         <p>
           This spell sends creatures into a magical slumber. Roll 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             5d8
-          </code>
+          </span>
           ; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring 
           <a
             href="/view/condition_PHB-Unconscious"
@@ -26838,9 +26906,11 @@ exports[`DataSpellElement > Slow > matches snapshot 1`] = `
         </p>
         <p>
           If the creature attempts to cast a spell with a casting time of 1 action, roll a 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d20
-          </code>
+          </span>
           . On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted.
         </p>
         <p>
@@ -28778,9 +28848,11 @@ exports[`DataSpellElement > Teleport > matches snapshot 1`] = `
         </p>
         <p>
           The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             d100
-          </code>
+          </span>
            and consults the table.
         </p>
         <span
@@ -28837,17 +28909,23 @@ exports[`DataSpellElement > Teleport > matches snapshot 1`] = `
             </b>
             <p>
               You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 1d10 × 1d10
-              </code>
+              </span>
                percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 d10
-              </code>
+              </span>
               s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 d8
-              </code>
+              </span>
                and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble.
             </p>
           </div>
@@ -29267,9 +29345,11 @@ exports[`DataSpellElement > Time Stop > matches snapshot 1`] = `
       <p>
         <p>
           You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d4 + 1
-          </code>
+          </span>
            turns in a row, during which you can use actions and move as normal.
         </p>
         <p>
@@ -30186,9 +30266,11 @@ exports[`DataSpellElement > Vicious Mockery > matches snapshot 1`] = `
         </p>
         <p>
           This spell's damage increases by 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             1d4
-          </code>
+          </span>
            when you reach 5th level (
           <code>
             2d4
@@ -31515,9 +31597,11 @@ exports[`DataSpellElement > Wish > matches snapshot 1`] = `
             1d10
           </code>
            necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 
-          <code>
+          <span
+            class="_Crunch_12ph0_1"
+          >
             2d4
-          </code>
+          </span>
            days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 
           <span
             class="_error_5kjti_47"

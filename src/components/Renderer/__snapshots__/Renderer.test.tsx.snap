@@ -122,25 +122,35 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
         <li>
           <p>
             Dice roller tags; 
-            <code>
+            <span
+              class="_Crunch_12ph0_1"
+            >
               1d2-2+2d3+5
-            </code>
+            </span>
              for regular dice rolls (
-            <code>
+            <span
+              class="_Crunch_12ph0_1"
+            >
               1d6;2d6
-            </code>
+            </span>
              for multiple options; 
-            <code>
+            <span
+              class="_Crunch_12ph0_1"
+            >
               1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#
-            </code>
+            </span>
              for input prompts), with extended 
-            <code>
+            <span
+              class="_Crunch_12ph0_1"
+            >
               1d20+2|display text
-            </code>
+            </span>
              and 
-            <code>
+            <span
+              class="_Crunch_12ph0_1"
+            >
               1d20+2|display text|rolled by name
-            </code>
+            </span>
             , and a special 'hit' version which assumes a d20 is to be rolled 
             <code>
               d20
@@ -2339,9 +2349,11 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <p>
             <p>
               A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 
-              <code>
+              <span
+                class="_Crunch_12ph0_1"
+              >
                 8d6
-              </code>
+              </span>
                fire damage on a failed save, or half as much damage on a successful one.
             </p>
             <p>
