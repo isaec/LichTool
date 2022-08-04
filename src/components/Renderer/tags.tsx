@@ -16,6 +16,11 @@ export const tagAlias = new Map([
   ["s", "strike"],
 ]);
 
+/**
+ * HOF to reduce boilerplate for splitting a pipe type tag and rendering based on its fragments
+ * @param Element the element function which is passed props for the fragments of the piped data
+ * @returns A new component which processes the pipe data before passing it to the {@link Element} function, and returns its result
+ */
 const pipe =
   (Element: Component<{ p: string[]; p0: string; p1?: string; p2?: string }>) =>
   (props: { children: JSX.Element }): JSX.Element => {
@@ -31,6 +36,12 @@ const pipe =
     );
   };
 
+/**
+ * a HOF to make tags which reference data using url links
+ * @param type the type of data to reference - spell, item ect.
+ * @param defaultSource the default book source of the data, to be used if pipe does not specify a source
+ * @returns a pipe component which renders a link to the data
+ */
 const refTag = (type: string, defaultSource: string) =>
   pipe((props) => (
     <Link
@@ -44,6 +55,12 @@ const refTag = (type: string, defaultSource: string) =>
     </Link>
   ));
 
+/**
+ * a HOF to create a tag component for a tag type without boilerplate
+ * @param tagString the string which represents the html intrinsic element
+ * @param obj class or style to apply to the element
+ * @returns a component function which renders its children as the styled children of the intrinsic element
+ */
 const tag =
   (
     tagString: keyof JSX.IntrinsicElements,
@@ -62,6 +79,13 @@ const tag =
       />
     );
 
+/**
+ * HOF to create a tag component that also templates its children
+ * @param tagString the string which represents the html intrinsic element
+ * @param templater a function which takes an element and returns the element with some template applied
+ * @param obj options to apply to the element
+ * @returns a component function which renders its children as the styled children of the intrinsic element, with template applied
+ */
 const templateTag =
   (
     tagString: keyof JSX.IntrinsicElements,
