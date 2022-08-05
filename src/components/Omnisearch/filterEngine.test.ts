@@ -1,4 +1,4 @@
-import { dataArray } from "@src/dataLookup";
+import { dataArray, dataMap } from "@src/dataLookup";
 import { describe, expect, it } from "vitest";
 import dataMiniSearch from "./dataMiniSearch";
 import {
@@ -7,6 +7,7 @@ import {
   filterIsValid,
   parseFilter,
   PopulatedFilter,
+  testFilter,
 } from "./filterEngine";
 
 describe("filterEngine", () => {
@@ -156,5 +157,36 @@ describe("filterIsValid", () => {
       filterIsValid(filter),
       reason !== undefined ? `because ${reason}` : undefined
     ).toBe(expected);
+  });
+});
+
+describe("testFilter", () => {
+  const f = (key: string, value: string) =>
+    makeFilter(key, value) as PopulatedFilter;
+
+  /**
+   * fireball data object
+   */
+  const fb = dataMap.get("spell_PHB-Fireball")!;
+
+  it.each([
+    // case insensitive
+    [true, fb, f("name", "fireball")],
+    [true, fb, f("name", "FIREBALL")],
+    // partial
+    [true, fb, f("name", "f")],
+    // regex
+    [true, fb, f("name", "/FIREBALL/i")],
+    // regex is case sensitive
+    [false, fb, f("name", "/FIREBALL/")],
+    [true, fb, f("name", "/F.+b/")],
+    // numbers match if equal
+    [true, fb, f("level", "3")],
+    // numbers don't match if not equal
+    [false, fb, f("level", "4")],
+    // non matching
+    [false, fb, f("name", "aid")],
+  ])("returns %s for object %s with filter %s", (expected, obj, filter) => {
+    expect(testFilter(obj, filter)).toBe(expected);
   });
 });

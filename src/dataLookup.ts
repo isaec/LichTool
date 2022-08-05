@@ -124,7 +124,7 @@ export type DataUnion =
 
 // data object collections
 
-/** the array of all spells - id is always undefined */
+/** the array of all data - id is always undefined */
 export const dataArray = JSON.parse(data) as Array<DataUnion>;
 
 /**
