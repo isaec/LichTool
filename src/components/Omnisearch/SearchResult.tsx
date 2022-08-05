@@ -2,6 +2,7 @@ import { DataItem, dataMap, DataSpell } from "@src/dataLookup";
 import {
   Accessor,
   Component,
+  createEffect,
   createMemo,
   For,
   JSX,
@@ -194,20 +195,29 @@ export const SearchResult: Component<{ id: string }> = (props) => {
   return <Dynamic component={resultComponent()} id={props.id} />;
 };
 
-export const Results: Component<{ results: ResultsGroup[] }> = (props) => (
-  <div class={styles.resultsWrapper}>
-    <For each={props.results}>
-      {(resultGroup) => (
-        <table class={styles.results}>
-          <Dynamic
-            component={getHead(resultGroup.type)}
-            type={resultGroup.type}
-          />
-          <For each={resultGroup.results}>
-            {(result) => <SearchResult id={result.id} />}
-          </For>
-        </table>
-      )}
-    </For>
-  </div>
-);
+export const Results: Component<{ results: ResultsGroup[] }> = (props) => {
+  let scroll: HTMLDivElement;
+  createEffect(() => {
+    // subscribe to changes of results
+    void props.results;
+    // scroll to the top
+    scroll.scrollTop = 0;
+  });
+  return (
+    <div class={styles.resultsWrapper} ref={scroll!}>
+      <For each={props.results}>
+        {(resultGroup) => (
+          <table class={styles.results}>
+            <Dynamic
+              component={getHead(resultGroup.type)}
+              type={resultGroup.type}
+            />
+            <For each={resultGroup.results}>
+              {(result) => <SearchResult id={result.id} />}
+            </For>
+          </table>
+        )}
+      </For>
+    </div>
+  );
+};
