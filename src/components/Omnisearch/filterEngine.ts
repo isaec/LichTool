@@ -122,6 +122,7 @@ export const filterIsValid = (filter: Filter) => {
   const possibleValues = filterMap.get(filter.key)!;
   return possibleValues.some(
     (val) =>
-      typeof val === "string" && val.toLowerCase().includes(filter.value!)
+      typeof val === "string" &&
+      val.toLowerCase().includes(filter.value!.toLowerCase())
   );
 };
