@@ -139,14 +139,25 @@ const ItemHeader: HeadComponent = () => (
 );
 headMap.set("item", ItemHeader);
 
+const dedupe = /(\w)\1+/g;
+
 const ItemSearchResult: ResultComponent = (props) => {
   const dataObj = createMemo(
     () => dataMap.get(props.id)!
   ) as Accessor<DataItem>;
+
+  const type = createMemo(() => {
+    if (dataObj().type === undefined) return "";
+    return dataObj()
+      .type!.split(" ")
+      .map((t) => t.replace(dedupe, "$1").slice(0, 3))
+      .join("");
+  });
+
   return (
     <TableRow id={props.id}>
       <Key>{dataObj().name}</Key>
-      <Data>{dataObj().type ?? ""}</Data>
+      <Data>{type()}</Data>
       <Data>
         {typeof dataObj().value === "number"
           ? fmtCurrency(dataObj().value as number)
