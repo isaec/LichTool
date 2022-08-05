@@ -106,6 +106,13 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
   }
 };
 
+const dedupe = /(\w)\1+/g;
+export const fmtHeuristicShorten = (str: string) =>
+  str
+    .split(" ")
+    .map((t) => t.replace(dedupe, "$1").slice(0, 3))
+    .join("");
+
 export const fmtItemType = (item: RawData<DataItem>): [string, string] => {
   const types: string[] = [];
   const subTypes: string[] = [];

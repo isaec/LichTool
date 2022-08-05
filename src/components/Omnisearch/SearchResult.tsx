@@ -9,7 +9,12 @@ import {
   Match,
   Switch,
 } from "solid-js";
-import { extractTypeFromUrl, fmtCurrency, fmtRange } from "@util/formatter";
+import {
+  extractTypeFromUrl,
+  fmtCurrency,
+  fmtHeuristicShorten,
+  fmtRange,
+} from "@util/formatter";
 
 import styles from "./SearchResult.module.scss";
 import { useNavigate } from "solid-app-router";
@@ -139,25 +144,18 @@ const ItemHeader: HeadComponent = () => (
 );
 headMap.set("item", ItemHeader);
 
-const dedupe = /(\w)\1+/g;
-
 const ItemSearchResult: ResultComponent = (props) => {
   const dataObj = createMemo(
     () => dataMap.get(props.id)!
   ) as Accessor<DataItem>;
-
-  const type = createMemo(() => {
-    if (dataObj().type === undefined) return "";
-    return dataObj()
-      .type!.split(" ")
-      .map((t) => t.replace(dedupe, "$1").slice(0, 3))
-      .join("");
-  });
-
   return (
     <TableRow id={props.id}>
       <Key>{dataObj().name}</Key>
-      <Data>{type()}</Data>
+      <Data>
+        {dataObj().type === undefined
+          ? ""
+          : fmtHeuristicShorten(dataObj().type!)}
+      </Data>
       <Data>
         {typeof dataObj().value === "number"
           ? fmtCurrency(dataObj().value as number)
