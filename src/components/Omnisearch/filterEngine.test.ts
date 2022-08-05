@@ -1,7 +1,13 @@
 import { dataArray } from "@src/dataLookup";
 import { describe, expect, it } from "vitest";
 import dataMiniSearch from "./dataMiniSearch";
-import { executeFilters, parseFilter, PopulatedFilter } from "./filterEngine";
+import {
+  executeFilters,
+  Filter,
+  filterIsValid,
+  parseFilter,
+  PopulatedFilter,
+} from "./filterEngine";
 
 describe("filterEngine", () => {
   const tr = (arr: {}[]) => arr.map((o) => ({ ...o, use: true }));
@@ -112,4 +118,43 @@ describe("parseFilter", () => {
       );
     }
   );
+});
+
+const makeFilter = (key?: string, value?: string, use?: boolean): Filter => {
+  // @ts-expect-error if use is true, then values will be populated
+  const obj: Filter = {
+    use: use ?? (key !== undefined && value !== undefined),
+  };
+  if (key !== undefined) obj.key = key;
+  if (value !== undefined) obj.value = value;
+  return obj;
+};
+
+describe("filterIsValid", () => {
+  it.each([
+    // undefined
+    [makeFilter(), false, "empty object"],
+    [makeFilter(undefined, "waa"), false, "undefined key"],
+    [makeFilter("name"), false, "undefined value"],
+
+    // empty
+    [makeFilter("name", ""), false, "empty string"],
+    [makeFilter("", "waa"), false, "empty string"],
+
+    [makeFilter("name", "fireball"), true],
+    [makeFilter("name", "fireball", false), true, "use doesn't matter"],
+
+    [makeFilter("id", "spell"), true],
+    [makeFilter("id", "spell_PHB"), true],
+    [makeFilter("id", "spell_PHB-Aid"), true],
+    [makeFilter("id", "/spell_PHB-Aid/"), true, "any regex is valid"],
+    [makeFilter("id", "/spell_PHB-Aid/wee"), false, "unknown flags"],
+
+    [makeFilter("eee", "wahoo"), false, "invalid key"],
+  ])("for filter %s returns %s", (filter, expected, reason?: string) => {
+    expect(
+      filterIsValid(filter),
+      reason !== undefined ? `because ${reason}` : undefined
+    ).toBe(expected);
+  });
 });
