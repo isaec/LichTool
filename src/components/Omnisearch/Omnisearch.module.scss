@@ -12,11 +12,17 @@
 .smartInput {
   position: relative;
   width: 100%;
-  &.valid > input:disabled {
-    background-color: $color-green-700;
+  &.valid > input {
     color: $color-grey-200;
-    border: 1px solid $color-green-300;
-    border-radius: $radius-xs;
+    &:enabled {
+      background-color: dim($color-green-700);
+    }
+    // make disabled obvious
+    &:disabled {
+      background-color: $color-green-700;
+      border: 1px solid $color-green-300;
+      border-radius: $radius-xs;
+    }
   }
   & > input {
     width: 100%;
