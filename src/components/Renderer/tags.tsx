@@ -89,7 +89,9 @@ const tag =
  */
 const templateTag =
   (
-    tagString: keyof JSX.IntrinsicElements,
+    tagString:
+      | keyof JSX.IntrinsicElements
+      | Component<{ children: JSX.Element; class?: string; style?: string }>,
     templater: (arg0: JSX.Element) => JSX.Element,
     obj?: {
       class?: string;
@@ -132,10 +134,10 @@ export const tagMap = new Map<string, Component<{ children: JSX.Element }>>(
     // bad / unsupported tags
     filter: pipe((props) => props.p0),
     dice: Crunch,
-    hit: templateTag("code", (c) => <>d20{c}</>),
-    damage: tag("code"),
-    d20: templateTag("code", (c) => <>d20{c}</>),
-    scaledice: pipe((props) => <code>{props.p2}</code>),
-    scaledamage: pipe((props) => <code>{props.p2}</code>),
+    hit: templateTag(Crunch, (c) => <>d20{c}</>),
+    damage: Crunch,
+    d20: templateTag(Crunch, (c) => <>d20{c}</>),
+    scaledice: pipe((props) => <Crunch>{props.p2}</Crunch>),
+    scaledamage: pipe((props) => <Crunch>{props.p2}</Crunch>),
   })
 );

@@ -1,7 +1,7 @@
 @use "@src/config" as *;
 
 .Crunch {
-  background-color: $color-grey-800;
+  background-color: dim($color-blue-700);
   font-family: $font-mono;
   border-radius: $size-1;
   padding: 0.2em 0.4em;
