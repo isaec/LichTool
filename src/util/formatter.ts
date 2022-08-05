@@ -107,10 +107,11 @@ export const fmtRange = (data: DataSpell["range"], shorten = false) => {
 };
 
 const dedupe = /(\w)\1+/g;
+const vowelPair = /([aeiou])[aeiou]/g;
 export const fmtHeuristicShorten = (str: string) =>
   str
     .split(" ")
-    .map((t) => t.replace(dedupe, "$1").slice(0, 3))
+    .map((t) => t.replace(dedupe, "$1").replace(vowelPair, "$1").slice(0, 3))
     .join("");
 
 export const fmtItemType = (item: RawData<DataItem>): [string, string] => {

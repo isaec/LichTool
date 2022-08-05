@@ -1226,7 +1226,7 @@ exports[`Results > item > Battleaxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1331,7 +1331,7 @@ exports[`Results > item > Blowgun matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -1401,7 +1401,7 @@ exports[`Results > item > Chain Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HeaArm
+      HevArm
     </td>
     <td
       class="Data"
@@ -1471,7 +1471,7 @@ exports[`Results > item > Club matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1611,7 +1611,7 @@ exports[`Results > item > Dagger matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1646,7 +1646,7 @@ exports[`Results > item > Dart matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -1681,7 +1681,7 @@ exports[`Results > item > Flail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1716,7 +1716,7 @@ exports[`Results > item > Glaive matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1751,7 +1751,7 @@ exports[`Results > item > Greataxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1786,7 +1786,7 @@ exports[`Results > item > Greatclub matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1821,7 +1821,7 @@ exports[`Results > item > Greatsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1856,7 +1856,7 @@ exports[`Results > item > Halberd matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1926,7 +1926,7 @@ exports[`Results > item > Hand Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -1961,7 +1961,7 @@ exports[`Results > item > Handaxe matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -1996,7 +1996,7 @@ exports[`Results > item > Heavy Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -2066,7 +2066,7 @@ exports[`Results > item > Javelin matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2101,7 +2101,7 @@ exports[`Results > item > Lance matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2171,7 +2171,7 @@ exports[`Results > item > Light Crossbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -2206,7 +2206,7 @@ exports[`Results > item > Light Hammer matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2241,7 +2241,7 @@ exports[`Results > item > Longbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -2276,7 +2276,7 @@ exports[`Results > item > Longsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2311,7 +2311,7 @@ exports[`Results > item > Mace matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2346,7 +2346,7 @@ exports[`Results > item > Maul matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2381,7 +2381,7 @@ exports[`Results > item > Morningstar matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2416,7 +2416,7 @@ exports[`Results > item > Net matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -2521,7 +2521,7 @@ exports[`Results > item > Pike matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2556,7 +2556,7 @@ exports[`Results > item > Plate Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HeaArm
+      HevArm
     </td>
     <td
       class="Data"
@@ -2591,7 +2591,7 @@ exports[`Results > item > Quarterstaff matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2626,7 +2626,7 @@ exports[`Results > item > Rapier matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2661,7 +2661,7 @@ exports[`Results > item > Ring Mail matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HeaArm
+      HevArm
     </td>
     <td
       class="Data"
@@ -2766,7 +2766,7 @@ exports[`Results > item > Scimitar matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2836,7 +2836,7 @@ exports[`Results > item > Shortbow matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -2871,7 +2871,7 @@ exports[`Results > item > Shortsword matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -2906,7 +2906,7 @@ exports[`Results > item > Sickle matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -3011,7 +3011,7 @@ exports[`Results > item > Sling matches snapshot 1`] = `
     <td
       class="Data"
     >
-      RanWea
+      RanWep
     </td>
     <td
       class="Data"
@@ -3046,7 +3046,7 @@ exports[`Results > item > Spear matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -3081,7 +3081,7 @@ exports[`Results > item > Splint Armor matches snapshot 1`] = `
     <td
       class="Data"
     >
-      HeaArm
+      HevArm
     </td>
     <td
       class="Data"
@@ -3186,7 +3186,7 @@ exports[`Results > item > Trident matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -3256,7 +3256,7 @@ exports[`Results > item > War Pick matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -3291,7 +3291,7 @@ exports[`Results > item > Warhammer matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
@@ -3326,7 +3326,7 @@ exports[`Results > item > Whip matches snapshot 1`] = `
     <td
       class="Data"
     >
-      MelWea
+      MelWep
     </td>
     <td
       class="Data"
