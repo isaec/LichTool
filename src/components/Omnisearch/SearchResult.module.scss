@@ -21,9 +21,9 @@ table.results {
   }
 }
 
-// query for really small mobile screens
-@mixin ultra-slim {
-  @media (max-width: 375px) {
+// query for mobile devices
+@mixin whenConfined {
+  @media (max-width: $width-md) {
     @content;
   }
 }
@@ -36,8 +36,11 @@ thead.Head {
     width: min-content;
     &:first-of-type {
       text-align: left;
+      // load bearing unquote
       min-width: unquote("0vw");
-      @include ultra-slim {
+      // last resort for very thin displays
+      @media (max-width: 350px) {
+        // cap the upper length at 8 characters, reduce vw basis by 5
         width: clamp(4em, 25vw, 8em);
       }
       width: clamp(8em, 30vw, 22em);
@@ -46,7 +49,7 @@ thead.Head {
     font-weight: normal;
     @include optionalCell;
     padding: 0 $size-2;
-    @include ultra-slim {
+    @include whenConfined {
       font-size: 0.8em;
     }
   }
@@ -63,7 +66,8 @@ tr.TableRow {
     color: $color-grey-200;
     word-wrap: break-word;
     padding: $size-4 $size-2;
-    @include ultra-slim {
+
+    @include whenConfined {
       font-size: 0.8em;
     }
   }
