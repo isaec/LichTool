@@ -98,25 +98,29 @@ exports[`tags > {@condition name of condition} matches snapshot 1`] = `
 
 exports[`tags > {@d20 d20 string!} matches snapshot 1`] = `
 <div>
-  <code>
+  <span
+    class="_Crunch_axgli_1"
+  >
     d20
     d20 string!
-  </code>
+  </span>
 </div>
 `;
 
 exports[`tags > {@damage damage string!} matches snapshot 1`] = `
 <div>
-  <code>
+  <span
+    class="_Crunch_axgli_1"
+  >
     damage string!
-  </code>
+  </span>
 </div>
 `;
 
 exports[`tags > {@dice dice string!} matches snapshot 1`] = `
 <div>
   <span
-    class="_Crunch_12ph0_1"
+    class="_Crunch_axgli_1"
   >
     dice string!
   </span>
@@ -137,10 +141,12 @@ exports[`tags > {@filter Races that have a bonus to Intelligence|races|Ability B
 
 exports[`tags > {@hit hit string!} matches snapshot 1`] = `
 <div>
-  <code>
+  <span
+    class="_Crunch_axgli_1"
+  >
     d20
     hit string!
-  </code>
+  </span>
 </div>
 `;
 
@@ -200,17 +206,21 @@ exports[`tags > {@note note string!} matches snapshot 1`] = `
 
 exports[`tags > {@scaledamage 8d8|4-9|1d8} matches snapshot 1`] = `
 <div>
-  <code>
+  <span
+    class="_Crunch_axgli_1"
+  >
     1d8
-  </code>
+  </span>
 </div>
 `;
 
 exports[`tags > {@scaledice 2d6;3d6|2-9|1d6} matches snapshot 1`] = `
 <div>
-  <code>
+  <span
+    class="_Crunch_axgli_1"
+  >
     1d6
-  </code>
+  </span>
 </div>
 `;
 

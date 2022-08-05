@@ -58,30 +58,38 @@ exports[`DataSpellElement > Acid Splash > matches snapshot 1`] = `
       <p>
         <p>
           You hurl a bubble of acid. Choose one creature you can see within range, or choose two creatures you can see within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d6
-          </code>
+          </span>
            acid damage.
         </p>
         <p>
           This spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d6
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d6
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d6
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -379,9 +387,11 @@ exports[`DataSpellElement > Alter Self > matches snapshot 1`] = `
             </b>
             <p>
               You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.
             </p>
           </div>
@@ -1974,7 +1984,7 @@ exports[`DataSpellElement > Bane > matches snapshot 1`] = `
         <p>
           Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d4
           </span>
@@ -2358,9 +2368,11 @@ exports[`DataSpellElement > Bestow Curse > matches snapshot 1`] = `
           <li>
             <p>
               While the target is cursed, your attacks and spells deal an extra 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                necrotic damage to the target.
             </p>
           </li>
@@ -2481,9 +2493,11 @@ exports[`DataSpellElement > Blade Barrier > matches snapshot 1`] = `
         </p>
         <p>
           When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             6d10
-          </code>
+          </span>
            slashing damage. On a successful save, the creature takes half as much damage.
         </p>
       </p>
@@ -2564,7 +2578,7 @@ exports[`DataSpellElement > Bless > matches snapshot 1`] = `
         <p>
           You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d4
           </span>
@@ -2664,9 +2678,11 @@ exports[`DataSpellElement > Blight > matches snapshot 1`] = `
       <p>
         <p>
           Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             8d8
-          </code>
+          </span>
            necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs.
         </p>
         <p>
@@ -2688,9 +2704,11 @@ exports[`DataSpellElement > Blight > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 5th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 4th.
             </p>
           </div>
@@ -2879,7 +2897,7 @@ exports[`DataSpellElement > Blink > matches snapshot 1`] = `
         <p>
           Roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d20
           </span>
@@ -3053,9 +3071,11 @@ exports[`DataSpellElement > Branding Smite > matches snapshot 1`] = `
       <p>
         <p>
           The next time you hit a creature with a weapon attack before this spell ends, the weapon gleams with astral radiance as you strike. The attack deals an extra 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d6
-          </code>
+          </span>
            radiant damage to the target, which becomes visible if it's 
           <a
             href="/view/condition_PHB-Invisible"
@@ -3083,9 +3103,11 @@ exports[`DataSpellElement > Branding Smite > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 2nd.
             </p>
           </div>
@@ -3167,9 +3189,11 @@ exports[`DataSpellElement > Burning Hands > matches snapshot 1`] = `
       <p>
         <p>
           As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d6
-          </code>
+          </span>
            fire damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -3188,9 +3212,11 @@ exports[`DataSpellElement > Burning Hands > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -3275,15 +3301,17 @@ exports[`DataSpellElement > Call Lightning > matches snapshot 1`] = `
         </p>
         <p>
           When you cast the spell, choose a point you can see under the cloud. A bolt of lightning flashes down from the cloud to that point. Each creature within 5 feet of that point must make a Dexterity saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d10
-          </code>
+          </span>
            lightning damage on a failed save, or half as much damage on a successful one. On each of your turns until the spell ends, you can use your action to call down lightning in this way again, targeting the same point or a different one.
         </p>
         <p>
           If you are outdoors in stormy conditions when you cast this spell, the spell gives you control over the existing storm instead of creating a new one. Under such conditions, the spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d10
           </span>
@@ -3302,9 +3330,11 @@ exports[`DataSpellElement > Call Lightning > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th or higher level, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d10
-              </code>
+              </span>
                for each slot level above 3rd.
             </p>
           </div>
@@ -3486,9 +3516,11 @@ exports[`DataSpellElement > Chain Lightning > matches snapshot 1`] = `
         </p>
         <p>
           A target must make a Dexterity saving throw. The target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             10d8
-          </code>
+          </span>
            lightning damage on a failed save, or half as much damage on a successful one.
         </p>
       </p>
@@ -3696,9 +3728,11 @@ exports[`DataSpellElement > Chill Touch > matches snapshot 1`] = `
       <p>
         <p>
           You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d8
-          </code>
+          </span>
            necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.
         </p>
         <p>
@@ -3707,22 +3741,28 @@ exports[`DataSpellElement > Chill Touch > matches snapshot 1`] = `
         <p>
           This spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d8
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d8
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -3803,9 +3843,11 @@ exports[`DataSpellElement > Circle of Death > matches snapshot 1`] = `
       <p>
         <p>
           A sphere of negative energy ripples out in a 60-foot-radius sphere from a point within range. Each creature in that area must make a Constitution saving throw. A target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             8d6
-          </code>
+          </span>
            necrotic damage on a failed save, or half as much damage on a successful one.
         </p>
       </p>
@@ -3821,9 +3863,11 @@ exports[`DataSpellElement > Circle of Death > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 7th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d6
-              </code>
+              </span>
                for each slot level above 6th.
             </p>
           </div>
@@ -4091,9 +4135,11 @@ exports[`DataSpellElement > Cloudkill > matches snapshot 1`] = `
         </p>
         <p>
           When a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             5d8
-          </code>
+          </span>
            poison damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.
         </p>
         <p>
@@ -4112,9 +4158,11 @@ exports[`DataSpellElement > Cloudkill > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 6th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 5th.
             </p>
           </div>
@@ -4197,7 +4245,7 @@ exports[`DataSpellElement > Color Spray > matches snapshot 1`] = `
         <p>
           A dazzling array of flashing, colored light springs from your hand. Roll 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             6d10
           </span>
@@ -4231,9 +4279,11 @@ exports[`DataSpellElement > Color Spray > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, roll an additional 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d10
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -4867,9 +4917,11 @@ exports[`DataSpellElement > Cone of Cold > matches snapshot 1`] = `
       <p>
         <p>
           A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a Constitution saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             8d8
-          </code>
+          </span>
            cold damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -4888,9 +4940,11 @@ exports[`DataSpellElement > Cone of Cold > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 6th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 5th.
             </p>
           </div>
@@ -4977,7 +5031,7 @@ exports[`DataSpellElement > Confusion > matches snapshot 1`] = `
         <p>
           An affected target can't take reactions and must roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d10
           </span>
@@ -5834,9 +5888,11 @@ exports[`DataSpellElement > Contact Other Plane > matches snapshot 1`] = `
       <p>
         <p>
           You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 Intelligence saving throw. On a failure, you take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             6d6
-          </code>
+          </span>
            psychic damage and are insane until you finish a long rest. While insane, you can't take actions, can't understand what other creatures say, can't read, and speak only in gibberish. A 
           <a
             href="/view/spell_PHB-Greater-Restoration"
@@ -6395,9 +6451,11 @@ exports[`DataSpellElement > Control Water > matches snapshot 1`] = `
             </p>
             <p>
               When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d8
-              </code>
+              </span>
                bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (
               <span
                 class="_error_5kjti_47"
@@ -6412,9 +6470,11 @@ exports[`DataSpellElement > Control Water > matches snapshot 1`] = `
             </p>
             <p>
               The first time each turn that an object enters the vortex, the object takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d8
-              </code>
+              </span>
                bludgeoning damage; this damage occurs each round it remains in the vortex.
             </p>
           </div>
@@ -6501,7 +6561,7 @@ exports[`DataSpellElement > Control Weather > matches snapshot 1`] = `
         <p>
           When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d4 × 10
           </span>
@@ -7210,7 +7270,7 @@ exports[`DataSpellElement > Cure Wounds > matches snapshot 1`] = `
         <p>
           A creature you touch regains a number of hit points equal to 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d8
           </span>
@@ -7229,9 +7289,11 @@ exports[`DataSpellElement > Cure Wounds > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -7749,12 +7811,14 @@ exports[`DataSpellElement > Delayed Blast Fireball > matches snapshot 1`] = `
         </p>
         <p>
           The spell's base damage is 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             12d6
-          </code>
+          </span>
           . If at the end of your turn the bead has not yet detonated, the damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d6
           </span>
@@ -7779,9 +7843,11 @@ exports[`DataSpellElement > Delayed Blast Fireball > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 8th level or higher, the base damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 7th.
             </p>
           </div>
@@ -8295,9 +8361,11 @@ exports[`DataSpellElement > Dimension Door > matches snapshot 1`] = `
         </p>
         <p>
           If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
            force damage, and the spell fails to teleport you.
         </p>
       </p>
@@ -8481,9 +8549,11 @@ exports[`DataSpellElement > Disintegrate > matches snapshot 1`] = `
         </p>
         <p>
           A creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             10d6 + 40
-          </code>
+          </span>
            force damage. The target is disintegrated if this damage leaves it with 0 hit points.
         </p>
         <p>
@@ -8517,9 +8587,11 @@ exports[`DataSpellElement > Disintegrate > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 7th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 3d6
-              </code>
+              </span>
                for each slot level above 6th.
             </p>
           </div>
@@ -8924,9 +8996,11 @@ exports[`DataSpellElement > Divine Favor > matches snapshot 1`] = `
       <p>
         <p>
           Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d4
-          </code>
+          </span>
            radiant damage on a hit.
         </p>
       </p>
@@ -9509,9 +9583,11 @@ exports[`DataSpellElement > Dream > matches snapshot 1`] = `
         </p>
         <p>
           You can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a Wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d6
-          </code>
+          </span>
            psychic damage.
         </p>
         <p>
@@ -9735,13 +9811,13 @@ exports[`DataSpellElement > Earthquake > matches snapshot 1`] = `
             <p>
               Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 1d6
               </span>
                such fissures open in locations chosen by the DM. Each is 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 1d10 × 10
               </span>
@@ -9763,9 +9839,11 @@ exports[`DataSpellElement > Earthquake > matches snapshot 1`] = `
             </b>
             <p>
               The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 5d6
-              </code>
+              </span>
                bludgeoning damage, is knocked 
               <a
                 href="/view/condition_PHB-Prone"
@@ -9869,9 +9947,11 @@ exports[`DataSpellElement > Eldritch Blast > matches snapshot 1`] = `
       <p>
         <p>
           A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d10
-          </code>
+          </span>
            force damage.
         </p>
         <p>
@@ -9967,7 +10047,7 @@ exports[`DataSpellElement > Enhance Ability > matches snapshot 1`] = `
             <p>
               The target has advantage on Constitution checks. It also gains 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 2d6
               </span>
@@ -10159,9 +10239,11 @@ exports[`DataSpellElement > Enlarge/Reduce > matches snapshot 1`] = `
             </b>
             <p>
               The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d4
-              </code>
+              </span>
                extra damage.
             </p>
           </div>
@@ -10177,9 +10259,11 @@ exports[`DataSpellElement > Enlarge/Reduce > matches snapshot 1`] = `
             </b>
             <p>
               The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d4
-              </code>
+              </span>
                less damage (this can't reduce the damage below 1).
             </p>
           </div>
@@ -10976,7 +11060,7 @@ exports[`DataSpellElement > False Life > matches snapshot 1`] = `
         <p>
           Bolstering yourself with a necromantic facsimile of life, you gain 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d4 + 4
           </span>
@@ -11253,9 +11337,11 @@ exports[`DataSpellElement > Feeblemind > matches snapshot 1`] = `
       <p>
         <p>
           You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
            psychic damage and must make an Intelligence saving throw.
         </p>
         <p>
@@ -11944,9 +12030,11 @@ exports[`DataSpellElement > Finger of Death > matches snapshot 1`] = `
       <p>
         <p>
           You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             7d8 + 30
-          </code>
+          </span>
            necrotic damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -12039,30 +12127,38 @@ exports[`DataSpellElement > Fire Bolt > matches snapshot 1`] = `
       <p>
         <p>
           You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d10
-          </code>
+          </span>
            fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.
         </p>
         <p>
           This spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d10
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d10
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d10
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d10
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -12149,13 +12245,17 @@ exports[`DataSpellElement > Fire Shield > matches snapshot 1`] = `
         </p>
         <p>
           In addition, whenever a creature within 5 feet of you hits you with a melee attack, the shield erupts with flame. The attacker takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
            fire damage from a warm shield, or 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
            cold damage from a cold shield.
         </p>
       </p>
@@ -12236,9 +12336,11 @@ exports[`DataSpellElement > Fire Storm > matches snapshot 1`] = `
       <p>
         <p>
           A storm made up of sheets of roaring flame appears in a location you choose within range. The area of the storm consists of up to ten 10-foot cubes, which you can arrange as you wish. Each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a Dexterity saving throw. It takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             7d10
-          </code>
+          </span>
            fire damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -12321,9 +12423,11 @@ exports[`DataSpellElement > Fireball > matches snapshot 1`] = `
       <p>
         <p>
           A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             8d6
-          </code>
+          </span>
            fire damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -12342,9 +12446,11 @@ exports[`DataSpellElement > Fireball > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 3rd.
             </p>
           </div>
@@ -12429,9 +12535,11 @@ exports[`DataSpellElement > Flame Blade > matches snapshot 1`] = `
         </p>
         <p>
           You can use your action to make a melee spell attack with the fiery blade. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d6
-          </code>
+          </span>
            fire damage.
         </p>
         <p>
@@ -12450,9 +12558,11 @@ exports[`DataSpellElement > Flame Blade > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for every two slot levels above 2nd.
             </p>
           </div>
@@ -12535,13 +12645,17 @@ exports[`DataSpellElement > Flame Strike > matches snapshot 1`] = `
       <p>
         <p>
           A vertical column of divine fire roars down from the heavens in a location you specify. Each creature in a 10-foot-radius, 40-foot-high cylinder centered on a point within range must make a Dexterity saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
            fire damage and 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
            radiant damage on a failed save, or half as much damage on a successful one.
         </p>
       </p>
@@ -12557,9 +12671,11 @@ exports[`DataSpellElement > Flame Strike > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 5th.
             </p>
           </div>
@@ -12641,9 +12757,11 @@ exports[`DataSpellElement > Flaming Sphere > matches snapshot 1`] = `
       <p>
         <p>
           A 5-foot-diameter sphere of fire appears in an unoccupied space of your choice within range and lasts for the duration. Any creature that ends its turn within 5 feet of the sphere must make a Dexterity saving throw. The creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d6
-          </code>
+          </span>
            fire damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -12665,9 +12783,11 @@ exports[`DataSpellElement > Flaming Sphere > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 2nd.
             </p>
           </div>
@@ -13065,9 +13185,11 @@ exports[`DataSpellElement > Forbiddance > matches snapshot 1`] = `
         </p>
         <p>
           In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             5d10
-          </code>
+          </span>
            radiant or necrotic damage (your choice when you cast this spell).
         </p>
         <p>
@@ -13642,9 +13764,11 @@ exports[`DataSpellElement > Geas > matches snapshot 1`] = `
             charmed
           </a>
            by you, it takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             5d10
-          </code>
+          </span>
            psychic damage each time it acts in a manner directly counter to your instructions, but no more than once each day. A creature that can't understand you is unaffected by the spell.
         </p>
         <p>
@@ -14200,9 +14324,11 @@ exports[`DataSpellElement > Glyph of Warding > matches snapshot 1`] = `
             </b>
             <p>
               When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 5d8
-              </code>
+              </span>
                acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.
             </p>
           </div>
@@ -14234,9 +14360,11 @@ exports[`DataSpellElement > Glyph of Warding > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.
             </p>
           </div>
@@ -15037,7 +15165,7 @@ exports[`DataSpellElement > Guidance > matches snapshot 1`] = `
         <p>
           You touch one willing creature. Once before the spell ends, the target can roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d4
           </span>
@@ -15120,9 +15248,11 @@ exports[`DataSpellElement > Guiding Bolt > matches snapshot 1`] = `
       <p>
         <p>
           A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
            radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.
         </p>
       </p>
@@ -15138,9 +15268,11 @@ exports[`DataSpellElement > Guiding Bolt > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -15673,9 +15805,11 @@ exports[`DataSpellElement > Harm > matches snapshot 1`] = `
       <p>
         <p>
           You unleash a virulent disease on a creature that you can see within range. The target must make a Constitution saving throw. On a failed save, it takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             14d6
-          </code>
+          </span>
            necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.
         </p>
       </p>
@@ -15974,7 +16108,7 @@ exports[`DataSpellElement > Healing Word > matches snapshot 1`] = `
         <p>
           A creature of your choice that you can see within range regains hit points equal to 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d4
           </span>
@@ -15993,9 +16127,11 @@ exports[`DataSpellElement > Healing Word > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d4
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -16077,9 +16213,11 @@ exports[`DataSpellElement > Heat Metal > matches snapshot 1`] = `
       <p>
         <p>
           Choose a manufactured metal object, such as a metal weapon or a suit of heavy or medium metal armor, that you can see within range. You cause the object to glow red-hot. Any creature in physical contact with the object takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
            fire damage when you cast the spell. Until the spell ends, you can use a bonus action on each of your subsequent turns to cause this damage again.
         </p>
         <p>
@@ -16098,9 +16236,11 @@ exports[`DataSpellElement > Heat Metal > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 2nd.
             </p>
           </div>
@@ -16182,9 +16322,11 @@ exports[`DataSpellElement > Hellish Rebuke > matches snapshot 1`] = `
       <p>
         <p>
           You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d10
-          </code>
+          </span>
            fire damage on a failed save, or half as much damage on a successful one.
         </p>
       </p>
@@ -16200,9 +16342,11 @@ exports[`DataSpellElement > Hellish Rebuke > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d10
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -16295,7 +16439,7 @@ exports[`DataSpellElement > Heroes' Feast > matches snapshot 1`] = `
           </a>
           , and makes all Wisdom saving throws with advantage. Its hit point maximum also increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             2d10
           </span>
@@ -16764,9 +16908,11 @@ exports[`DataSpellElement > Hunter's Mark > matches snapshot 1`] = `
       <p>
         <p>
           You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d6
-          </code>
+          </span>
            damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (
           <span
             class="_error_5kjti_47"
@@ -16982,13 +17128,17 @@ exports[`DataSpellElement > Ice Storm > matches snapshot 1`] = `
       <p>
         <p>
           A hail of rock-hard ice pounds to the ground in a 20-foot-radius, 40-foot-high cylinder centered on a point within range. Each creature in the cylinder must make a Dexterity saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
            bludgeoning damage and 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d6
-          </code>
+          </span>
            cold damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -17017,9 +17167,11 @@ exports[`DataSpellElement > Ice Storm > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 4th.
             </p>
           </div>
@@ -17482,9 +17634,11 @@ exports[`DataSpellElement > Incendiary Cloud > matches snapshot 1`] = `
         </p>
         <p>
           When the cloud appears, each creature in it must make a Dexterity saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             10d8
-          </code>
+          </span>
            fire damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.
         </p>
         <p>
@@ -17567,9 +17721,11 @@ exports[`DataSpellElement > Inflict Wounds > matches snapshot 1`] = `
       <p>
         <p>
           Make a melee spell attack against a creature you can reach. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d10
-          </code>
+          </span>
            necrotic damage.
         </p>
       </p>
@@ -17585,9 +17741,11 @@ exports[`DataSpellElement > Inflict Wounds > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d10
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -17683,9 +17841,11 @@ exports[`DataSpellElement > Insect Plague > matches snapshot 1`] = `
         </p>
         <p>
           When the area appears, each creature in it must make a Constitution saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d10
-          </code>
+          </span>
            piercing damage on a failed save, or half as much damage on a successful one. A creature must also make this saving throw when it enters the spell's area for the first time on a turn or ends its turn there.
         </p>
       </p>
@@ -17701,9 +17861,11 @@ exports[`DataSpellElement > Insect Plague > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 6th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d10
-              </code>
+              </span>
                for each slot level above 5th.
             </p>
           </div>
@@ -18441,9 +18603,11 @@ exports[`DataSpellElement > Lightning Bolt > matches snapshot 1`] = `
       <p>
         <p>
           A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             8d6
-          </code>
+          </span>
            lightning damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -18462,9 +18626,11 @@ exports[`DataSpellElement > Lightning Bolt > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 3rd.
             </p>
           </div>
@@ -19305,9 +19471,11 @@ exports[`DataSpellElement > Magic Missile > matches snapshot 1`] = `
       <p>
         <p>
           You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d4 + 1
-          </code>
+          </span>
            force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.
         </p>
       </p>
@@ -19703,7 +19871,7 @@ exports[`DataSpellElement > Mass Cure Wounds > matches snapshot 1`] = `
         <p>
           A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             3d8
           </span>
@@ -19722,9 +19890,11 @@ exports[`DataSpellElement > Mass Cure Wounds > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 6th level or higher, the healing increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 5th.
             </p>
           </div>
@@ -19898,7 +20068,7 @@ exports[`DataSpellElement > Mass Healing Word > matches snapshot 1`] = `
         <p>
           As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d4
           </span>
@@ -19917,9 +20087,11 @@ exports[`DataSpellElement > Mass Healing Word > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the healing increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d4
-              </code>
+              </span>
                for each slot level above 3rd.
             </p>
           </div>
@@ -20232,9 +20404,11 @@ exports[`DataSpellElement > Meld into Stone > matches snapshot 1`] = `
         </p>
         <p>
           Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             6d6
-          </code>
+          </span>
            bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall 
           <a
             href="/view/condition_PHB-Prone"
@@ -20483,13 +20657,17 @@ exports[`DataSpellElement > Meteor Swarm > matches snapshot 1`] = `
       <p>
         <p>
           Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             20d6
-          </code>
+          </span>
            fire damage and 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             20d6
-          </code>
+          </span>
            bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.
         </p>
         <p>
@@ -20872,7 +21050,7 @@ exports[`DataSpellElement > Mirror Image > matches snapshot 1`] = `
         <p>
           Each time a creature targets you with an attack during the spell's duration, roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d20
           </span>
@@ -21295,9 +21473,11 @@ exports[`DataSpellElement > Moonbeam > matches snapshot 1`] = `
         </p>
         <p>
           When a creature enters the spell's area for the first time on a turn or starts its turn there, it is engulfed in ghostly flames that cause searing pain, and it must make a Constitution saving throw. It takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d10
-          </code>
+          </span>
            radiant damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -21319,9 +21499,11 @@ exports[`DataSpellElement > Moonbeam > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d10
-              </code>
+              </span>
                for each slot level above 2nd.
             </p>
           </div>
@@ -21749,9 +21931,11 @@ exports[`DataSpellElement > Phantasmal Killer > matches snapshot 1`] = `
             frightened
           </a>
            for the duration. At the end of each of the target's turns before the spell ends, the target must succeed on a Wisdom saving throw or take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d10
-          </code>
+          </span>
            psychic damage. On a successful save, the spell ends.
         </p>
       </p>
@@ -21767,9 +21951,11 @@ exports[`DataSpellElement > Phantasmal Killer > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 5th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d10
-              </code>
+              </span>
                for each slot level above 4th.
             </p>
           </div>
@@ -22326,30 +22512,38 @@ exports[`DataSpellElement > Poison Spray > matches snapshot 1`] = `
       <p>
         <p>
           You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d12
-          </code>
+          </span>
            poison damage.
         </p>
         <p>
           This spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d12
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d12
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d12
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d12
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -22696,7 +22890,7 @@ exports[`DataSpellElement > Prayer of Healing > matches snapshot 1`] = `
         <p>
           Up to six creatures of your choice that you can see within range each regain hit points equal to 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             2d8
           </span>
@@ -22715,9 +22909,11 @@ exports[`DataSpellElement > Prayer of Healing > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 2nd.
             </p>
           </div>
@@ -22916,7 +23112,7 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
         <p>
           Eight multicolored rays of light flash from your hand. Each ray is a different color and has a different power and purpose. Each creature in a 60-foot cone must make a Dexterity saving throw. For each target, roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d8
           </span>
@@ -22933,9 +23129,11 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
             </b>
             <p>
               The target takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                fire damage on a failed save, or half as much damage on a successful one.
             </p>
           </div>
@@ -22951,9 +23149,11 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
             </b>
             <p>
               The target takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                acid damage on a failed save, or half as much damage on a successful one.
             </p>
           </div>
@@ -22969,9 +23169,11 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
             </b>
             <p>
               The target takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                lightning damage on a failed save, or half as much damage on a successful one.
             </p>
           </div>
@@ -22987,9 +23189,11 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
             </b>
             <p>
               The target takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                poison damage on a failed save, or half as much damage on a successful one.
             </p>
           </div>
@@ -23005,9 +23209,11 @@ exports[`DataSpellElement > Prismatic Spray > matches snapshot 1`] = `
             </b>
             <p>
               The target takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                cold damage on a failed save, or half as much damage on a successful one.
             </p>
           </div>
@@ -23183,9 +23389,11 @@ exports[`DataSpellElement > Prismatic Wall > matches snapshot 1`] = `
             </b>
             <p>
               The creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                fire damage on a failed save, or half as much damage on a successful one. While this layer is in place, nonmagical ranged attacks can't pass through the wall. The layer can be destroyed by dealing at least 25 cold damage to it.
             </p>
           </div>
@@ -23201,9 +23409,11 @@ exports[`DataSpellElement > Prismatic Wall > matches snapshot 1`] = `
             </b>
             <p>
               The creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                acid damage on a failed save, or half as much damage on a successful one. While this layer is in place, magical ranged attacks can't pass through the wall. The layer is destroyed by a strong wind.
             </p>
           </div>
@@ -23219,9 +23429,11 @@ exports[`DataSpellElement > Prismatic Wall > matches snapshot 1`] = `
             </b>
             <p>
               The creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                lightning damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 60 force damage to it.
             </p>
           </div>
@@ -23237,9 +23449,11 @@ exports[`DataSpellElement > Prismatic Wall > matches snapshot 1`] = `
             </b>
             <p>
               The creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                poison damage on a failed save, or half as much damage on a successful one. A 
               <a
                 href="/view/spell_PHB-Passwall"
@@ -23261,9 +23475,11 @@ exports[`DataSpellElement > Prismatic Wall > matches snapshot 1`] = `
             </b>
             <p>
               The creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                cold damage on a failed save, or half as much damage on a successful one. This layer can be destroyed by dealing at least 25 fire damage to it.
             </p>
           </div>
@@ -23415,30 +23631,38 @@ exports[`DataSpellElement > Produce Flame > matches snapshot 1`] = `
         </p>
         <p>
           You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d8
-          </code>
+          </span>
            fire damage.
         </p>
         <p>
           This spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d8
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d8
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -24249,30 +24473,38 @@ exports[`DataSpellElement > Ray of Frost > matches snapshot 1`] = `
       <p>
         <p>
           A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d8
-          </code>
+          </span>
            cold damage, and its speed is reduced by 10 feet until the start of your next turn.
         </p>
         <p>
           The spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d8
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d8
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -24354,7 +24586,7 @@ exports[`DataSpellElement > Regenerate > matches snapshot 1`] = `
         <p>
           You touch a creature and stimulate its natural healing ability. The target regains 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             4d8 + 15
           </span>
@@ -24445,7 +24677,7 @@ exports[`DataSpellElement > Reincarnate > matches snapshot 1`] = `
         <p>
           The magic fashions a new body for the creature to inhabit, which likely causes the creature's race to change. The DM rolls a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d100
           </span>
@@ -24619,7 +24851,7 @@ exports[`DataSpellElement > Resistance > matches snapshot 1`] = `
         <p>
           You touch one willing creature. Once before the spell ends, the target can roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d4
           </span>
@@ -25043,30 +25275,38 @@ exports[`DataSpellElement > Sacred Flame > matches snapshot 1`] = `
       <p>
         <p>
           Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d8
-          </code>
+          </span>
            radiant damage. The target gains no benefit from cover for this saving throw.
         </p>
         <p>
           The spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d8
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d8
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -25236,9 +25476,11 @@ exports[`DataSpellElement > Scorching Ray > matches snapshot 1`] = `
         </p>
         <p>
           Make a ranged spell attack for each ray. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d6
-          </code>
+          </span>
            fire damage.
         </p>
       </p>
@@ -25932,9 +26174,11 @@ exports[`DataSpellElement > Shatter > matches snapshot 1`] = `
       <p>
         <p>
           A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
            thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.
         </p>
         <p>
@@ -25953,9 +26197,11 @@ exports[`DataSpellElement > Shatter > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 2nd.
             </p>
           </div>
@@ -26220,7 +26466,7 @@ exports[`DataSpellElement > Shillelagh > matches snapshot 1`] = `
           </span>
            you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d8
           </span>
@@ -26303,30 +26549,38 @@ exports[`DataSpellElement > Shocking Grasp > matches snapshot 1`] = `
       <p>
         <p>
           Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d8
-          </code>
+          </span>
            lightning damage, and it can't take reactions until the start of its next turn.
         </p>
         <p>
           The spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d8
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d8
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -26673,7 +26927,7 @@ exports[`DataSpellElement > Sleep > matches snapshot 1`] = `
         <p>
           This spell sends creatures into a magical slumber. Roll 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             5d8
           </span>
@@ -26716,9 +26970,11 @@ exports[`DataSpellElement > Sleep > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, roll an additional 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d8
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -26907,7 +27163,7 @@ exports[`DataSpellElement > Slow > matches snapshot 1`] = `
         <p>
           If the creature attempts to cast a spell with a casting time of 1 action, roll a 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d20
           </span>
@@ -27440,9 +27696,11 @@ exports[`DataSpellElement > Spike Growth > matches snapshot 1`] = `
             
           </span>
            for the duration. When a creature moves into or within the area, it takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d4
-          </code>
+          </span>
            piercing damage for every 5 feet it travels.
         </p>
         <p>
@@ -27538,13 +27796,17 @@ exports[`DataSpellElement > Spirit Guardians > matches snapshot 1`] = `
         </p>
         <p>
           When you cast this spell, you can designate any number of creatures you can see to be unaffected by it. An affected creature's speed is halved in the area, and when the creature enters the area for the first time on a turn or starts its turn there, it must make a Wisdom saving throw. On a failed save, the creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
            radiant damage (if you are good or neutral) or 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
            necrotic damage (if you are evil). On a successful save, the creature takes half as much damage.
         </p>
       </p>
@@ -27560,9 +27822,11 @@ exports[`DataSpellElement > Spirit Guardians > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 3rd.
             </p>
           </div>
@@ -27644,9 +27908,11 @@ exports[`DataSpellElement > Spiritual Weapon > matches snapshot 1`] = `
       <p>
         <p>
           You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d8
-          </code>
+          </span>
            + your spellcasting ability modifier.
         </p>
         <p>
@@ -27668,9 +27934,11 @@ exports[`DataSpellElement > Spiritual Weapon > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for every two slot levels above 2nd.
             </p>
           </div>
@@ -27995,9 +28263,11 @@ exports[`DataSpellElement > Storm of Vengeance > matches snapshot 1`] = `
       <p>
         <p>
           A churning storm cloud forms, centered on a point you can see and spreading to a radius of 360 feet. Lightning flashes in the area, thunder booms, and strong winds roar. Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d6
-          </code>
+          </span>
            thunder damage and becomes 
           <a
             href="/view/condition_PHB-Deafened"
@@ -28020,9 +28290,11 @@ exports[`DataSpellElement > Storm of Vengeance > matches snapshot 1`] = `
             </b>
             <p>
               Acidic rain falls from the cloud. Each creature and object under the cloud takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                acid damage.
             </p>
           </div>
@@ -28038,9 +28310,11 @@ exports[`DataSpellElement > Storm of Vengeance > matches snapshot 1`] = `
             </b>
             <p>
               You call six bolts of lightning from the cloud to strike six creatures or objects of your choice beneath the cloud. A given creature or object can't be struck by more than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d6
-              </code>
+              </span>
                lightning damage on a failed save, or half as much damage on a successful one.
             </p>
           </div>
@@ -28056,9 +28330,11 @@ exports[`DataSpellElement > Storm of Vengeance > matches snapshot 1`] = `
             </b>
             <p>
               Hailstones rain down from the cloud. Each creature under the cloud takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d6
-              </code>
+              </span>
                bludgeoning damage.
             </p>
           </div>
@@ -28084,9 +28360,11 @@ exports[`DataSpellElement > Storm of Vengeance > matches snapshot 1`] = `
                 
               </span>
                and is heavily obscured. Each creature there takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical.
             </p>
           </div>
@@ -28262,9 +28540,11 @@ exports[`DataSpellElement > Sunbeam > matches snapshot 1`] = `
       <p>
         <p>
           A beam of brilliant light flashes out from your hand in a 5-foot-wide, 60-foot-long line. Each creature in the line must make a Constitution saving throw. On a failed save, a creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             6d8
-          </code>
+          </span>
            radiant damage and is 
           <a
             href="/view/condition_PHB-Blinded"
@@ -28363,9 +28643,11 @@ exports[`DataSpellElement > Sunburst > matches snapshot 1`] = `
       <p>
         <p>
           Brilliant sunlight flashes in a 60-foot radius centered on a point you choose within range. Each creature in that light must make a Constitution saving throw. On a failed save, a creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             12d6
-          </code>
+          </span>
            radiant damage and is 
           <a
             href="/view/condition_PHB-Blinded"
@@ -28510,9 +28792,11 @@ exports[`DataSpellElement > Symbol > matches snapshot 1`] = `
             </b>
             <p>
               Each target must make a Constitution saving throw, taking 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 10d10
-              </code>
+              </span>
                necrotic damage on a failed save, or half as much damage on a successful save.
             </p>
           </div>
@@ -28849,7 +29133,7 @@ exports[`DataSpellElement > Teleport > matches snapshot 1`] = `
         <p>
           The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             d100
           </span>
@@ -28910,19 +29194,19 @@ exports[`DataSpellElement > Teleport > matches snapshot 1`] = `
             <p>
               You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 1d10 × 1d10
               </span>
                percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 d10
               </span>
               s, then you would be off target by 15 percent, or 18 miles. The DM determines the direction off target randomly by rolling a 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 d8
               </span>
@@ -28955,9 +29239,11 @@ exports[`DataSpellElement > Teleport > matches snapshot 1`] = `
             </b>
             <p>
               The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 3d10
-              </code>
+              </span>
                force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).
             </p>
           </div>
@@ -29239,9 +29525,11 @@ exports[`DataSpellElement > Thunderwave > matches snapshot 1`] = `
       <p>
         <p>
           A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d8
-          </code>
+          </span>
            thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.
         </p>
         <p>
@@ -29260,9 +29548,11 @@ exports[`DataSpellElement > Thunderwave > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 1st.
             </p>
           </div>
@@ -29346,7 +29636,7 @@ exports[`DataSpellElement > Time Stop > matches snapshot 1`] = `
         <p>
           You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d4 + 1
           </span>
@@ -30157,9 +30447,11 @@ exports[`DataSpellElement > Vampiric Touch > matches snapshot 1`] = `
       <p>
         <p>
           The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d6
-          </code>
+          </span>
            necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.
         </p>
       </p>
@@ -30175,9 +30467,11 @@ exports[`DataSpellElement > Vampiric Touch > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
                for each slot level above 3rd.
             </p>
           </div>
@@ -30259,30 +30553,38 @@ exports[`DataSpellElement > Vicious Mockery > matches snapshot 1`] = `
       <p>
         <p>
           You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d4
-          </code>
+          </span>
            psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.
         </p>
         <p>
           This spell's damage increases by 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             1d4
           </span>
            when you reach 5th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d4
-          </code>
+          </span>
           ), 11th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d4
-          </code>
+          </span>
           ), and 17th level (
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d4
-          </code>
+          </span>
           ).
         </p>
       </p>
@@ -30366,16 +30668,20 @@ exports[`DataSpellElement > Wall of Fire > matches snapshot 1`] = `
         </p>
         <p>
           When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             5d8
-          </code>
+          </span>
            fire damage, or half as much damage on a successful save.
         </p>
         <p>
           One side of the wall, selected by you when you cast this spell, deals 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             5d8
-          </code>
+          </span>
            fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.
         </p>
       </p>
@@ -30391,9 +30697,11 @@ exports[`DataSpellElement > Wall of Fire > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 5th level or higher, the damage increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 4th.
             </p>
           </div>
@@ -30573,16 +30881,20 @@ exports[`DataSpellElement > Wall of Ice > matches snapshot 1`] = `
         </p>
         <p>
           If the wall cuts through a creature's space when it appears, the creature within its area is pushed to one side of the wall and must make a Dexterity saving throw. On a failed save, the creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             10d6
-          </code>
+          </span>
            cold damage, or half as much damage on a successful save.
         </p>
         <p>
           The wall is an object that can be damaged and thus breached. It has AC 12 and 30 hit points per 10-foot section, and it is vulnerable to fire damage. Reducing a 10-foot section of wall to 0 hit points destroys it and leaves behind a sheet of frigid air in the space the wall occupied. A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             5d6
-          </code>
+          </span>
            cold damage on a failed save, or half as much damage on a successful one.
         </p>
       </p>
@@ -30598,13 +30910,17 @@ exports[`DataSpellElement > Wall of Ice > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 2d6
-              </code>
+              </span>
               , and the damage from passing through the sheet of frigid air increases by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d6
-              </code>
+              </span>
               , for each slot level above 6th.
             </p>
           </div>
@@ -30784,16 +31100,20 @@ exports[`DataSpellElement > Wall of Thorns > matches snapshot 1`] = `
         </p>
         <p>
           When the wall appears, each creature within its area must make a Dexterity saving throw. On a failed save, a creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             7d8
-          </code>
+          </span>
            piercing damage, or half as much damage on a successful save.
         </p>
         <p>
           A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature moves through the wall, it must spend 4 feet of movement. Furthermore, the first time a creature enters the wall on a turn or ends its turn there, the creature must make a Dexterity saving throw. It takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             7d8
-          </code>
+          </span>
            slashing damage on a failed save, or half as much damage on a successful one.
         </p>
       </p>
@@ -30809,9 +31129,11 @@ exports[`DataSpellElement > Wall of Thorns > matches snapshot 1`] = `
             </b>
             <p>
               When you cast this spell using a spell slot of 7th level or higher, both types of damage increase by 
-              <code>
+              <span
+                class="_Crunch_axgli_1"
+              >
                 1d8
-              </code>
+              </span>
                for each slot level above 6th.
             </p>
           </div>
@@ -31173,9 +31495,11 @@ exports[`DataSpellElement > Web > matches snapshot 1`] = `
         </p>
         <p>
           The webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 round, dealing 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             2d4
-          </code>
+          </span>
            fire damage to any creature that starts its turn in the fire.
         </p>
       </p>
@@ -31268,9 +31592,11 @@ exports[`DataSpellElement > Weird > matches snapshot 1`] = `
             frightened
           </a>
            creature's turns, it must succeed on a Wisdom saving throw or take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             4d10
-          </code>
+          </span>
            psychic damage. On a successful save, the spell ends for that creature.
         </p>
       </p>
@@ -31447,9 +31773,11 @@ exports[`DataSpellElement > Wind Wall > matches snapshot 1`] = `
         </p>
         <p>
           When the wall appears, each creature within its area must make a Strength saving throw. A creature takes 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             3d8
-          </code>
+          </span>
            bludgeoning damage on a failed save, or half as much damage on a successful one.
         </p>
         <p>
@@ -31593,12 +31921,14 @@ exports[`DataSpellElement > Wish > matches snapshot 1`] = `
         </p>
         <p>
           The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a long rest, you take 
-          <code>
+          <span
+            class="_Crunch_axgli_1"
+          >
             1d10
-          </code>
+          </span>
            necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 
           <span
-            class="_Crunch_12ph0_1"
+            class="_Crunch_axgli_1"
           >
             2d4
           </span>

@@ -123,52 +123,60 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
           <p>
             Dice roller tags; 
             <span
-              class="_Crunch_12ph0_1"
+              class="_Crunch_axgli_1"
             >
               1d2-2+2d3+5
             </span>
              for regular dice rolls (
             <span
-              class="_Crunch_12ph0_1"
+              class="_Crunch_axgli_1"
             >
               1d6;2d6
             </span>
              for multiple options; 
             <span
-              class="_Crunch_12ph0_1"
+              class="_Crunch_axgli_1"
             >
               1d6 + #$prompt_number:min=1,title=Enter a Number!,default=123$#
             </span>
              for input prompts), with extended 
             <span
-              class="_Crunch_12ph0_1"
+              class="_Crunch_axgli_1"
             >
               1d20+2|display text
             </span>
              and 
             <span
-              class="_Crunch_12ph0_1"
+              class="_Crunch_axgli_1"
             >
               1d20+2|display text|rolled by name
             </span>
             , and a special 'hit' version which assumes a d20 is to be rolled 
-            <code>
+            <span
+              class="_Crunch_axgli_1"
+            >
               d20
               +7
-            </code>
+            </span>
              (and rolls advantage on shift-click, disadvantage on alt-click). There's also 
-            <code>
+            <span
+              class="_Crunch_axgli_1"
+            >
               1d12+3
-            </code>
+            </span>
              which will roll critical hits on shift-click and half damage (rounding down) on alt-click, and 
-            <code>
+            <span
+              class="_Crunch_axgli_1"
+            >
               d20
               -4
-            </code>
+            </span>
              which will also roll advantage/disadvantage, although @hit tags are preferred where appropriate. Spells can have scaling-dice tags, (damage of 2d6 or 3d6 at level 1, add an extra 
-            <code>
+            <span
+              class="_Crunch_axgli_1"
+            >
               1d6
-            </code>
+            </span>
              for each level beyond 2nd), for when a spell effect scales at higher levels. 
             <span
               class="error"
@@ -2350,7 +2358,7 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
             <p>
               A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 
               <span
-                class="_Crunch_12ph0_1"
+                class="_Crunch_axgli_1"
               >
                 8d6
               </span>
@@ -2372,9 +2380,11 @@ exports[`Renderer > e2e tests > matches snapshot 1`] = `
                 </b>
                 <p>
                   When you cast this spell using a spell slot of 4th level or higher, the damage increases by 
-                  <code>
+                  <span
+                    class="_Crunch_axgli_1"
+                  >
                     1d6
-                  </code>
+                  </span>
                    for each slot level above 3rd.
                 </p>
               </div>
