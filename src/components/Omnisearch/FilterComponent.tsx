@@ -231,7 +231,10 @@ const FilterComponent: Component<{
         disabled={isState("key")}
         finishKey="Enter"
         onFinish={() => {
-          props.onFinish();
+          // this would ideally be done lower, but
+          // SmartInput loosing focus doesn't mean FilterComponent looses focus
+          // eg clicking on autocomplete
+          if (props.isFocused) props.onFinish();
         }}
         onEscape={() => {
           setState("key");
