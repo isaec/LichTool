@@ -1,5 +1,6 @@
 import toast from "solid-toast";
 import { dataMap, filterMap } from "@src/dataLookup";
+import deepGet from "@src/util/deepGet";
 
 export type FilterData = {
   key: string;
@@ -72,7 +73,7 @@ export const testFilter = (
   const filter = parseFilter(filterObj.value);
   if (filter === null) return false;
   const key = filterObj.key;
-  const val = dataObj[key];
+  const val = deepGet(dataObj, key, undefined);
   if (filter instanceof RegExp) {
     return filter.test((val ?? "").toString());
   }
