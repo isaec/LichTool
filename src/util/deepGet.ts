@@ -8,6 +8,7 @@ export default function deepGet<T, K>(
   path: string,
   fallback: K
 ): Result<T> | K {
+  // i think reverse is cheaper then repeat shifts?
   const keyStack = path.split(".").reverse();
   let pointer: Result<T> = obj;
   while (keyStack.length > 0) {
