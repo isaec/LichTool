@@ -21,6 +21,7 @@ const SmartInput: Component<{
   focus: boolean;
   valid: boolean;
   disabled?: boolean;
+  dotComplete?: boolean;
   finishKey: "Enter" | "Space";
   onFinish: () => void;
   onEscape: () => void;
@@ -61,8 +62,7 @@ const SmartInput: Component<{
     if (!props.valid) {
       const best = props.options![0];
       // if there is only one option at this depth or no dots, use it
-      console.log(props.options, best);
-      if (props.options!.length === 1) {
+      if (props.options!.length === 1 || !props.dotComplete) {
         props.onInput(best);
         // call the finish function, which will advance focus, state
         props.onFinish();
@@ -235,6 +235,7 @@ const FilterComponent: Component<{
         value={props.filter.key}
         valid={filterKeys.includes(props.filter.key ?? "")}
         options={keyOptions()}
+        dotComplete
         focus={isState("key") && props.isFocused}
         disabled={isState("value")}
         finishKey="Space"
