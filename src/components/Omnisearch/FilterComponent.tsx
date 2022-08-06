@@ -43,6 +43,10 @@ const SmartInput: Component<{
     if (props.focus) ref?.focus();
   });
   const tryFinish = () => {
+    if (props.valid) {
+      props.onFinish();
+      return;
+    }
     if (
       // if the input is not valid
       !props.valid &&
@@ -55,11 +59,31 @@ const SmartInput: Component<{
     }
     // if the input is invalid but there are valid options
     if (!props.valid) {
-      // pretend the user typed the best valid option
-      props.onInput(props.options![0]);
+      const best = props.options![0];
+      // if there is only one option at this depth or no dots, use it
+      console.log(props.options, best);
+      if (props.options!.length === 1) {
+        props.onInput(best);
+        // call the finish function, which will advance focus, state
+        props.onFinish();
+      } else {
+        // this is deep autocomplete
+        // pretend the user typed the minimum subpath to the best option
+
+        // the index of where the user has typed to
+        const cursor = best.indexOf(props.value!) + props.value!.length;
+        const index = best.indexOf(".", cursor);
+        // if there are no more dots, best option is a full path
+        if (index === -1) {
+          props.onInput(best);
+          props.onFinish();
+        } else {
+          const subpath = best.substring(0, index + 1);
+          console.log("subpath", subpath);
+          props.onInput(subpath);
+        }
+      }
     }
-    // call the finish function, which will advance focus, state
-    props.onFinish();
   };
   return (
     <div
