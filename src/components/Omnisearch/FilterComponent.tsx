@@ -79,8 +79,9 @@ const SmartInput: Component<{
           props.onFinish();
         } else {
           const subpath = best.substring(0, index + 1);
-          console.log("subpath", subpath);
           props.onInput(subpath);
+          // if the user used tab, they would otherwise loose element focus
+          ref?.focus();
         }
       }
     }
