@@ -152,6 +152,9 @@ describe("filterIsValid", () => {
     [makeFilter("id", "/spell_PHB-Aid/wee"), false, "unknown flags"],
 
     [makeFilter("eee", "wahoo"), false, "invalid key"],
+    [makeFilter("id", "waa"), false, "impossible value for id"],
+
+    [makeFilter("hasFluffImages", "true"), true],
   ])("for filter %s returns %s", (filter, expected, reason?: string) => {
     expect(
       filterIsValid(filter),

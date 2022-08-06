@@ -114,10 +114,13 @@ export const filterIsValid = (filter: Filter) => {
   // at this point the data is not literally missing
   // test for valid filter key
   if (!filterMap.has(filter.key)) return false;
+  // now we can check the value
   // regex on a valid key is valid
   if (isValidRegex.test(filter.value)) return true;
   // if it's a number, it's valid
   if (isOnlyDigits.test(filter.value)) return true;
+  // if its the literal true or false and valid key its valid
+  if (filter.value === "true" || filter.value === "false") return true;
   // if its a string which is a substring of possible values, it's valid
   const possibleValues = filterMap.get(filter.key)!;
   return possibleValues.some(
