@@ -22,6 +22,7 @@ import {
   isParamFilter,
   Filter,
   isPopulated,
+  isBlank,
   executeFilters,
 } from "./filterEngine";
 import { groupResults } from "./groupResults";
@@ -44,8 +45,12 @@ const Omnisearch: Component<{}> = () => {
     get populatedFilters() {
       return this.filters.filter(isPopulated);
     },
+    get blankFilters() {
+      return this.filters.filter(isBlank);
+    },
   });
   const populatedFilters = createMemo(() => search.populatedFilters);
+  const blankFilters = createMemo(() => search.blankFilters);
 
   // which portion of the search ui should be focused
   // filters.length focus is the fuzzy search
@@ -80,7 +85,13 @@ const Omnisearch: Component<{}> = () => {
           acc[`f_${filter.key}`] = filter.value;
           return acc;
         },
-        { query: search.query } as Record<string, string | null>
+        {
+          ...blankFilters().reduce((acc, filter) => {
+            acc[`f_${filter.key}`] = "";
+            return acc;
+          }, {} as Record<string, "">),
+          query: search.query,
+        } as Record<string, string | null>
       );
       const currentKeys = untrack(() => Object.keys(searchParams));
       const replace = Object.keys(newParams).every((key) =>
