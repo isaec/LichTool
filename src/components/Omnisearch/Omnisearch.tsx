@@ -93,7 +93,7 @@ const Omnisearch: Component<{}> = () => {
   const debouncedPopulatedFilters = createDebouncedMemo(
     // this hack subscribes the function to the reading of every property of the filters
     () => populatedFilters().map((f) => ({ ...f })),
-    150
+    300
   );
 
   const results = createMemo(() => {
