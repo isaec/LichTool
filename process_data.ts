@@ -417,13 +417,19 @@ processedData.forEach((data) => {
 });
 
 // iterate over all data to build filters
-processedData.forEach((data) =>
-  Object.entries(data).forEach(([key, value]) => {
-    if (typeof value === "object") return;
-    if (!filters.has(key)) filters.set(key, new Set());
-    filters.get(key)!.add(value);
-  })
-);
+const filterBuilder = ([key, value]: [string, any]) => {
+  if (Array.isArray(value)) return;
+  // console.log({ key, value });
+  if (typeof value === "object") {
+    Object.entries(value)
+      .map(([k, v]) => [`${key}.${k}`, v])
+      .forEach(filterBuilder);
+    return;
+  }
+  if (!filters.has(key)) filters.set(key, new Set());
+  filters.get(key)!.add(value);
+};
+processedData.forEach((data) => Object.entries(data).forEach(filterBuilder));
 
 // create map of sets json for filters
 await fs.writeFile(
