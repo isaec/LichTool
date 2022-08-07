@@ -85,13 +85,16 @@ const Omnisearch: Component<{}> = () => {
           acc[`f_${filter.key}`] = filter.value;
           return acc;
         },
-        {
-          ...blankFilters().reduce((acc, filter) => {
+
+        blankFilters().reduce(
+          (acc, filter) => {
             acc[`f_${filter.key}`] = "";
             return acc;
-          }, {} as Record<string, "">),
-          query: search.query,
-        } as Record<string, string | null>
+          },
+          {
+            query: search.query,
+          } as Record<string, string>
+        )
       );
       const currentKeys = untrack(() => Object.keys(searchParams));
       const replace = Object.keys(newParams).every((key) =>
