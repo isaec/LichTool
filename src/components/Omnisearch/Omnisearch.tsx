@@ -76,19 +76,10 @@ const Omnisearch: Component<{}> = () => {
     }
     // other elements handle focusing themselves
   });
-  const [lastCalled, setLastCalled] = createSignal<"mem" | "param">("mem");
-  const [updateMode, setUpdateMode] = createSignal<"mem" | "param">("param");
   // keep search params up to date with store filters, query
   createComputed(() => {
     batch(() => {
       console.log("param");
-
-      // last called block
-      if (untrack(() => lastCalled() === "param")) {
-        setUpdateMode("param");
-      }
-      setLastCalled("param");
-      // end last called block
 
       const newParams = populatedFilters().reduce(
         (acc, filter) => {
@@ -114,33 +105,6 @@ const Omnisearch: Component<{}> = () => {
     });
   });
 
-  // keep search store up to date with search params
-  createComputed(() => {
-    batch(() => {
-      console.log("mem");
-      // subscribe
-      const params = Object.entries(searchParams);
-
-      if (untrack(() => lastCalled() === "mem")) {
-        setUpdateMode("mem");
-        console.log("update mem");
-        setSearch({
-          query: searchParams.query ?? "",
-          filters: params
-            .filter(([key]) => isParamFilter.test(key))
-            .map(
-              ([param, value]): Filter => ({
-                key: param.substring(2),
-                value,
-                use: true,
-              })
-            ),
-        });
-      } else {
-        setLastCalled("mem");
-      }
-    });
-  });
   const debouncedQuery = createDebouncedMemo(() => search.query, 50);
   const debouncedPopulatedFilters = createDebouncedMemo(
     // this hack subscribes the function to the reading of every property of the filters
